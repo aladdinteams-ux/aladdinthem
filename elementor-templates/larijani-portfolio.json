@@ -1,0 +1,310 @@
+{
+    "version": "0.4",
+    "title": "نمونه کارها",
+    "type": "page",
+    "content": [
+        {
+            "id": "3334042",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "9e05a29",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "ae1e01b",
+                            "elType": "widget",
+                            "widgetType": "ls-portfolio-hero",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8b3595f",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "dbcd49d",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "9bdd82a",
+                            "elType": "widget",
+                            "widgetType": "ls-portfolio",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2e15611",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "8ec18f7",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "62a9c0e",
+                            "elType": "widget",
+                            "widgetType": "ls-performance",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7febdc4",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "a18d2e9",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "2f84306",
+                            "elType": "widget",
+                            "widgetType": "ls-lead-form",
+                            "settings": {
+                                "layout": "split-card",
+                                "card_style": "canvas",
+                                "section_bg": "canvas",
+                                "badge": "باشگاه همکاران و تولیدکنندگان لاریجانی استون",
+                                "badge_icon": {
+                                    "value": "bi bi-gift-fill",
+                                    "library": "bootstrap-icons"
+                                },
+                                "title": "پروژه خود را ارسال کنید؛ برای سفارش بعدی قالب، ۱۰٪ تخفیف هدیه بگیرید!",
+                                "desc": "اگر شما هم با تجهیزات، قالب‌ها یا مواد اولیه کارخانه لاریجانی استون پروژه‌ای زیبا اجرا کرده‌اید، تصاویر و مشخصات آن را برای ما بفرستید تا با نام کارگاه خودتان در وب‌سایت و کاتالوگ کشوری معرفی شود.",
+                                "info_style": "checks",
+                                "info_items": [
+                                    {
+                                        "title": "درج اطلاعات تماس و برند کارگاه شما به عنوان مجری در صفحه اختصاصی",
+                                        "_id": "53e16b7"
+                                    },
+                                    {
+                                        "title": "دریافت بن تخفیف خرید قالب‌های تزریقی جدید و اکسید آهن",
+                                        "_id": "5868850"
+                                    },
+                                    {
+                                        "title": "مشاوره و عیب‌یابی رایگان خط تولید توسط مهندس لاریجانی",
+                                        "_id": "64084a7"
+                                    }
+                                ],
+                                "form_name": "ارسال پروژه همکاران",
+                                "fields": [
+                                    {
+                                        "label": "نام تولیدکننده یا کارگاه",
+                                        "type": "text",
+                                        "name": "name",
+                                        "placeholder": "مثال: کارگاه سنگ نوین",
+                                        "required": "yes",
+                                        "_id": "b49dd10"
+                                    },
+                                    {
+                                        "label": "شماره تماس همراه",
+                                        "type": "tel",
+                                        "name": "phone",
+                                        "placeholder": "۰۹۱۲...",
+                                        "required": "yes",
+                                        "ltr": "yes",
+                                        "_id": "b8d0690"
+                                    },
+                                    {
+                                        "label": "شهر محل اجرا",
+                                        "type": "text",
+                                        "name": "city",
+                                        "placeholder": "مثال: اصفهان",
+                                        "required": "yes",
+                                        "_id": "76878f1"
+                                    },
+                                    {
+                                        "label": "نوع قالب و محصول",
+                                        "type": "select",
+                                        "name": "mold",
+                                        "options": "نمای سه‌بعدی و سنگ دکوراتیو\nواش‌بتن و کفپوش پلیمری\nجدول و دورباغچه\nستون، سرستون و نرده صراحی\nسایر قطعات مهندسی",
+                                        "_id": "6a90d3a"
+                                    },
+                                    {
+                                        "label": "بارگذاری تصاویر پروژه (حداکثر ۵ تصویر)",
+                                        "type": "file",
+                                        "name": "files",
+                                        "placeholder": "انتخاب فایل‌های تصویر یا رها کردن اینجا",
+                                        "hint": "فرمت‌های JPG، PNG (حداکثر ۸ مگابایت)",
+                                        "_id": "64d60c5"
+                                    },
+                                    {
+                                        "label": "توضیح کوتاه درباره متراژ و نوع رزین",
+                                        "type": "textarea",
+                                        "name": "desc",
+                                        "placeholder": "توضیح دهید از چه متریال و در چه متراژی اجرا کردید...",
+                                        "_id": "2227540"
+                                    }
+                                ],
+                                "submit_text": "ثبت و دریافت کد تخفیف",
+                                "submit_icon": {
+                                    "value": "bi bi-send-fill",
+                                    "library": "bootstrap-icons"
+                                },
+                                "submit_full": "",
+                                "note": "اطلاعات شما نزد لاریجانی استون محفوظ است",
+                                "success_title": "پروژه شما با موفقیت ثبت گردید!",
+                                "success_text": "کد پیگیری {tracking} – کارشناسان ما جهت بازبینی تصاویر و ارسال کد تخفیف ۱۰٪ با شما تماس خواهند گرفت."
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fa66edf",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "8908d7f",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "886c721",
+                            "elType": "widget",
+                            "widgetType": "ls-floating-cta",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes"
+    }
+}

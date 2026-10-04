@@ -1,0 +1,41 @@
+/* Larijani Stone – WooCommerce cart, checkout & account styling (RTL). */
+.woocommerce, .woocommerce-page { font-family: 'Vazirmatn', Tahoma, sans-serif; }
+.woocommerce-cart .ls-main, .woocommerce-checkout .ls-main, .woocommerce-account .ls-main { padding: 2rem 1rem 4rem; }
+.woocommerce-cart .ls-main > .woocommerce, .woocommerce-checkout .ls-main > .woocommerce, .woocommerce-account .ls-main > .woocommerce,
+.woocommerce-cart .ls-prose, .woocommerce-checkout .ls-prose { max-width: 80rem; margin-inline: auto; }
+.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit,
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce .wc-block-components-button:not(.is-link) {
+	background: var(--ls-primary) !important; color: #fff !important; border-radius: 9999px !important; padding: .8rem 1.6rem !important;
+	font-weight: 700 !important; font-family: inherit !important; border: 0 !important; transition: background .2s ease;
+}
+.woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,
+.woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover { background: var(--ls-primary-hover) !important; }
+.woocommerce .woocommerce-message, .woocommerce .woocommerce-info, .woocommerce .woocommerce-error,
+.woocommerce-notices-wrapper .woocommerce-message {
+	border-radius: 1rem; border-top: 0; border-right: 4px solid var(--ls-primary); background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.06);
+	padding: 1rem 3.2rem 1rem 1rem; color: #121c2c;
+}
+.woocommerce .woocommerce-error { border-right-color: #ba1a1a; }
+.woocommerce .woocommerce-message::before, .woocommerce .woocommerce-info::before { color: var(--ls-primary); right: 1.2rem; left: auto; }
+.woocommerce table.shop_table { border-radius: 1rem; overflow: hidden; border-color: var(--ls-border); background: #fff; }
+.woocommerce table.shop_table th { background: var(--ls-canvas); }
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea, .woocommerce form .form-row select,
+.woocommerce .quantity .qty, .select2-container--default .select2-selection--single {
+	border-radius: .75rem; border: 1px solid var(--ls-border); background: var(--ls-canvas); padding: .65rem .9rem; font-family: inherit;
+}
+.woocommerce form .form-row input.input-text:focus, .woocommerce form .form-row textarea:focus { border-color: var(--ls-primary); outline: none; background: #fff; }
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register, .woocommerce-checkout #payment, .woocommerce .cart-collaterals .cart_totals {
+	border-radius: 1.25rem; border-color: var(--ls-border); background: #fff;
+}
+.woocommerce-checkout #payment div.payment_box { background: var(--ls-canvas); border-radius: .75rem; }
+.woocommerce-checkout #payment div.payment_box::before { border-bottom-color: var(--ls-canvas); }
+.woocommerce span.onsale { background: #B45309; border-radius: 9999px; min-height: auto; min-width: auto; padding: .25rem .75rem; line-height: 1.6; }
+.woocommerce-MyAccount-navigation ul { list-style: none; margin: 0; padding: 0; background: #fff; border-radius: 1rem; overflow: hidden; }
+.woocommerce-MyAccount-navigation li a { display: block; padding: .8rem 1rem; color: #454841; border-bottom: 1px solid var(--ls-border); }
+.woocommerce-MyAccount-navigation li.is-active a, .woocommerce-MyAccount-navigation li a:hover { background: var(--ls-primary); color: #fff; }
+.woocommerce .star-rating span::before, .woocommerce p.stars a { color: #B45309; }
+.ls-wc-reviews #reviews #comments ol.commentlist li .comment-text { border-radius: 1rem; border-color: var(--ls-border); }
+.ls-wc-reviews #review_form #respond textarea, .ls-wc-reviews #review_form #respond input[type="text"], .ls-wc-reviews #review_form #respond input[type="email"] { width: 100%; border-radius: .75rem; border: 1px solid var(--ls-border); padding: .7rem 1rem; }
+.added_to_cart.wc-forward { display: inline-block; margin-top: .4rem; font-size: .8rem; font-weight: 700; color: var(--ls-primary); }
+.ls-root .add_to_cart_button.loading { opacity: .6; }
+.ls-root .add_to_cart_button.added::after { content: "\2713"; margin-inline-start: .25rem; }

@@ -1,0 +1,282 @@
+{
+    "version": "0.4",
+    "title": "لاریجانی – تک‌محصول",
+    "type": "product",
+    "content": [
+        {
+            "id": "e5f26e2",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "cb126c0",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "b5428f5",
+                            "elType": "widget",
+                            "widgetType": "ls-product-detail",
+                            "settings": {
+                                "source": "auto"
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cf3fc86",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "07a6c78",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "0d5e3c8",
+                            "elType": "widget",
+                            "widgetType": "ls-product-tabs",
+                            "settings": {
+                                "source": "auto"
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "82bf900",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "61c4ff7",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "5843958",
+                            "elType": "widget",
+                            "widgetType": "ls-products",
+                            "settings": {
+                                "source": "woocommerce",
+                                "wc_query": "related",
+                                "card_style": "compact",
+                                "section_bg": "canvas",
+                                "heading_eyebrow": "تجهیزات و مواد مکمل خط تولید",
+                                "heading_title": "مواد اولیه و ماشین‌آلات متناسب با این قالب",
+                                "heading_desc": "",
+                                "heading_link_text": "مشاهده کل کاتالوگ فروشگاه",
+                                "heading_style": "token",
+                                "items": [
+                                    {
+                                        "image": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAaJLbEQaMiCYAk7bJI6CQn9jjfz8RmWIjd0pNxoBhAIJu77grIhvRxpdpCImhXHWpjibSD8-hzwew93XTZKzCSwz9mmmDQgnQHTwdwn136CCt95s49OGo17HT56wYespJuQvyMKl0Pfxf9lbCxH36FBew6KIZjkRp5imRWfGMWFTURz4i8WyazO61KmVzvFV2eVke4SEmheOveg0CbZXvxiDAIL0rhe3uCpqaZO9fnN_mDkGDckbMm8Q",
+                                            "id": ""
+                                        },
+                                        "badge": "گالن ۲۰ لیتری",
+                                        "title": "فوق‌روان‌کننده پلی‌کربوکسیلات نانو (LS-500)",
+                                        "desc": "کاهش ۳۰ درصدی آب مصرفی، افزایش مقاومت فشاری تا ۷۵ مگاپاسکال و روان‌سازی کامل گوشه‌های تیز قالب.",
+                                        "price_label": "قیمت هر گالن:",
+                                        "price": "۱,۶۵۰,۰۰۰",
+                                        "button_icon": {
+                                            "value": "bi bi-cart-plus",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "_id": "e86da03"
+                                    },
+                                    {
+                                        "image": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA7XoWojgWbQLQ6mAKMWzq60je1VkFeLmKPGhtU_EGjZeojS8CXo6Ks_TUXAU4eMR7eOu7Gl4C89vpbjqz2MoHBow0NZG4KMvEcZJHPEXenUCQuH1qV6TWutrW2GZjEJjDJifa12vtfZ_ynDUQb2eZTedBtdoOdJP6O5unFSVFH_-H-SDPtN9KhfPMKLrdGw-7TOD5rn5NbP2Zo7-o2I745WKd9GGbVzkgxW2ECqroXx3RtV6Dhny-03A",
+                                            "id": ""
+                                        },
+                                        "badge": "آب‌گریز ضدشوره",
+                                        "title": "رزین سیلر براق‌کننده و نانو محافظ سنگ نما",
+                                        "desc": "ایجاد لایه خودتمیزشونده و جلوه خیس (Wet Look) دائمی در برابر اشعه UV آفتاب بدون زردشدگی.",
+                                        "price_label": "قیمت ظرف ۴ لیتری:",
+                                        "price": "۸۸۰,۰۰۰",
+                                        "button_icon": {
+                                            "value": "bi bi-cart-plus",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "_id": "eb8f571"
+                                    },
+                                    {
+                                        "image": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuC4zYe1-Yb4725PcqYEWcgx6vXLVItOJIsHFzBv5Z1Qy9QBlm3rf8nMZ1Z_WOjmrcFsbL2jCvxeBd2dg4mCCRwD8nwr1u_JnBKLUVfGE5573AAAGauSSLHS3-U-mRjdlWbPuN-a7ieaKxQH382CF8khwsquWNb0iNR4eC95CxbVX-VyZydIwJ4uhpHl_fBrnnNwXdCz6zkC9b81nMHHkus1BXmUI5eRUYazZsDWdidpFmgFvxX4zjKJKA",
+                                            "id": ""
+                                        },
+                                        "badge": "کیسه ۲۵ کیلویی",
+                                        "title": "رنگ معدنی اکسید آهن بایفروکس آلمان (مشکی ۳۳۰)",
+                                        "desc": "بالاترین قدرت رنگ‌دهی و ثبات نوری بدون رنگ‌پریدگی، ویژه ساخت سنگ‌های بازالتی دکوراتیو لوکس.",
+                                        "price_label": "قیمت هر کیلو:",
+                                        "price": "۲۴۵,۰۰۰",
+                                        "button_icon": {
+                                            "value": "bi bi-cart-plus",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "_id": "24daa9a"
+                                    },
+                                    {
+                                        "image": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDTsa3e1J5fV5XPQmsS1zSbXkP_edViUdjrI72uWAf0fjvpsHOh6PhVXOu5qY-gUXpzMER1q_CcrnXxNM7vwD9_rmVf17UOQet6ErJiHkXdpzEQaPkOt_120z-Lr81j4SM_3AvHBftluG8IX5nXEXDJ0-2rlirWDbuKexjAusJW8EQn7x1rJ-5DQ9DetettzosX8hb-dnInJV2vN01AJ-ZNWzQ8XmBq3o7NsSDzOeNOFIs4mcc1hy_mzQ",
+                                            "id": ""
+                                        },
+                                        "badge": "ابعاد ۲×۱ متر",
+                                        "title": "میز ویبره صنعتی دوموتوره ارتعاش عمودی",
+                                        "desc": "طراحی اختصاصی با ورق ضخیم ۸ میلی‌متر و فنرهای فولادی جهت تراکم کامل سنگ‌های سه‌بعدی بدون شکست قالب.",
+                                        "price_label": "قیمت کارخانه:",
+                                        "price": "۴۸,۰۰۰,۰۰۰",
+                                        "button_icon": {
+                                            "value": "bi bi-telephone",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "button_link": {
+                                            "url": "tel:09122302685"
+                                        },
+                                        "_id": "b7efbdf"
+                                    }
+                                ]
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "304ea3f",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "229c2b4",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "404fdd6",
+                            "elType": "widget",
+                            "widgetType": "ls-cta",
+                            "settings": {
+                                "variant": "dark-card",
+                                "badge": "پشتیبانی مهندسی خط تولید سنگ مصنوعی",
+                                "badge_icon": {
+                                    "value": "bi bi-gear-wide-connected",
+                                    "library": "bootstrap-icons"
+                                },
+                                "title": "قصد راه‌اندازی کارگاه یا تولید انبوه با این طرح را دارید؟",
+                                "desc": "از مشاوره فنی در زمینه چیدمان میزهای ویبره، انتخاب میکسر و نسبت‌های دقیق رزین پلیمری توسط مهندس لاریجانی بهره‌مند شوید. قالب‌ها به همراه آموزش ویدئویی و پشتیبانی فنی کارگاهی ارسال می‌گردند.",
+                                "btn1_text": "۰۹۱۲ ۲۳۰ ۲۶۸۵",
+                                "btn1_sub": "تماس مستقیم با مدیریت فنی",
+                                "btn2_style": "darker",
+                                "btn2_icon": {
+                                    "value": "bi bi-whatsapp",
+                                    "library": "bootstrap-icons"
+                                },
+                                "center_mobile": "yes"
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes"
+    }
+}

@@ -1,0 +1,198 @@
+{
+    "version": "0.4",
+    "title": "لاریجانی – آرشیو وبلاگ",
+    "type": "archive",
+    "content": [
+        {
+            "id": "ebb704f",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "d4aef4f",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "3605320",
+                            "elType": "widget",
+                            "widgetType": "ls-blog-hero",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "797ea5f",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "14b34fc",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "3d590c9",
+                            "elType": "widget",
+                            "widgetType": "ls-featured-post",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2314008",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "2a9b777",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "ff2cef1",
+                            "elType": "widget",
+                            "widgetType": "ls-posts-grid",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "c41825c",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "bf44179",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "e458cbf",
+                            "elType": "widget",
+                            "widgetType": "ls-cta",
+                            "settings": {
+                                "variant": "dark-card",
+                                "badge": "پشتیبانی فنی و مهندسی کارخانجات",
+                                "badge_icon": {
+                                    "value": "bi bi-headset",
+                                    "library": "bootstrap-icons"
+                                },
+                                "title": "نیاز به تنظیم فرمولاسیون اختصاصی یا رفع اشکال خط تولید دارید؟",
+                                "desc": "تیم مهندسی لاریجانی استون آماده ارائه مشاوره مستقیم تلفنی، تست آزمایشگاهی نمونه سنگ‌های کارگاه شما و آموزش حضوری اپراتورهای خط تولید است.",
+                                "btn1_text": "تماس مستقیم با مهندس لاریجانی",
+                                "btn2_style": "emerald",
+                                "btn2_icon": {
+                                    "value": "bi bi-whatsapp",
+                                    "library": "bootstrap-icons"
+                                },
+                                "center_mobile": "yes"
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes"
+    }
+}

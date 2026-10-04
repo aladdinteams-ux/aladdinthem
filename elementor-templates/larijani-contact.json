@@ -1,0 +1,489 @@
+{
+    "version": "0.4",
+    "title": "تماس با ما",
+    "type": "page",
+    "content": [
+        {
+            "id": "5edd238",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "e706016",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "9d6d1be",
+                            "elType": "widget",
+                            "widgetType": "ls-breadcrumb",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "bd4a01d",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "236ced6",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "2b2fc0f",
+                            "elType": "widget",
+                            "widgetType": "ls-page-banner",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2ed6f0f",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "ea11ddc",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "225b4e5",
+                            "elType": "widget",
+                            "widgetType": "ls-contact-cards",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "b759ff3",
+            "elType": "section",
+            "settings": {
+                "layout": "boxed",
+                "content_width": {
+                    "unit": "px",
+                    "size": 1280
+                },
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "40",
+                    "right": "20",
+                    "bottom": "40",
+                    "left": "20",
+                    "isLinked": false
+                },
+                "padding_mobile": {
+                    "unit": "px",
+                    "top": "24",
+                    "right": "4",
+                    "bottom": "24",
+                    "left": "4",
+                    "isLinked": false
+                },
+                "structure": "20"
+            },
+            "elements": [
+                {
+                    "id": "9fca796",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 58,
+                        "_inline_size": 58.333,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "12",
+                            "bottom": "0",
+                            "left": "12",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "9a28f9a",
+                            "elType": "widget",
+                            "widgetType": "ls-lead-form",
+                            "settings": {
+                                "layout": "form",
+                                "bare": "yes",
+                                "form_kicker": "درخواست رسمی استعلام قیمت، کاتالوگ و فرمولاسیون",
+                                "form_title": "فرم ثبت درخواست مشاوره و پیش‌فاکتور",
+                                "form_desc": "مشخصات سفارش خود را درج نمایید تا مهندسان فروش ظرف حداکثر ۲ ساعت کاری پیش‌فاکتور رسمی و فایل‌های فنی را ارسال نمایند.",
+                                "form_name": "استعلام قیمت و پیش‌فاکتور",
+                                "fields": [
+                                    {
+                                        "label": "نام و نام خانوادگی / نام مجموعه صنعتی",
+                                        "type": "text",
+                                        "name": "name",
+                                        "placeholder": "مثال: مهندس رضوانی (سنگ بتن البرز)",
+                                        "required": "yes",
+                                        "icon": {
+                                            "value": "bi bi-person",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "_id": "2b44dab"
+                                    },
+                                    {
+                                        "label": "شماره تلفن همراه (جهت هماهنگی واتس‌اپ)",
+                                        "type": "tel",
+                                        "name": "phone",
+                                        "placeholder": "۰۹۱۲XXXXXXX",
+                                        "required": "yes",
+                                        "ltr": "yes",
+                                        "icon": {
+                                            "value": "bi bi-phone",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "_id": "982dff4"
+                                    },
+                                    {
+                                        "label": "نوع محصول مورد نیاز",
+                                        "type": "select",
+                                        "name": "product",
+                                        "required": "yes",
+                                        "options": "راه‌اندازی کامل خط تولید و ماشین‌آلات\nقالب‌های ABS و سیلیکونی نشکن (بیش از ۴۰۰ طرح)\nمواد اولیه تخصصی (رزین، روان‌کننده، پیگمنت معدنی)\nمشاوره فرمولاسیون و آموزش حضوری\nقطعات یدکی و ارتقای میز ویبره موجود",
+                                        "_id": "a2a9850"
+                                    },
+                                    {
+                                        "label": "حجم تقریبی پروژه یا سرمایه کارگاه",
+                                        "type": "select",
+                                        "name": "scale",
+                                        "options": "کارگاه نوپا و مقیاس متوسط (تا ۱۰۰ متر مربع در روز)\nخط تولید صنعتی نیمه‌اتوماتیک (۱۰۰ تا ۳۰۰ متر)\nخط تولید سنگین تمام‌اتوماتیک و شهرداری‌ها\nفقط خرید قالب (زیر ۵۰ متر مربع)\nخرید عمده قالب (بالای ۲۰۰ متر مربع)",
+                                        "_id": "d9f2402"
+                                    },
+                                    {
+                                        "label": "بارگذاری نقشه کارگاه، ابعاد طرح یا تصاویر درخواستی (اختیاری)",
+                                        "type": "file",
+                                        "name": "files",
+                                        "hint": "فرمت‌های مجاز: PDF, DWG, JPG, PNG (حداکثر ۲۰ مگابایت)",
+                                        "_id": "855c2e9"
+                                    },
+                                    {
+                                        "label": "توضیحات فنی، اقلام درخواستی یا شرایط جغرافیایی کارگاه",
+                                        "type": "textarea",
+                                        "name": "notes",
+                                        "placeholder": "مشخصات زمین، متراژ تولید روزانه مدنظر، برق تک‌فاز یا سه‌فاز، یا کدهای قالب کاتالوگ را بنویسید...",
+                                        "_id": "cd15591"
+                                    },
+                                    {
+                                        "label": "ارسال نسخه کاتالوگ تصویری و پی‌دی‌اف قیمت‌ها به همراه پیامک وضعیت استعلام.",
+                                        "type": "consent",
+                                        "name": "catalog",
+                                        "_id": "718c392"
+                                    }
+                                ],
+                                "submit_text": "ثبت درخواست و دریافت مشاوره فوری",
+                                "submit_full": "",
+                                "note": "تضمین محرمانگی اطلاعات پروژه‌ها و فرمولاسیون‌ها",
+                                "success_title": "درخواست شما با موفقیت به واحد مهندسی ارسال گردید.",
+                                "success_text": "شماره پیگیری: {tracking}. همکاران فنی در کوتاهترین زمان با شما تماس خواهند گرفت."
+                            },
+                            "elements": []
+                        }
+                    ]
+                },
+                {
+                    "id": "4ac09b5",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 42,
+                        "_inline_size": 41.666,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "12",
+                            "bottom": "0",
+                            "left": "12",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "a56582a",
+                            "elType": "widget",
+                            "widgetType": "ls-plant-card",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8c62b3c",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "2d7123b",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "38ea33c",
+                            "elType": "widget",
+                            "widgetType": "ls-map",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9169983",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "055b0e7",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "36d7d13",
+                            "elType": "widget",
+                            "widgetType": "ls-faq",
+                            "settings": {
+                                "heading_badge": "پاسخ به ابهامات رایج تولیدکنندگان",
+                                "heading_eyebrow": "",
+                                "heading_title": "پرسش‌های متداول مشتریان و پیمانکاران",
+                                "heading_desc": "نکات مهم در خصوص ارسال بار، گارانتی نشکن بودن قالب‌ها، آموزش‌های تخصصی فرمولاسیون و پشتیبانی دستگاه‌ها.",
+                                "heading_align": "center",
+                                "icon_position": "header",
+                                "narrow": "yes",
+                                "section_bg": "none",
+                                "items": [
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-truck",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "question": "نحوه ارسال قالب‌ها و مواد اولیه به سراسر کشور چگونه است؟",
+                                        "answer": "کلیه سفارش‌های قالب و افزودنی‌های شیمیایی از انبار آبیک از طریق شرکت‌های معتبر باربری (مانند وطن، پیشتاز، پیام‌شمس) بسته‌بندی پالت شده و ظرف ۲۴ الی ۴۸ ساعت به هر نقطه از ایران تحویل داده می‌شود. ماشین‌آلات نیز با بارنامه رسمی و بیمه‌نامه دولتی با خودروهای کفی ارسال می‌گردند.",
+                                        "_id": "21e3a14"
+                                    },
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-shield-check",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "question": "شرایط ضمانت و تعویض قالب‌های ABS در صورت شکست چیست؟",
+                                        "answer": "قالب‌های لاریجانی استون با بهترین گرید ABS نشکن ضدسایش تولید می‌شوند. این قالب‌ها دارای ۲ سال ضمانت تعویض کتبی در برابر هرگونه ترک‌خوردگی ناشی از ویبره و فرآیند دپو هستند. در صورت بروز هرگونه عیب کیفی، قالب‌ها بدون قید و شرط تعویض می‌گردند.",
+                                        "_id": "0d37cdb"
+                                    },
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-mortarboard",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "question": "آیا آموزش فرمولاسیون و راه‌اندازی کارگاه شامل هزینه جداگانه است؟",
+                                        "answer": "برای خریداران خط تولید کامل و پکیج‌های قالب، آموزش کامل حضوری در محل کارخانه آبیک یا اعزام کارشناس فنی به کارگاه مشتری به همراه دفترچه فنی اختصاصی فرمولاسیون کاملاً رایگان انجام می‌پذیرد. همچنین پشتیبانی تلفنی به صورت مادام‌العمر در اختیار شماست.",
+                                        "_id": "593c339"
+                                    },
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-gear-wide-connected",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "question": "آیا امکان تست دستگاه‌ها و دیدن خط تولید نمونه قبل از خرید وجود دارد؟",
+                                        "answer": "بله. ما در محوطه کارخانه آبیک یک خط کامل نمونه فعال داریم. مشتریان محترم می‌توانند با هماهنگی قبلی تشریف آورده و تست ارتعاش میز ویبره، کیفیت اختلاط میکسر بتن و دپوی قالب‌ها را به صورت عملی از نزدیک بررسی نمایند.",
+                                        "_id": "06dc919"
+                                    }
+                                ]
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "52a2071",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "b7af1a0",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "5cf3913",
+                            "elType": "widget",
+                            "widgetType": "ls-cta",
+                            "settings": {
+                                "variant": "soft-card",
+                                "icon": {
+                                    "value": "bi bi-hand-thumbs-up-fill",
+                                    "library": "bootstrap-icons"
+                                },
+                                "title": "نیاز به دریافت فوری لیست قیمت بهمن و پیش‌فاکتور رسمی دارید؟",
+                                "desc": "فایل پی‌دی‌اف به‌روز شامل لیست ۴۰۰ قالب و کاتالوگ ماشین‌آلات را مستقیماً از طریق تلگرام یا ایتا نیز دریافت کنید.",
+                                "btn1_text": "تماس با مدیر مهندسی",
+                                "btn1_icon": {
+                                    "value": "bi bi-telephone",
+                                    "library": "bootstrap-icons"
+                                },
+                                "btn2_text": "ارتباط در پیام‌رسان",
+                                "btn2_icon": {
+                                    "value": "bi bi-whatsapp",
+                                    "library": "bootstrap-icons"
+                                },
+                                "section_bg": "none"
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes"
+    }
+}

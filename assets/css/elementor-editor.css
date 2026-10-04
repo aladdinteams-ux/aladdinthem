@@ -1,0 +1,6 @@
+/* Elementor editor panel: highlight the Larijani widget category. */
+#elementor-panel-category-larijani-stone .elementor-panel-category-title,
+#elementor-panel-category-larijani-stone-single .elementor-panel-category-title { color: #5C6754; font-weight: 700; }
+#elementor-panel-category-larijani-stone .elementor-element .icon,
+#elementor-panel-category-larijani-stone-single .elementor-element .icon { color: #5C6754; }
+.elementor-control-media .elementor-control-media__preview { background-color: #F8F9F7; }

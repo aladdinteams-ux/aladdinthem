@@ -1,0 +1,467 @@
+{
+    "version": "0.4",
+    "title": "خدمات و خطوط تولید",
+    "type": "page",
+    "content": [
+        {
+            "id": "b89ae83",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "fd345fc",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "a871666",
+                            "elType": "widget",
+                            "widgetType": "ls-breadcrumb",
+                            "settings": {
+                                "right_style": "badge",
+                                "bordered": "yes"
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2455ee9",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "20a6e80",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "8ee6afc",
+                            "elType": "widget",
+                            "widgetType": "ls-page-hero",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "823b76f",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "0ee6011",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "2fbd2c9",
+                            "elType": "widget",
+                            "widgetType": "ls-icon-cards",
+                            "settings": {
+                                "variant": "bento",
+                                "columns": "3",
+                                "columns_tablet": "1",
+                                "section_bg": "surface",
+                                "heading_eyebrow": "سه رکن اصلی توانمندی‌های کارخانه",
+                                "heading_title": "محورهای خدمات تخصصی لاریجانی استون",
+                                "heading_desc": "زنجیره تأمین صفر تا صد تولید قطعات بتنی دکوراتیو و سنگ سمنت‌پلاست، بر مبنای توان تولید ماشین‌آلات و قالب‌های استاندارد.",
+                                "heading_link_text": "دریافت لیست قیمت قالب‌ها و ماشین‌آلات",
+                                "heading_link": {
+                                    "url": "#consultation-form"
+                                },
+                                "heading_align": "split",
+                                "heading_style": "token",
+                                "items": [
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-layers",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "tone": "sage",
+                                        "eyebrow": "تنوع بی‌رقیب",
+                                        "title": "فروش بیش از ۴۰۰ مدل قالب آماده نشکن",
+                                        "desc": "تولید و عرضه اختصاصی انواع قالب‌های تزریقی وکیوم‌فرمینگ از مواد مرغوب ABS کره‌ای نشکن؛ شامل انواع موزائیک پلیمری، سنگ نما و دکوراتیو، جدول خیابانی، صراحی، دورباغچه، دیوارپوش و انواع سرستون و تاج.",
+                                        "chips": "قالب موزائیک و کفپوش\nقالب نما و صراحی\nدورباغچه و جدول\nتاج و سرستون",
+                                        "footer": "بیش از ۵۰۰ بار قالب‌ریزی بدون شکست",
+                                        "_id": "2ae486c"
+                                    },
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-mortarboard",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "tone": "fixed",
+                                        "eyebrow": "انتقال تجربیات کارگاهی",
+                                        "title": "آموزش تخصصی تولید سنگ مصنوعی سمنت‌پلاست",
+                                        "desc": "آموزش جامع عملی متناسب با شرایط آب‌وهوایی منطقه شما: اعزام مهندس ناظر جهت آموزش حضوری در محل کارگاه شما و آموزش اپراتورها یا ارائه پکیج کامل ویدیوهای گام‌به‌گام با سرفصل‌های تخصصی شبیه‌سازی مرمر، رگه‌دار کردن و رفع زردگرایی.",
+                                        "chips": "آموزش حضوری در کارگاه\nدوره‌های ویدیویی جامع\nفرمول ترکیب رنگ رگه‌ای",
+                                        "footer": "همراه با اعطای تاییدیه کیفی لاریجانی",
+                                        "_id": "bceabca"
+                                    },
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-gear-wide-connected",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "tone": "light",
+                                        "eyebrow": "تجهیزات صنعتی سنگین",
+                                        "title": "ساخت و سفارشی‌سازی دستگاه‌ها و ماشین‌آلات مدرن",
+                                        "desc": "طراحی و ساخت میزهای ویبره ۲ موتوره با فنربندی صنعتی و اینورتر تنظیم فرکانس ارتعاش جهت خروج کامل حباب‌های ریز، و میکسرهای بتن استاندارد طرح پان (Pan Mixer) مجهز به تیغه‌های ضدسایش هاردوکس برای اختلاط یکدست خمیر سنگ پلیمری.",
+                                        "chips": "میز ویبره ۲ موتوره فرکانسی\nمیکسر طرح پان ضدسایش\nپایه‌های عایق لرزش",
+                                        "footer": "یک سال گارانتی کامل + ۵ سال خدمات",
+                                        "_id": "edcb1e4"
+                                    }
+                                ]
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fb6d6d1",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "749bb60",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "b2c6a1f",
+                            "elType": "widget",
+                            "widgetType": "ls-steps",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "60b010a",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "187c374",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "13686a0",
+                            "elType": "widget",
+                            "widgetType": "ls-dark-feature",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "1b01f5f",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "dc5969d",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "6495e04",
+                            "elType": "widget",
+                            "widgetType": "ls-comparison",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4449a33",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "43db635",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "9befe40",
+                            "elType": "widget",
+                            "widgetType": "ls-lead-form",
+                            "settings": {
+                                "_element_id": "consultation-form"
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5043020",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "c2ec850",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "bf65926",
+                            "elType": "widget",
+                            "widgetType": "ls-faq",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "3abc4af",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "e0ff720",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "2ec7b89",
+                            "elType": "widget",
+                            "widgetType": "ls-cta",
+                            "settings": {
+                                "variant": "dark-strip",
+                                "icon": {
+                                    "value": "bi bi-people",
+                                    "library": "bootstrap-icons"
+                                },
+                                "title": "آماده همکاری و احداث خط تولید اختصاصی شما هستیم",
+                                "desc": "مشاوره تخصصی با مدیر فنی لاریجانی استون: ۰۹۱۲۲۳۰۲۶۸۵",
+                                "btn1_text": "تماس مستقیم تلفنی",
+                                "btn2_text": ""
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes"
+    }
+}

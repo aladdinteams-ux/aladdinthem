@@ -1,0 +1,4 @@
+/* Block editor (Gutenberg) content styles. */
+.editor-styles-wrapper { font-family: 'Vazirmatn', Tahoma, sans-serif; direction: rtl; color: #121c2c; }
+.editor-styles-wrapper h1, .editor-styles-wrapper h2, .editor-styles-wrapper h3 { color: #161D1A; font-weight: 900; }
+.editor-styles-wrapper a { color: #5C6754; }

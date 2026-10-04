@@ -1,0 +1,104 @@
+{
+    "version": "0.4",
+    "title": "لاریجانی – صفحه ۴۰۴",
+    "type": "error-404",
+    "content": [
+        {
+            "id": "48b99f2",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "13550d5",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "13b92ec",
+                            "elType": "widget",
+                            "widgetType": "ls-page-banner",
+                            "settings": {
+                                "badge": "خطای ۴۰۴",
+                                "title": "صفحه مورد نظر پیدا نشد",
+                                "desc": "ممکن است آدرس تغییر کرده باشد. از منوی بالا یا جستجو استفاده کنید.",
+                                "show_side": ""
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cc48a17",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "330ad5f",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "3351d14",
+                            "elType": "widget",
+                            "widgetType": "ls-categories",
+                            "settings": {
+                                "heading_title": "شاید به دنبال این بخش‌ها باشید",
+                                "heading_desc": ""
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes"
+    }
+}

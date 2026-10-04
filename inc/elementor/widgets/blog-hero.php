@@ -1,0 +1,69 @@
+<?php
+/**
+ * Widget: Blog archive hero (title, search, category chips).
+ *
+ * @package Larijani
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+/**
+ * Blog hero widget.
+ */
+class LS_Widget_Blog_Hero extends LS_Widget_Base {
+	/** @return string */
+	public function get_name() {
+		return 'ls-blog-hero';
+	}
+	/** @return string */
+	public function get_title() {
+		return __( 'LS سربرگ وبلاگ / آرشیو', 'larijani' );
+	}
+	/** @return string */
+	public function get_icon() {
+		return 'eicon-archive-title';
+	}
+	/** @return array */
+	public function get_categories() {
+		return array( 'larijani-stone', 'larijani-stone-single' );
+	}
+
+	/** Controls. */
+	protected function register_controls() {
+		$this->section( 'sec_main', __( 'محتوا', 'larijani' ) );
+		$this->ctl( 'badge', 'text', __( 'برچسب', 'larijani' ), 'مرجع مهندسی سنگ مصنوعی و افزودنی‌های بتن' );
+		$this->ctl( 'title', 'textarea', __( 'عنوان', 'larijani' ), 'آرشیو جامع مقالات، دانشنامه و راهنمای فنی سنگ مصنوعی و بتن پلیمری', array( 'rows' => 2 ) );
+		$this->ctl( 'desc', 'textarea', __( 'توضیح', 'larijani' ), 'مجموعه پژوهش‌های میدانی، دستورالعمل‌های اختلاط کارگاهی، عیب‌یابی خطوط تولید سمنت‌پلاست و راهکارهای ارتقای دوام قالب‌های پلیمری صنعتی به قلم مهندسان لاریجانی استون.' );
+		$this->ctl( 'auto_title', 'switch', __( 'عنوان خودکار در صفحات دسته/برچسب/جستجو', 'larijani' ), 'yes' );
+		$this->ctl( 'show_search', 'switch', __( 'جستجو', 'larijani' ), 'yes' );
+		$this->ctl( 'search_placeholder', 'text', __( 'راهنمای جستجو', 'larijani' ), 'جستجو در بین مقالات، فرمول‌ها، عیوب بتن، رزین LS و تجهیزات...' );
+		$this->ctl( 'search_button', 'text', __( 'دکمه جستجو', 'larijani' ), 'جستجو' );
+		$this->ctl( 'show_cats', 'switch', __( 'دسته‌بندی‌ها', 'larijani' ), 'yes' );
+		$this->ctl( 'all_label', 'text', __( 'عنوان «همه»', 'larijani' ), 'همه مقالات' );
+		$this->ctl( 'cats_limit', 'number', __( 'حداکثر دسته‌ها', 'larijani' ), 6 );
+		$this->end();
+		$this->style_controls();
+	}
+
+	/**
+	 * Render.
+	 *
+	 * @param array $s Settings.
+	 */
+	protected function render_widget( $s ) {
+		ls_render_blog_hero(
+			array(
+				'badge'              => $s['badge'],
+				'title'              => $s['title'],
+				'desc'               => $s['desc'],
+				'auto_title'         => $this->on( $s, 'auto_title' ) ? 'yes' : 'no',
+				'show_search'        => $this->on( $s, 'show_search' ) ? 'yes' : 'no',
+				'search_placeholder' => $s['search_placeholder'],
+				'search_button'      => $s['search_button'],
+				'show_cats'          => $this->on( $s, 'show_cats' ) ? 'yes' : 'no',
+				'all_label'          => $s['all_label'],
+				'cats_limit'         => (int) $s['cats_limit'],
+			)
+		);
+	}
+}

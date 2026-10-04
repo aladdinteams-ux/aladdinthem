@@ -1,0 +1,157 @@
+{
+    "version": "0.4",
+    "title": "لاریجانی – تک‌نوشته",
+    "type": "single-post",
+    "content": [
+        {
+            "id": "ddff877",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "a4748dc",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "ff29fed",
+                            "elType": "widget",
+                            "widgetType": "ls-post-hero",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "591227b",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "cc357d1",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "f64ed5c",
+                            "elType": "widget",
+                            "widgetType": "ls-post-content",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "d73cad8",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "4c1ab1a",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "a9d06f4",
+                            "elType": "widget",
+                            "widgetType": "ls-cta",
+                            "settings": {
+                                "variant": "dark-card",
+                                "badge": "راه‌اندازی صفر تا صد خطوط مکانیزه",
+                                "badge_icon": {
+                                    "value": "bi bi-buildings",
+                                    "library": "bootstrap-icons"
+                                },
+                                "title": "آماده راه‌اندازی یا ارتقای خط تولید سنگ مصنوعی کارگاه خود هستید؟",
+                                "desc": "تامین ماشین‌آلات سنگین شامل میکسرهای طرح آلمان، میزهای ویبره با ارتعاش کنترل‌شده و بیش از ۴۵۰ مدل قالب کامپوزیتی نشکن با پشتیبانی و گارانتی طلایی گروه صنعتی لاریجانی استون.",
+                                "btn1_text": "استعلام قیمت و مشاوره رایگان",
+                                "btn2_text": "مشاهده خطوط تولید",
+                                "btn2_link": {
+                                    "url": "/services/"
+                                },
+                                "btn2_icon": {
+                                    "value": "bi bi-arrow-left",
+                                    "library": "bootstrap-icons"
+                                }
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes"
+    }
+}

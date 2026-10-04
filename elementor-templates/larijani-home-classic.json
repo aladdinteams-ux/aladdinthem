@@ -1,0 +1,333 @@
+{
+    "version": "0.4",
+    "title": "صفحه اصلی (نسخه کلاسیک)",
+    "type": "page",
+    "content": [
+        {
+            "id": "653df58",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "1f83e18",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "dbe87a6",
+                            "elType": "widget",
+                            "widgetType": "ls-hero-classic",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "a9fb433",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "267661b",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "7a4743a",
+                            "elType": "widget",
+                            "widgetType": "ls-categories",
+                            "settings": [],
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fc98339",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "6fcaa51",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "aa2b99d",
+                            "elType": "widget",
+                            "widgetType": "ls-products",
+                            "settings": {
+                                "heading_eyebrow": "",
+                                "heading_title": "تجهیزات و قالب‌های برگزیده",
+                                "heading_desc": "پرفروش‌ترین محصولات خط تولید با گارانتی رسمی شرکت",
+                                "heading_link_text": "مشاهده همه محصولات",
+                                "section_bg": "white-bordered"
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "a5cd3ee",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "9d487bc",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "4ad4242",
+                            "elType": "widget",
+                            "widgetType": "ls-icon-cards",
+                            "settings": {
+                                "variant": "horizontal",
+                                "section_bg": "low",
+                                "heading_title": "چرا گروه صنعتی لاریجانی استون؟",
+                                "heading_desc": "مزیت‌های رقابتی که ما را به اولین انتخاب تولیدکنندگان سنگ مصنوعی تبدیل کرده است",
+                                "heading_align": "center",
+                                "items": [
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-shield-check",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "title": "قالب‌های نشکن پلیمری",
+                                        "desc": "استفاده از گرانول درجه یک ABS بدون شکنندگی و تغییر فرم حرارتی.",
+                                        "_id": "0064e0d"
+                                    },
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-currency-exchange",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "title": "بهترین قیمت مستقیم کارخانه",
+                                        "desc": "حذف تمامی واسطه‌ها و خرید مستقیم از کارخانه در شهرک صنعتی آبیک.",
+                                        "_id": "5b87dd1"
+                                    },
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-people",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "title": "مشاوره فرمولاسیون رایگان",
+                                        "desc": "ارائه رایگان جدیدترین فرمولاسیون سمنت‌پلاست به خریداران خط تولید.",
+                                        "_id": "b82f483"
+                                    },
+                                    {
+                                        "icon": {
+                                            "value": "bi bi-file-earmark-text",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "title": "ارسال روزانه به سراسر کشور",
+                                        "desc": "بسته‌بندی صنعتی پالت‌بندی شده و ارسال سریع به تمامی استان‌ها.",
+                                        "_id": "4242f46"
+                                    }
+                                ]
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fe6c5b5",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "e2a5f01",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "5d6bf5c",
+                            "elType": "widget",
+                            "widgetType": "ls-testimonials",
+                            "settings": {
+                                "layout": "slider",
+                                "rating_text": "",
+                                "heading_eyebrow": "",
+                                "heading_desc": "تجربه فعالان صنعت سنگ مصنوعی از همکاری با مجموعه لاریجانی استون"
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "85e8538",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                }
+            },
+            "elements": [
+                {
+                    "id": "04be0c1",
+                    "elType": "column",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": true
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "124e2b7",
+                            "elType": "widget",
+                            "widgetType": "ls-cta",
+                            "settings": {
+                                "variant": "catalog-form",
+                                "badge": "دانلود مستقیم کاتالوگ جامع ۱۴۰۴",
+                                "title": "دریافت رایگان کاتالوگ جامع و لیست قیمت بهمن ۱۴۰۴",
+                                "desc": "شماره تماس یا ایمیل خود را وارد کنید تا کاتالوگ ۱۲۰ صفحه‌ای شامل مشخصات فنی، ابعاد قالب‌ها و پیش‌فاکتور خطوط تولید برای شما ارسال شود.",
+                                "form_name": "درخواست کاتالوگ",
+                                "form_placeholder": "شماره موبایل یا ایمیل شما...",
+                                "form_button": "ارسال کاتالوگ",
+                                "form_note": "ارسال فایل PDF به تلگرام، ایتا یا واتساپ شما در کمتر از ۲ دقیقه.",
+                                "form_success": "درخواست شما ثبت شد؛ کاتالوگ به زودی ارسال می‌شود."
+                            },
+                            "elements": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes"
+    }
+}

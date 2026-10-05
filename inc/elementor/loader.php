@@ -78,7 +78,6 @@ function ls_elementor_widgets() {
  * Bootstrap once Elementor is loaded.
  */
 function ls_elementor_init() {
-	require_once LS_DIR . '/inc/elementor/class-widget-base.php';
 	add_action( 'elementor/elements/categories_registered', 'ls_elementor_categories' );
 	add_action( 'elementor/widgets/register', 'ls_elementor_register_widgets' );
 	add_filter( 'elementor/icons_manager/additional_tabs', 'ls_elementor_icon_tabs' );
@@ -121,13 +120,19 @@ function ls_elementor_categories( $manager ) {
  * @param \Elementor\Widgets_Manager $manager Manager.
  */
 function ls_elementor_register_widgets( $manager ) {
+	// Loaded here (not earlier) so the widgets extend Elementor's own Widget_Base,
+	// which is guaranteed to be available when Elementor registers widgets.
+	require_once LS_DIR . '/inc/elementor/class-widget-base.php';
+	if ( ! is_subclass_of( 'LS_Widget_Base', 'Elementor\\Widget_Base' ) ) {
+		return; // Base was already bound to the no-Elementor fallback in this request.
+	}
 	foreach ( ls_elementor_widgets() as $slug => $class ) {
 		$file = LS_DIR . '/inc/elementor/widgets/' . $slug . '.php';
 		if ( ! file_exists( $file ) ) {
 			continue;
 		}
 		require_once $file;
-		if ( class_exists( $class ) ) {
+		if ( class_exists( $class ) && is_subclass_of( $class, 'Elementor\\Widget_Base' ) ) {
 			$manager->register( new $class() );
 		}
 	}

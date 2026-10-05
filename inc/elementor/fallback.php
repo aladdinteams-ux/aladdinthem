@@ -181,7 +181,7 @@ abstract class LS_Fallback_Widget {
  * @return bool
  */
 function ls_fallback_active() {
-	return ! ls_has_elementor() && (bool) apply_filters( 'ls_fallback_render', true );
+	return ! ls_has_elementor() && ! defined( 'ELEMENTOR_VERSION' ) && (bool) apply_filters( 'ls_fallback_render', true );
 }
 
 /**

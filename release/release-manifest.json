@@ -1,0 +1,58 @@
+{
+  "name": "Larijani Stone",
+  "version": "1.2.0",
+  "release_type": "release candidate (staging verification with real Elementor required)",
+  "date": "2026-10-05",
+  "source_commit": "fe181c02a3d3fcaffa2f9520c0e30ad081a4792e",
+  "branch": "claude/wordpress-elementor-theme-conversion-t2rwiw",
+  "requirements": {
+    "wordpress": ">= 6.5 (runtime-tested 6.5.5, 7.1.2)",
+    "php": ">= 7.4 (runtime-tested 8.3.6; 7.4 static only)",
+    "elementor": "recommended (real plugin NOT EXECUTED in QA)",
+    "woocommerce": "optional (runtime-tested 11.1.2)"
+  },
+  "artifacts": [
+    {
+      "file": "larijani-stone.zip",
+      "sha256": "a8f32759b304d4d2bd745eccbf85441c0a38f59d92404760354d0ea33482f328",
+      "bytes": 850709,
+      "files": 142,
+      "root_folder": [
+        "larijani-stone"
+      ],
+      "root_ok": true,
+      "contains_dev_files": false
+    },
+    {
+      "file": "larijani-stone-child.zip",
+      "sha256": "e99aaa7185210f7c8b9ac57be5880355f90ff3f90f555b099c73fb056b0c30de",
+      "bytes": 1179,
+      "files": 2,
+      "root_folder": [
+        "larijani-stone-child"
+      ],
+      "root_ok": true,
+      "contains_dev_files": false
+    }
+  ],
+  "excluded_from_theme_zip": [
+    "src/",
+    "build/",
+    "package.json",
+    "package-lock.json",
+    "tailwind.config.js",
+    ".gitignore",
+    "release/",
+    "child-theme/",
+    "docs/qa/evidence/",
+    "node_modules/"
+  ],
+  "secrets_scan": "PASS (none found)",
+  "licenses": {
+    "theme": "GPL-2.0-or-later",
+    "Vazirmatn": "OFL-1.1",
+    "Bootstrap Icons": "MIT"
+  },
+  "qa_report": "docs/qa/qa-report.json",
+  "release_ready": false
+}

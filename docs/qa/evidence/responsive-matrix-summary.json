@@ -1,0 +1,304 @@
+{
+ "engine": "Playwright Chromium (headless)",
+ "wordpress": "6.5.5 sandbox + Elementor API shim",
+ "final_matrix": {
+  "routes": [
+   "404",
+   "home",
+   "home-classic",
+   "services",
+   "contact",
+   "portfolio",
+   "catalog",
+   "store",
+   "product",
+   "blog",
+   "post",
+   "post-plain",
+   "category",
+   "search",
+   "search-empty",
+   "project",
+   "projects",
+   "stress",
+   "stress-post"
+  ],
+  "byWidth": {
+   "320": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 9,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "360": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "375": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "390": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "430": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "640": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "767": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "768": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "820": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "1023": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "1024": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "1025": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "1280": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "1440": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "1920": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 4,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   }
+  }
+ },
+ "regression_after_fixes": {
+  "routes": [
+   "404",
+   "home",
+   "home-classic",
+   "services",
+   "contact",
+   "portfolio",
+   "catalog",
+   "store",
+   "product",
+   "blog",
+   "post",
+   "post-plain",
+   "category",
+   "search",
+   "search-empty",
+   "project",
+   "projects",
+   "stress",
+   "stress-post"
+  ],
+  "byWidth": {
+   "320": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 0,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "375": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 0,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "390": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 0,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "768": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 0,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "1024": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 0,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "1280": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 0,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "1920": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 0,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   }
+  }
+ },
+ "last_check": {
+  "routes": [
+   "404",
+   "home",
+   "home-classic",
+   "services",
+   "contact",
+   "portfolio",
+   "catalog",
+   "store",
+   "product",
+   "blog",
+   "post",
+   "post-plain",
+   "category",
+   "search",
+   "search-empty",
+   "project",
+   "projects",
+   "stress",
+   "stress-post"
+  ],
+  "byWidth": {
+   "320": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 0,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "390": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 0,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   },
+   "1280": {
+    "checks": 19,
+    "overflow": 0,
+    "h1NotOne": 0,
+    "headingSkips": 0,
+    "imgNoAlt": 0,
+    "dupIds": 0,
+    "bodyOverflowHidden": 0
+   }
+  }
+ }
+}

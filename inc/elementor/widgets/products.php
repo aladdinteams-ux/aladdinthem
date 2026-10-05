@@ -222,4 +222,13 @@ class LS_Widget_Products extends LS_Widget_Base {
 		</section>
 		<?php
 	}
+
+	/**
+	 * Section-heading link fallback.
+	 *
+	 * @return string
+	 */
+	protected function heading_fallback_url() {
+		return ls_page_url( 'shop', function_exists( 'wc_get_page_id' ) && wc_get_page_id( 'shop' ) > 0 ? get_permalink( wc_get_page_id( 'shop' ) ) : home_url( '/' ) );
+	}
 }

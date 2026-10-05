@@ -81,7 +81,7 @@ class LS_Widget_Contact_Cards extends LS_Widget_Base {
 								<?php if ( $it['badge'] ) : ?><span class="<?php echo esc_attr( $badge_tones[ $it['badge_tone'] ] ?? $badge_tones['light'] ); ?> font-label-badge text-label-badge px-2.5 py-1 rounded-full"><?php echo esc_html( $it['badge'] ); ?></span><?php endif; ?>
 							</div>
 							<div class="flex flex-col gap-1">
-								<h3 class="font-headline-sm text-headline-sm text-on-surface"><?php echo esc_html( $it['title'] ); ?></h3>
+								<h2 class="font-headline-sm text-headline-sm text-on-surface"><?php echo esc_html( $it['title'] ); ?></h2>
 								<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"><?php echo esc_html( $it['desc'] ); ?></p>
 							</div>
 						</div>

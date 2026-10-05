@@ -163,7 +163,7 @@ class LS_Widget_Hero_Classic extends LS_Widget_Base {
 					<?php foreach ( $s['filters'] as $i => $f ) : ?>
 					<label class="block <?php echo $i < count( $s['filters'] ) - 1 ? 'border-b sm:border-b-0 sm:border-l border-gray-200 pb-3 sm:pb-0 sm:pl-4' : 'pb-3 sm:pb-0'; ?>">
 						<span class="block text-xs font-semibold text-gray-400 mb-1"><?php echo esc_html( $f['label'] ); ?></span>
-						<select name="<?php echo esc_attr( $f['param'] ? $f['param'] : sanitize_title( $f['label'] ) ); ?>" class="w-full bg-transparent font-semibold text-gray-800 text-sm border-0 p-0 pl-6 focus:ring-0 cursor-pointer">
+						<select name="<?php echo esc_attr( $f['param'] ? $f['param'] : sanitize_title( $f['label'] ) ); ?>" class="w-full bg-transparent font-semibold text-gray-800 text-sm border-0 p-0 pl-6 min-h-6 focus:ring-0 cursor-pointer">
 							<?php foreach ( ls_lines( $f['options'] ) as $line ) : ?>
 								<?php $o = array_map( 'trim', explode( '|', $line ) ); ?>
 							<option value="<?php echo esc_attr( $o[1] ?? '' ); ?>"><?php echo esc_html( $o[0] ); ?></option>

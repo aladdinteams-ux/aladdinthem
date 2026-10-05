@@ -119,7 +119,7 @@ class LS_Widget_Page_Hero extends LS_Widget_Base {
 									<?php if ( $s['card_badge'] ) : ?><span class="font-label-badge text-label-badge bg-primary-container text-on-primary px-2.5 py-1 rounded-full"><?php echo esc_html( $s['card_badge'] ); ?></span><?php endif; ?>
 									<?php if ( $s['card_code'] ) : ?><span class="font-body-sm text-body-sm text-tertiary-fixed-dim" dir="ltr"><?php echo esc_html( $s['card_code'] ); ?></span><?php endif; ?>
 								</div>
-								<h3 class="font-headline-sm text-headline-sm text-on-tertiary"><?php echo esc_html( $s['card_title'] ); ?></h3>
+								<h2 class="font-headline-sm text-headline-sm text-on-tertiary"><?php echo esc_html( $s['card_title'] ); ?></h2>
 								<p class="font-body-md text-body-md text-tertiary-fixed-dim"><?php echo esc_html( $s['card_desc'] ); ?></p>
 								<?php if ( $s['card_note'] || $s['card_note_right'] ) : ?>
 								<div class="pt-2 flex items-center justify-between text-body-sm font-body-sm text-on-tertiary-container gap-2">

@@ -107,4 +107,13 @@ class LS_Widget_Posts extends LS_Widget_Base {
 		</section>
 		<?php
 	}
+
+	/**
+	 * Section-heading link fallback.
+	 *
+	 * @return string
+	 */
+	protected function heading_fallback_url() {
+		return ls_blog_url();
+	}
 }

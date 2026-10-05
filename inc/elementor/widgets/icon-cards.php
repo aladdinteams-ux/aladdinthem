@@ -94,11 +94,11 @@ class LS_Widget_Icon_Cards extends LS_Widget_Base {
 						<?php if ( $s['heading_eyebrow'] ) : ?>
 						<div class="flex items-center gap-space-xs text-primary mb-space-xs"><i class="bi bi-journal-bookmark text-[20px]" aria-hidden="true"></i><span class="font-label-nav text-label-nav"><?php echo esc_html( $s['heading_eyebrow'] ); ?></span></div>
 						<?php endif; ?>
-						<?php if ( $s['heading_title'] ) : ?><h3 class="font-headline-md text-headline-md text-on-surface mb-space-md"><?php echo ls_kses( $s['heading_title'] ); // phpcs:ignore ?></h3><?php endif; ?>
+						<?php if ( $s['heading_title'] ) : ?><h2 class="font-headline-md text-headline-md text-on-surface mb-space-md"><?php echo ls_kses( $s['heading_title'] ); // phpcs:ignore ?></h2><?php endif; ?>
 						<div class="grid <?php echo esc_attr( ls_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) ); ?> gap-space-lg font-body-md text-body-md text-on-surface-variant">
 							<?php foreach ( $s['items'] as $it ) : ?>
 							<div class="flex flex-col gap-space-xs bg-surface-canvas p-space-md rounded-xl">
-								<h4 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1"><?php echo ls_icon( $it['icon'], 'text-primary text-[20px]' ); // phpcs:ignore ?><?php echo esc_html( $it['title'] ); ?></h4>
+								<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1"><?php echo ls_icon( $it['icon'], 'text-primary text-[20px]' ); // phpcs:ignore ?><?php echo esc_html( $it['title'] ); ?></h3>
 								<?php if ( $it['desc'] ) : ?><p class="font-body-sm text-body-sm leading-relaxed"><?php echo esc_html( $it['desc'] ); ?></p><?php endif; ?>
 							</div>
 							<?php endforeach; ?>
@@ -124,7 +124,7 @@ class LS_Widget_Icon_Cards extends LS_Widget_Base {
 						<<?php echo $tag . $attrs; // phpcs:ignore ?> class="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl bg-surface-canvas border border-border-subtle transition-transform hover:-translate-y-1">
 							<div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white <?php echo esc_attr( ls_tone( $it['tone'], 'text' ) ); ?> border border-slate-200 flex items-center justify-center flex-shrink-0 shadow-sm text-xl"><?php echo ls_icon( $it['icon'] ); // phpcs:ignore ?></div>
 							<div>
-								<h3 class="text-xs sm:text-sm font-black text-surface-dark"><?php echo esc_html( $it['title'] ); ?></h3>
+								<p class="text-xs sm:text-sm font-black text-surface-dark"><?php echo esc_html( $it['title'] ); ?></p>
 								<?php if ( $it['desc'] ) : ?><p class="text-[11px] sm:text-xs text-slate-500 mt-0.5"><?php echo esc_html( $it['desc'] ); ?></p><?php endif; ?>
 							</div>
 						</<?php echo $tag; // phpcs:ignore ?>>

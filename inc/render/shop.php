@@ -99,6 +99,7 @@ function ls_render_catalog( $s = array() ) {
 			'advisory_link_text' => __( 'دریافت پکیج جامع خط تولید', 'larijani' ),
 			'advisory_link'    => '',
 			'columns'          => 3,
+			/* translators: 1: first item number, 2: last item number, 3: total items */
 			'count_text'       => __( 'نمایش %1$s تا %2$s از %3$s قلم کالا و تجهیزات سنگ مصنوعی', 'larijani' ),
 			'layout'           => 'sidebar', // sidebar | store (design: full-width 4-column shop).
 			'card_style'       => '',
@@ -178,6 +179,7 @@ function ls_render_catalog( $s = array() ) {
 	$cols = array( 2 => 'xl:grid-cols-2', 3 => 'xl:grid-cols-3', 4 => 'xl:grid-cols-4' );
 	?>
 	<div class="ls-catalog" data-ls-catalog="<?php echo $is_woo ? 'server' : 'client'; ?>">
+		<h2 class="screen-reader-text"><?php esc_html_e( 'فهرست محصولات', 'larijani' ); ?></h2>
 		<?php if ( $store ) : ?>
 		<div class="bg-surface-card p-space-md rounded-2xl shadow-sm mb-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
 			<form class="relative w-full md:w-96" role="search" method="get" action="<?php echo esc_url( $is_woo ? get_permalink( wc_get_page_id( 'shop' ) ) : '' ); ?>" data-ls-catalog-search>
@@ -186,15 +188,15 @@ function ls_render_catalog( $s = array() ) {
 				<i class="bi bi-search absolute right-3 top-1/2 -translate-y-1/2 text-outline" aria-hidden="true"></i>
 				<input id="ls-catalog-s" class="w-full bg-surface-canvas text-on-surface pr-10 pl-4 py-2.5 rounded-xl font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-all" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php echo esc_attr( $s['search_placeholder'] ); ?>" type="search" data-ls-search-input>
 			</form>
-			<div class="flex items-center justify-between md:justify-end gap-space-md w-full md:w-auto">
+			<div class="flex flex-wrap items-center justify-between md:justify-end gap-space-md w-full md:w-auto min-w-0">
 				<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-outline">
 					<span><?php echo esc_html( $s['results_label'] ); ?></span>
 					<span class="font-bold text-on-surface text-label-nav" data-ls-filter-count><?php echo esc_html( ls_fa_num( $total ) . ' ' . $s['results_suffix'] ); ?></span>
 				</div>
-				<form class="flex items-center gap-space-xs" method="get">
+				<form class="flex items-center gap-space-xs min-w-0 max-w-full" method="get">
 					<i class="bi bi-filter-right text-outline text-[20px]" aria-hidden="true"></i>
 					<label class="screen-reader-text" for="ls-catalog-sort"><?php echo esc_html( $s['sort_label'] ); ?></label>
-					<select id="ls-catalog-sort" class="bg-surface-canvas text-on-surface px-space-md py-2 rounded-xl font-label-nav text-label-nav focus:outline-none" name="orderby" <?php echo $is_woo ? 'data-ls-autosubmit' : 'data-ls-sort-select'; ?>>
+					<select id="ls-catalog-sort" class="min-w-0 max-w-full bg-surface-canvas text-on-surface px-space-md py-2 rounded-xl font-label-nav text-label-nav focus:outline-none" name="orderby" <?php echo $is_woo ? 'data-ls-autosubmit' : 'data-ls-sort-select'; ?>>
 						<?php
 						$store_sorts = array(
 							'popularity' => __( 'پیشنهاد کارخانه (پرفروش‌ترین)', 'larijani' ),
@@ -333,7 +335,7 @@ function ls_render_catalog( $s = array() ) {
 						<input class="w-full accent-primary-container cursor-pointer mt-2" type="range" min="<?php echo esc_attr( $ls_min ); ?>" max="<?php echo esc_attr( $ls_max ); ?>" step="1000" value="<?php echo esc_attr( $ls_max ); ?>" aria-label="<?php echo esc_attr( $s['price_title'] ); ?>" data-ls-price-range>
 						<div class="flex items-center justify-between pt-1">
 							<span class="font-body-sm text-body-sm text-outline"><?php esc_html_e( 'نمایش کلیه سفارشات', 'larijani' ); ?></span>
-							<button class="text-body-sm font-semibold text-primary hover:underline" type="button" data-ls-price-apply><?php esc_html_e( 'اعمال', 'larijani' ); ?></button>
+							<button class="min-h-6 min-w-6 px-1 text-body-sm font-semibold text-primary hover:underline" type="button" data-ls-price-apply><?php esc_html_e( 'اعمال', 'larijani' ); ?></button>
 						</div>
 					</div>
 						<?php endif; ?>
@@ -729,7 +731,7 @@ function ls_render_product_tabs( $d ) {
 		<div class="flex flex-col gap-space-lg" role="tabpanel" data-ls-pane="specs">
 			<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
 				<div class="<?php echo $d['highlight_title'] ? 'lg:col-span-2' : 'lg:col-span-3'; ?> flex flex-col gap-space-md">
-					<?php if ( $d['spec_title'] ) : ?><h3 class="font-headline-md text-headline-md text-on-surface font-black"><?php echo esc_html( $d['spec_title'] ); ?></h3><?php endif; ?>
+					<?php if ( $d['spec_title'] ) : ?><h2 class="font-headline-md text-headline-md text-on-surface font-black"><?php echo esc_html( $d['spec_title'] ); ?></h2><?php endif; ?>
 					<?php if ( $product ) : ?>
 					<div class="ls-prose !text-[0.95rem]"><?php echo apply_filters( 'the_content', $product->get_description() ); // phpcs:ignore ?></div>
 					<?php elseif ( $d['spec_text'] ) : ?>
@@ -747,7 +749,7 @@ function ls_render_product_tabs( $d ) {
 				<div class="bg-surface-canvas rounded-2xl p-space-lg flex flex-col justify-between">
 					<div class="flex flex-col gap-space-sm">
 						<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center text-2xl"><?php echo ls_icon( $d['highlight_icon'] ); // phpcs:ignore ?></div>
-						<h4 class="font-headline-sm text-headline-sm text-on-surface font-black"><?php echo esc_html( $d['highlight_title'] ); ?></h4>
+						<h3 class="font-headline-sm text-headline-sm text-on-surface font-black"><?php echo esc_html( $d['highlight_title'] ); ?></h3>
 						<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><?php echo esc_html( $d['highlight_text'] ); ?></p>
 					</div>
 					<?php if ( $d['datasheet_text'] && ( ! empty( $d['datasheet_link']['url'] ) || ( is_string( $d['datasheet_link'] ) && $d['datasheet_link'] ) ) ) : ?>
@@ -785,7 +787,7 @@ function ls_render_product_tabs( $d ) {
 					<?php foreach ( $d['formula_steps'] as $i => $st ) : ?>
 					<div class="flex gap-space-sm items-start">
 						<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm shrink-0"><?php echo esc_html( ls_fa_num( $i + 1 ) ); ?></span>
-						<div><h5 class="font-label-nav text-label-nav text-on-surface font-bold"><?php echo esc_html( $st['title'] ?? '' ); ?></h5><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><?php echo esc_html( $st['text'] ?? '' ); ?></p></div>
+						<div><h3 class="font-label-nav text-label-nav text-on-surface font-bold"><?php echo esc_html( $st['title'] ?? '' ); ?></h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><?php echo esc_html( $st['text'] ?? '' ); ?></p></div>
 					</div>
 					<?php endforeach; ?>
 				</div>
@@ -820,7 +822,7 @@ function ls_render_product_tabs( $d ) {
 						<div class="flex items-center justify-between gap-3">
 							<div class="flex items-center gap-space-sm">
 								<div class="w-10 h-10 rounded-full bg-surface-card flex items-center justify-center font-bold text-primary-container shadow-sm shrink-0"><?php echo esc_html( ls_initials( $r['name'] ?? '' ) ); ?></div>
-								<div><h5 class="font-label-nav text-label-nav text-on-surface font-bold"><?php echo esc_html( $r['name'] ?? '' ); ?></h5><span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $r['meta'] ?? '' ); ?></span></div>
+								<div><p class="font-label-nav text-label-nav text-on-surface font-bold"><?php echo esc_html( $r['name'] ?? '' ); ?></p><span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $r['meta'] ?? '' ); ?></span></div>
 							</div>
 							<div class="flex items-center text-accent-amber text-xs shrink-0"><?php echo str_repeat( '<i class="bi bi-star-fill" aria-hidden="true"></i>', max( 1, min( 5, (int) ( $r['stars'] ?? 5 ) ) ) ); // phpcs:ignore ?></div>
 						</div>

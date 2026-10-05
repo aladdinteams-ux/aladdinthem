@@ -329,7 +329,7 @@ function ls_render_download_card( $s = array() ) {
 		<div class="relative z-10">
 			<div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-2xl mb-4"><?php echo ls_icon( $s['icon'], 'text-accent-amber' ); // phpcs:ignore ?></div>
 			<?php if ( $s['badge'] ) : ?><span class="px-2.5 py-1 rounded-full bg-white/10 text-white/80 font-label-badge text-label-badge inline-block mb-2"><?php echo esc_html( $s['badge'] ); ?></span><?php endif; ?>
-			<h4 class="font-headline-sm text-headline-sm text-white mb-2 leading-snug"><?php echo esc_html( $s['title'] ); ?></h4>
+			<h2 class="font-headline-sm text-headline-sm text-white mb-2 leading-snug"><?php echo esc_html( $s['title'] ); ?></h2>
 			<p class="font-body-sm text-body-sm text-slate-300 leading-relaxed mb-5"><?php echo esc_html( $s['desc'] ); ?></p>
 			<a class="w-full py-3 rounded-xl bg-primary-container hover:bg-primary text-white font-headline-sm text-headline-sm transition-all flex items-center justify-center gap-2 shadow-sm" <?php echo ls_link_attrs( $s['link'] ); // phpcs:ignore ?>>
 				<i class="bi bi-cloud-arrow-down-fill" aria-hidden="true"></i><span><?php echo esc_html( $s['button'] ); ?></span>
@@ -381,7 +381,7 @@ function ls_render_popular_posts( $s = array() ) {
 	<div class="bg-surface-card rounded-<?php echo 'compact' === $s['style'] ? '3xl' : '2xl'; ?> p-6 shadow-sm">
 		<div class="flex items-center gap-2 mb-4 pb-2">
 			<?php echo ls_icon( $s['icon'], 'text-accent-amber text-lg' ); // phpcs:ignore ?>
-			<h4 class="font-headline-sm text-headline-sm text-on-surface font-black"><?php echo esc_html( $s['title'] ); ?></h4>
+			<h2 class="font-headline-sm text-headline-sm text-on-surface font-black"><?php echo esc_html( $s['title'] ); ?></h2>
 		</div>
 		<div class="flex flex-col gap-<?php echo 'compact' === $s['style'] ? '3' : '4'; ?>">
 			<?php foreach ( $items as $i => $it ) : ?>
@@ -418,12 +418,12 @@ function ls_render_newsletter( $s = array() ) {
 	);
 	?>
 	<div class="bg-surface-card rounded-2xl p-6 shadow-sm">
-		<div class="flex items-center gap-2 mb-2"><?php echo ls_icon( $s['icon'], 'text-primary text-base' ); // phpcs:ignore ?><h4 class="font-headline-sm text-headline-sm text-on-surface"><?php echo esc_html( $s['title'] ); ?></h4></div>
+		<div class="flex items-center gap-2 mb-2"><?php echo ls_icon( $s['icon'], 'text-primary text-base' ); // phpcs:ignore ?><h2 class="font-headline-sm text-headline-sm text-on-surface"><?php echo esc_html( $s['title'] ); ?></h2></div>
 		<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4"><?php echo esc_html( $s['desc'] ); ?></p>
 		<form class="flex flex-col gap-3" data-ls-form>
 			<?php echo ls_form_hidden_fields( $s['title'] ); // phpcs:ignore ?>
 			<input type="hidden" name="labels[phone]" value="<?php esc_attr_e( 'شماره همراه', 'larijani' ); ?>"><input type="hidden" name="types[phone]" value="tel">
-			<input class="w-full px-4 py-2.5 rounded-xl bg-surface-canvas text-on-surface placeholder:text-outline font-body-md text-body-md focus:bg-white shadow-inner" name="fields[phone]" placeholder="<?php echo esc_attr( $s['placeholder'] ); ?>" required type="tel">
+			<input class="w-full px-4 py-2.5 rounded-xl bg-surface-canvas text-on-surface placeholder:text-outline font-body-md text-body-md focus:bg-white shadow-inner" name="fields[phone]" aria-label="<?php esc_attr_e( 'شماره همراه', 'larijani' ); ?>" placeholder="<?php echo esc_attr( $s['placeholder'] ); ?>" required type="tel">
 			<button class="w-full py-2.5 rounded-xl bg-primary-container hover:bg-primary text-white font-headline-sm text-headline-sm transition-all shadow-sm" type="submit"><?php echo esc_html( $s['button'] ); ?></button>
 			<div class="hidden text-center font-body-sm text-body-sm text-accent-emerald" data-ls-success><?php echo esc_html( $s['success'] ); ?></div>
 			<div class="hidden ls-form-error text-center" data-ls-error></div>
@@ -454,7 +454,7 @@ function ls_render_tag_cloud( $s = array() ) {
 	}
 	?>
 	<div class="bg-surface-card rounded-2xl p-6 shadow-sm">
-		<div class="flex items-center gap-2 mb-4 pb-2"><i class="bi bi-tags-fill text-outline text-base" aria-hidden="true"></i><h4 class="font-headline-sm text-headline-sm text-on-surface"><?php echo esc_html( $s['title'] ); ?></h4></div>
+		<div class="flex items-center gap-2 mb-4 pb-2"><i class="bi bi-tags-fill text-outline text-base" aria-hidden="true"></i><h2 class="font-headline-sm text-headline-sm text-on-surface"><?php echo esc_html( $s['title'] ); ?></h2></div>
 		<div class="flex flex-wrap gap-2">
 			<?php foreach ( $tags as $t ) : ?>
 			<a class="px-3 py-1.5 rounded-lg bg-surface-canvas hover:bg-primary-container hover:text-white text-on-surface-variant text-xs font-medium transition-all" href="<?php echo esc_url( is_array( $t['url'] ) ? ( $t['url']['url'] ?? '#' ) : $t['url'] ); ?>"><?php echo esc_html( $t['title'] ); ?></a>
@@ -522,7 +522,7 @@ function ls_render_resin_calculator( $s = array() ) {
 					<span class="text-on-surface-variant"><?php echo esc_html( $s['input_label'] ); ?></span>
 					<span class="font-bold text-surface-dark" data-calc-label><?php echo esc_html( ls_fa_num( $s['value'] ) . ' ' . $s['unit'] ); ?></span>
 				</div>
-				<input class="w-full cursor-pointer" data-calc-input max="<?php echo esc_attr( $s['max'] ); ?>" min="<?php echo esc_attr( $s['min'] ); ?>" step="<?php echo esc_attr( $s['step'] ); ?>" type="range" value="<?php echo esc_attr( $s['value'] ); ?>">
+				<input class="w-full cursor-pointer" aria-label="<?php echo esc_attr( $s['label'] ?? __( 'میزان مصرف', 'larijani' ) ); ?>" data-calc-input max="<?php echo esc_attr( $s['max'] ); ?>" min="<?php echo esc_attr( $s['min'] ); ?>" step="<?php echo esc_attr( $s['step'] ); ?>" type="range" value="<?php echo esc_attr( $s['value'] ); ?>">
 			</div>
 			<div class="grid grid-cols-2 gap-2 pt-2">
 				<div class="p-3 rounded-2xl bg-surface-canvas flex flex-col justify-between">
@@ -563,7 +563,7 @@ function ls_render_sidebar_cta( $s = array() ) {
 	<div class="bg-gradient-to-br from-surface-dark to-surface-footer rounded-3xl p-6 text-on-tertiary-container shadow-xl space-y-4">
 		<div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-primary-fixed text-[26px]"><?php echo ls_icon( $s['icon'] ); // phpcs:ignore ?></div>
 		<div class="space-y-1">
-			<h4 class="font-headline-sm text-headline-sm text-white font-black"><?php echo esc_html( $s['title'] ); ?></h4>
+			<h2 class="font-headline-sm text-headline-sm text-white font-black"><?php echo esc_html( $s['title'] ); ?></h2>
 			<p class="font-body-sm text-body-sm text-tertiary-fixed leading-relaxed"><?php echo esc_html( $s['desc'] ); ?></p>
 		</div>
 		<div class="pt-2 flex flex-col gap-2">

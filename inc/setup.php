@@ -13,6 +13,9 @@ defined( 'ABSPATH' ) || exit;
 function ls_setup() {
 	load_theme_textdomain( 'larijani', LS_DIR . '/languages' );
 
+	// Page excerpts double as the meta description when no SEO plugin is active.
+	add_post_type_support( 'page', 'excerpt' );
+
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -202,22 +205,39 @@ add_action( 'admin_notices', 'ls_admin_notice_plugins' );
  */
 function ls_force_rtl() {
 	global $wp_locale;
-	if ( ls_opt( 'force_rtl' ) && $wp_locale && ! is_admin() ) {
+	if ( ls_opt( 'force_rtl' ) && $wp_locale instanceof WP_Locale && ! is_admin() ) {
 		$wp_locale->text_direction = 'rtl';
 	}
 }
-add_action( 'wp_loaded', 'ls_force_rtl' );
+// Must run before "init": block styles (e.g. WooCommerce Cart/Checkout) pick
+// their -rtl.css variant when they are registered, based on is_rtl().
+add_action( 'after_setup_theme', 'ls_force_rtl', 1 );
+add_action( 'change_locale', 'ls_force_rtl' );
 add_action( 'elementor/preview/init', 'ls_force_rtl' );
 
 /**
- * Persian lang attribute when the site language has no translation installed.
+ * With forced RTL the content is Persian even when the site language is not
+ * (e.g. English with no fa_IR pack): declare dir="rtl" and lang="fa-IR" so
+ * screen readers, hyphenation and search engines treat the text correctly.
+ * Sites whose locale is already an RTL language keep their own lang value.
  *
  * @param string $output Attributes.
  * @return string
  */
 function ls_language_attributes( $output ) {
-	if ( ls_opt( 'force_rtl' ) && false === strpos( $output, 'dir=' ) ) {
+	if ( ! ls_opt( 'force_rtl' ) || is_admin() ) {
+		return $output;
+	}
+	if ( false === strpos( $output, 'dir=' ) ) {
 		$output = 'dir="rtl" ' . $output;
+	}
+	$rtl_locale = (bool) preg_match( '/^(fa|ar|he|ur|ckb|ps|ug|azb|haz|sd|dv|yi)(_|$)/', determine_locale() );
+	$lang       = (string) apply_filters( 'ls_content_lang', $rtl_locale ? '' : 'fa-IR' );
+	if ( '' !== $lang ) {
+		$output = preg_replace( '/lang="[^"]*"/', 'lang="' . esc_attr( $lang ) . '"', $output, 1, $count );
+		if ( ! $count ) {
+			$output .= ' lang="' . esc_attr( $lang ) . '"';
+		}
 	}
 	return $output;
 }

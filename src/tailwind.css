@@ -45,7 +45,6 @@ body.ls-theme {
   font-family: 'Vazirmatn', Tahoma, system-ui, sans-serif;
   background-color: var(--ls-canvas);
   color: var(--ls-text);
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -68,6 +67,8 @@ body.ls-theme ::selection {
 :where(.ls-root) { font-family: 'Vazirmatn', Tahoma, system-ui, sans-serif; line-height: 1.5; }
 :where(.ls-root) :is(h1, h2, h3, h4, h5, h6) { font-size: inherit; font-weight: inherit; margin: 0; line-height: inherit; color: inherit; font-family: inherit; }
 :where(.ls-root) :is(p, blockquote, dl, dd, figure, pre, hr) { margin: 0; }
+/* Long unbroken strings (model codes, URLs) may break instead of widening their container. */
+:where(.ls-root) { overflow-wrap: anywhere; } /* inherited by every descendant */
 :where(.ls-root) :is(ol, ul, menu) { list-style: none; margin: 0; padding: 0; }
 :where(.ls-root) a { color: inherit; text-decoration: inherit; box-shadow: none; }
 :where(.ls-root) :is(b, strong) { font-weight: bolder; }
@@ -166,13 +167,16 @@ body.admin-bar .ls-site-header header.sticky, body.admin-bar.ls-has-sticky-heade
 .alignleft { float: left; margin: 0 0 1rem 1.5rem; }
 .alignright { float: right; margin: 0 1.5rem 1rem 0; }
 .aligncenter { display: block; margin-inline: auto; }
-.wp-caption-text, .wp-element-caption { font-size: 0.75rem; color: #757870; text-align: center; margin-top: 0.5rem; }
+.wp-caption-text, .wp-element-caption { font-size: 0.75rem; color: #686b63; text-align: center; margin-top: 0.5rem; }
 
 /* ---------------------------------------------------------------------------
  * Long-form content (post body, pages without Elementor).
  * ------------------------------------------------------------------------- */
 .ls-prose { color: #121c2c; font-size: 1rem; line-height: 1.9; text-align: justify; }
 .ls-prose > * + * { margin-top: 1.1em; }
+/* Narrow-screen strategy for content tables: scroll inside the article, never the page. */
+.ls-prose table { display: block; max-width: 100%; overflow-x: auto; }
+.ls-prose .overflow-x-auto > table { display: table; }
 .ls-prose h2, .ls-prose h3, .ls-prose h4 { color: var(--ls-dark); font-weight: 900; line-height: 1.4; margin-top: 1.8em; text-align: right; }
 .ls-prose h2 { font-size: 1.5rem; }
 .ls-prose h3 { font-size: 1.25rem; }
@@ -207,7 +211,7 @@ body.admin-bar .ls-site-header header.sticky, body.admin-bar.ls-has-sticky-heade
 .ls-comments .comment-form p { margin: 0; }
 .ls-comments .comment-form .form-submit { display: flex; justify-content: flex-end; }
 .ls-comments .comment-form-cookies-consent { display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; }
-.ls-comments .logged-in-as, .ls-comments .comment-notes { font-size: 0.8rem; color: #757870; }
+.ls-comments .logged-in-as, .ls-comments .comment-notes { font-size: 0.8rem; color: #686b63; }
 .ls-comments #cancel-comment-reply-link { font-size: 0.8rem; margin-right: 0.75rem; color: var(--ls-primary); }
 
 /* WordPress search form & widgets inside theme sidebars. */

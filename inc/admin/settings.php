@@ -59,7 +59,8 @@ function ls_settings_assets( $hook ) {
 	}
 	wp_enqueue_style( 'wp-color-picker' );
 	wp_enqueue_media();
-	wp_enqueue_script( 'larijani-admin', LS_URI . '/assets/js/admin.js', array( 'jquery', 'wp-color-picker' ), LS_VERSION, true );
+	$js = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) || ! file_exists( LS_DIR . '/assets/js/admin.min.js' ) ? 'assets/js/admin.js' : 'assets/js/admin.min.js';
+	wp_enqueue_script( 'larijani-admin', LS_URI . '/' . $js, array( 'jquery', 'wp-color-picker' ), LS_VERSION, true );
 	wp_enqueue_style( 'larijani-admin', LS_URI . '/assets/css/admin.css', array(), LS_VERSION );
 }
 add_action( 'admin_enqueue_scripts', 'ls_settings_assets' );

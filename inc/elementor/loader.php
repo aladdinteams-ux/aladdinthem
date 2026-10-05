@@ -211,9 +211,10 @@ function ls_kit_colors() {
 /**
  * Add the theme colours & fonts to the active Elementor kit (once, idempotent).
  *
- * @param bool $force Overwrite existing values.
+ * @param bool $force  Re-sync the theme's own "LS –" colours.
+ * @param bool $system Also replace Elementor's system colours/typography/layout (fresh sites only).
  */
-function ls_setup_elementor_kit( $force = false ) {
+function ls_setup_elementor_kit( $force = false, $system = false ) {
 	if ( ! ls_has_elementor() ) {
 		return;
 	}
@@ -236,7 +237,9 @@ function ls_setup_elementor_kit( $force = false ) {
 	}
 	$settings['custom_colors'] = $custom;
 
-	if ( $force || empty( $settings['system_colors'] ) ) {
+	// Elementor's own Site Settings (system colours/fonts, layout) belong to the user:
+	// only filled when empty, or replaced when $system is explicitly requested.
+	if ( $system || empty( $settings['system_colors'] ) ) {
 		$settings['system_colors'] = array(
 			array( '_id' => 'primary', 'title' => 'Primary', 'color' => '#5C6754' ),
 			array( '_id' => 'secondary', 'title' => 'Secondary', 'color' => '#8DA184' ),
@@ -244,7 +247,7 @@ function ls_setup_elementor_kit( $force = false ) {
 			array( '_id' => 'accent', 'title' => 'Accent', 'color' => '#161D1A' ),
 		);
 	}
-	if ( $force || empty( $settings['system_typography'] ) ) {
+	if ( $system || empty( $settings['system_typography'] ) ) {
 		$font = array( 'typography_typography' => 'custom', 'typography_font_family' => 'Vazirmatn' );
 		$settings['system_typography'] = array(
 			array_merge( array( '_id' => 'primary', 'title' => 'Primary' ), $font, array( 'typography_font_weight' => '900' ) ),
@@ -253,14 +256,16 @@ function ls_setup_elementor_kit( $force = false ) {
 			array_merge( array( '_id' => 'accent', 'title' => 'Accent' ), $font, array( 'typography_font_weight' => '600' ) ),
 		);
 	}
-	if ( $force || ! isset( $settings['space_between_widgets'] ) ) {
+	if ( $system || ! isset( $settings['space_between_widgets'] ) ) {
 		$settings['space_between_widgets'] = array( 'column' => '0', 'row' => '0', 'isLinked' => true, 'unit' => 'px', 'size' => 0 );
 	}
-	if ( $force || empty( $settings['container_width'] ) ) {
+	if ( $system || empty( $settings['container_width'] ) ) {
 		$settings['container_width'] = array( 'unit' => 'px', 'size' => 1280, 'sizes' => array() );
 	}
-	$settings['body_typography_typography']  = 'custom';
-	$settings['body_typography_font_family'] = 'Vazirmatn';
+	if ( $system || empty( $settings['body_typography_font_family'] ) ) {
+		$settings['body_typography_typography']  = 'custom';
+		$settings['body_typography_font_family'] = 'Vazirmatn';
+	}
 
 	update_post_meta( $kit_id, '_elementor_page_settings', $settings );
 	if ( class_exists( '\Elementor\Plugin' ) && isset( \Elementor\Plugin::$instance->files_manager ) ) {

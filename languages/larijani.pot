@@ -1,0 +1,4370 @@
+# Copyright (C) Larijani Stone
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Larijani Stone\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: larijani\n"
+
+#: single-ls_project.php:52
+msgid "مشخصات فنی پروژه"
+msgstr ""
+
+#: single-ls_project.php:59
+msgid "پروژه مشابه می‌خواهید؟"
+msgstr ""
+
+#: single-ls_project.php:59
+msgid "برای انتخاب قالب، فرمولاسیون و ماشین‌آلات متناسب با پروژه خود با کارشناسان ما مشورت کنید."
+msgstr ""
+
+#: woocommerce/archive-product.php:19 inc/render/blog.php:48 inc/elementor/widgets/shop-hero.php:117
+msgid "نتایج جستجو برای «%s»"
+msgstr ""
+
+#: woocommerce/single-product.php:32 page.php:25 inc/render/blog.php:669 inc/elementor/widgets/post-hero.php:35
+msgid "مسیر صفحه"
+msgstr ""
+
+#: woocommerce/single-product.php:58 inc/render/shop.php:690
+msgid "دستورالعمل و فرمولاسیون اختصاصی"
+msgstr ""
+
+#: woocommerce/single-product.php:76
+msgid "تجهیزات و مواد مکمل خط تولید"
+msgstr ""
+
+#: woocommerce/single-product.php:77
+msgid "مواد اولیه و ماشین‌آلات متناسب با این محصول"
+msgstr ""
+
+#: woocommerce/single-product.php:78
+msgid "مشاهده کل کاتالوگ فروشگاه"
+msgstr ""
+
+#: search.php:25 index.php:25 archive.php:25
+msgid "نتایج جستجو"
+msgstr ""
+
+#: search.php:25 index.php:25 archive.php:25
+msgid "جدیدترین مقالات و راهنماهای کارگاهی"
+msgstr ""
+
+#: 404.php:19
+msgid "صفحه مورد نظر پیدا نشد"
+msgstr ""
+
+#: 404.php:20
+msgid "ممکن است آدرس تغییر کرده باشد. از جستجو استفاده کنید یا به صفحه اصلی برگردید."
+msgstr ""
+
+#: 404.php:23
+msgid "جستجو در سایت…"
+msgstr ""
+
+#: 404.php:24 searchform.php:16 inc/render/shop.php:187 inc/render/shop.php:238
+msgid "جستجو"
+msgstr ""
+
+#: 404.php:27 inc/admin/settings.php:305 inc/template-functions.php:98 inc/template-functions.php:113
+msgid "صفحه اصلی"
+msgstr ""
+
+#: 404.php:28 inc/template-functions.php:103 inc/demo/importer.php:1082
+msgid "تماس با ما"
+msgstr ""
+
+#: taxonomy-ls_project_cat.php:13 archive-ls_project.php:13 inc/post-types.php:22
+msgid "همه پروژه‌ها"
+msgstr ""
+
+#: taxonomy-ls_project_cat.php:22 archive-ls_project.php:22
+msgid "پورتفولیو پروژه‌ها"
+msgstr ""
+
+#: taxonomy-ls_project_cat.php:26 archive-ls_project.php:26
+msgid "پروژه"
+msgstr ""
+
+#: searchform.php:12
+msgid "جستجو برای:"
+msgstr ""
+
+#: searchform.php:14
+msgid "جستجو…"
+msgstr ""
+
+#: comments.php:13 inc/render/blog.php:894
+msgid "پاسخگویی مستقیم توسط تیم فنی"
+msgstr ""
+
+#: comments.php:24
+msgid "دیدگاه‌ها و پرسش‌های فنی کارگاه‌ها (%s نظر)"
+msgstr ""
+
+#: comments.php:35
+msgid "طرح پرسش یا ارسال تجربه کارگاهی"
+msgstr ""
+
+#: comments.php:37
+msgid "پاسخ به %s"
+msgstr ""
+
+#: comments.php:38
+msgid "انصراف"
+msgstr ""
+
+#: comments.php:43
+msgid "ثبت و ارسال دیدگاه فنی"
+msgstr ""
+
+#: comments.php:45 inc/elementor/widgets/product-tabs.php:119 inc/elementor/widgets/testimonials.php:45
+msgid "نام"
+msgstr ""
+
+#: comments.php:45
+msgid "نام و نام خانوادگی یا نام کارگاه"
+msgstr ""
+
+#: comments.php:46 inc/customizer.php:41 inc/elementor/dynamic-tags.php:31 inc/elementor/dynamic-tags.php:114
+msgid "ایمیل"
+msgstr ""
+
+#: comments.php:46
+msgid "ایمیل (نمایش داده نمی‌شود)"
+msgstr ""
+
+#: comments.php:48
+msgid "متن پرسش یا تجربه"
+msgstr ""
+
+#: comments.php:48
+msgid "متن پرسش فنی، میزان عیار بتن، یا شرح مشکل حباب و شکستگی..."
+msgstr ""
+
+#: comments.php:70
+msgid "امکان ارسال دیدگاه بسته شده است."
+msgstr ""
+
+#: inc/customizer.php:23 inc/elementor/dynamic-tags.php:25 inc/elementor/widgets/footer.php:42 inc/elementor/widgets/header.php:72
+msgid "نام برند"
+msgstr ""
+
+#: inc/customizer.php:24
+msgid "شعار کوتاه (هدر)"
+msgstr ""
+
+#: inc/customizer.php:25
+msgid "شعار فوتر"
+msgstr ""
+
+#: inc/customizer.php:26
+msgid "راست‌چین اجباری (حتی بدون بسته زبان فارسی)"
+msgstr ""
+
+#: inc/customizer.php:27
+msgid "رنگ اصلی (سبز سنگی)"
+msgstr ""
+
+#: inc/customizer.php:28
+msgid "رنگ اصلی – حالت هاور"
+msgstr ""
+
+#: inc/customizer.php:29
+msgid "رنگ ثانویه (سبز روشن)"
+msgstr ""
+
+#: inc/customizer.php:30 inc/elementor/class-widget-base.php:359
+msgid "رنگ تیره (بازالت)"
+msgstr ""
+
+#: inc/customizer.php:31
+msgid "پس‌زمینه فوتر"
+msgstr ""
+
+#: inc/customizer.php:32
+msgid "پس‌زمینه سایت (کرم سنگی)"
+msgstr ""
+
+#: inc/customizer.php:33
+msgid "رنگ خطوط و حاشیه‌ها"
+msgstr ""
+
+#: inc/customizer.php:34
+msgid "رنگ متن"
+msgstr ""
+
+#: inc/customizer.php:36 inc/elementor/dynamic-tags.php:27 inc/elementor/widgets/footer.php:59
+msgid "تلفن اول"
+msgstr ""
+
+#: inc/customizer.php:37
+msgid "عنوان تلفن اول"
+msgstr ""
+
+#: inc/customizer.php:38 inc/elementor/dynamic-tags.php:29 inc/elementor/widgets/footer.php:60
+msgid "تلفن دوم"
+msgstr ""
+
+#: inc/customizer.php:39
+msgid "عنوان تلفن دوم"
+msgstr ""
+
+#: inc/customizer.php:40
+msgid "شماره واتساپ (با کد کشور، مثل 98912...)"
+msgstr ""
+
+#: inc/customizer.php:42 inc/elementor/dynamic-tags.php:32
+msgid "آدرس کامل"
+msgstr ""
+
+#: inc/customizer.php:43
+msgid "آدرس کوتاه (نوار بالا)"
+msgstr ""
+
+#: inc/customizer.php:44
+msgid "ساعات کاری (کوتاه)"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "ساعات کاری (کامل، فوتر)"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "اینستاگرام (لینک)"
+msgstr ""
+
+#: inc/customizer.php:47
+msgid "تلگرام (لینک)"
+msgstr ""
+
+#: inc/customizer.php:48
+msgid "ایتا (لینک)"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "آپارات (لینک)"
+msgstr ""
+
+#: inc/customizer.php:50
+msgid "لینکدین (لینک)"
+msgstr ""
+
+#: inc/customizer.php:55 inc/elementor/widgets/header.php:53 inc/post-types.php:312
+msgid "طرح هدر"
+msgstr ""
+
+#: inc/customizer.php:58
+msgid "نوار بالای تیره (اکثر صفحات طرح)"
+msgstr ""
+
+#: inc/customizer.php:59
+msgid "نوار بالای روشن + شبکه‌های اجتماعی (صفحه اصلی کلاسیک)"
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "نمایش نوار اطلاعات بالای هدر"
+msgstr ""
+
+#: inc/customizer.php:63 inc/elementor/widgets/header.php:82
+msgid "هدر چسبان"
+msgstr ""
+
+#: inc/customizer.php:64 inc/elementor/widgets/blog-hero.php:40 inc/elementor/widgets/header.php:78
+msgid "دکمه جستجو"
+msgstr ""
+
+#: inc/customizer.php:65 inc/elementor/widgets/header.php:79
+msgid "متن دکمه اصلی"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "متن کوتاه دکمه (موبایل)"
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "لینک دکمه اصلی (خالی = تماس تلفنی)"
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "متن لینک واتساپ نوار بالا"
+msgstr ""
+
+#: inc/customizer.php:70 inc/elementor/dynamic-tags.php:36
+msgid "متن درباره ما"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "عنوان ستون اول منو"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "عنوان ستون دوم منو"
+msgstr ""
+
+#: inc/customizer.php:73 inc/elementor/widgets/footer.php:54
+msgid "عنوان ستون تماس"
+msgstr ""
+
+#: inc/customizer.php:74
+msgid "متن کپی‌رایت"
+msgstr ""
+
+#: inc/customizer.php:75
+msgid "تصویر پس‌زمینه فوتر"
+msgstr ""
+
+#: inc/customizer.php:76
+msgid "کد نماد اعتماد / ساماندهی (HTML)"
+msgstr ""
+
+#: inc/customizer.php:78
+msgid "نمایش سایدبار در وبلاگ"
+msgstr ""
+
+#: inc/customizer.php:79
+msgid "نمایش تاریخ‌ها به شمسی (هجری خورشیدی)"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "نمایش تعداد بازدید"
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "ایمیل دریافت درخواست‌ها (خالی = ایمیل مدیر)"
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "تنظیمات قالب لاریجانی"
+msgstr ""
+
+#: inc/customizer.php:104 inc/admin/settings.php:22
+msgid "برند و رنگ‌ها"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "اطلاعات تماس و شبکه‌های اجتماعی"
+msgstr ""
+
+#: inc/customizer.php:106 inc/admin/settings.php:24 inc/admin/settings.php:107 inc/theme-builder.php:70
+msgid "هدر"
+msgstr ""
+
+#: inc/customizer.php:107 inc/admin/settings.php:25 inc/admin/settings.php:108 inc/theme-builder.php:71
+msgid "فوتر"
+msgstr ""
+
+#: inc/customizer.php:108 inc/admin/settings.php:26 inc/template-functions.php:146 inc/template-functions.php:149
+msgid "وبلاگ"
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "فرم‌ها و درخواست‌ها"
+msgstr ""
+
+#: inc/admin/settings.php:21
+msgid "پیشخوان قالب"
+msgstr ""
+
+#: inc/admin/settings.php:23
+msgid "تماس و شبکه‌های اجتماعی"
+msgstr ""
+
+#: inc/admin/settings.php:27
+msgid "فرم‌ها"
+msgstr ""
+
+#: inc/admin/settings.php:28
+msgid "تم‌بیلدر"
+msgstr ""
+
+#: inc/admin/settings.php:37 inc/admin/settings.php:342
+msgid "تنظیمات قالب لاریجانی استون"
+msgstr ""
+
+#: inc/admin/settings.php:38 inc/elementor/loader.php:104 inc/elementor/loader.php:180
+msgid "لاریجانی استون"
+msgstr ""
+
+#: inc/admin/settings.php:45 inc/admin/settings.php:45 inc/demo/importer.php:378
+msgid "تنظیمات قالب"
+msgstr ""
+
+#: inc/admin/settings.php:46 inc/admin/settings.php:46
+msgid "منوها"
+msgstr ""
+
+#: inc/admin/settings.php:47 inc/admin/settings.php:47
+msgid "سفارشی‌سازی زنده"
+msgstr ""
+
+#: inc/admin/settings.php:109 inc/theme-builder.php:72
+msgid "تک‌نوشته (مقاله)"
+msgstr ""
+
+#: inc/admin/settings.php:110 inc/theme-builder.php:73
+msgid "آرشیو وبلاگ / جستجو"
+msgstr ""
+
+#: inc/admin/settings.php:111 inc/theme-builder.php:74
+msgid "تک‌محصول ووکامرس"
+msgstr ""
+
+#: inc/admin/settings.php:112 inc/theme-builder.php:75
+msgid "فروشگاه و دسته‌های محصول"
+msgstr ""
+
+#: inc/admin/settings.php:113 inc/theme-builder.php:76
+msgid "تک‌پروژه (نمونه‌کار)"
+msgstr ""
+
+#: inc/admin/settings.php:114 inc/theme-builder.php:77
+msgid "برگه‌های بدون المنتور"
+msgstr ""
+
+#: inc/admin/settings.php:115 inc/theme-builder.php:78
+msgid "صفحه ۴۰۴"
+msgstr ""
+
+#: inc/admin/settings.php:130
+msgid "— قالب پیش‌فرض پوسته —"
+msgstr ""
+
+#: inc/admin/settings.php:151
+msgid "شما اجازه تغییر تنظیمات قالب را ندارید."
+msgstr ""
+
+#: inc/admin/settings.php:229 inc/admin/settings.php:309
+msgid "ویرایش با المنتور"
+msgstr ""
+
+#: inc/admin/settings.php:233
+msgid "انتخاب تصویر"
+msgstr ""
+
+#: inc/admin/settings.php:249
+msgid "المنتور"
+msgstr ""
+
+#: inc/admin/settings.php:249
+msgid "لازم برای ویرایش بصری صفحات (بدون آن، صفحات با همان طرح نمایش داده می‌شوند ولی قابل ویرایش بصری نیستند)."
+msgstr ""
+
+#: inc/admin/settings.php:250
+msgid "المنتور پرو"
+msgstr ""
+
+#: inc/admin/settings.php:250
+msgid "اختیاری؛ برای شرط‌های نمایش تم‌بیلدر. بدون آن تب «تم‌بیلدر» همین کار را انجام می‌دهد."
+msgstr ""
+
+#: inc/admin/settings.php:251 inc/elementor/widgets/catalog.php:37 inc/demo/importer.php:406
+msgid "ووکامرس"
+msgstr ""
+
+#: inc/admin/settings.php:251
+msgid "اختیاری؛ برای فروشگاه، سبد خرید و قیمت پلکانی."
+msgstr ""
+
+#: inc/admin/settings.php:267
+msgid "افزونه‌های مرتبط"
+msgstr ""
+
+#: inc/admin/settings.php:272
+msgid "فعال"
+msgstr ""
+
+#: inc/admin/settings.php:272
+msgid "غیرفعال"
+msgstr ""
+
+#: inc/admin/settings.php:275
+msgid "نصب / فعال‌سازی"
+msgstr ""
+
+#: inc/admin/settings.php:282
+msgid "درخواست‌های مشتریان"
+msgstr ""
+
+#: inc/admin/settings.php:284
+msgid "فرم‌های تماس، مشاوره و استعلام قیمت در این بخش ذخیره و به ایمیل شما ارسال می‌شوند."
+msgstr ""
+
+#: inc/admin/settings.php:285
+msgid "مشاهده درخواست‌ها"
+msgstr ""
+
+#: inc/admin/settings.php:288
+msgid "راه‌اندازی خودکار"
+msgstr ""
+
+#: inc/admin/settings.php:290
+msgid "برگه‌ها و منوهای قالب در %s ساخته شدند."
+msgstr ""
+
+#: inc/admin/settings.php:292
+msgid "هنوز برگه‌های قالب ساخته نشده‌اند."
+msgstr ""
+
+#: inc/admin/settings.php:294
+msgid "راه‌اندازی / ساخت مجدد برگه‌ها"
+msgstr ""
+
+#: inc/admin/settings.php:299
+msgid "برگه‌ها و قالب‌های ساخته‌شده توسط پوسته"
+msgstr ""
+
+#: inc/admin/settings.php:301 inc/elementor/widgets/sidebar-cta.php:35 inc/elementor/widgets/about.php:31 inc/elementor/widgets/about.php:45
+msgid "عنوان"
+msgstr ""
+
+#: inc/admin/settings.php:301 inc/elementor/widgets/lead-form.php:90
+msgid "نوع"
+msgstr ""
+
+#: inc/admin/settings.php:301
+msgid "عملیات"
+msgstr ""
+
+#: inc/admin/settings.php:306
+msgid "برگه"
+msgstr ""
+
+#: inc/admin/settings.php:306
+msgid "قالب المنتور"
+msgstr ""
+
+#: inc/admin/settings.php:312
+msgid "مشاهده"
+msgstr ""
+
+#: inc/admin/settings.php:343
+msgid "همه تنظیمات اینجا با «نمایش › سفارشی‌سازی» هماهنگ است و بلافاصله روی سایت و ویجت‌های المنتور اعمال می‌شود."
+msgstr ""
+
+#: inc/admin/settings.php:347
+msgid "تنظیمات این بخش به حالت پیش‌فرض برگشت."
+msgstr ""
+
+#: inc/admin/settings.php:347
+msgid "تنظیمات ذخیره شد."
+msgstr ""
+
+#: inc/admin/settings.php:370
+msgid "المنتور پرو فعال است: شرط‌های نمایش قالب‌ها را از «قالب‌ها › تم‌بیلدر» مدیریت کنید. انتخاب‌های زیر فقط وقتی استفاده می‌شوند که برای آن بخش شرط پرو تعریف نشده باشد."
+msgstr ""
+
+#: inc/admin/settings.php:371
+msgid "بدون المنتور پرو هم می‌توانید برای هدر، فوتر، نوشته‌ها، آرشیو، محصولات و ۴۰۴ یک قالب ذخیره‌شده المنتور انتخاب کنید."
+msgstr ""
+
+#: inc/admin/settings.php:385
+msgid "ذخیره تنظیمات"
+msgstr ""
+
+#: inc/admin/settings.php:386
+msgid "تنظیمات این بخش به پیش‌فرض برگردد؟"
+msgstr ""
+
+#: inc/admin/settings.php:386
+msgid "بازگشت به پیش‌فرض"
+msgstr ""
+
+#: inc/admin/settings.php:406
+msgid "تنظیمات لاریجانی"
+msgstr ""
+
+#: inc/theme-builder.php:35
+msgid "— پیش‌فرض قالب —"
+msgstr ""
+
+#: inc/theme-builder.php:64
+msgid "تم‌بیلدر (قالب‌های المنتور)"
+msgstr ""
+
+#: inc/theme-builder.php:66
+msgid "هر قالب ذخیره‌شده المنتور را برای بخش‌های سایت انتخاب کنید. اگر المنتور پرو فعال باشد و برای یک بخش شرط نمایش تعیین کرده باشید، تنظیمات المنتور پرو اولویت دارد."
+msgstr ""
+
+#: inc/enqueue.php:38
+msgid "در حال ارسال…"
+msgstr ""
+
+#: inc/enqueue.php:39
+msgid "خطایی رخ داد. لطفاً دوباره تلاش کنید یا تماس بگیرید."
+msgstr ""
+
+#: inc/enqueue.php:40
+msgid "لطفاً فیلدهای ستاره‌دار را تکمیل کنید."
+msgstr ""
+
+#: inc/enqueue.php:41
+msgid "پیوند کپی شد!"
+msgstr ""
+
+#: inc/enqueue.php:42
+msgid "پروژه منتخب"
+msgstr ""
+
+#: inc/enqueue.php:43 inc/render/blog.php:503 inc/render/blog.php:506
+msgid "کیلوگرم"
+msgstr ""
+
+#: inc/setup.php:63
+msgid "منوی اصلی (هدر)"
+msgstr ""
+
+#: inc/setup.php:64
+msgid "دسته‌بندی‌های منوی موبایل"
+msgstr ""
+
+#: inc/setup.php:65 inc/demo/importer.php:1095
+msgid "فوتر – دسترسی سریع"
+msgstr ""
+
+#: inc/setup.php:66 inc/demo/importer.php:1106
+msgid "فوتر – دسته‌بندی تجهیزات"
+msgstr ""
+
+#: inc/setup.php:67 inc/demo/importer.php:1117
+msgid "فوتر – لینک‌های پایین"
+msgstr ""
+
+#: inc/setup.php:99
+msgid "سایدبار وبلاگ"
+msgstr ""
+
+#: inc/setup.php:101
+msgid "در آرشیو و نوشته‌ها، زیر ابزارک‌های پیش‌فرض قالب نمایش داده می‌شود."
+msgstr ""
+
+#: inc/setup.php:109
+msgid "سایدبار فروشگاه"
+msgstr ""
+
+#: inc/setup.php:111
+msgid "فیلترهای ووکامرس (قیمت، ویژگی‌ها و …) را اینجا قرار دهید."
+msgstr ""
+
+#: inc/setup.php:195
+msgid "برگه‌های قالب لاریجانی استون ساخته شده‌اند و نمایش داده می‌شوند؛ برای ویرایش بصری آن‌ها افزونه رایگان المنتور را نصب کنید."
+msgstr ""
+
+#: inc/setup.php:197
+msgid "نصب المنتور"
+msgstr ""
+
+#: inc/template-functions.php:99 inc/elementor/widgets/product-detail.php:203 inc/demo/importer.php:1078
+msgid "فروشگاه و کاتالوگ"
+msgstr ""
+
+#: inc/template-functions.php:100 inc/render/footer.php:56 inc/demo/importer.php:1079 inc/demo/importer.php:1099
+msgid "خدمات و خطوط تولید"
+msgstr ""
+
+#: inc/template-functions.php:101 inc/template-functions.php:156 inc/render/footer.php:57 inc/demo/importer.php:1080
+msgid "نمونه کارها"
+msgstr ""
+
+#: inc/template-functions.php:102 inc/demo/importer.php:513 inc/demo/importer.php:1081
+msgid "وبلاگ تخصصی"
+msgstr ""
+
+#: inc/template-functions.php:171
+msgid "جستجو: %s"
+msgstr ""
+
+#: inc/template-functions.php:177
+msgid "صفحه پیدا نشد"
+msgstr ""
+
+#: inc/template-functions.php:242 inc/elementor/widgets/testimonials.php:88
+msgid "قبلی"
+msgstr ""
+
+#: inc/template-functions.php:243 inc/elementor/widgets/testimonials.php:89
+msgid "بعدی"
+msgstr ""
+
+#: inc/template-functions.php:251 inc/elementor/widgets/posts-grid.php:39
+msgid "صفحه‌بندی"
+msgstr ""
+
+#: inc/template-functions.php:294 inc/elementor/dynamic-tags.php:113
+msgid "واتساپ"
+msgstr ""
+
+#: inc/template-functions.php:295 inc/elementor/dynamic-tags.php:116
+msgid "تلگرام"
+msgstr ""
+
+#: inc/template-functions.php:296 inc/elementor/dynamic-tags.php:115
+msgid "اینستاگرام"
+msgstr ""
+
+#: inc/template-functions.php:297 inc/elementor/dynamic-tags.php:117
+msgid "ایتا"
+msgstr ""
+
+#: inc/template-functions.php:298 inc/elementor/dynamic-tags.php:118
+msgid "آپارات"
+msgstr ""
+
+#: inc/template-functions.php:299 inc/render/blog.php:707 inc/elementor/dynamic-tags.php:119
+msgid "لینکدین"
+msgstr ""
+
+#: inc/template-functions.php:378 inc/render/header.php:288 inc/elementor/widgets/catalog.php:40 inc/elementor/widgets/products.php:125
+msgid "همه"
+msgstr ""
+
+#: inc/template-functions.php:422
+msgid "سال"
+msgstr ""
+
+#: inc/template-functions.php:423
+msgid "ماه"
+msgstr ""
+
+#: inc/template-functions.php:424
+msgid "هفته"
+msgstr ""
+
+#: inc/template-functions.php:425
+msgid "روز"
+msgstr ""
+
+#: inc/template-functions.php:426
+msgid "ساعت"
+msgstr ""
+
+#: inc/template-functions.php:427
+msgid "دقیقه"
+msgstr ""
+
+#: inc/template-functions.php:432
+msgid "%1$d %2$s پیش"
+msgstr ""
+
+#: inc/template-functions.php:435
+msgid "لحظاتی پیش"
+msgstr ""
+
+#: inc/template-functions.php:460 inc/elementor/widgets/faq.php:51
+msgid "پاسخ"
+msgstr ""
+
+#: inc/template-functions.php:473
+msgid "پاسخ %s"
+msgstr ""
+
+#: inc/template-functions.php:475
+msgid "تایید شده توسط واحد فنی"
+msgstr ""
+
+#: inc/template-functions.php:498
+msgid "دیدگاه شما پس از بررسی منتشر می‌شود."
+msgstr ""
+
+#: inc/template-functions.php:520
+msgid "نام و ایمیل من برای دیدگاه‌های بعدی در این مرورگر ذخیره شود."
+msgstr ""
+
+#: inc/woocommerce.php:49
+msgid "اطلاعات لاریجانی"
+msgstr ""
+
+#: inc/woocommerce.php:64
+msgid "برچسب روی کارت محصول"
+msgstr ""
+
+#: inc/woocommerce.php:65 inc/elementor/widgets/products.php:41 inc/elementor/widgets/contact-cards.php:37
+msgid "رنگ برچسب"
+msgstr ""
+
+#: inc/woocommerce.php:66
+msgid "ویژگی کوتاه کارت (سبک کلاسیک)"
+msgstr ""
+
+#: inc/woocommerce.php:67
+msgid "عنوان قیمت (مثلاً: قیمت هر عدد)"
+msgstr ""
+
+#: inc/woocommerce.php:68
+msgid "متن موجودی (مثلاً: موجود در انبار آبیک – ارسال ۲۴ ساعته)"
+msgstr ""
+
+#: inc/woocommerce.php:69
+msgid "تأییدیه کیفی کنار امتیاز"
+msgstr ""
+
+#: inc/woocommerce.php:70
+msgid "برچسب‌های روی تصویر – هر خط: متن|رنگ(primary/amber)|آیکون"
+msgstr ""
+
+#: inc/woocommerce.php:71
+msgid "نشان‌های زیر گالری – هر خط: عنوان|متن|آیکون"
+msgstr ""
+
+#: inc/woocommerce.php:72
+msgid "قیمت عمده (واحد)"
+msgstr ""
+
+#: inc/woocommerce.php:73
+msgid "حداقل تعداد برای قیمت عمده"
+msgstr ""
+
+#: inc/woocommerce.php:74
+msgid "سطح تولید هر عدد (برای ماشین‌حساب)"
+msgstr ""
+
+#: inc/woocommerce.php:75
+msgid "واحد سطح"
+msgstr ""
+
+#: inc/woocommerce.php:76 inc/elementor/widgets/product-detail.php:98
+msgid "تعداد پیش‌فرض"
+msgstr ""
+
+#: inc/woocommerce.php:77
+msgid "تضمین‌ها – هر خط: عنوان|متن|آیکون|رنگ(emerald/amber)"
+msgstr ""
+
+#: inc/woocommerce.php:78
+msgid "عنوان تب مشخصات"
+msgstr ""
+
+#: inc/woocommerce.php:79
+msgid "عنوان کارت ویژه تب مشخصات"
+msgstr ""
+
+#: inc/woocommerce.php:80 inc/elementor/widgets/product-tabs.php:56
+msgid "متن کارت ویژه"
+msgstr ""
+
+#: inc/woocommerce.php:81
+msgid "لینک فایل دیتاشیت PDF"
+msgstr ""
+
+#: inc/woocommerce.php:82
+msgid "دستورالعمل / فرمولاسیون (HTML مجاز)"
+msgstr ""
+
+#: inc/woocommerce.php:171
+msgid "آیکون (کلاس Bootstrap Icons، مثل bi bi-grid-3x3-gap)"
+msgstr ""
+
+#: inc/render/footer.php:55 inc/demo/importer.php:1098
+msgid "فروشگاه قالب‌های نشکن"
+msgstr ""
+
+#: inc/render/footer.php:58 inc/demo/importer.php:1101
+msgid "فرمولاسیون و مقالات"
+msgstr ""
+
+#: inc/render/footer.php:59 inc/demo/importer.php:1102
+msgid "تماس با واحد فروش"
+msgstr ""
+
+#: inc/render/footer.php:65 inc/demo/importer.php:1108
+msgid "قالب کفپوش و سنگفرش"
+msgstr ""
+
+#: inc/render/footer.php:66 inc/demo/importer.php:1109
+msgid "قالب جدول و دورباغچه"
+msgstr ""
+
+#: inc/render/footer.php:67 inc/demo/importer.php:1110
+msgid "قالب نما و صراحی رومی"
+msgstr ""
+
+#: inc/render/footer.php:68 inc/demo/importer.php:1111
+msgid "رزین روان‌کننده بتن"
+msgstr ""
+
+#: inc/render/footer.php:69 inc/demo/importer.php:1112
+msgid "رنگدانه‌های معدنی اکسید آهن"
+msgstr ""
+
+#: inc/render/footer.php:70 inc/demo/importer.php:1113
+msgid "روغن قالب پایه گیاهی"
+msgstr ""
+
+#: inc/render/footer.php:76 inc/demo/importer.php:1119
+msgid "قوانین و ضمانت محصولات"
+msgstr ""
+
+#: inc/render/footer.php:77 inc/demo/importer.php:1120
+msgid "حریم خصوصی"
+msgstr ""
+
+#: inc/render/footer.php:78 inc/demo/importer.php:1121
+msgid "نقشه سایت"
+msgstr ""
+
+#: inc/render/shop.php:20
+msgid "قیمت واحد"
+msgstr ""
+
+#: inc/render/shop.php:37
+msgid "فروش ویژه"
+msgstr ""
+
+#: inc/render/shop.php:40
+msgid "پرفروش"
+msgstr ""
+
+#: inc/render/shop.php:43
+msgid "افزودن به سبد"
+msgstr ""
+
+#: inc/render/shop.php:43
+msgid "استعلام و سفارش"
+msgstr ""
+
+#: inc/render/shop.php:59
+msgid "کد: %s"
+msgstr ""
+
+#: inc/render/shop.php:62
+msgid "تماس بگیرید"
+msgstr ""
+
+#: inc/render/shop.php:90
+msgid "جستجو در نام قالب، ابعاد، میکسر یا مواد..."
+msgstr ""
+
+#: inc/render/shop.php:91
+msgid "مرتب‌سازی:"
+msgstr ""
+
+#: inc/render/shop.php:92
+msgid "همه محصولات"
+msgstr ""
+
+#: inc/render/shop.php:96
+msgid "محدوده قیمت"
+msgstr ""
+
+#: inc/render/shop.php:97
+msgid "پیشنهاد راه‌اندازی"
+msgstr ""
+
+#: inc/render/shop.php:98
+msgid "برای راه‌اندازی کارگاه سنگ مصنوعی در متراژ ۱۵۰ متر، بسته شامل ۲۵۰ قالب ABS، میز ویبره ۲×۱ و میکسر ۵۰۰ کیلویی اقتصادی‌ترین گزینه تولید است."
+msgstr ""
+
+#: inc/render/shop.php:99
+msgid "دریافت پکیج جامع خط تولید"
+msgstr ""
+
+#: inc/render/shop.php:103
+msgid "نمایش %1$s تا %2$s از %3$s قلم کالا و تجهیزات سنگ مصنوعی"
+msgstr ""
+
+#: inc/render/shop.php:106
+msgid "تعداد نتایج:"
+msgstr ""
+
+#: inc/render/shop.php:107
+msgid "قلم کالا"
+msgstr ""
+
+#: inc/render/shop.php:174 inc/elementor/widgets/products.php:123
+msgid "پرفروش‌ترین"
+msgstr ""
+
+#: inc/render/shop.php:175 inc/elementor/widgets/sidebar-popular.php:37 inc/elementor/widgets/posts.php:43 inc/elementor/widgets/products.php:123
+msgid "جدیدترین"
+msgstr ""
+
+#: inc/render/shop.php:176
+msgid "ارزان‌ترین"
+msgstr ""
+
+#: inc/render/shop.php:177
+msgid "گران‌ترین"
+msgstr ""
+
+#: inc/render/shop.php:182
+msgid "فهرست محصولات"
+msgstr ""
+
+#: inc/render/shop.php:202
+msgid "پیشنهاد کارخانه (پرفروش‌ترین)"
+msgstr ""
+
+#: inc/render/shop.php:203
+msgid "ارزان‌ترین متریال"
+msgstr ""
+
+#: inc/render/shop.php:204
+msgid "گران‌ترین ماشین‌آلات"
+msgstr ""
+
+#: inc/render/shop.php:205
+msgid "جدیدترین محصولات"
+msgstr ""
+
+#: inc/render/shop.php:205
+msgid "بر اساس نام محصول"
+msgstr ""
+
+#: inc/render/shop.php:281
+msgid "دسته‌بندی محصولات"
+msgstr ""
+
+#: inc/render/shop.php:294
+msgid "از"
+msgstr ""
+
+#: inc/render/shop.php:295 inc/render/shop.php:333
+msgid "تا"
+msgstr ""
+
+#: inc/render/shop.php:302 inc/render/shop.php:338
+msgid "اعمال"
+msgstr ""
+
+#: inc/render/shop.php:332
+msgid "از %s تومان"
+msgstr ""
+
+#: inc/render/shop.php:333
+msgid "تومان"
+msgstr ""
+
+#: inc/render/shop.php:337
+msgid "نمایش کلیه سفارشات"
+msgstr ""
+
+#: inc/render/shop.php:366
+msgid "محصولی مطابق با جستجوی شما یافت نشد!"
+msgstr ""
+
+#: inc/render/shop.php:367
+msgid "عبارت دیگری را امتحان کنید یا برای استعلام با ما تماس بگیرید."
+msgstr ""
+
+#: inc/render/shop.php:427
+msgid "موجود در انبار"
+msgstr ""
+
+#: inc/render/shop.php:427
+msgid "ناموجود – تماس بگیرید"
+msgstr ""
+
+#: inc/render/shop.php:435
+msgid "پرفروش‌ترین طرح سال"
+msgstr ""
+
+#: inc/render/shop.php:443
+msgid "قیمت هر عدد (تک‌فروشی):"
+msgstr ""
+
+#: inc/render/shop.php:448 inc/render/shop.php:485
+msgid "مترمربع"
+msgstr ""
+
+#: inc/render/shop.php:470
+msgid "کد فنی:"
+msgstr ""
+
+#: inc/render/shop.php:483
+msgid "تخفیف تیراژ کارخانه‌ای"
+msgstr ""
+
+#: inc/render/shop.php:487
+msgid "تعداد:"
+msgstr ""
+
+#: inc/render/shop.php:488
+msgid "سطح تولید:"
+msgstr ""
+
+#: inc/render/shop.php:489
+msgid "مجموع:"
+msgstr ""
+
+#: inc/render/shop.php:490
+msgid "افزودن به سبد خرید"
+msgstr ""
+
+#: inc/render/shop.php:491
+msgid "مشاوره تیراژ و خط تولید"
+msgstr ""
+
+#: inc/render/shop.php:520
+msgid "بزرگ‌نمایی عکس"
+msgstr ""
+
+#: inc/render/shop.php:528
+msgid "تصویر %d"
+msgstr ""
+
+#: inc/render/shop.php:565
+msgid "امتیاز %s از ۵"
+msgstr ""
+
+#: inc/render/shop.php:571
+msgid "(%s تجربه ثبت‌شده کارگاه‌های تولیدی)"
+msgstr ""
+
+#: inc/render/shop.php:596
+msgid "استعلام قیمت تلفنی"
+msgstr ""
+
+#: inc/render/shop.php:603
+msgid "بالای %s عدد:"
+msgstr ""
+
+#: inc/render/shop.php:620
+msgid "افزایش"
+msgstr ""
+
+#: inc/render/shop.php:621 inc/elementor/widgets/sidebar-tags.php:35 inc/elementor/widgets/sidebar-popular.php:36 inc/elementor/widgets/related-posts.php:35
+msgid "تعداد"
+msgstr ""
+
+#: inc/render/shop.php:622
+msgid "کاهش"
+msgstr ""
+
+#: inc/render/shop.php:648 inc/render/components.php:204
+msgid "نشان کردن محصول"
+msgstr ""
+
+#: inc/render/shop.php:680
+msgid "مشخصات فنی و متریال"
+msgstr ""
+
+#: inc/render/shop.php:688
+msgid "دانلود برگه مشخصات فنی PDF"
+msgstr ""
+
+#: inc/render/shop.php:697
+msgid "دیدگاه‌ها و تجربیات کارگاه‌ها"
+msgstr ""
+
+#: inc/render/shop.php:703
+msgid "ثبت تجربه و عکس تولیدی شما"
+msgstr ""
+
+#: inc/render/shop.php:810
+msgid "بر اساس %s نظر رسمی خریداران کارگاهی"
+msgstr ""
+
+#: inc/render/blog.php:29
+msgid "مرجع مهندسی سنگ مصنوعی و افزودنی‌های بتن"
+msgstr ""
+
+#: inc/render/blog.php:33
+msgid "جستجو در بین مقالات، فرمول‌ها، عیوب بتن، رزین LS و تجهیزات..."
+msgstr ""
+
+#: inc/render/blog.php:36
+msgid "همه مقالات"
+msgstr ""
+
+#: inc/render/blog.php:51
+msgid "آرشیو جامع مقالات، دانشنامه و راهنمای فنی سنگ مصنوعی و بتن پلیمری"
+msgstr ""
+
+#: inc/render/blog.php:132
+msgid "مقاله ویژه تحریریه"
+msgstr ""
+
+#: inc/render/blog.php:135
+msgid "مطالعه مقاله کامل"
+msgstr ""
+
+#: inc/render/blog.php:177 inc/render/components.php:501 inc/elementor/dynamic-tags.php:199
+msgid "%s دقیقه مطالعه"
+msgstr ""
+
+#: inc/render/blog.php:180
+msgid "%s بازدید"
+msgstr ""
+
+#: inc/render/blog.php:238 inc/render/components.php:498
+msgid "ادامه مطلب تخصصی"
+msgstr ""
+
+#: inc/render/blog.php:239
+msgid "مطلبی یافت نشد."
+msgstr ""
+
+#: inc/render/blog.php:281
+msgid "نمایش %1$s تا %2$s از %3$s نوشتار تخصصی"
+msgstr ""
+
+#: inc/render/blog.php:319
+msgid "ویرایش زمستان ۱۴۰۴"
+msgstr ""
+
+#: inc/render/blog.php:320
+msgid "هندبوک جامع جداول اختلاط بتن سمنت‌پلاست"
+msgstr ""
+
+#: inc/render/blog.php:321
+msgid "شامل ۱۲ فرمول آزمون‌شده آزمایشگاهی بر اساس نوع سیمان، فصول سرد و گرم، و جداول عیار پیگمنت‌های معدنی اکسید آهن."
+msgstr ""
+
+#: inc/render/blog.php:322
+msgid "دانلود مستقیم فایل PDF (۱۴ مگابایت)"
+msgstr ""
+
+#: inc/render/blog.php:351
+msgid "مباحث پرطرفدار کارگاه‌ها"
+msgstr ""
+
+#: inc/render/blog.php:373
+msgid "%s مطالعه"
+msgstr ""
+
+#: inc/render/blog.php:410
+msgid "پیامک و خبرنامه عیب‌یابی فرمولاسیون"
+msgstr ""
+
+#: inc/render/blog.php:412
+msgid "نکات هفتگی حل مسائل کارگاهی (ترک‌خوردگی، چسبیدن به قالب، دیرگیر شدن بتن در سرما) مستقیماً به موبایل شما ارسال می‌شود."
+msgstr ""
+
+#: inc/render/blog.php:413
+msgid "شماره تماس همراه (مثال: ۰۹۱۲۳۴۵۶۷۸۹)"
+msgstr ""
+
+#: inc/render/blog.php:414
+msgid "عضویت رایگان در شبکه کارگاهی"
+msgstr ""
+
+#: inc/render/blog.php:415
+msgid "بدون ارسال پیام‌های تبلیغاتی تکراری"
+msgstr ""
+
+#: inc/render/blog.php:416
+msgid "شماره شما با موفقیت برای دریافت پیامک‌های فنی ثبت شد."
+msgstr ""
+
+#: inc/render/blog.php:425 inc/render/blog.php:426
+msgid "شماره همراه"
+msgstr ""
+
+#: inc/render/blog.php:442
+msgid "کلیدواژه‌های فنی"
+msgstr ""
+
+#: inc/render/blog.php:473
+msgid "فهرست عناوین مقاله"
+msgstr ""
+
+#: inc/render/blog.php:495
+msgid "محاسبه‌گر مصرف رزین"
+msgstr ""
+
+#: inc/render/blog.php:496
+msgid "فرمول LS-500"
+msgstr ""
+
+#: inc/render/blog.php:497
+msgid "وزن سیمان مصرفی در هر بچ اختلاط میکسر را وارد کنید:"
+msgstr ""
+
+#: inc/render/blog.php:498
+msgid "سیمان مصرفی در میکسر:"
+msgstr ""
+
+#: inc/render/blog.php:504
+msgid "رزین پیشنهادی:"
+msgstr ""
+
+#: inc/render/blog.php:507
+msgid "حداکثر آب مجاز:"
+msgstr ""
+
+#: inc/render/blog.php:509
+msgid "لیتر"
+msgstr ""
+
+#: inc/render/blog.php:525
+msgid "میزان مصرف"
+msgstr ""
+
+#: inc/render/blog.php:552
+msgid "نیاز به اصلاح فرمولاسیون یا رفع حباب در خط تولید دارید؟"
+msgstr ""
+
+#: inc/render/blog.php:553
+msgid "مشاوره مستقیم با مهندس مسعود لاریجانی و ارسال نمونه رایگان رزین LS-500 برای تست در کارگاه شما."
+msgstr ""
+
+#: inc/render/blog.php:556
+msgid "ارسال تصاویر قطعات معیوب در واتساپ"
+msgstr ""
+
+#: inc/render/blog.php:561 inc/render/header.php:267
+msgid "تماس مستقیم: %s"
+msgstr ""
+
+#: inc/render/blog.php:589
+msgid "هندبوک جامع ۳۲ فرمول تست شده"
+msgstr ""
+
+#: inc/render/blog.php:590
+msgid "شامل کاتالوگ جامع اختلاط برای تولید سنگ پله، جدول، کفپوش‌های پرتردد و سنگ‌های آنتیک دکوراتیو داخلی."
+msgstr ""
+
+#: inc/render/blog.php:591
+msgid "درخواست نسخه چاپی یا PDF"
+msgstr ""
+
+#: inc/render/blog.php:679
+msgid "%s دقیقه زمان مطالعه"
+msgstr ""
+
+#: inc/render/blog.php:681
+msgid "%s بازدید تخصصی"
+msgstr ""
+
+#: inc/render/blog.php:684
+msgid "%s پرسش و پاسخ کارگاهی"
+msgstr ""
+
+#: inc/render/blog.php:697
+msgid "تایید هویت فنی"
+msgstr ""
+
+#: inc/render/blog.php:704
+msgid "کپی لینک مقاله"
+msgstr ""
+
+#: inc/render/blog.php:704
+msgid "کپی پیوند"
+msgstr ""
+
+#: inc/render/blog.php:705
+msgid "ارسال به واتساپ"
+msgstr ""
+
+#: inc/render/blog.php:706
+msgid "اشتراک در تلگرام"
+msgstr ""
+
+#: inc/render/blog.php:783
+msgid "برچسب‌های تخصصی:"
+msgstr ""
+
+#: inc/render/blog.php:785
+msgid "درباره نویسنده:"
+msgstr ""
+
+#: inc/render/blog.php:786
+msgid "گفتگوی مستقیم با نویسنده"
+msgstr ""
+
+#: inc/render/blog.php:828
+msgid "همه نوشته‌های نویسنده"
+msgstr ""
+
+#: inc/render/blog.php:846
+msgid "مقاله قبلی"
+msgstr ""
+
+#: inc/render/blog.php:851
+msgid "مقاله بعدی"
+msgstr ""
+
+#: inc/render/blog.php:865
+msgid "مقالات و فرمولاسیون‌های مرتبط کارگاهی"
+msgstr ""
+
+#: inc/render/blog.php:865
+msgid "مشاهده همه"
+msgstr ""
+
+#: inc/render/blog.php:912
+msgid "پربازدیدترین فرمول‌های ماه"
+msgstr ""
+
+#: inc/render/header.php:56 inc/elementor/widgets/header.php:86
+msgid "بخش‌های اصلی"
+msgstr ""
+
+#: inc/render/header.php:57 inc/elementor/widgets/header.php:87
+msgid "دسته‌بندی تجهیزات"
+msgstr ""
+
+#: inc/render/header.php:59 inc/elementor/widgets/header.php:89
+msgid "پیام در واتساپ"
+msgstr ""
+
+#: inc/render/header.php:74 inc/demo/importer.php:1088
+msgid "قالب کفپوش"
+msgstr ""
+
+#: inc/render/header.php:75 inc/demo/importer.php:1089
+msgid "میز ویبره سنگین"
+msgstr ""
+
+#: inc/render/header.php:76 inc/demo/importer.php:1090
+msgid "قالب صراحی و نما"
+msgstr ""
+
+#: inc/render/header.php:77 inc/demo/importer.php:1091
+msgid "رزین روان‌کننده"
+msgstr ""
+
+#: inc/render/header.php:104
+msgid "پشتیبانی فنی:"
+msgstr ""
+
+#: inc/render/header.php:158 inc/elementor/widgets/header.php:77 inc/demo/importer.php:1075
+msgid "منوی اصلی"
+msgstr ""
+
+#: inc/render/header.php:187
+msgid "محصولات نشان‌شده"
+msgstr ""
+
+#: inc/render/header.php:199
+msgid "تماس تلفنی"
+msgstr ""
+
+#: inc/render/header.php:203
+msgid "باز کردن منوی موبایل"
+msgstr ""
+
+#: inc/render/header.php:212 inc/elementor/widgets/header.php:85
+msgid "منوی موبایل"
+msgstr ""
+
+#: inc/render/header.php:223
+msgid "بستن منو"
+msgstr ""
+
+#: inc/render/header.php:285
+msgid "جستجو در محصولات، قالب‌ها و مقالات…"
+msgstr ""
+
+#: inc/render/header.php:289 inc/elementor/widgets/catalog.php:61 inc/elementor/widgets/products.php:121
+msgid "محصولات"
+msgstr ""
+
+#: inc/render/header.php:290
+msgid "مقالات"
+msgstr ""
+
+#: inc/render/header.php:294
+msgid "بستن"
+msgstr ""
+
+#: inc/render/components.php:188
+msgid "افزودن به علاقه‌مندی"
+msgstr ""
+
+#: inc/render/components.php:271
+msgid "استعلام تیراژ"
+msgstr ""
+
+#: inc/render/components.php:303
+msgid "خرید"
+msgstr ""
+
+#: inc/render/components.php:338
+msgid "مشاهده مشخصات"
+msgstr ""
+
+#: inc/render/components.php:423
+msgid "مشاهده پروژه"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:26 inc/elementor/widgets/footer.php:43 inc/elementor/widgets/header.php:73
+msgid "شعار"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:28
+msgid "تلفن اول (فارسی، فاصله‌دار)"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:30
+msgid "تلفن دوم (فارسی، فاصله‌دار)"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:33
+msgid "آدرس کوتاه"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:34 inc/elementor/widgets/footer.php:45 inc/elementor/widgets/contact-cards.php:40 inc/elementor/widgets/header.php:65
+msgid "ساعات کاری"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:35
+msgid "ساعات کاری کامل"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:50
+msgid "اطلاعات تماس سایت"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:65 inc/elementor/dynamic-tags.php:181
+msgid "فیلد"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:93
+msgid "لینک تماس سایت"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:108 inc/elementor/class-widget-base.php:276 inc/elementor/widgets/sidebar-promo.php:38 inc/elementor/widgets/portfolio.php:74
+msgid "لینک"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:111
+msgid "تماس با تلفن اول"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:112
+msgid "تماس با تلفن دوم"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:127
+msgid "متن پیش‌فرض واتساپ"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:166
+msgid "اطلاعات نوشته (لاریجانی)"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:184
+msgid "زمان مطالعه"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:185
+msgid "تعداد بازدید"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:186
+msgid "دسته اصلی"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:187
+msgid "تاریخ انتشار"
+msgstr ""
+
+#: inc/elementor/dynamic-tags.php:188
+msgid "تعداد دیدگاه"
+msgstr ""
+
+#: inc/elementor/loader.php:111
+msgid "لاریجانی – نوشته و آرشیو (تم‌بیلدر)"
+msgstr ""
+
+#: inc/elementor/loader.php:150
+msgid "Bootstrap Icons"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:194 inc/elementor/widgets/lead-form.php:183
+msgid "بله"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:195
+msgid "خیر"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:272 inc/elementor/widgets/about.php:30 inc/elementor/widgets/performance.php:30
+msgid "متن بالای عنوان"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:273 inc/elementor/widgets/faq.php:29 inc/elementor/widgets/comparison.php:29 inc/elementor/widgets/map.php:29
+msgid "عنوان بخش"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:273
+msgid "می‌توانید از &lt;br&gt; و &lt;span class=\"text-primary-container\"&gt; استفاده کنید."
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:274
+msgid "توضیح بخش"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:275 inc/elementor/widgets/sidebar-promo.php:37
+msgid "متن لینک"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:280
+msgid "چیدمان عنوان"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:284
+msgid "عنوان راست / لینک چپ"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:285
+msgid "عنوان راست / توضیح چپ"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:286
+msgid "وسط‌چین"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:287
+msgid "راست‌چین ستونی"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:294
+msgid "سبک عنوان"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:298
+msgid "صفحه اصلی (درشت و فشرده)"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:299
+msgid "صفحات داخلی (سیستم طراحی)"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:306
+msgid "تگ HTML عنوان"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:318
+msgid "پس‌زمینه بخش"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:335
+msgid "ستون‌ها – دسکتاپ"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:336
+msgid "ستون‌ها – تبلت"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:337
+msgid "ستون‌ها – موبایل"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:351
+msgid "رنگ‌های قالب (فقط این ویجت)"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:356
+msgid "رنگ اصلی (سبز برند)"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:357
+msgid "رنگ اصلی – هاور / تیره‌تر"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:358 inc/elementor/widgets/portfolio.php:60 inc/elementor/widgets/contact-cards.php:35
+msgid "سبز روشن"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:360
+msgid "زمینه کرم سنگی"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:361
+msgid "خطوط و حاشیه"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:379
+msgid "چیدمان بخش"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:386
+msgid "حداکثر عرض محتوا"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:396
+msgid "فاصله داخلی بخش (بالا/پایین)"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:406
+msgid "رنگ پس‌زمینه سفارشی بخش"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:418
+msgid "تایپوگرافی"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:422
+msgid "رنگ عناوین"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:424
+msgid "عناوین اصلی"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:425
+msgid "عنوان کارت‌ها"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:427
+msgid "رنگ متن‌ها"
+msgstr ""
+
+#: inc/elementor/class-widget-base.php:429 inc/elementor/widgets/hero.php:29
+msgid "متن‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-cta.php:20
+msgid "LS کارت پشتیبانی (سایدبار)"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-cta.php:33 inc/elementor/widgets/page-banner.php:29 inc/elementor/widgets/sidebar-tags.php:33 inc/elementor/widgets/calculator.php:33
+msgid "محتوا"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-cta.php:34 inc/elementor/widgets/sidebar-popular.php:35 inc/elementor/widgets/post-hero.php:51 inc/elementor/widgets/faq.php:44
+msgid "آیکون"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-cta.php:36 inc/elementor/widgets/page-banner.php:33 inc/elementor/widgets/page-hero.php:34 inc/elementor/widgets/page-hero.php:63
+msgid "توضیح"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-cta.php:37
+msgid "دکمه اول (خالی = شماره تلفن)"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-cta.php:38 inc/elementor/widgets/page-hero.php:36 inc/elementor/widgets/cta.php:65 inc/elementor/widgets/shop-hero.php:67
+msgid "لینک دکمه اول"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-cta.php:39 inc/elementor/widgets/page-hero.php:38 inc/elementor/widgets/cta.php:67 inc/elementor/widgets/shop-hero.php:69
+msgid "دکمه دوم"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-cta.php:40 inc/elementor/widgets/page-hero.php:39 inc/elementor/widgets/cta.php:68 inc/elementor/widgets/shop-hero.php:70
+msgid "لینک دکمه دوم"
+msgstr ""
+
+#: inc/elementor/widgets/about.php:20
+msgid "LS درباره ما + آمار"
+msgstr ""
+
+#: inc/elementor/widgets/about.php:29 inc/elementor/widgets/about.php:32 inc/elementor/widgets/product-tabs.php:87 inc/elementor/widgets/product-tabs.php:122
+msgid "متن"
+msgstr ""
+
+#: inc/elementor/widgets/about.php:33 inc/elementor/widgets/sidebar-newsletter.php:38 inc/elementor/widgets/featured-post.php:37 inc/elementor/widgets/cta.php:78
+msgid "متن دکمه"
+msgstr ""
+
+#: inc/elementor/widgets/about.php:34 inc/elementor/widgets/products.php:63
+msgid "لینک دکمه"
+msgstr ""
+
+#: inc/elementor/widgets/about.php:35 inc/elementor/widgets/page-hero.php:59 inc/elementor/widgets/plant-card.php:31 inc/elementor/widgets/portfolio.php:56
+msgid "تصویر"
+msgstr ""
+
+#: inc/elementor/widgets/about.php:39 inc/elementor/widgets/about.php:42 inc/elementor/widgets/plant-card.php:37 inc/elementor/widgets/portfolio-hero.php:58
+msgid "آمار"
+msgstr ""
+
+#: inc/elementor/widgets/about.php:44 inc/elementor/widgets/page-hero.php:45 inc/elementor/widgets/plant-card.php:39 inc/elementor/widgets/portfolio-hero.php:60
+msgid "عدد"
+msgstr ""
+
+#: inc/elementor/widgets/about.php:46
+msgid "رنگ سبز"
+msgstr ""
+
+#: inc/elementor/widgets/about.php:56
+msgid "انیمیشن شمارنده هنگام اسکرول"
+msgstr ""
+
+#: inc/elementor/widgets/page-banner.php:20
+msgid "LS بنر عنوان صفحه (تیره)"
+msgstr ""
+
+#: inc/elementor/widgets/page-banner.php:30 inc/elementor/widgets/page-hero.php:30 inc/elementor/widgets/page-hero.php:60 inc/elementor/widgets/calculator.php:35
+msgid "برچسب"
+msgstr ""
+
+#: inc/elementor/widgets/page-banner.php:31 inc/elementor/widgets/page-hero.php:31 inc/elementor/widgets/faq.php:31 inc/elementor/widgets/dark-feature.php:31
+msgid "آیکون برچسب"
+msgstr ""
+
+#: inc/elementor/widgets/page-banner.php:32
+msgid "عنوان (خالی = عنوان صفحه)"
+msgstr ""
+
+#: inc/elementor/widgets/page-banner.php:36
+msgid "باکس شاخص"
+msgstr ""
+
+#: inc/elementor/widgets/page-banner.php:37 inc/elementor/widgets/post-hero.php:34 inc/elementor/widgets/faq.php:43 inc/elementor/widgets/dark-feature.php:52
+msgid "نمایش"
+msgstr ""
+
+#: inc/elementor/widgets/page-banner.php:39 inc/elementor/widgets/post-hero.php:53 inc/elementor/widgets/product-tabs.php:42 inc/elementor/widgets/product-tabs.php:70
+msgid "مقدار"
+msgstr ""
+
+#: inc/elementor/widgets/page-banner.php:40
+msgid "درصد نوار"
+msgstr ""
+
+#: inc/elementor/widgets/page-banner.php:41
+msgid "یادداشت راست"
+msgstr ""
+
+#: inc/elementor/widgets/page-banner.php:42
+msgid "یادداشت چپ"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-tags.php:20
+msgid "LS ابر برچسب‌ها (سایدبار)"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:20
+msgid "LS هیرو صفحات داخلی (خدمات)"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:29 inc/elementor/widgets/hero-classic.php:29
+msgid "متن و دکمه‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:33
+msgid "خط دوم رنگی"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:35 inc/elementor/widgets/cta.php:63 inc/elementor/widgets/shop-hero.php:66 inc/elementor/widgets/hero-classic.php:34
+msgid "دکمه اول"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:37 inc/elementor/widgets/cta.php:66 inc/elementor/widgets/shop-hero.php:68
+msgid "آیکون دکمه اول"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:40 inc/elementor/widgets/cta.php:69 inc/elementor/widgets/shop-hero.php:71 inc/elementor/widgets/hero-classic.php:38
+msgid "آیکون دکمه دوم"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:43
+msgid "آمار سریع"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:57 inc/elementor/widgets/plant-card.php:29
+msgid "کارت تصویری"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:58
+msgid "نمایش کارت"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:61
+msgid "کد / متن کوچک"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:64 inc/elementor/widgets/portfolio.php:71 inc/elementor/widgets/steps.php:49
+msgid "یادداشت پایین"
+msgstr ""
+
+#: inc/elementor/widgets/page-hero.php:65
+msgid "متن سمت چپ پایین"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:20
+msgid "LS ماشین‌حساب مصرف (رزین)"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:37
+msgid "برچسب ورودی"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:38
+msgid "واحد ورودی"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:39
+msgid "حداقل"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:40
+msgid "حداکثر"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:41
+msgid "گام"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:42
+msgid "مقدار پیش‌فرض"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:43
+msgid "خروجی ۱ – عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:44
+msgid "خروجی ۱ – ضریب"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:45
+msgid "خروجی ۱ – واحد"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:46
+msgid "خروجی ۲ – عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:47
+msgid "خروجی ۲ – ضریب"
+msgstr ""
+
+#: inc/elementor/widgets/calculator.php:48
+msgid "خروجی ۲ – واحد"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-popular.php:20
+msgid "LS مقالات پرطرفدار (سایدبار)"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-popular.php:37 inc/elementor/widgets/posts.php:43 inc/elementor/widgets/posts-grid.php:37
+msgid "مرتب‌سازی"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-popular.php:37 inc/elementor/widgets/posts.php:43 inc/elementor/widgets/posts-grid.php:37
+msgid "پربازدیدترین"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-popular.php:37 inc/elementor/widgets/posts.php:43 inc/elementor/widgets/posts-grid.php:37
+msgid "پربحث‌ترین"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-popular.php:38 inc/elementor/widgets/cta.php:33
+msgid "سبک"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-popular.php:38
+msgid "با تعداد بازدید"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-popular.php:38
+msgid "فشرده"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:21
+msgid "LS سربرگ نوشته (تیتر، نویسنده، تصویر)"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:36
+msgid "برچسب‌های دسته/زمان مطالعه/بازدید"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:37
+msgid "نویسنده"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:38
+msgid "سمت نویسنده (خالی = بیوگرافی کاربر)"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:39
+msgid "دکمه‌های اشتراک"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:40
+msgid "تصویر شاخص"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:41
+msgid "کپشن تصویر (خالی = از تنظیمات نوشته)"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:42
+msgid "برچسب تصویر (خالی = از تنظیمات نوشته)"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:45
+msgid "شاخص‌های فنی (اختیاری)"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:48 inc/elementor/widgets/shop-hero.php:49
+msgid "شاخص‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:52 inc/elementor/widgets/portfolio-hero.php:42 inc/elementor/widgets/icon-cards.php:59 inc/elementor/widgets/contact-cards.php:35
+msgid "رنگ آیکون"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:54 inc/elementor/widgets/product-tabs.php:72 inc/elementor/widgets/portfolio-hero.php:46
+msgid "رنگ مقدار"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:54 inc/elementor/widgets/product-tabs.php:72 inc/elementor/widgets/featured-post.php:45 inc/elementor/widgets/portfolio-hero.php:42
+msgid "تیره"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:54 inc/elementor/widgets/post-hero.php:58 inc/elementor/widgets/product-tabs.php:72 inc/elementor/widgets/featured-post.php:45
+msgid "زمردی"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:55 inc/elementor/widgets/featured-post.php:44 inc/elementor/widgets/hero-classic.php:57
+msgid "واحد"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:56 inc/elementor/widgets/product-tabs.php:71 inc/elementor/widgets/sidebar-newsletter.php:39
+msgid "یادداشت"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:57 inc/elementor/widgets/portfolio.php:72
+msgid "آیکون یادداشت"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:58 inc/elementor/widgets/portfolio.php:73
+msgid "رنگ یادداشت"
+msgstr ""
+
+#: inc/elementor/widgets/post-hero.php:58 inc/elementor/widgets/portfolio.php:73 inc/elementor/widgets/contact-cards.php:37 inc/elementor/widgets/performance.php:59
+msgid "خاکستری"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:20
+msgid "LS سوالات متداول"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:30 inc/elementor/widgets/cta.php:47
+msgid "برچسب بالای عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:42 inc/elementor/widgets/faq.php:47
+msgid "پرسش‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:43
+msgid "کارت‌های باز"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:43
+msgid "آکاردئون"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:44
+msgid "کنار عنوان (رنگ برند)"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:44
+msgid "کنار عنوان (رنگ برند، عنوان تیره)"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:50
+msgid "پرسش"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:61
+msgid "ستون‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:62
+msgid "عرض محدود (وسط‌چین)"
+msgstr ""
+
+#: inc/elementor/widgets/faq.php:63
+msgid "افزودن اسکیمای FAQ برای گوگل"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-promo.php:20
+msgid "LS باکس معرفی (سایدبار)"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-promo.php:39 inc/elementor/widgets/featured-post.php:45 inc/elementor/widgets/shop-hero.php:52 inc/elementor/widgets/product-detail.php:46
+msgid "رنگ"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-promo.php:39 inc/elementor/widgets/portfolio-hero.php:42 inc/elementor/widgets/portfolio.php:60 inc/elementor/widgets/icon-cards.php:59
+msgid "سبز ملایم"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-promo.php:39
+msgid "آبی-خاکستری"
+msgstr ""
+
+#: inc/elementor/widgets/related-posts.php:20
+msgid "LS مقالات مرتبط"
+msgstr ""
+
+#: inc/elementor/widgets/related-posts.php:36
+msgid "متن لینک همه"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:20
+msgid "LS تب‌های محصول (مشخصات، فرمولاسیون، نظرات)"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:29 inc/elementor/widgets/product-tabs.php:30 inc/elementor/widgets/portfolio.php:30 inc/elementor/widgets/catalog.php:37
+msgid "منبع"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:30 inc/elementor/widgets/product-detail.php:35
+msgid "خودکار (محصول جاری ووکامرس)"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:30 inc/elementor/widgets/portfolio.php:30 inc/elementor/widgets/posts.php:40 inc/elementor/widgets/product-detail.php:35
+msgid "دستی"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:33
+msgid "تب مشخصات"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:34 inc/elementor/widgets/product-tabs.php:62 inc/elementor/widgets/product-tabs.php:98 inc/elementor/widgets/hero.php:44
+msgid "عنوان تب"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:36
+msgid "متن (حالت دستی)"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:39
+msgid "ردیف‌های مشخصات"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:54
+msgid "در حالت ووکامرس از ویژگی‌های محصول استفاده شود"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:55
+msgid "عنوان کارت ویژه"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:57
+msgid "متن دکمه دیتاشیت"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:58
+msgid "فایل دیتاشیت"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:61
+msgid "تب فرمولاسیون"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:64 inc/elementor/widgets/plant-card.php:33 inc/elementor/widgets/hero-classic.php:53 inc/elementor/widgets/categories.php:48
+msgid "زیرعنوان"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:67
+msgid "اقلام فرمول"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:69
+msgid "ماده"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:72 inc/elementor/widgets/featured-post.php:45 inc/elementor/widgets/portfolio-hero.php:46 inc/elementor/widgets/comparison.php:52
+msgid "سبز برند"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:84 inc/elementor/widgets/steps.php:41 inc/elementor/widgets/steps.php:44
+msgid "مراحل"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:97
+msgid "تب نظرات"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:99
+msgid "امتیاز (حالت دستی)"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:100
+msgid "تعداد نظرات (حالت دستی)"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:103
+msgid "نوار امتیازها"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:106
+msgid "درصد"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:117
+msgid "نظرات (حالت دستی)"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:121
+msgid "ستاره"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:130
+msgid "دکمه ثبت تجربه"
+msgstr ""
+
+#: inc/elementor/widgets/product-tabs.php:179
+msgid "وزن"
+msgstr ""
+
+#: inc/elementor/widgets/toc.php:20
+msgid "LS فهرست مطالب مقاله"
+msgstr ""
+
+#: inc/elementor/widgets/toc.php:35
+msgid "انتخابگر سرتیترها (CSS)"
+msgstr ""
+
+#: inc/elementor/widgets/dark-feature.php:20
+msgid "LS باکس تیره + نمودار دایره‌ای"
+msgstr ""
+
+#: inc/elementor/widgets/dark-feature.php:36 inc/elementor/widgets/performance.php:35
+msgid "ویژگی‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/dark-feature.php:51
+msgid "نمودار دایره‌ای"
+msgstr ""
+
+#: inc/elementor/widgets/dark-feature.php:53
+msgid "درصد پر شدن"
+msgstr ""
+
+#: inc/elementor/widgets/dark-feature.php:54
+msgid "عدد وسط"
+msgstr ""
+
+#: inc/elementor/widgets/dark-feature.php:55
+msgid "متن وسط"
+msgstr ""
+
+#: inc/elementor/widgets/dark-feature.php:56
+msgid "آمار ۱ – عدد"
+msgstr ""
+
+#: inc/elementor/widgets/dark-feature.php:57
+msgid "آمار ۱ – عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/dark-feature.php:58
+msgid "آمار ۲ – عدد"
+msgstr ""
+
+#: inc/elementor/widgets/dark-feature.php:59
+msgid "آمار ۲ – عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/blog-hero.php:20
+msgid "LS سربرگ وبلاگ / آرشیو"
+msgstr ""
+
+#: inc/elementor/widgets/blog-hero.php:37
+msgid "عنوان خودکار در صفحات دسته/برچسب/جستجو"
+msgstr ""
+
+#: inc/elementor/widgets/blog-hero.php:39 inc/elementor/widgets/catalog.php:79
+msgid "راهنمای جستجو"
+msgstr ""
+
+#: inc/elementor/widgets/blog-hero.php:41
+msgid "دسته‌بندی‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/blog-hero.php:42 inc/elementor/widgets/portfolio.php:33 inc/elementor/widgets/catalog.php:80
+msgid "عنوان «همه»"
+msgstr ""
+
+#: inc/elementor/widgets/blog-hero.php:43
+msgid "حداکثر دسته‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:20
+msgid "LS فوتر سایت"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:29 inc/elementor/widgets/header.php:47
+msgid "خالی = خواندن از سفارشی‌سازی › تنظیمات قالب لاریجانی"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:33
+msgid "جایگاه «فوتر – دسترسی سریع»"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:34
+msgid "جایگاه «فوتر – دسته‌بندی تجهیزات»"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:35
+msgid "جایگاه «فوتر – لینک‌های پایین»"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:40
+msgid "برند و معرفی"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:41 inc/elementor/widgets/header.php:71
+msgid "لوگو"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:44
+msgid "متن معرفی"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:46
+msgid "آیکون شبکه‌های اجتماعی"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:49
+msgid "ستون‌های منو"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:50
+msgid "عنوان ستون اول"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:51
+msgid "منوی ستون اول"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:52
+msgid "عنوان ستون دوم"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:53
+msgid "منوی ستون دوم"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:57
+msgid "تماس و کپی‌رایت"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:58 inc/elementor/widgets/header.php:64
+msgid "آدرس"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:62
+msgid "کپی‌رایت"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:63
+msgid "منوی پایین"
+msgstr ""
+
+#: inc/elementor/widgets/footer.php:64
+msgid "تصویر پس‌زمینه"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-newsletter.php:20
+msgid "LS خبرنامه پیامکی (سایدبار)"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-newsletter.php:37
+msgid "راهنمای فیلد"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-newsletter.php:40 inc/elementor/widgets/cta.php:80
+msgid "پیام موفقیت"
+msgstr ""
+
+#: inc/elementor/widgets/post-comments.php:20
+msgid "LS دیدگاه‌ها و پرسش و پاسخ"
+msgstr ""
+
+#: inc/elementor/widgets/post-comments.php:34
+msgid "برچسب کنار عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/post-comments.php:46
+msgid "بخش دیدگاه‌ها در نمای سایت نمایش داده می‌شود."
+msgstr ""
+
+#: inc/elementor/widgets/featured-post.php:20
+msgid "LS مقاله ویژه"
+msgstr ""
+
+#: inc/elementor/widgets/featured-post.php:33
+msgid "مقاله"
+msgstr ""
+
+#: inc/elementor/widgets/featured-post.php:34
+msgid "شناسه نوشته (خالی = نوشته «ویژه تحریریه» یا آخرین نوشته)"
+msgstr ""
+
+#: inc/elementor/widgets/featured-post.php:36 inc/post-types.php:191
+msgid "سمت نویسنده"
+msgstr ""
+
+#: inc/elementor/widgets/featured-post.php:40
+msgid "شاخص‌های فنی"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:20
+msgid "LS بنر دعوت به اقدام (CTA)"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:37
+msgid "کارت تیره با دو دکمه"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:38
+msgid "نوار تمام‌عرض تیره"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:39
+msgid "کارت سبز ملایم"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:40
+msgid "کارت تیره + فرم درخواست تماس"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:41
+msgid "کارت تیره + فرم دریافت کاتالوگ"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:42
+msgid "نوار تیره مشاوره + کارت شماره‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:46
+msgid "آیکون (نوار / کارت ملایم)"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:51
+msgid "وسط‌چین در موبایل"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:54
+msgid "نوار مشاوره"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:55
+msgid "موارد تیک‌دار (هر خط یک مورد)"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:56
+msgid "عنوان شماره اول"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:57
+msgid "شماره اول"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:58
+msgid "عنوان شماره دوم"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:59
+msgid "شماره دوم"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:62
+msgid "دکمه‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:64
+msgid "متن کوچک بالای دکمه اول (اختیاری)"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:70
+msgid "سبک دکمه دوم"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:70
+msgid "شیشه‌ای"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:70
+msgid "سبز واتساپ"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:70
+msgid "تیره با حاشیه"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:70 inc/helpers.php:444
+msgid "سفید"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:73 inc/post-types.php:242 inc/post-types.php:269
+msgid "فرم"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:74
+msgid "نام فرم (در درخواست‌ها)"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:75
+msgid "عنوان کارت فرم"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:76
+msgid "توضیح کارت فرم"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:77
+msgid "متن راهنمای فیلد"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:79
+msgid "یادداشت زیر فرم"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:83 inc/elementor/widgets/lead-form.php:33 inc/elementor/widgets/lead-form.php:37 inc/elementor/widgets/products.php:142
+msgid "چیدمان"
+msgstr ""
+
+#: inc/elementor/widgets/cta.php:121 inc/elementor/widgets/cta.php:123 inc/elementor/widgets/cta.php:126
+msgid "شماره تماس"
+msgstr ""
+
+#: inc/elementor/widgets/plant-card.php:20
+msgid "LS کارت کارخانه + آمار"
+msgstr ""
+
+#: inc/elementor/widgets/plant-card.php:30 inc/elementor/widgets/lead-form.php:47
+msgid "بدون کانتینر بخش (برای ستون‌های المنتور)"
+msgstr ""
+
+#: inc/elementor/widgets/plant-card.php:32
+msgid "عنوان روی تصویر"
+msgstr ""
+
+#: inc/elementor/widgets/plant-card.php:34 inc/elementor/widgets/products.php:40
+msgid "برچسب روی تصویر"
+msgstr ""
+
+#: inc/elementor/widgets/plant-card.php:48
+msgid "لیست تیک‌دار (هر خط یک مورد)"
+msgstr ""
+
+#: inc/elementor/widgets/plant-card.php:51
+msgid "کارت ارسال"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio-hero.php:20
+msgid "LS هیرو نمونه‌کارها + آمار"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio-hero.php:31
+msgid "متن کنار برچسب"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio-hero.php:36
+msgid "کارت‌های کناری"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio-hero.php:39 inc/elementor/widgets/icon-cards.php:53 inc/elementor/widgets/icon-cards.php:56 inc/elementor/widgets/posts.php:46
+msgid "کارت‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio-hero.php:45
+msgid "مقدار سمت چپ"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio-hero.php:55
+msgid "نوار آمار"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:20
+msgid "LS جدول مقایسه"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:41
+msgid "جدول"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:42
+msgid "ستون اول"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:43
+msgid "ستون برجسته (ما)"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:44
+msgid "ستون رقیب"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:47
+msgid "ردیف‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:49
+msgid "شاخص"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:50
+msgid "مقدار ما"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:51
+msgid "آیکون مقدار ما"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:52
+msgid "رنگ مقدار ما"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:53
+msgid "مقدار رقیب"
+msgstr ""
+
+#: inc/elementor/widgets/comparison.php:54
+msgid "نمایش قرمز (نقطه ضعف)"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:20
+msgid "LS نمونه‌کارها با فیلتر"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:29 inc/elementor/widgets/portfolio.php:54
+msgid "پروژه‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:30
+msgid "پست‌تایپ نمونه‌کارها"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:32
+msgid "نوار فیلتر"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:34
+msgid "متن شمارنده"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:35
+msgid "پسوند شمارنده"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:38
+msgid "فیلترها (منبع دستی)"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:40
+msgid "کلید"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:57
+msgid "کلید فیلتر"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:58
+msgid "برچسب ۱"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:59
+msgid "برچسب ۲"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:60
+msgid "رنگ برچسب ۲"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:61
+msgid "محل اجرا"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:62
+msgid "کد / ظرفیت"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:65 inc/elementor/widgets/products.php:49 inc/post-types.php:103
+msgid "مشخصه ۱ – عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:66 inc/elementor/widgets/products.php:50 inc/post-types.php:104
+msgid "مشخصه ۱ – مقدار"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:67 inc/elementor/widgets/products.php:51 inc/post-types.php:105
+msgid "مشخصه ۲ – عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:68 inc/elementor/widgets/products.php:52 inc/post-types.php:106
+msgid "مشخصه ۲ – مقدار"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:69 inc/elementor/widgets/products.php:53 inc/post-types.php:107
+msgid "مشخصه ۳ – عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:70 inc/post-types.php:108
+msgid "مشخصه ۳ – مقدار"
+msgstr ""
+
+#: inc/elementor/widgets/portfolio.php:73 inc/elementor/widgets/products.php:61 inc/elementor/widgets/contact-cards.php:37 inc/elementor/widgets/product-detail.php:46
+msgid "سبز"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:20
+msgid "LS محتوای نوشته + سایدبار"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:34
+msgid "تقسیم محتوا به کارت‌های شماره‌دار (بر اساس H2)"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:35
+msgid "برچسب‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:36
+msgid "عنوان برچسب‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:37
+msgid "باکس نویسنده"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:38
+msgid "پیشوند نام نویسنده"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:39
+msgid "لینک تماس با نویسنده"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:40
+msgid "نوشته قبلی/بعدی"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:41
+msgid "مقالات مرتبط"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:42
+msgid "عنوان مقالات مرتبط"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:43
+msgid "دیدگاه‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:44
+msgid "سایدبار"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:44
+msgid "سایدبار پیش‌فرض قالب (فهرست، پشتیبانی، پربازدیدها)"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:44
+msgid "فقط ابزارک‌های «سایدبار وبلاگ»"
+msgstr ""
+
+#: inc/elementor/widgets/post-content.php:44
+msgid "بدون سایدبار"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:20
+msgid "LS سربرگ فروشگاه / کاتالوگ"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:33
+msgid "طرح"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:37
+msgid "با کارت دانلود لیست قیمت (کاتالوگ)"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:38
+msgid "نوار سفید با دو دکمه و ۴ مزیت (فروشگاه)"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:45
+msgid "در صفحات دسته محصول، عنوان دسته نمایش داده شود"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:65
+msgid "دکمه‌ها و مزیت‌ها (طرح فروشگاه)"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:74
+msgid "مزیت‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:89
+msgid "کارت دانلود"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:91
+msgid "عنوان کوچک"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:92
+msgid "برچسب تاریخ"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:95
+msgid "دکمه دانلود"
+msgstr ""
+
+#: inc/elementor/widgets/shop-hero.php:96
+msgid "فایل / لینک دانلود"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:23
+msgid "LS کاتالوگ محصولات (فیلتر + جستجو)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:36
+msgid "منبع محصولات"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:37
+msgid "خودکار (ووکامرس اگر فعال باشد)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:37 inc/elementor/widgets/catalog.php:44 inc/elementor/widgets/products.php:122
+msgid "کارت‌های دستی"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:38
+msgid "کوئری ووکامرس"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:38
+msgid "خودکار (در صفحه فروشگاه از کوئری اصلی)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:38
+msgid "همیشه کوئری اصلی صفحه"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:38
+msgid "کوئری سفارشی"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:39
+msgid "تعداد در صفحه (کوئری سفارشی)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:40
+msgid "دسته (کوئری سفارشی)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:41
+msgid "ستون‌ها در دسکتاپ"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:47
+msgid "دسته‌های فیلتر"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:49
+msgid "کلید (همان «کلید فیلتر» کارت‌ها)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:64
+msgid "باکس‌های فیلتر سایدبار"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:68
+msgid "گزینه‌ها (هر خط: عنوان|تعداد|کلید فیلتر)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:78
+msgid "متن‌ها و سایدبار"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:84
+msgid "طرح فروشگاه"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:88
+msgid "کاتالوگ با سایدبار فیلتر (۳ ستون)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:89
+msgid "فروشگاه تمام‌عرض (۴ ستون، مرتب‌سازی کشویی)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:93
+msgid "نمایش سایدبار"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:94
+msgid "متن زیر محصولات (کارت‌های دستی)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:95
+msgid "فیلتر قیمت (ووکامرس)"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:96
+msgid "عنوان باکس پیشنهاد"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:97
+msgid "متن باکس پیشنهاد"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:98
+msgid "متن لینک باکس"
+msgstr ""
+
+#: inc/elementor/widgets/catalog.php:99
+msgid "لینک باکس"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:20
+msgid "LS نقشه و راهنمای دسترسی"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:38
+msgid "دکمه مسیریابی ۱"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:39
+msgid "لینک ۱"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:40
+msgid "دکمه مسیریابی ۲"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:41
+msgid "لینک ۲"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:44
+msgid "نقشه"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:45
+msgid "نوع نقشه"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:45
+msgid "کد iframe (گوگل/نشان/بلد)"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:45
+msgid "OpenStreetMap با مختصات"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:46
+msgid "تصویر نقشه"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:47
+msgid "آدرس src کد embed"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:48
+msgid "عرض جغرافیایی"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:49
+msgid "طول جغرافیایی"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:50
+msgid "عنوان پین"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:51
+msgid "زیرعنوان پین"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:52
+msgid "متن مختصات"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:55
+msgid "راهنمای دسترسی"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:59
+msgid "مسیرها"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:64
+msgid "پس‌زمینه سبز"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:72
+msgid "دکمه پایین"
+msgstr ""
+
+#: inc/elementor/widgets/map.php:73
+msgid "لینک دکمه پایین"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:20
+msgid "LS کارت‌های آیکون‌دار / مزایا / خدمات"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:29
+msgid "سبک و چیدمان"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:33 inc/elementor/widgets/posts.php:63 inc/elementor/widgets/testimonials.php:58 inc/elementor/widgets/products.php:143
+msgid "سبک کارت"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:37
+msgid "نشان اعتماد فشرده (صفحه اصلی)"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:38
+msgid "افقی با توضیح (چرا ما؟)"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:39
+msgid "ستونی ساده (مزایای فنی)"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:40
+msgid "بنتو با برچسب‌ها (محورهای خدمات)"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:41
+msgid "کادر راهنما با ستون‌های ساده (فروشگاه)"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:59 inc/elementor/widgets/contact-cards.php:37 inc/elementor/widgets/product-detail.php:46 inc/elementor/widgets/product-detail.php:105
+msgid "کهربایی"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:59
+msgid "آبی"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:59
+msgid "سبز کم‌رنگ"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:59 inc/elementor/widgets/contact-cards.php:35
+msgid "خاکستری-آبی"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:60
+msgid "متن کوچک بالا (سبک بنتو)"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:63
+msgid "برچسب‌ها (هر خط یکی – سبک بنتو)"
+msgstr ""
+
+#: inc/elementor/widgets/icon-cards.php:64
+msgid "متن پایین کارت (سبک بنتو)"
+msgstr ""
+
+#: inc/elementor/widgets/posts.php:20
+msgid "LS آخرین مقالات"
+msgstr ""
+
+#: inc/elementor/widgets/posts.php:39
+msgid "نوشته‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/posts.php:40
+msgid "نوشته‌های وبلاگ"
+msgstr ""
+
+#: inc/elementor/widgets/posts.php:42 inc/elementor/widgets/posts.php:49 inc/elementor/widgets/posts-grid.php:36
+msgid "دسته"
+msgstr ""
+
+#: inc/elementor/widgets/posts.php:43 inc/elementor/widgets/posts-grid.php:37
+msgid "تصادفی"
+msgstr ""
+
+#: inc/elementor/widgets/posts.php:51
+msgid "خلاصه"
+msgstr ""
+
+#: inc/elementor/widgets/posts.php:52
+msgid "تاریخ"
+msgstr ""
+
+#: inc/elementor/widgets/posts.php:63 inc/elementor/widgets/posts-grid.php:45
+msgid "آرشیو"
+msgstr ""
+
+#: inc/elementor/widgets/posts.php:63 inc/elementor/widgets/posts-grid.php:45
+msgid "مرتبط"
+msgstr ""
+
+#: inc/elementor/widgets/posts.php:64 inc/elementor/widgets/posts-grid.php:46
+msgid "متن ادامه مطلب"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:20
+msgid "LS نظرات مشتریان"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:36
+msgid "متن امتیاز کنار عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:39 inc/elementor/widgets/testimonials.php:42
+msgid "نظرات"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:44
+msgid "متن نظر"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:46
+msgid "سمت / شرکت"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:47
+msgid "تصویر (اختیاری)"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:48
+msgid "ستاره (۰ = مخفی)"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:57
+msgid "شبکه"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:57
+msgid "اسلایدر افقی"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:58
+msgid "پیش‌فرض (ستاره بالا)"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:58
+msgid "کلاسیک (عکس + ستاره پایین)"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials.php:113
+msgid "%d ستاره"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:20
+msgid "LS فرم استعلام / مشاوره"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:41
+msgid "ستون اطلاعات + فرم"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:42
+msgid "کارت بزرگ (اطلاعات + فرم داخل کارت)"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:43
+msgid "فقط فرم"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:48
+msgid "رنگ کارت فرم"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:48
+msgid "کارت سفید، فیلد کرم"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:48
+msgid "کارت کرم، فیلد سفید"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:52
+msgid "ستون اطلاعات"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:57
+msgid "سبک موارد"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:57
+msgid "کارت با آیکون"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:57
+msgid "لیست تیک‌دار"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:60
+msgid "موارد"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:65
+msgid "لینک متن"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:66
+msgid "متن چپ‌به‌راست (شماره تلفن)"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:76
+msgid "سربرگ فرم"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:77
+msgid "متن کوچک بالای فرم"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:79
+msgid "عنوان فرم"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:80
+msgid "توضیح فرم"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:83 inc/elementor/widgets/lead-form.php:87 inc/elementor/widgets/hero-classic.php:65
+msgid "فیلدها"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:84
+msgid "نام فرم (برای شناسایی در درخواست‌ها)"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:90 inc/elementor/widgets/header.php:66 inc/post-types.php:268
+msgid "تلفن"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:90
+msgid "کشویی"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:90
+msgid "چندانتخابی"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:90
+msgid "متن چندخطی"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:90
+msgid "آپلود فایل"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:90
+msgid "تیک تأیید"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:91
+msgid "نام لاتین فیلد (اختیاری)"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:92
+msgid "متن راهنما"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:93
+msgid "گزینه‌ها (هر خط یکی؛ با * پیش‌فرض تیک‌خورده)"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:94
+msgid "اجباری"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:95
+msgid "عرض"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:95
+msgid "نصف"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:95
+msgid "کامل"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:96
+msgid "آیکون داخل فیلد"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:97
+msgid "ورود چپ‌به‌راست"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:98
+msgid "متن زیر فیلد آپلود"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:112
+msgid "ارسال و پیام موفقیت"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:114 inc/elementor/widgets/products.php:62
+msgid "آیکون دکمه"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:115
+msgid "دکمه تمام‌عرض"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:116
+msgid "یادداشت کنار دکمه"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:117
+msgid "عنوان پیام موفقیت"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:118
+msgid "متن پیام موفقیت"
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:118
+msgid "از {tracking} برای نمایش کد پیگیری استفاده کنید."
+msgstr ""
+
+#: inc/elementor/widgets/lead-form.php:176
+msgid "انتخاب فایل از سیستم یا کشیدن به این بخش"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:20
+msgid "LS هیرو با جستجوی محصولات"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:32 inc/elementor/widgets/hero-classic.php:32
+msgid "بخش رنگی عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:34
+msgid "تگ عنوان"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:37
+msgid "پنل جستجو"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:38
+msgid "نمایش پنل جستجو"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:39 inc/elementor/widgets/hero-classic.php:62
+msgid "آدرس صفحه نتایج"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:39
+msgid "خالی = صفحه فروشگاه ووکامرس یا جستجوی سایت. فیلدها به صورت پارامتر GET ارسال می‌شوند."
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:42
+msgid "تب‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:45
+msgid "مقدار (مثلاً اسلاگ دسته محصول)"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:53
+msgid "نام پارامتر تب"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:56
+msgid "فیلدهای انتخابی"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:59 inc/elementor/widgets/hero-classic.php:68
+msgid "نام پارامتر"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:60 inc/elementor/widgets/hero-classic.php:69
+msgid "گزینه‌ها (هر خط: عنوان|مقدار)"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:69
+msgid "متن دکمه جستجو"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:72
+msgid "تصویر و کارت‌های شناور"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:74
+msgid "آیکون کارت بالا"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:75
+msgid "عنوان کارت بالا"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:76
+msgid "مقدار کارت بالا"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:77
+msgid "متن کوچک کارت پایین"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:78
+msgid "عنوان کارت پایین"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:79
+msgid "لینک کارت پایین"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:116
+msgid "نوع جستجو"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:20
+msgid "LS محصولات (کارت محصول)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:42
+msgid "برچسب موجودی پایین تصویر (سبک فروشگاه)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:43
+msgid "رنگ برچسب موجودی"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:43
+msgid "سبز با تیک"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:44
+msgid "دسته (بالای عنوان)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:46
+msgid "ویژگی کوتاه (سبک کلاسیک)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:47
+msgid "توضیح کوتاه (سبک کاتالوگ)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:48
+msgid "کد محصول"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:54
+msgid "مشخصه ۳ – مقدار (سبز)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:55 inc/elementor/widgets/product-detail.php:92 inc/elementor/widgets/hero-classic.php:55
+msgid "عنوان قیمت"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:56 inc/elementor/widgets/hero-classic.php:56
+msgid "قیمت"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:57 inc/elementor/widgets/product-detail.php:97
+msgid "واحد پول"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:58
+msgid "قیمت عددی (برای مرتب‌سازی)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:59
+msgid "لینک محصول"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:60
+msgid "متن دکمه (سبک کاتالوگ)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:61
+msgid "سبک دکمه"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:64
+msgid "دکمه استعلام واتساپ"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:65
+msgid "کلید فیلتر (دسته برای فیلتر کاتالوگ)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:122
+msgid "محصولات ووکامرس"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:123
+msgid "نوع کوئری"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:123
+msgid "ویژه"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:123
+msgid "تخفیف‌دار"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:123
+msgid "مرتبط با محصول جاری"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:123
+msgid "شناسه‌های مشخص"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:124
+msgid "شناسه محصولات (با کاما)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:125
+msgid "دسته محصول"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:143
+msgid "کلاسیک (صفحه اصلی)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:143
+msgid "کاتالوگ (فروشگاه)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:143
+msgid "فشرده (محصولات مکمل)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:143
+msgid "ویترین (صفحه اصلی کلاسیک)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:143
+msgid "فروشگاه (دکمه تمام‌عرض)"
+msgstr ""
+
+#: inc/elementor/widgets/products.php:219
+msgid "محصولی برای نمایش یافت نشد."
+msgstr ""
+
+#: inc/elementor/widgets/steps.php:20
+msgid "LS مراحل / نقشه راه"
+msgstr ""
+
+#: inc/elementor/widgets/steps.php:50
+msgid "رنگ شماره"
+msgstr ""
+
+#: inc/elementor/widgets/steps.php:50
+msgid "سبز ثانویه"
+msgstr ""
+
+#: inc/elementor/widgets/steps.php:63
+msgid "کارت‌های تصویری زیر مراحل"
+msgstr ""
+
+#: inc/elementor/widgets/steps.php:69
+msgid "متن کوچک"
+msgstr ""
+
+#: inc/elementor/widgets/contact-cards.php:20
+msgid "LS کارت‌های تماس واحدها"
+msgstr ""
+
+#: inc/elementor/widgets/contact-cards.php:40
+msgid "محتوای پایین کارت"
+msgstr ""
+
+#: inc/elementor/widgets/contact-cards.php:40
+msgid "شماره + دو دکمه"
+msgstr ""
+
+#: inc/elementor/widgets/contact-cards.php:41
+msgid "شماره تلفن"
+msgstr ""
+
+#: inc/elementor/widgets/contact-cards.php:42
+msgid "آیکون کنار شماره"
+msgstr ""
+
+#: inc/elementor/widgets/contact-cards.php:43
+msgid "دکمه ۱"
+msgstr ""
+
+#: inc/elementor/widgets/contact-cards.php:44
+msgid "دکمه ۲ (واتساپ)"
+msgstr ""
+
+#: inc/elementor/widgets/contact-cards.php:45
+msgid "دکمه ۲ تیره"
+msgstr ""
+
+#: inc/elementor/widgets/contact-cards.php:46
+msgid "شماره واتساپ (98912...)"
+msgstr ""
+
+#: inc/elementor/widgets/contact-cards.php:47
+msgid "ساعات (هر خط: عنوان|ساعت|رنگ emerald/amber/muted)"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:21
+msgid "LS معرفی محصول (گالری + خرید)"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:35
+msgid "منبع اطلاعات"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:35
+msgid "در حالت خودکار، فیلدهای اختصاصی را از تب «اطلاعات لاریجانی» در ویرایش محصول تکمیل کنید."
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:36
+msgid "نمایش مسیر صفحه"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:39
+msgid "اطلاعات محصول (دستی)"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:40
+msgid "گالری تصاویر"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:43
+msgid "برچسب‌های روی تصویر"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:55
+msgid "وضعیت موجودی"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:56
+msgid "کد فنی"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:57
+msgid "برچسب پرفروش"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:58
+msgid "نام محصول"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:59
+msgid "توضیح کوتاه"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:60
+msgid "امتیاز (۰ تا ۵)"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:61
+msgid "تعداد نظرات"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:62
+msgid "تأییدیه کیفی"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:65
+msgid "مشخصات کلیدی"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:80
+msgid "نشان‌های زیر گالری"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:93
+msgid "قیمت واحد (عدد)"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:94
+msgid "قیمت عمده"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:95
+msgid "حداقل تعداد عمده"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:96
+msgid "سطح تولید هر عدد (مترمربع)"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:99
+msgid "لینک دکمه خرید (حالت دستی)"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:102
+msgid "تضمین‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:116
+msgid "برچسب‌ها و دکمه‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:117
+msgid "برچسب تعداد"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:118
+msgid "برچسب سطح"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:119
+msgid "برچسب مجموع"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:120
+msgid "متن دکمه خرید"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:121
+msgid "متن دکمه مشاوره"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:122
+msgid "لینک دکمه مشاوره"
+msgstr ""
+
+#: inc/elementor/widgets/product-detail.php:123
+msgid "دکمه علاقه‌مندی"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:20
+msgid "LS مسیر صفحه (بردکرامب)"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:30
+msgid "جداکننده"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:31
+msgid "عنوان صفحه جاری (اختیاری)"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:35
+msgid "المان سمت چپ"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:39
+msgid "هیچ"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:40
+msgid "وضعیت با نقطه چشمک‌زن"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:41
+msgid "متن تیک‌دار + برچسب"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:45
+msgid "متن وضعیت"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:45
+msgid "خطوط پاسخگویی مستقیم و انبار آبیک فعال است"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:46
+msgid "متن تیک‌دار"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:46
+msgid "پشتیبانی فنی و فرمولاسیون فعال در سراسر ایران"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:47
+msgid "نسخه صنعتی ۱۴۰۳"
+msgstr ""
+
+#: inc/elementor/widgets/breadcrumb.php:48
+msgid "خط زیرین"
+msgstr ""
+
+#: inc/elementor/widgets/performance.php:20
+msgid "LS نمودار میله‌ای مقایسه (تیره)"
+msgstr ""
+
+#: inc/elementor/widgets/performance.php:29
+msgid "متن و ویژگی‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/performance.php:49
+msgid "نمودار"
+msgstr ""
+
+#: inc/elementor/widgets/performance.php:50
+msgid "عنوان نمودار"
+msgstr ""
+
+#: inc/elementor/widgets/performance.php:54
+msgid "میله‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/performance.php:57
+msgid "مقدار نوشتاری"
+msgstr ""
+
+#: inc/elementor/widgets/performance.php:58
+msgid "درصد طول"
+msgstr ""
+
+#: inc/elementor/widgets/performance.php:59
+msgid "گرادیان سبز"
+msgstr ""
+
+#: inc/elementor/widgets/performance.php:70
+msgid "کارت‌های کوچک زیر نمودار"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-download.php:20
+msgid "LS کارت دانلود تیره (سایدبار)"
+msgstr ""
+
+#: inc/elementor/widgets/sidebar-download.php:39
+msgid "فایل / لینک"
+msgstr ""
+
+#: inc/elementor/widgets/hero-classic.php:20
+msgid "LS هیرو کلاسیک + فیلتر شناور"
+msgstr ""
+
+#: inc/elementor/widgets/hero-classic.php:41
+msgid "اعتماد مشتریان"
+msgstr ""
+
+#: inc/elementor/widgets/hero-classic.php:43
+msgid "تصاویر مشتریان"
+msgstr ""
+
+#: inc/elementor/widgets/hero-classic.php:44
+msgid "عدد داخل دایره"
+msgstr ""
+
+#: inc/elementor/widgets/hero-classic.php:46
+msgid "توضیح کنار ستاره‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/hero-classic.php:49
+msgid "تصویر و کارت محصول"
+msgstr ""
+
+#: inc/elementor/widgets/hero-classic.php:51
+msgid "آیکون کارت"
+msgstr ""
+
+#: inc/elementor/widgets/hero-classic.php:52
+msgid "عنوان کارت"
+msgstr ""
+
+#: inc/elementor/widgets/hero-classic.php:60
+msgid "نوار فیلتر شناور"
+msgstr ""
+
+#: inc/elementor/widgets/posts-grid.php:20
+msgid "LS شبکه مقالات (آرشیو)"
+msgstr ""
+
+#: inc/elementor/widgets/posts-grid.php:33
+msgid "کوئری"
+msgstr ""
+
+#: inc/elementor/widgets/posts-grid.php:34
+msgid "خودکار (کوئری جاری در آرشیو، وگرنه سفارشی)"
+msgstr ""
+
+#: inc/elementor/widgets/posts-grid.php:34
+msgid "کوئری جاری صفحه (آرشیو)"
+msgstr ""
+
+#: inc/elementor/widgets/posts-grid.php:34
+msgid "سفارشی"
+msgstr ""
+
+#: inc/elementor/widgets/posts-grid.php:34
+msgid "مرتبط با نوشته جاری"
+msgstr ""
+
+#: inc/elementor/widgets/posts-grid.php:38
+msgid "حذف مقاله ویژه از لیست"
+msgstr ""
+
+#: inc/elementor/widgets/posts-grid.php:43
+msgid "عنوان بالای لیست"
+msgstr ""
+
+#: inc/elementor/widgets/posts-grid.php:44
+msgid "نمایش شمارنده"
+msgstr ""
+
+#: inc/elementor/widgets/posts-grid.php:48
+msgid "سایدبار پیش‌فرض قالب در کنار لیست"
+msgstr ""
+
+#: inc/elementor/widgets/categories.php:20
+msgid "LS دسته‌بندی‌های اصلی"
+msgstr ""
+
+#: inc/elementor/widgets/categories.php:39 inc/elementor/widgets/categories.php:44
+msgid "دسته‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/categories.php:40
+msgid "دسته‌های محصول ووکامرس"
+msgstr ""
+
+#: inc/elementor/widgets/categories.php:41
+msgid "تعداد دسته‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/categories.php:84
+msgid "%s محصول"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:22
+msgid "LS هدر سایت"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:36
+msgid "جایگاه «منوی اصلی»"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:37
+msgid "جایگاه «دسته‌بندی‌های منوی موبایل»"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:40
+msgid "منو: %s"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:49
+msgid "نوار بالا"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:57
+msgid "طبق تنظیمات قالب / برگه"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:58
+msgid "نوار بالای تیره"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:59
+msgid "نوار بالای روشن (کلاسیک)"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:63
+msgid "نمایش نوار اطلاعات (دسکتاپ)"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:67
+msgid "متن لینک واتساپ"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:70
+msgid "لوگو و نام برند"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:71
+msgid "خالی = لوگوی سایت (سفارشی‌سازی › هویت سایت)"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:76
+msgid "منو و دکمه‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:77
+msgid "زیرمنوها به صورت منوی کشویی نمایش داده می‌شوند."
+msgstr ""
+
+#: inc/elementor/widgets/header.php:80
+msgid "متن کوتاه دکمه (تبلت)"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:81
+msgid "لینک دکمه اصلی"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:81
+msgid "خالی = تماس تلفنی"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:86
+msgid "عنوان بخش اصلی"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:87
+msgid "عنوان دسته‌بندی‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:88
+msgid "منوی دسته‌بندی‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/header.php:89
+msgid "متن دکمه واتساپ"
+msgstr ""
+
+#: inc/elementor/widgets/floating-cta.php:20
+msgid "LS دکمه شناور تماس"
+msgstr ""
+
+#: inc/elementor/widgets/floating-cta.php:29
+msgid "دکمه"
+msgstr ""
+
+#: inc/elementor/widgets/floating-cta.php:33
+msgid "موقعیت"
+msgstr ""
+
+#: inc/elementor/widgets/floating-cta.php:33
+msgid "پایین چپ"
+msgstr ""
+
+#: inc/elementor/widgets/floating-cta.php:33
+msgid "پایین راست"
+msgstr ""
+
+#: inc/elementor/widgets/floating-cta.php:34
+msgid "فقط آیکون در موبایل"
+msgstr ""
+
+#: inc/post-types.php:18 inc/post-types.php:23
+msgid "نمونه‌کارها"
+msgstr ""
+
+#: inc/post-types.php:19
+msgid "نمونه‌کار"
+msgstr ""
+
+#: inc/post-types.php:20
+msgid "افزودن پروژه جدید"
+msgstr ""
+
+#: inc/post-types.php:21
+msgid "ویرایش پروژه"
+msgstr ""
+
+#: inc/post-types.php:40
+msgid "دسته‌های پروژه"
+msgstr ""
+
+#: inc/post-types.php:41
+msgid "دسته پروژه"
+msgstr ""
+
+#: inc/post-types.php:54
+msgid "درخواست‌ها و استعلام‌ها"
+msgstr ""
+
+#: inc/post-types.php:55
+msgid "درخواست"
+msgstr ""
+
+#: inc/post-types.php:56
+msgid "درخواست‌ها"
+msgstr ""
+
+#: inc/post-types.php:57
+msgid "جزئیات درخواست"
+msgstr ""
+
+#: inc/post-types.php:99
+msgid "محل اجرا (مثلاً: تهران، برج اداری پارک‌وی)"
+msgstr ""
+
+#: inc/post-types.php:100
+msgid "کد / ظرفیت (مثلاً: کد قالب: ۳D-904)"
+msgstr ""
+
+#: inc/post-types.php:101
+msgid "برچسب اول روی تصویر"
+msgstr ""
+
+#: inc/post-types.php:102
+msgid "برچسب دوم روی تصویر"
+msgstr ""
+
+#: inc/post-types.php:109
+msgid "یادداشت پایین کارت (مثلاً: فاقد تغییر رنگ در تابش UV)"
+msgstr ""
+
+#: inc/post-types.php:110
+msgid "آیکون یادداشت (کلاس bootstrap، مثل bi bi-patch-check-fill)"
+msgstr ""
+
+#: inc/post-types.php:118
+msgid "مشخصات پروژه (کارت نمونه‌کار)"
+msgstr ""
+
+#: inc/post-types.php:119
+msgid "اطلاعات ثبت‌شده"
+msgstr ""
+
+#: inc/post-types.php:120
+msgid "تنظیمات مقاله (قالب لاریجانی)"
+msgstr ""
+
+#: inc/post-types.php:172
+msgid "مقاله ویژه تحریریه (نمایش در بالای آرشیو)"
+msgstr ""
+
+#: inc/post-types.php:176
+msgid "زمان مطالعه (دقیقه، خالی = خودکار)"
+msgstr ""
+
+#: inc/post-types.php:181
+msgid "کپشن روی تصویر شاخص"
+msgstr ""
+
+#: inc/post-types.php:186
+msgid "برچسب گوشه تصویر شاخص (مثل کد استاندارد)"
+msgstr ""
+
+#: inc/post-types.php:190
+msgid "نام نویسنده نمایشی (خالی = کاربر)"
+msgstr ""
+
+#: inc/post-types.php:197
+msgid "معرفی کوتاه نویسنده"
+msgstr ""
+
+#: inc/post-types.php:202
+msgid "کارت‌های شاخص زیر تصویر (هر خط یک کارت)"
+msgstr ""
+
+#: inc/post-types.php:203
+msgid "عنوان | مقدار | واحد | آیکون | رنگ | یادداشت | آیکون یادداشت"
+msgstr ""
+
+#: inc/post-types.php:243
+msgid "صفحه ارسال"
+msgstr ""
+
+#: inc/post-types.php:244
+msgid "کد پیگیری"
+msgstr ""
+
+#: inc/post-types.php:252 inc/forms.php:219
+msgid "فایل پیوست"
+msgstr ""
+
+#: inc/post-types.php:295
+msgid "تنظیمات برگه (قالب لاریجانی)"
+msgstr ""
+
+#: inc/post-types.php:308
+msgid "طبق تنظیمات قالب"
+msgstr ""
+
+#: inc/post-types.php:309
+msgid "هدر با نوار بالای تیره"
+msgstr ""
+
+#: inc/post-types.php:310
+msgid "هدر کلاسیک با نوار بالای روشن"
+msgstr ""
+
+#: inc/helpers.php:409
+msgid "آبی کبالت"
+msgstr ""
+
+#: inc/helpers.php:411
+msgid "روشن"
+msgstr ""
+
+#: inc/helpers.php:442
+msgid "بدون پس‌زمینه"
+msgstr ""
+
+#: inc/helpers.php:443
+msgid "کرم سنگی (Canvas)"
+msgstr ""
+
+#: inc/helpers.php:445
+msgid "سفید با خط مرزی"
+msgstr ""
+
+#: inc/helpers.php:446
+msgid "Surface"
+msgstr ""
+
+#: inc/helpers.php:447
+msgid "آبی-خاکستری ملایم"
+msgstr ""
+
+#: inc/demo/importer.php:139 inc/demo/importer.php:139
+msgid "راه‌اندازی و درون‌ریزی"
+msgstr ""
+
+#: inc/demo/importer.php:220
+msgid "مقالات عمومی"
+msgstr ""
+
+#: inc/demo/importer.php:375
+msgid "قالب لاریجانی استون فعال شد و برگه‌ها، منوها و صفحه اصلی به‌صورت خودکار ساخته شدند."
+msgstr ""
+
+#: inc/demo/importer.php:376
+msgid "تنظیمات قالب در منوی «لاریجانی استون» پیشخوان است."
+msgstr ""
+
+#: inc/demo/importer.php:380
+msgid "مشاهده سایت"
+msgstr ""
+
+#: inc/demo/importer.php:386
+msgid "قالب لاریجانی استون فعال شد."
+msgstr ""
+
+#: inc/demo/importer.php:387
+msgid "برای ساخت خودکار صفحات، منوها و قالب‌های تم‌بیلدر:"
+msgstr ""
+
+#: inc/demo/importer.php:389
+msgid "راه‌اندازی یک‌کلیکی"
+msgstr ""
+
+#: inc/demo/importer.php:404
+msgid "المنتور (رایگان)"
+msgstr ""
+
+#: inc/demo/importer.php:405
+msgid "المنتور پرو (تم‌بیلدر)"
+msgstr ""
+
+#: inc/demo/importer.php:410
+msgid "راه‌اندازی قالب لاریجانی استون"
+msgstr ""
+
+#: inc/demo/importer.php:415
+msgid "وضعیت افزونه‌ها"
+msgstr ""
+
+#: inc/demo/importer.php:421
+msgid "المنتور رایگان برای ویرایش بصری لازم است. با المنتور پرو، قالب‌های هدر، فوتر، تک‌نوشته، آرشیو، محصول و فروشگاه با شرط نمایش در تم‌بیلدر ثبت می‌شوند. بدون پرو، همین قالب‌ها از طریق «سفارشی‌سازی › تنظیمات قالب لاریجانی › تم‌بیلدر» به سایت متصل می‌شوند."
+msgstr ""
+
+#: inc/demo/importer.php:425
+msgid "درون‌ریزی دمو"
+msgstr ""
+
+#: inc/demo/importer.php:426
+msgid "برگه‌ها (اصلی، اصلی کلاسیک، خدمات، نمونه‌کارها، فروشگاه/کاتالوگ، تماس، وبلاگ، نمونه محصول)"
+msgstr ""
+
+#: inc/demo/importer.php:427
+msgid "تنظیم «صفحه اصلی» و «وبلاگ تخصصی» به‌عنوان صفحه نخست و صفحه نوشته‌ها"
+msgstr ""
+
+#: inc/demo/importer.php:428
+msgid "قالب‌های تم‌بیلدر (هدر، فوتر، تک‌نوشته، آرشیو، محصول، فروشگاه، ۴۰۴)"
+msgstr ""
+
+#: inc/demo/importer.php:429
+msgid "اتصال قالب‌های تم‌بیلدر به سایت (شرط نمایش پرو یا تنظیمات سفارشی‌سازی)"
+msgstr ""
+
+#: inc/demo/importer.php:430
+msgid "منوها (اصلی، موبایل، فوتر)"
+msgstr ""
+
+#: inc/demo/importer.php:431
+msgid "مقالات نمونه وبلاگ"
+msgstr ""
+
+#: inc/demo/importer.php:432
+msgid "نمونه‌کارهای نمونه"
+msgstr ""
+
+#: inc/demo/importer.php:434
+msgid "محصولات نمونه ووکامرس"
+msgstr ""
+
+#: inc/demo/importer.php:436
+msgid "کپی تصاویر طرح در کتابخانه رسانه (نیازمند دسترسی سرور به اینترنت)"
+msgstr ""
+
+#: inc/demo/importer.php:437
+msgid "رنگ‌ها و فونت سراسری المنتور (Site Settings)"
+msgstr ""
+
+#: inc/demo/importer.php:438
+msgid "شروع راه‌اندازی"
+msgstr ""
+
+#: inc/demo/importer.php:439
+msgid "برگه‌ها و قالب‌های موجود با همین نامک بازنویسی نمی‌شوند؛ اجرای دوباره امن است."
+msgstr ""
+
+#: inc/demo/importer.php:442
+msgid "فایل‌های قالب المنتور (JSON)"
+msgstr ""
+
+#: inc/demo/importer.php:443
+msgid "در پوشه elementor-templates قالب، فایل JSON همه صفحات و بخش‌ها قرار دارد. از «قالب‌ها › قالب‌های ذخیره‌شده › درون‌ریزی» می‌توانید آن‌ها را جداگانه وارد کنید."
+msgstr ""
+
+#: inc/demo/importer.php:479
+msgid "%d تصویر در کتابخانه رسانه کپی شد."
+msgstr ""
+
+#: inc/demo/importer.php:484
+msgid "رنگ‌ها و فونت سراسری المنتور تنظیم شد."
+msgstr ""
+
+#: inc/demo/importer.php:514
+msgid "%d برگه ساخته/به‌روز شد."
+msgstr ""
+
+#: inc/demo/importer.php:519
+msgid "صفحه اصلی و صفحه نوشته‌ها تنظیم شدند."
+msgstr ""
+
+#: inc/demo/importer.php:539
+msgid "%d قالب تم‌بیلدر ساخته شد."
+msgstr ""
+
+#: inc/demo/importer.php:543
+msgid "%d مقاله نمونه ساخته شد."
+msgstr ""
+
+#: inc/demo/importer.php:546
+msgid "%d نمونه‌کار ساخته شد."
+msgstr ""
+
+#: inc/demo/importer.php:549
+msgid "%d محصول نمونه ساخته شد."
+msgstr ""
+
+#: inc/demo/importer.php:553
+msgid "منوها ساخته و به جایگاه‌ها متصل شدند."
+msgstr ""
+
+#: inc/demo/importer.php:1086
+msgid "دسته‌بندی‌های موبایل"
+msgstr ""
+
+#: inc/forms.php:44
+msgid "ارسال بسیار سریع بود؛ لطفاً دوباره تلاش کنید."
+msgstr ""
+
+#: inc/forms.php:51
+msgid "تعداد درخواست‌ها زیاد است. لطفاً چند دقیقه دیگر تلاش کنید یا تماس بگیرید."
+msgstr ""
+
+#: inc/forms.php:55
+msgid "فرم تماس"
+msgstr ""
+
+#: inc/forms.php:90
+msgid "لطفاً فرم را تکمیل کنید."
+msgstr ""
+
+#: inc/forms.php:93
+msgid "شماره تماس معتبر نیست."
+msgstr ""
+
+#: inc/forms.php:108
+msgid "ذخیره درخواست ممکن نشد."
+msgstr ""
+
+#: inc/forms.php:214
+msgid "کد پیگیری:"
+msgstr ""
+
+#: inc/forms.php:216
+msgid "صفحه:"
+msgstr ""
+
+#: inc/forms.php:221
+msgid "مشاهده در پیشخوان"
+msgstr ""
+
+#: header.php:22
+msgid "رفتن به محتوا"
+msgstr ""
+

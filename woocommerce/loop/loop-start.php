@@ -2,7 +2,9 @@
 /**
  * Product loop start.
  *
+ * @see     https://woocommerce.com/document/template-structure/
  * @package Larijani
+ * @version 3.3.0
  */
 
 defined( 'ABSPATH' ) || exit;

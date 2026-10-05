@@ -159,6 +159,10 @@ function ls_auto_setup() {
 	delete_option( 'ls_auto_setup_pending' );
 	$fresh = (bool) get_option( 'fresh_site' );
 	$parts = array( 'pages', 'templates', 'assign', 'menus', 'projects', 'kit' );
+	// Never replace a static front page the owner already chose.
+	if ( $fresh || 'page' !== get_option( 'show_on_front' ) || ! get_post( (int) get_option( 'page_on_front' ) ) ) {
+		$parts[] = 'front';
+	}
 	// Sample articles / products only where they cannot clutter real content.
 	$posts = wp_count_posts( 'post' );
 	if ( $fresh || (int) $posts->publish <= 1 ) {
@@ -169,6 +173,7 @@ function ls_auto_setup() {
 	}
 	if ( $fresh ) {
 		ls_cleanup_fresh_site();
+		$parts[] = 'kit_system'; // Brand-new site: also set Elementor's system colours/fonts.
 	}
 	$report = ls_run_import( $parts );
 	update_option( 'ls_auto_setup_done', time(), false );
@@ -419,6 +424,7 @@ function ls_setup_page() {
 			<?php wp_nonce_field( 'ls_import', 'ls_import_nonce' ); ?>
 			<h2><?php esc_html_e( 'درون‌ریزی دمو', 'larijani' ); ?></h2>
 			<p><label><input type="checkbox" name="ls_parts[]" value="pages" checked> <?php esc_html_e( 'برگه‌ها (اصلی، اصلی کلاسیک، خدمات، نمونه‌کارها، فروشگاه/کاتالوگ، تماس، وبلاگ، نمونه محصول)', 'larijani' ); ?></label></p>
+			<p><label><input type="checkbox" name="ls_parts[]" value="front" checked> <?php esc_html_e( 'تنظیم «صفحه اصلی» و «وبلاگ تخصصی» به‌عنوان صفحه نخست و صفحه نوشته‌ها', 'larijani' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="templates" checked> <?php esc_html_e( 'قالب‌های تم‌بیلدر (هدر، فوتر، تک‌نوشته، آرشیو، محصول، فروشگاه، ۴۰۴)', 'larijani' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="assign" checked> <?php esc_html_e( 'اتصال قالب‌های تم‌بیلدر به سایت (شرط نمایش پرو یا تنظیمات سفارشی‌سازی)', 'larijani' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="menus" checked> <?php esc_html_e( 'منوها (اصلی، موبایل، فوتر)', 'larijani' ); ?></label></p>
@@ -463,7 +469,7 @@ add_action( 'admin_init', 'ls_handle_import' );
  * @param array $parts Parts.
  * @return string Report HTML.
  */
-function ls_run_import( $parts = array( 'pages', 'templates', 'assign', 'menus', 'posts', 'projects', 'products', 'images', 'kit' ) ) {
+function ls_run_import( $parts = array( 'pages', 'front', 'templates', 'assign', 'menus', 'posts', 'projects', 'products', 'images', 'kit' ) ) {
 	if ( function_exists( 'set_time_limit' ) ) {
 		@set_time_limit( 300 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
 	}
@@ -473,7 +479,8 @@ function ls_run_import( $parts = array( 'pages', 'templates', 'assign', 'menus',
 		$log[] = sprintf( /* translators: %d count */ __( '%d تصویر در کتابخانه رسانه کپی شد.', 'larijani' ), ls_import_images() );
 	}
 	if ( in_array( 'kit', $parts, true ) && ls_has_elementor() ) {
-		ls_setup_elementor_kit( true );
+		// Theme colours are synced; Elementor system colours/fonts are replaced only on a brand-new site.
+		ls_setup_elementor_kit( true, in_array( 'kit_system', $parts, true ) );
 		$log[] = __( 'رنگ‌ها و فونت سراسری المنتور تنظیم شد.', 'larijani' );
 	}
 
@@ -504,10 +511,13 @@ function ls_run_import( $parts = array( 'pages', 'templates', 'assign', 'menus',
 		}
 		$blog = get_page_by_path( 'blog' );
 		$pages['blog'] = $blog ? $blog->ID : wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => __( 'وبلاگ تخصصی', 'larijani' ), 'post_name' => 'blog' ) );
-		update_option( 'show_on_front', 'page' );
-		update_option( 'page_on_front', $pages['home'] );
-		update_option( 'page_for_posts', $pages['blog'] );
-		$log[] = sprintf( /* translators: %d count */ __( '%d برگه ساخته/به‌روز شد و صفحه اصلی و وبلاگ تنظیم شدند.', 'larijani' ), count( $pages ) );
+		$log[] = sprintf( /* translators: %d count */ __( '%d برگه ساخته/به‌روز شد.', 'larijani' ), count( $pages ) );
+		if ( in_array( 'front', $parts, true ) ) {
+			update_option( 'show_on_front', 'page' );
+			update_option( 'page_on_front', $pages['home'] );
+			update_option( 'page_for_posts', $pages['blog'] );
+			$log[] = __( 'صفحه اصلی و صفحه نوشته‌ها تنظیم شدند.', 'larijani' );
+		}
 	}
 
 	if ( in_array( 'templates', $parts, true ) && ls_has_elementor() ) {
@@ -738,6 +748,39 @@ function ls_demo_image_id( $key ) {
 }
 
 /**
+ * Find an object created by the theme's setup via its ownership key
+ * (`_ls_demo_key`); falls back to the exact title for content imported by
+ * theme versions before 1.2 and adopts it (stores the key).
+ *
+ * @param string $key   Stable ownership key, e.g. "post:archive_featured".
+ * @param string $title Title (legacy fallback).
+ * @param string $type  Post type.
+ * @return int Post id or 0.
+ */
+function ls_find_demo_object( $key, $title, $type ) {
+	$q = new WP_Query(
+		array(
+			'post_type'              => $type,
+			'post_status'            => 'any',
+			'posts_per_page'         => 1,
+			'fields'                 => 'ids',
+			'no_found_rows'          => true,
+			'meta_key'               => '_ls_demo_key', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			'meta_value'             => $key, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+		)
+	);
+	if ( $q->posts ) {
+		return (int) $q->posts[0];
+	}
+	$id = ls_find_post_by_title( $title, $type );
+	if ( $id && ! get_post_meta( $id, '_ls_demo_key', true ) && get_post_meta( $id, '_ls_demo_image', true ) ) {
+		update_post_meta( $id, '_ls_demo_key', $key ); // Legacy theme-created object.
+		return $id;
+	}
+	return 0;
+}
+
+/**
  * Find a post by exact title (replacement for the deprecated get_page_by_title()).
  *
  * @param string $title Title.
@@ -783,7 +826,7 @@ function ls_import_posts() {
 	$tag_names = array( 'سمنت پلاست', 'رزین پلی‌کربوکسیلات', 'میز ویبره دو موتوره', 'الیاف PP بتن', 'اکسید آهن', 'قالب نشکن ABS', 'نسبت آب به سیمان' );
 	$count     = 0;
 	foreach ( $posts as $i => $p ) {
-		if ( ls_find_post_by_title( $p[0], 'post' ) ) {
+		if ( ls_find_demo_object( 'post:' . $p[2], $p[0], 'post' ) ) {
 			continue;
 		}
 		$cat = term_exists( $p[1], 'category' );
@@ -828,6 +871,7 @@ function ls_import_posts() {
 		}
 		update_post_meta( $id, 'ls_views', wp_rand( 900, 4500 ) );
 		update_post_meta( $id, '_ls_demo_image', $p[2] );
+		update_post_meta( $id, '_ls_demo_key', 'post:' . $p[2] );
 		$att = ls_demo_image_id( $p[2] );
 		if ( $att ) {
 			set_post_thumbnail( $id, $att );
@@ -906,7 +950,7 @@ function ls_import_projects() {
 	);
 	$count = 0;
 	foreach ( ls_demo_projects() as $p ) {
-		if ( ls_find_post_by_title( $p['title'], 'ls_project' ) ) {
+		if ( ls_find_demo_object( 'project:' . $p['image'], $p['title'], 'ls_project' ) ) {
 			continue;
 		}
 		$id = wp_insert_post(
@@ -933,6 +977,7 @@ function ls_import_projects() {
 		}
 		update_post_meta( $id, '_ls_note_icon', 'bi bi-' . $p['note_icon'] );
 		update_post_meta( $id, '_ls_demo_image', $p['image'] );
+		update_post_meta( $id, '_ls_demo_key', 'project:' . $p['image'] );
 		for ( $i = 1; $i <= 3; $i++ ) {
 			update_post_meta( $id, "_ls_spec_{$i}_label", $p[ "spec{$i}_label" ] );
 			update_post_meta( $id, "_ls_spec_{$i}_value", $p[ "spec{$i}_value" ] );
@@ -959,7 +1004,7 @@ function ls_import_products() {
 	);
 	$count = 0;
 	foreach ( ls_demo_catalog() as $i => $p ) {
-		if ( ls_find_post_by_title( $p['title'], 'product' ) ) {
+		if ( ls_find_demo_object( 'product:' . $p['image'], $p['title'], 'product' ) ) {
 			continue;
 		}
 		$term = term_exists( $p['filter'], 'product_cat' );
@@ -995,6 +1040,7 @@ function ls_import_products() {
 			$product->set_image_id( $att );
 		}
 		$product->update_meta_data( '_ls_demo_image', $p['image'] );
+		$product->update_meta_data( '_ls_demo_key', 'product:' . $p['image'] );
 		$product->update_meta_data( '_ls_badge', $p['badge'] );
 		$product->update_meta_data( '_ls_badge_tone', $p['badge_tone'] );
 		$product->update_meta_data( '_ls_price_label', $p['price_label'] );

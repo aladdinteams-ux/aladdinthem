@@ -102,7 +102,7 @@ class LS_Widget_CTA extends LS_Widget_Base {
 		}
 		$sub  = 1 === $n ? $s['btn1_sub'] : '';
 		$icon = ls_icon( $s[ "btn{$n}_icon" ], 'text-lg' );
-		$body = $sub ? '<div class="flex flex-col text-right"><span class="text-xs opacity-80 leading-none">' . esc_html( $sub ) . '</span><span class="font-black mt-1" dir="ltr">' . esc_html( $text ) . '</span></div>' : '<span class="whitespace-nowrap">' . esc_html( $text ) . '</span>';
+		$body = $sub ? '<div class="flex flex-col text-right"><span class="text-xs opacity-80 leading-none">' . esc_html( $sub ) . '</span><span class="font-black mt-1" dir="ltr">' . esc_html( $text ) . '</span></div>' : '<span class="text-center">' . esc_html( $text ) . '</span>';
 		return '<a class="' . esc_attr( $class ) . '" ' . ls_link_attrs( $s[ "btn{$n}_link" ] ) . '>' . $icon . $body . '</a>';
 	}
 
@@ -120,10 +120,10 @@ class LS_Widget_CTA extends LS_Widget_Base {
 			<?php echo ls_form_hidden_fields( $s['form_name'] ); // phpcs:ignore ?>
 			<input type="hidden" name="labels[phone]" value="<?php esc_attr_e( 'شماره تماس', 'larijani' ); ?>"><input type="hidden" name="types[phone]" value="tel">
 			<?php if ( 'inline' === $layout ) : ?>
-			<input class="flex-1 px-4 py-3 sm:py-3.5 rounded-xl bg-white text-gray-900 placeholder:text-gray-400 text-xs sm:text-sm focus:ring-2 focus:ring-primary-container border-0" name="fields[phone]" placeholder="<?php echo esc_attr( $s['form_placeholder'] ); ?>" type="text" required>
+			<input class="flex-1 px-4 py-3 sm:py-3.5 rounded-xl bg-white text-gray-900 placeholder:text-gray-400 text-xs sm:text-sm focus:ring-2 focus:ring-primary-container border-0" name="fields[phone]" placeholder="<?php echo esc_attr( $s['form_placeholder'] ); ?>" aria-label="<?php echo esc_attr( $s['form_placeholder'] ? $s['form_placeholder'] : __( 'شماره تماس', 'larijani' ) ); ?>" type="text" required>
 			<button class="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl bg-primary-container hover:bg-primary text-white font-bold text-xs sm:text-sm shadow-md transition whitespace-nowrap" type="submit"><?php echo esc_html( $s['form_button'] ); ?></button>
 			<?php else : ?>
-			<input class="w-full px-4 py-2.5 rounded-xl bg-white/10 text-white placeholder:text-white/50 font-body-md text-body-md focus:bg-white/15 text-left" dir="ltr" name="fields[phone]" placeholder="<?php echo esc_attr( $s['form_placeholder'] ); ?>" type="tel" required>
+			<input class="w-full px-4 py-2.5 rounded-xl bg-white/10 text-white placeholder:text-white/50 font-body-md text-body-md focus:bg-white/15 text-left" dir="ltr" name="fields[phone]" placeholder="<?php echo esc_attr( $s['form_placeholder'] ); ?>" aria-label="<?php esc_attr_e( 'شماره تماس', 'larijani' ); ?>" type="tel" required>
 			<button class="w-full py-2.5 rounded-xl bg-primary-container text-on-primary font-label-nav text-label-nav hover:bg-primary transition-colors flex items-center justify-center gap-space-xs" type="submit"><span><?php echo esc_html( $s['form_button'] ); ?></span><i class="bi bi-send-fill text-sm" aria-hidden="true"></i></button>
 			<?php endif; ?>
 			<div class="hidden font-body-sm text-body-sm text-accent-emerald text-center w-full" data-ls-success><?php echo esc_html( $s['form_success'] ); ?></div>
@@ -147,12 +147,12 @@ class LS_Widget_CTA extends LS_Widget_Base {
 			$badge_class = 'soft-card' === $v ? 'bg-white text-primary' : ( 'catalog-form' === $v ? 'bg-primary-container text-white rounded-md' : 'bg-white/10 text-secondary-fixed' );
 			$badge       = '<div class="inline-flex w-fit items-center gap-2 px-3 py-1 ' . ( 'catalog-form' === $v ? '' : 'rounded-full ' ) . esc_attr( $badge_class ) . ' font-label-badge text-label-badge mb-3">' . ls_icon( $s['badge_icon'], 'text-accent-emerald' ) . esc_html( $s['badge'] ) . '</div>';
 		}
-		$btn1_cls = 'bg-primary-container hover:bg-primary text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full shadow-lg transition-all flex items-center justify-center gap-2 flex-shrink-0';
+		$btn1_cls = 'bg-primary-container hover:bg-primary text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full shadow-lg transition-all flex items-center justify-center gap-2 max-w-full min-w-0';
 		$btn2_map = array(
-			'glass'   => 'bg-white/10 hover:bg-white/20 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full border border-white/20 transition-all flex items-center justify-center gap-2 flex-shrink-0',
-			'emerald' => 'bg-accent-emerald hover:opacity-90 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full shadow-lg transition-all flex items-center justify-center gap-2 flex-shrink-0',
-			'darker'  => 'bg-surface-footer/80 hover:bg-surface-footer text-white font-label-nav text-label-nav px-6 py-3.5 rounded-full border border-white/10 transition-colors flex items-center justify-center gap-2 flex-shrink-0',
-			'white'   => 'bg-surface-card text-on-surface hover:bg-surface-canvas px-space-md py-3 rounded-full font-label-nav text-label-nav shadow-sm transition-all flex items-center justify-center gap-2 flex-shrink-0',
+			'glass'   => 'bg-white/10 hover:bg-white/20 text-white font-medium text-xs sm:text-sm px-6 py-3.5 rounded-full border border-white/20 transition-all flex items-center justify-center gap-2 max-w-full min-w-0',
+			'emerald' => 'bg-accent-emerald hover:opacity-90 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full shadow-lg transition-all flex items-center justify-center gap-2 max-w-full min-w-0',
+			'darker'  => 'bg-surface-footer/80 hover:bg-surface-footer text-white font-label-nav text-label-nav px-6 py-3.5 rounded-full border border-white/10 transition-colors flex items-center justify-center gap-2 max-w-full min-w-0',
+			'white'   => 'bg-surface-card text-on-surface hover:bg-surface-canvas px-space-md py-3 rounded-full font-label-nav text-label-nav shadow-sm transition-all flex items-center justify-center gap-2 max-w-full min-w-0',
 		);
 		$btn2_cls = $btn2_map[ $s['btn2_style'] ] ?? $btn2_map['glass'];
 

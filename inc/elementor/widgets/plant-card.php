@@ -98,7 +98,7 @@ class LS_Widget_Plant_Card extends LS_Widget_Base {
 			<div class="bg-primary text-on-primary rounded-3xl p-space-lg shadow-md flex items-center gap-space-md">
 				<div class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 text-[32px] text-secondary-fixed"><?php echo ls_icon( $s['dispatch_icon'] ); // phpcs:ignore ?></div>
 				<div class="flex flex-col gap-1">
-					<h4 class="font-headline-sm text-headline-sm text-on-primary"><?php echo esc_html( $s['dispatch_title'] ); ?></h4>
+					<h3 class="font-headline-sm text-headline-sm text-on-primary"><?php echo esc_html( $s['dispatch_title'] ); ?></h3>
 					<p class="font-body-sm text-body-sm text-primary-fixed-dim leading-relaxed"><?php echo esc_html( $s['dispatch_text'] ); ?></p>
 				</div>
 			</div>

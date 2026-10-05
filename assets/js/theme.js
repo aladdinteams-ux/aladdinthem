@@ -41,10 +41,13 @@
 	 * Drawers, search modal.
 	 * ---------------------------------------------------------------- */
 	var openId = null;
-	function openPanel(id) {
+	var lastOpener = null;
+	var FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+	function openPanel(id, opener) {
 		var panel = document.getElementById(id);
 		if (!panel) { return; }
-		closePanel();
+		closePanel(true);
+		lastOpener = opener || document.activeElement;
 		panel.setAttribute('data-open', 'true');
 		$all(document, '[data-ls-backdrop="' + id + '"]').forEach(function (b) { b.setAttribute('data-open', 'true'); });
 		$all(document, '[data-ls-open="' + id + '"]').forEach(function (b) { b.setAttribute('aria-expanded', 'true'); });
@@ -53,7 +56,7 @@
 		var focus = panel.querySelector('[data-ls-autofocus]') || panel.querySelector('a, button, input');
 		if (focus) { setTimeout(function () { focus.focus(); }, 250); }
 	}
-	function closePanel() {
+	function closePanel(silent) {
 		if (!openId) { return; }
 		var panel = document.getElementById(openId);
 		if (panel) { panel.setAttribute('data-open', 'false'); }
@@ -61,10 +64,13 @@
 		$all(document, '[data-ls-open="' + openId + '"]').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
 		document.body.classList.remove('ls-no-scroll');
 		openId = null;
+		// Return focus to the control that opened the panel (WCAG 2.4.3).
+		if (!silent && lastOpener && typeof lastOpener.focus === 'function' && document.contains(lastOpener)) { lastOpener.focus(); }
+		lastOpener = null;
 	}
 	document.addEventListener('click', function (e) {
 		var opener = e.target.closest('[data-ls-open]');
-		if (opener) { e.preventDefault(); openPanel(opener.getAttribute('data-ls-open')); return; }
+		if (opener) { e.preventDefault(); openPanel(opener.getAttribute('data-ls-open'), opener); return; }
 		if (e.target.closest('[data-ls-close]') && openId) {
 			closePanel();
 			return;
@@ -72,7 +78,18 @@
 		if (e.target.closest('[data-ls-backdrop]')) { closePanel(); }
 	});
 	document.addEventListener('keydown', function (e) {
-		if (e.key === 'Escape') { closePanel(); }
+		if (e.key === 'Escape') { closePanel(); return; }
+		// Keep keyboard focus inside an open drawer / dialog.
+		if (e.key === 'Tab' && openId) {
+			var panel = document.getElementById(openId);
+			if (!panel) { return; }
+			var items = $all(panel, FOCUSABLE).filter(function (el) { return el.offsetWidth || el.offsetHeight || el.getClientRects().length; });
+			if (!items.length) { return; }
+			var first = items[0], last = items[items.length - 1];
+			if (!panel.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+			else if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+			else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+		}
 	});
 
 	/* ------------------------------------------------------------------
@@ -269,8 +286,9 @@
 			var hidden = form.querySelector('[data-ls-tab-input]');
 			$all(form, '[data-ls-search-tab]').forEach(function (b) {
 				b.addEventListener('click', function () {
-					$all(form, '[data-ls-search-tab]').forEach(function (x) { swapClasses(x, false); });
+					$all(form, '[data-ls-search-tab]').forEach(function (x) { swapClasses(x, false); x.setAttribute('aria-pressed', 'false'); });
 					swapClasses(b, true);
+					b.setAttribute('aria-pressed', 'true');
 					if (hidden) { hidden.value = b.getAttribute('data-ls-search-tab'); }
 				});
 			});
@@ -465,12 +483,19 @@
 	}
 
 	// Elementor: re-run for widgets rendered/re-rendered in the editor or loaded later.
-	window.addEventListener('elementor/frontend/init', function () {
-		if (!window.elementorFrontend || !window.elementorFrontend.hooks) { return; }
+	// Elementor triggers "elementor/frontend/init" through jQuery (and natively in newer versions);
+	// listen to both and also hook immediately if Elementor is already initialised.
+	var elementorHooked = false;
+	function hookElementor() {
+		if (elementorHooked || !window.elementorFrontend || !window.elementorFrontend.hooks) { return; }
+		elementorHooked = true;
 		window.elementorFrontend.hooks.addAction('frontend/element_ready/global', function ($scope) {
 			init($scope && $scope[0] ? $scope[0] : document);
 		});
-	});
+	}
+	window.addEventListener('elementor/frontend/init', hookElementor);
+	if (window.jQuery) { window.jQuery(window).on('elementor/frontend/init', hookElementor); }
+	hookElementor();
 
 	window.LarijaniThemeInit = init;
 })();

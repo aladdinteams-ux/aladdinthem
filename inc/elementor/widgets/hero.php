@@ -113,9 +113,9 @@ class LS_Widget_Hero extends LS_Widget_Base {
 						<form class="w-full bg-white rounded-2xl p-4 sm:p-5 border border-border-subtle card-shadow relative z-10" method="get" action="<?php echo esc_url( $action ); ?>" data-ls-hero-search>
 							<?php if ( $s['tabs'] ) : ?>
 							<input type="hidden" name="<?php echo esc_attr( $s['tab_param'] ? $s['tab_param'] : 'tab' ); ?>" value="<?php echo esc_attr( $s['tabs'][0]['value'] ); ?>" data-ls-tab-input>
-							<div class="flex items-center gap-2 mb-4 border-b border-slate-100 pb-3 overflow-x-auto custom-scroll -mx-2 px-2" role="tablist">
+							<div class="flex items-center gap-2 mb-4 border-b border-slate-100 pb-3 overflow-x-auto custom-scroll -mx-2 px-2" role="group" aria-label="<?php esc_attr_e( 'نوع جستجو', 'larijani' ); ?>">
 								<?php foreach ( $s['tabs'] as $i => $tab ) : ?>
-								<button class="flex-shrink-0 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm <?php echo 0 === $i ? 'font-bold bg-primary-container text-white' : 'font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200'; ?> transition-colors" type="button" data-ls-search-tab="<?php echo esc_attr( $tab['value'] ); ?>" data-on="font-bold bg-primary-container text-white" data-off="font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200"><?php echo esc_html( $tab['title'] ); ?></button>
+								<button class="flex-shrink-0 px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm <?php echo 0 === $i ? 'font-bold bg-primary-container text-white' : 'font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200'; ?> transition-colors" type="button" aria-pressed="<?php echo 0 === $i ? 'true' : 'false'; ?>" data-ls-search-tab="<?php echo esc_attr( $tab['value'] ); ?>" data-on="font-bold bg-primary-container text-white" data-off="font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200"><?php echo esc_html( $tab['title'] ); ?></button>
 								<?php endforeach; ?>
 							</div>
 							<?php endif; ?>

@@ -90,7 +90,7 @@ class LS_Widget_Testimonials extends LS_Widget_Base {
 						<?php endif; ?>
 					</div>
 				</div>
-				<div class="<?php echo $slider ? 'flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-5 sm:gap-6 [&>*]:snap-start [&>*]:shrink-0 [&>*]:w-[85%] sm:[&>*]:w-[48%] lg:[&>*]:w-[31.5%]' : 'grid ' . ls_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) . ' gap-5 sm:gap-6'; ?>" data-ls-track>
+				<div class="<?php echo esc_attr( $slider ? 'flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-5 sm:gap-6 [&>*]:snap-start [&>*]:shrink-0 [&>*]:w-[85%] sm:[&>*]:w-[48%] lg:[&>*]:w-[31.5%]' : 'grid ' . ls_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) . ' gap-5 sm:gap-6' ); ?>" data-ls-track>
 					<?php foreach ( $s['items'] as $it ) : ?>
 					<?php if ( 'classic' === ( $s['card_style'] ?? '' ) ) : ?>
 					<div class="bg-white p-5 sm:p-6 rounded-2xl border border-gray-200/90 shadow-sm flex flex-col justify-between">
@@ -106,7 +106,7 @@ class LS_Widget_Testimonials extends LS_Widget_Base {
 								<div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-xs text-slate-700"><?php echo esc_html( ls_initials( $it['name'] ) ); ?></div>
 								<?php endif; ?>
 								<div>
-									<h4 class="font-bold text-gray-900 text-xs sm:text-sm"><?php echo esc_html( $it['name'] ); ?></h4>
+									<p class="font-bold text-gray-900 text-xs sm:text-sm"><?php echo esc_html( $it['name'] ); ?></p>
 									<p class="text-[10px] sm:text-[11px] text-gray-500"><?php echo esc_html( $it['role'] ); ?></p>
 								</div>
 							</div>
@@ -129,7 +129,7 @@ class LS_Widget_Testimonials extends LS_Widget_Base {
 							<div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-xs text-slate-700"><?php echo esc_html( ls_initials( $it['name'] ) ); ?></div>
 							<?php endif; ?>
 							<div>
-								<h4 class="text-xs font-black text-surface-dark"><?php echo esc_html( $it['name'] ); ?></h4>
+								<p class="text-xs font-black text-surface-dark"><?php echo esc_html( $it['name'] ); ?></p>
 								<div class="text-[11px] text-slate-500"><?php echo esc_html( $it['role'] ); ?></div>
 							</div>
 						</div>

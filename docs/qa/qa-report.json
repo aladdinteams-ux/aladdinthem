@@ -1,0 +1,105 @@
+{
+  "project": "Larijani Stone WordPress theme",
+  "version": "1.2.0",
+  "date": "2026-10-05",
+  "spec": "wordpress-elementor-theme-builder v0.6.1 — master audit & repair",
+  "status_vocabulary": ["PASS", "WARN", "FAIL", "UNKNOWN", "NOT EXECUTED"],
+  "environments": [
+    { "id": "A", "wordpress": "6.5.5", "php": "8.3.6", "db": "SQLite", "elementor": "API shim (not the real plugin)", "woocommerce": null },
+    { "id": "B", "wordpress": "7.1.2", "php": "8.3.6", "db": "SQLite", "elementor": "API shim", "woocommerce": "11.1.2 (HPOS, Cart/Checkout blocks)" },
+    { "id": "C", "wordpress": "7.1.2 (fresh install)", "php": "8.3.6", "db": "SQLite", "elementor": "API shim", "woocommerce": "11.1.2" }
+  ],
+  "overall_status": "WARN",
+  "release_ready": false,
+  "release_ready_reason": "No open FAIL or fixable Critical issue, but the real Elementor / Elementor Pro editor integration is NOT EXECUTED (plugins not downloadable in the build environment). Release candidate for staging verification.",
+  "critical_issues": {
+    "found": 10,
+    "fixed": 10,
+    "items": [
+      { "id": "C1", "severity": "critical", "title": "Fatal error: Widgets_Manager::register() expects Widget_Base", "status": "PASS", "evidence": "strict shim reproduction: before fatal, after HTTP 200" },
+      { "id": "C2", "severity": "critical", "title": "FAQ JSON-LD script break-out", "status": "PASS", "evidence": "JSON_HEX_* encoding; JSON-LD parsed on services/contact" },
+      { "id": "C3", "severity": "critical", "title": "Predictable public lead attachment URLs", "status": "PASS", "evidence": "code review" },
+      { "id": "C4", "severity": "high", "title": "Lead PII visible to contributors", "status": "PASS", "evidence": "capability mapping review" },
+      { "id": "C5", "severity": "critical", "title": "RTL block checkout 20334px horizontal overflow", "status": "PASS", "evidence": "woocommerce 25/25" },
+      { "id": "C6", "severity": "high", "title": "Destructive re-run of setup (front page, Elementor kit), title-only matching", "status": "PASS", "evidence": "fresh install env C + ownership keys + migration" },
+      { "id": "C7", "severity": "high", "title": "body overflow-x:hidden masking", "status": "PASS", "evidence": "removed; 475 matrix checks with 0 overflow" },
+      { "id": "H1", "severity": "high", "title": "Missing WooCommerce Product/Offer JSON-LD", "status": "PASS", "evidence": "JSON-LD parsed on env B, no aggregateRating/review without real reviews" },
+      { "id": "H2", "severity": "high", "title": "html lang en-US with Persian content", "status": "PASS", "evidence": "lang=fa-IR on all routes" },
+      { "id": "H3", "severity": "medium", "title": "Contrast, heading skips, tablist semantics, missing meta description", "status": "PASS", "evidence": "Lighthouse a11y 100, SEO 100 on 10 runs" }
+    ]
+  },
+  "remaining_fail": [],
+  "warn": [
+    "No companion plugin (single theme by owner requirement)",
+    "Not native-first: pages built from 45 custom ls-* widgets",
+    "Mobile lab LCP 3.7–4.2 s on uncompressed dev server; Bootstrap Icons full set loaded globally",
+    "7 placeholder PDF download links (#) until owner uploads files",
+    "Shared fallback meta description on builder pages until excerpts are written; archive canonicals need an SEO plugin",
+    "Demo testimonials/ratings/prices are sample content (not in schema) — replace before launch",
+    "Demo images hot-linked from lh3.googleusercontent.com if import fails",
+    "Public lead AJAX without nonce (by design: honeypot + time trap + rate limit)",
+    "Target-size exceptions for inline links/checkboxes",
+    "WooCommerce currency IRT is not ISO 4217 (store setting)",
+    "Visual fidelity: darker text tokens for AA contrast, unified footer, global menu"
+  ],
+  "unknown_or_not_executed": [
+    "Real Elementor editor (NOT EXECUTED)",
+    "Elementor Pro Theme Builder conditions (NOT EXECUTED)",
+    "Elementor 4 atomic editor (UNKNOWN)",
+    "PHP 7.4 runtime (UNKNOWN; static compatibility PASS)",
+    "MySQL/MariaDB (UNKNOWN)",
+    "Multisite (NOT EXECUTED)",
+    "Safari/Firefox/real devices (NOT EXECUTED)",
+    "Screen readers, 400% zoom (NOT EXECUTED)",
+    "Field Core Web Vitals / CrUX (NOT EXECUTED)",
+    "Yoast/Rank Math runtime interop (NOT EXECUTED)",
+    ".mo compilation (NOT EXECUTED)",
+    "External penetration test (NOT EXECUTED)"
+  ],
+  "runtime_tests": {
+    "responsive_matrix_checks": { "final": 285, "regression": 133, "last": 57, "overflow": 0, "widths": [320, 360, 375, 390, 430, 640, 767, 768, 820, 1023, 1024, 1025, 1280, 1440, 1920], "routes": 19 },
+    "clipping_runs": 3,
+    "interaction_checks": { "count": 21, "pass": 21 },
+    "woocommerce_checks": { "count": 25, "pass": 25 },
+    "lighthouse_runs": 20,
+    "accessibility_detail_routes": 17,
+    "fresh_install_auto_setup": "PASS (7 templates, 8 products, 7 posts, 6 projects, 5 menus, static front page, ls_db_version 1.2.0)",
+    "internal_link_crawl": { "links": 149, "broken": 0 },
+    "theme_php_notices_in_debug_logs": 0
+  },
+  "lighthouse_after_fixes": {
+    "accessibility": "100 (10/10 runs)",
+    "seo": "100 (10/10 runs)",
+    "performance_desktop": "98–100",
+    "performance_mobile": "78–84",
+    "cls_max": 0.001,
+    "tbt_max_ms": 0,
+    "data_type": "lab"
+  },
+  "statuses": {
+    "responsive": "PASS",
+    "elementor": "NOT EXECUTED",
+    "woocommerce": "PASS",
+    "security": "PASS",
+    "technical_seo": "PASS (WARN items)",
+    "schema": "PASS",
+    "geo_aio": "PASS (technical) / UNKNOWN (outcomes)",
+    "accessibility": "PASS (automated) / WARN",
+    "performance": "WARN",
+    "visual_fidelity": "WARN"
+  },
+  "reports": [
+    "docs/qa/QA-REPORT.md",
+    "docs/qa/qa-report.json",
+    "docs/qa/RESPONSIVE-QA-REPORT.md",
+    "docs/qa/SEO-TECHNICAL-REPORT.md",
+    "docs/qa/SCHEMA-ENTITY-MAP.md",
+    "docs/qa/AI-SEARCH-READINESS.md",
+    "docs/qa/PAGESPEED-PERFORMANCE-REPORT.md",
+    "docs/qa/SECURITY-AUDIT.md",
+    "docs/qa/ACCESSIBILITY-AUDIT.md",
+    "docs/COMPATIBILITY.md",
+    "CHANGELOG.md",
+    "release/release-manifest.json"
+  ]
+}

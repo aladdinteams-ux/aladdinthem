@@ -62,7 +62,15 @@ function ls_register_post_types() {
 			'menu_position'   => 22,
 			'supports'        => array( 'title' ),
 			'capability_type' => 'post',
-			'capabilities'    => array( 'create_posts' => 'do_not_allow' ),
+			// Leads contain personal data: editors and administrators only.
+			'capabilities'    => array(
+				'create_posts'       => 'do_not_allow',
+				'edit_posts'         => 'edit_others_posts',
+				'edit_others_posts'  => 'edit_others_posts',
+				'edit_private_posts' => 'edit_others_posts',
+				'read_private_posts' => 'edit_others_posts',
+				'delete_posts'       => 'edit_others_posts',
+			),
 			'map_meta_cap'    => true,
 		)
 	);

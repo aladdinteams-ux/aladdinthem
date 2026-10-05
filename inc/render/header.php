@@ -155,7 +155,7 @@ function ls_render_site_header( $s = array() ) {
 					</a>
 				</div>
 
-				<nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-[14px] xl:text-[14.5px] font-medium text-slate-600" aria-label="<?php esc_attr_e( 'منوی اصلی', 'larijani' ); ?>">
+				<nav class="hidden lg:flex flex-1 min-w-0 flex-wrap items-center justify-center gap-x-5 xl:gap-x-8 gap-y-1 text-[14px] xl:text-[14.5px] font-medium text-slate-600" aria-label="<?php esc_attr_e( 'منوی اصلی', 'larijani' ); ?>">
 					<?php foreach ( $nav as $item ) : ?>
 						<?php if ( $item['children'] ) : ?>
 						<div class="relative group py-2">
@@ -191,8 +191,8 @@ function ls_render_site_header( $s = array() ) {
 					<?php elseif ( $s['cta_text'] ) : ?>
 					<a class="hidden sm:inline-flex items-center gap-2 bg-primary-container hover:bg-primary text-white text-[12.5px] lg:text-[13.5px] font-bold px-4 lg:px-5 py-2 sm:py-2.5 rounded-full shadow-sm shadow-primary-container/20 transition-all flex-shrink-0" <?php echo $cta_attrs; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 						<i class="bi bi-telephone-outbound text-[14px]" aria-hidden="true"></i>
-						<span class="hidden md:inline"><?php echo esc_html( $s['cta_text'] ); ?></span>
-						<span class="inline md:hidden"><?php echo esc_html( $s['cta_short'] ? $s['cta_short'] : $s['cta_text'] ); ?></span>
+						<span class="hidden md:inline lg:hidden xl:inline"><?php echo esc_html( $s['cta_text'] ); ?></span>
+						<span class="inline md:hidden lg:inline xl:hidden"><?php echo esc_html( $s['cta_short'] ? $s['cta_short'] : $s['cta_text'] ); ?></span>
 					</a>
 					<?php endif; ?>
 					<?php if ( $phone ) : ?>
@@ -209,7 +209,7 @@ function ls_render_site_header( $s = array() ) {
 
 		<!-- Mobile drawer -->
 		<div aria-hidden="true" class="ls-backdrop fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none" data-ls-backdrop="<?php echo esc_attr( $uid ); ?>-drawer"></div>
-		<aside id="<?php echo esc_attr( $uid ); ?>-drawer" aria-label="<?php esc_attr_e( 'منوی موبایل', 'larijani' ); ?>" class="ls-drawer fixed top-0 right-0 bottom-0 w-[84%] max-w-sm bg-white z-50 shadow-2xl flex flex-col justify-between transform transition-transform duration-300 ease-in-out border-l border-slate-200 translate-x-full" data-ls-drawer>
+		<div id="<?php echo esc_attr( $uid ); ?>-drawer" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e( 'منوی موبایل', 'larijani' ); ?>" class="ls-drawer fixed top-0 right-0 bottom-0 w-[84%] max-w-sm bg-white z-50 shadow-2xl flex flex-col justify-between transform transition-transform duration-300 ease-in-out border-l border-slate-200 translate-x-full" data-ls-drawer>
 			<div class="p-5 border-b border-slate-100 flex items-center justify-between bg-surface-canvas">
 				<div class="flex items-center gap-2.5">
 					<div class="w-10 h-10 rounded-xl bg-white p-1 border border-slate-200 shadow-sm flex items-center justify-center">
@@ -226,7 +226,7 @@ function ls_render_site_header( $s = array() ) {
 			</div>
 			<div class="flex-1 overflow-y-auto p-5 space-y-6">
 				<div>
-					<span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2 px-2"><?php echo esc_html( $s['drawer_main'] ); ?></span>
+					<span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-2 px-2"><?php echo esc_html( $s['drawer_main'] ); ?></span>
 					<nav class="flex flex-col space-y-1">
 						<?php foreach ( $nav as $item ) : ?>
 						<a class="flex items-center justify-between px-3 py-2.5 rounded-xl <?php echo $item['active'] ? 'font-bold text-surface-dark bg-slate-100/70' : 'font-medium text-slate-700 hover:bg-slate-50 hover:text-primary-container'; ?> transition-colors" href="<?php echo esc_url( $item['url'] ); ?>" data-ls-close>
@@ -243,7 +243,7 @@ function ls_render_site_header( $s = array() ) {
 				</div>
 				<?php if ( $cats ) : ?>
 				<div class="border-t border-slate-100 pt-4">
-					<span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2 px-2"><?php echo esc_html( $s['drawer_cats'] ); ?></span>
+					<span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-2 px-2"><?php echo esc_html( $s['drawer_cats'] ); ?></span>
 					<div class="grid grid-cols-2 gap-2 text-xs">
 						<?php foreach ( $cats as $cat ) : ?>
 						<a class="p-2.5 rounded-xl bg-surface-canvas text-slate-700 hover:text-primary-container border border-slate-100 font-medium text-center" href="<?php echo esc_url( $cat['url'] ); ?>" data-ls-close><?php echo esc_html( $cat['title'] ); ?></a>
@@ -273,7 +273,7 @@ function ls_render_site_header( $s = array() ) {
 				</a>
 				<?php endif; ?>
 			</div>
-		</aside>
+		</div>
 
 		<?php if ( 'yes' === $s['show_search'] ) : ?>
 		<!-- Search modal -->

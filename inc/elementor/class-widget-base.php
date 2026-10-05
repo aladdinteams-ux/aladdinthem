@@ -461,7 +461,26 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 	 * @return string
 	 */
 	protected function heading( $s, $extra = array() ) {
+		// Never print a dead "#" link: fall back to the widget's natural destination.
+		$url = is_array( $s['heading_link'] ?? null ) ? ( $s['heading_link']['url'] ?? '' ) : (string) ( $s['heading_link'] ?? '' );
+		if ( ( '' === $url || '#' === $url ) && ! empty( $s['heading_link_text'] ) ) {
+			$fallback = $this->heading_fallback_url();
+			if ( $fallback ) {
+				$s['heading_link'] = array( 'url' => $fallback );
+			} else {
+				$s['heading_link_text'] = '';
+			}
+		}
 		return ls_section_heading( ls_heading_from_settings( $s, $extra ) );
+	}
+
+	/**
+	 * Destination used when the section-heading link was left empty.
+	 *
+	 * @return string
+	 */
+	protected function heading_fallback_url() {
+		return '';
 	}
 
 	/**

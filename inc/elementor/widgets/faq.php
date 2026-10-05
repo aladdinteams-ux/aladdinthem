@@ -109,7 +109,9 @@ class LS_Widget_FAQ extends LS_Widget_Base {
 			</div>
 		</section>
 		<?php
-		if ( $this->on( $s, 'schema' ) && $s['items'] ) {
+		static $printed = false; // One FAQPage node per URL.
+		if ( $this->on( $s, 'schema' ) && $s['items'] && ! $printed && ls_theme_schema_enabled( 'faq' ) && ! ls_is_elementor_editor() ) {
+			$printed = true;
 			$schema = array(
 				'@context'   => 'https://schema.org',
 				'@type'      => 'FAQPage',
@@ -122,7 +124,7 @@ class LS_Widget_FAQ extends LS_Widget_Base {
 					'acceptedAnswer' => array( '@type' => 'Answer', 'text' => wp_strip_all_tags( $it['answer'] ) ),
 				);
 			}
-			echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) . '</script>';
+			ls_print_json_ld( $schema );
 		}
 	}
 }

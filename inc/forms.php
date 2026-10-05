@@ -62,6 +62,7 @@ function ls_handle_lead() {
 	$rows  = array();
 	$phone = '';
 	$name  = '';
+	$raw   = array_slice( $raw, 0, (int) apply_filters( 'ls_lead_max_fields', 40 ), true ); // Bound the payload.
 	foreach ( $raw as $k => $value ) {
 		$k     = sanitize_key( $k );
 		$label = isset( $labels[ $k ] ) ? sanitize_text_field( $labels[ $k ] ) : $k;
@@ -134,7 +135,7 @@ add_action( 'wp_ajax_nopriv_ls_lead', 'ls_handle_lead' );
  * @return int[] Attachment ids.
  */
 function ls_handle_lead_files( $lead_id ) {
-	if ( empty( $_FILES['ls_files'] ) || ! is_array( $_FILES['ls_files']['name'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+	if ( empty( $_FILES['ls_files']['name'] ) || ! is_array( $_FILES['ls_files']['name'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 		return array();
 	}
 	require_once ABSPATH . 'wp-admin/includes/file.php';
@@ -151,7 +152,8 @@ function ls_handle_lead_files( $lead_id ) {
 			continue;
 		}
 		$file = array(
-			'name'     => wp_unique_filename( wp_upload_dir()['path'], 'lead-' . $lead_id . '-' . sanitize_file_name( $files['name'][ $i ] ) ),
+			// Unguessable name: lead attachments are customer documents.
+			'name'     => wp_unique_filename( wp_upload_dir()['path'], 'lead-' . strtolower( wp_generate_password( 16, false ) ) . '-' . sanitize_file_name( $files['name'][ $i ] ) ),
 			'type'     => $files['type'][ $i ],
 			'tmp_name' => $files['tmp_name'][ $i ],
 			'error'    => $files['error'][ $i ],

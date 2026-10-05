@@ -3,7 +3,9 @@
  * Single product in the Larijani design.
  * Elementor Pro "Single Product" templates or the free theme builder override it.
  *
+ * @see     https://woocommerce.com/document/template-structure/
  * @package Larijani
+ * @version 1.6.4
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,6 +35,7 @@ while ( have_posts() ) :
 		<section class="w-full py-space-md lg:py-space-xl">
 			<div class="max-w-7xl mx-auto px-4 sm:px-gutter"><?php ls_render_product_detail( ls_wc_detail_data( $product ) ); ?></div>
 		</section>
+
 		<section class="w-full py-space-xl bg-surface-card shadow-sm">
 			<div class="max-w-7xl mx-auto px-4 sm:px-gutter">
 				<?php

@@ -24,15 +24,15 @@ function ls_asset_ver( $rel ) {
 function ls_register_assets() {
 	wp_register_style( 'larijani-bootstrap-icons', LS_URI . '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css', array(), '1.11.3' );
 	wp_register_style( 'larijani-tailwind', LS_URI . '/assets/css/tailwind.css', array( 'larijani-bootstrap-icons' ), ls_asset_ver( 'assets/css/tailwind.css' ) );
-	wp_register_style( 'larijani-style', get_stylesheet_uri(), array( 'larijani-tailwind' ), LS_VERSION );
+	wp_register_style( 'larijani-style', LS_URI . '/style.css', array( 'larijani-tailwind' ), LS_VERSION );
 
-	wp_register_script( 'larijani-theme', LS_URI . '/assets/js/theme.js', array(), ls_asset_ver( 'assets/js/theme.js' ), true );
+	$js = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) || ! file_exists( LS_DIR . '/assets/js/theme.min.js' ) ? 'assets/js/theme.js' : 'assets/js/theme.min.js';
+	wp_register_script( 'larijani-theme', LS_URI . '/' . $js, array(), ls_asset_ver( $js ), array( 'in_footer' => true, 'strategy' => 'defer' ) );
 	wp_localize_script(
 		'larijani-theme',
 		'LarijaniTheme',
 		array(
 			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
-			'nonce'   => wp_create_nonce( 'ls_lead' ),
 			'i18n'    => array(
 				'sending'  => __( 'در حال ارسال…', 'larijani' ),
 				'error'    => __( 'خطایی رخ داد. لطفاً دوباره تلاش کنید یا تماس بگیرید.', 'larijani' ),
@@ -89,3 +89,21 @@ function ls_block_editor_assets() {
 	wp_enqueue_style( 'larijani-bootstrap-icons', LS_URI . '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css', array(), '1.11.3' );
 }
 add_action( 'enqueue_block_editor_assets', 'ls_block_editor_assets' );
+
+/**
+ * Pages composed with Elementor (or the theme's fallback renderer) contain no
+ * blocks: skip the block-library / classic-theme block styles there.
+ */
+function ls_dequeue_unused_block_styles() {
+	if ( ! is_singular() || ! apply_filters( 'ls_dequeue_block_styles', true ) ) {
+		return;
+	}
+	$id = get_queried_object_id();
+	if ( 'builder' !== get_post_meta( $id, '_elementor_edit_mode', true ) || has_blocks( get_post_field( 'post_content', $id ) ) ) {
+		return;
+	}
+	foreach ( array( 'wp-block-library', 'wp-block-library-theme', 'classic-theme-styles', 'global-styles' ) as $handle ) {
+		wp_dequeue_style( $handle );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'ls_dequeue_unused_block_styles', 100 );

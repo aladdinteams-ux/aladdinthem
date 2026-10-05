@@ -3,7 +3,9 @@
  * Shop / product category archive in the Larijani design.
  * Elementor Pro "Product Archive" templates or the free theme builder override it.
  *
+ * @see     https://woocommerce.com/document/template-structure/
  * @package Larijani
+ * @version 8.6.0
  */
 
 defined( 'ABSPATH' ) || exit;

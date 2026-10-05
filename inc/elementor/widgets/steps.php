@@ -119,7 +119,7 @@ class LS_Widget_Steps extends LS_Widget_Base {
 						<div class="w-full sm:w-44 h-36 rounded-xl overflow-hidden shrink-0"><?php echo ls_img( $g['image'], 'w-full h-full object-cover', $g['title'], 'ls-card' ); // phpcs:ignore ?></div>
 						<div class="flex flex-col gap-1">
 							<span class="font-label-badge text-label-badge text-outline"><?php echo esc_html( $g['eyebrow'] ); ?></span>
-							<h4 class="font-headline-sm text-headline-sm text-surface-dark"><?php echo esc_html( $g['title'] ); ?></h4>
+							<h3 class="font-headline-sm text-headline-sm text-surface-dark"><?php echo esc_html( $g['title'] ); ?></h3>
 							<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><?php echo esc_html( $g['desc'] ); ?></p>
 						</div>
 					</div>

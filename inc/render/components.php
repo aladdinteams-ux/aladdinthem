@@ -141,8 +141,9 @@ function ls_product_card_defaults() {
 function ls_product_card( $p, $style = 'classic' ) {
 	$p    = wp_parse_args( $p, ls_product_card_defaults() );
 	$img  = ls_img( $p['image'], 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', $p['image_alt'] ? $p['image_alt'] : wp_strip_all_tags( $p['title'] ), 'ls-card' );
-	$url  = $p['url'] ? $p['url'] : '#';
-	$burl = $p['button_url'] ? $p['button_url'] : $url;
+	// Manual cards without a link point to the sample product page (or the shop), never to "#".
+	$url  = ( $p['url'] && '#' !== $p['url'] ) ? $p['url'] : ls_page_url( 'product-sample', ls_page_url( 'shop', home_url( '/' ) ) );
+	$burl = ( $p['button_url'] && '#' !== $p['button_url'] ) ? $p['button_url'] : $url;
 	$price = $p['price_html'] ? $p['price_html'] : esc_html( $p['price'] );
 	$data = ' data-category="' . esc_attr( $p['filter'] ) . '" data-price="' . esc_attr( (float) $p['price_raw'] ) . '" data-title="' . esc_attr( wp_strip_all_tags( $p['title'] ) ) . '"';
 
@@ -222,7 +223,7 @@ function ls_product_card( $p, $style = 'classic' ) {
 						<span class="text-sm sm:text-base font-black text-primary-container"><?php echo $price; // phpcs:ignore ?> <?php if ( $p['currency'] && ! $p['price_html'] && '' !== $p['price'] ) : ?><span class="text-[10px] sm:text-[11px] font-normal text-gray-500"><?php echo esc_html( $p['currency'] ); ?></span><?php endif; ?></span>
 					</div>
 					<?php if ( $p['button_text'] ) : ?>
-					<a class="px-3.5 py-1.5 rounded-lg bg-[#F4F6F3] text-primary-container font-semibold text-xs hover:bg-primary-container hover:text-white transition whitespace-nowrap <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>><?php echo esc_html( $p['button_text'] ); ?></a>
+					<a class="px-3.5 py-1.5 rounded-lg bg-[#F4F6F3] text-primary-container font-semibold text-xs hover:bg-primary-container hover:text-white transition text-center max-w-[60%] <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>><?php echo esc_html( $p['button_text'] ); ?></a>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -270,7 +271,7 @@ function ls_product_card( $p, $style = 'classic' ) {
 						<a class="w-10 h-10 rounded-full bg-surface-canvas hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" href="<?php echo esc_url( $p['chat_url'] ? $p['chat_url'] : ls_whatsapp_url( '', wp_strip_all_tags( $p['title'] ) ) ); ?>" target="_blank" rel="noopener" title="<?php esc_attr_e( 'استعلام تیراژ', 'larijani' ); ?>"><i class="bi bi-chat-dots-fill" aria-hidden="true"></i></a>
 						<?php endif; ?>
 						<?php if ( $p['button_text'] ) : ?>
-						<a class="px-space-md py-2 rounded-full <?php echo 'dark' === $p['button_style'] ? 'bg-surface-dark hover:bg-on-surface text-surface-bright' : 'bg-primary-container hover:bg-primary text-on-primary'; ?> text-body-sm font-label-nav flex items-center gap-1 shadow-sm transition-colors whitespace-nowrap <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>>
+						<a class="px-space-md py-2 rounded-full <?php echo 'dark' === $p['button_style'] ? 'bg-surface-dark hover:bg-on-surface text-surface-bright' : 'bg-primary-container hover:bg-primary text-on-primary'; ?> text-body-sm font-label-nav flex items-center gap-1 shadow-sm transition-colors text-center min-w-0 <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>>
 							<?php echo ls_icon( $p['button_icon'] ); // phpcs:ignore ?><span><?php echo esc_html( $p['button_text'] ); ?></span>
 						</a>
 						<?php endif; ?>
@@ -289,7 +290,7 @@ function ls_product_card( $p, $style = 'classic' ) {
 					<span class="absolute top-2 right-2 px-2.5 py-1 rounded-full bg-surface-card/90 font-label-badge text-label-badge text-on-surface font-bold backdrop-blur-sm"><?php echo esc_html( $p['badge'] ); ?></span>
 					<?php endif; ?>
 				</a>
-				<h4 class="font-title-card text-title-card text-on-surface font-black group-hover:text-primary-container transition-colors"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $p['title'] ); ?></a></h4>
+				<h3 class="font-title-card text-title-card text-on-surface font-black group-hover:text-primary-container transition-colors"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $p['title'] ); ?></a></h3>
 				<?php if ( $p['desc'] ) : ?>
 				<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"><?php echo esc_html( $p['desc'] ); ?></p>
 				<?php endif; ?>
@@ -316,7 +317,7 @@ function ls_product_card( $p, $style = 'classic' ) {
 			</a>
 			<div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
 				<div>
-					<?php if ( $p['category'] ) : ?><span class="text-[11px] font-bold text-slate-400"><?php echo esc_html( $p['category'] ); ?></span><?php endif; ?>
+					<?php if ( $p['category'] ) : ?><span class="text-[11px] font-bold text-slate-500"><?php echo esc_html( $p['category'] ); ?></span><?php endif; ?>
 					<h3 class="text-sm sm:text-base font-black text-surface-dark mt-1 group-hover:text-primary-container transition-colors"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $p['title'] ); ?></a></h3>
 					<?php if ( $p['subtitle'] ) : ?>
 					<p class="text-xs text-slate-500 mt-1.5 flex items-center gap-1.5"><?php echo ls_icon( $p['subtitle_icon'], 'text-primary-container' ); // phpcs:ignore ?><span class="truncate"><?php echo esc_html( $p['subtitle'] ); ?></span></p>
@@ -331,8 +332,8 @@ function ls_product_card( $p, $style = 'classic' ) {
 				</div>
 				<div class="flex items-center justify-between pt-2">
 					<div>
-						<?php if ( $p['price_label'] ) : ?><div class="text-[10px] sm:text-[11px] text-slate-400"><?php echo esc_html( $p['price_label'] ); ?></div><?php endif; ?>
-						<div class="text-xs sm:text-sm font-black text-surface-dark [&_del]:text-[10px] [&_del]:text-slate-400 [&_ins]:no-underline"><?php echo $price; // phpcs:ignore ?> <?php if ( $p['currency'] && ! $p['price_html'] && '' !== $p['price'] ) : ?><span class="text-[10px] text-slate-500"><?php echo esc_html( $p['currency'] ); ?></span><?php endif; ?></div>
+						<?php if ( $p['price_label'] ) : ?><div class="text-[10px] sm:text-[11px] text-slate-500"><?php echo esc_html( $p['price_label'] ); ?></div><?php endif; ?>
+						<div class="text-xs sm:text-sm font-black text-surface-dark [&_del]:text-[10px] [&_del]:text-slate-500 [&_ins]:no-underline"><?php echo $price; // phpcs:ignore ?> <?php if ( $p['currency'] && ! $p['price_html'] && '' !== $p['price'] ) : ?><span class="text-[10px] text-slate-500"><?php echo esc_html( $p['currency'] ); ?></span><?php endif; ?></div>
 					</div>
 					<a aria-label="<?php echo esc_attr( $p['button_text'] ? $p['button_text'] : __( 'مشاهده مشخصات', 'larijani' ) ); ?>" class="w-9 h-9 rounded-xl bg-surface-canvas text-primary-container hover:bg-primary-container hover:text-white border border-border-subtle flex items-center justify-center transition-colors <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>>
 						<?php echo ls_icon( $p['button_icon'] ? $p['button_icon'] : 'bi bi-arrow-left' ); // phpcs:ignore ?>
@@ -547,7 +548,7 @@ function ls_post_card( $p, $style = 'archive', $o = array() ) {
 						<span><?php echo esc_html( $p['date'] ?? '' ); ?></span>
 						<?php if ( $reading ) : ?><span>•</span><span><?php echo esc_html( $reading ); ?></span><?php endif; ?>
 					</div>
-					<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2.5 line-clamp-2 group-hover:text-primary transition-colors"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $p['title'] ); ?></a></h4>
+					<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2.5 line-clamp-2 group-hover:text-primary transition-colors"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $p['title'] ); ?></a></h3>
 					<?php if ( ! empty( $p['excerpt'] ) ) : ?><p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 leading-relaxed"><?php echo esc_html( $p['excerpt'] ); ?></p><?php endif; ?>
 				</div>
 			</div>

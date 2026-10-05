@@ -108,7 +108,7 @@ function ls_render_site_footer( $s = array() ) {
 
 				<?php foreach ( array( array( $s['col1_title'], $col1 ), array( $s['col2_title'], $col2 ) ) as $col ) : ?>
 				<div>
-					<h4 class="text-sm font-bold text-white mb-3 sm:mb-4 border-b border-slate-800 pb-2"><?php echo esc_html( $col[0] ); ?></h4>
+					<h2 class="text-sm font-bold text-white mb-3 sm:mb-4 border-b border-slate-800 pb-2"><?php echo esc_html( $col[0] ); ?></h2>
 					<ul class="space-y-2 sm:space-y-2.5 text-xs">
 						<?php foreach ( $col[1] as $item ) : ?>
 						<li><a class="hover:text-white transition-colors" href="<?php echo esc_url( $item['url'] ); ?>"><?php echo esc_html( $item['title'] ); ?></a></li>
@@ -118,7 +118,7 @@ function ls_render_site_footer( $s = array() ) {
 				<?php endforeach; ?>
 
 				<div class="sm:col-span-2 lg:col-span-1">
-					<h4 class="text-sm font-bold text-white mb-3 sm:mb-4 border-b border-slate-800 pb-2"><?php echo esc_html( $s['col3_title'] ); ?></h4>
+					<h2 class="text-sm font-bold text-white mb-3 sm:mb-4 border-b border-slate-800 pb-2"><?php echo esc_html( $s['col3_title'] ); ?></h2>
 					<ul class="space-y-3 text-xs text-slate-300">
 						<?php if ( $s['address'] ) : ?>
 						<li class="flex items-start gap-2"><i class="bi bi-geo-alt text-brand-secondary mt-0.5" aria-hidden="true"></i><span><?php echo esc_html( $s['address'] ); ?></span></li>

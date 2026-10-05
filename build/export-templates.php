@@ -8,6 +8,10 @@
  * @package Larijani
  */
 
+if ( 'cli' !== PHP_SAPI ) {
+	exit;
+}
+
 define( 'ABSPATH', __DIR__ );
 define( 'LS_URI', 'https://example.com/wp-content/themes/larijani-stone' );
 
@@ -54,5 +58,5 @@ foreach ( ls_demo_layouts() as $key => $layout ) {
 		'page_settings' => array( 'hide_title' => 'yes' ),
 	);
 	file_put_contents( $out_dir . '/larijani-' . $key . '.json', json_encode( $json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) );
-	echo 'exported ', $key, "\n";
+	echo 'exported ', $key, "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- CLI output, not HTML.
 }

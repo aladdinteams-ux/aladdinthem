@@ -4,7 +4,7 @@
     "type": "page",
     "content": [
         {
-            "id": "b89ae83",
+            "id": "a966c50",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -20,7 +20,7 @@
             },
             "elements": [
                 {
-                    "id": "fd345fc",
+                    "id": "dfd0fa7",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -36,7 +36,7 @@
                     },
                     "elements": [
                         {
-                            "id": "a871666",
+                            "id": "504d4e7",
                             "elType": "widget",
                             "widgetType": "ls-breadcrumb",
                             "settings": {
@@ -50,7 +50,7 @@
             ]
         },
         {
-            "id": "2455ee9",
+            "id": "0f6cf9e",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -66,7 +66,7 @@
             },
             "elements": [
                 {
-                    "id": "20a6e80",
+                    "id": "80327a8",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -82,7 +82,7 @@
                     },
                     "elements": [
                         {
-                            "id": "8ee6afc",
+                            "id": "7a7921c",
                             "elType": "widget",
                             "widgetType": "ls-page-hero",
                             "settings": [],
@@ -93,7 +93,7 @@
             ]
         },
         {
-            "id": "823b76f",
+            "id": "42c6d0d",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -109,7 +109,7 @@
             },
             "elements": [
                 {
-                    "id": "0ee6011",
+                    "id": "5f71b87",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -125,7 +125,7 @@
                     },
                     "elements": [
                         {
-                            "id": "2fbd2c9",
+                            "id": "64d3f6d",
                             "elType": "widget",
                             "widgetType": "ls-icon-cards",
                             "settings": {
@@ -154,7 +154,7 @@
                                         "desc": "تولید و عرضه اختصاصی انواع قالب‌های تزریقی وکیوم‌فرمینگ از مواد مرغوب ABS کره‌ای نشکن؛ شامل انواع موزائیک پلیمری، سنگ نما و دکوراتیو، جدول خیابانی، صراحی، دورباغچه، دیوارپوش و انواع سرستون و تاج.",
                                         "chips": "قالب موزائیک و کفپوش\nقالب نما و صراحی\nدورباغچه و جدول\nتاج و سرستون",
                                         "footer": "بیش از ۵۰۰ بار قالب‌ریزی بدون شکست",
-                                        "_id": "2ae486c"
+                                        "_id": "d52d3d2"
                                     },
                                     {
                                         "icon": {
@@ -167,7 +167,7 @@
                                         "desc": "آموزش جامع عملی متناسب با شرایط آب‌وهوایی منطقه شما: اعزام مهندس ناظر جهت آموزش حضوری در محل کارگاه شما و آموزش اپراتورها یا ارائه پکیج کامل ویدیوهای گام‌به‌گام با سرفصل‌های تخصصی شبیه‌سازی مرمر، رگه‌دار کردن و رفع زردگرایی.",
                                         "chips": "آموزش حضوری در کارگاه\nدوره‌های ویدیویی جامع\nفرمول ترکیب رنگ رگه‌ای",
                                         "footer": "همراه با اعطای تاییدیه کیفی لاریجانی",
-                                        "_id": "bceabca"
+                                        "_id": "c34e479"
                                     },
                                     {
                                         "icon": {
@@ -180,7 +180,7 @@
                                         "desc": "طراحی و ساخت میزهای ویبره ۲ موتوره با فنربندی صنعتی و اینورتر تنظیم فرکانس ارتعاش جهت خروج کامل حباب‌های ریز، و میکسرهای بتن استاندارد طرح پان (Pan Mixer) مجهز به تیغه‌های ضدسایش هاردوکس برای اختلاط یکدست خمیر سنگ پلیمری.",
                                         "chips": "میز ویبره ۲ موتوره فرکانسی\nمیکسر طرح پان ضدسایش\nپایه‌های عایق لرزش",
                                         "footer": "یک سال گارانتی کامل + ۵ سال خدمات",
-                                        "_id": "edcb1e4"
+                                        "_id": "d10a47f"
                                     }
                                 ]
                             },
@@ -191,7 +191,7 @@
             ]
         },
         {
-            "id": "fb6d6d1",
+            "id": "f3adc6b",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -207,7 +207,7 @@
             },
             "elements": [
                 {
-                    "id": "749bb60",
+                    "id": "ab7955b",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -223,7 +223,7 @@
                     },
                     "elements": [
                         {
-                            "id": "b2c6a1f",
+                            "id": "472f942",
                             "elType": "widget",
                             "widgetType": "ls-steps",
                             "settings": [],
@@ -234,7 +234,7 @@
             ]
         },
         {
-            "id": "60b010a",
+            "id": "0d1edaa",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -250,7 +250,7 @@
             },
             "elements": [
                 {
-                    "id": "187c374",
+                    "id": "3981f93",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -266,7 +266,7 @@
                     },
                     "elements": [
                         {
-                            "id": "13686a0",
+                            "id": "a25eabd",
                             "elType": "widget",
                             "widgetType": "ls-dark-feature",
                             "settings": [],
@@ -277,7 +277,7 @@
             ]
         },
         {
-            "id": "1b01f5f",
+            "id": "93f8b58",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -293,7 +293,7 @@
             },
             "elements": [
                 {
-                    "id": "dc5969d",
+                    "id": "1570116",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -309,7 +309,7 @@
                     },
                     "elements": [
                         {
-                            "id": "6495e04",
+                            "id": "ab60e5d",
                             "elType": "widget",
                             "widgetType": "ls-comparison",
                             "settings": [],
@@ -320,7 +320,7 @@
             ]
         },
         {
-            "id": "4449a33",
+            "id": "efad333",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -336,7 +336,7 @@
             },
             "elements": [
                 {
-                    "id": "43db635",
+                    "id": "d6603f5",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -352,7 +352,7 @@
                     },
                     "elements": [
                         {
-                            "id": "9befe40",
+                            "id": "cc25147",
                             "elType": "widget",
                             "widgetType": "ls-lead-form",
                             "settings": {
@@ -365,7 +365,7 @@
             ]
         },
         {
-            "id": "5043020",
+            "id": "f5e7163",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -381,7 +381,7 @@
             },
             "elements": [
                 {
-                    "id": "c2ec850",
+                    "id": "220c7db",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -397,7 +397,7 @@
                     },
                     "elements": [
                         {
-                            "id": "bf65926",
+                            "id": "1dca103",
                             "elType": "widget",
                             "widgetType": "ls-faq",
                             "settings": [],
@@ -408,7 +408,7 @@
             ]
         },
         {
-            "id": "3abc4af",
+            "id": "5cf9e9f",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -424,7 +424,7 @@
             },
             "elements": [
                 {
-                    "id": "e0ff720",
+                    "id": "77839f8",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -440,7 +440,7 @@
                     },
                     "elements": [
                         {
-                            "id": "2ec7b89",
+                            "id": "c2e8398",
                             "elType": "widget",
                             "widgetType": "ls-cta",
                             "settings": {

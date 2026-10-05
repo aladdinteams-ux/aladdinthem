@@ -55,6 +55,7 @@ class LS_Widget_Testimonials extends LS_Widget_Base {
 			'{{{ name }}}'
 		);
 		$this->ctl( 'layout', 'select', __( 'نمایش', 'larijani' ), 'grid', array( 'options' => array( 'grid' => __( 'شبکه', 'larijani' ), 'slider' => __( 'اسلایدر افقی', 'larijani' ) ) ) );
+		$this->ctl( 'card_style', 'select', __( 'سبک کارت', 'larijani' ), 'default', array( 'options' => array( 'default' => __( 'پیش‌فرض (ستاره بالا)', 'larijani' ), 'classic' => __( 'کلاسیک (عکس + ستاره پایین)', 'larijani' ) ) ) );
 		$this->columns_controls( 3, 3, 1, 4 );
 		$this->bg_control( 'none' );
 		$this->end();
@@ -91,6 +92,28 @@ class LS_Widget_Testimonials extends LS_Widget_Base {
 				</div>
 				<div class="<?php echo $slider ? 'flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-5 sm:gap-6 [&>*]:snap-start [&>*]:shrink-0 [&>*]:w-[85%] sm:[&>*]:w-[48%] lg:[&>*]:w-[31.5%]' : 'grid ' . ls_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) . ' gap-5 sm:gap-6'; ?>" data-ls-track>
 					<?php foreach ( $s['items'] as $it ) : ?>
+					<?php if ( 'classic' === ( $s['card_style'] ?? '' ) ) : ?>
+					<div class="bg-white p-5 sm:p-6 rounded-2xl border border-gray-200/90 shadow-sm flex flex-col justify-between">
+						<div>
+							<span class="text-3xl sm:text-4xl text-primary-container/40 font-serif leading-none block mb-2">“</span>
+							<p class="text-gray-700 text-xs sm:text-sm leading-relaxed"><?php echo esc_html( $it['text'] ); ?></p>
+						</div>
+						<div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between">
+							<div class="flex items-center gap-3">
+								<?php if ( ! empty( $it['avatar']['url'] ) ) : ?>
+									<?php echo ls_img( $it['avatar'], 'w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover', $it['name'], 'thumbnail' ); // phpcs:ignore ?>
+								<?php else : ?>
+								<div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-xs text-slate-700"><?php echo esc_html( ls_initials( $it['name'] ) ); ?></div>
+								<?php endif; ?>
+								<div>
+									<h4 class="font-bold text-gray-900 text-xs sm:text-sm"><?php echo esc_html( $it['name'] ); ?></h4>
+									<p class="text-[10px] sm:text-[11px] text-gray-500"><?php echo esc_html( $it['role'] ); ?></p>
+								</div>
+							</div>
+							<?php if ( (int) $it['stars'] > 0 ) : ?><div class="flex text-amber-400 text-xs" aria-label="<?php echo esc_attr( sprintf( /* translators: %d stars */ __( '%d ستاره', 'larijani' ), (int) $it['stars'] ) ); ?>"><?php echo esc_html( str_repeat( '★', min( 5, (int) $it['stars'] ) ) ); ?></div><?php endif; ?>
+						</div>
+					</div>
+					<?php continue; endif; ?>
 					<div class="bg-white rounded-2xl p-5 sm:p-6 border border-border-subtle card-shadow flex flex-col justify-between">
 						<div>
 							<div class="flex items-center justify-between">

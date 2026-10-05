@@ -178,6 +178,23 @@ function ls_post_meta_box_html( $post ) {
 		esc_html__( 'برچسب گوشه تصویر شاخص (مثل کد استاندارد)', 'larijani' ),
 		esc_attr( get_post_meta( $post->ID, '_ls_image_badge', true ) )
 	);
+	foreach ( array(
+		'_ls_author_name' => __( 'نام نویسنده نمایشی (خالی = کاربر)', 'larijani' ),
+		'_ls_author_role' => __( 'سمت نویسنده', 'larijani' ),
+	) as $key => $label ) {
+		printf( '<p><label>%s<br><input type="text" class="widefat" name="%s" value="%s"></label></p>', esc_html( $label ), esc_attr( ltrim( $key, '_' ) ), esc_attr( get_post_meta( $post->ID, $key, true ) ) );
+	}
+	printf(
+		'<p><label>%s<br><textarea class="widefat" rows="3" name="ls_author_bio">%s</textarea></label></p>',
+		esc_html__( 'معرفی کوتاه نویسنده', 'larijani' ),
+		esc_textarea( get_post_meta( $post->ID, '_ls_author_bio', true ) )
+	);
+	printf(
+		'<p><label>%s<br><textarea class="widefat" rows="5" dir="auto" name="ls_metrics" placeholder="%s">%s</textarea></label></p>',
+		esc_html__( 'کارت‌های شاخص زیر تصویر (هر خط یک کارت)', 'larijani' ),
+		esc_attr__( 'عنوان | مقدار | واحد | آیکون | رنگ | یادداشت | آیکون یادداشت', 'larijani' ),
+		esc_textarea( get_post_meta( $post->ID, '_ls_metrics', true ) )
+	);
 }
 
 /**
@@ -196,6 +213,12 @@ function ls_save_post_meta( $post_id ) {
 	update_post_meta( $post_id, '_ls_reading_time', isset( $_POST['ls_reading_time'] ) ? absint( $_POST['ls_reading_time'] ) : '' );
 	update_post_meta( $post_id, '_ls_image_caption', isset( $_POST['ls_image_caption'] ) ? sanitize_text_field( wp_unslash( $_POST['ls_image_caption'] ) ) : '' );
 	update_post_meta( $post_id, '_ls_image_badge', isset( $_POST['ls_image_badge'] ) ? sanitize_text_field( wp_unslash( $_POST['ls_image_badge'] ) ) : '' );
+	foreach ( array( 'ls_author_name', 'ls_author_role' ) as $key ) {
+		update_post_meta( $post_id, '_' . $key, isset( $_POST[ $key ] ) ? sanitize_text_field( wp_unslash( $_POST[ $key ] ) ) : '' );
+	}
+	foreach ( array( 'ls_author_bio', 'ls_metrics' ) as $key ) {
+		update_post_meta( $post_id, '_' . $key, isset( $_POST[ $key ] ) ? sanitize_textarea_field( wp_unslash( $_POST[ $key ] ) ) : '' );
+	}
 }
 add_action( 'save_post_post', 'ls_save_post_meta' );
 
@@ -256,3 +279,52 @@ function ls_lead_column_values( $col, $post_id ) {
 	}
 }
 add_action( 'manage_ls_lead_posts_custom_column', 'ls_lead_column_values', 10, 2 );
+
+/**
+ * Page meta box: per-page header style (design pages use different headers).
+ */
+function ls_page_meta_box() {
+	add_meta_box( 'ls_page_meta', __( 'تنظیمات برگه (قالب لاریجانی)', 'larijani' ), 'ls_page_meta_box_html', array( 'page', 'post' ), 'side', 'default' );
+}
+add_action( 'add_meta_boxes', 'ls_page_meta_box' );
+
+/**
+ * Page meta box markup.
+ *
+ * @param WP_Post $post Post.
+ */
+function ls_page_meta_box_html( $post ) {
+	wp_nonce_field( 'ls_page_meta', 'ls_page_meta_nonce' );
+	$val     = get_post_meta( $post->ID, '_ls_header_style', true );
+	$choices = array(
+		''      => __( 'طبق تنظیمات قالب', 'larijani' ),
+		'dark'  => __( 'هدر با نوار بالای تیره', 'larijani' ),
+		'light' => __( 'هدر کلاسیک با نوار بالای روشن', 'larijani' ),
+	);
+	echo '<p><label for="ls_header_style"><strong>' . esc_html__( 'طرح هدر', 'larijani' ) . '</strong></label><br><select id="ls_header_style" name="ls_header_style" style="width:100%">';
+	foreach ( $choices as $k => $l ) {
+		echo '<option value="' . esc_attr( $k ) . '" ' . selected( $val, $k, false ) . '>' . esc_html( $l ) . '</option>';
+	}
+	echo '</select></p>';
+}
+
+/**
+ * Save page meta.
+ *
+ * @param int $post_id Post id.
+ */
+function ls_save_page_meta( $post_id ) {
+	if ( ! isset( $_POST['ls_page_meta_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['ls_page_meta_nonce'] ) ), 'ls_page_meta' ) ) {
+		return;
+	}
+	if ( ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) || ! current_user_can( 'edit_post', $post_id ) ) {
+		return;
+	}
+	$val = isset( $_POST['ls_header_style'] ) ? sanitize_key( wp_unslash( $_POST['ls_header_style'] ) ) : '';
+	if ( in_array( $val, array( 'dark', 'light' ), true ) ) {
+		update_post_meta( $post_id, '_ls_header_style', $val );
+	} else {
+		delete_post_meta( $post_id, '_ls_header_style' );
+	}
+}
+add_action( 'save_post', 'ls_save_page_meta' );

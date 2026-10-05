@@ -39,6 +39,8 @@ class LS_Widget_Products extends LS_Widget_Base {
 			array( 'image', 'media', __( 'تصویر', 'larijani' ), '' ),
 			array( 'badge', 'text', __( 'برچسب روی تصویر', 'larijani' ), '' ),
 			array( 'badge_tone', 'select', __( 'رنگ برچسب', 'larijani' ), 'primary', array( 'options' => ls_tone_options() ) ),
+			array( 'stock_badge', 'text', __( 'برچسب موجودی پایین تصویر (سبک فروشگاه)', 'larijani' ), '' ),
+			array( 'stock_tone', 'select', __( 'رنگ برچسب موجودی', 'larijani' ), 'emerald', array( 'options' => array( 'emerald' => __( 'سبز با تیک', 'larijani' ), 'dark' => __( 'تیره', 'larijani' ) ) ) ),
 			array( 'category', 'text', __( 'دسته (بالای عنوان)', 'larijani' ), '' ),
 			array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
 			array( 'subtitle', 'text', __( 'ویژگی کوتاه (سبک کلاسیک)', 'larijani' ), '' ),
@@ -81,6 +83,8 @@ class LS_Widget_Products extends LS_Widget_Base {
 			'image'        => $r['image'] ?? '',
 			'badge'        => $r['badge'] ?? '',
 			'badge_tone'   => $r['badge_tone'] ?? 'primary',
+			'stock_badge'  => $r['stock_badge'] ?? '',
+			'stock_tone'   => $r['stock_tone'] ?? 'emerald',
 			'category'     => $r['category'] ?? '',
 			'title'        => $r['title'] ?? '',
 			'subtitle'     => $r['subtitle'] ?? '',
@@ -136,7 +140,7 @@ class LS_Widget_Products extends LS_Widget_Base {
 		$this->end();
 
 		$this->section( 'sec_layout', __( 'چیدمان', 'larijani' ) );
-		$this->ctl( 'card_style', 'select', __( 'سبک کارت', 'larijani' ), 'classic', array( 'options' => array( 'classic' => __( 'کلاسیک (صفحه اصلی)', 'larijani' ), 'catalog' => __( 'کاتالوگ (فروشگاه)', 'larijani' ), 'compact' => __( 'فشرده (محصولات مکمل)', 'larijani' ) ) ) );
+		$this->ctl( 'card_style', 'select', __( 'سبک کارت', 'larijani' ), 'classic', array( 'options' => array( 'classic' => __( 'کلاسیک (صفحه اصلی)', 'larijani' ), 'catalog' => __( 'کاتالوگ (فروشگاه)', 'larijani' ), 'compact' => __( 'فشرده (محصولات مکمل)', 'larijani' ), 'showcase' => __( 'ویترین (صفحه اصلی کلاسیک)', 'larijani' ), 'store' => __( 'فروشگاه (دکمه تمام‌عرض)', 'larijani' ) ) ) );
 		$this->columns_controls( 4, 2, 1, 4 );
 		$this->bg_control( 'none' );
 		$this->end();

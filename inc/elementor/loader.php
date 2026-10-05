@@ -86,7 +86,12 @@ function ls_elementor_init() {
 	add_action( 'elementor/frontend/after_enqueue_styles', 'ls_elementor_frontend_styles' );
 	add_action( 'elementor/preview/enqueue_styles', 'ls_elementor_frontend_styles' );
 }
-add_action( 'elementor/loaded', 'ls_elementor_init' );
+// Elementor fires "elementor/loaded" while plugins load, i.e. before the theme.
+if ( did_action( 'elementor/loaded' ) ) {
+	ls_elementor_init();
+} else {
+	add_action( 'elementor/loaded', 'ls_elementor_init' );
+}
 
 /**
  * Widget category.

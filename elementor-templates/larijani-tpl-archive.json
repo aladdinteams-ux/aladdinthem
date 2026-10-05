@@ -4,7 +4,7 @@
     "type": "archive",
     "content": [
         {
-            "id": "ebb704f",
+            "id": "493384a",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -20,7 +20,7 @@
             },
             "elements": [
                 {
-                    "id": "d4aef4f",
+                    "id": "d0b6ca5",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -36,7 +36,7 @@
                     },
                     "elements": [
                         {
-                            "id": "3605320",
+                            "id": "6059848",
                             "elType": "widget",
                             "widgetType": "ls-blog-hero",
                             "settings": [],
@@ -47,7 +47,7 @@
             ]
         },
         {
-            "id": "797ea5f",
+            "id": "4ca68e3",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -63,7 +63,7 @@
             },
             "elements": [
                 {
-                    "id": "14b34fc",
+                    "id": "976a02f",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -79,7 +79,7 @@
                     },
                     "elements": [
                         {
-                            "id": "3d590c9",
+                            "id": "38039f1",
                             "elType": "widget",
                             "widgetType": "ls-featured-post",
                             "settings": [],
@@ -90,7 +90,7 @@
             ]
         },
         {
-            "id": "2314008",
+            "id": "5b4d311",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -106,7 +106,7 @@
             },
             "elements": [
                 {
-                    "id": "2a9b777",
+                    "id": "d82d877",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -122,7 +122,7 @@
                     },
                     "elements": [
                         {
-                            "id": "ff2cef1",
+                            "id": "7c83c50",
                             "elType": "widget",
                             "widgetType": "ls-posts-grid",
                             "settings": [],
@@ -133,7 +133,7 @@
             ]
         },
         {
-            "id": "c41825c",
+            "id": "a5f5a59",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -149,7 +149,7 @@
             },
             "elements": [
                 {
-                    "id": "bf44179",
+                    "id": "589cf57",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -165,7 +165,7 @@
                     },
                     "elements": [
                         {
-                            "id": "e458cbf",
+                            "id": "bae4408",
                             "elType": "widget",
                             "widgetType": "ls-cta",
                             "settings": {

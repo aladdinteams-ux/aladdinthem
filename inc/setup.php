@@ -184,13 +184,12 @@ function ls_admin_notice_plugins() {
 	if ( ls_has_elementor() || ! current_user_can( 'install_plugins' ) ) {
 		return;
 	}
-	$screen = get_current_screen();
-	if ( $screen && 'appearance_page_ls-setup' === $screen->id ) {
+	if ( isset( $_GET['page'] ) && in_array( $_GET['page'], array( 'ls-setup', 'ls-settings' ), true ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		return;
 	}
 	printf(
 		'<div class="notice notice-info is-dismissible"><p>%s <a href="%s">%s</a></p></div>',
-		esc_html__( 'قالب لاریجانی استون برای ویرایش بصری صفحات به افزونه رایگان المنتور نیاز دارد.', 'larijani' ),
+		esc_html__( 'برگه‌های قالب لاریجانی استون ساخته شده‌اند و نمایش داده می‌شوند؛ برای ویرایش بصری آن‌ها افزونه رایگان المنتور را نصب کنید.', 'larijani' ),
 		esc_url( admin_url( 'plugin-install.php?s=elementor&tab=search&type=term' ) ),
 		esc_html__( 'نصب المنتور', 'larijani' )
 	);

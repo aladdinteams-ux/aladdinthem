@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'LS_VERSION', '1.0.0' );
+define( 'LS_VERSION', '1.1.0' );
 define( 'LS_DIR', get_template_directory() );
 define( 'LS_URI', get_template_directory_uri() );
 
@@ -26,8 +26,10 @@ require_once LS_DIR . '/inc/render/footer.php';
 require_once LS_DIR . '/inc/render/components.php';
 require_once LS_DIR . '/inc/render/blog.php';
 require_once LS_DIR . '/inc/render/shop.php';
+require_once LS_DIR . '/inc/elementor/fallback.php';
 require_once LS_DIR . '/inc/elementor/loader.php';
 require_once LS_DIR . '/inc/demo/importer.php';
+require_once LS_DIR . '/inc/admin/settings.php';
 
 if ( class_exists( 'WooCommerce' ) ) {
 	require_once LS_DIR . '/inc/woocommerce.php';

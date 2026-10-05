@@ -104,6 +104,8 @@ function ls_product_card_defaults() {
 		'image_alt'      => '',
 		'badge'          => '',
 		'badge_tone'     => 'primary',
+		'stock_badge'    => '',
+		'stock_tone'     => 'emerald',
 		'category'       => '',
 		'title'          => '',
 		'subtitle'       => '',
@@ -145,7 +147,88 @@ function ls_product_card( $p, $style = 'classic' ) {
 	$data = ' data-category="' . esc_attr( $p['filter'] ) . '" data-price="' . esc_attr( (float) $p['price_raw'] ) . '" data-title="' . esc_attr( wp_strip_all_tags( $p['title'] ) ) . '"';
 
 	ob_start();
-	if ( 'catalog' === $style ) :
+	if ( 'store' === $style ) :
+		$store_badge = array(
+			'dark'    => 'bg-surface-dark text-on-tertiary',
+			'primary' => 'bg-primary text-on-primary',
+			'amber'   => 'bg-accent-amber text-white',
+			'emerald' => 'bg-accent-emerald text-white',
+			'cobalt'  => 'bg-accent-cobalt text-white',
+			'sage'    => 'bg-secondary-container text-on-secondary-container',
+			'light'   => 'bg-white/90 text-on-surface',
+		);
+		?>
+		<article class="ls-filter-item product-card flex flex-col justify-between bg-surface-card rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group"<?php echo $data; // phpcs:ignore ?>>
+			<div>
+				<div class="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden">
+					<a href="<?php echo esc_url( $url ); ?>" class="block w-full h-full"><?php echo $img; // phpcs:ignore ?></a>
+					<?php if ( $p['badge'] ) : ?><span class="absolute top-3 right-3 <?php echo esc_attr( $store_badge[ $p['badge_tone'] ] ?? $store_badge['dark'] ); ?> px-space-sm py-1 rounded-md text-label-badge font-label-badge shadow-sm"><?php echo esc_html( $p['badge'] ); ?></span><?php endif; ?>
+					<?php if ( $p['stock_badge'] ) : ?><span class="absolute bottom-3 left-3 <?php echo 'emerald' === $p['stock_tone'] ? 'bg-accent-emerald/90 text-white' : 'bg-surface-dark/80 text-on-tertiary'; ?> backdrop-blur-md px-space-xs py-0.5 rounded text-label-badge font-label-badge flex items-center gap-1"><?php if ( 'emerald' === $p['stock_tone'] ) : ?><i class="bi bi-check-circle-fill text-[12px]" aria-hidden="true"></i><?php endif; ?><?php echo esc_html( $p['stock_badge'] ); ?></span><?php endif; ?>
+				</div>
+				<div class="p-space-md flex flex-col gap-space-xs">
+					<?php if ( $p['category'] ) : ?><span class="text-body-sm font-body-sm text-outline"><?php echo esc_html( $p['category'] ); ?></span><?php endif; ?>
+					<h3 class="font-title-card text-title-card text-on-surface group-hover:text-primary transition-colors"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $p['title'] ); ?></a></h3>
+					<?php if ( $p['desc'] ) : ?><p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2"><?php echo esc_html( $p['desc'] ); ?></p><?php endif; ?>
+					<?php if ( $p['specs'] ) : ?>
+					<div class="grid grid-cols-3 gap-1 bg-surface-canvas p-2 rounded-xl mt-space-xs text-center">
+						<?php foreach ( array_slice( $p['specs'], 0, 3 ) as $sp ) : ?>
+						<div class="flex flex-col"><span class="font-body-sm text-body-sm text-outline"><?php echo esc_html( $sp[0] ); ?></span><span class="font-label-nav text-label-nav text-on-surface"><?php echo esc_html( $sp[1] ); ?></span></div>
+						<?php endforeach; ?>
+					</div>
+					<?php endif; ?>
+				</div>
+			</div>
+			<div class="p-space-md pt-0 flex flex-col gap-space-sm mt-space-sm">
+				<div class="flex items-center justify-between">
+					<div class="flex flex-col">
+						<?php if ( $p['price_label'] ) : ?><span class="text-body-sm font-body-sm text-outline"><?php echo esc_html( $p['price_label'] ); ?></span><?php endif; ?>
+						<div class="flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm text-on-surface [&_del]:text-xs [&_del]:text-outline [&_ins]:no-underline"><?php echo $price; // phpcs:ignore ?></span><?php if ( $p['currency'] && ! $p['price_html'] && '' !== $p['price'] ) : ?><span class="text-body-sm font-body-sm text-outline"><?php echo esc_html( $p['currency'] ); ?></span><?php endif; ?></div>
+					</div>
+					<button class="w-10 h-10 rounded-full bg-surface-canvas hover:bg-secondary-container text-on-surface flex items-center justify-center transition-colors" type="button" title="<?php esc_attr_e( 'افزودن به علاقه‌مندی', 'larijani' ); ?>" aria-pressed="false" data-ls-wishlist="<?php echo esc_attr( sanitize_title( wp_strip_all_tags( $p['title'] ) ) ); ?>"><i class="bi bi-heart text-[18px]" aria-hidden="true"></i></button>
+				</div>
+				<?php if ( $p['button_text'] ) : ?>
+				<a class="w-full py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-nav text-label-nav flex items-center justify-center gap-space-xs transition-all shadow-sm <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>><?php echo ls_icon( $p['button_icon'] ? $p['button_icon'] : 'bi bi-cart-check', 'text-[18px]' ); // phpcs:ignore ?><span><?php echo esc_html( $p['button_text'] ); ?></span></a>
+				<?php endif; ?>
+			</div>
+		</article>
+		<?php
+	elseif ( 'showcase' === $style ) :
+		?>
+		<article class="ls-filter-item bg-white rounded-2xl border border-gray-200/90 overflow-hidden shadow-sm hover:shadow-xl transition group flex flex-col"<?php echo $data; // phpcs:ignore ?>>
+			<div class="relative h-48 sm:h-52 overflow-hidden bg-gray-100">
+				<a href="<?php echo esc_url( $url ); ?>" class="block w-full h-full"><?php echo $img; // phpcs:ignore ?></a>
+				<?php if ( $p['badge'] ) : ?>
+				<div class="absolute top-3 right-3 flex items-center gap-1.5"><span class="<?php echo esc_attr( ls_tone( $p['badge_tone'], 'badge' ) ); ?> text-[11px] font-bold px-2.5 py-1 rounded-lg shadow-sm"><?php echo esc_html( $p['badge'] ); ?></span></div>
+				<?php endif; ?>
+				<button aria-label="<?php esc_attr_e( 'نشان کردن محصول', 'larijani' ); ?>" aria-pressed="false" class="absolute top-3 left-3 w-8 h-8 rounded-full bg-white/90 text-gray-600 hover:text-red-500 flex items-center justify-center transition shadow" type="button" data-ls-wishlist="<?php echo esc_attr( sanitize_title( wp_strip_all_tags( $p['title'] ) ) ); ?>"><i class="bi bi-heart text-[14px]" aria-hidden="true"></i></button>
+			</div>
+			<div class="p-4 flex-1 flex flex-col justify-between">
+				<div>
+					<h3 class="font-bold text-gray-900 text-sm sm:text-base group-hover:text-primary-container transition"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $p['title'] ); ?></a></h3>
+					<?php if ( $p['subtitle'] ) : ?>
+					<p class="text-xs text-gray-500 mt-1 flex items-center gap-1"><?php echo ls_icon( $p['subtitle_icon'], 'text-[13px] text-primary-container' ); // phpcs:ignore ?><?php echo esc_html( $p['subtitle'] ); ?></p>
+					<?php endif; ?>
+					<?php if ( $p['specs'] ) : ?>
+					<div class="mt-4 pt-3 border-t border-gray-100 grid grid-cols-3 text-center text-xs text-gray-500">
+						<?php foreach ( array_slice( $p['specs'], 0, 3 ) as $i => $sp ) : ?>
+						<div class="<?php echo 1 === $i ? 'border-x border-gray-100' : ''; ?>"><span class="block font-bold text-gray-800"><?php echo esc_html( $sp[1] ); ?></span><span class="text-[10px] text-gray-400"><?php echo esc_html( $sp[0] ); ?></span></div>
+						<?php endforeach; ?>
+					</div>
+					<?php endif; ?>
+				</div>
+				<div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+					<div>
+						<?php if ( $p['price_label'] ) : ?><span class="text-xs text-gray-400 block"><?php echo esc_html( $p['price_label'] ); ?></span><?php endif; ?>
+						<span class="text-sm sm:text-base font-black text-primary-container"><?php echo $price; // phpcs:ignore ?> <?php if ( $p['currency'] && ! $p['price_html'] && '' !== $p['price'] ) : ?><span class="text-[10px] sm:text-[11px] font-normal text-gray-500"><?php echo esc_html( $p['currency'] ); ?></span><?php endif; ?></span>
+					</div>
+					<?php if ( $p['button_text'] ) : ?>
+					<a class="px-3.5 py-1.5 rounded-lg bg-[#F4F6F3] text-primary-container font-semibold text-xs hover:bg-primary-container hover:text-white transition whitespace-nowrap <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>><?php echo esc_html( $p['button_text'] ); ?></a>
+					<?php endif; ?>
+				</div>
+			</div>
+		</article>
+		<?php
+	elseif ( 'catalog' === $style ) :
 		?>
 		<article class="ls-filter-item product-item group rounded-2xl bg-surface-card shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden"<?php echo $data; // phpcs:ignore ?>>
 			<a href="<?php echo esc_url( $url ); ?>" class="relative block w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
@@ -366,7 +449,7 @@ function ls_project_data( $post ) {
 	}
 	$terms = get_the_terms( $post, 'ls_project_cat' );
 	return array(
-		'image'    => get_the_post_thumbnail_url( $post, 'ls-card' ),
+		'image'    => ls_post_image_url( $post, 'ls-card' ),
 		'title'    => get_the_title( $post ),
 		'desc'     => has_excerpt( $post ) ? get_the_excerpt( $post ) : wp_trim_words( wp_strip_all_tags( $post->post_content ), 30 ),
 		'badge_1'  => $m( 'badge_1' ),
@@ -391,7 +474,7 @@ function ls_post_data( $post ) {
 	$post = get_post( $post );
 	$cat  = ls_primary_category( $post->ID );
 	return array(
-		'image'    => get_the_post_thumbnail_url( $post, 'ls-card' ),
+		'image'    => ls_post_image_url( $post, 'ls-card' ),
 		'title'    => get_the_title( $post ),
 		'excerpt'  => has_excerpt( $post ) ? get_the_excerpt( $post ) : wp_trim_words( wp_strip_all_tags( strip_shortcodes( $post->post_content ) ), 26 ),
 		'category' => $cat ? $cat->name : '',
@@ -493,6 +576,17 @@ function ls_filter_buttons( $filters, $style = 'pill' ) {
 		$base     = 'pill' === $style ? 'px-space-md py-2 rounded-full font-label-nav text-label-nav transition-all whitespace-nowrap' : 'px-space-md py-2 rounded-xl text-body-sm font-semibold transition-all whitespace-nowrap';
 		$on       = 'bg-primary-container text-on-primary shadow-sm';
 		$off      = 'pill' === $style ? 'bg-surface-canvas text-tertiary hover:text-on-surface hover:bg-surface-container' : 'bg-surface-canvas text-on-surface-variant hover:text-on-surface hover:bg-surface-container';
+		if ( 'store' === $style ) {
+			$base = 'px-space-lg py-2 rounded-full font-label-nav text-label-nav transition-all shrink-0 whitespace-nowrap inline-flex items-center gap-1';
+			$on   = 'bg-primary text-on-primary shadow-sm';
+			$off  = 'bg-surface-card hover:bg-surface-container-high text-on-surface-variant';
+		}
+		if ( 'bi bi-dot-pulse' === ( $f[2] ?? '' ) ) {
+			$f[2] = '';
+			$dot  = '<span class="w-2 h-2 rounded-full bg-accent-emerald animate-pulse"></span>';
+		} else {
+			$dot = '';
+		}
 		$out     .= sprintf(
 			'<button type="button" class="%s %s" data-ls-filter="%s" data-on="%s" data-off="%s" aria-pressed="%s">%s%s</button>',
 			esc_attr( $base ),
@@ -501,7 +595,7 @@ function ls_filter_buttons( $filters, $style = 'pill' ) {
 			esc_attr( $on ),
 			esc_attr( $off ),
 			$active ? 'true' : 'false',
-			! empty( $f[2] ) ? ls_icon( $f[2], 'ml-1' ) . ' ' : '',
+			$dot . ( ! empty( $f[2] ) ? ls_icon( $f[2], 'ml-1' ) . ' ' : '' ),
 			esc_html( $f[1] )
 		);
 	}

@@ -4,7 +4,7 @@
     "type": "product-archive",
     "content": [
         {
-            "id": "0e046f7",
+            "id": "c3bcaa8",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -20,7 +20,7 @@
             },
             "elements": [
                 {
-                    "id": "0538925",
+                    "id": "9adc278",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -36,7 +36,7 @@
                     },
                     "elements": [
                         {
-                            "id": "006d17f",
+                            "id": "5d551f2",
                             "elType": "widget",
                             "widgetType": "ls-shop-hero",
                             "settings": [],
@@ -47,7 +47,7 @@
             ]
         },
         {
-            "id": "7165c22",
+            "id": "f44b7cb",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -63,7 +63,7 @@
             },
             "elements": [
                 {
-                    "id": "1d91c2b",
+                    "id": "a4db2f5",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -79,7 +79,7 @@
                     },
                     "elements": [
                         {
-                            "id": "c94acb4",
+                            "id": "d68ab57",
                             "elType": "widget",
                             "widgetType": "ls-catalog",
                             "settings": {
@@ -92,7 +92,7 @@
             ]
         },
         {
-            "id": "245b9ed",
+            "id": "bfea804",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -108,7 +108,7 @@
             },
             "elements": [
                 {
-                    "id": "9e7ec47",
+                    "id": "1ea5b46",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -124,7 +124,7 @@
                     },
                     "elements": [
                         {
-                            "id": "0a600a4",
+                            "id": "c0258fa",
                             "elType": "widget",
                             "widgetType": "ls-icon-cards",
                             "settings": {
@@ -146,7 +146,7 @@
                                         "tone": "primary",
                                         "title": "۱۰۰٪ ضدپوسته و عدم تغییر فرم",
                                         "desc": "در شرایط اقلیمی بسیار گرم تا مثبت ۵۰ درجه و در برابر لرزش‌های با فرکانس بالای میزهای ویبره صنعتی، زاویه‌ها و گونیای قالب ابداً تغییر فرم نمی‌دهد.",
-                                        "_id": "c023db2"
+                                        "_id": "5e487aa"
                                     },
                                     {
                                         "icon": {
@@ -156,7 +156,7 @@
                                         "tone": "emerald",
                                         "title": "جدایش قطعه بدون روغن نامرغوب",
                                         "desc": "پلیش و صیقل فوق‌العاده سطح قالب مانع از چسبیدن شیره سیمان می‌شود. بدون نیاز به اسیدشویی مخرب، قطعه تنها با یک ضربه آرام از قالب جدا می‌شود.",
-                                        "_id": "f489c06"
+                                        "_id": "095391a"
                                     },
                                     {
                                         "icon": {
@@ -166,7 +166,7 @@
                                         "tone": "amber",
                                         "title": "تضمین پتروشیمی نو کره جنوبی",
                                         "desc": "استفاده انحصاری از ورق‌های درجه یک با ضخامت واقعی (نه اسمی). ضمانت کتبی عدم شکستگی در زمان خروج قطعه در شرایط کارگاهی نرمال.",
-                                        "_id": "4fed157"
+                                        "_id": "fe58748"
                                     }
                                 ]
                             },
@@ -177,7 +177,7 @@
             ]
         },
         {
-            "id": "cdb549e",
+            "id": "f7b2feb",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -193,7 +193,7 @@
             },
             "elements": [
                 {
-                    "id": "f695ff4",
+                    "id": "1a6c3cf",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -209,7 +209,7 @@
                     },
                     "elements": [
                         {
-                            "id": "41ee904",
+                            "id": "b6c7151",
                             "elType": "widget",
                             "widgetType": "ls-cta",
                             "settings": {

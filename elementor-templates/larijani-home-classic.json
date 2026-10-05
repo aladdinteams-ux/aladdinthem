@@ -4,7 +4,7 @@
     "type": "page",
     "content": [
         {
-            "id": "653df58",
+            "id": "83b9d04",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -20,7 +20,7 @@
             },
             "elements": [
                 {
-                    "id": "1f83e18",
+                    "id": "be45272",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -36,7 +36,7 @@
                     },
                     "elements": [
                         {
-                            "id": "dbe87a6",
+                            "id": "52cd7da",
                             "elType": "widget",
                             "widgetType": "ls-hero-classic",
                             "settings": [],
@@ -47,7 +47,7 @@
             ]
         },
         {
-            "id": "a9fb433",
+            "id": "600ec26",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -63,7 +63,7 @@
             },
             "elements": [
                 {
-                    "id": "267661b",
+                    "id": "03cf9d9",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -79,7 +79,7 @@
                     },
                     "elements": [
                         {
-                            "id": "7a4743a",
+                            "id": "48ef11e",
                             "elType": "widget",
                             "widgetType": "ls-categories",
                             "settings": [],
@@ -90,7 +90,7 @@
             ]
         },
         {
-            "id": "fc98339",
+            "id": "db7169d",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -106,7 +106,7 @@
             },
             "elements": [
                 {
-                    "id": "6fcaa51",
+                    "id": "7711a56",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -122,7 +122,7 @@
                     },
                     "elements": [
                         {
-                            "id": "aa2b99d",
+                            "id": "980c60d",
                             "elType": "widget",
                             "widgetType": "ls-products",
                             "settings": {
@@ -130,7 +130,93 @@
                                 "heading_title": "تجهیزات و قالب‌های برگزیده",
                                 "heading_desc": "پرفروش‌ترین محصولات خط تولید با گارانتی رسمی شرکت",
                                 "heading_link_text": "مشاهده همه محصولات",
-                                "section_bg": "white-bordered"
+                                "heading_link": {
+                                    "url": "/shop/"
+                                },
+                                "section_bg": "white-bordered",
+                                "card_style": "showcase",
+                                "items": [
+                                    {
+                                        "image": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA6PiP1lIFaHbpXjwvhcagilgTibUuzrDZFunDOn99IB9ihqKG7C_4fAWIAYC-cFQouhO_Adje5PZX2ICgS017di_9lk8jG65OB5jIffs3LE8zvXPS9GlX5pxNkBkvspuXwYznQlo0E7JLi8a5gs34qu2jitKnVk8VoGwuf8HhxP1X_sgQJ-ohbpYAeXYTDHKqDieuh1HUQqd9Ulv_mmZWkW2JgFwSpNbnAiyLnJcUQ61RnQ0l8AqcCog",
+                                            "id": ""
+                                        },
+                                        "badge": "ماشین‌آلات اصلی",
+                                        "title": "میز ویبره صنعتی دور متغیر",
+                                        "subtitle": "موتور اروپایی ضد شوک، شاسی صنعتی",
+                                        "spec1_label": "ابعاد میز",
+                                        "spec1_value": "۲×۱ متر",
+                                        "spec2_label": "نوع ویبره",
+                                        "spec2_value": "۲ موتوره",
+                                        "spec3_label": "گارانتی تعویض",
+                                        "spec3_value": "۲۴ ماه",
+                                        "price_label": "قیمت محصول:",
+                                        "price": "۴۸,۰۰۰,۰۰۰",
+                                        "price_raw": 48000000,
+                                        "button_text": "سفارش سریع",
+                                        "_id": "aaf016c"
+                                    },
+                                    {
+                                        "image": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBEz3hRhsBb9tDiBAtiSOH8h52lIpg9xQFMjvaL5uODmpP4Vrue3kUDHMK2Nr-eVVpVnWejNW-ux8xbChcWptbtv3FhyA-8_BpCOcF_2Yjmxs8X0Aelz7SFRlSLJb494ywp39gBTIo6HjgfSoWk3Bqv7nyWdzqjpvdkXt2yhbC9Gb32PrUH-5hX4GpQr1ABHTQiF5tZMvl31su4tVrGf8c3QyxT0X6wDKEFd2aL7T4eX_xP2IuyQmgpIA",
+                                            "id": ""
+                                        },
+                                        "badge": "قالب نشکن ABS",
+                                        "title": "قالب واش‌بتن شیاردار ۴۰×۴۰",
+                                        "subtitle": "مواد درجه یک تایوانی، عدم چسبندگی ملات",
+                                        "spec1_label": "سایز (cm)",
+                                        "spec1_value": "۴۰×۴۰",
+                                        "spec2_label": "متریال",
+                                        "spec2_value": "ABS نشکن",
+                                        "spec3_label": "تیراژ کارکرد",
+                                        "spec3_value": "+۵۰۰ بار",
+                                        "price_label": "قیمت هر عدد:",
+                                        "price": "۱۱۰,۰۰۰",
+                                        "price_raw": 110000,
+                                        "button_text": "خرید عمده",
+                                        "_id": "6d9a69e"
+                                    },
+                                    {
+                                        "image": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCXRZ5XdTgZDnqsf6psVJlBM4ocbzho9aJt8Z07xRPcXXMKUMZ2qbwqkN9e_zMR7fLz0b6boYfjHsLNYmHBYz21y9KvkwEqmi-bYFxQVs4pzE3Gby8NpnOFjFZxih9QzLSWEO7XeGpy4hhM4lsFj_Uru7ko7F1LZyt22i2Q504WW1iE4rcKeTU6qtRJ35EtZ_FKyeKyfwNqNMm5q5Q4RV6b_EV2L5-MjXUvvdXZvXWJ2aa8UqwjPP2WPw",
+                                            "id": ""
+                                        },
+                                        "badge": "نما و صراحی",
+                                        "title": "قالب صراحی گرد رومی ۷۰ سانت",
+                                        "subtitle": "دو تکه با پین قفل‌کننده آسان‌بازشو",
+                                        "spec1_label": "ارتفاع",
+                                        "spec1_value": "۷۰ cm",
+                                        "spec2_label": "نوع جنس",
+                                        "spec2_value": "فایبرگلاس",
+                                        "spec3_label": "کیفیت لعاب",
+                                        "spec3_value": "سطح آینه‌ای",
+                                        "price_label": "قیمت هر جفت:",
+                                        "price": "۲۹۰,۰۰۰",
+                                        "price_raw": 290000,
+                                        "button_text": "سفارش سریع",
+                                        "_id": "f003791"
+                                    },
+                                    {
+                                        "image": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDarjQ33MTkhKB0aj8T5I6dnYC2VlpUQyQAPcjCN9j-No1RJ_dncnL4Ua9YGt-QxvSGzyZY2KBtX6bmT61QNppYUl2o4G_oYvRLqlWDDmOQQikLSgX_yiG_sK68MTXZyLCOW754AoSoTxhAU26fBC4vJT_BzsUy_dEzK2rPBv2zgWoxuk4dlgnqmLgnE9MtsiX98nUWpLnpkX8ACYNlusVYG5S1aRuJFe43uK_b4AqUAWlLtIdVa0WtZw",
+                                            "id": ""
+                                        },
+                                        "badge": "مواد شیمیایی",
+                                        "title": "روان‌کننده پلی‌کربوکسیلات گرید A",
+                                        "subtitle": "افزایش مقاومت فشاری تا ۴۵ درصد و خروج حباب",
+                                        "spec1_label": "بسته‌بندی گالن",
+                                        "spec1_value": "۲۰ لیتر",
+                                        "spec2_label": "پایه رزین",
+                                        "spec2_value": "پلیمری",
+                                        "spec3_label": "دوز مصرفی",
+                                        "spec3_value": "۰.۵ الی ۱٪",
+                                        "price_label": "قیمت گالن ۲۰ لیتری:",
+                                        "price": "۱,۴۵۰,۰۰۰",
+                                        "price_raw": 1450000,
+                                        "button_text": "سفارش تست",
+                                        "_id": "b0e13bb"
+                                    }
+                                ]
                             },
                             "elements": []
                         }
@@ -139,7 +225,7 @@
             ]
         },
         {
-            "id": "a5cd3ee",
+            "id": "e5b456b",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -155,7 +241,7 @@
             },
             "elements": [
                 {
-                    "id": "9d487bc",
+                    "id": "65979a8",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -171,12 +257,12 @@
                     },
                     "elements": [
                         {
-                            "id": "4ad4242",
+                            "id": "4ae8bf1",
                             "elType": "widget",
                             "widgetType": "ls-icon-cards",
                             "settings": {
                                 "variant": "horizontal",
-                                "section_bg": "low",
+                                "section_bg": "canvas",
                                 "heading_title": "چرا گروه صنعتی لاریجانی استون؟",
                                 "heading_desc": "مزیت‌های رقابتی که ما را به اولین انتخاب تولیدکنندگان سنگ مصنوعی تبدیل کرده است",
                                 "heading_align": "center",
@@ -188,7 +274,7 @@
                                         },
                                         "title": "قالب‌های نشکن پلیمری",
                                         "desc": "استفاده از گرانول درجه یک ABS بدون شکنندگی و تغییر فرم حرارتی.",
-                                        "_id": "0064e0d"
+                                        "_id": "e8882b1"
                                     },
                                     {
                                         "icon": {
@@ -197,7 +283,7 @@
                                         },
                                         "title": "بهترین قیمت مستقیم کارخانه",
                                         "desc": "حذف تمامی واسطه‌ها و خرید مستقیم از کارخانه در شهرک صنعتی آبیک.",
-                                        "_id": "5b87dd1"
+                                        "_id": "1fbf35b"
                                     },
                                     {
                                         "icon": {
@@ -206,7 +292,7 @@
                                         },
                                         "title": "مشاوره فرمولاسیون رایگان",
                                         "desc": "ارائه رایگان جدیدترین فرمولاسیون سمنت‌پلاست به خریداران خط تولید.",
-                                        "_id": "b82f483"
+                                        "_id": "7443c1a"
                                     },
                                     {
                                         "icon": {
@@ -215,7 +301,7 @@
                                         },
                                         "title": "ارسال روزانه به سراسر کشور",
                                         "desc": "بسته‌بندی صنعتی پالت‌بندی شده و ارسال سریع به تمامی استان‌ها.",
-                                        "_id": "4242f46"
+                                        "_id": "ff60c02"
                                     }
                                 ]
                             },
@@ -226,7 +312,7 @@
             ]
         },
         {
-            "id": "fe6c5b5",
+            "id": "b017ee1",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -242,7 +328,7 @@
             },
             "elements": [
                 {
-                    "id": "e2a5f01",
+                    "id": "5a3d164",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -258,14 +344,52 @@
                     },
                     "elements": [
                         {
-                            "id": "5d6bf5c",
+                            "id": "2981d76",
                             "elType": "widget",
                             "widgetType": "ls-testimonials",
                             "settings": {
                                 "layout": "slider",
+                                "card_style": "classic",
                                 "rating_text": "",
                                 "heading_eyebrow": "",
-                                "heading_desc": "تجربه فعالان صنعت سنگ مصنوعی از همکاری با مجموعه لاریجانی استون"
+                                "heading_title": "نظرات تولیدکنندگان و همکاران",
+                                "heading_desc": "تجربه فعالان صنعت سنگ مصنوعی از همکاری با مجموعه لاریجانی استون",
+                                "section_bg": "canvas",
+                                "items": [
+                                    {
+                                        "text": "ما خط تولید موزاییک پلیمری‌مون رو با دستگاه‌های مهندس لاریجانی تجهیز کردیم. کیفیت قالب‌ها بی‌نظیره؛ بعد از یک سال کار مداوم حتی یک مورد شکستگی یا تغییر زاویه نداشتیم.",
+                                        "name": "مهندس حسینی",
+                                        "role": "کارخانه موزاییک نگین اصفهان",
+                                        "avatar": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDRxWH6lAYns426zrtdpts5vtmDk4e2mBK8-oj7I6gjHrzalcuX-5PzRNd_h19ev8DX_scWF3okeC3B3wvIYQ7akvCVMrjOJRXZa236ZEdnrSGz6CfFf_cHH9qXvxDE3OOJhaiRundraUt5PqUqWL45TU35g_D_zYNf4tENcjG1GpalPZjD-mzuCFr3WmFgsBE2v0CS00hoyRyX2ruPqR8nIlNG790UHhwvLhPH2dKqTUnxKxXodBPCUw",
+                                            "id": ""
+                                        },
+                                        "stars": 5,
+                                        "_id": "3bcaff7"
+                                    },
+                                    {
+                                        "text": "میز ویبره ۲ موتوره لاریجانی استون ارتعاش کاملاً یکنواختی میده که باعث شده ملات بدون حباب و مثل شیشه دربیاد. ارسال قالب‌های جدیدشون هم ظرف ۴۸ ساعت به تبریز رسید.",
+                                        "name": "علیرضا رادپور",
+                                        "role": "مدیر تولید سنگ مدرن تبریز",
+                                        "avatar": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBhxM-tlDnKA_jjF2X-QvQRpBTeBazNZ1MDpPXJgJ6g0IcmTL-TePp8WLv-AnqkgZ0XfugcAa_JOHVHFeBAQaGbSF-_4uVNx_ug0xEfxbzEbQVSg30M1OEtg1YSXeqzOW0jGB_LAnJyeNT8h8u-Wc_T_HtHq4RjkVYamR-BbvIhuuQdp-Ub7VsX9jIXPGfK_PeG8sQk7UOJC0n5gsE0wcPxjwX4kb6NA1cvOJPsWJKtXgObAYaIFgNRsw",
+                                            "id": ""
+                                        },
+                                        "stars": 5,
+                                        "_id": "5c4ef3a"
+                                    },
+                                    {
+                                        "text": "فرمولاسیونی که برای رزین دادند مصرف سیمان کارگاه رو ۱۵٪ کاهش داد و همزمان مقاومت خمشی قطعات بالا رفت. تیم پشتیبانی همواره پاسخگوی سوالات فنی ما هستند.",
+                                        "name": "کامران مهدوی",
+                                        "role": "صنایع سنگ پارس - شیراز",
+                                        "avatar": {
+                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAvWyRomOK7D6oNY2-vIS-k-fWs5eazUM3Ab2_iW2kLl2fcG6Lsq3IIQwpB7aI_umKmO1S7cQiLapzM2-4TcZFutdWw2vK7iZB7g30evPfhXINM4D8szrzVYo_RXzua7C1zTYq3fPQiUuL4nWIK3x2F4E25iy6CPaaMo1Sp0Jb6Lh3NaxCfRYYE91m7CSdwKBY2APN0GYguTeqBckUbtAmV_OOqiCr6ky4_xrUbLNmkv2JkqTYTAdHrTQ",
+                                            "id": ""
+                                        },
+                                        "stars": 5,
+                                        "_id": "dec209f"
+                                    }
+                                ]
                             },
                             "elements": []
                         }
@@ -274,7 +398,7 @@
             ]
         },
         {
-            "id": "85e8538",
+            "id": "a884ff8",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -290,7 +414,7 @@
             },
             "elements": [
                 {
-                    "id": "04be0c1",
+                    "id": "7564941",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -306,7 +430,7 @@
                     },
                     "elements": [
                         {
-                            "id": "124e2b7",
+                            "id": "ac1678c",
                             "elType": "widget",
                             "widgetType": "ls-cta",
                             "settings": {

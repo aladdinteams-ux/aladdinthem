@@ -39,6 +39,7 @@ class LS_Widget_CTA extends LS_Widget_Base {
 					'soft-card'    => __( 'کارت سبز ملایم', 'larijani' ),
 					'dark-form'    => __( 'کارت تیره + فرم درخواست تماس', 'larijani' ),
 					'catalog-form' => __( 'کارت تیره + فرم دریافت کاتالوگ', 'larijani' ),
+					'consult-band' => __( 'نوار تیره مشاوره + کارت شماره‌ها', 'larijani' ),
 				),
 			)
 		);
@@ -48,6 +49,14 @@ class LS_Widget_CTA extends LS_Widget_Base {
 		$this->ctl( 'title', 'textarea', __( 'عنوان', 'larijani' ), 'آماده راه‌اندازی خط تولید سنگ مصنوعی و قطعات بتنی هستید؟', array( 'rows' => 2 ) );
 		$this->ctl( 'desc', 'textarea', __( 'توضیح', 'larijani' ), 'همین حالا با مهندسین و مشاورین ارشد لاریجانی استون تماس بگیرید و لیست قیمت و فرمولاسیون جامع را به صورت رایگان دریافت کنید.' );
 		$this->ctl( 'center_mobile', 'switch', __( 'وسط‌چین در موبایل', 'larijani' ), '' );
+		$this->end();
+
+		$this->section( 'sec_band', __( 'نوار مشاوره', 'larijani' ), 'content', array( 'variant' => 'consult-band' ) );
+		$this->ctl( 'checks', 'textarea', __( 'موارد تیک‌دار (هر خط یک مورد)', 'larijani' ), "تست قالب‌ها قبل از بارگیری\nارائه طرح اختلاط اختصاصی\nآموزش ترکیب رنگ رگه‌ای و گرانیتی" );
+		$this->ctl( 'phone1_label', 'text', __( 'عنوان شماره اول', 'larijani' ), 'ارتباط مستقیم با مدیر فنی (مهندس لاریجانی):' );
+		$this->ctl( 'phone1', 'text', __( 'شماره اول', 'larijani' ), '09122302685' );
+		$this->ctl( 'phone2_label', 'text', __( 'عنوان شماره دوم', 'larijani' ), 'مسئول واحد فروش و توزیع قالب و رزین:' );
+		$this->ctl( 'phone2', 'text', __( 'شماره دوم', 'larijani' ), '09354431321' );
 		$this->end();
 
 		$this->section( 'sec_buttons', __( 'دکمه‌ها', 'larijani' ) );
@@ -111,7 +120,7 @@ class LS_Widget_CTA extends LS_Widget_Base {
 			<?php echo ls_form_hidden_fields( $s['form_name'] ); // phpcs:ignore ?>
 			<input type="hidden" name="labels[phone]" value="<?php esc_attr_e( 'شماره تماس', 'larijani' ); ?>"><input type="hidden" name="types[phone]" value="tel">
 			<?php if ( 'inline' === $layout ) : ?>
-			<input class="flex-1 px-4 py-3 sm:py-3.5 rounded-xl bg-white text-gray-900 placeholder:text-gray-400 text-xs sm:text-sm focus:ring-2 focus:ring-primary-container" name="fields[phone]" placeholder="<?php echo esc_attr( $s['form_placeholder'] ); ?>" type="text" required>
+			<input class="flex-1 px-4 py-3 sm:py-3.5 rounded-xl bg-white text-gray-900 placeholder:text-gray-400 text-xs sm:text-sm focus:ring-2 focus:ring-primary-container border-0" name="fields[phone]" placeholder="<?php echo esc_attr( $s['form_placeholder'] ); ?>" type="text" required>
 			<button class="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl bg-primary-container hover:bg-primary text-white font-bold text-xs sm:text-sm shadow-md transition whitespace-nowrap" type="submit"><?php echo esc_html( $s['form_button'] ); ?></button>
 			<?php else : ?>
 			<input class="w-full px-4 py-2.5 rounded-xl bg-white/10 text-white placeholder:text-white/50 font-body-md text-body-md focus:bg-white/15 text-left" dir="ltr" name="fields[phone]" placeholder="<?php echo esc_attr( $s['form_placeholder'] ); ?>" type="tel" required>
@@ -136,7 +145,7 @@ class LS_Widget_CTA extends LS_Widget_Base {
 		$badge   = '';
 		if ( $s['badge'] ) {
 			$badge_class = 'soft-card' === $v ? 'bg-white text-primary' : ( 'catalog-form' === $v ? 'bg-primary-container text-white rounded-md' : 'bg-white/10 text-secondary-fixed' );
-			$badge       = '<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full ' . esc_attr( $badge_class ) . ' font-label-badge text-label-badge mb-3">' . ls_icon( $s['badge_icon'], 'text-accent-emerald' ) . esc_html( $s['badge'] ) . '</div>';
+			$badge       = '<div class="inline-flex w-fit items-center gap-2 px-3 py-1 ' . ( 'catalog-form' === $v ? '' : 'rounded-full ' ) . esc_attr( $badge_class ) . ' font-label-badge text-label-badge mb-3">' . ls_icon( $s['badge_icon'], 'text-accent-emerald' ) . esc_html( $s['badge'] ) . '</div>';
 		}
 		$btn1_cls = 'bg-primary-container hover:bg-primary text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full shadow-lg transition-all flex items-center justify-center gap-2 flex-shrink-0';
 		$btn2_map = array(
@@ -146,6 +155,46 @@ class LS_Widget_CTA extends LS_Widget_Base {
 			'white'   => 'bg-surface-card text-on-surface hover:bg-surface-canvas px-space-md py-3 rounded-full font-label-nav text-label-nav shadow-sm transition-all flex items-center justify-center gap-2 flex-shrink-0',
 		);
 		$btn2_cls = $btn2_map[ $s['btn2_style'] ] ?? $btn2_map['glass'];
+
+		if ( 'consult-band' === $v ) :
+			?>
+			<section class="w-full bg-surface-dark text-on-tertiary py-space-2xl my-space-lg relative overflow-hidden">
+				<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin relative z-10">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+						<div class="lg:col-span-8 flex flex-col gap-space-md">
+							<?php if ( $s['badge'] ) : ?>
+							<div class="inline-flex items-center gap-space-xs text-primary-fixed font-label-badge text-label-badge bg-primary-container/40 px-space-md py-1 rounded-full w-fit"><?php echo ls_icon( $s['badge_icon'], 'text-[16px]' ); // phpcs:ignore ?><span><?php echo esc_html( $s['badge'] ); ?></span></div>
+							<?php endif; ?>
+							<h2 class="font-headline-lg text-headline-lg text-on-tertiary"><?php echo ls_kses( $s['title'] ); // phpcs:ignore ?></h2>
+							<?php if ( $s['desc'] ) : ?><p class="font-body-lg text-body-lg text-on-tertiary-container leading-relaxed"><?php echo esc_html( $s['desc'] ); ?></p><?php endif; ?>
+							<?php $checks = ls_lines( $s['checks'] ?? '' ); ?>
+							<?php if ( $checks ) : ?>
+							<div class="flex flex-wrap items-center gap-space-lg pt-space-xs font-body-sm text-body-sm text-outline-variant">
+								<?php foreach ( $checks as $c ) : ?><div class="flex items-center gap-1"><i class="bi bi-check-lg text-primary-fixed text-[18px]" aria-hidden="true"></i><span><?php echo esc_html( $c ); ?></span></div><?php endforeach; ?>
+							</div>
+							<?php endif; ?>
+						</div>
+						<div class="lg:col-span-4 flex flex-col gap-space-md bg-surface-footer/80 p-space-lg rounded-2xl">
+							<?php if ( ! empty( $s['phone1'] ) ) : ?>
+							<div class="flex flex-col gap-1">
+								<span class="text-body-sm font-body-sm text-outline-variant"><?php echo esc_html( $s['phone1_label'] ); ?></span>
+								<a class="font-display-hero text-headline-md text-primary-fixed font-bold hover:text-white transition-colors flex items-center justify-end gap-2" dir="ltr" href="<?php echo esc_url( ls_tel( $s['phone1'] ) ); ?>"><i class="bi bi-telephone text-[22px]" aria-hidden="true"></i><?php echo esc_html( ls_phone_display( $s['phone1'] ) ); ?></a>
+							</div>
+							<?php endif; ?>
+							<?php if ( ! empty( $s['phone2'] ) ) : ?>
+							<div class="flex flex-col gap-1">
+								<span class="text-body-sm font-body-sm text-outline-variant"><?php echo esc_html( $s['phone2_label'] ); ?></span>
+								<a class="font-headline-sm text-headline-sm text-on-tertiary hover:text-primary-fixed transition-colors flex items-center justify-end gap-2" dir="ltr" href="<?php echo esc_url( ls_tel( $s['phone2'] ) ); ?>"><i class="bi bi-phone text-[20px]" aria-hidden="true"></i><?php echo esc_html( ls_phone_display( $s['phone2'] ) ); ?></a>
+							</div>
+							<?php endif; ?>
+							<?php echo $this->button( $s, 1, 'w-full text-center py-3 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-nav text-label-nav transition-all shadow-md flex items-center justify-center gap-2' ); // phpcs:ignore ?>
+						</div>
+					</div>
+				</div>
+			</section>
+			<?php
+			return;
+		endif;
 
 		if ( 'dark-strip' === $v ) :
 			?>
@@ -193,7 +242,7 @@ class LS_Widget_CTA extends LS_Widget_Base {
 		endif;
 
 		$is_form    = in_array( $v, array( 'dark-form', 'catalog-form' ), true );
-		$card_bg    = 'catalog-form' === $v ? 'bg-surface-dark' : 'bg-surface-dark';
+		$card_bg    = 'catalog-form' === $v ? 'bg-[#262E23]' : 'bg-surface-dark';
 		?>
 		<section class="py-10 sm:py-14 <?php echo esc_attr( $bg ); ?>">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

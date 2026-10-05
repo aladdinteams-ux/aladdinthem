@@ -45,6 +45,7 @@ function ls_option_defaults() {
 		'ls_aparat'          => '',
 		'ls_linkedin'        => '',
 		// Header.
+		'ls_header_style'       => 'dark',
 		'ls_header_topbar'      => true,
 		'ls_header_sticky'      => true,
 		'ls_header_search'      => true,
@@ -63,6 +64,7 @@ function ls_option_defaults() {
 		// Blog.
 		'ls_blog_sidebar'      => true,
 		'ls_blog_show_views'   => true,
+		'ls_jalali_dates'      => true,
 		// Forms.
 		'ls_leads_email'       => '',
 		'ls_leads_sms_note'    => '',
@@ -545,4 +547,65 @@ function ls_is_elementor_editor() {
 	}
 	$plugin = \Elementor\Plugin::$instance;
 	return ( $plugin->editor && $plugin->editor->is_edit_mode() ) || ( $plugin->preview && $plugin->preview->is_preview_mode() );
+}
+
+/**
+ * Featured image URL of a post, falling back to the demo image recorded at
+ * setup (`_ls_demo_image`) and finally to the placeholder.
+ *
+ * @param int|WP_Post $post Post.
+ * @param string      $size Image size.
+ * @return string
+ */
+function ls_post_image_url( $post, $size = 'large' ) {
+	$url = get_the_post_thumbnail_url( $post, $size );
+	if ( $url ) {
+		return $url;
+	}
+	$post = get_post( $post );
+	$key  = $post ? get_post_meta( $post->ID, '_ls_demo_image', true ) : '';
+	return $key ? ls_demo_image( $key ) : '';
+}
+
+/**
+ * Convert a Gregorian date to the Jalali (Persian) calendar.
+ *
+ * @param int $gy Year.
+ * @param int $gm Month.
+ * @param int $gd Day.
+ * @return int[] [ year, month, day ]
+ */
+function ls_gregorian_to_jalali( $gy, $gm, $gd ) {
+	$g_d_m = array( 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334 );
+	$gy2   = ( $gm > 2 ) ? ( $gy + 1 ) : $gy;
+	$days  = 355666 + ( 365 * $gy ) + intdiv( $gy2 + 3, 4 ) - intdiv( $gy2 + 99, 100 ) + intdiv( $gy2 + 399, 400 ) + $gd + $g_d_m[ $gm - 1 ];
+	$jy    = -1595 + ( 33 * intdiv( $days, 12053 ) );
+	$days %= 12053;
+	$jy   += 4 * intdiv( $days, 1461 );
+	$days %= 1461;
+	if ( $days > 365 ) {
+		$jy  += intdiv( $days - 1, 365 );
+		$days = ( $days - 1 ) % 365;
+	}
+	if ( $days < 186 ) {
+		$jm = 1 + intdiv( $days, 31 );
+		$jd = 1 + ( $days % 31 );
+	} else {
+		$jm = 7 + intdiv( $days - 186, 30 );
+		$jd = 1 + ( ( $days - 186 ) % 30 );
+	}
+	return array( $jy, $jm, $jd );
+}
+
+/**
+ * Persian (Jalali) date such as «۱۴ اسفند ۱۴۰۳».
+ *
+ * @param int $timestamp Unix timestamp (site time zone is applied).
+ * @return string
+ */
+function ls_jalali_date( $timestamp ) {
+	$months = array( 'فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند' );
+	$parts  = explode( '-', wp_date( 'Y-n-j', $timestamp ) );
+	list( $jy, $jm, $jd ) = ls_gregorian_to_jalali( (int) $parts[0], (int) $parts[1], (int) $parts[2] );
+	return ls_fa_num( $jd . ' ' . $months[ $jm - 1 ] . ' ' . $jy );
 }

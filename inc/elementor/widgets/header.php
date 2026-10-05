@@ -47,6 +47,19 @@ class LS_Widget_Header extends LS_Widget_Base {
 		$hint = __( 'خالی = خواندن از سفارشی‌سازی › تنظیمات قالب لاریجانی', 'larijani' );
 
 		$this->section( 'sec_topbar', __( 'نوار بالا', 'larijani' ) );
+		$this->ctl(
+			'style',
+			'select',
+			__( 'طرح هدر', 'larijani' ),
+			'inherit',
+			array(
+				'options' => array(
+					'inherit' => __( 'طبق تنظیمات قالب / برگه', 'larijani' ),
+					'dark'    => __( 'نوار بالای تیره', 'larijani' ),
+					'light'   => __( 'نوار بالای روشن (کلاسیک)', 'larijani' ),
+				),
+			)
+		);
 		$this->ctl( 'show_topbar', 'switch', __( 'نمایش نوار اطلاعات (دسکتاپ)', 'larijani' ), 'yes' );
 		$this->ctl( 'address', 'text', __( 'آدرس', 'larijani' ), '', array( 'description' => $hint ) );
 		$this->ctl( 'hours', 'text', __( 'ساعات کاری', 'larijani' ), '', array( 'description' => $hint ) );
@@ -86,6 +99,7 @@ class LS_Widget_Header extends LS_Widget_Base {
 	 */
 	protected function render_widget( $s ) {
 		$args = array(
+			'style'            => $s['style'] ?? 'inherit',
 			'show_topbar'      => $this->on( $s, 'show_topbar' ) ? 'yes' : 'no',
 			'address'          => $s['address'],
 			'hours'            => $s['hours'],

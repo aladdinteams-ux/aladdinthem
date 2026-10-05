@@ -4,7 +4,7 @@
     "type": "single-post",
     "content": [
         {
-            "id": "ddff877",
+            "id": "7df6563",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -20,7 +20,7 @@
             },
             "elements": [
                 {
-                    "id": "a4748dc",
+                    "id": "bd53302",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -36,7 +36,7 @@
                     },
                     "elements": [
                         {
-                            "id": "ff29fed",
+                            "id": "e147749",
                             "elType": "widget",
                             "widgetType": "ls-post-hero",
                             "settings": [],
@@ -47,7 +47,7 @@
             ]
         },
         {
-            "id": "591227b",
+            "id": "59e6b6b",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -63,7 +63,7 @@
             },
             "elements": [
                 {
-                    "id": "cc357d1",
+                    "id": "1e230e8",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -79,7 +79,7 @@
                     },
                     "elements": [
                         {
-                            "id": "f64ed5c",
+                            "id": "0213e98",
                             "elType": "widget",
                             "widgetType": "ls-post-content",
                             "settings": [],
@@ -90,7 +90,7 @@
             ]
         },
         {
-            "id": "d73cad8",
+            "id": "66a36b8",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -106,7 +106,7 @@
             },
             "elements": [
                 {
-                    "id": "4c1ab1a",
+                    "id": "b7f9aa5",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -122,7 +122,7 @@
                     },
                     "elements": [
                         {
-                            "id": "a9d06f4",
+                            "id": "af6f629",
                             "elType": "widget",
                             "widgetType": "ls-cta",
                             "settings": {

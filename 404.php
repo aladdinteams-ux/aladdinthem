@@ -20,7 +20,7 @@ if ( ! ls_do_location( '404' ) ) :
 				<p class="font-body-lg text-body-lg text-on-surface-variant"><?php esc_html_e( 'ممکن است آدرس تغییر کرده باشد. از جستجو استفاده کنید یا به صفحه اصلی برگردید.', 'larijani' ); ?></p>
 				<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="w-full max-w-xl bg-surface-card rounded-2xl shadow-sm p-2 flex items-center gap-2">
 					<i class="bi bi-search text-outline text-lg px-3" aria-hidden="true"></i>
-					<input class="flex-1 py-3 text-on-surface placeholder:text-outline" type="search" name="s" placeholder="<?php esc_attr_e( 'جستجو در سایت…', 'larijani' ); ?>">
+					<input class="flex-1 py-3 border-0 focus:ring-0 text-on-surface placeholder:text-outline" type="search" name="s" placeholder="<?php esc_attr_e( 'جستجو در سایت…', 'larijani' ); ?>">
 					<button class="px-5 py-3 rounded-xl bg-primary-container hover:bg-primary text-white font-bold text-sm" type="submit"><?php esc_html_e( 'جستجو', 'larijani' ); ?></button>
 				</form>
 				<div class="flex flex-wrap items-center justify-center gap-3">

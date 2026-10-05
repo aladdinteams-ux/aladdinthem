@@ -404,5 +404,131 @@ function ls_primary_category( $post_id = null ) {
  * @return string
  */
 function ls_post_date( $post_id = null ) {
+	if ( ls_opt( 'jalali_dates' ) ) {
+		return ls_jalali_date( (int) get_post_time( 'U', true, $post_id ) );
+	}
 	return ls_fa_num( get_the_date( '', $post_id ) );
 }
+
+/**
+ * Persian relative time ("۲ روز پیش").
+ *
+ * @param int $timestamp Unix timestamp.
+ * @return string
+ */
+function ls_time_ago( $timestamp ) {
+	$diff  = max( 0, time() - (int) $timestamp );
+	$units = array(
+		YEAR_IN_SECONDS   => __( 'سال', 'larijani' ),
+		MONTH_IN_SECONDS  => __( 'ماه', 'larijani' ),
+		WEEK_IN_SECONDS   => __( 'هفته', 'larijani' ),
+		DAY_IN_SECONDS    => __( 'روز', 'larijani' ),
+		HOUR_IN_SECONDS   => __( 'ساعت', 'larijani' ),
+		MINUTE_IN_SECONDS => __( 'دقیقه', 'larijani' ),
+	);
+	foreach ( $units as $sec => $label ) {
+		if ( $diff >= $sec ) {
+			/* translators: 1: number 2: unit */
+			return ls_fa_num( sprintf( __( '%1$d %2$s پیش', 'larijani' ), floor( $diff / $sec ), $label ) );
+		}
+	}
+	return __( 'لحظاتی پیش', 'larijani' );
+}
+
+/**
+ * Comment markup (wp_list_comments callback) following the design's
+ * "answered workshop question" cards. Replies by the post author / staff get
+ * the "approved by the technical unit" badge.
+ *
+ * @param WP_Comment $comment Comment.
+ * @param array      $args    Args.
+ * @param int        $depth   Depth.
+ */
+function ls_comment_item( $comment, $args, $depth ) {
+	$is_reply = $depth > 1;
+	$staff    = $comment->user_id && ( user_can( $comment->user_id, 'moderate_comments' ) || (int) get_post_field( 'post_author', $comment->comment_post_ID ) === (int) $comment->user_id );
+	$staff    = $staff || get_comment_meta( $comment->comment_ID, '_ls_staff', true );
+	$badge    = get_comment_meta( $comment->comment_ID, '_ls_badge', true );
+	$name     = get_comment_author( $comment );
+	$time     = ls_time_ago( (int) get_comment_date( 'U', $comment ) );
+	$reply    = get_comment_reply_link(
+		array_merge(
+			$args,
+			array(
+				'depth'      => $depth,
+				'max_depth'  => $args['max_depth'],
+				'reply_text' => __( 'پاسخ', 'larijani' ),
+				'before'     => '<span class="font-body-sm text-body-sm font-bold text-primary-container">',
+				'after'      => '</span>',
+			)
+		),
+		$comment
+	);
+	?>
+	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( '', $comment ); ?>>
+	<?php if ( $is_reply ) : ?>
+		<div class="mr-4 lg:mr-8 p-5 rounded-xl bg-surface-card space-y-2 border-r-4 border-primary-container">
+			<div class="flex items-center justify-between gap-2 flex-wrap">
+				<div class="flex items-center gap-2 flex-wrap">
+					<span class="font-headline-sm text-body-md text-surface-dark font-black"><?php echo esc_html( sprintf( /* translators: %s name */ __( 'پاسخ %s', 'larijani' ), $name ) ); ?></span>
+					<?php if ( $staff ) : ?>
+					<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge"><i class="bi bi-patch-check-fill text-[12px]" aria-hidden="true"></i><?php esc_html_e( 'تایید شده توسط واحد فنی', 'larijani' ); ?></span>
+					<?php endif; ?>
+				</div>
+				<span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $time ); ?></span>
+			</div>
+			<div class="font-body-md text-body-md text-on-surface-variant leading-relaxed"><?php comment_text( $comment ); ?></div>
+			<?php echo $reply ? wp_kses_post( $reply ) : ''; ?>
+		</div>
+	<?php else : ?>
+		<div class="p-6 rounded-2xl bg-surface-canvas space-y-4">
+			<div class="flex items-center justify-between gap-3 flex-wrap">
+				<div class="flex items-center gap-3">
+					<div class="w-10 h-10 rounded-full bg-surface-card flex items-center justify-center font-bold text-primary-container text-sm"><?php echo esc_html( ls_initials( $name ) ); ?></div>
+					<div>
+						<span class="font-headline-sm text-body-lg text-surface-dark font-black"><?php echo esc_html( $name ); ?></span>
+						<span class="block font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $time ); ?></span>
+					</div>
+				</div>
+				<?php if ( $badge ) : ?>
+				<span class="inline-flex items-center gap-1 font-label-badge text-label-badge px-2.5 py-1 rounded-full bg-surface-card text-on-surface-variant"><?php echo esc_html( $badge ); ?></span>
+				<?php endif; ?>
+			</div>
+			<?php if ( '0' === $comment->comment_approved ) : ?>
+			<p class="font-body-sm text-body-sm text-accent-amber"><?php esc_html_e( 'دیدگاه شما پس از بررسی منتشر می‌شود.', 'larijani' ); ?></p>
+			<?php endif; ?>
+			<div class="font-body-md text-body-md text-on-surface leading-relaxed"><?php comment_text( $comment ); ?></div>
+			<?php echo $reply ? wp_kses_post( $reply ) : ''; ?>
+		</div>
+	<?php endif; ?>
+	<?php
+}
+
+/**
+ * Comment form: name/e-mail first, then the message (design order) and a
+ * Persian cookie-consent label.
+ *
+ * @param array $fields Fields.
+ * @return array
+ */
+function ls_comment_form_fields( $fields ) {
+	if ( isset( $fields['url'] ) ) {
+		unset( $fields['url'] );
+	}
+	if ( isset( $fields['cookies'] ) ) {
+		$checked           = empty( $_COOKIE[ 'comment_author_' . COOKIEHASH ] ) ? '' : ' checked'; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+		$fields['cookies'] = '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $checked . '> <label for="wp-comment-cookies-consent">' . esc_html__( 'نام و ایمیل من برای دیدگاه‌های بعدی در این مرورگر ذخیره شود.', 'larijani' ) . '</label></p>';
+	}
+	if ( isset( $fields['comment'] ) ) {
+		$comment = $fields['comment'];
+		unset( $fields['comment'] );
+		$cookies = $fields['cookies'] ?? null;
+		unset( $fields['cookies'] );
+		$fields['comment'] = $comment;
+		if ( $cookies ) {
+			$fields['cookies'] = $cookies;
+		}
+	}
+	return $fields;
+}
+add_filter( 'comment_form_fields', 'ls_comment_form_fields' );

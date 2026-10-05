@@ -74,7 +74,7 @@ function ls_render_blog_hero( $s = array() ) {
 					<label class="flex items-center gap-3 w-full px-3 py-2 flex-1">
 						<i class="bi bi-search text-outline text-lg" aria-hidden="true"></i>
 						<span class="screen-reader-text"><?php esc_html_e( 'جستجو', 'larijani' ); ?></span>
-						<input class="w-full bg-transparent text-on-surface placeholder:text-outline font-body-md text-body-md" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php echo esc_attr( $s['search_placeholder'] ); ?>" type="search">
+						<input class="w-full bg-transparent border-0 p-0 focus:ring-0 text-on-surface placeholder:text-outline font-body-md text-body-md" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php echo esc_attr( $s['search_placeholder'] ); ?>" type="search">
 					</label>
 					<button class="w-full sm:w-auto px-6 py-3 rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm hover:bg-primary transition-all flex items-center justify-center gap-2 shadow-sm flex-shrink-0" type="submit">
 						<span><?php echo esc_html( $s['search_button'] ); ?></span><i class="bi bi-arrow-left" aria-hidden="true"></i>
@@ -139,9 +139,11 @@ function ls_render_featured_post( $s = array() ) {
 	$post = ls_get_featured_post( (int) $s['post_id'] );
 	if ( $post ) {
 		$d      = ls_post_data( $post );
-		$image  = get_the_post_thumbnail_url( $post, 'large' );
-		$author = get_the_author_meta( 'display_name', $post->post_author );
-		$role   = $s['author_role'] ? $s['author_role'] : get_the_author_meta( 'description', $post->post_author );
+		$image  = ls_post_image_url( $post, 'large' );
+		$author = get_post_meta( $post->ID, '_ls_author_name', true );
+		$author = $author ? $author : get_the_author_meta( 'display_name', $post->post_author );
+		$role   = $s['author_role'] ? $s['author_role'] : (string) get_post_meta( $post->ID, '_ls_author_role', true );
+		$role   = $role ? $role : get_the_author_meta( 'description', $post->post_author );
 		$views  = ls_post_views( $post->ID );
 	} elseif ( $s['fallback'] ) {
 		$d      = $s['fallback'];
@@ -653,6 +655,14 @@ function ls_render_post_hero( $s = array() ) {
 	$caption = $s['caption'] ? $s['caption'] : get_post_meta( $post_id, '_ls_image_caption', true );
 	$ibadge  = $s['image_badge'] ? $s['image_badge'] : get_post_meta( $post_id, '_ls_image_badge', true );
 	$share   = ls_share_links();
+	if ( ! $s['metrics'] ) {
+		$s['metrics'] = ls_post_metrics( $post_id );
+	}
+	$author_meta = get_post_meta( $post_id, '_ls_author_name', true );
+	if ( $author_meta ) {
+		$author = $author_meta;
+		$role   = $s['author_role'] ? $s['author_role'] : (string) get_post_meta( $post_id, '_ls_author_role', true );
+	}
 	?>
 	<?php if ( 'yes' === $s['show_breadcrumb'] ) : ?>
 	<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-12 pt-6 pb-4">
@@ -699,9 +709,10 @@ function ls_render_post_hero( $s = array() ) {
 				<?php endif; ?>
 			</div>
 			<?php endif; ?>
-			<?php if ( 'yes' === $s['show_image'] && has_post_thumbnail() ) : ?>
+			<?php $hero_img = 'yes' === $s['show_image'] ? ls_post_image_url( $post_id, 'ls-wide' ) : ''; ?>
+			<?php if ( $hero_img ) : ?>
 			<div class="relative w-full rounded-3xl overflow-hidden shadow-xl aspect-[16/9] sm:aspect-[21/9] max-h-[520px]">
-				<?php the_post_thumbnail( 'ls-wide', array( 'class' => 'w-full h-full object-cover', 'loading' => 'eager' ) ); ?>
+				<?php echo ls_img( $hero_img, 'w-full h-full object-cover', get_the_title( $post_id ), 'ls-wide', false ); // phpcs:ignore ?>
 				<?php if ( $caption || $ibadge ) : ?>
 				<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/80 via-surface-dark/20 to-transparent"></div>
 				<div class="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 left-4 sm:left-6 flex flex-wrap items-center justify-between gap-4 text-on-primary">
@@ -734,7 +745,7 @@ function ls_render_post_hero( $s = array() ) {
  * @return array [ [id, html], ... ]
  */
 function ls_split_content_sections( $content ) {
-	$parts    = preg_split( '/(?=<h2[\s>])/i', $content );
+	$parts    = preg_split( '/(?=<h2[\s>])|(?=<div class="ls-article-block)/i', $content );
 	$sections = array();
 	$n        = 0;
 	foreach ( $parts as $part ) {
@@ -781,7 +792,11 @@ function ls_render_post_body( $s = array() ) {
 	echo '<div class="ls-article flex flex-col gap-10">';
 	if ( 'yes' === $s['split_sections'] ) {
 		foreach ( ls_split_content_sections( $content ) as $sec ) {
-			echo '<section class="bg-surface-card rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm ls-prose"' . ( $sec[0] ? ' id="' . esc_attr( $sec[0] ) . '-card"' : '' ) . '>' . $sec[1] . '</section>'; // phpcs:ignore
+			if ( 0 === strpos( ltrim( $sec[1] ), '<div class="ls-article-block' ) ) {
+				echo $sec[1]; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- post content.
+				continue;
+			}
+			echo '<section class="bg-surface-card rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm space-y-6 ls-prose"' . ( $sec[0] ? ' id="' . esc_attr( $sec[0] ) . '-card"' : '' ) . '>' . $sec[1] . '</section>'; // phpcs:ignore
 		}
 	} else {
 		echo '<section class="bg-surface-card rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm ls-prose">' . $content . '</section>'; // phpcs:ignore
@@ -799,8 +814,10 @@ function ls_render_post_body( $s = array() ) {
 
 	if ( 'yes' === $s['show_author'] ) {
 		$aid  = (int) get_post_field( 'post_author', get_the_ID() );
-		$name = get_the_author_meta( 'display_name', $aid );
-		$bio  = get_the_author_meta( 'description', $aid );
+		$name = get_post_meta( get_the_ID(), '_ls_author_name', true );
+		$name = $name ? $name : get_the_author_meta( 'display_name', $aid );
+		$bio  = get_post_meta( get_the_ID(), '_ls_author_bio', true );
+		$bio  = $bio ? $bio : get_the_author_meta( 'description', $aid );
 		?>
 		<div class="bg-surface-card rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row items-center sm:items-start gap-6">
 			<div class="w-20 h-20 rounded-2xl bg-surface-canvas p-1 shrink-0 shadow-sm"><?php echo get_avatar( $aid, 160, '', $name, array( 'class' => 'w-full h-full rounded-xl object-cover' ) ); ?></div>
@@ -888,6 +905,7 @@ function ls_render_post_comments( $s = array() ) {
 function ls_render_single_sidebar() {
 	echo '<div class="sticky top-28 space-y-6">';
 	ls_render_toc();
+	ls_render_resin_calculator();
 	ls_render_sidebar_cta();
 	ls_render_popular_posts(
 		array(
@@ -904,4 +922,34 @@ function ls_render_single_sidebar() {
 		echo '</div>';
 	}
 	echo '</div>';
+}
+
+/**
+ * Post metric cards stored in `_ls_metrics` (one per line:
+ * label | value | unit | icon | tone | note | note icon).
+ *
+ * @param int $post_id Post id.
+ * @return array
+ */
+function ls_post_metrics( $post_id ) {
+	$out = array();
+	foreach ( ls_lines( (string) get_post_meta( $post_id, '_ls_metrics', true ) ) as $line ) {
+		$p = array_map( 'trim', explode( '|', $line ) );
+		if ( count( $p ) < 2 ) {
+			continue;
+		}
+		$tone  = $p[4] ?? 'primary';
+		$out[] = array(
+			'label'      => $p[0],
+			'value'      => $p[1],
+			'unit'       => $p[2] ?? '',
+			'icon'       => $p[3] ?? '',
+			'tone'       => $tone,
+			'value_tone' => 'emerald' === $tone && 0 === strpos( $p[1], '+' ) ? 'emerald' : '',
+			'note'       => $p[5] ?? '',
+			'note_icon'  => $p[6] ?? 'bi bi-check2',
+			'note_tone'  => false !== strpos( $p[6] ?? '', 'graph-up' ) ? 'emerald' : '',
+		);
+	}
+	return $out;
 }

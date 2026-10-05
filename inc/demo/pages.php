@@ -43,6 +43,7 @@ function ls_demo_layouts() {
 		'home-classic'    => array(
 			'title' => 'صفحه اصلی (نسخه کلاسیک)',
 			'kind'  => 'page',
+			'meta'  => array( '_ls_header_style' => 'light' ),
 			'rows'  => array(
 				array( 'w' => 'ls-hero-classic' ),
 				array( 'w' => 'ls-categories' ),
@@ -53,14 +54,22 @@ function ls_demo_layouts() {
 						'heading_title'     => 'تجهیزات و قالب‌های برگزیده',
 						'heading_desc'      => 'پرفروش‌ترین محصولات خط تولید با گارانتی رسمی شرکت',
 						'heading_link_text' => 'مشاهده همه محصولات',
+						'heading_link'      => '/shop/',
 						'section_bg'        => 'white-bordered',
+						'card_style'        => 'showcase',
+						'items'             => array(
+							array( 'image' => 'home1_product_1', 'badge' => 'ماشین‌آلات اصلی', 'title' => 'میز ویبره صنعتی دور متغیر', 'subtitle' => 'موتور اروپایی ضد شوک، شاسی صنعتی', 'spec1_label' => 'ابعاد میز', 'spec1_value' => '۲×۱ متر', 'spec2_label' => 'نوع ویبره', 'spec2_value' => '۲ موتوره', 'spec3_label' => 'گارانتی تعویض', 'spec3_value' => '۲۴ ماه', 'price_label' => 'قیمت محصول:', 'price' => '۴۸,۰۰۰,۰۰۰', 'price_raw' => 48000000, 'button_text' => 'سفارش سریع' ),
+							array( 'image' => 'home1_product_2', 'badge' => 'قالب نشکن ABS', 'title' => 'قالب واش‌بتن شیاردار ۴۰×۴۰', 'subtitle' => 'مواد درجه یک تایوانی، عدم چسبندگی ملات', 'spec1_label' => 'سایز (cm)', 'spec1_value' => '۴۰×۴۰', 'spec2_label' => 'متریال', 'spec2_value' => 'ABS نشکن', 'spec3_label' => 'تیراژ کارکرد', 'spec3_value' => '+۵۰۰ بار', 'price_label' => 'قیمت هر عدد:', 'price' => '۱۱۰,۰۰۰', 'price_raw' => 110000, 'button_text' => 'خرید عمده' ),
+							array( 'image' => 'home1_product_3', 'badge' => 'نما و صراحی', 'title' => 'قالب صراحی گرد رومی ۷۰ سانت', 'subtitle' => 'دو تکه با پین قفل‌کننده آسان‌بازشو', 'spec1_label' => 'ارتفاع', 'spec1_value' => '۷۰ cm', 'spec2_label' => 'نوع جنس', 'spec2_value' => 'فایبرگلاس', 'spec3_label' => 'کیفیت لعاب', 'spec3_value' => 'سطح آینه‌ای', 'price_label' => 'قیمت هر جفت:', 'price' => '۲۹۰,۰۰۰', 'price_raw' => 290000, 'button_text' => 'سفارش سریع' ),
+							array( 'image' => 'home1_product_4', 'badge' => 'مواد شیمیایی', 'title' => 'روان‌کننده پلی‌کربوکسیلات گرید A', 'subtitle' => 'افزایش مقاومت فشاری تا ۴۵ درصد و خروج حباب', 'spec1_label' => 'بسته‌بندی گالن', 'spec1_value' => '۲۰ لیتر', 'spec2_label' => 'پایه رزین', 'spec2_value' => 'پلیمری', 'spec3_label' => 'دوز مصرفی', 'spec3_value' => '۰.۵ الی ۱٪', 'price_label' => 'قیمت گالن ۲۰ لیتری:', 'price' => '۱,۴۵۰,۰۰۰', 'price_raw' => 1450000, 'button_text' => 'سفارش تست' ),
+						),
 					),
 				),
 				array(
 					'w' => 'ls-icon-cards',
 					's' => array(
 						'variant'       => 'horizontal',
-						'section_bg'    => 'low',
+						'section_bg'    => 'canvas',
 						'heading_title' => 'چرا گروه صنعتی لاریجانی استون؟',
 						'heading_desc'  => 'مزیت‌های رقابتی که ما را به اولین انتخاب تولیدکنندگان سنگ مصنوعی تبدیل کرده است',
 						'heading_align' => 'center',
@@ -72,7 +81,23 @@ function ls_demo_layouts() {
 						),
 					),
 				),
-				array( 'w' => 'ls-testimonials', 's' => array( 'layout' => 'slider', 'rating_text' => '', 'heading_eyebrow' => '', 'heading_desc' => 'تجربه فعالان صنعت سنگ مصنوعی از همکاری با مجموعه لاریجانی استون' ) ),
+				array(
+					'w' => 'ls-testimonials',
+					's' => array(
+						'layout'          => 'slider',
+						'card_style'      => 'classic',
+						'rating_text'     => '',
+						'heading_eyebrow' => '',
+						'heading_title'   => 'نظرات تولیدکنندگان و همکاران',
+						'heading_desc'    => 'تجربه فعالان صنعت سنگ مصنوعی از همکاری با مجموعه لاریجانی استون',
+						'section_bg'      => 'canvas',
+						'items'           => array(
+							array( 'text' => 'ما خط تولید موزاییک پلیمری‌مون رو با دستگاه‌های مهندس لاریجانی تجهیز کردیم. کیفیت قالب‌ها بی‌نظیره؛ بعد از یک سال کار مداوم حتی یک مورد شکستگی یا تغییر زاویه نداشتیم.', 'name' => 'مهندس حسینی', 'role' => 'کارخانه موزاییک نگین اصفهان', 'avatar' => ls_demo_media( 'testimonial_1' ), 'stars' => 5 ),
+							array( 'text' => 'میز ویبره ۲ موتوره لاریجانی استون ارتعاش کاملاً یکنواختی میده که باعث شده ملات بدون حباب و مثل شیشه دربیاد. ارسال قالب‌های جدیدشون هم ظرف ۴۸ ساعت به تبریز رسید.', 'name' => 'علیرضا رادپور', 'role' => 'مدیر تولید سنگ مدرن تبریز', 'avatar' => ls_demo_media( 'testimonial_2' ), 'stars' => 5 ),
+							array( 'text' => 'فرمولاسیونی که برای رزین دادند مصرف سیمان کارگاه رو ۱۵٪ کاهش داد و همزمان مقاومت خمشی قطعات بالا رفت. تیم پشتیبانی همواره پاسخگوی سوالات فنی ما هستند.', 'name' => 'کامران مهدوی', 'role' => 'صنایع سنگ پارس - شیراز', 'avatar' => ls_demo_media( 'testimonial_3' ), 'stars' => 5 ),
+						),
+					),
+				),
 				array(
 					'w' => 'ls-cta',
 					's' => array(
@@ -260,6 +285,66 @@ function ls_demo_layouts() {
 			'title' => 'فروشگاه و کاتالوگ',
 			'kind'  => 'page',
 			'rows'  => ls_demo_shop_rows(),
+		),
+		'store'           => array(
+			'title' => 'فروشگاه محصولات',
+			'kind'  => 'page',
+			'rows'  => array(
+				array(
+					'w' => 'ls-shop-hero',
+					's' => array(
+						'variant'    => 'bar',
+						'badge'      => 'بزرگترین بانک قالب‌های ABS نشکن و ماشین‌آلات قطعات بتنی در کشور',
+						'badge_icon' => 'patch-check-fill',
+						'desc'       => 'تأمین بی‌واسطه بیش از ۴۰۰ مدل قالب تزریقی ضدسایش، میزهای ویبره با ارتعاش یکنواخت، میکسر ۵۰۰ کیلویی تخصصی و افزودنی‌های پلیمری فرموله‌شده برای کارخانجات و کارگاه‌های سراسر ایران.',
+					),
+				),
+				array(
+					'w' => 'ls-catalog',
+					's' => array(
+						'source'             => 'manual',
+						'layout'             => 'store',
+						'items'              => 'demo:store_items',
+						'search_placeholder' => 'جستجوی قالب، ویبره، رزین یا ابعاد...',
+						'chips'              => array(
+							array( 'key' => 'molds', 'label' => 'قالب‌های ABS و کامپوزیت (۴)', 'icon' => '' ),
+							array( 'key' => 'machinery', 'label' => 'ماشین‌آلات و میکسرها (۲)', 'icon' => '' ),
+							array( 'key' => 'materials', 'label' => 'رزین و رنگدانه‌های صنعتی (۲)', 'icon' => '' ),
+							array( 'key' => 'ready-stock', 'label' => 'تحویل فوری از انبار', 'icon' => 'bi bi-dot-pulse' ),
+						),
+						'footer_note'        => 'نمایش ۱ تا ۸ از بیش از ۴۰۰ مدل قالب و ماشین‌آلات موجود در انبار مرکزی',
+					),
+				),
+				array(
+					'w' => 'ls-cta',
+					's' => array(
+						'variant'    => 'consult-band',
+						'badge'      => 'مشاوره تخصصی مهندسی و راه‌اندازی خط تولید کارگاهی',
+						'badge_icon' => 'headset',
+						'title'      => 'نمی‌دانید چه قالبی برای شرایط بازار منطقه شما پرسودتر است؟',
+						'desc'       => 'مهندسین لاریجانی استون، از تیراژ روزانه تا محاسبه مقدار مصرف رزین پلی‌کربوکسیلات، درصد سیمان، دانه‌بندی سیلیس و انتخاب ابعاد میز ویبره را به صورت کاملاً رایگان برای کارگاه شما آنالیز می‌کنند.',
+						'btn1_text'  => 'درخواست تماس فوری کارشناس',
+						'btn1_icon'  => '',
+						'btn1_link'  => 'tel:09122302685',
+					),
+				),
+				array(
+					'w' => 'ls-icon-cards',
+					's' => array(
+						'variant'         => 'guide',
+						'columns'         => '3',
+						'columns_tablet'  => '3',
+						'section_bg'      => 'none',
+						'heading_eyebrow' => 'راهنمای تخصصی کارگاهی',
+						'heading_title'   => 'تفاوت قالب‌های ABS پلیمری لاریجانی با قالب‌های ارزان‌قیمت بازیافتی',
+						'items'           => array(
+							array( 'icon' => 'patch-check-fill', 'title' => 'ضدپوسته و عدم تغییر فرم', 'desc' => 'به دلیل استفاده از ورق‌های درجه یک با ضخامت واقعی ۴ و ۵ میلی‌متر، حرارت ناشی از هیدراتاسیون سیمان و ضربات ویبره موجب خمیدگی لبه‌ها و پریدگی گوشه سنگ تولیدی نمی‌شود.' ),
+							array( 'icon' => 'magic', 'title' => 'جدایش بدون روغن نامرغوب', 'desc' => 'سطوح قالب‌ها در فرآیند پولیش CNC صیقل داده شده‌اند؛ بنابراین سنگ بدون ایجاد لکه چربی یا حباب‌های هوای ریز به آسانی با یک چرخش دست از قالب خارج می‌شود.' ),
+							array( 'icon' => 'arrow-repeat', 'title' => 'توجیه اقتصادی تیراژ بالا', 'desc' => 'در حالی که قالب‌های نامرغوب پس از ۵۰ الی ۸۰ شات دچار شکنندگی می‌شوند، قالب‌های لاریجانی استون حداقل ۵۰۰ سیکل بدون افت براقیت سطح سنگ، بازدهی مداوم خواهند داشت.' ),
+						),
+					),
+				),
+			),
 		),
 		'product-sample'  => array(
 			'title' => 'نمونه صفحه محصول',

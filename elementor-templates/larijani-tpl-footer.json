@@ -4,7 +4,7 @@
     "type": "footer",
     "content": [
         {
-            "id": "edb336e",
+            "id": "cbe5922",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -20,7 +20,7 @@
             },
             "elements": [
                 {
-                    "id": "ac7d39c",
+                    "id": "324e1cf",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -36,7 +36,7 @@
                     },
                     "elements": [
                         {
-                            "id": "3ea795d",
+                            "id": "3dfc16f",
                             "elType": "widget",
                             "widgetType": "ls-footer",
                             "settings": [],

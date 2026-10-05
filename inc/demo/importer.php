@@ -133,39 +133,254 @@ function ls_el_build( $rows ) {
 }
 
 /**
- * Admin page.
+ * Admin page (under the «لاریجانی استون» menu).
  */
 function ls_setup_menu() {
-	add_theme_page( __( 'راه‌اندازی قالب لاریجانی', 'larijani' ), __( 'راه‌اندازی لاریجانی', 'larijani' ), 'manage_options', 'ls-setup', 'ls_setup_page' );
+	add_submenu_page( 'ls-settings', __( 'راه‌اندازی و درون‌ریزی', 'larijani' ), __( 'راه‌اندازی و درون‌ریزی', 'larijani' ), 'manage_options', 'ls-setup', 'ls_setup_page' );
 }
-add_action( 'admin_menu', 'ls_setup_menu' );
+add_action( 'admin_menu', 'ls_setup_menu', 20 );
 
 /**
- * Redirect to the setup page after activation.
+ * Automatic setup when the theme is activated: pages, Theme Builder
+ * templates, menus, front page, sample content and Elementor global colours.
+ * Runs once per site (re-run any time from the setup page). Demo images are
+ * copied to the media library in the background (WP-Cron).
+ *
+ * Disable with: add_filter( 'ls_auto_setup_on_activation', '__return_false' );
  */
-function ls_setup_redirect() {
-	if ( is_admin() && current_user_can( 'manage_options' ) && ! get_option( 'ls_demo_imported' ) ) {
-		set_transient( 'ls_show_setup_notice', 1, DAY_IN_SECONDS );
+function ls_auto_setup() {
+	if ( get_option( 'ls_auto_setup_done' ) || ! apply_filters( 'ls_auto_setup_on_activation', true ) ) {
+		return;
+	}
+	if ( ! current_user_can( 'switch_themes' ) && ! ( defined( 'WP_CLI' ) && WP_CLI ) ) {
+		update_option( 'ls_auto_setup_pending', 1, false ); // Finish on the next admin visit.
+		return;
+	}
+	delete_option( 'ls_auto_setup_pending' );
+	$fresh = (bool) get_option( 'fresh_site' );
+	$parts = array( 'pages', 'templates', 'assign', 'menus', 'projects', 'kit' );
+	// Sample articles / products only where they cannot clutter real content.
+	$posts = wp_count_posts( 'post' );
+	if ( $fresh || (int) $posts->publish <= 1 ) {
+		$parts[] = 'posts';
+	}
+	if ( ls_has_woo() && ! wc_get_products( array( 'limit' => 1, 'return' => 'ids' ) ) ) {
+		$parts[] = 'products';
+	}
+	if ( $fresh ) {
+		ls_cleanup_fresh_site();
+	}
+	$report = ls_run_import( $parts );
+	update_option( 'ls_auto_setup_done', time(), false );
+	update_option(
+		'ls_setup_state',
+		array(
+			'elementor' => ls_has_elementor(),
+			'pro'       => ls_has_elementor_pro(),
+			'woo'       => ls_has_woo(),
+		),
+		false
+	);
+	ls_schedule_image_import();
+	set_transient( 'ls_import_report', $report, HOUR_IN_SECONDS );
+	set_transient( 'ls_show_setup_notice', 'done', DAY_IN_SECONDS );
+}
+add_action( 'after_switch_theme', 'ls_auto_setup' );
+
+/**
+ * Theme activated by a non-interactive request (e.g. WP-CLI): run the setup on the next admin visit.
+ */
+function ls_auto_setup_pending() {
+	if ( get_option( 'ls_auto_setup_pending' ) && current_user_can( 'switch_themes' ) && ! wp_doing_ajax() ) {
+		ls_auto_setup();
 	}
 }
-add_action( 'after_switch_theme', 'ls_setup_redirect' );
+add_action( 'admin_init', 'ls_auto_setup_pending', 5 );
+
+/**
+ * Remove WordPress' sample content on a brand-new site (Hello world!, Sample
+ * Page, default widgets) and enable pretty permalinks.
+ */
+function ls_cleanup_fresh_site() {
+	$hello = get_page_by_path( 'hello-world', OBJECT, 'post' );
+	if ( $hello ) {
+		wp_delete_post( $hello->ID, true );
+	}
+	$sample = get_page_by_path( 'sample-page', OBJECT, 'page' );
+	if ( $sample ) {
+		wp_delete_post( $sample->ID, true );
+	}
+	$default_cat = get_term( (int) get_option( 'default_category' ), 'category' );
+	if ( $default_cat && ! is_wp_error( $default_cat ) && 'uncategorized' === $default_cat->slug ) {
+		wp_update_term( $default_cat->term_id, 'category', array( 'name' => __( 'مقالات عمومی', 'larijani' ) ) );
+	}
+	$sidebars = get_option( 'sidebars_widgets', array() );
+	foreach ( array( 'blog-sidebar', 'shop-sidebar', 'sidebar-1', 'sidebar-2' ) as $sb ) {
+		if ( ! empty( $sidebars[ $sb ] ) ) {
+			$sidebars['wp_inactive_widgets'] = array_merge( (array) ( $sidebars['wp_inactive_widgets'] ?? array() ), (array) $sidebars[ $sb ] );
+			$sidebars[ $sb ]                 = array();
+		}
+	}
+	update_option( 'sidebars_widgets', $sidebars );
+	if ( '' === (string) get_option( 'permalink_structure' ) ) {
+		update_option( 'permalink_structure', '/%postname%/' );
+	}
+}
+
+/**
+ * Finish the setup when Elementor, Elementor Pro or WooCommerce is activated
+ * after the theme (templates, conditions, products, shop page).
+ */
+function ls_maybe_complete_setup() {
+	$state = get_option( 'ls_setup_state' );
+	if ( ! is_array( $state ) || ! current_user_can( 'manage_options' ) || wp_doing_ajax() ) {
+		return;
+	}
+	$parts = array();
+	if ( ls_has_elementor() && empty( $state['elementor'] ) ) {
+		$parts = array_merge( $parts, array( 'templates', 'assign', 'kit' ) );
+	}
+	if ( ls_has_elementor_pro() && empty( $state['pro'] ) ) {
+		$parts = array_merge( $parts, array( 'templates', 'assign' ) );
+	}
+	if ( ls_has_woo() && empty( $state['woo'] ) ) {
+		$parts = array_merge( $parts, array( 'templates', 'assign', 'products' ) );
+		$shop  = get_page_by_path( 'shop' );
+		if ( $shop && get_post_meta( $shop->ID, '_ls_demo_page', true ) && (int) get_option( 'woocommerce_shop_page_id' ) !== $shop->ID ) {
+			update_option( 'woocommerce_shop_page_id', $shop->ID );
+		}
+	}
+	update_option(
+		'ls_setup_state',
+		array(
+			'elementor' => ls_has_elementor(),
+			'pro'       => ls_has_elementor_pro(),
+			'woo'       => ls_has_woo(),
+		),
+		false
+	);
+	if ( $parts ) {
+		ls_run_import( array_unique( $parts ) );
+		ls_schedule_image_import();
+	}
+}
+add_action( 'admin_init', 'ls_maybe_complete_setup', 20 );
+
+/**
+ * Queue the background copy of the design images into the media library.
+ */
+function ls_schedule_image_import() {
+	if ( apply_filters( 'ls_import_demo_images', true ) && ! wp_next_scheduled( 'ls_import_images_event' ) ) {
+		wp_schedule_single_event( time() + 20, 'ls_import_images_event' );
+	}
+}
+
+/**
+ * Cron: sideload images, set featured images and switch saved layouts to the local copies.
+ */
+function ls_import_images_cron() {
+	ls_import_images();
+	ls_attach_demo_thumbnails();
+	ls_localize_demo_urls();
+}
+add_action( 'ls_import_images_event', 'ls_import_images_cron' );
+
+/**
+ * Give demo posts / projects / products their imported featured image.
+ */
+function ls_attach_demo_thumbnails() {
+	$items = get_posts(
+		array(
+			'post_type'      => array( 'post', 'ls_project', 'product' ),
+			'post_status'    => 'any',
+			'posts_per_page' => 200,
+			'meta_key'       => '_ls_demo_image', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			'fields'         => 'ids',
+		)
+	);
+	foreach ( $items as $id ) {
+		if ( has_post_thumbnail( $id ) ) {
+			continue;
+		}
+		$att = ls_demo_image_id( get_post_meta( $id, '_ls_demo_image', true ) );
+		if ( $att ) {
+			set_post_thumbnail( $id, $att );
+		}
+	}
+}
+
+/**
+ * Replace remote design image URLs saved in the theme's pages/templates with
+ * the media-library copies (keeps the site independent of the design CDN).
+ */
+function ls_localize_demo_urls() {
+	$local = get_option( 'ls_demo_images_local', array() );
+	if ( ! is_array( $local ) || ! $local ) {
+		return;
+	}
+	$remote = ls_demo_images();
+	$search = array();
+	$repl   = array();
+	foreach ( $local as $key => $url ) {
+		if ( ! empty( $remote[ $key ] ) && $url ) {
+			$search[] = str_replace( '/', '\\/', $remote[ $key ] );
+			$repl[]   = str_replace( '/', '\\/', $url );
+			$search[] = $remote[ $key ];
+			$repl[]   = $url;
+		}
+	}
+	$ids = get_posts(
+		array(
+			'post_type'      => array( 'page', 'elementor_library' ),
+			'post_status'    => 'any',
+			'posts_per_page' => 100,
+			'meta_key'       => '_ls_demo_page', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+			'fields'         => 'ids',
+		)
+	);
+	foreach ( $ids as $id ) {
+		$data = get_post_meta( $id, '_elementor_data', true );
+		if ( ! is_string( $data ) || '' === $data ) {
+			continue;
+		}
+		$new = str_replace( $search, $repl, $data );
+		if ( $new !== $data ) {
+			update_post_meta( $id, '_elementor_data', wp_slash( $new ) );
+		}
+	}
+	if ( ls_has_elementor() ) {
+		\Elementor\Plugin::$instance->files_manager->clear_cache();
+	}
+}
 
 /**
  * Setup notice.
  */
 function ls_setup_notice() {
-	if ( ! get_transient( 'ls_show_setup_notice' ) || ! current_user_can( 'manage_options' ) ) {
+	$flag = get_transient( 'ls_show_setup_notice' );
+	if ( ! $flag || ! current_user_can( 'manage_options' ) ) {
 		return;
 	}
-	$screen = get_current_screen();
-	if ( $screen && 'appearance_page_ls-setup' === $screen->id ) {
+	if ( isset( $_GET['page'] ) && 'ls-setup' === $_GET['page'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return;
+	}
+	if ( 'done' === $flag ) {
+		printf(
+			'<div class="notice notice-success is-dismissible"><p><strong>%s</strong> %s <a class="button button-primary" href="%s">%s</a> <a class="button" href="%s" target="_blank">%s</a></p></div>',
+			esc_html__( 'قالب لاریجانی استون فعال شد و برگه‌ها، منوها و صفحه اصلی به‌صورت خودکار ساخته شدند.', 'larijani' ),
+			esc_html__( 'تنظیمات قالب در منوی «لاریجانی استون» پیشخوان است.', 'larijani' ),
+			esc_url( admin_url( 'admin.php?page=ls-settings' ) ),
+			esc_html__( 'تنظیمات قالب', 'larijani' ),
+			esc_url( home_url( '/' ) ),
+			esc_html__( 'مشاهده سایت', 'larijani' )
+		);
 		return;
 	}
 	printf(
 		'<div class="notice notice-success is-dismissible"><p><strong>%s</strong> %s <a class="button button-primary" href="%s">%s</a></p></div>',
 		esc_html__( 'قالب لاریجانی استون فعال شد.', 'larijani' ),
 		esc_html__( 'برای ساخت خودکار صفحات، منوها و قالب‌های تم‌بیلدر:', 'larijani' ),
-		esc_url( admin_url( 'themes.php?page=ls-setup' ) ),
+		esc_url( admin_url( 'admin.php?page=ls-setup' ) ),
 		esc_html__( 'راه‌اندازی یک‌کلیکی', 'larijani' )
 	);
 }
@@ -186,12 +401,12 @@ function ls_setup_page() {
 		__( 'ووکامرس', 'larijani' )          => ls_has_woo(),
 	);
 	?>
-	<div class="wrap" dir="rtl" style="max-width:900px">
+	<div class="wrap ls-admin" dir="rtl">
 		<h1><?php esc_html_e( 'راه‌اندازی قالب لاریجانی استون', 'larijani' ); ?></h1>
 		<?php if ( $report ) : ?>
 		<div class="notice notice-success"><p><?php echo wp_kses_post( $report ); ?></p></div>
 		<?php endif; ?>
-		<div class="card" style="max-width:none">
+		<div class="ls-card ls-card-wide">
 			<h2><?php esc_html_e( 'وضعیت افزونه‌ها', 'larijani' ); ?></h2>
 			<ul>
 				<?php foreach ( $status as $label => $ok ) : ?>
@@ -200,7 +415,7 @@ function ls_setup_page() {
 			</ul>
 			<p><?php esc_html_e( 'المنتور رایگان برای ویرایش بصری لازم است. با المنتور پرو، قالب‌های هدر، فوتر، تک‌نوشته، آرشیو، محصول و فروشگاه با شرط نمایش در تم‌بیلدر ثبت می‌شوند. بدون پرو، همین قالب‌ها از طریق «سفارشی‌سازی › تنظیمات قالب لاریجانی › تم‌بیلدر» به سایت متصل می‌شوند.', 'larijani' ); ?></p>
 		</div>
-		<form method="post" class="card" style="max-width:none">
+		<form method="post" class="ls-card ls-card-wide">
 			<?php wp_nonce_field( 'ls_import', 'ls_import_nonce' ); ?>
 			<h2><?php esc_html_e( 'درون‌ریزی دمو', 'larijani' ); ?></h2>
 			<p><label><input type="checkbox" name="ls_parts[]" value="pages" checked> <?php esc_html_e( 'برگه‌ها (اصلی، اصلی کلاسیک، خدمات، نمونه‌کارها، فروشگاه/کاتالوگ، تماس، وبلاگ، نمونه محصول)', 'larijani' ); ?></label></p>
@@ -217,7 +432,7 @@ function ls_setup_page() {
 			<?php submit_button( __( 'شروع راه‌اندازی', 'larijani' ), 'primary', 'ls_do_import' ); ?>
 			<p class="description"><?php esc_html_e( 'برگه‌ها و قالب‌های موجود با همین نامک بازنویسی نمی‌شوند؛ اجرای دوباره امن است.', 'larijani' ); ?></p>
 		</form>
-		<div class="card" style="max-width:none">
+		<div class="ls-card ls-card-wide">
 			<h2><?php esc_html_e( 'فایل‌های قالب المنتور (JSON)', 'larijani' ); ?></h2>
 			<p><?php esc_html_e( 'در پوشه elementor-templates قالب، فایل JSON همه صفحات و بخش‌ها قرار دارد. از «قالب‌ها › قالب‌های ذخیره‌شده › درون‌ریزی» می‌توانید آن‌ها را جداگانه وارد کنید.', 'larijani' ); ?></p>
 		</div>
@@ -237,7 +452,7 @@ function ls_handle_import() {
 	$report = ls_run_import( $parts );
 	set_transient( 'ls_import_report', $report, MINUTE_IN_SECONDS * 5 );
 	delete_transient( 'ls_show_setup_notice' );
-	wp_safe_redirect( admin_url( 'themes.php?page=ls-setup' ) );
+	wp_safe_redirect( admin_url( 'admin.php?page=ls-setup' ) );
 	exit;
 }
 add_action( 'admin_init', 'ls_handle_import' );
@@ -272,14 +487,20 @@ function ls_run_import( $parts = array( 'pages', 'templates', 'assign', 'menus',
 			'portfolio'      => 'portfolio',
 			'contact'        => 'contact',
 			'catalog'        => 'shop',
+			'store'          => 'products',
 			'product-sample' => 'product-sample',
 		);
 		foreach ( $map as $key => $slug ) {
 			// With WooCommerce the real shop / product pages use the theme's templates instead.
-			if ( in_array( $key, array( 'product-sample', 'catalog' ), true ) && ls_has_woo() ) {
+			if ( in_array( $key, array( 'product-sample', 'catalog', 'store' ), true ) && ls_has_woo() ) {
 				continue;
 			}
 			$pages[ $key ] = ls_import_page( $slug, $layouts[ $key ]['title'], $layouts[ $key ]['rows'] );
+			if ( ! empty( $layouts[ $key ]['meta'] ) && $pages[ $key ] ) {
+				foreach ( $layouts[ $key ]['meta'] as $mk => $mv ) {
+					add_post_meta( $pages[ $key ], $mk, $mv, true );
+				}
+			}
 		}
 		$blog = get_page_by_path( 'blog' );
 		$pages['blog'] = $blog ? $blog->ID : wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => __( 'وبلاگ تخصصی', 'larijani' ), 'post_name' => 'blog' ) );
@@ -356,6 +577,7 @@ function ls_import_page( $slug, $title, $rows ) {
 	}
 	ls_save_elementor_data( $id, ls_el_build( $rows ), 'wp-page' );
 	update_post_meta( $id, '_wp_page_template', ls_has_elementor() ? 'elementor_header_footer' : 'page-templates/full-width.php' );
+	update_post_meta( $id, '_ls_demo_page', 1 );
 	return $id;
 }
 
@@ -395,6 +617,11 @@ function ls_import_template( $key, $layout, $assign ) {
 	);
 	if ( $found ) {
 		$id = $found[0]->ID;
+		// Elementor Pro activated after the setup: turn the saved section/page into a real Theme Builder template.
+		if ( $pro && get_post_meta( $id, '_elementor_template_type', true ) !== $type ) {
+			update_post_meta( $id, '_elementor_template_type', $type );
+			wp_set_object_terms( $id, $type, 'elementor_library_type' );
+		}
 	} else {
 		$id = wp_insert_post(
 			array(
@@ -409,6 +636,7 @@ function ls_import_template( $key, $layout, $assign ) {
 		}
 		ls_save_elementor_data( $id, ls_el_build( $layout['rows'] ), $type );
 		wp_set_object_terms( $id, $type, 'elementor_library_type' );
+		update_post_meta( $id, '_ls_demo_page', 1 );
 	}
 
 	if ( ! $assign ) {
@@ -562,27 +790,44 @@ function ls_import_posts() {
 		if ( ! $cat ) {
 			$cat = wp_insert_term( $p[1], 'category' );
 		}
+		$content = $p[3] ? ls_demo_article_html() : $body;
+		kses_remove_filters(); // Demo article contains the design's inline SVG diagram.
 		$id = wp_insert_post(
 			array(
 				'post_type'     => 'post',
 				'post_status'   => 'publish',
 				'post_title'    => $p[0],
 				'post_excerpt'  => $p[4],
-				'post_content'  => $body,
+				'post_content'  => $content,
 				'post_category' => is_array( $cat ) ? array( (int) $cat['term_id'] ) : array(),
 				'post_date'     => gmdate( 'Y-m-d H:i:s', time() - $i * DAY_IN_SECONDS * 4 ),
-				'tags_input'    => array_slice( $tag_names, $i % 3, 4 ),
+				'tags_input'    => $p[3] ? array( 'رزین پلی‌کربوکسیلات', 'سنگ مصنوعی', 'فرمولاسیون بتن', 'قالب نشکن ABS', 'میز ویبره صنعتی' ) : array_slice( $tag_names, $i % 3, 4 ),
 			)
 		);
+		kses_init_filters();
 		if ( is_wp_error( $id ) ) {
 			continue;
 		}
 		if ( $p[3] ) {
+			update_post_meta( $id, '_ls_author_name', 'مهندس مسعود لاریجانی' );
+			update_post_meta( $id, '_ls_author_role', 'مدیر ارشد فنی و مهندسی مواد' );
+			update_post_meta( $id, '_ls_author_bio', 'بنیان‌گذار و مدیر ارشد فنی گروه صنعتی لاریجانی استون؛ با بیش از ۱۶ سال سابقه در طراحی خطوط تولید پیوسته سنگ‌های پلیمری، طراحی بیش از ۴۵۰ دست قالب کامپوزیتی ضدسایش و مشاوره فنی به بیش از ۳۰۰ کارگاه و کارخانه در سراسر کشور و کشورهای همسایه.' );
+			update_post_meta( $id, '_ls_reading_time', 12 );
+			update_post_meta(
+				$id,
+				'_ls_metrics',
+				"مقاومت فشاری ۲۸ روزه | > ۷۵ | مگاپاسکال (MPa) | bi bi-speedometer2 | primary | ۱۱۰٪ فراتر از بتن معمولی | bi bi-graph-up-arrow\n"
+				. "کاهش نسبت آب به سیمان | ۰.۲۸ | W/C Ratio | bi bi-droplet | cobalt | کاهش ۳۸ درصدی آب مصرفی | bi bi-check2\n"
+				. "پایه شیمیایی فوق روان‌کننده | PCE اتر نسل ۳ |  | bi bi-diagram-3 | amber | سنتز ویژه سمنت پلاست صنعتی | bi bi-patch-check\n"
+				. "افزایش دوام و چگالی ظاهری | +۶۵٪ | نفوذناپذیری | bi bi-shield-check | emerald | مقاوم در برابر ۳۰۰ سیکل یخبندان | bi bi-snow"
+			);
+			ls_demo_comments( $id );
 			update_post_meta( $id, '_ls_featured', '1' );
 			update_post_meta( $id, '_ls_image_caption', 'آزمایشگاه سنجش مقاومت هیدرولیکی لاریجانی استون - واحد کنترل کیفیت پایلوت' );
 			update_post_meta( $id, '_ls_image_badge', 'کد استاندارد: ASTM C109 / ISIRI 755' );
 		}
 		update_post_meta( $id, 'ls_views', wp_rand( 900, 4500 ) );
+		update_post_meta( $id, '_ls_demo_image', $p[2] );
 		$att = ls_demo_image_id( $p[2] );
 		if ( $att ) {
 			set_post_thumbnail( $id, $att );
@@ -590,6 +835,61 @@ function ls_import_posts() {
 		$count++;
 	}
 	return $count;
+}
+
+/**
+ * The design's long-form article (inc/demo/article.html) with demo image URLs.
+ *
+ * @return string
+ */
+function ls_demo_article_html() {
+	$html = (string) file_get_contents( LS_DIR . '/inc/demo/article.html' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- local theme file.
+	return preg_replace_callback(
+		'/\{\{img:([a-z0-9_]+)\}\}/',
+		static function ( $m ) {
+			return esc_url( ls_demo_image( $m[1] ) );
+		},
+		$html
+	);
+}
+
+/**
+ * Sample answered workshop questions for the featured article.
+ *
+ * @param int $post_id Post id.
+ */
+function ls_demo_comments( $post_id ) {
+	$threads = array(
+		array( 'حاج رضا صادقی (سنگ آریا، اصفهان)', 'کارگاه فعال سنگ سمنت پلاست', 'سلام مهندس لاریجانی عزیز. ما در هوای سرد فعلی اصفهان (حدود ۶ درجه) وقتی از LS-500 استفاده می‌کنیم زمان گیرش اولیه تا ۴ ساعت طول می‌کشد. آیا می‌توانیم بدون افت مقاومت نهایی از زودگیر کلسیم کلراید در کنار آن استفاده کنیم؟', DAY_IN_SECONDS, 'مهندس مسعود لاریجانی', 'درود بر شما جناب صادقی. به هیچ عنوان کلراید اضافه نکنید زیرا به شدت روی براقیت سطح اثر سوء گذاشته و شوره سفیدک ایجاد می‌کند. در دمای زیر ۱۰ درجه، آب اختلاط را تا ۴۰ درجه سانتی‌گراد گرم کنید و دوز LS-500 را از ۱ درصد به ۰.۸۵ درصد برسانید تا گیرش در زمان استاندارد ۹۰ دقیقه کامل شود.', 20 * HOUR_IN_SECONDS ),
+		array( 'مهندس کمالی (پروژه ویلایی دماوند)', 'مهندس ناظر سازه', 'آیا این فرمولاسیون برای تولید موزاییک پلیمری در شرایط آب و هوایی مناطق مرطوب شمال کشور هم مانع رشد خزه در درزها می‌شود یا خیر؟', 3 * DAY_IN_SECONDS, 'واحد تحقیق و توسعه لاریجانی استون', 'بله جناب مهندس. به دلیل کاهش نسبت آب به سیمان به زیر ۰.۳۰ و تشکیل ریزساختار پیوسته، جذب آب به کمتر از ۲ درصد کاهش می‌یابد که عملاً محیط زیستی برای ریشه‌دوانی خزه و باکتری باقی نمی‌گذارد.', 2 * DAY_IN_SECONDS ),
+	);
+	foreach ( $threads as $t ) {
+		$parent = wp_insert_comment(
+			array(
+				'comment_post_ID'  => $post_id,
+				'comment_author'   => $t[0],
+				'comment_content'  => $t[2],
+				'comment_approved' => 1,
+				'comment_date'     => wp_date( 'Y-m-d H:i:s', time() - $t[3] ),
+				'comment_date_gmt' => gmdate( 'Y-m-d H:i:s', time() - $t[3] ),
+				'comment_meta'     => array( '_ls_badge' => $t[1] ),
+			)
+		);
+		if ( $parent ) {
+			wp_insert_comment(
+				array(
+					'comment_post_ID'  => $post_id,
+					'comment_parent'   => $parent,
+					'comment_author'   => $t[4],
+					'comment_content'  => $t[5],
+					'comment_approved' => 1,
+					'comment_date'     => wp_date( 'Y-m-d H:i:s', time() - $t[6] ),
+					'comment_date_gmt' => gmdate( 'Y-m-d H:i:s', time() - $t[6] ),
+					'comment_meta'     => array( '_ls_staff' => 1 ),
+				)
+			);
+		}
+	}
 }
 
 /**
@@ -632,6 +932,7 @@ function ls_import_projects() {
 			update_post_meta( $id, '_ls_' . $k, $p[ $k ] );
 		}
 		update_post_meta( $id, '_ls_note_icon', 'bi bi-' . $p['note_icon'] );
+		update_post_meta( $id, '_ls_demo_image', $p['image'] );
 		for ( $i = 1; $i <= 3; $i++ ) {
 			update_post_meta( $id, "_ls_spec_{$i}_label", $p[ "spec{$i}_label" ] );
 			update_post_meta( $id, "_ls_spec_{$i}_value", $p[ "spec{$i}_value" ] );
@@ -693,6 +994,7 @@ function ls_import_products() {
 		if ( $att ) {
 			$product->set_image_id( $att );
 		}
+		$product->update_meta_data( '_ls_demo_image', $p['image'] );
 		$product->update_meta_data( '_ls_badge', $p['badge'] );
 		$product->update_meta_data( '_ls_badge_tone', $p['badge_tone'] );
 		$product->update_meta_data( '_ls_price_label', $p['price_label'] );

@@ -100,8 +100,18 @@ function ls_render_catalog( $s = array() ) {
 			'advisory_link'    => '',
 			'columns'          => 3,
 			'count_text'       => __( 'نمایش %1$s تا %2$s از %3$s قلم کالا و تجهیزات سنگ مصنوعی', 'larijani' ),
+			'layout'           => 'sidebar', // sidebar | store (design: full-width 4-column shop).
+			'card_style'       => '',
+			'results_label'    => __( 'تعداد نتایج:', 'larijani' ),
+			'results_suffix'   => __( 'قلم کالا', 'larijani' ),
+			'footer_note'      => '',
 		)
 	);
+	$store = 'store' === $s['layout'];
+	if ( $store ) {
+		$s['show_sidebar'] = '';
+	}
+	$card_style = $s['card_style'] ? $s['card_style'] : ( $store ? 'store' : 'catalog' );
 
 	$is_woo = 'woocommerce' === $s['source'] && ls_has_woo();
 	$cards  = array();
@@ -168,6 +178,57 @@ function ls_render_catalog( $s = array() ) {
 	$cols = array( 2 => 'xl:grid-cols-2', 3 => 'xl:grid-cols-3', 4 => 'xl:grid-cols-4' );
 	?>
 	<div class="ls-catalog" data-ls-catalog="<?php echo $is_woo ? 'server' : 'client'; ?>">
+		<?php if ( $store ) : ?>
+		<div class="bg-surface-card p-space-md rounded-2xl shadow-sm mb-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+			<form class="relative w-full md:w-96" role="search" method="get" action="<?php echo esc_url( $is_woo ? get_permalink( wc_get_page_id( 'shop' ) ) : '' ); ?>" data-ls-catalog-search>
+				<?php if ( $is_woo ) : ?><input type="hidden" name="post_type" value="product"><?php endif; ?>
+				<label class="screen-reader-text" for="ls-catalog-s"><?php esc_html_e( 'جستجو', 'larijani' ); ?></label>
+				<i class="bi bi-search absolute right-3 top-1/2 -translate-y-1/2 text-outline" aria-hidden="true"></i>
+				<input id="ls-catalog-s" class="w-full bg-surface-canvas text-on-surface pr-10 pl-4 py-2.5 rounded-xl font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-all" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php echo esc_attr( $s['search_placeholder'] ); ?>" type="search" data-ls-search-input>
+			</form>
+			<div class="flex items-center justify-between md:justify-end gap-space-md w-full md:w-auto">
+				<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-outline">
+					<span><?php echo esc_html( $s['results_label'] ); ?></span>
+					<span class="font-bold text-on-surface text-label-nav" data-ls-filter-count><?php echo esc_html( ls_fa_num( $total ) . ' ' . $s['results_suffix'] ); ?></span>
+				</div>
+				<form class="flex items-center gap-space-xs" method="get">
+					<i class="bi bi-filter-right text-outline text-[20px]" aria-hidden="true"></i>
+					<label class="screen-reader-text" for="ls-catalog-sort"><?php echo esc_html( $s['sort_label'] ); ?></label>
+					<select id="ls-catalog-sort" class="bg-surface-canvas text-on-surface px-space-md py-2 rounded-xl font-label-nav text-label-nav focus:outline-none" name="orderby" <?php echo $is_woo ? 'data-ls-autosubmit' : 'data-ls-sort-select'; ?>>
+						<?php
+						$store_sorts = array(
+							'popularity' => __( 'پیشنهاد کارخانه (پرفروش‌ترین)', 'larijani' ),
+							'price'      => __( 'ارزان‌ترین متریال', 'larijani' ),
+							'price-desc' => __( 'گران‌ترین ماشین‌آلات', 'larijani' ),
+							$is_woo ? 'date' : 'title' => $is_woo ? __( 'جدیدترین محصولات', 'larijani' ) : __( 'بر اساس نام محصول', 'larijani' ),
+						);
+						foreach ( $store_sorts as $key => $label ) :
+							?>
+						<option value="<?php echo esc_attr( $key ); ?>" <?php selected( $orderby_now, $key ); ?>><?php echo esc_html( $label ); ?></option>
+						<?php endforeach; ?>
+					</select>
+					<?php foreach ( array( 's', 'post_type' ) as $keep ) : ?>
+						<?php if ( isset( $_GET[ $keep ] ) ) : // phpcs:ignore ?><input type="hidden" name="<?php echo esc_attr( $keep ); ?>" value="<?php echo esc_attr( sanitize_text_field( wp_unslash( $_GET[ $keep ] ) ) ); // phpcs:ignore ?>"><?php endif; ?>
+					<?php endforeach; ?>
+				</form>
+			</div>
+		</div>
+		<div class="flex items-center gap-space-xs overflow-x-auto pb-space-sm mb-space-lg scrollbar-none">
+			<?php if ( $is_woo ) : ?>
+				<?php foreach ( $chips as $c ) : ?>
+				<a class="px-space-lg py-2 rounded-full font-label-nav text-label-nav transition-all shrink-0 whitespace-nowrap <?php echo $c['active'] ? 'bg-primary text-on-primary shadow-sm' : 'bg-surface-card hover:bg-surface-container-high text-on-surface-variant'; ?>" href="<?php echo esc_url( $c['url'] ); ?>"><?php echo esc_html( $c['label'] ); ?></a>
+				<?php endforeach; ?>
+			<?php else : ?>
+				<?php
+				$filters = array( array( 'all', sprintf( '%s (%s)', $s['all_label'], ls_fa_num( count( $cards ) ) ), '' ) );
+				foreach ( $s['chips'] as $c ) {
+					$filters[] = array( $c['key'] ?? '', $c['label'] ?? '', is_array( $c['icon'] ?? '' ) ? ( $c['icon']['value'] ?? '' ) : ( $c['icon'] ?? '' ) );
+				}
+				echo ls_filter_buttons( $filters, 'store' ); // phpcs:ignore
+				?>
+			<?php endif; ?>
+		</div>
+		<?php else : ?>
 		<div class="p-space-md rounded-2xl bg-surface-card shadow-sm mb-space-lg flex flex-col gap-space-md">
 			<div class="flex flex-col md:flex-row items-center justify-between gap-space-md">
 				<form class="relative w-full md:w-96" role="search" method="get" action="<?php echo esc_url( $is_woo ? get_permalink( wc_get_page_id( 'shop' ) ) : '' ); ?>" data-ls-catalog-search>
@@ -206,6 +267,7 @@ function ls_render_catalog( $s = array() ) {
 				<?php endif; ?>
 			</div>
 		</div>
+		<?php endif; ?>
 
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
 			<?php if ( 'yes' === $s['show_sidebar'] ) : ?>
@@ -255,6 +317,27 @@ function ls_render_catalog( $s = array() ) {
 						<?php endforeach; ?>
 					</div>
 					<?php endforeach; ?>
+					<?php if ( 'yes' === $s['show_price'] && $cards ) : ?>
+						<?php
+						$ls_prices = array_filter( array_map( static function ( $c ) { return (float) ( $c['price_raw'] ?? 0 ); }, $cards ) );
+						$ls_min    = $ls_prices ? min( $ls_prices ) : 0;
+						$ls_max    = $ls_prices ? max( $ls_prices ) : 0;
+						?>
+						<?php if ( $ls_max > 0 ) : ?>
+					<div class="p-space-md rounded-2xl bg-surface-card shadow-sm flex flex-col gap-space-sm">
+						<span class="font-headline-sm text-title-card text-on-surface"><?php echo esc_html( $s['price_title'] ); ?></span>
+						<div class="flex items-center justify-between text-body-sm text-on-surface-variant pt-2">
+							<span><?php echo esc_html( sprintf( /* translators: %s price */ __( 'از %s تومان', 'larijani' ), ls_fa_number_format( $ls_min ) ) ); ?></span>
+							<span><?php echo esc_html__( 'تا', 'larijani' ); ?> <span data-ls-price-max><?php echo esc_html( ls_fa_number_format( $ls_max ) ); ?></span> <?php esc_html_e( 'تومان', 'larijani' ); ?></span>
+						</div>
+						<input class="w-full accent-primary-container cursor-pointer mt-2" type="range" min="<?php echo esc_attr( $ls_min ); ?>" max="<?php echo esc_attr( $ls_max ); ?>" step="1000" value="<?php echo esc_attr( $ls_max ); ?>" aria-label="<?php echo esc_attr( $s['price_title'] ); ?>" data-ls-price-range>
+						<div class="flex items-center justify-between pt-1">
+							<span class="font-body-sm text-body-sm text-outline"><?php esc_html_e( 'نمایش کلیه سفارشات', 'larijani' ); ?></span>
+							<button class="text-body-sm font-semibold text-primary hover:underline" type="button" data-ls-price-apply><?php esc_html_e( 'اعمال', 'larijani' ); ?></button>
+						</div>
+					</div>
+						<?php endif; ?>
+					<?php endif; ?>
 				<?php endif; ?>
 				<?php if ( $s['advisory_title'] ) : ?>
 				<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
@@ -270,9 +353,9 @@ function ls_render_catalog( $s = array() ) {
 
 			<div class="<?php echo 'yes' === $s['show_sidebar'] ? 'lg:col-span-9' : 'lg:col-span-12'; ?> flex flex-col gap-space-lg">
 				<?php if ( $cards ) : ?>
-				<div class="grid grid-cols-1 md:grid-cols-2 <?php echo esc_attr( $cols[ (int) $s['columns'] ] ?? 'xl:grid-cols-3' ); ?> gap-space-md" data-ls-catalog-grid>
+				<div class="grid grid-cols-1 <?php echo $store ? 'sm:grid-cols-2 lg:grid-cols-4 gap-space-lg' : 'md:grid-cols-2 ' . esc_attr( $cols[ (int) $s['columns'] ] ?? 'xl:grid-cols-3' ) . ' gap-space-md'; ?>" data-ls-catalog-grid>
 					<?php foreach ( $cards as $card ) : ?>
-						<?php echo ls_product_card( $card, 'catalog' ); // phpcs:ignore ?>
+						<?php echo ls_product_card( $card, $card_style ); // phpcs:ignore ?>
 					<?php endforeach; ?>
 				</div>
 				<?php else : ?>
@@ -292,6 +375,10 @@ function ls_render_catalog( $s = array() ) {
 				<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md pb-space-sm border-t border-border-subtle">
 					<span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( sprintf( $s['count_text'], ls_fa_num( $from ), ls_fa_num( $to ), ls_fa_num( $total ) ) ); ?></span>
 					<?php echo ls_pagination( $query ); // phpcs:ignore ?>
+				</div>
+				<?php elseif ( $s['footer_note'] ) : ?>
+				<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md mt-space-lg pt-space-lg">
+					<span class="font-body-sm text-body-sm text-outline"><?php echo esc_html( $s['footer_note'] ); ?></span>
 				</div>
 				<?php endif; ?>
 			</div>
@@ -529,7 +616,7 @@ function ls_render_product_detail( $d ) {
 							<span class="font-label-nav text-label-nav text-on-surface font-bold whitespace-nowrap"><?php echo esc_html( $d['qty_label'] ); ?></span>
 							<div class="flex items-center bg-surface-card rounded-full shadow-sm p-1">
 								<button aria-label="<?php esc_attr_e( 'افزایش', 'larijani' ); ?>" class="w-9 h-9 rounded-full bg-surface-canvas hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors font-bold" type="button" data-ls-qty="1"><i class="bi bi-plus-lg" aria-hidden="true"></i></button>
-								<input class="w-14 text-center font-headline-sm text-headline-sm font-black bg-transparent text-on-surface [appearance:textfield]" name="quantity" max="10000" min="1" type="number" value="<?php echo esc_attr( $qty ); ?>" data-ls-qty-input aria-label="<?php esc_attr_e( 'تعداد', 'larijani' ); ?>">
+								<input class="w-14 text-center font-headline-sm text-headline-sm font-black bg-transparent border-0 p-0 focus:ring-0 text-on-surface [appearance:textfield]" name="quantity" max="10000" min="1" type="number" value="<?php echo esc_attr( $qty ); ?>" data-ls-qty-input aria-label="<?php esc_attr_e( 'تعداد', 'larijani' ); ?>">
 								<button aria-label="<?php esc_attr_e( 'کاهش', 'larijani' ); ?>" class="w-9 h-9 rounded-full bg-surface-canvas hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors font-bold" type="button" data-ls-qty="-1"><i class="bi bi-dash-lg" aria-hidden="true"></i></button>
 							</div>
 						</div>

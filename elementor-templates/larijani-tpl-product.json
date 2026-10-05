@@ -4,7 +4,7 @@
     "type": "product",
     "content": [
         {
-            "id": "e5f26e2",
+            "id": "c1a8c1c",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -20,7 +20,7 @@
             },
             "elements": [
                 {
-                    "id": "cb126c0",
+                    "id": "eeccd3f",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -36,7 +36,7 @@
                     },
                     "elements": [
                         {
-                            "id": "b5428f5",
+                            "id": "8ae519e",
                             "elType": "widget",
                             "widgetType": "ls-product-detail",
                             "settings": {
@@ -49,7 +49,7 @@
             ]
         },
         {
-            "id": "cf3fc86",
+            "id": "0c9a75d",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -65,7 +65,7 @@
             },
             "elements": [
                 {
-                    "id": "07a6c78",
+                    "id": "a9cfb16",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -81,7 +81,7 @@
                     },
                     "elements": [
                         {
-                            "id": "0d5e3c8",
+                            "id": "ac0a2e7",
                             "elType": "widget",
                             "widgetType": "ls-product-tabs",
                             "settings": {
@@ -94,7 +94,7 @@
             ]
         },
         {
-            "id": "82bf900",
+            "id": "c5811c2",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -110,7 +110,7 @@
             },
             "elements": [
                 {
-                    "id": "61c4ff7",
+                    "id": "647d349",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -126,7 +126,7 @@
                     },
                     "elements": [
                         {
-                            "id": "5843958",
+                            "id": "7b4b1a4",
                             "elType": "widget",
                             "widgetType": "ls-products",
                             "settings": {
@@ -154,7 +154,7 @@
                                             "value": "bi bi-cart-plus",
                                             "library": "bootstrap-icons"
                                         },
-                                        "_id": "e86da03"
+                                        "_id": "dcfbfa3"
                                     },
                                     {
                                         "image": {
@@ -170,7 +170,7 @@
                                             "value": "bi bi-cart-plus",
                                             "library": "bootstrap-icons"
                                         },
-                                        "_id": "eb8f571"
+                                        "_id": "5b2c07f"
                                     },
                                     {
                                         "image": {
@@ -186,7 +186,7 @@
                                             "value": "bi bi-cart-plus",
                                             "library": "bootstrap-icons"
                                         },
-                                        "_id": "24daa9a"
+                                        "_id": "d1d6fc6"
                                     },
                                     {
                                         "image": {
@@ -205,7 +205,7 @@
                                         "button_link": {
                                             "url": "tel:09122302685"
                                         },
-                                        "_id": "b7efbdf"
+                                        "_id": "6d1c970"
                                     }
                                 ]
                             },
@@ -216,7 +216,7 @@
             ]
         },
         {
-            "id": "304ea3f",
+            "id": "57f8350",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -232,7 +232,7 @@
             },
             "elements": [
                 {
-                    "id": "229c2b4",
+                    "id": "55c2a85",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -248,7 +248,7 @@
                     },
                     "elements": [
                         {
-                            "id": "404fdd6",
+                            "id": "1fcd4fa",
                             "elType": "widget",
                             "widgetType": "ls-cta",
                             "settings": {

@@ -1,0 +1,118 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": false,
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"palette": [
+				{
+					"slug": "ls-primary",
+					"name": "سبز برند",
+					"color": "#5C6754"
+				},
+				{
+					"slug": "ls-primary-hover",
+					"name": "سبز برند (هاور)",
+					"color": "#4B5545"
+				},
+				{
+					"slug": "ls-secondary",
+					"name": "سبز روشن",
+					"color": "#8DA184"
+				},
+				{
+					"slug": "ls-dark",
+					"name": "بازالت تیره",
+					"color": "#161D1A"
+				},
+				{
+					"slug": "ls-footer",
+					"name": "فوتر",
+					"color": "#121715"
+				},
+				{
+					"slug": "ls-canvas",
+					"name": "کرم سنگی",
+					"color": "#F8F9F7"
+				},
+				{
+					"slug": "ls-border",
+					"name": "خطوط",
+					"color": "#E8ECE6"
+				},
+				{
+					"slug": "ls-text",
+					"name": "متن",
+					"color": "#2D3748"
+				},
+				{
+					"slug": "white",
+					"name": "سفید",
+					"color": "#FFFFFF"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "768px",
+			"wideSize": "1280px"
+		},
+		"spacing": {
+			"units": [
+				"px",
+				"rem",
+				"%",
+				"vw"
+			]
+		},
+		"typography": {
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{
+					"slug": "vazirmatn",
+					"name": "Vazirmatn",
+					"fontFamily": "Vazirmatn, Tahoma, system-ui, sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Vazirmatn",
+							"fontWeight": "100 900",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/vazirmatn/Vazirmatn-Variable.woff2"
+							]
+						}
+					]
+				}
+			],
+			"fontSizes": [
+				{
+					"slug": "small",
+					"name": "کوچک",
+					"size": "0.875rem"
+				},
+				{
+					"slug": "medium",
+					"name": "متوسط",
+					"size": "1rem"
+				},
+				{
+					"slug": "large",
+					"name": "بزرگ",
+					"size": "1.5rem"
+				},
+				{
+					"slug": "x-large",
+					"name": "خیلی بزرگ",
+					"size": "1.875rem"
+				}
+			]
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--vazirmatn)"
+		}
+	}
+}

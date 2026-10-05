@@ -8,6 +8,22 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Header style for the current request: page override (meta box) or the theme option.
+ *
+ * @return string dark|light
+ */
+function ls_header_style() {
+	$style = '';
+	if ( is_singular() ) {
+		$style = (string) get_post_meta( get_queried_object_id(), '_ls_header_style', true );
+	}
+	if ( ! in_array( $style, array( 'dark', 'light' ), true ) ) {
+		$style = (string) ls_opt( 'header_style' );
+	}
+	return 'light' === $style ? 'light' : 'dark';
+}
+
+/**
  * Render the site header.
  *
  * @param array $s Settings (all optional – empty values fall back to Customizer options).
@@ -21,6 +37,7 @@ function ls_render_site_header( $s = array() ) {
 			}
 		),
 		array(
+			'style'           => ls_header_style(),
 			'show_topbar'     => ls_opt( 'header_topbar' ) ? 'yes' : 'no',
 			'address'         => ls_opt( 'address_short' ),
 			'hours'           => ls_opt( 'hours' ),
@@ -62,9 +79,40 @@ function ls_render_site_header( $s = array() ) {
 	);
 	$home      = home_url( '/' );
 	$sticky    = 'yes' === $s['sticky'] ? 'sticky top-0' : 'relative';
+	$light     = 'light' === $s['style'] || ( 'inherit' === $s['style'] && 'light' === ls_header_style() );
 	?>
 	<div class="ls-root ls-site-header" data-ls-header>
-		<?php if ( 'yes' === $s['show_topbar'] ) : ?>
+		<?php if ( 'yes' === $s['show_topbar'] && $light ) : ?>
+		<div class="hidden lg:block border-b border-[#E7EBE5] bg-white text-xs text-gray-600">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex justify-between items-center">
+				<div class="flex items-center gap-6 divide-x divide-gray-200 divide-x-reverse">
+					<?php if ( $s['address'] ) : ?>
+					<div class="flex items-center gap-2"><i class="bi bi-geo-alt text-[14px] text-primary-container" aria-hidden="true"></i><span><?php echo esc_html( $s['address'] ); ?></span></div>
+					<?php endif; ?>
+					<?php foreach ( array( array( ls_opt( 'phone_1_label' ), $phone ), array( ls_opt( 'phone_2_label' ), ls_opt( 'phone_2' ) ) ) as $i => $ph ) : ?>
+						<?php if ( $ph[1] ) : ?>
+					<div class="pr-6 flex items-center gap-2">
+							<?php if ( 0 === $i ) : ?><i class="bi bi-telephone text-[13px] text-primary-container" aria-hidden="true"></i><?php endif; ?>
+						<span class="<?php echo 0 === $i ? 'font-medium' : 'text-gray-400'; ?>"><?php echo esc_html( $ph[0] ); ?>:</span>
+						<a class="font-semibold text-gray-900 inline-block hover:text-primary-container" dir="ltr" href="<?php echo esc_url( ls_tel( $ph[1] ) ); ?>"><?php echo esc_html( ls_fa_num( preg_replace( '/\D+/', '', $ph[1] ) ) ); ?></a>
+					</div>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</div>
+				<div class="flex items-center gap-4 text-gray-500">
+					<?php if ( ls_opt( 'email' ) ) : ?>
+					<span class="text-gray-400 text-[11px]"><?php esc_html_e( 'پشتیبانی فنی:', 'larijani' ); ?></span>
+					<a class="hover:text-primary-container" href="<?php echo esc_url( 'mailto:' . ls_opt( 'email' ) ); ?>"><?php echo esc_html( ls_opt( 'email' ) ); ?></a>
+					<?php endif; ?>
+					<div class="flex items-center gap-2.5 mr-2">
+						<?php foreach ( array_slice( ls_social_profiles(), 0, 4 ) as $so ) : ?>
+						<a class="p-1 rounded hover:bg-gray-100 text-gray-600 hover:text-primary-container" href="<?php echo esc_url( $so[1] ); ?>" title="<?php echo esc_attr( $so[2] ); ?>" target="_blank" rel="noopener"><i class="<?php echo esc_attr( $so[0] ); ?> text-[14px]" aria-hidden="true"></i></a>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php elseif ( 'yes' === $s['show_topbar'] ) : ?>
 		<div class="hidden lg:block bg-surface-dark text-slate-300 text-[12px] border-b border-white/10 py-2">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 				<div class="flex items-center gap-6">
@@ -91,7 +139,7 @@ function ls_render_site_header( $s = array() ) {
 		</div>
 		<?php endif; ?>
 
-		<header class="<?php echo esc_attr( $sticky ); ?> z-40 bg-surface-canvas/95 backdrop-blur-md border-b border-border-subtle transition-all" role="banner">
+		<header class="<?php echo esc_attr( $sticky ); ?> z-40 <?php echo $light ? 'bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm' : 'bg-surface-canvas/95 backdrop-blur-md border-b border-border-subtle'; ?> transition-all" role="banner">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-3">
 				<div class="flex items-center gap-2 sm:gap-3 min-w-0">
 					<a class="flex items-center gap-2.5 sm:gap-3 group min-w-0" href="<?php echo esc_url( $home ); ?>" title="<?php echo esc_attr( $s['brand'] ); ?>" rel="home">
@@ -135,7 +183,12 @@ function ls_render_site_header( $s = array() ) {
 						<i class="bi bi-search text-[15px]" aria-hidden="true"></i>
 					</button>
 					<?php endif; ?>
-					<?php if ( $s['cta_text'] ) : ?>
+					<?php if ( $light ) : ?>
+					<a aria-label="<?php esc_attr_e( 'محصولات نشان‌شده', 'larijani' ); ?>" class="hidden sm:flex w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-gray-200 items-center justify-center text-gray-600 hover:text-primary-container hover:border-primary-container transition" href="<?php echo esc_url( ls_page_url( 'shop' ) ); ?>"><i class="bi bi-heart text-[15px]" aria-hidden="true"></i></a>
+						<?php if ( $s['cta_text'] ) : ?>
+					<a class="hidden sm:inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-primary-container hover:bg-primary shadow-md shadow-primary-container/25 whitespace-nowrap transition" <?php echo $cta_attrs; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo esc_html( $s['cta_short'] ? $s['cta_short'] : $s['cta_text'] ); ?></a>
+						<?php endif; ?>
+					<?php elseif ( $s['cta_text'] ) : ?>
 					<a class="hidden sm:inline-flex items-center gap-2 bg-primary-container hover:bg-primary text-white text-[12.5px] lg:text-[13.5px] font-bold px-4 lg:px-5 py-2 sm:py-2.5 rounded-full shadow-sm shadow-primary-container/20 transition-all flex-shrink-0" <?php echo $cta_attrs; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 						<i class="bi bi-telephone-outbound text-[14px]" aria-hidden="true"></i>
 						<span class="hidden md:inline"><?php echo esc_html( $s['cta_text'] ); ?></span>
@@ -229,7 +282,7 @@ function ls_render_site_header( $s = array() ) {
 			<div class="max-w-3xl mx-auto mt-6 px-4">
 				<form role="search" method="get" action="<?php echo esc_url( $home ); ?>" class="bg-white rounded-2xl shadow-2xl p-2 flex items-center gap-2">
 					<i class="bi bi-search text-outline text-lg px-3" aria-hidden="true"></i>
-					<input class="flex-1 py-3 text-on-surface text-base placeholder:text-outline" type="search" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php esc_attr_e( 'جستجو در محصولات، قالب‌ها و مقالات…', 'larijani' ); ?>" data-ls-autofocus>
+					<input class="flex-1 py-3 border-0 focus:ring-0 text-on-surface text-base placeholder:text-outline" type="search" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php esc_attr_e( 'جستجو در محصولات، قالب‌ها و مقالات…', 'larijani' ); ?>" data-ls-autofocus>
 					<?php if ( ls_has_woo() ) : ?>
 					<select name="post_type" class="hidden sm:block bg-surface-canvas rounded-xl py-2.5 pr-3 text-sm text-on-surface-variant">
 						<option value=""><?php esc_html_e( 'همه', 'larijani' ); ?></option>

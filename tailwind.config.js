@@ -11,7 +11,7 @@
 const v = (name) => `color-mix(in srgb, var(${name}) calc(<alpha-value> * 100%), transparent)`;
 
 module.exports = {
-  content: ['./*.php', './inc/**/*.php', './woocommerce/**/*.php', './page-templates/**/*.php', './template-parts/**/*.php', './assets/js/**/*.js'],
+  content: ['./*.php', './inc/**/*.php', './inc/**/*.html', './woocommerce/**/*.php', './page-templates/**/*.php', './template-parts/**/*.php', './assets/js/**/*.js'],
   important: '.ls-root',
   // Classes built dynamically in PHP (column counts chosen in Elementor).
   safelist: [

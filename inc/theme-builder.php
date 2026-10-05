@@ -140,7 +140,7 @@ function ls_tb_template_for( $location ) {
  * @return bool
  */
 function ls_is_built_with_elementor( $post_id ) {
-	return ls_has_elementor() && 'builder' === get_post_meta( $post_id, '_elementor_edit_mode', true );
+	return 'builder' === get_post_meta( $post_id, '_elementor_edit_mode', true ) && ( ls_has_elementor() || ls_fallback_active() );
 }
 
 /**
@@ -150,8 +150,16 @@ function ls_is_built_with_elementor( $post_id ) {
  * @return bool Rendered?
  */
 function ls_render_elementor_template( $template_id ) {
-	if ( ! $template_id || ! ls_has_elementor() || 'publish' !== get_post_status( $template_id ) ) {
+	if ( ! $template_id || 'publish' !== get_post_status( $template_id ) ) {
 		return false;
+	}
+	if ( ! ls_has_elementor() ) {
+		$html = ls_fallback_active() ? ls_fallback_render_post( $template_id ) : '';
+		if ( '' === $html ) {
+			return false;
+		}
+		echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped by the widgets.
+		return true;
 	}
 	$html = \Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $template_id, true );
 	if ( '' === trim( (string) $html ) ) {

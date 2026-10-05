@@ -4,7 +4,7 @@
     "type": "page",
     "content": [
         {
-            "id": "3334042",
+            "id": "1bfca93",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -20,7 +20,7 @@
             },
             "elements": [
                 {
-                    "id": "9e05a29",
+                    "id": "917ba8a",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -36,7 +36,7 @@
                     },
                     "elements": [
                         {
-                            "id": "ae1e01b",
+                            "id": "1ebc990",
                             "elType": "widget",
                             "widgetType": "ls-portfolio-hero",
                             "settings": [],
@@ -47,7 +47,7 @@
             ]
         },
         {
-            "id": "8b3595f",
+            "id": "2c1ffbd",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -63,7 +63,7 @@
             },
             "elements": [
                 {
-                    "id": "dbcd49d",
+                    "id": "0a3779f",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -79,7 +79,7 @@
                     },
                     "elements": [
                         {
-                            "id": "9bdd82a",
+                            "id": "c6b0f6e",
                             "elType": "widget",
                             "widgetType": "ls-portfolio",
                             "settings": [],
@@ -90,7 +90,7 @@
             ]
         },
         {
-            "id": "2e15611",
+            "id": "5c527bb",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -106,7 +106,7 @@
             },
             "elements": [
                 {
-                    "id": "8ec18f7",
+                    "id": "1bda700",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -122,7 +122,7 @@
                     },
                     "elements": [
                         {
-                            "id": "62a9c0e",
+                            "id": "a17bc27",
                             "elType": "widget",
                             "widgetType": "ls-performance",
                             "settings": [],
@@ -133,7 +133,7 @@
             ]
         },
         {
-            "id": "7febdc4",
+            "id": "9dc9c59",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -149,7 +149,7 @@
             },
             "elements": [
                 {
-                    "id": "a18d2e9",
+                    "id": "0976c71",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -165,7 +165,7 @@
                     },
                     "elements": [
                         {
-                            "id": "2f84306",
+                            "id": "24935af",
                             "elType": "widget",
                             "widgetType": "ls-lead-form",
                             "settings": {
@@ -183,15 +183,15 @@
                                 "info_items": [
                                     {
                                         "title": "درج اطلاعات تماس و برند کارگاه شما به عنوان مجری در صفحه اختصاصی",
-                                        "_id": "53e16b7"
+                                        "_id": "7d92a8f"
                                     },
                                     {
                                         "title": "دریافت بن تخفیف خرید قالب‌های تزریقی جدید و اکسید آهن",
-                                        "_id": "5868850"
+                                        "_id": "721d5fb"
                                     },
                                     {
                                         "title": "مشاوره و عیب‌یابی رایگان خط تولید توسط مهندس لاریجانی",
-                                        "_id": "64084a7"
+                                        "_id": "a146c14"
                                     }
                                 ],
                                 "form_name": "ارسال پروژه همکاران",
@@ -202,7 +202,7 @@
                                         "name": "name",
                                         "placeholder": "مثال: کارگاه سنگ نوین",
                                         "required": "yes",
-                                        "_id": "b49dd10"
+                                        "_id": "a72c79a"
                                     },
                                     {
                                         "label": "شماره تماس همراه",
@@ -211,7 +211,7 @@
                                         "placeholder": "۰۹۱۲...",
                                         "required": "yes",
                                         "ltr": "yes",
-                                        "_id": "b8d0690"
+                                        "_id": "9bfb950"
                                     },
                                     {
                                         "label": "شهر محل اجرا",
@@ -219,14 +219,14 @@
                                         "name": "city",
                                         "placeholder": "مثال: اصفهان",
                                         "required": "yes",
-                                        "_id": "76878f1"
+                                        "_id": "930a61c"
                                     },
                                     {
                                         "label": "نوع قالب و محصول",
                                         "type": "select",
                                         "name": "mold",
                                         "options": "نمای سه‌بعدی و سنگ دکوراتیو\nواش‌بتن و کفپوش پلیمری\nجدول و دورباغچه\nستون، سرستون و نرده صراحی\nسایر قطعات مهندسی",
-                                        "_id": "6a90d3a"
+                                        "_id": "b5f71c9"
                                     },
                                     {
                                         "label": "بارگذاری تصاویر پروژه (حداکثر ۵ تصویر)",
@@ -234,14 +234,14 @@
                                         "name": "files",
                                         "placeholder": "انتخاب فایل‌های تصویر یا رها کردن اینجا",
                                         "hint": "فرمت‌های JPG، PNG (حداکثر ۸ مگابایت)",
-                                        "_id": "64d60c5"
+                                        "_id": "1759516"
                                     },
                                     {
                                         "label": "توضیح کوتاه درباره متراژ و نوع رزین",
                                         "type": "textarea",
                                         "name": "desc",
                                         "placeholder": "توضیح دهید از چه متریال و در چه متراژی اجرا کردید...",
-                                        "_id": "2227540"
+                                        "_id": "4ffdd09"
                                     }
                                 ],
                                 "submit_text": "ثبت و دریافت کد تخفیف",
@@ -261,7 +261,7 @@
             ]
         },
         {
-            "id": "fa66edf",
+            "id": "ef4b2f7",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -277,7 +277,7 @@
             },
             "elements": [
                 {
-                    "id": "8908d7f",
+                    "id": "3001295",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -293,7 +293,7 @@
                     },
                     "elements": [
                         {
-                            "id": "886c721",
+                            "id": "2539bd6",
                             "elType": "widget",
                             "widgetType": "ls-floating-cta",
                             "settings": [],

@@ -38,6 +38,7 @@ class LS_Widget_Icon_Cards extends LS_Widget_Base {
 					'horizontal' => __( 'افقی با توضیح (چرا ما؟)', 'larijani' ),
 					'simple'     => __( 'ستونی ساده (مزایای فنی)', 'larijani' ),
 					'bento'      => __( 'بنتو با برچسب‌ها (محورهای خدمات)', 'larijani' ),
+					'guide'      => __( 'کادر راهنما با ستون‌های ساده (فروشگاه)', 'larijani' ),
 				),
 			)
 		);
@@ -85,6 +86,29 @@ class LS_Widget_Icon_Cards extends LS_Widget_Base {
 		$pad    = 'badge' === $v ? 'py-6 sm:py-8' : 'py-12 sm:py-16';
 		$gap    = 'badge' === $v ? 'gap-3 sm:gap-4 lg:gap-6' : 'gap-4 sm:gap-6';
 		$token  = in_array( $v, array( 'simple', 'bento' ), true );
+		if ( 'guide' === $v ) {
+			?>
+			<section class="w-full py-space-xl <?php echo esc_attr( ls_section_bg( $s['section_bg'] ) ); ?>">
+				<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+					<div class="bg-surface-card rounded-2xl p-space-xl shadow-sm">
+						<?php if ( $s['heading_eyebrow'] ) : ?>
+						<div class="flex items-center gap-space-xs text-primary mb-space-xs"><i class="bi bi-journal-bookmark text-[20px]" aria-hidden="true"></i><span class="font-label-nav text-label-nav"><?php echo esc_html( $s['heading_eyebrow'] ); ?></span></div>
+						<?php endif; ?>
+						<?php if ( $s['heading_title'] ) : ?><h3 class="font-headline-md text-headline-md text-on-surface mb-space-md"><?php echo ls_kses( $s['heading_title'] ); // phpcs:ignore ?></h3><?php endif; ?>
+						<div class="grid <?php echo esc_attr( ls_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) ); ?> gap-space-lg font-body-md text-body-md text-on-surface-variant">
+							<?php foreach ( $s['items'] as $it ) : ?>
+							<div class="flex flex-col gap-space-xs bg-surface-canvas p-space-md rounded-xl">
+								<h4 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1"><?php echo ls_icon( $it['icon'], 'text-primary text-[20px]' ); // phpcs:ignore ?><?php echo esc_html( $it['title'] ); ?></h4>
+								<?php if ( $it['desc'] ) : ?><p class="font-body-sm text-body-sm leading-relaxed"><?php echo esc_html( $it['desc'] ); ?></p><?php endif; ?>
+							</div>
+							<?php endforeach; ?>
+						</div>
+					</div>
+				</div>
+			</section>
+			<?php
+			return;
+		}
 		?>
 		<section class="<?php echo esc_attr( $pad . ' ' . ls_section_bg( $s['section_bg'] ) ); ?>">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

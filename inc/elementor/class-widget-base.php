@@ -11,15 +11,41 @@
 
 defined( 'ABSPATH' ) || exit;
 
-use Elementor\Controls_Manager;
-use Elementor\Group_Control_Typography;
-use Elementor\Repeater;
-use Elementor\Widget_Base;
+/*
+ * With Elementor active the widgets extend \Elementor\Widget_Base. Without it
+ * they extend a tiny compatible fallback (inc/elementor/fallback.php) so pages
+ * created by the theme still render their saved layout.
+ */
+if ( class_exists( 'Elementor\\Widget_Base' ) ) {
+	abstract class LS_Widget_Parent extends \Elementor\Widget_Base {} // phpcs:ignore Generic.Files.OneObjectStructurePerFile.MultipleFound
+} else {
+	abstract class LS_Widget_Parent extends LS_Fallback_Widget {} // phpcs:ignore Generic.Files.OneObjectStructurePerFile.MultipleFound
+}
 
 /**
  * Base widget.
  */
-abstract class LS_Widget_Base extends Widget_Base {
+abstract class LS_Widget_Base extends LS_Widget_Parent {
+
+	/**
+	 * Elementor control-type / tab constant, or its documented string value without Elementor.
+	 *
+	 * @param string $name Constant name, e.g. TEXT.
+	 * @return string
+	 */
+	protected static function cm( $name ) {
+		$const = 'Elementor\\Controls_Manager::' . $name;
+		if ( defined( $const ) ) {
+			return constant( $const );
+		}
+		$map = array(
+			'TAB_CONTENT' => 'content',
+			'TAB_STYLE'   => 'style',
+			'ICONS'       => 'icons',
+			'SWITCHER'    => 'switcher',
+		);
+		return $map[ $name ] ?? strtolower( $name );
+	}
 
 	/**
 	 * Category.
@@ -63,7 +89,7 @@ abstract class LS_Widget_Base extends Widget_Base {
 	 * @return string
 	 */
 	public function get_custom_help_url() {
-		return admin_url( 'themes.php?page=ls-setup' );
+		return admin_url( 'admin.php?page=ls-settings' );
 	}
 
 	/**
@@ -90,7 +116,7 @@ abstract class LS_Widget_Base extends Widget_Base {
 	protected function section( $id, $label, $tab = 'content', $condition = array() ) {
 		$args = array(
 			'label' => $label,
-			'tab'   => 'style' === $tab ? Controls_Manager::TAB_STYLE : Controls_Manager::TAB_CONTENT,
+			'tab'   => 'style' === $tab ? self::cm( 'TAB_STYLE' ) : self::cm( 'TAB_CONTENT' ),
 		);
 		if ( $condition ) {
 			$args['condition'] = $condition;
@@ -116,25 +142,25 @@ abstract class LS_Widget_Base extends Widget_Base {
 	 */
 	protected function spec( $type, $label, $default = '', $args = array() ) {
 		$map = array(
-			'text'     => Controls_Manager::TEXT,
-			'textarea' => Controls_Manager::TEXTAREA,
-			'wysiwyg'  => Controls_Manager::WYSIWYG,
-			'url'      => Controls_Manager::URL,
-			'media'    => Controls_Manager::MEDIA,
-			'icon'     => Controls_Manager::ICONS,
-			'select'   => Controls_Manager::SELECT,
-			'switch'   => Controls_Manager::SWITCHER,
-			'number'   => Controls_Manager::NUMBER,
-			'color'    => Controls_Manager::COLOR,
-			'slider'   => Controls_Manager::SLIDER,
-			'heading'  => Controls_Manager::HEADING,
-			'code'     => Controls_Manager::CODE,
-			'gallery'  => Controls_Manager::GALLERY,
-			'hidden'   => Controls_Manager::HIDDEN,
+			'text'     => self::cm( 'TEXT' ),
+			'textarea' => self::cm( 'TEXTAREA' ),
+			'wysiwyg'  => self::cm( 'WYSIWYG' ),
+			'url'      => self::cm( 'URL' ),
+			'media'    => self::cm( 'MEDIA' ),
+			'icon'     => self::cm( 'ICONS' ),
+			'select'   => self::cm( 'SELECT' ),
+			'switch'   => self::cm( 'SWITCHER' ),
+			'number'   => self::cm( 'NUMBER' ),
+			'color'    => self::cm( 'COLOR' ),
+			'slider'   => self::cm( 'SLIDER' ),
+			'heading'  => self::cm( 'HEADING' ),
+			'code'     => self::cm( 'CODE' ),
+			'gallery'  => self::cm( 'GALLERY' ),
+			'hidden'   => self::cm( 'HIDDEN' ),
 		);
 		$c = array(
 			'label' => $label,
-			'type'  => $map[ $type ] ?? Controls_Manager::TEXT,
+			'type'  => $map[ $type ] ?? self::cm( 'TEXT' ),
 		);
 		if ( 'heading' !== $type ) {
 			$c['default'] = $default;
@@ -200,7 +226,7 @@ abstract class LS_Widget_Base extends Widget_Base {
 	 * @param array  $args Extra args.
 	 */
 	protected function rep( $id, $label, $fields, $defaults, $title_field = '{{{ title }}}', $args = array() ) {
-		$r = new Repeater();
+		$r = class_exists( 'Elementor\\Repeater' ) ? new \Elementor\Repeater() : new LS_Fallback_Repeater();
 		foreach ( $fields as $f ) {
 			$r->add_control( $f[0], $this->spec( $f[1], $f[2], $f[3] ?? '', $f[4] ?? array() ) );
 		}
@@ -226,7 +252,7 @@ abstract class LS_Widget_Base extends Widget_Base {
 			array_merge(
 				array(
 					'label'       => $label,
-					'type'        => Controls_Manager::REPEATER,
+					'type'        => self::cm( 'REPEATER' ),
 					'fields'      => $r->get_controls(),
 					'default'     => $defaults,
 					'title_field' => $title_field,
@@ -323,7 +349,7 @@ abstract class LS_Widget_Base extends Widget_Base {
 			'ls_style_colors',
 			array(
 				'label' => __( 'رنگ‌های قالب (فقط این ویجت)', 'larijani' ),
-				'tab'   => Controls_Manager::TAB_STYLE,
+				'tab'   => self::cm( 'TAB_STYLE' ),
 			)
 		);
 		$vars = array(
@@ -339,7 +365,7 @@ abstract class LS_Widget_Base extends Widget_Base {
 				'ls_var_' . str_replace( '-', '_', $var ),
 				array(
 					'label'     => $label,
-					'type'      => Controls_Manager::COLOR,
+					'type'      => self::cm( 'COLOR' ),
 					'selectors' => array( '{{WRAPPER}}' => '--ls-' . $var . ': {{VALUE}};' ),
 				)
 			);
@@ -351,14 +377,14 @@ abstract class LS_Widget_Base extends Widget_Base {
 				'ls_style_layout',
 				array(
 					'label' => __( 'چیدمان بخش', 'larijani' ),
-					'tab'   => Controls_Manager::TAB_STYLE,
+					'tab'   => self::cm( 'TAB_STYLE' ),
 				)
 			);
 			$this->add_responsive_control(
 				'ls_container_width',
 				array(
 					'label'      => __( 'حداکثر عرض محتوا', 'larijani' ),
-					'type'       => Controls_Manager::SLIDER,
+					'type'       => self::cm( 'SLIDER' ),
 					'size_units' => array( 'px', '%', 'vw' ),
 					'range'      => array( 'px' => array( 'min' => 600, 'max' => 1920 ) ),
 					'selectors'  => array( '{{WRAPPER}} .max-w-7xl, {{WRAPPER}} .max-w-\[80rem\]' => 'max-width: {{SIZE}}{{UNIT}};' ),
@@ -368,7 +394,7 @@ abstract class LS_Widget_Base extends Widget_Base {
 				'ls_section_padding',
 				array(
 					'label'      => __( 'فاصله داخلی بخش (بالا/پایین)', 'larijani' ),
-					'type'       => Controls_Manager::DIMENSIONS,
+					'type'       => self::cm( 'DIMENSIONS' ),
 					'size_units' => array( 'px', 'rem', 'em' ),
 					'allowed_dimensions' => 'vertical',
 					'selectors'  => array( '{{WRAPPER}} .ls-root > :first-child' => 'padding-top: {{TOP}}{{UNIT}}; padding-bottom: {{BOTTOM}}{{UNIT}};' ),
@@ -378,7 +404,7 @@ abstract class LS_Widget_Base extends Widget_Base {
 				'ls_section_bg_color',
 				array(
 					'label'     => __( 'رنگ پس‌زمینه سفارشی بخش', 'larijani' ),
-					'type'      => Controls_Manager::COLOR,
+					'type'      => self::cm( 'COLOR' ),
 					'selectors' => array( '{{WRAPPER}} .ls-root > :first-child' => 'background-color: {{VALUE}};' ),
 				)
 			);
@@ -390,14 +416,18 @@ abstract class LS_Widget_Base extends Widget_Base {
 				'ls_style_typo',
 				array(
 					'label' => __( 'تایپوگرافی', 'larijani' ),
-					'tab'   => Controls_Manager::TAB_STYLE,
+					'tab'   => self::cm( 'TAB_STYLE' ),
 				)
 			);
-			$this->add_control( 'ls_title_color', array( 'label' => __( 'رنگ عناوین', 'larijani' ), 'type' => Controls_Manager::COLOR, 'selectors' => array( '{{WRAPPER}} :is(h1,h2,h3)' => 'color: {{VALUE}};' ) ) );
-			$this->add_group_control( Group_Control_Typography::get_type(), array( 'name' => 'ls_title_typo', 'label' => __( 'عناوین اصلی', 'larijani' ), 'selector' => '{{WRAPPER}} :is(h1,h2)' ) );
-			$this->add_group_control( Group_Control_Typography::get_type(), array( 'name' => 'ls_card_title_typo', 'label' => __( 'عنوان کارت‌ها', 'larijani' ), 'selector' => '{{WRAPPER}} :is(h3,h4,h5)' ) );
-			$this->add_control( 'ls_text_color', array( 'label' => __( 'رنگ متن‌ها', 'larijani' ), 'type' => Controls_Manager::COLOR, 'selectors' => array( '{{WRAPPER}} p' => 'color: {{VALUE}};' ) ) );
-			$this->add_group_control( Group_Control_Typography::get_type(), array( 'name' => 'ls_text_typo', 'label' => __( 'متن‌ها', 'larijani' ), 'selector' => '{{WRAPPER}} p' ) );
+			$this->add_control( 'ls_title_color', array( 'label' => __( 'رنگ عناوین', 'larijani' ), 'type' => self::cm( 'COLOR' ), 'selectors' => array( '{{WRAPPER}} :is(h1,h2,h3)' => 'color: {{VALUE}};' ) ) );
+			if ( class_exists( 'Elementor\\Group_Control_Typography' ) ) {
+				$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array( 'name' => 'ls_title_typo', 'label' => __( 'عناوین اصلی', 'larijani' ), 'selector' => '{{WRAPPER}} :is(h1,h2)' ) );
+				$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array( 'name' => 'ls_card_title_typo', 'label' => __( 'عنوان کارت‌ها', 'larijani' ), 'selector' => '{{WRAPPER}} :is(h3,h4,h5)' ) );
+			}
+			$this->add_control( 'ls_text_color', array( 'label' => __( 'رنگ متن‌ها', 'larijani' ), 'type' => self::cm( 'COLOR' ), 'selectors' => array( '{{WRAPPER}} p' => 'color: {{VALUE}};' ) ) );
+			if ( class_exists( 'Elementor\\Group_Control_Typography' ) ) {
+				$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array( 'name' => 'ls_text_typo', 'label' => __( 'متن‌ها', 'larijani' ), 'selector' => '{{WRAPPER}} p' ) );
+			}
 			$this->end_controls_section();
 		}
 	}

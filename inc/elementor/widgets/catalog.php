@@ -78,7 +78,20 @@ class LS_Widget_Catalog extends LS_Widget_Base {
 		$this->section( 'sec_labels', __( 'متن‌ها و سایدبار', 'larijani' ) );
 		$this->ctl( 'search_placeholder', 'text', __( 'راهنمای جستجو', 'larijani' ), 'جستجو در نام قالب، ابعاد، میکسر یا مواد...' );
 		$this->ctl( 'all_label', 'text', __( 'عنوان «همه»', 'larijani' ), 'همه محصولات' );
-		$this->ctl( 'show_sidebar', 'switch', __( 'نمایش سایدبار', 'larijani' ), 'yes' );
+		$this->ctl(
+			'layout',
+			'select',
+			__( 'طرح فروشگاه', 'larijani' ),
+			'sidebar',
+			array(
+				'options' => array(
+					'sidebar' => __( 'کاتالوگ با سایدبار فیلتر (۳ ستون)', 'larijani' ),
+					'store'   => __( 'فروشگاه تمام‌عرض (۴ ستون، مرتب‌سازی کشویی)', 'larijani' ),
+				),
+			)
+		);
+		$this->ctl( 'show_sidebar', 'switch', __( 'نمایش سایدبار', 'larijani' ), 'yes', array( 'condition' => array( 'layout' => 'sidebar' ) ) );
+		$this->ctl( 'footer_note', 'text', __( 'متن زیر محصولات (کارت‌های دستی)', 'larijani' ), '' );
 		$this->ctl( 'show_price', 'switch', __( 'فیلتر قیمت (ووکامرس)', 'larijani' ), 'yes' );
 		$this->ctl( 'advisory_title', 'text', __( 'عنوان باکس پیشنهاد', 'larijani' ), 'پیشنهاد راه‌اندازی' );
 		$this->ctl( 'advisory_text', 'textarea', __( 'متن باکس پیشنهاد', 'larijani' ), 'برای راه‌اندازی کارگاه سنگ مصنوعی در متراژ ۱۵۰ متر، بسته شامل ۲۵۰ قالب ABS، میز ویبره ۲×۱ و میکسر ۵۰۰ کیلویی اقتصادی‌ترین گزینه تولید است.' );
@@ -113,6 +126,8 @@ class LS_Widget_Catalog extends LS_Widget_Base {
 			'advisory_link_text' => $s['advisory_link_text'],
 			'advisory_link'      => $s['advisory_link'],
 			'columns'            => (int) $s['columns'],
+			'layout'             => $s['layout'] ?? 'sidebar',
+			'footer_note'        => $s['footer_note'] ?? '',
 		);
 		echo '<section class="w-full py-space-lg"><div class="max-w-7xl mx-auto px-4 sm:px-gutter">';
 		ls_render_catalog( $args );

@@ -4,7 +4,7 @@
     "type": "error-404",
     "content": [
         {
-            "id": "48b99f2",
+            "id": "0985d0b",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -20,7 +20,7 @@
             },
             "elements": [
                 {
-                    "id": "13550d5",
+                    "id": "ee9ee5c",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -36,7 +36,7 @@
                     },
                     "elements": [
                         {
-                            "id": "13b92ec",
+                            "id": "2ae9c42",
                             "elType": "widget",
                             "widgetType": "ls-page-banner",
                             "settings": {
@@ -52,7 +52,7 @@
             ]
         },
         {
-            "id": "cc48a17",
+            "id": "d4ebf6a",
             "elType": "section",
             "settings": {
                 "layout": "full_width",
@@ -68,7 +68,7 @@
             },
             "elements": [
                 {
-                    "id": "330ad5f",
+                    "id": "f381735",
                     "elType": "column",
                     "settings": {
                         "_column_size": 100,
@@ -84,7 +84,7 @@
                     },
                     "elements": [
                         {
-                            "id": "3351d14",
+                            "id": "067b1f6",
                             "elType": "widget",
                             "widgetType": "ls-categories",
                             "settings": {

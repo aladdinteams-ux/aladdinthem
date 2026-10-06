@@ -33,6 +33,6 @@ Drawer menu via keyboard, `aria-expanded`, dialog role, focus trap, Escape, focu
 ## Not executed
 - Real devices, Safari/WebKit and Firefox: NOT EXECUTED (Chromium only).
 - Landscape phones / zoom 200–400 %: NOT EXECUTED.
-- The real Elementor editor's responsive mode: NOT EXECUTED (plugin unavailable in the sandbox).
+- Real Elementor 4.0.8: 16 routes × 15 widths = 240/240 PASS (1.3.0); Elementor 3.35.9: 32/32 PASS. The editor's own responsive preview was not exercised separately.
 
 **Responsive Status: PASS** (Chromium, 15 widths, no masking).

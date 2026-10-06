@@ -1,0 +1,25 @@
+PASS woo.shop.390 — status 200 overflow=false php-errors=false h1=1 items=8
+PASS woo.category.390 — status 200 overflow=false php-errors=false h1=1 items=2
+PASS woo.search.390 — status 200 overflow=false php-errors=false h1=1 items=4
+PASS woo.product.390 — status 200 overflow=false php-errors=false h1=1 items=1
+PASS woo.add-to-cart-button.390
+PASS woo.added-notice.390
+PASS woo.cart.390 — status 200 overflow=false php-errors=false h1=1 items=0
+PASS woo.cart-has-item.390 — 2 rows
+PASS woo.checkout.390 — status 200 overflow=false php-errors=false h1=1 items=0
+PASS woo.checkout-renders.390
+PASS woo.js-errors.390
+PASS woo.shop.1280 — status 200 overflow=false php-errors=false h1=1 items=8
+PASS woo.category.1280 — status 200 overflow=false php-errors=false h1=1 items=2
+PASS woo.search.1280 — status 200 overflow=false php-errors=false h1=1 items=4
+PASS woo.product.1280 — status 200 overflow=false php-errors=false h1=1 items=1
+PASS woo.add-to-cart-button.1280
+PASS woo.added-notice.1280
+PASS woo.cart.1280 — status 200 overflow=false php-errors=false h1=1 items=0
+PASS woo.cart-has-item.1280 — 2 rows
+PASS woo.checkout.1280 — status 200 overflow=false php-errors=false h1=1 items=0
+PASS woo.checkout-renders.1280
+PASS woo.place-order — /checkout/order-received/79/?key=wc_order_znA5CHuo1loc3
+PASS woo.thankyou-no-overflow
+PASS woo.account.1280 — status 200 overflow=false php-errors=false h1=1 items=0
+PASS woo.js-errors.1280

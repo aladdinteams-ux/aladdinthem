@@ -1,3 +1,31 @@
+# QA Report — Larijani Stone 1.3.0 (native Elementor layouts)
+
+Date: 2026-10-06. This release re-ran the gates of the 1.2.0 audit (kept below) on the **real Elementor plugin**, which is now available: Elementor **4.0.8** and **3.35.9**, built from the official GitHub source tags (full CSS/JS build).
+
+## 1.3.0 evidence (real Elementor)
+
+| Check | Elementor 4.0.8 | Elementor 3.35.9 |
+|---|---|---|
+| Fresh install (WP 7.1.2 + WooCommerce 11.1.2) → theme activation → auto-setup | PASS (pages, 7 templates, 8 products, 7 posts, 6 projects, 5 menus, static front page) | PASS |
+| Editor opens on the native home page | PASS — 53 widgets in preview, 45 theme widgets in panel, 0 JS errors | PASS — same |
+| Edit a native Heading → Publish → visible on the site | PASS (save HTTP 200, success) | PASS |
+| Style tab wins over theme classes (heading colour + size, button background, grid columns) | PASS (#ff0000 / 40px / #0000ff / 2 cols) | PASS |
+| Routes × widths (16 routes) | 240/240 PASS (15 widths 320–1920) | 32/32 PASS (390, 1440) |
+| Text clipping (16 routes, 4 widths) | 0 | — |
+| WooCommerce flow incl. COD order | 25/25 PASS | 25/25 PASS |
+| Keyboard / dialog / form interactions | 21/21 PASS | 21/21 PASS |
+| Lighthouse Accessibility / SEO (home, classic home, services, contact, shop) | 100 / 100 on all 5 | — |
+| Native vs 1.2 layout, same environment (height at 1440 / 390) | home 4084 vs 4092 / 8271 vs 8295; services 5080 vs 5121; contact 3651 vs 3665 | identical to 4.0.8 |
+| No Elementor (fallback renderer) vs Elementor | desktop heights equal (±25 px) | — |
+| Theme PHP warnings/notices in debug.log | 0 | 0 |
+| Upgrade 1.2 → 1.3 (old Section pages) | migration 1.3.0 runs, pages untouched, rebuild notice shown; opt-in rebuild keeps IDs and backs up old data | — |
+
+Elementor Pro: NOT EXECUTED (commercial; not obtainable here). Performance (lab, same environment, WooCommerce active): native layouts add ~50 KB (Elementor core-widget CSS) and 40–85 DOM nodes; mobile score 63 vs 64–66, CLS 0 → WARN (unchanged category).
+
+**Release Ready (1.3.0): YES** — no open FAIL, no fixable Critical issue, and the core integration (Elementor editor, saving, styling) is now executed on Elementor 3.35 and 4.0. Remaining items are WARN/NOT EXECUTED and documented (Elementor Pro, MySQL, Safari/Firefox, screen readers, field CWV, companion-plugin architecture, mobile lab performance).
+
+---
+
 # QA Report — Larijani Stone 1.2.0 (Master Audit & Repair)
 
 Date: 2026-10-05 · Spec: *WordPress Elementor Theme Builder v0.6.1* audit prompt · Branch: `claude/wordpress-elementor-theme-conversion-t2rwiw`
@@ -45,7 +73,7 @@ Critical/High found: **10** (7 Critical/High in security, stability, layout and 
 | GEO/AIO technical readiness | PASS / UNKNOWN (outcomes) | `AI-SEARCH-READINESS.md` |
 | Performance (lab) | WARN | desktop 98–100; mobile 78–84 on an uncompressed dev server; field data NOT EXECUTED |
 | WooCommerce | PASS | 25/25 incl. order placement (env B) |
-| Elementor editor & Theme Builder with the **real** plugins | **NOT EXECUTED** | plugin not downloadable in the build environment |
+| Elementor editor & Theme Builder with the **real** plugins | **NOT EXECUTED in 1.2.0 → PASS in 1.3.0** (Elementor 3.35.9 / 4.0.8; Pro still NOT EXECUTED) | see the 1.3.0 table above |
 | Visual fidelity vs Stitch ZIP | WARN | layouts match (earlier side-by-side pass); intentional deviations: darker text tokens for AA contrast, unified footer, global menu |
 | Architecture vs spec (native-first, theme/companion split) | WARN | owner required a single theme that builds pages on install; pages use 45 custom widgets instead of native containers; no companion plugin |
 | Translation | PASS / UNKNOWN | `languages/larijani.pot` (1 090 strings); `.mo` compile not executed (no msgfmt) |
@@ -76,4 +104,4 @@ Real Elementor (free) editor, Elementor Pro Theme Builder conditions, Elementor 
 - Debug logs: 0 theme warnings/notices/deprecations on all three environments.
 
 ## 7. Verdict
-No open FAIL and no fixable Critical issue remains. **Release Ready: NO** — the theme's core integration (editing in the real Elementor editor and Elementor Pro Theme Builder) could not be executed here. The ZIP is a **release candidate**: install it on a staging site with the current Elementor (and Pro, if used), open each page in the editor, then promote to production.
+No open FAIL and no fixable Critical issue remains. **Release Ready (1.2.0): NO** (superseded by 1.3.0 above) — the theme's core integration (editing in the real Elementor editor and Elementor Pro Theme Builder) could not be executed here. The ZIP is a **release candidate**: install it on a staging site with the current Elementor (and Pro, if used), open each page in the editor, then promote to production.

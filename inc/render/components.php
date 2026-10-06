@@ -212,14 +212,14 @@ function ls_product_card( $p, $style = 'classic' ) {
 					<?php if ( $p['specs'] ) : ?>
 					<div class="mt-4 pt-3 border-t border-gray-100 grid grid-cols-3 text-center text-xs text-gray-500">
 						<?php foreach ( array_slice( $p['specs'], 0, 3 ) as $i => $sp ) : ?>
-						<div class="<?php echo 1 === $i ? 'border-x border-gray-100' : ''; ?>"><span class="block font-bold text-gray-800"><?php echo esc_html( $sp[1] ); ?></span><span class="text-[10px] text-gray-400"><?php echo esc_html( $sp[0] ); ?></span></div>
+						<div class="<?php echo 1 === $i ? 'border-x border-gray-100' : ''; ?>"><span class="block font-bold text-gray-800"><?php echo esc_html( $sp[1] ); ?></span><span class="text-[10px] text-gray-500"><?php echo esc_html( $sp[0] ); ?></span></div>
 						<?php endforeach; ?>
 					</div>
 					<?php endif; ?>
 				</div>
 				<div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
 					<div>
-						<?php if ( $p['price_label'] ) : ?><span class="text-xs text-gray-400 block"><?php echo esc_html( $p['price_label'] ); ?></span><?php endif; ?>
+						<?php if ( $p['price_label'] ) : ?><span class="text-xs text-gray-500 block"><?php echo esc_html( $p['price_label'] ); ?></span><?php endif; ?>
 						<span class="text-sm sm:text-base font-black text-primary-container"><?php echo $price; // phpcs:ignore ?> <?php if ( $p['currency'] && ! $p['price_html'] && '' !== $p['price'] ) : ?><span class="text-[10px] sm:text-[11px] font-normal text-gray-500"><?php echo esc_html( $p['currency'] ); ?></span><?php endif; ?></span>
 					</div>
 					<?php if ( $p['button_text'] ) : ?>

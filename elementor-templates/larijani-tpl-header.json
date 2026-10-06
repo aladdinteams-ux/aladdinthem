@@ -4,11 +4,17 @@
     "type": "header",
     "content": [
         {
-            "id": "b0c78a2",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -16,35 +22,20 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "7e02ce7",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "72b0eed",
-                            "elType": "widget",
-                            "widgetType": "ls-header",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
+                    "id": "c0642ac",
+                    "elType": "widget",
+                    "widgetType": "ls-header",
+                    "settings": [],
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "185a8c5",
+            "isInner": false
         }
     ],
     "page_settings": {

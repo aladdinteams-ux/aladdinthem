@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'LS_VERSION', '1.2.0' );
+define( 'LS_VERSION', '1.3.0' );
 define( 'LS_DIR', get_template_directory() );
 define( 'LS_URI', get_template_directory_uri() );
 

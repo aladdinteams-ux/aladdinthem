@@ -1,6 +1,6 @@
 # Developer hooks (public API) — Larijani Stone
 
-All hooks are prefixed `ls_` and are considered stable from 1.2.0. Use them from a child theme (`child-theme/larijani-stone-child`) or a plugin.
+All hooks are prefixed `ls_` and are considered stable from 1.2.0 (native layout API from 1.3.0). Use them from a child theme (`child-theme/larijani-stone-child`) or a plugin.
 
 ## Filters
 
@@ -23,6 +23,11 @@ All hooks are prefixed `ls_` and are considered stable from 1.2.0. Use them from
 | `ls_breadcrumb_trail` | `array $trail` | Breadcrumb items. |
 | `ls_content_width` | `int $px` | `$content_width`. |
 | `ls_migrations` | `array $steps` | Version ⇒ callback migration steps (see `inc/migrations.php`). |
+| `ls_native_layouts` | `bool $native, array $row` | `true` — build static sections from Elementor core widgets in Containers (1.3.0+). Return `false` to get the 1.2 theme-widget layouts. |
+| `ls_enable_elementor_containers` | `bool $enable` | `true` — switch on Elementor's Container feature during setup when an old site still has it off. |
+| `ls_wc_product_structured_data` | `bool $enable` | `true` — collect WooCommerce Product/Offer JSON-LD for the theme's product layouts. |
+| `ls_content_lang` | `string $lang` | `fa-IR` when RTL is forced on a non-RTL site language (`''` keeps WordPress' value). |
+| `ls_meta_description_enabled` / `ls_meta_description` | `bool` / `string` | Fallback meta description (only without an SEO plugin). |
 
 ## Actions
 
@@ -38,3 +43,8 @@ All hooks are prefixed `ls_` and are considered stable from 1.2.0. Use them from
 ## Ownership meta written by the setup
 
 `_ls_demo_page` (pages/templates created by the theme), `_ls_demo_key` (sample posts/projects/products), `_ls_demo_image` (design image key). Re-running the setup never touches objects without these keys.
+`_ls_elementor_data_backup` / `_ls_elementor_data_backup_date` — previous Elementor data kept when a page/template is rebuilt with the opt-in "rebuild" option.
+
+## Native layout builder (`inc/demo/native.php`)
+
+`ls_n_c( $children, $opts )` (Container), `ls_n_w( $type, $settings, $classes )` (any core widget), `ls_n_heading()`, `ls_n_text()`, `ls_n_button()`, `ls_n_iconw()`, `ls_n_section()`, `ls_n_section_heading()`, `ls_n_span( $span, $gap )`, and one recipe per converted section: `ls_nr_icon_cards()`, `ls_nr_about()`, `ls_nr_testimonials()`, `ls_nr_cta()`, `ls_nr_steps()`, `ls_nr_page_banner()`, `ls_nr_contact_cards()`. Margin utilities (`mt-*`, `mb-*`, `sm:`/`lg:`) on widgets are converted to Elementor's own Margin setting; other utility classes stay in *Advanced › CSS Classes*.

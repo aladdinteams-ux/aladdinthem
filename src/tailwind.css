@@ -247,3 +247,137 @@ body.admin-bar .ls-site-header header.sticky, body.admin-bar.ls-has-sticky-heade
 .ls-fb-col { width: 100%; box-sizing: border-box; min-width: 0; }
 .ls-fb-section > .ls-fb-row > .ls-fb-col:only-child { padding: 0; }
 @media (min-width: 768px) { .ls-fb-col { width: var(--ls-fb-w, 100%); } }
+
+/* ---------------------------------------------------------------------------
+ * Native Elementor widgets used by the theme layouts (inc/demo/native.php).
+ * Widgets carry "ls-n" + utility classes in Advanced › CSS Classes; these rules
+ * pass the wrapper's typography/colour to Elementor's inner elements and give
+ * buttons/icons the design styles. Max specificity 0-3-0, so values set in
+ * Elementor's Style tab (0-4-0) always win.
+ * ------------------------------------------------------------------------- */
+.ls-n-wrap.e-con { --padding-top: 0px; --padding-right: 0px; --padding-bottom: 0px; --padding-left: 0px; }
+.ls-n.elementor-widget-heading .elementor-heading-title,
+.ls-n.elementor-widget-heading .elementor-heading-title a { color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; text-align: inherit; }
+.ls-n.elementor-widget-text-editor :is(p, ul, ol) { margin: 0; }
+.ls-n-rich.elementor-widget-text-editor :is(p, ul, ol) + :is(p, ul, ol) { margin-top: 0.75rem; }
+@media (min-width: 640px) { .ls-n-rich.elementor-widget-text-editor :is(p, ul, ol) + :is(p, ul, ol) { margin-top: 1rem; } }
+
+/* Icon tiles: size/colour/background come from the widget classes. */
+.ls-n-icon.elementor-widget-icon { display: flex; align-items: center; justify-content: center; line-height: 1; }
+.ls-n-icon.elementor-widget-icon > .elementor-widget-container,
+.ls-n-icon.elementor-widget-icon .elementor-icon-wrapper { display: flex; align-items: center; justify-content: center; line-height: 1; }
+.ls-n-icon.elementor-widget-icon .elementor-icon { color: inherit; font-size: inherit; line-height: 1; display: inline-flex; }
+.ls-n-icon.elementor-widget-icon .elementor-icon i { display: block; }
+.ls-n-icon.elementor-widget-icon .elementor-icon svg { width: 1em; height: 1em; fill: currentColor; }
+
+/* Circles with text (step numbers, initials). */
+.ls-n-num.elementor-widget-heading,
+.ls-n-initials.elementor-widget-heading { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+/* Pills / badges sized to their content. */
+.ls-n-badge.elementor-widget-heading { width: auto; flex: 0 0 auto; }
+
+/* Images that fill a fixed-height frame. */
+.ls-n-img-cover.elementor-widget-image { overflow: hidden; }
+.ls-n-img-cover.elementor-widget-image :is(img, a, .elementor-widget-container) { display: block; width: 100%; height: 100%; }
+.ls-n-img-cover.elementor-widget-image img { object-fit: cover; max-width: none; }
+.ls-n-avatar.elementor-widget-image img { width: 100%; height: 100%; border-radius: 9999px; object-fit: cover; }
+
+/* Inline chips (bento cards) and check lists. */
+.ls-n-chips.elementor-widget-icon-list .elementor-icon-list-items { display: flex; flex-wrap: wrap; gap: 0.375rem; margin: 0; }
+.ls-n-chips.elementor-widget-icon-list .elementor-icon-list-item { margin: 0; padding: 0.25rem 0.625rem; border-radius: 0.5rem; background: var(--ls-canvas); color: #454841; font-size: 0.75rem; line-height: 1.5; }
+.ls-n-chips.elementor-widget-icon-list .elementor-icon-list-item::after { display: none; }
+.ls-n-checks.elementor-widget-icon-list .elementor-icon-list-items { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin: 0; }
+.ls-n-checks.elementor-widget-icon-list .elementor-icon-list-item { margin: 0; gap: 0.25rem; }
+.ls-n-checks.elementor-widget-icon-list .elementor-icon-list-item::after { display: none; }
+.ls-n-checks.elementor-widget-icon-list .elementor-icon-list-icon { color: #dbe6cf; font-size: 18px; }
+.ls-n-checks.elementor-widget-icon-list .elementor-icon-list-text { color: inherit; }
+
+/* Star rating (unicode stars, colour from the widget class). */
+.ls-n-stars.elementor-widget-star-rating .elementor-star-rating { color: currentColor; font-size: inherit; letter-spacing: 0; }
+.ls-n-stars.elementor-widget-star-rating .elementor-star-rating i::before { color: currentColor; }
+.ls-n-stars.elementor-widget-star-rating .elementor-star-rating .elementor-star-empty { opacity: 0.35; }
+
+/* Thin progress bar (page banner). */
+.ls-n-progress.elementor-widget-progress .elementor-progress-wrapper { height: 6px; border-radius: 9999px; background: rgba(255, 255, 255, 0.1); overflow: hidden; }
+.ls-n-progress.elementor-widget-progress .elementor-progress-bar { height: 6px; border-radius: 9999px; background: #047857; line-height: 6px; }
+.ls-n-progress.elementor-widget-progress .elementor-progress-text,
+.ls-n-progress.elementor-widget-progress .elementor-title { display: none; }
+
+/* Pills built from containers. */
+.ls-n-pill.e-con { flex-wrap: nowrap; }
+
+/* Decorative glows of the dark cards (same as the theme widgets). */
+.ls-n-glow.e-con { position: relative; isolation: isolate; }
+.ls-n-glow.e-con::before { content: ""; position: absolute; right: -5rem; bottom: -5rem; width: 20rem; height: 20rem; border-radius: 9999px; background: color-mix(in srgb, var(--ls-primary) 30%, transparent); filter: blur(64px); pointer-events: none; z-index: -1; }
+.ls-n-glow.e-con::after { content: ""; position: absolute; top: 0; left: 0; width: 16rem; height: 16rem; border-radius: 9999px; background: rgba(4, 120, 87, 0.1); filter: blur(40px); pointer-events: none; z-index: -1; }
+.ls-n-glow--banner.e-con::before { right: auto; bottom: auto; top: -6rem; left: -6rem; width: 24rem; height: 24rem; background: color-mix(in srgb, var(--ls-primary) 20%, transparent); }
+.ls-n-glow--banner.e-con::after { top: auto; left: auto; bottom: 0; right: 25%; background: rgba(212, 233, 200, 0.1); }
+
+/* Buttons. */
+.ls-n-btn.elementor-widget-button .elementor-button { display: inline-flex; align-items: center; justify-content: center; max-width: 100%; min-width: 0; border-radius: 9999px; border: 0 solid transparent; font-family: inherit; font-size: 0.875rem; font-weight: 600; line-height: 1.25rem; padding: 0.75rem 1.5rem; text-align: center; white-space: normal; background-color: var(--ls-primary); color: #fff; fill: currentColor; transition: background-color .2s, color .2s, opacity .2s, transform .2s, box-shadow .2s; }
+.ls-n-btn.elementor-widget-button .elementor-button-content-wrapper { align-items: center; gap: 0.5rem; }
+.ls-n-btn.elementor-widget-button .elementor-button-icon { display: inline-flex; font-size: 1.125rem; line-height: 1.75rem; }
+.ls-n-btn--arrow.elementor-widget-button .elementor-button-icon { font-size: 1em; line-height: inherit; }
+.ls-n-btn.elementor-widget-button .elementor-button-icon svg { width: 1em; height: 1em; }
+.ls-n-btn.elementor-widget-button .elementor-button-text { flex-grow: 0; }
+.ls-n-btn--block.elementor-widget-button,
+.ls-n-btn--block.elementor-widget-button .elementor-button { width: 100%; }
+.ls-n-btn--primary.elementor-widget-button .elementor-button { background-color: var(--ls-primary); color: #fff; font-weight: 700; font-size: 0.75rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1); }
+.ls-n-btn--primary.elementor-widget-button .elementor-button:hover { background-color: var(--ls-primary-hover); }
+.ls-n-btn--lg.elementor-widget-button .elementor-button { padding: 0.875rem 1.5rem; font-size: 0.75rem; }
+.ls-n-btn--glass.elementor-widget-button .elementor-button, .ls-n-btn--emerald.elementor-widget-button .elementor-button, .ls-n-btn--darker.elementor-widget-button .elementor-button { font-size: 0.75rem; }
+.ls-n-btn--primary.elementor-widget-button .elementor-button, .ls-n-btn--lg.elementor-widget-button .elementor-button, .ls-n-btn--glass.elementor-widget-button .elementor-button, .ls-n-btn--emerald.elementor-widget-button .elementor-button, .ls-n-btn--darker.elementor-widget-button .elementor-button, .ls-n-btn--link.elementor-widget-button .elementor-button { line-height: 1rem; }
+@media (min-width: 640px) { .ls-n-btn--primary.elementor-widget-button .elementor-button, .ls-n-btn--lg.elementor-widget-button .elementor-button, .ls-n-btn--glass.elementor-widget-button .elementor-button, .ls-n-btn--emerald.elementor-widget-button .elementor-button, .ls-n-btn--darker.elementor-widget-button .elementor-button, .ls-n-btn--link.elementor-widget-button .elementor-button { font-size: 0.875rem; line-height: 1.25rem; } }
+.ls-n-btn--sm.elementor-widget-button .elementor-button { padding: 0.625rem 0.75rem; font-size: 0.875rem; font-weight: 600; line-height: 1.25rem; box-shadow: none; }
+.ls-n-btn--sm.elementor-widget-button .elementor-button-icon { font-size: 16px; line-height: 1.25rem; }
+.ls-n-btn--link.elementor-widget-button .elementor-button { background: transparent; padding: 0; color: var(--ls-primary); font-weight: 700; font-size: 0.75rem; box-shadow: none; border-radius: 0; }
+.ls-n-btn--link.elementor-widget-button .elementor-button:hover { color: var(--ls-primary-hover); }
+.ls-n-btn--link.elementor-widget-button .elementor-button-content-wrapper { gap: 0.375rem; }
+.ls-n-btn--link.elementor-widget-button .elementor-button-icon { font-size: 1em; transition: transform .2s; }
+.ls-n-btn--link.elementor-widget-button .elementor-button:hover .elementor-button-icon,
+.ls-n-btn--primary.elementor-widget-button .elementor-button:hover .elementor-button-icon { transform: translateX(-0.25rem); }
+.ls-n-btn--glass.elementor-widget-button .elementor-button { background-color: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .2); color: #fff; font-weight: 500; font-size: 0.75rem; }
+.ls-n-btn--glass.elementor-widget-button .elementor-button:hover { background-color: rgba(255, 255, 255, .2); }
+.ls-n-btn--emerald.elementor-widget-button .elementor-button { background-color: #047857; color: #fff; font-weight: 700; }
+.ls-n-btn--emerald.elementor-widget-button .elementor-button:hover { opacity: .9; }
+.ls-n-btn--darker.elementor-widget-button .elementor-button { background-color: color-mix(in srgb, var(--ls-footer) 80%, transparent); border: 1px solid rgba(255, 255, 255, .1); color: #fff; }
+.ls-n-btn--darker.elementor-widget-button .elementor-button:hover { background-color: var(--ls-footer); }
+.ls-n-btn--dark.elementor-widget-button .elementor-button { background-color: var(--ls-dark); color: #fff; }
+.ls-n-btn--dark.elementor-widget-button .elementor-button:hover { background-color: #464d49; }
+.ls-n-btn--white.elementor-widget-button .elementor-button { background-color: #fff; color: #121c2c; padding: 0.75rem 1rem; box-shadow: 0 1px 2px rgba(0, 0, 0, .05); }
+.ls-n-btn--white.elementor-widget-button .elementor-button:hover { background-color: var(--ls-canvas); }
+.ls-n-btn--light.elementor-widget-button .elementor-button { background-color: #d4e9c8; color: #0f1f0b; padding: 0.625rem 1.5rem; }
+.ls-n-btn--light.elementor-widget-button .elementor-button:hover { background-color: #b8cdae; }
+.ls-n-btn--ghost.elementor-widget-button .elementor-button { background-color: rgba(255, 255, 255, .1); color: #fff; padding: 0.625rem 1.5rem; }
+.ls-n-btn--ghost.elementor-widget-button .elementor-button:hover { background-color: rgba(255, 255, 255, .2); }
+.ls-n-btn--primary-dark.elementor-widget-button .elementor-button { background-color: var(--ls-primary-hover); color: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, .05); }
+.ls-n-btn--primary-dark.elementor-widget-button .elementor-button:hover { background-color: var(--ls-primary); }
+.ls-n-btn--phone.elementor-widget-button .elementor-button { background: transparent; padding: 0; border-radius: 0; box-shadow: none; color: #fff; font-size: 1.125rem; font-weight: 800; line-height: 1.4; direction: ltr; justify-content: flex-end; width: 100%; }
+.ls-n-btn--phone.elementor-widget-button .elementor-button:hover { color: #dbe6cf; }
+.ls-n-btn--phone.elementor-widget-button .elementor-button-icon { font-size: 20px; }
+.ls-n-btn--phone-lg.elementor-widget-button .elementor-button { font-size: 1.5rem; font-weight: 700; color: #dbe6cf; }
+.ls-n-btn--phone-lg.elementor-widget-button .elementor-button:hover { color: #fff; }
+.ls-n-btn--phone-lg.elementor-widget-button .elementor-button-icon { font-size: 22px; }
+.ls-n-btn--phone-row.elementor-widget-button .elementor-button { width: 100%; justify-content: space-between; direction: ltr; background-color: var(--ls-canvas); color: var(--ls-primary-hover); border-radius: 0.75rem; padding: 0.5rem; font-size: 1.125rem; font-weight: 800; }
+.ls-n-btn--phone-row.elementor-widget-button .elementor-button-content-wrapper { width: 100%; justify-content: space-between; }
+.ls-n-btn--card-footer.elementor-widget-button .elementor-button { width: 100%; background: transparent; padding: 1.5rem 0 0; border-radius: 0; box-shadow: none; color: var(--ls-primary-hover); font-size: 0.75rem; font-weight: 600; }
+.ls-n-btn--card-footer.elementor-widget-button .elementor-button-content-wrapper { width: 100%; justify-content: space-between; }
+.ls-n-btn-sub.e-con a { color: inherit; }
+
+/* Fallback renderer (no Elementor): minimal container + widget behaviour. */
+.ls-fb-content .e-con { --display: flex; --flex-direction: column; --flex-wrap: nowrap; --row-gap: 0px; --column-gap: 0px; --justify-content: normal; --align-items: normal; --padding-top: 0px; --padding-right: 0px; --padding-bottom: 0px; --padding-left: 0px; --width: 100%; --content-width: 1140px; display: var(--display, flex); flex-direction: var(--flex-direction, column); flex-wrap: var(--flex-wrap, nowrap); gap: var(--row-gap, 0) var(--column-gap, 0); justify-content: var(--justify-content, normal); align-items: var(--align-items, normal); padding: var(--padding-top, 0) var(--padding-right, 0) var(--padding-bottom, 0) var(--padding-left, 0); width: var(--width, 100%); max-width: 100%; box-sizing: border-box; min-width: 0; }
+.ls-fb-content .e-con.e-grid { grid-template-columns: var(--e-con-grid-template-columns); grid-auto-rows: auto; }
+.ls-fb-content .e-con.e-con-boxed { display: block; }
+.ls-fb-content .e-con > .e-con-inner { display: var(--display, flex); flex-direction: var(--flex-direction, column); flex-wrap: var(--flex-wrap, nowrap); gap: var(--row-gap, 0) var(--column-gap, 0); justify-content: var(--justify-content, normal); align-items: var(--align-items, normal); max-width: var(--content-width, 1140px); margin: 0 auto; width: 100%; grid-template-columns: var(--e-con-grid-template-columns); }
+.ls-fb-content .e-con .elementor-widget { min-width: 0; }
+.ls-fb-content .elementor-icon-list-items { list-style: none; margin: 0; padding: 0; }
+.ls-fb-content .elementor-icon-list-item { display: flex; align-items: center; gap: 0.25rem; }
+.ls-fb-content .elementor-button { display: inline-flex; text-decoration: none; }
+.ls-fb-content .elementor-button-content-wrapper { display: flex; }
+.ls-n-btn--card-footer.elementor-widget-button .elementor-button-icon,
+.ls-n-btn--phone-row.elementor-widget-button .elementor-button-icon { font-size: 18px; line-height: 1; }
+.ls-n-ltr.elementor-widget-heading .elementor-heading-title { direction: ltr; unicode-bidi: plaintext; }
+.ls-n-nowrap.elementor-widget-button .elementor-button { white-space: nowrap; }
+@media (max-width: 767px) { .ls-n-nowrap.elementor-widget-button .elementor-button { white-space: normal; } }
+a.e-con.ls-n-btn-sub, a.e-con.ls-n-btn-sub:hover { color: #fff; text-decoration: none; }

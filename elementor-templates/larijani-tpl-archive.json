@@ -4,11 +4,17 @@
     "type": "archive",
     "content": [
         {
-            "id": "493384a",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -16,42 +22,33 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "d0b6ca5",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "6059848",
-                            "elType": "widget",
-                            "widgetType": "ls-blog-hero",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
+                    "id": "9c01711",
+                    "elType": "widget",
+                    "widgetType": "ls-blog-hero",
+                    "settings": [],
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "f95e1a8",
+            "isInner": false
         },
         {
-            "id": "4ca68e3",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -59,42 +56,33 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "976a02f",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "38039f1",
-                            "elType": "widget",
-                            "widgetType": "ls-featured-post",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
+                    "id": "375d8a4",
+                    "elType": "widget",
+                    "widgetType": "ls-featured-post",
+                    "settings": [],
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "3165633",
+            "isInner": false
         },
         {
-            "id": "5b4d311",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -102,42 +90,33 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "d82d877",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "7c83c50",
-                            "elType": "widget",
-                            "widgetType": "ls-posts-grid",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
+                    "id": "96fd8fc",
+                    "elType": "widget",
+                    "widgetType": "ls-posts-grid",
+                    "settings": [],
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "6354a21",
+            "isInner": false
         },
         {
-            "id": "a5f5a59",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -145,51 +124,336 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-root ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "589cf57",
-                    "elType": "column",
+                    "elType": "container",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1216
+                        },
+                        "flex_direction": "column",
+                        "flex_gap": {
+                            "column": "0",
+                            "row": "0",
+                            "isLinked": true,
+                            "unit": "px",
+                            "size": 0
+                        },
                         "padding": {
                             "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                            "top": "56",
+                            "right": "32",
+                            "bottom": "56",
+                            "left": "32",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "56",
+                            "right": "24",
+                            "bottom": "56",
+                            "left": "24",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "40",
+                            "right": "16",
+                            "bottom": "40",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "css_classes": "ls-n-section",
+                        "html_tag": "section"
                     },
                     "elements": [
                         {
-                            "id": "bae4408",
-                            "elType": "widget",
-                            "widgetType": "ls-cta",
+                            "elType": "container",
                             "settings": {
-                                "variant": "dark-card",
-                                "badge": "پشتیبانی فنی و مهندسی کارخانجات",
-                                "badge_icon": {
-                                    "value": "bi bi-headset",
-                                    "library": "bootstrap-icons"
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_direction_tablet": "column",
+                                "flex_direction_mobile": "column",
+                                "flex_gap": {
+                                    "column": "24",
+                                    "row": "24",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 24
                                 },
-                                "title": "نیاز به تنظیم فرمولاسیون اختصاصی یا رفع اشکال خط تولید دارید؟",
-                                "desc": "تیم مهندسی لاریجانی استون آماده ارائه مشاوره مستقیم تلفنی، تست آزمایشگاهی نمونه سنگ‌های کارگاه شما و آموزش حضوری اپراتورهای خط تولید است.",
-                                "btn1_text": "تماس مستقیم با مهندس لاریجانی",
-                                "btn2_style": "emerald",
-                                "btn2_icon": {
-                                    "value": "bi bi-whatsapp",
-                                    "library": "bootstrap-icons"
+                                "flex_align_items": "center",
+                                "flex_align_items_tablet": "stretch",
+                                "flex_align_items_mobile": "stretch",
+                                "flex_justify_content": "space-between",
+                                "flex_wrap": "nowrap",
+                                "flex_wrap_tablet": "nowrap",
+                                "flex_wrap_mobile": "nowrap",
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "48",
+                                    "right": "48",
+                                    "bottom": "48",
+                                    "left": "48",
+                                    "isLinked": true
                                 },
-                                "center_mobile": "yes"
+                                "padding_tablet": {
+                                    "unit": "px",
+                                    "top": "40",
+                                    "right": "40",
+                                    "bottom": "40",
+                                    "left": "40",
+                                    "isLinked": true
+                                },
+                                "padding_mobile": {
+                                    "unit": "px",
+                                    "top": "24",
+                                    "right": "24",
+                                    "bottom": "24",
+                                    "left": "24",
+                                    "isLinked": true
+                                },
+                                "css_classes": "ls-n-glow bg-surface-dark rounded-2xl sm:rounded-3xl overflow-hidden text-white shadow-xl"
                             },
-                            "elements": []
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "0",
+                                            "row": "0",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 0
+                                        },
+                                        "flex_align_items": "flex-start",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "css_classes": "max-w-2xl text-center lg:text-right"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "row",
+                                                "flex_gap": {
+                                                    "column": "8",
+                                                    "row": "8",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 8
+                                                },
+                                                "flex_align_items": "center",
+                                                "flex_wrap": "nowrap",
+                                                "flex_wrap_tablet": "nowrap",
+                                                "flex_wrap_mobile": "nowrap",
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "4",
+                                                    "right": "12",
+                                                    "bottom": "4",
+                                                    "left": "12",
+                                                    "isLinked": false
+                                                },
+                                                "width": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_tablet": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_mobile": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "css_classes": "ls-n-pill bg-white/10 text-secondary-fixed rounded-full font-label-badge text-label-badge mb-3"
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-headset",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon text-accent-emerald"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "07814cb"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "پشتیبانی فنی و مهندسی کارخانجات",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "04071ef"
+                                                }
+                                            ],
+                                            "id": "2ad05ca",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "نیاز به تنظیم فرمولاسیون اختصاصی یا رفع اشکال خط تولید دارید؟",
+                                                "header_size": "h3",
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "8",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "_css_classes": "ls-n font-black tracking-tight text-lg sm:text-xl lg:text-2xl leading-snug text-white"
+                                            },
+                                            "elements": [],
+                                            "id": "71e9306"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "text-editor",
+                                            "settings": {
+                                                "editor": "<p>تیم مهندسی لاریجانی استون آماده ارائه مشاوره مستقیم تلفنی، تست آزمایشگاهی نمونه سنگ‌های کارگاه شما و آموزش حضوری اپراتورهای خط تولید است.</p>",
+                                                "_css_classes": "ls-n text-slate-300 text-xs sm:text-sm max-w-xl leading-relaxed"
+                                            },
+                                            "elements": [],
+                                            "id": "afec9b7"
+                                        }
+                                    ],
+                                    "id": "fe4d3a9",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "row",
+                                        "flex_direction_tablet": "row",
+                                        "flex_direction_mobile": "column",
+                                        "flex_gap": {
+                                            "column": "12",
+                                            "row": "12",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 12
+                                        },
+                                        "flex_align_items": "center",
+                                        "flex_align_items_tablet": "center",
+                                        "flex_align_items_mobile": "stretch",
+                                        "flex_wrap": "nowrap",
+                                        "flex_wrap_tablet": "nowrap",
+                                        "flex_wrap_mobile": "nowrap",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "_flex_size": "none"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "button",
+                                            "settings": {
+                                                "text": "تماس مستقیم با مهندس لاریجانی",
+                                                "link": {
+                                                    "url": "tel:09122302685",
+                                                    "is_external": "",
+                                                    "nofollow": ""
+                                                },
+                                                "selected_icon": {
+                                                    "value": "bi bi-telephone-fill",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "icon_align": "row",
+                                                "_css_classes": "ls-n ls-n-btn ls-n-btn--primary ls-n-btn--lg"
+                                            },
+                                            "elements": [],
+                                            "id": "56d36db"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "button",
+                                            "settings": {
+                                                "text": "ارسال پیام در واتساپ",
+                                                "link": {
+                                                    "url": "https://wa.me/989122302685",
+                                                    "is_external": true,
+                                                    "nofollow": ""
+                                                },
+                                                "selected_icon": {
+                                                    "value": "bi bi-whatsapp",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "icon_align": "row",
+                                                "_css_classes": "ls-n ls-n-btn ls-n-btn--emerald ls-n-btn--lg ls-n-nowrap"
+                                            },
+                                            "elements": [],
+                                            "id": "6144536"
+                                        }
+                                    ],
+                                    "id": "3d8a537",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "6d1671d",
+                            "isInner": true
                         }
-                    ]
+                    ],
+                    "id": "9a0165e",
+                    "isInner": true
                 }
-            ]
+            ],
+            "id": "2def747",
+            "isInner": false
         }
     ],
     "page_settings": {

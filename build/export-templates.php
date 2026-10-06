@@ -26,10 +26,12 @@ $root = dirname( __DIR__ );
 require $root . '/inc/demo/images.php';
 require $root . '/inc/demo/content.php';
 require $root . '/inc/demo/pages.php';
+require $root . '/inc/demo/widget-defaults.php';
+require $root . '/inc/demo/native.php';
 
 // Only the pure helpers are needed from the importer.
 $src = file_get_contents( $root . '/inc/demo/importer.php' );
-foreach ( array( 'ls_el_id', 'ls_el_normalize', 'ls_el_widget', 'ls_el_build' ) as $fn ) {
+foreach ( array( 'ls_el_id', 'ls_el_normalize', 'ls_el_widget', 'ls_el_build', 'ls_el_native', 'ls_el_native_row' ) as $fn ) {
 	if ( preg_match( '/function ' . $fn . '\(.*?\n}\n/s', $src, $m ) ) {
 		eval( $m[0] ); // phpcs:ignore Squiz.PHP.Eval.Discouraged
 	}

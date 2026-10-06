@@ -4,11 +4,17 @@
     "type": "product-archive",
     "content": [
         {
-            "id": "c3bcaa8",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -16,42 +22,33 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "9adc278",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "5d551f2",
-                            "elType": "widget",
-                            "widgetType": "ls-shop-hero",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
+                    "id": "9fcdf85",
+                    "elType": "widget",
+                    "widgetType": "ls-shop-hero",
+                    "settings": [],
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "a98a520",
+            "isInner": false
         },
         {
-            "id": "f44b7cb",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -59,129 +56,524 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "a4db2f5",
-                    "elType": "column",
+                    "id": "d494d4b",
+                    "elType": "widget",
+                    "widgetType": "ls-catalog",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
+                        "source": "auto"
+                    },
+                    "elements": []
+                }
+            ],
+            "id": "a66a505",
+            "isInner": false
+        },
+        {
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "ls-root ls-n-wrap"
+            },
+            "elements": [
+                {
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1216
+                        },
+                        "flex_direction": "column",
+                        "flex_gap": {
+                            "column": "0",
+                            "row": "0",
+                            "isLinked": true,
+                            "unit": "px",
+                            "size": 0
+                        },
                         "padding": {
                             "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                            "top": "64",
+                            "right": "32",
+                            "bottom": "64",
+                            "left": "32",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "64",
+                            "right": "24",
+                            "bottom": "64",
+                            "left": "24",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "48",
+                            "right": "16",
+                            "bottom": "48",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "css_classes": "ls-n-section bg-surface-container-low/50",
+                        "html_tag": "section"
                     },
                     "elements": [
                         {
-                            "id": "d68ab57",
-                            "elType": "widget",
-                            "widgetType": "ls-catalog",
+                            "elType": "container",
                             "settings": {
-                                "source": "auto"
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_direction_tablet": "row",
+                                "flex_direction_mobile": "column",
+                                "flex_gap": {
+                                    "column": "16",
+                                    "row": "16",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 16
+                                },
+                                "flex_align_items": "flex-end",
+                                "flex_align_items_tablet": "flex-end",
+                                "flex_align_items_mobile": "stretch",
+                                "flex_justify_content": "space-between",
+                                "flex_wrap": "nowrap",
+                                "flex_wrap_tablet": "nowrap",
+                                "flex_wrap_mobile": "nowrap",
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "40",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "padding_tablet": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "40",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "padding_mobile": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "32",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "css_classes": "ls-n-head"
                             },
-                            "elements": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "bfea804",
-            "elType": "section",
-            "settings": {
-                "layout": "full_width",
-                "gap": "no",
-                "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                }
-            },
-            "elements": [
-                {
-                    "id": "1ea5b46",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "c0258fa",
-                            "elType": "widget",
-                            "widgetType": "ls-icon-cards",
-                            "settings": {
-                                "variant": "simple",
-                                "columns": "3",
-                                "columns_tablet": "1",
-                                "section_bg": "low",
-                                "heading_eyebrow": "استانداردهای قالب‌سازی لاریجانی استون",
-                                "heading_title": "چرا قالب‌های نشکن ABS ما انتخاب اول کارگاه‌هاست؟",
-                                "heading_desc": "استفاده از پودر بازیافتی و گرانول آسیابی در بازار متداول است؛ ما صرفاً از مواد خالص کره‌ای با برگ آزمایشگاهی استفاده می‌کنیم.",
-                                "heading_align": "split-desc",
-                                "heading_style": "token",
-                                "items": [
-                                    {
-                                        "icon": {
-                                            "value": "bi bi-shield-slash",
-                                            "library": "bootstrap-icons"
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "4",
+                                            "row": "4",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 4
                                         },
-                                        "tone": "primary",
-                                        "title": "۱۰۰٪ ضدپوسته و عدم تغییر فرم",
-                                        "desc": "در شرایط اقلیمی بسیار گرم تا مثبت ۵۰ درجه و در برابر لرزش‌های با فرکانس بالای میزهای ویبره صنعتی، زاویه‌ها و گونیای قالب ابداً تغییر فرم نمی‌دهد.",
-                                        "_id": "5e487aa"
+                                        "flex_align_items": "flex-start",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 100
+                                        }
                                     },
-                                    {
-                                        "icon": {
-                                            "value": "bi bi-magic",
-                                            "library": "bootstrap-icons"
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "استانداردهای قالب‌سازی لاریجانی استون",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n font-label-badge text-label-badge text-primary-container tracking-wider"
+                                            },
+                                            "elements": [],
+                                            "id": "ccad984"
                                         },
-                                        "tone": "emerald",
-                                        "title": "جدایش قطعه بدون روغن نامرغوب",
-                                        "desc": "پلیش و صیقل فوق‌العاده سطح قالب مانع از چسبیدن شیره سیمان می‌شود. بدون نیاز به اسیدشویی مخرب، قطعه تنها با یک ضربه آرام از قالب جدا می‌شود.",
-                                        "_id": "095391a"
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "چرا قالب‌های نشکن ABS ما انتخاب اول کارگاه‌هاست؟",
+                                                "header_size": "h2",
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "4",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "_css_classes": "ls-n font-headline-lg text-headline-lg text-surface-dark leading-snug"
+                                            },
+                                            "elements": [],
+                                            "id": "068ee72"
+                                        }
+                                    ],
+                                    "id": "6b26cff",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "0",
+                                            "row": "0",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 0
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "css_classes": "max-w-md"
                                     },
-                                    {
-                                        "icon": {
-                                            "value": "bi bi-patch-check-fill",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "tone": "amber",
-                                        "title": "تضمین پتروشیمی نو کره جنوبی",
-                                        "desc": "استفاده انحصاری از ورق‌های درجه یک با ضخامت واقعی (نه اسمی). ضمانت کتبی عدم شکستگی در زمان خروج قطعه در شرایط کارگاهی نرمال.",
-                                        "_id": "fe58748"
-                                    }
-                                ]
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "text-editor",
+                                            "settings": {
+                                                "editor": "<p>استفاده از پودر بازیافتی و گرانول آسیابی در بازار متداول است؛ ما صرفاً از مواد خالص کره‌ای با برگ آزمایشگاهی استفاده می‌کنیم.</p>",
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "4",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "_css_classes": "ls-n font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                                            },
+                                            "elements": [],
+                                            "id": "29eba8e"
+                                        }
+                                    ],
+                                    "id": "39f9182",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "3ff285d",
+                            "isInner": true
+                        },
+                        {
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "container_type": "grid",
+                                "grid_columns_grid": {
+                                    "unit": "fr",
+                                    "size": 3
+                                },
+                                "grid_columns_grid_tablet": {
+                                    "unit": "fr",
+                                    "size": 1
+                                },
+                                "grid_columns_grid_mobile": {
+                                    "unit": "fr",
+                                    "size": 1
+                                },
+                                "grid_rows_grid": {
+                                    "unit": "custom",
+                                    "size": "auto"
+                                },
+                                "grid_gaps": {
+                                    "column": "24",
+                                    "row": "24",
+                                    "isLinked": true,
+                                    "unit": "px"
+                                },
+                                "grid_gaps_tablet": {
+                                    "column": "24",
+                                    "row": "24",
+                                    "isLinked": true,
+                                    "unit": "px"
+                                },
+                                "grid_gaps_mobile": {
+                                    "column": "16",
+                                    "row": "16",
+                                    "isLinked": true,
+                                    "unit": "px"
+                                },
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": true
+                                }
                             },
-                            "elements": []
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "8",
+                                            "row": "8",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 8
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "24",
+                                            "right": "24",
+                                            "bottom": "24",
+                                            "left": "24",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card rounded-2xl bg-surface-card shadow-sm hover:shadow-md transition-shadow"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "icon",
+                                            "settings": {
+                                                "selected_icon": {
+                                                    "value": "bi bi-shield-slash",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "_css_classes": "ls-n ls-n-icon w-12 h-12 rounded-xl text-2xl bg-primary/10 text-primary"
+                                            },
+                                            "elements": [],
+                                            "id": "607a9d8"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "۱۰۰٪ ضدپوسته و عدم تغییر فرم",
+                                                "header_size": "h3",
+                                                "_css_classes": "ls-n font-title-card text-title-card text-on-surface"
+                                            },
+                                            "elements": [],
+                                            "id": "61f39fd"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "text-editor",
+                                            "settings": {
+                                                "editor": "<p>در شرایط اقلیمی بسیار گرم تا مثبت ۵۰ درجه و در برابر لرزش‌های با فرکانس بالای میزهای ویبره صنعتی، زاویه‌ها و گونیای قالب ابداً تغییر فرم نمی‌دهد.</p>",
+                                                "_css_classes": "ls-n font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                                            },
+                                            "elements": [],
+                                            "id": "1f84c4f"
+                                        }
+                                    ],
+                                    "id": "18bb9a1",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "8",
+                                            "row": "8",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 8
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "24",
+                                            "right": "24",
+                                            "bottom": "24",
+                                            "left": "24",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card rounded-2xl bg-surface-card shadow-sm hover:shadow-md transition-shadow"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "icon",
+                                            "settings": {
+                                                "selected_icon": {
+                                                    "value": "bi bi-magic",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "_css_classes": "ls-n ls-n-icon w-12 h-12 rounded-xl text-2xl bg-accent-emerald/10 text-accent-emerald"
+                                            },
+                                            "elements": [],
+                                            "id": "0959f80"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "جدایش قطعه بدون روغن نامرغوب",
+                                                "header_size": "h3",
+                                                "_css_classes": "ls-n font-title-card text-title-card text-on-surface"
+                                            },
+                                            "elements": [],
+                                            "id": "58def8d"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "text-editor",
+                                            "settings": {
+                                                "editor": "<p>پلیش و صیقل فوق‌العاده سطح قالب مانع از چسبیدن شیره سیمان می‌شود. بدون نیاز به اسیدشویی مخرب، قطعه تنها با یک ضربه آرام از قالب جدا می‌شود.</p>",
+                                                "_css_classes": "ls-n font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                                            },
+                                            "elements": [],
+                                            "id": "7123140"
+                                        }
+                                    ],
+                                    "id": "331a239",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "8",
+                                            "row": "8",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 8
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "24",
+                                            "right": "24",
+                                            "bottom": "24",
+                                            "left": "24",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card rounded-2xl bg-surface-card shadow-sm hover:shadow-md transition-shadow"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "icon",
+                                            "settings": {
+                                                "selected_icon": {
+                                                    "value": "bi bi-patch-check-fill",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "_css_classes": "ls-n ls-n-icon w-12 h-12 rounded-xl text-2xl bg-accent-amber/10 text-accent-amber"
+                                            },
+                                            "elements": [],
+                                            "id": "2632bc5"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "تضمین پتروشیمی نو کره جنوبی",
+                                                "header_size": "h3",
+                                                "_css_classes": "ls-n font-title-card text-title-card text-on-surface"
+                                            },
+                                            "elements": [],
+                                            "id": "5b4619d"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "text-editor",
+                                            "settings": {
+                                                "editor": "<p>استفاده انحصاری از ورق‌های درجه یک با ضخامت واقعی (نه اسمی). ضمانت کتبی عدم شکستگی در زمان خروج قطعه در شرایط کارگاهی نرمال.</p>",
+                                                "_css_classes": "ls-n font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                                            },
+                                            "elements": [],
+                                            "id": "f7cf861"
+                                        }
+                                    ],
+                                    "id": "4a8464f",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "7084a03",
+                            "isInner": true
                         }
-                    ]
+                    ],
+                    "id": "acb1e0e",
+                    "isInner": true
                 }
-            ]
+            ],
+            "id": "b262b50",
+            "isInner": false
         },
         {
-            "id": "f7b2feb",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -189,59 +581,44 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "1a6c3cf",
-                    "elType": "column",
+                    "id": "defed2d",
+                    "elType": "widget",
+                    "widgetType": "ls-cta",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                        "variant": "dark-form",
+                        "badge": "مشاوره استانی بر پایه آمایش مصرف مصالح ساختمانی",
+                        "badge_icon": {
+                            "value": "bi bi-geo-alt-fill",
+                            "library": "bootstrap-icons"
+                        },
+                        "title": "نمی‌دانید چه قالبی برای شرایط بازار منطقه شما پرسودتر است؟",
+                        "desc": "سلیقه معماری در مناطق کوهستانی، کویری و مرطوب ساحلی متفاوت است. مهندسین فروش لاریجانی استون بر اساس سوابق فروش پروژه‌ای استان شما، پرفروش‌ترین ترکیب قالب نما، کف و جدول را همراه با فرمول دقیق عیار سیمان پیشنهاد می‌دهند.",
+                        "btn1_text": "تماس با مدیر فنی: ۰۹۱۲ ۲۳۰ ۲۶۸۵",
+                        "btn1_icon": {
+                            "value": "bi bi-telephone-outbound-fill",
+                            "library": "bootstrap-icons"
+                        },
+                        "btn2_text": "ارتباط در واتساپ: ۰۹۳۵ ۴۴۳ ۱۳۲۱",
+                        "btn2_link": {
+                            "url": "https://wa.me/989354431321",
+                            "is_external": "on"
+                        },
+                        "btn2_icon": {
+                            "value": "bi bi-whatsapp",
+                            "library": "bootstrap-icons"
+                        },
+                        "btn2_style": "emerald"
                     },
-                    "elements": [
-                        {
-                            "id": "b6c7151",
-                            "elType": "widget",
-                            "widgetType": "ls-cta",
-                            "settings": {
-                                "variant": "dark-form",
-                                "badge": "مشاوره استانی بر پایه آمایش مصرف مصالح ساختمانی",
-                                "badge_icon": {
-                                    "value": "bi bi-geo-alt-fill",
-                                    "library": "bootstrap-icons"
-                                },
-                                "title": "نمی‌دانید چه قالبی برای شرایط بازار منطقه شما پرسودتر است؟",
-                                "desc": "سلیقه معماری در مناطق کوهستانی، کویری و مرطوب ساحلی متفاوت است. مهندسین فروش لاریجانی استون بر اساس سوابق فروش پروژه‌ای استان شما، پرفروش‌ترین ترکیب قالب نما، کف و جدول را همراه با فرمول دقیق عیار سیمان پیشنهاد می‌دهند.",
-                                "btn1_text": "تماس با مدیر فنی: ۰۹۱۲ ۲۳۰ ۲۶۸۵",
-                                "btn1_icon": {
-                                    "value": "bi bi-telephone-outbound-fill",
-                                    "library": "bootstrap-icons"
-                                },
-                                "btn2_text": "ارتباط در واتساپ: ۰۹۳۵ ۴۴۳ ۱۳۲۱",
-                                "btn2_link": {
-                                    "url": "https://wa.me/989354431321",
-                                    "is_external": "on"
-                                },
-                                "btn2_icon": {
-                                    "value": "bi bi-whatsapp",
-                                    "library": "bootstrap-icons"
-                                },
-                                "btn2_style": "emerald"
-                            },
-                            "elements": []
-                        }
-                    ]
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "383c8ce",
+            "isInner": false
         }
     ],
     "page_settings": {

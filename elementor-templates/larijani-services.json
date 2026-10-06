@@ -4,11 +4,17 @@
     "type": "page",
     "content": [
         {
-            "id": "a966c50",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -16,45 +22,36 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "dfd0fa7",
-                    "elType": "column",
+                    "id": "04b8d5c",
+                    "elType": "widget",
+                    "widgetType": "ls-breadcrumb",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                        "right_style": "badge",
+                        "bordered": "yes"
                     },
-                    "elements": [
-                        {
-                            "id": "504d4e7",
-                            "elType": "widget",
-                            "widgetType": "ls-breadcrumb",
-                            "settings": {
-                                "right_style": "badge",
-                                "bordered": "yes"
-                            },
-                            "elements": []
-                        }
-                    ]
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "c97309b",
+            "isInner": false
         },
         {
-            "id": "0f6cf9e",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -62,42 +59,33 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "80327a8",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "7a7921c",
-                            "elType": "widget",
-                            "widgetType": "ls-page-hero",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
+                    "id": "0396fcc",
+                    "elType": "widget",
+                    "widgetType": "ls-page-hero",
+                    "settings": [],
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "9ea4d33",
+            "isInner": false
         },
         {
-            "id": "42c6d0d",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -105,360 +93,2398 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-root ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "5f71b87",
-                    "elType": "column",
+                    "elType": "container",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1216
+                        },
+                        "flex_direction": "column",
+                        "flex_gap": {
+                            "column": "0",
+                            "row": "0",
+                            "isLinked": true,
+                            "unit": "px",
+                            "size": 0
+                        },
                         "padding": {
                             "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                            "top": "64",
+                            "right": "32",
+                            "bottom": "64",
+                            "left": "32",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "64",
+                            "right": "24",
+                            "bottom": "64",
+                            "left": "24",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "48",
+                            "right": "16",
+                            "bottom": "48",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "css_classes": "ls-n-section bg-surface",
+                        "html_tag": "section"
                     },
                     "elements": [
                         {
-                            "id": "64d3f6d",
-                            "elType": "widget",
-                            "widgetType": "ls-icon-cards",
+                            "elType": "container",
                             "settings": {
-                                "variant": "bento",
-                                "columns": "3",
-                                "columns_tablet": "1",
-                                "section_bg": "surface",
-                                "heading_eyebrow": "سه رکن اصلی توانمندی‌های کارخانه",
-                                "heading_title": "محورهای خدمات تخصصی لاریجانی استون",
-                                "heading_desc": "زنجیره تأمین صفر تا صد تولید قطعات بتنی دکوراتیو و سنگ سمنت‌پلاست، بر مبنای توان تولید ماشین‌آلات و قالب‌های استاندارد.",
-                                "heading_link_text": "دریافت لیست قیمت قالب‌ها و ماشین‌آلات",
-                                "heading_link": {
-                                    "url": "#consultation-form"
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_direction_tablet": "row",
+                                "flex_direction_mobile": "column",
+                                "flex_gap": {
+                                    "column": "12",
+                                    "row": "12",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 12
                                 },
-                                "heading_align": "split",
-                                "heading_style": "token",
-                                "items": [
-                                    {
-                                        "icon": {
-                                            "value": "bi bi-layers",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "tone": "sage",
-                                        "eyebrow": "تنوع بی‌رقیب",
-                                        "title": "فروش بیش از ۴۰۰ مدل قالب آماده نشکن",
-                                        "desc": "تولید و عرضه اختصاصی انواع قالب‌های تزریقی وکیوم‌فرمینگ از مواد مرغوب ABS کره‌ای نشکن؛ شامل انواع موزائیک پلیمری، سنگ نما و دکوراتیو، جدول خیابانی، صراحی، دورباغچه، دیوارپوش و انواع سرستون و تاج.",
-                                        "chips": "قالب موزائیک و کفپوش\nقالب نما و صراحی\nدورباغچه و جدول\nتاج و سرستون",
-                                        "footer": "بیش از ۵۰۰ بار قالب‌ریزی بدون شکست",
-                                        "_id": "d52d3d2"
-                                    },
-                                    {
-                                        "icon": {
-                                            "value": "bi bi-mortarboard",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "tone": "fixed",
-                                        "eyebrow": "انتقال تجربیات کارگاهی",
-                                        "title": "آموزش تخصصی تولید سنگ مصنوعی سمنت‌پلاست",
-                                        "desc": "آموزش جامع عملی متناسب با شرایط آب‌وهوایی منطقه شما: اعزام مهندس ناظر جهت آموزش حضوری در محل کارگاه شما و آموزش اپراتورها یا ارائه پکیج کامل ویدیوهای گام‌به‌گام با سرفصل‌های تخصصی شبیه‌سازی مرمر، رگه‌دار کردن و رفع زردگرایی.",
-                                        "chips": "آموزش حضوری در کارگاه\nدوره‌های ویدیویی جامع\nفرمول ترکیب رنگ رگه‌ای",
-                                        "footer": "همراه با اعطای تاییدیه کیفی لاریجانی",
-                                        "_id": "c34e479"
-                                    },
-                                    {
-                                        "icon": {
-                                            "value": "bi bi-gear-wide-connected",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "tone": "light",
-                                        "eyebrow": "تجهیزات صنعتی سنگین",
-                                        "title": "ساخت و سفارشی‌سازی دستگاه‌ها و ماشین‌آلات مدرن",
-                                        "desc": "طراحی و ساخت میزهای ویبره ۲ موتوره با فنربندی صنعتی و اینورتر تنظیم فرکانس ارتعاش جهت خروج کامل حباب‌های ریز، و میکسرهای بتن استاندارد طرح پان (Pan Mixer) مجهز به تیغه‌های ضدسایش هاردوکس برای اختلاط یکدست خمیر سنگ پلیمری.",
-                                        "chips": "میز ویبره ۲ موتوره فرکانسی\nمیکسر طرح پان ضدسایش\nپایه‌های عایق لرزش",
-                                        "footer": "یک سال گارانتی کامل + ۵ سال خدمات",
-                                        "_id": "d10a47f"
-                                    }
-                                ]
-                            },
-                            "elements": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "f3adc6b",
-            "elType": "section",
-            "settings": {
-                "layout": "full_width",
-                "gap": "no",
-                "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                }
-            },
-            "elements": [
-                {
-                    "id": "ab7955b",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "472f942",
-                            "elType": "widget",
-                            "widgetType": "ls-steps",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "0d1edaa",
-            "elType": "section",
-            "settings": {
-                "layout": "full_width",
-                "gap": "no",
-                "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                }
-            },
-            "elements": [
-                {
-                    "id": "3981f93",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "a25eabd",
-                            "elType": "widget",
-                            "widgetType": "ls-dark-feature",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "93f8b58",
-            "elType": "section",
-            "settings": {
-                "layout": "full_width",
-                "gap": "no",
-                "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                }
-            },
-            "elements": [
-                {
-                    "id": "1570116",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "ab60e5d",
-                            "elType": "widget",
-                            "widgetType": "ls-comparison",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "efad333",
-            "elType": "section",
-            "settings": {
-                "layout": "full_width",
-                "gap": "no",
-                "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                }
-            },
-            "elements": [
-                {
-                    "id": "d6603f5",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "cc25147",
-                            "elType": "widget",
-                            "widgetType": "ls-lead-form",
-                            "settings": {
-                                "_element_id": "consultation-form"
-                            },
-                            "elements": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "f5e7163",
-            "elType": "section",
-            "settings": {
-                "layout": "full_width",
-                "gap": "no",
-                "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                }
-            },
-            "elements": [
-                {
-                    "id": "220c7db",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "1dca103",
-                            "elType": "widget",
-                            "widgetType": "ls-faq",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "5cf9e9f",
-            "elType": "section",
-            "settings": {
-                "layout": "full_width",
-                "gap": "no",
-                "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                }
-            },
-            "elements": [
-                {
-                    "id": "77839f8",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "c2e8398",
-                            "elType": "widget",
-                            "widgetType": "ls-cta",
-                            "settings": {
-                                "variant": "dark-strip",
-                                "icon": {
-                                    "value": "bi bi-people",
-                                    "library": "bootstrap-icons"
+                                "flex_align_items": "flex-end",
+                                "flex_align_items_tablet": "flex-end",
+                                "flex_align_items_mobile": "flex-start",
+                                "flex_justify_content": "space-between",
+                                "flex_wrap": "nowrap",
+                                "flex_wrap_tablet": "nowrap",
+                                "flex_wrap_mobile": "nowrap",
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "40",
+                                    "left": "0",
+                                    "isLinked": false
                                 },
-                                "title": "آماده همکاری و احداث خط تولید اختصاصی شما هستیم",
-                                "desc": "مشاوره تخصصی با مدیر فنی لاریجانی استون: ۰۹۱۲۲۳۰۲۶۸۵",
-                                "btn1_text": "تماس مستقیم تلفنی",
-                                "btn2_text": ""
+                                "padding_tablet": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "40",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "padding_mobile": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "32",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "css_classes": "ls-n-head"
                             },
-                            "elements": []
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "0",
+                                            "row": "0",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 0
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "css_classes": "max-w-2xl"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "سه رکن اصلی توانمندی‌های کارخانه",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n font-label-badge text-label-badge text-primary-container tracking-wider"
+                                            },
+                                            "elements": [],
+                                            "id": "f3bbe1d"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "محورهای خدمات تخصصی لاریجانی استون",
+                                                "header_size": "h2",
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "4",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "_css_classes": "ls-n font-headline-lg text-headline-lg text-surface-dark leading-snug"
+                                            },
+                                            "elements": [],
+                                            "id": "5b3ed2d"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "text-editor",
+                                            "settings": {
+                                                "editor": "<p>زنجیره تأمین صفر تا صد تولید قطعات بتنی دکوراتیو و سنگ سمنت‌پلاست، بر مبنای توان تولید ماشین‌آلات و قالب‌های استاندارد.</p>",
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "4",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "_css_classes": "ls-n font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                                            },
+                                            "elements": [],
+                                            "id": "11e37b8"
+                                        }
+                                    ],
+                                    "id": "e3e84c4",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "button",
+                                    "settings": {
+                                        "text": "دریافت لیست قیمت قالب‌ها و ماشین‌آلات",
+                                        "link": {
+                                            "url": "#consultation-form",
+                                            "is_external": "",
+                                            "nofollow": ""
+                                        },
+                                        "selected_icon": {
+                                            "value": "bi bi-arrow-left",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "icon_align": "row-reverse",
+                                        "_css_classes": "ls-n ls-n-btn ls-n-btn--link ls-n-btn--arrow"
+                                    },
+                                    "elements": [],
+                                    "id": "2a6c9ec"
+                                }
+                            ],
+                            "id": "8eddc83",
+                            "isInner": true
+                        },
+                        {
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "container_type": "grid",
+                                "grid_columns_grid": {
+                                    "unit": "fr",
+                                    "size": 3
+                                },
+                                "grid_columns_grid_tablet": {
+                                    "unit": "fr",
+                                    "size": 1
+                                },
+                                "grid_columns_grid_mobile": {
+                                    "unit": "fr",
+                                    "size": 1
+                                },
+                                "grid_rows_grid": {
+                                    "unit": "custom",
+                                    "size": "auto"
+                                },
+                                "grid_gaps": {
+                                    "column": "24",
+                                    "row": "24",
+                                    "isLinked": true,
+                                    "unit": "px"
+                                },
+                                "grid_gaps_tablet": {
+                                    "column": "24",
+                                    "row": "24",
+                                    "isLinked": true,
+                                    "unit": "px"
+                                },
+                                "grid_gaps_mobile": {
+                                    "column": "16",
+                                    "row": "16",
+                                    "isLinked": true,
+                                    "unit": "px"
+                                },
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": true
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_justify_content": "space-between",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "24",
+                                            "right": "24",
+                                            "bottom": "24",
+                                            "left": "24",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card bg-surface-card rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "16",
+                                                    "row": "16",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 16
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-layers",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon w-14 h-14 rounded-xl text-[28px] bg-secondary-container text-on-secondary-container"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "8d33ee1"
+                                                },
+                                                {
+                                                    "elType": "container",
+                                                    "settings": {
+                                                        "content_width": "full",
+                                                        "flex_direction": "column",
+                                                        "flex_gap": {
+                                                            "column": "4",
+                                                            "row": "4",
+                                                            "isLinked": true,
+                                                            "unit": "px",
+                                                            "size": 4
+                                                        },
+                                                        "padding": {
+                                                            "unit": "px",
+                                                            "top": "0",
+                                                            "right": "0",
+                                                            "bottom": "0",
+                                                            "left": "0",
+                                                            "isLinked": true
+                                                        }
+                                                    },
+                                                    "elements": [
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "تنوع بی‌رقیب",
+                                                                "header_size": "span",
+                                                                "_css_classes": "ls-n font-label-badge text-label-badge text-outline"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "6399308"
+                                                        },
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "فروش بیش از ۴۰۰ مدل قالب آماده نشکن",
+                                                                "header_size": "h3",
+                                                                "_css_classes": "ls-n font-headline-sm text-headline-sm text-surface-dark"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "810f00e"
+                                                        }
+                                                    ],
+                                                    "id": "66b21bd",
+                                                    "isInner": true
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>تولید و عرضه اختصاصی انواع قالب‌های تزریقی وکیوم‌فرمینگ از مواد مرغوب ABS کره‌ای نشکن؛ شامل انواع موزائیک پلیمری، سنگ نما و دکوراتیو، جدول خیابانی، صراحی، دورباغچه، دیوارپوش و انواع سرستون و تاج.</p>",
+                                                        "_css_classes": "ls-n font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "f75d482"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon-list",
+                                                    "settings": {
+                                                        "view": "inline",
+                                                        "icon_list": [
+                                                            {
+                                                                "text": "قالب موزائیک و کفپوش",
+                                                                "selected_icon": {
+                                                                    "value": "",
+                                                                    "library": ""
+                                                                },
+                                                                "_id": "fda58d4"
+                                                            },
+                                                            {
+                                                                "text": "قالب نما و صراحی",
+                                                                "selected_icon": {
+                                                                    "value": "",
+                                                                    "library": ""
+                                                                },
+                                                                "_id": "dfba6b4"
+                                                            },
+                                                            {
+                                                                "text": "دورباغچه و جدول",
+                                                                "selected_icon": {
+                                                                    "value": "",
+                                                                    "library": ""
+                                                                },
+                                                                "_id": "fed3eea"
+                                                            },
+                                                            {
+                                                                "text": "تاج و سرستون",
+                                                                "selected_icon": {
+                                                                    "value": "",
+                                                                    "library": ""
+                                                                },
+                                                                "_id": "34c132a"
+                                                            }
+                                                        ],
+                                                        "_css_classes": "ls-n ls-n-chips pt-space-xs"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "064841f"
+                                                }
+                                            ],
+                                            "id": "78deeee",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "button",
+                                            "settings": {
+                                                "text": "بیش از ۵۰۰ بار قالب‌ریزی بدون شکست",
+                                                "link": {
+                                                    "url": "",
+                                                    "is_external": "",
+                                                    "nofollow": ""
+                                                },
+                                                "selected_icon": {
+                                                    "value": "bi bi-arrow-left",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "icon_align": "row-reverse",
+                                                "_css_classes": "ls-n ls-n-btn ls-n-btn--card-footer ls-n-btn--arrow"
+                                            },
+                                            "elements": [],
+                                            "id": "c1726a1"
+                                        }
+                                    ],
+                                    "id": "c4b0697",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_justify_content": "space-between",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "24",
+                                            "right": "24",
+                                            "bottom": "24",
+                                            "left": "24",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card bg-surface-card rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "16",
+                                                    "row": "16",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 16
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-mortarboard",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon w-14 h-14 rounded-xl text-[28px] bg-primary-fixed text-on-primary-fixed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "2fb96a8"
+                                                },
+                                                {
+                                                    "elType": "container",
+                                                    "settings": {
+                                                        "content_width": "full",
+                                                        "flex_direction": "column",
+                                                        "flex_gap": {
+                                                            "column": "4",
+                                                            "row": "4",
+                                                            "isLinked": true,
+                                                            "unit": "px",
+                                                            "size": 4
+                                                        },
+                                                        "padding": {
+                                                            "unit": "px",
+                                                            "top": "0",
+                                                            "right": "0",
+                                                            "bottom": "0",
+                                                            "left": "0",
+                                                            "isLinked": true
+                                                        }
+                                                    },
+                                                    "elements": [
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "انتقال تجربیات کارگاهی",
+                                                                "header_size": "span",
+                                                                "_css_classes": "ls-n font-label-badge text-label-badge text-outline"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "f25434f"
+                                                        },
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "آموزش تخصصی تولید سنگ مصنوعی سمنت‌پلاست",
+                                                                "header_size": "h3",
+                                                                "_css_classes": "ls-n font-headline-sm text-headline-sm text-surface-dark"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "5970a91"
+                                                        }
+                                                    ],
+                                                    "id": "5697e8c",
+                                                    "isInner": true
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>آموزش جامع عملی متناسب با شرایط آب‌وهوایی منطقه شما: اعزام مهندس ناظر جهت آموزش حضوری در محل کارگاه شما و آموزش اپراتورها یا ارائه پکیج کامل ویدیوهای گام‌به‌گام با سرفصل‌های تخصصی شبیه‌سازی مرمر، رگه‌دار کردن و رفع زردگرایی.</p>",
+                                                        "_css_classes": "ls-n font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "5c6f8e3"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon-list",
+                                                    "settings": {
+                                                        "view": "inline",
+                                                        "icon_list": [
+                                                            {
+                                                                "text": "آموزش حضوری در کارگاه",
+                                                                "selected_icon": {
+                                                                    "value": "",
+                                                                    "library": ""
+                                                                },
+                                                                "_id": "a4515d5"
+                                                            },
+                                                            {
+                                                                "text": "دوره‌های ویدیویی جامع",
+                                                                "selected_icon": {
+                                                                    "value": "",
+                                                                    "library": ""
+                                                                },
+                                                                "_id": "4887d1f"
+                                                            },
+                                                            {
+                                                                "text": "فرمول ترکیب رنگ رگه‌ای",
+                                                                "selected_icon": {
+                                                                    "value": "",
+                                                                    "library": ""
+                                                                },
+                                                                "_id": "5e888fd"
+                                                            }
+                                                        ],
+                                                        "_css_classes": "ls-n ls-n-chips pt-space-xs"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "c0e5849"
+                                                }
+                                            ],
+                                            "id": "9ce1765",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "button",
+                                            "settings": {
+                                                "text": "همراه با اعطای تاییدیه کیفی لاریجانی",
+                                                "link": {
+                                                    "url": "",
+                                                    "is_external": "",
+                                                    "nofollow": ""
+                                                },
+                                                "selected_icon": {
+                                                    "value": "bi bi-arrow-left",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "icon_align": "row-reverse",
+                                                "_css_classes": "ls-n ls-n-btn ls-n-btn--card-footer ls-n-btn--arrow"
+                                            },
+                                            "elements": [],
+                                            "id": "dcd7076"
+                                        }
+                                    ],
+                                    "id": "df74a31",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_justify_content": "space-between",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "24",
+                                            "right": "24",
+                                            "bottom": "24",
+                                            "left": "24",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card bg-surface-card rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "16",
+                                                    "row": "16",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 16
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-gear-wide-connected",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon w-14 h-14 rounded-xl text-[28px] bg-surface-container text-on-surface"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "261e28e"
+                                                },
+                                                {
+                                                    "elType": "container",
+                                                    "settings": {
+                                                        "content_width": "full",
+                                                        "flex_direction": "column",
+                                                        "flex_gap": {
+                                                            "column": "4",
+                                                            "row": "4",
+                                                            "isLinked": true,
+                                                            "unit": "px",
+                                                            "size": 4
+                                                        },
+                                                        "padding": {
+                                                            "unit": "px",
+                                                            "top": "0",
+                                                            "right": "0",
+                                                            "bottom": "0",
+                                                            "left": "0",
+                                                            "isLinked": true
+                                                        }
+                                                    },
+                                                    "elements": [
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "تجهیزات صنعتی سنگین",
+                                                                "header_size": "span",
+                                                                "_css_classes": "ls-n font-label-badge text-label-badge text-outline"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "41171f9"
+                                                        },
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "ساخت و سفارشی‌سازی دستگاه‌ها و ماشین‌آلات مدرن",
+                                                                "header_size": "h3",
+                                                                "_css_classes": "ls-n font-headline-sm text-headline-sm text-surface-dark"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "3ac2968"
+                                                        }
+                                                    ],
+                                                    "id": "acd5801",
+                                                    "isInner": true
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>طراحی و ساخت میزهای ویبره ۲ موتوره با فنربندی صنعتی و اینورتر تنظیم فرکانس ارتعاش جهت خروج کامل حباب‌های ریز، و میکسرهای بتن استاندارد طرح پان (Pan Mixer) مجهز به تیغه‌های ضدسایش هاردوکس برای اختلاط یکدست خمیر سنگ پلیمری.</p>",
+                                                        "_css_classes": "ls-n font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "04dd702"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon-list",
+                                                    "settings": {
+                                                        "view": "inline",
+                                                        "icon_list": [
+                                                            {
+                                                                "text": "میز ویبره ۲ موتوره فرکانسی",
+                                                                "selected_icon": {
+                                                                    "value": "",
+                                                                    "library": ""
+                                                                },
+                                                                "_id": "ad39f8b"
+                                                            },
+                                                            {
+                                                                "text": "میکسر طرح پان ضدسایش",
+                                                                "selected_icon": {
+                                                                    "value": "",
+                                                                    "library": ""
+                                                                },
+                                                                "_id": "b2652a4"
+                                                            },
+                                                            {
+                                                                "text": "پایه‌های عایق لرزش",
+                                                                "selected_icon": {
+                                                                    "value": "",
+                                                                    "library": ""
+                                                                },
+                                                                "_id": "00b6c7c"
+                                                            }
+                                                        ],
+                                                        "_css_classes": "ls-n ls-n-chips pt-space-xs"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "b7b718d"
+                                                }
+                                            ],
+                                            "id": "6f054fb",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "button",
+                                            "settings": {
+                                                "text": "یک سال گارانتی کامل + ۵ سال خدمات",
+                                                "link": {
+                                                    "url": "",
+                                                    "is_external": "",
+                                                    "nofollow": ""
+                                                },
+                                                "selected_icon": {
+                                                    "value": "bi bi-arrow-left",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "icon_align": "row-reverse",
+                                                "_css_classes": "ls-n ls-n-btn ls-n-btn--card-footer ls-n-btn--arrow"
+                                            },
+                                            "elements": [],
+                                            "id": "e1b59c6"
+                                        }
+                                    ],
+                                    "id": "2548ba8",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "cc79785",
+                            "isInner": true
                         }
-                    ]
+                    ],
+                    "id": "266722d",
+                    "isInner": true
                 }
-            ]
+            ],
+            "id": "14e8507",
+            "isInner": false
+        },
+        {
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "ls-root ls-n-wrap"
+            },
+            "elements": [
+                {
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1216
+                        },
+                        "flex_direction": "column",
+                        "flex_gap": {
+                            "column": "64",
+                            "row": "64",
+                            "isLinked": true,
+                            "unit": "px",
+                            "size": 64
+                        },
+                        "padding": {
+                            "unit": "px",
+                            "top": "64",
+                            "right": "32",
+                            "bottom": "64",
+                            "left": "32",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "64",
+                            "right": "16",
+                            "bottom": "64",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "64",
+                            "right": "16",
+                            "bottom": "64",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "css_classes": "ls-n-section bg-surface-canvas",
+                        "html_tag": "section"
+                    },
+                    "elements": [
+                        {
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "flex_direction": "column",
+                                "flex_gap": {
+                                    "column": "4",
+                                    "row": "4",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 4
+                                },
+                                "flex_align_items": "center",
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": true
+                                },
+                                "css_classes": "ls-n-head text-center max-w-3xl mx-auto w-full"
+                            },
+                            "elements": [
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "مراحل گام‌به‌گام راه‌اندازی",
+                                        "header_size": "span",
+                                        "_css_classes": "ls-n font-label-badge text-label-badge text-primary-container tracking-wider"
+                                    },
+                                    "elements": [],
+                                    "id": "adfc7b8"
+                                },
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "از سوله خالی تا اولین تولید تجاری سنگ پلیمری",
+                                        "header_size": "h2",
+                                        "_margin": {
+                                            "unit": "px",
+                                            "top": "4",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": false
+                                        },
+                                        "_css_classes": "ls-n font-headline-lg text-headline-lg text-surface-dark leading-snug"
+                                    },
+                                    "elements": [],
+                                    "id": "a918bf3"
+                                },
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "<p>نقشه راه روشن و استاندارد لاریجانی استون برای ورود امن سرمایه‌گذاران و تولیدکنندگان به بازار پرسود مصالح نوین ساختمانی.</p>",
+                                        "_margin": {
+                                            "unit": "px",
+                                            "top": "4",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": false
+                                        },
+                                        "_css_classes": "ls-n font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                                    },
+                                    "elements": [],
+                                    "id": "726c2c4"
+                                }
+                            ],
+                            "id": "d229ec2",
+                            "isInner": true
+                        },
+                        {
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "container_type": "grid",
+                                "grid_columns_grid": {
+                                    "unit": "fr",
+                                    "size": 5
+                                },
+                                "grid_columns_grid_tablet": {
+                                    "unit": "fr",
+                                    "size": 2
+                                },
+                                "grid_columns_grid_mobile": {
+                                    "unit": "fr",
+                                    "size": 1
+                                },
+                                "grid_rows_grid": {
+                                    "unit": "custom",
+                                    "size": "auto"
+                                },
+                                "grid_gaps": {
+                                    "column": "16",
+                                    "row": "16",
+                                    "isLinked": true,
+                                    "unit": "px"
+                                },
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": true
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_justify_content": "space-between",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "16",
+                                            "right": "16",
+                                            "bottom": "16",
+                                            "left": "16",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card bg-surface-card rounded-2xl shadow-sm overflow-hidden"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "row",
+                                                "flex_gap": {
+                                                    "column": "0",
+                                                    "row": "0",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 0
+                                                },
+                                                "flex_align_items": "center",
+                                                "flex_justify_content": "space-between",
+                                                "flex_wrap": "nowrap",
+                                                "flex_wrap_tablet": "nowrap",
+                                                "flex_wrap_mobile": "nowrap",
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "۱",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n ls-n-num w-9 h-9 rounded-full font-headline-sm text-headline-sm bg-surface-dark text-on-tertiary"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "7d63c9b"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-bar-chart-line",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon text-[22px] text-outline"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "7abdc87"
+                                                }
+                                            ],
+                                            "id": "a64c96e",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "4",
+                                                    "row": "4",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 4
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "مشاوره و امکان‌سنجی اولیه",
+                                                        "header_size": "h3",
+                                                        "_css_classes": "ls-n font-title-card text-title-card text-surface-dark"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "003f78f"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>بررسی متراژ فضا (برق ۳ فاز یا تک‌فاز، انبارش قالب‌ها) متناسب با بودجه اولیه و پتانسیل بازار منطقه شما.</p>",
+                                                        "_css_classes": "ls-n font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "2822a28"
+                                                }
+                                            ],
+                                            "id": "3e1f2f8",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "تحلیل ظرفیت تولید",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n font-body-sm text-body-sm text-secondary font-medium"
+                                            },
+                                            "elements": [],
+                                            "id": "5974619"
+                                        }
+                                    ],
+                                    "id": "8a718cc",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_justify_content": "space-between",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "16",
+                                            "right": "16",
+                                            "bottom": "16",
+                                            "left": "16",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card bg-surface-card rounded-2xl shadow-sm overflow-hidden"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "row",
+                                                "flex_gap": {
+                                                    "column": "0",
+                                                    "row": "0",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 0
+                                                },
+                                                "flex_align_items": "center",
+                                                "flex_justify_content": "space-between",
+                                                "flex_wrap": "nowrap",
+                                                "flex_wrap_tablet": "nowrap",
+                                                "flex_wrap_mobile": "nowrap",
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "۲",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n ls-n-num w-9 h-9 rounded-full font-headline-sm text-headline-sm bg-primary-container text-on-primary"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "5e623b2"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-tools",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon text-[22px] text-outline"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "e736b02"
+                                                }
+                                            ],
+                                            "id": "8ff3999",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "4",
+                                                    "row": "4",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 4
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "انتخاب قالب و ساخت ماشین‌آلات",
+                                                        "header_size": "h3",
+                                                        "_css_classes": "ls-n font-title-card text-title-card text-surface-dark"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "d2825dd"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>انتخاب پرفروش‌ترین قالب‌های منطقه و ساخت سفارشی میز ویبره و میکسر صنعتی با بالاترین متریال کارخانه‌ای.</p>",
+                                                        "_css_classes": "ls-n font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "f898cd7"
+                                                }
+                                            ],
+                                            "id": "69a2531",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "استاندارد صادراتی",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n font-body-sm text-body-sm text-secondary font-medium"
+                                            },
+                                            "elements": [],
+                                            "id": "4674d95"
+                                        }
+                                    ],
+                                    "id": "e40d80f",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_justify_content": "space-between",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "16",
+                                            "right": "16",
+                                            "bottom": "16",
+                                            "left": "16",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card bg-surface-card rounded-2xl shadow-sm overflow-hidden"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "row",
+                                                "flex_gap": {
+                                                    "column": "0",
+                                                    "row": "0",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 0
+                                                },
+                                                "flex_align_items": "center",
+                                                "flex_justify_content": "space-between",
+                                                "flex_wrap": "nowrap",
+                                                "flex_wrap_tablet": "nowrap",
+                                                "flex_wrap_mobile": "nowrap",
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "۳",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n ls-n-num w-9 h-9 rounded-full font-headline-sm text-headline-sm bg-primary-container text-on-primary"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "8dc31cc"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-eyedropper",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon text-[22px] text-outline"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "f440c54"
+                                                }
+                                            ],
+                                            "id": "0da277f",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "4",
+                                                    "row": "4",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 4
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "تأمین رزین و پیگمنت مرغوب",
+                                                        "header_size": "h3",
+                                                        "_css_classes": "ls-n font-title-card text-title-card text-surface-dark"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "b6c2474"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>ارسال مستقیم رزین‌های پلی‌کربوکسیلات آلمانی، رنگدانه‌های معدنی اکسید آهن بایر و روان‌کننده‌های فوق زودگیر.</p>",
+                                                        "_css_classes": "ls-n font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "52b121e"
+                                                }
+                                            ],
+                                            "id": "2e40501",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "مواد اولیه تضمین‌شده",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n font-body-sm text-body-sm text-secondary font-medium"
+                                            },
+                                            "elements": [],
+                                            "id": "08436e2"
+                                        }
+                                    ],
+                                    "id": "901ce77",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_justify_content": "space-between",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "16",
+                                            "right": "16",
+                                            "bottom": "16",
+                                            "left": "16",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card bg-surface-card rounded-2xl shadow-sm overflow-hidden"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "row",
+                                                "flex_gap": {
+                                                    "column": "0",
+                                                    "row": "0",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 0
+                                                },
+                                                "flex_align_items": "center",
+                                                "flex_justify_content": "space-between",
+                                                "flex_wrap": "nowrap",
+                                                "flex_wrap_tablet": "nowrap",
+                                                "flex_wrap_mobile": "nowrap",
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "۴",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n ls-n-num w-9 h-9 rounded-full font-headline-sm text-headline-sm bg-primary-container text-on-primary"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "c8ba73b"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-book",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon text-[22px] text-outline"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "f91e7b8"
+                                                }
+                                            ],
+                                            "id": "15a1796",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "4",
+                                                    "row": "4",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 4
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "ارسال فرمولاسیون و آموزش",
+                                                        "header_size": "h3",
+                                                        "_css_classes": "ls-n font-title-card text-title-card text-surface-dark"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "8ada8e8"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>انتقال فرمول سمنت‌پلاست بدون حباب با مقاومت در برابر سرما و گرما به همراه تست عملی اولین بچ تولیدی کارگاه.</p>",
+                                                        "_css_classes": "ls-n font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "47ab0d3"
+                                                }
+                                            ],
+                                            "id": "f16726a",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "تست مقاومت فشاری",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n font-body-sm text-body-sm text-secondary font-medium"
+                                            },
+                                            "elements": [],
+                                            "id": "01547d5"
+                                        }
+                                    ],
+                                    "id": "d2d830f",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_justify_content": "space-between",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "16",
+                                            "right": "16",
+                                            "bottom": "16",
+                                            "left": "16",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card bg-surface-card rounded-2xl shadow-sm overflow-hidden"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "row",
+                                                "flex_gap": {
+                                                    "column": "0",
+                                                    "row": "0",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 0
+                                                },
+                                                "flex_align_items": "center",
+                                                "flex_justify_content": "space-between",
+                                                "flex_wrap": "nowrap",
+                                                "flex_wrap_tablet": "nowrap",
+                                                "flex_wrap_mobile": "nowrap",
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "۵",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n ls-n-num w-9 h-9 rounded-full font-headline-sm text-headline-sm bg-secondary text-on-secondary"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "74e6914"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-headset",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon text-[22px] text-outline"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "a34b0f5"
+                                                }
+                                            ],
+                                            "id": "07f35c7",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "4",
+                                                    "row": "4",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 4
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                }
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "پشتیبانی دائم و توسعه قالب‌ها",
+                                                        "header_size": "h3",
+                                                        "_css_classes": "ls-n font-title-card text-title-card text-surface-dark"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "d03e09e"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>پشتیبانی فنی بی‌پایان، رفع ایرادات خط، معرفی پروژه‌های منطقه‌ای و ارائه تخفیف‌های ویژه بر روی قالب‌های جدید.</p>",
+                                                        "_css_classes": "ls-n font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "accf26a"
+                                                }
+                                            ],
+                                            "id": "30573d8",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "توسعه مستمر خط",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n font-body-sm text-body-sm text-secondary font-medium"
+                                            },
+                                            "elements": [],
+                                            "id": "2e2e582"
+                                        }
+                                    ],
+                                    "id": "b82a43d",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "649743a",
+                            "isInner": true
+                        },
+                        {
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "container_type": "grid",
+                                "grid_columns_grid": {
+                                    "unit": "fr",
+                                    "size": 2
+                                },
+                                "grid_columns_grid_tablet": {
+                                    "unit": "fr",
+                                    "size": 2
+                                },
+                                "grid_columns_grid_mobile": {
+                                    "unit": "fr",
+                                    "size": 1
+                                },
+                                "grid_rows_grid": {
+                                    "unit": "custom",
+                                    "size": "auto"
+                                },
+                                "grid_gaps": {
+                                    "column": "24",
+                                    "row": "24",
+                                    "isLinked": true,
+                                    "unit": "px"
+                                },
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": true
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "row",
+                                        "flex_direction_tablet": "row",
+                                        "flex_direction_mobile": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_align_items": "center",
+                                        "flex_wrap": "nowrap",
+                                        "flex_wrap_tablet": "nowrap",
+                                        "flex_wrap_mobile": "nowrap",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "24",
+                                            "right": "24",
+                                            "bottom": "24",
+                                            "left": "24",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card bg-surface-card rounded-2xl shadow-sm"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "image",
+                                            "settings": {
+                                                "image": {
+                                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA0kE4olz3kgMnFZxBWLxePyEWIBGnKr1ApL39WJq6qCQVItl57eD5RA29WOsQ94q3gyGJ4f5edDQnXfelEye1cyGguPQqHMz7zkqsm2gYtXn_8vx0iMSPtEGaw7HuYmQEgPdt2c38QZJob63KhtMCrsYZmhuOuiC5KYCYYxy-nyceouHWVn0WfVYOlJJ0qsx4mjrdsPdgC46cdUqq-T0DwJKwrgu6_Y0ORijA9j-XGDa0nkPBbiS1lAw",
+                                                    "id": ""
+                                                },
+                                                "image_size": "medium_large",
+                                                "_css_classes": "ls-n ls-n-img-cover w-full sm:w-44 h-36 rounded-xl overflow-hidden shrink-0"
+                                            },
+                                            "elements": [],
+                                            "id": "bf25492"
+                                        },
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "4",
+                                                    "row": "4",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 4
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                },
+                                                "width": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_tablet": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_mobile": {
+                                                    "unit": "%",
+                                                    "size": 100
+                                                },
+                                                "_flex_size": "custom",
+                                                "_flex_grow": 1,
+                                                "_flex_shrink": 1
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "تست کارگاهی",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n font-label-badge text-label-badge text-outline"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "b5e6b9c"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "تست تراکم ارتعاشی در کارخانه آبیک",
+                                                        "header_size": "h3",
+                                                        "_css_classes": "ls-n font-headline-sm text-headline-sm text-surface-dark"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "6f6a16b"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>تمام میزهای ویبره پیش از تحویل با بارگذاری کامل قالب‌ها تحت سنجش شتاب‌سنج دیجیتال کالیبره می‌شوند.</p>",
+                                                        "_css_classes": "ls-n font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "70cd01e"
+                                                }
+                                            ],
+                                            "id": "d42d2f2",
+                                            "isInner": true
+                                        }
+                                    ],
+                                    "id": "c30afdc",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "row",
+                                        "flex_direction_tablet": "row",
+                                        "flex_direction_mobile": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_align_items": "center",
+                                        "flex_wrap": "nowrap",
+                                        "flex_wrap_tablet": "nowrap",
+                                        "flex_wrap_mobile": "nowrap",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "24",
+                                            "right": "24",
+                                            "bottom": "24",
+                                            "left": "24",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "ls-n-card bg-surface-card rounded-2xl shadow-sm"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "image",
+                                            "settings": {
+                                                "image": {
+                                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuC5G6rJyHf7bPmBSd60iU7frtgWUmQO9UahV8WP266sJ2nikGxSQvgRYw9YIf6OadNfAiqb-wey_VOafQK-CBz_B0kOSd_HXBfq_YgklL57ZBeN-t2bldaThTycpcXO57fAWC1eKxIeOY8YCUjD2WpVvNQ0ms2Go922lc_BYq3md9bD0ibwoatzBz9EuZ6ZR9r3jlf6E8PfbKDMmploT5ivnvIrEBP_oOgyc39o6z5YwUo-GqgGJxgSkQ",
+                                                    "id": ""
+                                                },
+                                                "image_size": "medium_large",
+                                                "_css_classes": "ls-n ls-n-img-cover w-full sm:w-44 h-36 rounded-xl overflow-hidden shrink-0"
+                                            },
+                                            "elements": [],
+                                            "id": "60c94e8"
+                                        },
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "4",
+                                                    "row": "4",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 4
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                },
+                                                "width": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_tablet": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_mobile": {
+                                                    "unit": "%",
+                                                    "size": 100
+                                                },
+                                                "_flex_size": "custom",
+                                                "_flex_grow": 1,
+                                                "_flex_shrink": 1
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "انبارش استاندارد",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n font-label-badge text-label-badge text-outline"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "3155ed7"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "دسترسی دائم به قطعات یدکی و قالب‌ها",
+                                                        "header_size": "h3",
+                                                        "_css_classes": "ls-n font-headline-sm text-headline-sm text-surface-dark"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "a4f153c"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>بزرگ‌ترین بانک قالب کشور با تحویل سریع ۴۸ ساعته جهت جلوگیری از هرگونه توقف در خط تولید شما.</p>",
+                                                        "_css_classes": "ls-n font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "1a1a073"
+                                                }
+                                            ],
+                                            "id": "1cf5f13",
+                                            "isInner": true
+                                        }
+                                    ],
+                                    "id": "cf07b81",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "277691c",
+                            "isInner": true
+                        }
+                    ],
+                    "id": "70e2cd0",
+                    "isInner": true
+                }
+            ],
+            "id": "0b62234",
+            "isInner": false
+        },
+        {
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "ls-n-wrap"
+            },
+            "elements": [
+                {
+                    "id": "f138805",
+                    "elType": "widget",
+                    "widgetType": "ls-dark-feature",
+                    "settings": [],
+                    "elements": []
+                }
+            ],
+            "id": "67a97fe",
+            "isInner": false
+        },
+        {
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "ls-n-wrap"
+            },
+            "elements": [
+                {
+                    "id": "44a79a6",
+                    "elType": "widget",
+                    "widgetType": "ls-comparison",
+                    "settings": [],
+                    "elements": []
+                }
+            ],
+            "id": "567e58b",
+            "isInner": false
+        },
+        {
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "ls-n-wrap"
+            },
+            "elements": [
+                {
+                    "id": "025a941",
+                    "elType": "widget",
+                    "widgetType": "ls-lead-form",
+                    "settings": {
+                        "_element_id": "consultation-form"
+                    },
+                    "elements": []
+                }
+            ],
+            "id": "ae75fa3",
+            "isInner": false
+        },
+        {
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "ls-n-wrap"
+            },
+            "elements": [
+                {
+                    "id": "0e42059",
+                    "elType": "widget",
+                    "widgetType": "ls-faq",
+                    "settings": [],
+                    "elements": []
+                }
+            ],
+            "id": "176ec56",
+            "isInner": false
+        },
+        {
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "ls-root ls-n-wrap"
+            },
+            "elements": [
+                {
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1216
+                        },
+                        "flex_direction": "row",
+                        "flex_direction_tablet": "row",
+                        "flex_direction_mobile": "column",
+                        "flex_gap": {
+                            "column": "16",
+                            "row": "16",
+                            "isLinked": true,
+                            "unit": "px",
+                            "size": 16
+                        },
+                        "flex_align_items": "center",
+                        "flex_justify_content": "space-between",
+                        "flex_wrap": "nowrap",
+                        "flex_wrap_tablet": "nowrap",
+                        "flex_wrap_mobile": "nowrap",
+                        "padding": {
+                            "unit": "px",
+                            "top": "40",
+                            "right": "32",
+                            "bottom": "40",
+                            "left": "32",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "40",
+                            "right": "16",
+                            "bottom": "40",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "40",
+                            "right": "16",
+                            "bottom": "40",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "css_classes": "ls-n-section bg-surface-dark text-on-tertiary",
+                        "html_tag": "section"
+                    },
+                    "elements": [
+                        {
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_gap": {
+                                    "column": "16",
+                                    "row": "16",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 16
+                                },
+                                "flex_align_items": "center",
+                                "flex_wrap": "nowrap",
+                                "flex_wrap_tablet": "nowrap",
+                                "flex_wrap_mobile": "nowrap",
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": true
+                                },
+                                "width": {
+                                    "unit": "custom",
+                                    "size": "auto"
+                                },
+                                "width_tablet": {
+                                    "unit": "custom",
+                                    "size": "auto"
+                                },
+                                "width_mobile": {
+                                    "unit": "%",
+                                    "size": 100
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "icon",
+                                    "settings": {
+                                        "selected_icon": {
+                                            "value": "bi bi-people",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "_css_classes": "ls-n ls-n-icon w-12 h-12 rounded-xl bg-primary-container text-on-primary shrink-0 text-2xl"
+                                    },
+                                    "elements": [],
+                                    "id": "bcfdd72"
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "0",
+                                            "row": "0",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 0
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_mobile": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "آماده همکاری و احداث خط تولید اختصاصی شما هستیم",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n font-headline-sm text-headline-sm text-on-tertiary"
+                                            },
+                                            "elements": [],
+                                            "id": "3f839c5"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "text-editor",
+                                            "settings": {
+                                                "editor": "<p>مشاوره تخصصی با مدیر فنی لاریجانی استون: ۰۹۱۲۲۳۰۲۶۸۵</p>",
+                                                "_css_classes": "ls-n font-body-sm text-body-sm text-tertiary-fixed-dim"
+                                            },
+                                            "elements": [],
+                                            "id": "acf4d98"
+                                        }
+                                    ],
+                                    "id": "0f74c89",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "8cc2637",
+                            "isInner": true
+                        },
+                        {
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_gap": {
+                                    "column": "8",
+                                    "row": "8",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 8
+                                },
+                                "flex_align_items": "center",
+                                "flex_wrap": "wrap",
+                                "flex_wrap_tablet": "wrap",
+                                "flex_wrap_mobile": "wrap",
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": true
+                                },
+                                "width": {
+                                    "unit": "custom",
+                                    "size": "auto"
+                                },
+                                "width_tablet": {
+                                    "unit": "custom",
+                                    "size": "auto"
+                                },
+                                "width_mobile": {
+                                    "unit": "custom",
+                                    "size": "auto"
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "button",
+                                    "settings": {
+                                        "text": "تماس مستقیم تلفنی",
+                                        "link": {
+                                            "url": "tel:09122302685",
+                                            "is_external": "",
+                                            "nofollow": ""
+                                        },
+                                        "selected_icon": {
+                                            "value": "bi bi-telephone-fill",
+                                            "library": "bootstrap-icons"
+                                        },
+                                        "icon_align": "row",
+                                        "_css_classes": "ls-n ls-n-btn ls-n-btn--light"
+                                    },
+                                    "elements": [],
+                                    "id": "1c2f8dc"
+                                }
+                            ],
+                            "id": "82faa30",
+                            "isInner": true
+                        }
+                    ],
+                    "id": "fc216f7",
+                    "isInner": true
+                }
+            ],
+            "id": "d4f25fb",
+            "isInner": false
         }
     ],
     "page_settings": {

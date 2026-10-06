@@ -4,11 +4,17 @@
     "type": "single-post",
     "content": [
         {
-            "id": "7df6563",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -16,42 +22,33 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "bd53302",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "e147749",
-                            "elType": "widget",
-                            "widgetType": "ls-post-hero",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
+                    "id": "7028b87",
+                    "elType": "widget",
+                    "widgetType": "ls-post-hero",
+                    "settings": [],
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "48789c6",
+            "isInner": false
         },
         {
-            "id": "59e6b6b",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -59,42 +56,33 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "1e230e8",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "0213e98",
-                            "elType": "widget",
-                            "widgetType": "ls-post-content",
-                            "settings": [],
-                            "elements": []
-                        }
-                    ]
+                    "id": "40efc2e",
+                    "elType": "widget",
+                    "widgetType": "ls-post-content",
+                    "settings": [],
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "642244b",
+            "isInner": false
         },
         {
-            "id": "66a36b8",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -102,53 +90,336 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-root ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "b7f9aa5",
-                    "elType": "column",
+                    "elType": "container",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1216
+                        },
+                        "flex_direction": "column",
+                        "flex_gap": {
+                            "column": "0",
+                            "row": "0",
+                            "isLinked": true,
+                            "unit": "px",
+                            "size": 0
+                        },
                         "padding": {
                             "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                            "top": "56",
+                            "right": "32",
+                            "bottom": "56",
+                            "left": "32",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "56",
+                            "right": "24",
+                            "bottom": "56",
+                            "left": "24",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "40",
+                            "right": "16",
+                            "bottom": "40",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "css_classes": "ls-n-section",
+                        "html_tag": "section"
                     },
                     "elements": [
                         {
-                            "id": "af6f629",
-                            "elType": "widget",
-                            "widgetType": "ls-cta",
+                            "elType": "container",
                             "settings": {
-                                "variant": "dark-card",
-                                "badge": "راه‌اندازی صفر تا صد خطوط مکانیزه",
-                                "badge_icon": {
-                                    "value": "bi bi-buildings",
-                                    "library": "bootstrap-icons"
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_direction_tablet": "column",
+                                "flex_direction_mobile": "column",
+                                "flex_gap": {
+                                    "column": "24",
+                                    "row": "24",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 24
                                 },
-                                "title": "آماده راه‌اندازی یا ارتقای خط تولید سنگ مصنوعی کارگاه خود هستید؟",
-                                "desc": "تامین ماشین‌آلات سنگین شامل میکسرهای طرح آلمان، میزهای ویبره با ارتعاش کنترل‌شده و بیش از ۴۵۰ مدل قالب کامپوزیتی نشکن با پشتیبانی و گارانتی طلایی گروه صنعتی لاریجانی استون.",
-                                "btn1_text": "استعلام قیمت و مشاوره رایگان",
-                                "btn2_text": "مشاهده خطوط تولید",
-                                "btn2_link": {
-                                    "url": "/services/"
+                                "flex_align_items": "center",
+                                "flex_align_items_tablet": "stretch",
+                                "flex_align_items_mobile": "stretch",
+                                "flex_justify_content": "space-between",
+                                "flex_wrap": "nowrap",
+                                "flex_wrap_tablet": "nowrap",
+                                "flex_wrap_mobile": "nowrap",
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "48",
+                                    "right": "48",
+                                    "bottom": "48",
+                                    "left": "48",
+                                    "isLinked": true
                                 },
-                                "btn2_icon": {
-                                    "value": "bi bi-arrow-left",
-                                    "library": "bootstrap-icons"
-                                }
+                                "padding_tablet": {
+                                    "unit": "px",
+                                    "top": "40",
+                                    "right": "40",
+                                    "bottom": "40",
+                                    "left": "40",
+                                    "isLinked": true
+                                },
+                                "padding_mobile": {
+                                    "unit": "px",
+                                    "top": "24",
+                                    "right": "24",
+                                    "bottom": "24",
+                                    "left": "24",
+                                    "isLinked": true
+                                },
+                                "css_classes": "ls-n-glow bg-surface-dark rounded-2xl sm:rounded-3xl overflow-hidden text-white shadow-xl"
                             },
-                            "elements": []
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "0",
+                                            "row": "0",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 0
+                                        },
+                                        "flex_align_items": "flex-start",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "css_classes": "max-w-2xl text-right"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "row",
+                                                "flex_gap": {
+                                                    "column": "8",
+                                                    "row": "8",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 8
+                                                },
+                                                "flex_align_items": "center",
+                                                "flex_wrap": "nowrap",
+                                                "flex_wrap_tablet": "nowrap",
+                                                "flex_wrap_mobile": "nowrap",
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "4",
+                                                    "right": "12",
+                                                    "bottom": "4",
+                                                    "left": "12",
+                                                    "isLinked": false
+                                                },
+                                                "width": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_tablet": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_mobile": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "css_classes": "ls-n-pill bg-white/10 text-secondary-fixed rounded-full font-label-badge text-label-badge mb-3"
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-buildings",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon text-accent-emerald"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "9512682"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "راه‌اندازی صفر تا صد خطوط مکانیزه",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "7997115"
+                                                }
+                                            ],
+                                            "id": "94d2e55",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "آماده راه‌اندازی یا ارتقای خط تولید سنگ مصنوعی کارگاه خود هستید؟",
+                                                "header_size": "h3",
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "8",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "_css_classes": "ls-n font-black tracking-tight text-lg sm:text-xl lg:text-2xl leading-snug text-white"
+                                            },
+                                            "elements": [],
+                                            "id": "2bba3d7"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "text-editor",
+                                            "settings": {
+                                                "editor": "<p>تامین ماشین‌آلات سنگین شامل میکسرهای طرح آلمان، میزهای ویبره با ارتعاش کنترل‌شده و بیش از ۴۵۰ مدل قالب کامپوزیتی نشکن با پشتیبانی و گارانتی طلایی گروه صنعتی لاریجانی استون.</p>",
+                                                "_css_classes": "ls-n text-slate-300 text-xs sm:text-sm max-w-xl leading-relaxed"
+                                            },
+                                            "elements": [],
+                                            "id": "621164b"
+                                        }
+                                    ],
+                                    "id": "30d3a7e",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "row",
+                                        "flex_direction_tablet": "row",
+                                        "flex_direction_mobile": "column",
+                                        "flex_gap": {
+                                            "column": "12",
+                                            "row": "12",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 12
+                                        },
+                                        "flex_align_items": "center",
+                                        "flex_align_items_tablet": "center",
+                                        "flex_align_items_mobile": "stretch",
+                                        "flex_wrap": "nowrap",
+                                        "flex_wrap_tablet": "nowrap",
+                                        "flex_wrap_mobile": "nowrap",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "_flex_size": "none"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "button",
+                                            "settings": {
+                                                "text": "استعلام قیمت و مشاوره رایگان",
+                                                "link": {
+                                                    "url": "tel:09122302685",
+                                                    "is_external": "",
+                                                    "nofollow": ""
+                                                },
+                                                "selected_icon": {
+                                                    "value": "bi bi-telephone-fill",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "icon_align": "row",
+                                                "_css_classes": "ls-n ls-n-btn ls-n-btn--primary ls-n-btn--lg"
+                                            },
+                                            "elements": [],
+                                            "id": "8af909f"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "button",
+                                            "settings": {
+                                                "text": "مشاهده خطوط تولید",
+                                                "link": {
+                                                    "url": "/services/",
+                                                    "is_external": "",
+                                                    "nofollow": ""
+                                                },
+                                                "selected_icon": {
+                                                    "value": "bi bi-arrow-left",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "icon_align": "row",
+                                                "_css_classes": "ls-n ls-n-btn ls-n-btn--glass ls-n-btn--lg ls-n-nowrap"
+                                            },
+                                            "elements": [],
+                                            "id": "09d1f31"
+                                        }
+                                    ],
+                                    "id": "17b4219",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "eea2954",
+                            "isInner": true
                         }
-                    ]
+                    ],
+                    "id": "11404a3",
+                    "isInner": true
                 }
-            ]
+            ],
+            "id": "858fe59",
+            "isInner": false
         }
     ],
     "page_settings": {

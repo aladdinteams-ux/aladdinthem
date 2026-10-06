@@ -141,7 +141,12 @@ function ls_meta_description() {
 		$desc = term_description();
 	}
 	$desc = trim( preg_replace( '/\s+/u', ' ', wp_strip_all_tags( (string) $desc ) ) );
-	if ( '' === $desc && ! is_paged() && ( is_front_page() || is_home() || is_page() ) ) {
+	if ( '' === $desc && function_exists( 'is_shop' ) && is_shop() ) {
+		$shop = (int) wc_get_page_id( 'shop' );
+		$desc = $shop > 0 && has_excerpt( $shop ) ? get_the_excerpt( $shop ) : '';
+		$desc = trim( preg_replace( '/\s+/u', ' ', wp_strip_all_tags( (string) $desc ) ) );
+	}
+	if ( '' === $desc && ! is_paged() && ( is_front_page() || is_home() || is_page() || is_post_type_archive() ) ) {
 		$desc = trim( (string) get_bloginfo( 'description' ) );
 		$desc = '' !== $desc ? $desc : trim( (string) ls_opt( 'footer_about' ) );
 	}

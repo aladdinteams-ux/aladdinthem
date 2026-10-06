@@ -4,11 +4,17 @@
     "type": "page",
     "content": [
         {
-            "id": "b15d597",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -16,44 +22,35 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "76ec12c",
-                    "elType": "column",
+                    "id": "c4a6c0a",
+                    "elType": "widget",
+                    "widgetType": "ls-product-detail",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                        "source": "manual"
                     },
-                    "elements": [
-                        {
-                            "id": "bd2c955",
-                            "elType": "widget",
-                            "widgetType": "ls-product-detail",
-                            "settings": {
-                                "source": "manual"
-                            },
-                            "elements": []
-                        }
-                    ]
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "0658581",
+            "isInner": false
         },
         {
-            "id": "b74d33b",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -61,44 +58,35 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "cf76911",
-                    "elType": "column",
+                    "id": "9560e39",
+                    "elType": "widget",
+                    "widgetType": "ls-product-tabs",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                        "source": "manual"
                     },
-                    "elements": [
-                        {
-                            "id": "f2f811a",
-                            "elType": "widget",
-                            "widgetType": "ls-product-tabs",
-                            "settings": {
-                                "source": "manual"
-                            },
-                            "elements": []
-                        }
-                    ]
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "5fca08d",
+            "isInner": false
         },
         {
-            "id": "c1dbeb7",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -106,174 +94,562 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "ec2e603",
-                    "elType": "column",
+                    "id": "a8a290f",
+                    "elType": "widget",
+                    "widgetType": "ls-products",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "8c90ab3",
-                            "elType": "widget",
-                            "widgetType": "ls-products",
-                            "settings": {
-                                "source": "manual",
-                                "wc_query": "related",
-                                "card_style": "compact",
-                                "section_bg": "canvas",
-                                "heading_eyebrow": "تجهیزات و مواد مکمل خط تولید",
-                                "heading_title": "مواد اولیه و ماشین‌آلات متناسب با این قالب",
-                                "heading_desc": "",
-                                "heading_link_text": "مشاهده کل کاتالوگ فروشگاه",
-                                "heading_style": "token",
-                                "items": [
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAaJLbEQaMiCYAk7bJI6CQn9jjfz8RmWIjd0pNxoBhAIJu77grIhvRxpdpCImhXHWpjibSD8-hzwew93XTZKzCSwz9mmmDQgnQHTwdwn136CCt95s49OGo17HT56wYespJuQvyMKl0Pfxf9lbCxH36FBew6KIZjkRp5imRWfGMWFTURz4i8WyazO61KmVzvFV2eVke4SEmheOveg0CbZXvxiDAIL0rhe3uCpqaZO9fnN_mDkGDckbMm8Q",
-                                            "id": ""
-                                        },
-                                        "badge": "گالن ۲۰ لیتری",
-                                        "title": "فوق‌روان‌کننده پلی‌کربوکسیلات نانو (LS-500)",
-                                        "desc": "کاهش ۳۰ درصدی آب مصرفی، افزایش مقاومت فشاری تا ۷۵ مگاپاسکال و روان‌سازی کامل گوشه‌های تیز قالب.",
-                                        "price_label": "قیمت هر گالن:",
-                                        "price": "۱,۶۵۰,۰۰۰",
-                                        "button_icon": {
-                                            "value": "bi bi-cart-plus",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "_id": "afe5d99"
-                                    },
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA7XoWojgWbQLQ6mAKMWzq60je1VkFeLmKPGhtU_EGjZeojS8CXo6Ks_TUXAU4eMR7eOu7Gl4C89vpbjqz2MoHBow0NZG4KMvEcZJHPEXenUCQuH1qV6TWutrW2GZjEJjDJifa12vtfZ_ynDUQb2eZTedBtdoOdJP6O5unFSVFH_-H-SDPtN9KhfPMKLrdGw-7TOD5rn5NbP2Zo7-o2I745WKd9GGbVzkgxW2ECqroXx3RtV6Dhny-03A",
-                                            "id": ""
-                                        },
-                                        "badge": "آب‌گریز ضدشوره",
-                                        "title": "رزین سیلر براق‌کننده و نانو محافظ سنگ نما",
-                                        "desc": "ایجاد لایه خودتمیزشونده و جلوه خیس (Wet Look) دائمی در برابر اشعه UV آفتاب بدون زردشدگی.",
-                                        "price_label": "قیمت ظرف ۴ لیتری:",
-                                        "price": "۸۸۰,۰۰۰",
-                                        "button_icon": {
-                                            "value": "bi bi-cart-plus",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "_id": "8e12876"
-                                    },
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuC4zYe1-Yb4725PcqYEWcgx6vXLVItOJIsHFzBv5Z1Qy9QBlm3rf8nMZ1Z_WOjmrcFsbL2jCvxeBd2dg4mCCRwD8nwr1u_JnBKLUVfGE5573AAAGauSSLHS3-U-mRjdlWbPuN-a7ieaKxQH382CF8khwsquWNb0iNR4eC95CxbVX-VyZydIwJ4uhpHl_fBrnnNwXdCz6zkC9b81nMHHkus1BXmUI5eRUYazZsDWdidpFmgFvxX4zjKJKA",
-                                            "id": ""
-                                        },
-                                        "badge": "کیسه ۲۵ کیلویی",
-                                        "title": "رنگ معدنی اکسید آهن بایفروکس آلمان (مشکی ۳۳۰)",
-                                        "desc": "بالاترین قدرت رنگ‌دهی و ثبات نوری بدون رنگ‌پریدگی، ویژه ساخت سنگ‌های بازالتی دکوراتیو لوکس.",
-                                        "price_label": "قیمت هر کیلو:",
-                                        "price": "۲۴۵,۰۰۰",
-                                        "button_icon": {
-                                            "value": "bi bi-cart-plus",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "_id": "db0e6d2"
-                                    },
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDTsa3e1J5fV5XPQmsS1zSbXkP_edViUdjrI72uWAf0fjvpsHOh6PhVXOu5qY-gUXpzMER1q_CcrnXxNM7vwD9_rmVf17UOQet6ErJiHkXdpzEQaPkOt_120z-Lr81j4SM_3AvHBftluG8IX5nXEXDJ0-2rlirWDbuKexjAusJW8EQn7x1rJ-5DQ9DetettzosX8hb-dnInJV2vN01AJ-ZNWzQ8XmBq3o7NsSDzOeNOFIs4mcc1hy_mzQ",
-                                            "id": ""
-                                        },
-                                        "badge": "ابعاد ۲×۱ متر",
-                                        "title": "میز ویبره صنعتی دوموتوره ارتعاش عمودی",
-                                        "desc": "طراحی اختصاصی با ورق ضخیم ۸ میلی‌متر و فنرهای فولادی جهت تراکم کامل سنگ‌های سه‌بعدی بدون شکست قالب.",
-                                        "price_label": "قیمت کارخانه:",
-                                        "price": "۴۸,۰۰۰,۰۰۰",
-                                        "button_icon": {
-                                            "value": "bi bi-telephone",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "button_link": {
-                                            "url": "tel:09122302685"
-                                        },
-                                        "_id": "a956744"
-                                    }
-                                ]
-                            },
-                            "elements": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "183a670",
-            "elType": "section",
-            "settings": {
-                "layout": "full_width",
-                "gap": "no",
-                "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                }
-            },
-            "elements": [
-                {
-                    "id": "d7fa154",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "0e8fcbc",
-                            "elType": "widget",
-                            "widgetType": "ls-cta",
-                            "settings": {
-                                "variant": "dark-card",
-                                "badge": "پشتیبانی مهندسی خط تولید سنگ مصنوعی",
-                                "badge_icon": {
-                                    "value": "bi bi-gear-wide-connected",
+                        "source": "manual",
+                        "wc_query": "related",
+                        "card_style": "compact",
+                        "section_bg": "canvas",
+                        "heading_eyebrow": "تجهیزات و مواد مکمل خط تولید",
+                        "heading_title": "مواد اولیه و ماشین‌آلات متناسب با این قالب",
+                        "heading_desc": "",
+                        "heading_link_text": "مشاهده کل کاتالوگ فروشگاه",
+                        "heading_style": "token",
+                        "items": [
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAaJLbEQaMiCYAk7bJI6CQn9jjfz8RmWIjd0pNxoBhAIJu77grIhvRxpdpCImhXHWpjibSD8-hzwew93XTZKzCSwz9mmmDQgnQHTwdwn136CCt95s49OGo17HT56wYespJuQvyMKl0Pfxf9lbCxH36FBew6KIZjkRp5imRWfGMWFTURz4i8WyazO61KmVzvFV2eVke4SEmheOveg0CbZXvxiDAIL0rhe3uCpqaZO9fnN_mDkGDckbMm8Q",
+                                    "id": ""
+                                },
+                                "badge": "گالن ۲۰ لیتری",
+                                "title": "فوق‌روان‌کننده پلی‌کربوکسیلات نانو (LS-500)",
+                                "desc": "کاهش ۳۰ درصدی آب مصرفی، افزایش مقاومت فشاری تا ۷۵ مگاپاسکال و روان‌سازی کامل گوشه‌های تیز قالب.",
+                                "price_label": "قیمت هر گالن:",
+                                "price": "۱,۶۵۰,۰۰۰",
+                                "button_icon": {
+                                    "value": "bi bi-cart-plus",
                                     "library": "bootstrap-icons"
                                 },
-                                "title": "قصد راه‌اندازی کارگاه یا تولید انبوه با این طرح را دارید؟",
-                                "desc": "از مشاوره فنی در زمینه چیدمان میزهای ویبره، انتخاب میکسر و نسبت‌های دقیق رزین پلیمری توسط مهندس لاریجانی بهره‌مند شوید. قالب‌ها به همراه آموزش ویدئویی و پشتیبانی فنی کارگاهی ارسال می‌گردند.",
-                                "btn1_text": "۰۹۱۲ ۲۳۰ ۲۶۸۵",
-                                "btn1_sub": "تماس مستقیم با مدیریت فنی",
-                                "btn2_style": "darker",
-                                "btn2_icon": {
-                                    "value": "bi bi-whatsapp",
+                                "_id": "19ae1e8"
+                            },
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA7XoWojgWbQLQ6mAKMWzq60je1VkFeLmKPGhtU_EGjZeojS8CXo6Ks_TUXAU4eMR7eOu7Gl4C89vpbjqz2MoHBow0NZG4KMvEcZJHPEXenUCQuH1qV6TWutrW2GZjEJjDJifa12vtfZ_ynDUQb2eZTedBtdoOdJP6O5unFSVFH_-H-SDPtN9KhfPMKLrdGw-7TOD5rn5NbP2Zo7-o2I745WKd9GGbVzkgxW2ECqroXx3RtV6Dhny-03A",
+                                    "id": ""
+                                },
+                                "badge": "آب‌گریز ضدشوره",
+                                "title": "رزین سیلر براق‌کننده و نانو محافظ سنگ نما",
+                                "desc": "ایجاد لایه خودتمیزشونده و جلوه خیس (Wet Look) دائمی در برابر اشعه UV آفتاب بدون زردشدگی.",
+                                "price_label": "قیمت ظرف ۴ لیتری:",
+                                "price": "۸۸۰,۰۰۰",
+                                "button_icon": {
+                                    "value": "bi bi-cart-plus",
                                     "library": "bootstrap-icons"
                                 },
-                                "center_mobile": "yes"
+                                "_id": "8f34ce9"
                             },
-                            "elements": []
-                        }
-                    ]
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuC4zYe1-Yb4725PcqYEWcgx6vXLVItOJIsHFzBv5Z1Qy9QBlm3rf8nMZ1Z_WOjmrcFsbL2jCvxeBd2dg4mCCRwD8nwr1u_JnBKLUVfGE5573AAAGauSSLHS3-U-mRjdlWbPuN-a7ieaKxQH382CF8khwsquWNb0iNR4eC95CxbVX-VyZydIwJ4uhpHl_fBrnnNwXdCz6zkC9b81nMHHkus1BXmUI5eRUYazZsDWdidpFmgFvxX4zjKJKA",
+                                    "id": ""
+                                },
+                                "badge": "کیسه ۲۵ کیلویی",
+                                "title": "رنگ معدنی اکسید آهن بایفروکس آلمان (مشکی ۳۳۰)",
+                                "desc": "بالاترین قدرت رنگ‌دهی و ثبات نوری بدون رنگ‌پریدگی، ویژه ساخت سنگ‌های بازالتی دکوراتیو لوکس.",
+                                "price_label": "قیمت هر کیلو:",
+                                "price": "۲۴۵,۰۰۰",
+                                "button_icon": {
+                                    "value": "bi bi-cart-plus",
+                                    "library": "bootstrap-icons"
+                                },
+                                "_id": "fe8778c"
+                            },
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDTsa3e1J5fV5XPQmsS1zSbXkP_edViUdjrI72uWAf0fjvpsHOh6PhVXOu5qY-gUXpzMER1q_CcrnXxNM7vwD9_rmVf17UOQet6ErJiHkXdpzEQaPkOt_120z-Lr81j4SM_3AvHBftluG8IX5nXEXDJ0-2rlirWDbuKexjAusJW8EQn7x1rJ-5DQ9DetettzosX8hb-dnInJV2vN01AJ-ZNWzQ8XmBq3o7NsSDzOeNOFIs4mcc1hy_mzQ",
+                                    "id": ""
+                                },
+                                "badge": "ابعاد ۲×۱ متر",
+                                "title": "میز ویبره صنعتی دوموتوره ارتعاش عمودی",
+                                "desc": "طراحی اختصاصی با ورق ضخیم ۸ میلی‌متر و فنرهای فولادی جهت تراکم کامل سنگ‌های سه‌بعدی بدون شکست قالب.",
+                                "price_label": "قیمت کارخانه:",
+                                "price": "۴۸,۰۰۰,۰۰۰",
+                                "button_icon": {
+                                    "value": "bi bi-telephone",
+                                    "library": "bootstrap-icons"
+                                },
+                                "button_link": {
+                                    "url": "tel:09122302685"
+                                },
+                                "_id": "398edc4"
+                            }
+                        ]
+                    },
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "a393b6d",
+            "isInner": false
+        },
+        {
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "ls-root ls-n-wrap"
+            },
+            "elements": [
+                {
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1216
+                        },
+                        "flex_direction": "column",
+                        "flex_gap": {
+                            "column": "0",
+                            "row": "0",
+                            "isLinked": true,
+                            "unit": "px",
+                            "size": 0
+                        },
+                        "padding": {
+                            "unit": "px",
+                            "top": "56",
+                            "right": "32",
+                            "bottom": "56",
+                            "left": "32",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "56",
+                            "right": "24",
+                            "bottom": "56",
+                            "left": "24",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "40",
+                            "right": "16",
+                            "bottom": "40",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "css_classes": "ls-n-section",
+                        "html_tag": "section"
+                    },
+                    "elements": [
+                        {
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_direction_tablet": "column",
+                                "flex_direction_mobile": "column",
+                                "flex_gap": {
+                                    "column": "24",
+                                    "row": "24",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 24
+                                },
+                                "flex_align_items": "center",
+                                "flex_align_items_tablet": "stretch",
+                                "flex_align_items_mobile": "stretch",
+                                "flex_justify_content": "space-between",
+                                "flex_wrap": "nowrap",
+                                "flex_wrap_tablet": "nowrap",
+                                "flex_wrap_mobile": "nowrap",
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "48",
+                                    "right": "48",
+                                    "bottom": "48",
+                                    "left": "48",
+                                    "isLinked": true
+                                },
+                                "padding_tablet": {
+                                    "unit": "px",
+                                    "top": "40",
+                                    "right": "40",
+                                    "bottom": "40",
+                                    "left": "40",
+                                    "isLinked": true
+                                },
+                                "padding_mobile": {
+                                    "unit": "px",
+                                    "top": "24",
+                                    "right": "24",
+                                    "bottom": "24",
+                                    "left": "24",
+                                    "isLinked": true
+                                },
+                                "css_classes": "ls-n-glow bg-surface-dark rounded-2xl sm:rounded-3xl overflow-hidden text-white shadow-xl"
+                            },
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "0",
+                                            "row": "0",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 0
+                                        },
+                                        "flex_align_items": "flex-start",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "css_classes": "max-w-2xl text-center lg:text-right"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "row",
+                                                "flex_gap": {
+                                                    "column": "8",
+                                                    "row": "8",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 8
+                                                },
+                                                "flex_align_items": "center",
+                                                "flex_wrap": "nowrap",
+                                                "flex_wrap_tablet": "nowrap",
+                                                "flex_wrap_mobile": "nowrap",
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "4",
+                                                    "right": "12",
+                                                    "bottom": "4",
+                                                    "left": "12",
+                                                    "isLinked": false
+                                                },
+                                                "width": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_tablet": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_mobile": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "css_classes": "ls-n-pill bg-white/10 text-secondary-fixed rounded-full font-label-badge text-label-badge mb-3"
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-gear-wide-connected",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon text-accent-emerald"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "3f1d7cb"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "پشتیبانی مهندسی خط تولید سنگ مصنوعی",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "cdf39f5"
+                                                }
+                                            ],
+                                            "id": "9c1354b",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "قصد راه‌اندازی کارگاه یا تولید انبوه با این طرح را دارید؟",
+                                                "header_size": "h3",
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "8",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "_css_classes": "ls-n font-black tracking-tight text-lg sm:text-xl lg:text-2xl leading-snug text-white"
+                                            },
+                                            "elements": [],
+                                            "id": "80299b3"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "text-editor",
+                                            "settings": {
+                                                "editor": "<p>از مشاوره فنی در زمینه چیدمان میزهای ویبره، انتخاب میکسر و نسبت‌های دقیق رزین پلیمری توسط مهندس لاریجانی بهره‌مند شوید. قالب‌ها به همراه آموزش ویدئویی و پشتیبانی فنی کارگاهی ارسال می‌گردند.</p>",
+                                                "_css_classes": "ls-n text-slate-300 text-xs sm:text-sm max-w-xl leading-relaxed"
+                                            },
+                                            "elements": [],
+                                            "id": "0144c6c"
+                                        }
+                                    ],
+                                    "id": "c21f9a4",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "row",
+                                        "flex_direction_tablet": "row",
+                                        "flex_direction_mobile": "column",
+                                        "flex_gap": {
+                                            "column": "12",
+                                            "row": "12",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 12
+                                        },
+                                        "flex_align_items": "center",
+                                        "flex_align_items_tablet": "center",
+                                        "flex_align_items_mobile": "stretch",
+                                        "flex_wrap": "nowrap",
+                                        "flex_wrap_tablet": "nowrap",
+                                        "flex_wrap_mobile": "nowrap",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "_flex_size": "none"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "row",
+                                                "flex_gap": {
+                                                    "column": "8",
+                                                    "row": "8",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 8
+                                                },
+                                                "flex_align_items": "center",
+                                                "flex_justify_content": "center",
+                                                "flex_wrap": "nowrap",
+                                                "flex_wrap_tablet": "nowrap",
+                                                "flex_wrap_mobile": "nowrap",
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "14",
+                                                    "right": "24",
+                                                    "bottom": "14",
+                                                    "left": "24",
+                                                    "isLinked": false
+                                                },
+                                                "width": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_tablet": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_mobile": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "_flex_size": "none",
+                                                "css_classes": "ls-n-btn-sub bg-primary-container hover:bg-primary text-white font-bold text-xs sm:text-sm rounded-full shadow-lg transition-all",
+                                                "link": {
+                                                    "url": "tel:09122302685",
+                                                    "is_external": "",
+                                                    "nofollow": ""
+                                                },
+                                                "html_tag": "a"
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-telephone-fill",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon text-lg"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "a814321"
+                                                },
+                                                {
+                                                    "elType": "container",
+                                                    "settings": {
+                                                        "content_width": "full",
+                                                        "flex_direction": "column",
+                                                        "flex_gap": {
+                                                            "column": "0",
+                                                            "row": "0",
+                                                            "isLinked": true,
+                                                            "unit": "px",
+                                                            "size": 0
+                                                        },
+                                                        "padding": {
+                                                            "unit": "px",
+                                                            "top": "0",
+                                                            "right": "0",
+                                                            "bottom": "0",
+                                                            "left": "0",
+                                                            "isLinked": true
+                                                        },
+                                                        "width": {
+                                                            "unit": "custom",
+                                                            "size": "auto"
+                                                        },
+                                                        "width_tablet": {
+                                                            "unit": "custom",
+                                                            "size": "auto"
+                                                        },
+                                                        "width_mobile": {
+                                                            "unit": "custom",
+                                                            "size": "auto"
+                                                        },
+                                                        "css_classes": "text-right"
+                                                    },
+                                                    "elements": [
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "تماس مستقیم با مدیریت فنی",
+                                                                "header_size": "span",
+                                                                "_css_classes": "ls-n text-xs opacity-80 leading-none"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "b4f06da"
+                                                        },
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "۰۹۱۲ ۲۳۰ ۲۶۸۵",
+                                                                "header_size": "span",
+                                                                "_margin": {
+                                                                    "unit": "px",
+                                                                    "top": "4",
+                                                                    "right": "0",
+                                                                    "bottom": "0",
+                                                                    "left": "0",
+                                                                    "isLinked": false
+                                                                },
+                                                                "_css_classes": "ls-n font-black ls-n-ltr"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "ed7eb16"
+                                                        }
+                                                    ],
+                                                    "id": "99eddb9",
+                                                    "isInner": true
+                                                }
+                                            ],
+                                            "id": "32ce4c9",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "button",
+                                            "settings": {
+                                                "text": "ارسال پیام در واتساپ",
+                                                "link": {
+                                                    "url": "https://wa.me/989122302685",
+                                                    "is_external": true,
+                                                    "nofollow": ""
+                                                },
+                                                "selected_icon": {
+                                                    "value": "bi bi-whatsapp",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "icon_align": "row",
+                                                "_css_classes": "ls-n ls-n-btn ls-n-btn--darker ls-n-btn--lg ls-n-nowrap"
+                                            },
+                                            "elements": [],
+                                            "id": "2605b10"
+                                        }
+                                    ],
+                                    "id": "c983b6e",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "d4c732d",
+                            "isInner": true
+                        }
+                    ],
+                    "id": "1e6355b",
+                    "isInner": true
+                }
+            ],
+            "id": "79995b9",
+            "isInner": false
         }
     ],
     "page_settings": {

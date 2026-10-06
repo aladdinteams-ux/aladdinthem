@@ -93,7 +93,7 @@ function ls_render_site_header( $s = array() ) {
 						<?php if ( $ph[1] ) : ?>
 					<div class="pr-6 flex items-center gap-2">
 							<?php if ( 0 === $i ) : ?><i class="bi bi-telephone text-[13px] text-primary-container" aria-hidden="true"></i><?php endif; ?>
-						<span class="<?php echo 0 === $i ? 'font-medium' : 'text-gray-400'; ?>"><?php echo esc_html( $ph[0] ); ?>:</span>
+						<span class="<?php echo 0 === $i ? 'font-medium' : 'text-gray-500'; ?>"><?php echo esc_html( $ph[0] ); ?>:</span>
 						<a class="font-semibold text-gray-900 inline-block hover:text-primary-container" dir="ltr" href="<?php echo esc_url( ls_tel( $ph[1] ) ); ?>"><?php echo esc_html( ls_fa_num( preg_replace( '/\D+/', '', $ph[1] ) ) ); ?></a>
 					</div>
 						<?php endif; ?>
@@ -101,7 +101,7 @@ function ls_render_site_header( $s = array() ) {
 				</div>
 				<div class="flex items-center gap-4 text-gray-500">
 					<?php if ( ls_opt( 'email' ) ) : ?>
-					<span class="text-gray-400 text-[11px]"><?php esc_html_e( 'پشتیبانی فنی:', 'larijani' ); ?></span>
+					<span class="text-gray-500 text-[11px]"><?php esc_html_e( 'پشتیبانی فنی:', 'larijani' ); ?></span>
 					<a class="hover:text-primary-container" href="<?php echo esc_url( 'mailto:' . ls_opt( 'email' ) ); ?>"><?php echo esc_html( ls_opt( 'email' ) ); ?></a>
 					<?php endif; ?>
 					<div class="flex items-center gap-2.5 mr-2">

@@ -20,6 +20,7 @@ function ls_migrations() {
 		'ls_migrations',
 		array(
 			'1.2.0' => 'ls_migrate_1_2_0',
+			'1.3.0' => 'ls_migrate_1_3_0',
 		)
 	);
 }
@@ -48,6 +49,50 @@ function ls_migrate_1_2_0() {
 	}
 	return true;
 }
+
+/**
+ * 1.3.0: layouts are native Elementor containers/widgets now. Pages created by
+ * an older version are left untouched; flag them so the admin is told about
+ * the opt-in rebuild (Larijani Stone › Setup › rebuild).
+ *
+ * @return bool
+ */
+function ls_migrate_1_3_0() {
+	$ids = get_posts(
+		array(
+			'post_type'      => array( 'page', 'elementor_library' ),
+			'post_status'    => 'any',
+			'posts_per_page' => 100,
+			'fields'         => 'ids',
+			'meta_key'       => '_ls_demo_page', // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		)
+	);
+	foreach ( $ids as $id ) {
+		$data = get_post_meta( $id, '_elementor_data', true );
+		if ( is_string( $data ) && false !== strpos( $data, '"elType":"section"' ) ) {
+			update_option( 'ls_native_rebuild_notice', 1, false );
+			break;
+		}
+	}
+	return true;
+}
+
+/**
+ * One-time notice about rebuilding older demo pages with native widgets.
+ */
+function ls_native_rebuild_notice() {
+	if ( ! get_option( 'ls_native_rebuild_notice' ) || ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+	if ( isset( $_GET['ls_dismiss_native'] ) && check_admin_referer( 'ls_dismiss_native' ) ) {
+		delete_option( 'ls_native_rebuild_notice' );
+		return;
+	}
+	$setup   = admin_url( 'admin.php?page=ls-setup' );
+	$dismiss = wp_nonce_url( add_query_arg( 'ls_dismiss_native', 1 ), 'ls_dismiss_native' );
+	echo '<div class="notice notice-info"><p>' . esc_html__( 'لاریجانی استون ۱.۳: بخش‌های ثابت صفحات اکنون با ویجت‌های بومی المنتور (عنوان، متن، دکمه، آیکون، تصویر…) ساخته می‌شوند. برگه‌های فعلی شما تغییر نکرده‌اند؛ برای به‌روزرسانی آن‌ها گزینه «بازسازی چیدمان» را در صفحه راه‌اندازی بزنید (نسخه قبلی پشتیبان‌گیری می‌شود).', 'larijani' ) . ' <a href="' . esc_url( $setup ) . '">' . esc_html__( 'راه‌اندازی و درون‌ریزی', 'larijani' ) . '</a> · <a href="' . esc_url( $dismiss ) . '">' . esc_html__( 'بستن', 'larijani' ) . '</a></p></div>';
+}
+add_action( 'admin_notices', 'ls_native_rebuild_notice' );
 
 /**
  * Run pending migrations.

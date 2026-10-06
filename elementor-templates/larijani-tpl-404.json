@@ -4,11 +4,17 @@
     "type": "error-404",
     "content": [
         {
-            "id": "0985d0b",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -16,47 +22,252 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-root ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "ee9ee5c",
-                    "elType": "column",
+                    "elType": "container",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1216
+                        },
+                        "flex_direction": "column",
+                        "flex_gap": {
+                            "column": "0",
+                            "row": "0",
+                            "isLinked": true,
+                            "unit": "px",
+                            "size": 0
+                        },
                         "padding": {
                             "unit": "px",
                             "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                            "right": "32",
+                            "bottom": "24",
+                            "left": "32",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "16",
+                            "bottom": "24",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "16",
+                            "bottom": "24",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "css_classes": "ls-n-section",
+                        "html_tag": "section"
                     },
                     "elements": [
                         {
-                            "id": "2ae9c42",
-                            "elType": "widget",
-                            "widgetType": "ls-page-banner",
+                            "elType": "container",
                             "settings": {
-                                "badge": "خطای ۴۰۴",
-                                "title": "صفحه مورد نظر پیدا نشد",
-                                "desc": "ممکن است آدرس تغییر کرده باشد. از منوی بالا یا جستجو استفاده کنید.",
-                                "show_side": ""
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_direction_tablet": "column",
+                                "flex_direction_mobile": "column",
+                                "flex_gap": {
+                                    "column": "40",
+                                    "row": "40",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 40
+                                },
+                                "flex_align_items": "flex-end",
+                                "flex_align_items_tablet": "stretch",
+                                "flex_align_items_mobile": "stretch",
+                                "flex_wrap": "nowrap",
+                                "flex_wrap_tablet": "nowrap",
+                                "flex_wrap_mobile": "nowrap",
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "64",
+                                    "right": "64",
+                                    "bottom": "64",
+                                    "left": "64",
+                                    "isLinked": true
+                                },
+                                "padding_tablet": {
+                                    "unit": "px",
+                                    "top": "24",
+                                    "right": "24",
+                                    "bottom": "24",
+                                    "left": "24",
+                                    "isLinked": true
+                                },
+                                "padding_mobile": {
+                                    "unit": "px",
+                                    "top": "24",
+                                    "right": "24",
+                                    "bottom": "24",
+                                    "left": "24",
+                                    "isLinked": true
+                                },
+                                "css_classes": "ls-n-glow ls-n-glow--banner bg-surface-dark text-on-tertiary rounded-3xl overflow-hidden shadow-xl"
                             },
-                            "elements": []
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "16",
+                                            "row": "16",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 16
+                                        },
+                                        "flex_align_items": "flex-start",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "width": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 100
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 100
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "row",
+                                                "flex_gap": {
+                                                    "column": "8",
+                                                    "row": "8",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 8
+                                                },
+                                                "flex_align_items": "center",
+                                                "flex_wrap": "nowrap",
+                                                "flex_wrap_tablet": "nowrap",
+                                                "flex_wrap_mobile": "nowrap",
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "6",
+                                                    "right": "14",
+                                                    "bottom": "6",
+                                                    "left": "14",
+                                                    "isLinked": false
+                                                },
+                                                "width": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_tablet": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "width_mobile": {
+                                                    "unit": "custom",
+                                                    "size": "auto"
+                                                },
+                                                "css_classes": "ls-n-pill bg-white/10 backdrop-blur-md rounded-full max-w-full text-primary-fixed"
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "icon",
+                                                    "settings": {
+                                                        "selected_icon": {
+                                                            "value": "bi bi-gear-wide-connected",
+                                                            "library": "bootstrap-icons"
+                                                        },
+                                                        "_css_classes": "ls-n ls-n-icon text-[16px]"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "3c882f7"
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "heading",
+                                                    "settings": {
+                                                        "title": "خطای ۴۰۴",
+                                                        "header_size": "span",
+                                                        "_css_classes": "ls-n font-label-badge text-label-badge font-bold"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "dbb0a6e"
+                                                }
+                                            ],
+                                            "id": "cb94b23",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "صفحه مورد نظر پیدا نشد",
+                                                "header_size": "h1",
+                                                "_css_classes": "ls-n font-headline-lg text-headline-lg lg:font-display-hero lg:text-display-hero text-on-tertiary tracking-tight leading-snug"
+                                            },
+                                            "elements": [],
+                                            "id": "d3cb784"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "text-editor",
+                                            "settings": {
+                                                "editor": "<p>ممکن است آدرس تغییر کرده باشد. از منوی بالا یا جستجو استفاده کنید.</p>",
+                                                "_css_classes": "ls-n font-body-lg text-body-lg text-outline-variant max-w-2xl leading-relaxed"
+                                            },
+                                            "elements": [],
+                                            "id": "d4ab5a1"
+                                        }
+                                    ],
+                                    "id": "728bb71",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "a50ad8c",
+                            "isInner": true
                         }
-                    ]
+                    ],
+                    "id": "cea630d",
+                    "isInner": true
                 }
-            ]
+            ],
+            "id": "5af6fc7",
+            "isInner": false
         },
         {
-            "id": "d4ebf6a",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -64,38 +275,23 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "f381735",
-                    "elType": "column",
+                    "id": "9b0d838",
+                    "elType": "widget",
+                    "widgetType": "ls-categories",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                        "heading_title": "شاید به دنبال این بخش‌ها باشید",
+                        "heading_desc": ""
                     },
-                    "elements": [
-                        {
-                            "id": "067b1f6",
-                            "elType": "widget",
-                            "widgetType": "ls-categories",
-                            "settings": {
-                                "heading_title": "شاید به دنبال این بخش‌ها باشید",
-                                "heading_desc": ""
-                            },
-                            "elements": []
-                        }
-                    ]
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "d845b96",
+            "isInner": false
         }
     ],
     "page_settings": {

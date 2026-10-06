@@ -240,6 +240,14 @@
 					sel.addEventListener('change', function () { sortItems(sel.value); });
 				});
 			}
+			// Deep link from menus: ?ls_cat=<filter key> pre-selects the category.
+			var wanted = '';
+			try { wanted = new URLSearchParams(window.location.search).get('ls_cat') || ''; } catch (e) { wanted = ''; }
+			if (wanted) {
+				var target = $all(scope, '[data-ls-filter]').filter(function (b) { return b.getAttribute('data-ls-filter') === wanted; })[0];
+				var box = $all(scope, '[data-ls-check-filter]').filter(function (c) { return c.value === wanted; })[0];
+				if (target) { target.click(); } else if (box) { box.checked = true; applyFilters(scope); }
+			}
 		});
 	}
 

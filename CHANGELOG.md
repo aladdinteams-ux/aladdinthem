@@ -1,5 +1,24 @@
 # Changelog — Larijani Stone
 
+## 1.3.0 — 2026-10-06 (native Elementor layouts)
+
+### Changed
+- **Pages and templates are built with Elementor Containers (Flexbox/Grid) instead of Section/Column.**
+- **Static design sections now use Elementor's core widgets** (Heading, Text Editor, Button, Icon, Image, Icon List, Star Rating, Progress Bar): section headings, icon/benefit cards (5 styles), about + stats, testimonials grid, call-to-action bands (4 styles), process steps, contact banner, contact cards. Every text, icon, link and image is edited with Elementor's own controls; Style-tab values override the theme classes (verified in Elementor 4.0.8: colour, typography, button background, grid columns).
+- Data-driven/interactive parts (header/footer, hero search, products/catalog/product page, posts, lead forms, FAQ schema, sliders, charts) remain theme widgets — see `docs/ELEMENTOR-NATIVE-MAP.md`.
+- Menus created on install link to the **page objects** and WooCommerce **product categories** (no hard-coded URLs); without WooCommerce, category links open the catalog pre-filtered (`?ls_cat=`).
+- Elementor's Container feature is switched on during setup if an old site still has it off (`ls_enable_elementor_containers`).
+
+### Added
+- Setup option **"Rebuild layouts"** for pages/templates created by the theme (keeps IDs, slugs and menus; previous Elementor data backed up in `_ls_elementor_data_backup`). Admin notice after updating from 1.2 when old layouts exist.
+- No-Elementor fallback renders Containers and the core widgets with Elementor's markup (same look without Elementor).
+- `ls_native_layouts` filter (return `false` for the 1.2 theme-widget layouts).
+
+### Fixed
+- Re-imported layouts were hidden behind Elementor's element/CSS caches (`_elementor_element_cache`, `_elementor_css`) — caches are cleared on save.
+- Low-contrast grey labels in the classic hero, categories, showcase cards and light header (AA 4.5:1).
+- Progress bar accessible name; WooCommerce shop archive meta description fallback.
+
 ## 1.2.0 — 2026-10-05 (QA audit release)
 
 ### Security

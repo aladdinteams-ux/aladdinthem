@@ -97,7 +97,7 @@ class LS_Widget_Categories extends LS_Widget_Base {
 					<a class="bg-white p-4 sm:p-5 rounded-2xl border border-gray-200/80 hover:border-primary-container hover:shadow-soft transition text-center flex flex-col items-center group" <?php echo ls_link_attrs( ( empty( $it['link']['url'] ) || '#' === $it['link']['url'] ) ? $this->heading_fallback_url() : $it['link'] ); // phpcs:ignore ?>>
 						<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-surface-canvas group-hover:bg-primary-container text-primary-container group-hover:text-white flex items-center justify-center mb-3 transition text-2xl"><?php echo ls_icon( $it['icon'] ); // phpcs:ignore ?></div>
 						<h3 class="font-bold text-gray-900 text-xs sm:text-sm group-hover:text-primary-container transition"><?php echo esc_html( $it['title'] ); ?></h3>
-						<?php if ( $it['sub'] ) : ?><span class="text-[11px] sm:text-xs text-gray-400 mt-1 font-medium"><?php echo esc_html( $it['sub'] ); ?></span><?php endif; ?>
+						<?php if ( $it['sub'] ) : ?><span class="text-[11px] sm:text-xs text-gray-500 mt-1 font-medium"><?php echo esc_html( $it['sub'] ); ?></span><?php endif; ?>
 					</a>
 					<?php endforeach; ?>
 				</div>

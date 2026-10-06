@@ -233,8 +233,10 @@ function ls_fallback_render_elements( $elements ) {
 		}
 		$s = isset( $el['settings'] ) && is_array( $el['settings'] ) ? $el['settings'] : array();
 		switch ( $el['elType'] ) {
-			case 'section':
 			case 'container':
+				ls_fallback_render_container( $el );
+				break;
+			case 'section':
 				$boxed = 'boxed' === ( $s['layout'] ?? '' ) || 'boxed' === ( $s['content_width'] ?? '' );
 				$style = '';
 				foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
@@ -281,38 +283,258 @@ function ls_fallback_render_widget( $el ) {
 	$type  = (string) ( $el['widgetType'] ?? '' );
 	$s     = isset( $el['settings'] ) && is_array( $el['settings'] ) ? $el['settings'] : array();
 	$class = ls_fallback_widget_class( $type );
+	if ( ! $class ) {
+		// Core widgets: Elementor's own markup so the theme CSS applies.
+		if ( ls_fallback_native_widget( $el ) ) {
+			return;
+		}
+		if ( 'shortcode' === $type ) {
+			echo '<div class="ls-fb-widget">' . do_shortcode( (string) ( $s['shortcode'] ?? '' ) ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		} elseif ( 'html' === $type ) {
+			echo '<div class="ls-fb-widget">' . wp_kses_post( $s['html'] ?? '' ) . '</div>';
+		}
+		return;
+	}
 	echo '<div class="ls-fb-widget">';
-	if ( $class ) {
-		$widget = new $class( $el );
-		$widget->ls_print();
-	} else {
-		switch ( $type ) {
-			case 'heading':
-				$tag = in_array( $s['header_size'] ?? 'h2', array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'p' ), true ) ? $s['header_size'] : 'h2';
-				echo '<' . $tag . ' class="ls-fb-heading">' . wp_kses_post( $s['title'] ?? '' ) . '</' . $tag . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- $tag is whitelisted.
-				break;
-			case 'text-editor':
-				echo '<div class="ls-prose">' . wp_kses_post( wpautop( $s['editor'] ?? '' ) ) . '</div>';
-				break;
-			case 'image':
-				if ( ! empty( $s['image']['url'] ) ) {
-					echo '<img src="' . esc_url( $s['image']['url'] ) . '" alt="" loading="lazy">';
-				}
-				break;
-			case 'shortcode':
-				echo do_shortcode( (string) ( $s['shortcode'] ?? '' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				break;
-			case 'html':
-				echo wp_kses_post( $s['html'] ?? '' );
-				break;
-			case 'button':
-				if ( ! empty( $s['text'] ) ) {
-					echo '<a class="ls-fb-button" href="' . esc_url( $s['link']['url'] ?? '#' ) . '">' . esc_html( $s['text'] ) . '</a>';
-				}
-				break;
+	$widget = new $class( $el );
+	$widget->ls_print();
+	echo '</div>';
+}
+
+/**
+ * Responsive values of a setting (desktop, tablet ≤1024px, mobile ≤767px).
+ *
+ * @param array  $s   Settings.
+ * @param string $key Key.
+ * @return array [ '' => v, '_tablet' => v, '_mobile' => v ] (only set ones).
+ */
+function ls_fallback_resp( $s, $key ) {
+	$out = array();
+	foreach ( array( '', '_tablet', '_mobile' ) as $sfx ) {
+		if ( isset( $s[ $key . $sfx ] ) && '' !== $s[ $key . $sfx ] && array() !== $s[ $key . $sfx ] ) {
+			$out[ $sfx ] = $s[ $key . $sfx ];
 		}
 	}
-	echo '</div>';
+	return $out;
+}
+
+/**
+ * Render a container the way Elementor does (classes + CSS variables).
+ *
+ * @param array $el Element.
+ */
+function ls_fallback_render_container( $el ) {
+	$s     = isset( $el['settings'] ) && is_array( $el['settings'] ) ? $el['settings'] : array();
+	$id    = preg_replace( '/[^a-z0-9]/i', '', (string) ( $el['id'] ?? wp_rand() ) );
+	$grid  = 'grid' === ( $s['container_type'] ?? '' );
+	$boxed = 'boxed' === ( $s['content_width'] ?? 'boxed' );
+	$css   = array( '' => array(), '_tablet' => array(), '_mobile' => array() );
+	$num   = static function ( $v, $unit = 'px' ) {
+		return is_numeric( $v ) ? (float) $v . $unit : '';
+	};
+	$css['']['--display'] = $grid ? 'grid' : 'flex';
+	foreach ( ls_fallback_resp( $s, 'padding' ) as $sfx => $p ) {
+		foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
+			if ( isset( $p[ $side ] ) && '' !== $p[ $side ] ) {
+				$css[ $sfx ][ '--padding-' . $side ] = $num( $p[ $side ], $p['unit'] ?? 'px' );
+			}
+		}
+	}
+	foreach ( ls_fallback_resp( $s, $grid ? 'grid_gaps' : 'flex_gap' ) as $sfx => $g ) {
+		$col = $num( $g['column'] ?? ( $g['size'] ?? '' ), $g['unit'] ?? 'px' );
+		$row = $num( $g['row'] ?? ( $g['size'] ?? '' ), $g['unit'] ?? 'px' );
+		if ( '' !== $col ) {
+			$css[ $sfx ]['--column-gap'] = $col;
+			$css[ $sfx ]['--row-gap']    = '' !== $row ? $row : $col;
+		}
+	}
+	if ( $grid ) {
+		foreach ( ls_fallback_resp( $s, 'grid_columns_grid' ) as $sfx => $c ) {
+			if ( isset( $c['size'] ) && is_numeric( $c['size'] ) ) {
+				$css[ $sfx ]['--e-con-grid-template-columns'] = 'repeat(' . (int) $c['size'] . ', minmax(0, 1fr))';
+			}
+		}
+		if ( ! isset( $s['grid_columns_grid_mobile'] ) ) {
+			$css['_mobile']['--e-con-grid-template-columns'] = 'repeat(1, minmax(0, 1fr))';
+		}
+		if ( ! empty( $s['grid_align_items'] ) ) {
+			$css['']['--align-items'] = $s['grid_align_items'];
+		}
+	} else {
+		foreach ( array( 'flex_direction' => '--flex-direction', 'flex_align_items' => '--align-items', 'flex_justify_content' => '--justify-content' ) as $key => $var ) {
+			foreach ( ls_fallback_resp( $s, $key ) as $sfx => $d ) {
+				$css[ $sfx ][ $var ] = (string) $d;
+			}
+		}
+		if ( ! empty( $s['flex_wrap'] ) ) {
+			$css['']['--flex-wrap'] = $s['flex_wrap'];
+		}
+	}
+	foreach ( ls_fallback_resp( $s, 'boxed_width' ) as $sfx => $w ) {
+		$css[ $sfx ]['--content-width'] = 'min(100%, ' . $num( $w['size'] ?? '', $w['unit'] ?? 'px' ) . ')';
+	}
+	if ( ! $boxed ) {
+		foreach ( ls_fallback_resp( $s, 'width' ) as $sfx => $w ) {
+			$css[ $sfx ]['--width'] = 'custom' === ( $w['unit'] ?? '' ) ? (string) $w['size'] : $num( $w['size'] ?? '', $w['unit'] ?? '%' );
+		}
+	}
+	if ( 'none' === ( $s['_flex_size'] ?? '' ) ) {
+		$css['']['flex-shrink'] = '0';
+	}
+	if ( 'grow' === ( $s['_flex_size'] ?? '' ) || ( 'custom' === ( $s['_flex_size'] ?? '' ) && ! empty( $s['_flex_grow'] ) ) ) {
+		$css['']['flex-grow']   = '1';
+		$css['']['flex-shrink'] = 'custom' === $s['_flex_size'] ? (string) (int) ( $s['_flex_shrink'] ?? 1 ) : '0';
+	}
+	$rules = '';
+	$media = array( '' => '', '_tablet' => '@media (max-width:1024px)', '_mobile' => '@media (max-width:767px)' );
+	foreach ( $css as $sfx => $decl ) {
+		$decl = array_filter( $decl, 'strlen' );
+		if ( ! $decl ) {
+			continue;
+		}
+		$body = '.ls-fb-content .elementor-element-' . $id . '{';
+		foreach ( $decl as $k => $v ) {
+			$body .= $k . ':' . preg_replace( '/[^a-z0-9%.,() _-]/i', '', $v ) . ';';
+		}
+		$body  .= '}';
+		$rules .= $media[ $sfx ] ? $media[ $sfx ] . '{' . $body . '}' : $body;
+	}
+	$classes = array( 'elementor-element', 'elementor-element-' . $id, 'e-con', $grid ? 'e-grid' : 'e-flex', $boxed ? 'e-con-boxed' : 'e-con-full' );
+	if ( ! empty( $s['css_classes'] ) ) {
+		$classes[] = $s['css_classes'];
+	}
+	$tag   = in_array( $s['html_tag'] ?? '', array( 'section', 'article', 'aside', 'header', 'footer', 'nav', 'main', 'a' ), true ) ? $s['html_tag'] : 'div';
+	$attrs = 'a' === $tag ? ls_fallback_link_attrs( $s['link'] ?? '' ) : '';
+	$tag   = 'a' === $tag && ! $attrs ? 'div' : $tag;
+	echo '<style>' . $rules . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- values sanitised above.
+	echo '<' . $tag . ' class="' . esc_attr( implode( ' ', $classes ) ) . '"' . ( ! empty( $s['_element_id'] ) ? ' id="' . esc_attr( $s['_element_id'] ) . '"' : '' ) . $attrs . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- $tag is whitelisted, $attrs escaped.
+	if ( $boxed ) {
+		echo '<div class="e-con-inner">';
+	}
+	ls_fallback_render_elements( $el['elements'] ?? array() );
+	if ( $boxed ) {
+		echo '</div>';
+	}
+	echo '</' . $tag . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+
+/**
+ * Icon markup for a core icon setting.
+ *
+ * @param mixed $icon Icon setting.
+ * @return string
+ */
+function ls_fallback_icon( $icon ) {
+	$v = is_array( $icon ) ? ( $icon['value'] ?? '' ) : (string) $icon;
+	if ( is_array( $v ) ) {
+		return ! empty( $v['url'] ) ? '<img src="' . esc_url( $v['url'] ) . '" alt="" width="16" height="16">' : '';
+	}
+	return '' !== $v ? '<i aria-hidden="true" class="' . esc_attr( $v ) . '"></i>' : '';
+}
+
+/**
+ * Link attributes of a core link setting.
+ *
+ * @param mixed $link Link.
+ * @return string Attributes (escaped) or '' when there is no URL.
+ */
+function ls_fallback_link_attrs( $link ) {
+	$url = is_array( $link ) ? ( $link['url'] ?? '' ) : (string) $link;
+	if ( '' === $url ) {
+		return '';
+	}
+	$ext   = is_array( $link ) && ! empty( $link['is_external'] );
+	$rel   = array_filter( array( $ext ? 'noopener' : '', is_array( $link ) && ! empty( $link['nofollow'] ) ? 'nofollow' : '' ) );
+	$attrs = ' href="' . esc_url( $url ) . '"' . ( $ext ? ' target="_blank"' : '' );
+	return $attrs . ( $rel ? ' rel="' . esc_attr( implode( ' ', $rel ) ) . '"' : '' );
+}
+
+/**
+ * Render a core Elementor widget with Elementor's markup (no Elementor needed).
+ *
+ * @param array $el Element.
+ * @return bool True when handled.
+ */
+function ls_fallback_native_widget( $el ) {
+	$type = (string) ( $el['widgetType'] ?? '' );
+	$s    = isset( $el['settings'] ) && is_array( $el['settings'] ) ? $el['settings'] : array();
+	$id   = preg_replace( '/[^a-z0-9]/i', '', (string) ( $el['id'] ?? '' ) );
+	$html = '';
+	switch ( $type ) {
+		case 'heading':
+			$tag   = in_array( $s['header_size'] ?? 'h2', array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span', 'p' ), true ) ? $s['header_size'] : 'h2';
+			$title = wp_kses_post( $s['title'] ?? '' );
+			$attrs = ls_fallback_link_attrs( $s['link'] ?? '' );
+			$html  = '<' . $tag . ' class="elementor-heading-title elementor-size-default">' . ( $attrs ? '<a' . $attrs . '>' . $title . '</a>' : $title ) . '</' . $tag . '>';
+			break;
+		case 'text-editor':
+			$html = wp_kses_post( wpautop( $s['editor'] ?? '' ) );
+			break;
+		case 'image':
+			if ( ! empty( $s['image']['url'] ) ) {
+				$img   = ! empty( $s['image']['id'] ) ? wp_get_attachment_image( (int) $s['image']['id'], $s['image_size'] ?? 'large', false, array( 'loading' => 'lazy' ) ) : '';
+				$html  = $img ? $img : '<img src="' . esc_url( $s['image']['url'] ) . '" alt="' . esc_attr( $s['image']['alt'] ?? '' ) . '" loading="lazy" decoding="async">';
+				$attrs = 'custom' === ( $s['link_to'] ?? '' ) ? ls_fallback_link_attrs( $s['link'] ?? '' ) : '';
+				$html  = $attrs ? '<a' . $attrs . '>' . $html . '</a>' : $html;
+			}
+			break;
+		case 'button':
+			if ( '' === (string) ( $s['text'] ?? '' ) ) {
+				return true;
+			}
+			$attrs = ls_fallback_link_attrs( $s['link'] ?? '' );
+			$icon  = ls_fallback_icon( $s['selected_icon'] ?? '' );
+			$dir   = 'row' === ( $s['icon_align'] ?? ( is_rtl() ? 'row-reverse' : 'row' ) ) ? 'row' : 'row-reverse';
+			$inner = '<span class="elementor-button-content-wrapper" style="flex-direction:' . $dir . '">' . ( $icon ? '<span class="elementor-button-icon">' . $icon . '</span>' : '' ) . '<span class="elementor-button-text">' . esc_html( $s['text'] ) . '</span></span>';
+			$html  = $attrs ? '<a class="elementor-button elementor-button-link elementor-size-sm"' . $attrs . '>' . $inner . '</a>' : '<span class="elementor-button elementor-size-sm">' . $inner . '</span>';
+			break;
+		case 'icon':
+			$icon  = ls_fallback_icon( $s['selected_icon'] ?? '' );
+			$attrs = ls_fallback_link_attrs( $s['link'] ?? '' );
+			$html  = '<div class="elementor-icon-wrapper">' . ( $attrs ? '<a class="elementor-icon"' . $attrs . '>' . $icon . '</a>' : '<div class="elementor-icon">' . $icon . '</div>' ) . '</div>';
+			break;
+		case 'icon-list':
+			$items = '';
+			foreach ( (array) ( $s['icon_list'] ?? array() ) as $it ) {
+				$icon   = ls_fallback_icon( $it['selected_icon'] ?? '' );
+				$inner  = ( $icon ? '<span class="elementor-icon-list-icon">' . $icon . '</span>' : '' ) . '<span class="elementor-icon-list-text">' . esc_html( $it['text'] ?? '' ) . '</span>';
+				$attrs  = ls_fallback_link_attrs( $it['link'] ?? '' );
+				$items .= '<li class="elementor-icon-list-item">' . ( $attrs ? '<a' . $attrs . '>' . $inner . '</a>' : $inner ) . '</li>';
+			}
+			$html = '<ul class="elementor-icon-list-items' . ( 'inline' === ( $s['view'] ?? '' ) ? ' elementor-inline-items' : '' ) . '">' . $items . '</ul>';
+			break;
+		case 'star-rating':
+			$rating = max( 0, min( 5, (float) ( $s['rating'] ?? 5 ) ) );
+			$stars  = '';
+			for ( $i = 1; $i <= 5; $i++ ) {
+				$stars .= $i <= $rating ? '<i class="elementor-star-full">&#9733;</i>' : '<i class="elementor-star-empty">&#9734;</i>';
+			}
+			/* translators: %s: rating out of 5. */
+			$html = '<div class="elementor-star-rating" title="' . esc_attr( sprintf( __( 'امتیاز %s از ۵', 'larijani' ), $rating ) ) . '">' . $stars . '</div>';
+			break;
+		case 'progress':
+			$pct  = max( 0, min( 100, (int) ( $s['percent']['size'] ?? 0 ) ) );
+			$html = '<div class="elementor-progress-wrapper" role="progressbar" aria-label="' . esc_attr( $s['title'] ?? '' ) . '" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' . $pct . '"><div class="elementor-progress-bar" style="width:' . $pct . '%"></div></div>';
+			break;
+		default:
+			return false;
+	}
+	$rules = '';
+	$media = array( '' => '', '_tablet' => '@media (max-width:1024px)', '_mobile' => '@media (max-width:767px)' );
+	foreach ( ls_fallback_resp( $s, '_margin' ) as $sfx => $m ) {
+		$vals = array();
+		foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
+			$vals[] = is_numeric( $m[ $side ] ?? '' ) ? (float) $m[ $side ] . ( $m['unit'] ?? 'px' ) : '0';
+		}
+		$body   = '.ls-fb-content .elementor-element-' . $id . '{margin:' . preg_replace( '/[^a-z0-9%. -]/i', '', implode( ' ', $vals ) ) . '}';
+		$rules .= $media[ $sfx ] ? $media[ $sfx ] . '{' . $body . '}' : $body;
+	}
+	if ( $rules ) {
+		echo '<style>' . $rules . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- sanitised numbers.
+	}
+	$classes = 'elementor-element elementor-element-' . $id . ' elementor-widget elementor-widget-' . $type . ( ! empty( $s['_css_classes'] ) ? ' ' . $s['_css_classes'] : '' );
+	echo '<div class="' . esc_attr( $classes ) . '"' . ( ! empty( $s['_element_id'] ) ? ' id="' . esc_attr( $s['_element_id'] ) . '"' : '' ) . '>' . $html . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built from escaped parts.
+	return true;
 }
 
 /**

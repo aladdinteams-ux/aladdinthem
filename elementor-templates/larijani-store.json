@@ -4,11 +4,17 @@
     "type": "page",
     "content": [
         {
-            "id": "3b0f5ff",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -16,50 +22,41 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "4357fbc",
-                    "elType": "column",
+                    "id": "1fcebfa",
+                    "elType": "widget",
+                    "widgetType": "ls-shop-hero",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                        "variant": "bar",
+                        "badge": "بزرگترین بانک قالب‌های ABS نشکن و ماشین‌آلات قطعات بتنی در کشور",
+                        "badge_icon": {
+                            "value": "bi bi-patch-check-fill",
+                            "library": "bootstrap-icons"
+                        },
+                        "desc": "تأمین بی‌واسطه بیش از ۴۰۰ مدل قالب تزریقی ضدسایش، میزهای ویبره با ارتعاش یکنواخت، میکسر ۵۰۰ کیلویی تخصصی و افزودنی‌های پلیمری فرموله‌شده برای کارخانجات و کارگاه‌های سراسر ایران."
                     },
-                    "elements": [
-                        {
-                            "id": "fa84ad8",
-                            "elType": "widget",
-                            "widgetType": "ls-shop-hero",
-                            "settings": {
-                                "variant": "bar",
-                                "badge": "بزرگترین بانک قالب‌های ABS نشکن و ماشین‌آلات قطعات بتنی در کشور",
-                                "badge_icon": {
-                                    "value": "bi bi-patch-check-fill",
-                                    "library": "bootstrap-icons"
-                                },
-                                "desc": "تأمین بی‌واسطه بیش از ۴۰۰ مدل قالب تزریقی ضدسایش، میزهای ویبره با ارتعاش یکنواخت، میکسر ۵۰۰ کیلویی تخصصی و افزودنی‌های پلیمری فرموله‌شده برای کارخانجات و کارگاه‌های سراسر ایران."
-                            },
-                            "elements": []
-                        }
-                    ]
+                    "elements": []
                 }
-            ]
+            ],
+            "id": "88d5d13",
+            "isInner": false
         },
         {
-            "id": "a6ebd2b",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -67,388 +64,736 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "091f003",
-                    "elType": "column",
+                    "id": "f5effab",
+                    "elType": "widget",
+                    "widgetType": "ls-catalog",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "2ce0d58",
-                            "elType": "widget",
-                            "widgetType": "ls-catalog",
-                            "settings": {
-                                "source": "manual",
-                                "layout": "store",
-                                "items": [
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDThobRG1DLSSwmZJOsL3cQQpZyMamyuNdKPxuwR0gV9JjFNA9uWoMuDfm5_SD2uocWhA9F2LhZnBiV7iIy_83lOCGH8BwJq3ExvbeNVn8LqIPOiwUa08kpUSDS79Xiofpmvz4yDRs7_SrRirm5JMsAPxd_bdYXTCdCmKzMwthChdxbSA_Ik7t3v4zlhZXmbqv03WdzaCkq6QAW7o6OX32A_A4w8IkjvYi9BMMYawj9Z-gzqQW2NuFs9w",
-                                            "id": ""
-                                        },
-                                        "badge": "گارانتی ۲۴ ماهه",
-                                        "badge_tone": "dark",
-                                        "stock_badge": "موجود در کارخانه",
-                                        "stock_tone": "emerald",
-                                        "category": "تجهیزات خط تولید • ماشین‌آلات",
-                                        "title": "میز ویبره صنعتی دور متغیر لاریجانی استون",
-                                        "desc": "دارای ۲ عدد الکتروموتور ۳۰۰۰ دور ایتالیایی، صفحه ورق ۸ میل ضدرنگ، فنرهای لول ارتعاشی سایلنت جهت خروج ۱۰۰٪ حباب‌های هوا.",
-                                        "spec1_label": "ابعاد صفحه",
-                                        "spec1_value": "۲۰۰×۱۰۰ سانتی‌متر",
-                                        "spec2_label": "سیستم لرزش",
-                                        "spec2_value": "فرکانس متغیر اینورتری",
-                                        "spec3_label": "ظرفیت بار",
-                                        "spec3_value": "۸۰۰ کیلوگرم",
-                                        "price_label": "قیمت کارخانه:",
-                                        "price": "۴۸,۰۰۰,۰۰۰",
-                                        "price_raw": 48000000,
-                                        "button_text": "سفارش مستقیم و هماهنگی ارسال",
-                                        "button_icon": {
-                                            "value": "bi bi-cart-check",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "button_link": {
-                                            "url": "tel:09122302685"
-                                        },
-                                        "filter": "machinery ready-stock",
-                                        "_id": "411b48c"
-                                    },
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAyoNMJhHW4oZQBUWVbfJeEhEtTcLGU8MlckmD0njoeNphXO7ZLPBOscGtIewZis4Uu2lLprvAEsyq__esJ1kVvWnYkmcTpcQ5ggug86TLJztid__4og7oqAZAxvFKykn079JieQDaMw1G67UHussMvVpNYx_rjVYMDRAhvmKs5sR6f_Lj0-yYyIi32XsGxKVqJcBGXt6i-B5y8YeNPVeXBpbTM1v3AGv1Y8McpOLGlgkEnIE9dgnRFDg",
-                                            "id": ""
-                                        },
-                                        "badge": "طرح سه‌بعدی لوکس (تصویر شاخص)",
-                                        "badge_tone": "amber",
-                                        "stock_badge": "قالب تزریق ABS",
-                                        "stock_tone": "dark",
-                                        "category": "قالب‌های نما و دکوراتیو • دیواری",
-                                        "title": "قالب سنگ پلیمری طرح سه‌بعدی کریستالی و صخره‌ای",
-                                        "desc": "قالب فوق‌دقیق ژئومتریک پلیمری با زاویه‌های شکسته نوری جهت خلق نمای مدرن داخلی و ویلایی با رهایش آسان و بدون چسبندگی.",
-                                        "spec1_label": "ابعاد تایل",
-                                        "spec1_value": "۵۰×۳۰ سانتی‌متر",
-                                        "spec2_label": "ضخامت قالب",
-                                        "spec2_value": "۴ میلی‌متر نو",
-                                        "spec3_label": "تعداد شات",
-                                        "spec3_value": "+۵۰۰ بار تولید",
-                                        "price_label": "قیمت هر عدد قالب:",
-                                        "price": "۱۳۵,۰۰۰",
-                                        "price_raw": 135000,
-                                        "button_text": "خرید تعدادی و عمده قالب",
-                                        "button_icon": {
-                                            "value": "bi bi-cart-plus",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "button_link": {
-                                            "url": "tel:09354431321"
-                                        },
-                                        "filter": "molds ready-stock",
-                                        "_id": "dae96e6"
-                                    },
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCESVKn7HGZWK0VSUufe0SFrZQH6tzntfGc7RL_zzssUJnKN441xOYEk-6XjK5VgFRLJ4IAyzuqyjIDpRcurtaeo3bZxsl0WkXFpMrDFGI0EAtbMZstFfwBq4rN8ex1xpbbx2nuU-LXt5kfdSQPQyCgvW8teI9Srvl0iM_G9bBB7_OHvDqxAKsLeUBU7Tou_z7ntkAboBeSwcZKNIbxn08ts-gXN3eUE_MS9_Cn1uZy9gzh7N_7QNnjkg",
-                                            "id": ""
-                                        },
-                                        "badge": "پرفروش‌ترین قالب کف",
-                                        "badge_tone": "sage",
-                                        "stock_badge": "",
-                                        "stock_tone": "dark",
-                                        "category": "قالب‌های کفپوش و محوطه • ABS",
-                                        "title": "قالب کفپوش واش‌بتن ۴۰×۴۰ طرح شیاردار ضدلغزش",
-                                        "desc": "تولید شده از گرانول ABS نو با مقاومت کششی بالا و دیواره‌های تقویت‌شده لبه‌دار، بدون دفورمه شدن در فصول گرم و سرد سال.",
-                                        "spec1_label": "ابعاد دقیق",
-                                        "spec1_value": "۴۰×۴۰ سانت",
-                                        "spec2_label": "ضخامت سنگ",
-                                        "spec2_value": "۳.۵ سانتی‌متر",
-                                        "spec3_label": "متریال",
-                                        "spec3_value": "ABS نشکن عیار A",
-                                        "price_label": "قیمت هر عدد:",
-                                        "price": "۱۱۰,۰۰۰",
-                                        "price_raw": 110000,
-                                        "button_text": "خرید قالب کفپوش",
-                                        "button_icon": {
-                                            "value": "bi bi-cart-plus",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "button_link": {
-                                            "url": "tel:09354431321"
-                                        },
-                                        "filter": "molds ready-stock",
-                                        "_id": "44b912f"
-                                    },
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBpeHD6TU7sixs1Kwri3QNPWkEZ_NGL6eW1NB1VbuBSvP_IJWrMkLzP9-qm-NWrklrv_1vlstsb7Q0FHaQQ48NfthLqrFbcjyk-1z5wbs1lFShZ7xFS9hf3_0_qCmsXW5NzSVeuBeJHofn8pYYQastVm7-PLmtztk9vivHAB40xTFfT6GyUaKEcWtqlELTr7JEAwVE-uI4ReWqI1tQFxlxbj8X1glmk5fD4ETP9mdpPROi6ecKbZSWwZA",
-                                            "id": ""
-                                        },
-                                        "badge": "اصلاح‌کننده بتن گرید A+",
-                                        "badge_tone": "emerald",
-                                        "stock_badge": "",
-                                        "stock_tone": "dark",
-                                        "category": "مواد اولیه تخصصی • شیمی بتن",
-                                        "title": "فوق‌روان‌کننده کربوکسیلاتی اختصاصی سنگ مصنوعی",
-                                        "desc": "افزایش مقاومت فشاری تا ۳۵ مگاپاسکال، کاهش چشمگیر نسبت آب به سیمان، ایجاد براقیت سطحی و خودتراکمی ملات بدون افت اسلامپ.",
-                                        "spec1_label": "بسته‌بندی",
-                                        "spec1_value": "گالن ۲۰ لیتری",
-                                        "spec2_label": "میزان مصرف",
-                                        "spec2_value": "۰.۶٪ وزن سیمان",
-                                        "spec3_label": "پایه فرمول",
-                                        "spec3_value": "پلی‌کربوکسیلات اتر",
-                                        "price_label": "قیمت گالن ۲۰ لیتری:",
-                                        "price": "۱,۴۵۰,۰۰۰",
-                                        "price_raw": 1450000,
-                                        "button_text": "سفارش رزین و تست کارگاهی",
-                                        "button_icon": {
-                                            "value": "bi bi-eyedropper",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "button_link": {
-                                            "url": "tel:09354431321"
-                                        },
-                                        "filter": "materials ready-stock",
-                                        "_id": "e520447"
-                                    },
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBgj9qqd4e4B78Tonw-cs5K7i6pvr1F8XiPOjPLM88bSTCsPla_uQgthG3NQrDH1EDFQXlb_OcDjGBbfln46hoxLA5jS0nhYvfRmjX_Cac2GlA68ZFK1DpGmGK5GR0y3BIOwPi2FxFS6v5-vx-O3nPv6zHxk7t-nZWWItvWJz7_88Ar0FvOJFVqEkYuPQa3v6Fr-rq0-oM23Bkrshq4dQ01Q2Wrnn5EIvaXPB6HzEBoqdk3gKgfWahy0g",
-                                            "id": ""
-                                        },
-                                        "badge": "تیغه‌های ضدسایش هاردوکس",
-                                        "badge_tone": "dark",
-                                        "stock_badge": "",
-                                        "stock_tone": "dark",
-                                        "category": "ماشین‌آلات تخصصی • همزن صنعتی",
-                                        "title": "میکسر ۵۰۰ کیلویی طرح پان بتن پلیمری و سنگ مهندسی",
-                                        "desc": "میکسر خورشیدی با گیربکس تقویت‌شده روسی، اختلاط یکدست الیاف پلی‌پروپیلن و رزین بدون ایجاد گلوله سیمانی، با تخلیه پنوماتیک تحتانی.",
-                                        "spec1_label": "توان موتور",
-                                        "spec1_value": "۱۰ اسب موتوژن",
-                                        "spec2_label": "حجم بارگیری",
-                                        "spec2_value": "۵۰۰ کیلوگرم",
-                                        "spec3_label": "ضخامت دیواره",
-                                        "spec3_value": "۱۰ میلیمتر ST52",
-                                        "price_label": "قیمت نهایی دستگاه:",
-                                        "price": "۹۲,۰۰۰,۰۰۰",
-                                        "price_raw": 92000000,
-                                        "button_text": "سفارش ساخت سفارشی میکسر",
-                                        "button_icon": {
-                                            "value": "bi bi-gear",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "button_link": {
-                                            "url": "tel:09122302685"
-                                        },
-                                        "filter": "machinery",
-                                        "_id": "88e4978"
-                                    },
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuD7-DFWh1kux3KDnzt5Fas4XGRaHeWm-NLvL0Sdr3fTgI0GV1IiN1xABZMd5rhEiHmXQEom8O8ULA-GWIXHkTIT4Wp96KqPVPP8wq9cqYKXaCZ8KCrKFUGZUDnuqtELsRJy0VbhBBLwMg3__0nOF1d9mD4cChHTVIrPwlFA9q85RAM6weL5EK7Gn12v11RNLBKJRNNQ_M1YlXQhhFX0k_zWK1ZVIYfp10Y-gKSAdr16UcIlC38RdC23Pg",
-                                            "id": ""
-                                        },
-                                        "badge": "دو تکه با پین تراز",
-                                        "badge_tone": "dark",
-                                        "stock_badge": "",
-                                        "stock_tone": "dark",
-                                        "category": "قالب‌های نرده و صراحی • نما رومی",
-                                        "title": "قالب صراحی گرد رومی ۷۰ سانتی فایبرگلاس نشکن",
-                                        "desc": "مناسب تولید نرده تراس و محوطه ویلایی با خط درز نامرئی، مقاومت ضربه‌ای بسیار بالا و قابلیت مسلح‌سازی با میلگرد سایز ۸.",
-                                        "spec1_label": "ارتفاع",
-                                        "spec1_value": "۷۰ سانتی‌متر",
-                                        "spec2_label": "جنس قالب",
-                                        "spec2_value": "کامپوزیت پلیمری",
-                                        "spec3_label": "سیستم بست",
-                                        "spec3_value": "پیچ و گیره فلزی",
-                                        "price_label": "قیمت هر دست کامل:",
-                                        "price": "۲۹۰,۰۰۰",
-                                        "price_raw": 290000,
-                                        "button_text": "خرید قالب صراحی",
-                                        "button_icon": {
-                                            "value": "bi bi-cart-plus",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "button_link": {
-                                            "url": "tel:09354431321"
-                                        },
-                                        "filter": "molds ready-stock",
-                                        "_id": "57ea2ba"
-                                    },
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCWVFEm6r3I60viYo5wEPk9hdjjWm6GmzooqsjwIHkHi79mqGSuEAKU2h9TkZ-5P1S4sFynEzF5gk7udvO4dIIigL9cRn-UdVHyn2N3L5unAXBazHv_KVnScXqHC_T-_hnPUiPefVozLPc-misq0VHD6rIDhJ_HCWkgU3pea67qNjVIS8jScDY_idGzkiA35Y6HX5cB_DUJaWqhUiSaTzKTaKAUbUM24-PsVUi8h8YqfEVc6tNrmugHLA",
-                                            "id": ""
-                                        },
-                                        "badge": "ابعاد ۵۰×۳۰ سانت",
-                                        "badge_tone": "sage",
-                                        "stock_badge": "",
-                                        "stock_tone": "dark",
-                                        "category": "قالب‌های محوطه • دورباغچه و جدول",
-                                        "title": "قالب جدول و دورباغچه فانتزی مدل سنتی و مدرن",
-                                        "desc": "سطح صیقلی بدون نیاز به اسیدشویی، خارج‌سازی سریع قطعه از قالب در کمتر از ۲۴ ساعت، مقاوم در برابر سایش سیمان و شن نخودی.",
-                                        "spec1_label": "طول قطعه",
-                                        "spec1_value": "۵۰ سانتی‌متر",
-                                        "spec2_label": "ارتفاع",
-                                        "spec2_value": "۳۰ سانتی‌متر",
-                                        "spec3_label": "متریال",
-                                        "spec3_value": "ABS کره مقاوم",
-                                        "price_label": "قیمت هر قالب:",
-                                        "price": "۸۵,۰۰۰",
-                                        "price_raw": 85000,
-                                        "button_text": "خرید قالب دورباغچه",
-                                        "button_icon": {
-                                            "value": "bi bi-cart-plus",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "button_link": {
-                                            "url": "tel:09354431321"
-                                        },
-                                        "filter": "molds ready-stock",
-                                        "_id": "11594b8"
-                                    },
-                                    {
-                                        "image": {
-                                            "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDM9zeS42wQH2sQiQpWLTNVt2VVw8X6S4zWSAu9iDT-iCnyy4I9PYlxpysOk4AoMi9sqIh5AB3w8xJRAVKwASIn5X6ruy5-T9rTWE3rjkSURCTHKY10KUwX-46qh53YOoGKSpZbWxsLwsxxHqTxy3mSiChZZl5gmWTKpIjvINH2BiEsP21riygV2Ho6hqFBKxjx_dEjj-KTPIinrBK1I_X-VLcyEZo3hds2_ydlogRcfN8tts1vI1Mn0g",
-                                            "id": ""
-                                        },
-                                        "badge": "مقاوم به اشعه UV خورشید",
-                                        "badge_tone": "dark",
-                                        "stock_badge": "",
-                                        "stock_tone": "dark",
-                                        "category": "رنگ و افزودنی‌ها • پیگمنت بایفروکس",
-                                        "title": "رنگدانه معدنی اکسید آهن قرمز، اخرایی و مشکی آلمانی",
-                                        "desc": "پیگمنت پودری میکرونیزه وارداتی ضدبورشدگی در مقابل نور آفتاب، بدون تداخل با گیرش اولیه سیمان سفید و سیاه، کیسه اورجینال ۲۵ کیلویی.",
-                                        "spec1_label": "وزن کیسه",
-                                        "spec1_value": "۲۵ کیلوگرم خالص",
-                                        "spec2_label": "پایداری نوری",
-                                        "spec2_value": "گرید ۸ و ۱۰ صنعتی",
-                                        "spec3_label": "کشور مبدأ",
-                                        "spec3_value": "آلمان (Bayferrox)",
-                                        "price_label": "قیمت هر کیسه ۲۵ کیلویی:",
-                                        "price": "۳,۸۰۰,۰۰۰",
-                                        "price_raw": 3800000,
-                                        "button_text": "استعلام کالیته رنگ و سفارش",
-                                        "button_icon": {
-                                            "value": "bi bi-palette",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "button_link": {
-                                            "url": "tel:09354431321"
-                                        },
-                                        "filter": "materials ready-stock",
-                                        "_id": "8150375"
-                                    }
-                                ],
-                                "search_placeholder": "جستجوی قالب، ویبره، رزین یا ابعاد...",
-                                "chips": [
-                                    {
-                                        "key": "molds",
-                                        "label": "قالب‌های ABS و کامپوزیت (۴)",
-                                        "icon": "",
-                                        "_id": "4df66fa"
-                                    },
-                                    {
-                                        "key": "machinery",
-                                        "label": "ماشین‌آلات و میکسرها (۲)",
-                                        "icon": "",
-                                        "_id": "9fad47e"
-                                    },
-                                    {
-                                        "key": "materials",
-                                        "label": "رزین و رنگدانه‌های صنعتی (۲)",
-                                        "icon": "",
-                                        "_id": "7dc55ec"
-                                    },
-                                    {
-                                        "key": "ready-stock",
-                                        "label": "تحویل فوری از انبار",
-                                        "icon": "bi bi-dot-pulse",
-                                        "_id": "a752dd1"
-                                    }
-                                ],
-                                "footer_note": "نمایش ۱ تا ۸ از بیش از ۴۰۰ مدل قالب و ماشین‌آلات موجود در انبار مرکزی"
-                            },
-                            "elements": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "689b5e3",
-            "elType": "section",
-            "settings": {
-                "layout": "full_width",
-                "gap": "no",
-                "padding": {
-                    "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
-                }
-            },
-            "elements": [
-                {
-                    "id": "0384180",
-                    "elType": "column",
-                    "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
-                        "padding": {
-                            "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
-                    },
-                    "elements": [
-                        {
-                            "id": "7d10ee5",
-                            "elType": "widget",
-                            "widgetType": "ls-cta",
-                            "settings": {
-                                "variant": "consult-band",
-                                "badge": "مشاوره تخصصی مهندسی و راه‌اندازی خط تولید کارگاهی",
-                                "badge_icon": {
-                                    "value": "bi bi-headset",
+                        "source": "manual",
+                        "layout": "store",
+                        "items": [
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDThobRG1DLSSwmZJOsL3cQQpZyMamyuNdKPxuwR0gV9JjFNA9uWoMuDfm5_SD2uocWhA9F2LhZnBiV7iIy_83lOCGH8BwJq3ExvbeNVn8LqIPOiwUa08kpUSDS79Xiofpmvz4yDRs7_SrRirm5JMsAPxd_bdYXTCdCmKzMwthChdxbSA_Ik7t3v4zlhZXmbqv03WdzaCkq6QAW7o6OX32A_A4w8IkjvYi9BMMYawj9Z-gzqQW2NuFs9w",
+                                    "id": ""
+                                },
+                                "badge": "گارانتی ۲۴ ماهه",
+                                "badge_tone": "dark",
+                                "stock_badge": "موجود در کارخانه",
+                                "stock_tone": "emerald",
+                                "category": "تجهیزات خط تولید • ماشین‌آلات",
+                                "title": "میز ویبره صنعتی دور متغیر لاریجانی استون",
+                                "desc": "دارای ۲ عدد الکتروموتور ۳۰۰۰ دور ایتالیایی، صفحه ورق ۸ میل ضدرنگ، فنرهای لول ارتعاشی سایلنت جهت خروج ۱۰۰٪ حباب‌های هوا.",
+                                "spec1_label": "ابعاد صفحه",
+                                "spec1_value": "۲۰۰×۱۰۰ سانتی‌متر",
+                                "spec2_label": "سیستم لرزش",
+                                "spec2_value": "فرکانس متغیر اینورتری",
+                                "spec3_label": "ظرفیت بار",
+                                "spec3_value": "۸۰۰ کیلوگرم",
+                                "price_label": "قیمت کارخانه:",
+                                "price": "۴۸,۰۰۰,۰۰۰",
+                                "price_raw": 48000000,
+                                "button_text": "سفارش مستقیم و هماهنگی ارسال",
+                                "button_icon": {
+                                    "value": "bi bi-cart-check",
                                     "library": "bootstrap-icons"
                                 },
-                                "title": "نمی‌دانید چه قالبی برای شرایط بازار منطقه شما پرسودتر است؟",
-                                "desc": "مهندسین لاریجانی استون، از تیراژ روزانه تا محاسبه مقدار مصرف رزین پلی‌کربوکسیلات، درصد سیمان، دانه‌بندی سیلیس و انتخاب ابعاد میز ویبره را به صورت کاملاً رایگان برای کارگاه شما آنالیز می‌کنند.",
-                                "btn1_text": "درخواست تماس فوری کارشناس",
-                                "btn1_icon": "",
-                                "btn1_link": {
+                                "button_link": {
                                     "url": "tel:09122302685"
+                                },
+                                "filter": "machinery ready-stock",
+                                "_id": "3754250"
+                            },
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAyoNMJhHW4oZQBUWVbfJeEhEtTcLGU8MlckmD0njoeNphXO7ZLPBOscGtIewZis4Uu2lLprvAEsyq__esJ1kVvWnYkmcTpcQ5ggug86TLJztid__4og7oqAZAxvFKykn079JieQDaMw1G67UHussMvVpNYx_rjVYMDRAhvmKs5sR6f_Lj0-yYyIi32XsGxKVqJcBGXt6i-B5y8YeNPVeXBpbTM1v3AGv1Y8McpOLGlgkEnIE9dgnRFDg",
+                                    "id": ""
+                                },
+                                "badge": "طرح سه‌بعدی لوکس (تصویر شاخص)",
+                                "badge_tone": "amber",
+                                "stock_badge": "قالب تزریق ABS",
+                                "stock_tone": "dark",
+                                "category": "قالب‌های نما و دکوراتیو • دیواری",
+                                "title": "قالب سنگ پلیمری طرح سه‌بعدی کریستالی و صخره‌ای",
+                                "desc": "قالب فوق‌دقیق ژئومتریک پلیمری با زاویه‌های شکسته نوری جهت خلق نمای مدرن داخلی و ویلایی با رهایش آسان و بدون چسبندگی.",
+                                "spec1_label": "ابعاد تایل",
+                                "spec1_value": "۵۰×۳۰ سانتی‌متر",
+                                "spec2_label": "ضخامت قالب",
+                                "spec2_value": "۴ میلی‌متر نو",
+                                "spec3_label": "تعداد شات",
+                                "spec3_value": "+۵۰۰ بار تولید",
+                                "price_label": "قیمت هر عدد قالب:",
+                                "price": "۱۳۵,۰۰۰",
+                                "price_raw": 135000,
+                                "button_text": "خرید تعدادی و عمده قالب",
+                                "button_icon": {
+                                    "value": "bi bi-cart-plus",
+                                    "library": "bootstrap-icons"
+                                },
+                                "button_link": {
+                                    "url": "tel:09354431321"
+                                },
+                                "filter": "molds ready-stock",
+                                "_id": "6c72c39"
+                            },
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCESVKn7HGZWK0VSUufe0SFrZQH6tzntfGc7RL_zzssUJnKN441xOYEk-6XjK5VgFRLJ4IAyzuqyjIDpRcurtaeo3bZxsl0WkXFpMrDFGI0EAtbMZstFfwBq4rN8ex1xpbbx2nuU-LXt5kfdSQPQyCgvW8teI9Srvl0iM_G9bBB7_OHvDqxAKsLeUBU7Tou_z7ntkAboBeSwcZKNIbxn08ts-gXN3eUE_MS9_Cn1uZy9gzh7N_7QNnjkg",
+                                    "id": ""
+                                },
+                                "badge": "پرفروش‌ترین قالب کف",
+                                "badge_tone": "sage",
+                                "stock_badge": "",
+                                "stock_tone": "dark",
+                                "category": "قالب‌های کفپوش و محوطه • ABS",
+                                "title": "قالب کفپوش واش‌بتن ۴۰×۴۰ طرح شیاردار ضدلغزش",
+                                "desc": "تولید شده از گرانول ABS نو با مقاومت کششی بالا و دیواره‌های تقویت‌شده لبه‌دار، بدون دفورمه شدن در فصول گرم و سرد سال.",
+                                "spec1_label": "ابعاد دقیق",
+                                "spec1_value": "۴۰×۴۰ سانت",
+                                "spec2_label": "ضخامت سنگ",
+                                "spec2_value": "۳.۵ سانتی‌متر",
+                                "spec3_label": "متریال",
+                                "spec3_value": "ABS نشکن عیار A",
+                                "price_label": "قیمت هر عدد:",
+                                "price": "۱۱۰,۰۰۰",
+                                "price_raw": 110000,
+                                "button_text": "خرید قالب کفپوش",
+                                "button_icon": {
+                                    "value": "bi bi-cart-plus",
+                                    "library": "bootstrap-icons"
+                                },
+                                "button_link": {
+                                    "url": "tel:09354431321"
+                                },
+                                "filter": "molds ready-stock",
+                                "_id": "0424d51"
+                            },
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBpeHD6TU7sixs1Kwri3QNPWkEZ_NGL6eW1NB1VbuBSvP_IJWrMkLzP9-qm-NWrklrv_1vlstsb7Q0FHaQQ48NfthLqrFbcjyk-1z5wbs1lFShZ7xFS9hf3_0_qCmsXW5NzSVeuBeJHofn8pYYQastVm7-PLmtztk9vivHAB40xTFfT6GyUaKEcWtqlELTr7JEAwVE-uI4ReWqI1tQFxlxbj8X1glmk5fD4ETP9mdpPROi6ecKbZSWwZA",
+                                    "id": ""
+                                },
+                                "badge": "اصلاح‌کننده بتن گرید A+",
+                                "badge_tone": "emerald",
+                                "stock_badge": "",
+                                "stock_tone": "dark",
+                                "category": "مواد اولیه تخصصی • شیمی بتن",
+                                "title": "فوق‌روان‌کننده کربوکسیلاتی اختصاصی سنگ مصنوعی",
+                                "desc": "افزایش مقاومت فشاری تا ۳۵ مگاپاسکال، کاهش چشمگیر نسبت آب به سیمان، ایجاد براقیت سطحی و خودتراکمی ملات بدون افت اسلامپ.",
+                                "spec1_label": "بسته‌بندی",
+                                "spec1_value": "گالن ۲۰ لیتری",
+                                "spec2_label": "میزان مصرف",
+                                "spec2_value": "۰.۶٪ وزن سیمان",
+                                "spec3_label": "پایه فرمول",
+                                "spec3_value": "پلی‌کربوکسیلات اتر",
+                                "price_label": "قیمت گالن ۲۰ لیتری:",
+                                "price": "۱,۴۵۰,۰۰۰",
+                                "price_raw": 1450000,
+                                "button_text": "سفارش رزین و تست کارگاهی",
+                                "button_icon": {
+                                    "value": "bi bi-eyedropper",
+                                    "library": "bootstrap-icons"
+                                },
+                                "button_link": {
+                                    "url": "tel:09354431321"
+                                },
+                                "filter": "materials ready-stock",
+                                "_id": "6b2b941"
+                            },
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBgj9qqd4e4B78Tonw-cs5K7i6pvr1F8XiPOjPLM88bSTCsPla_uQgthG3NQrDH1EDFQXlb_OcDjGBbfln46hoxLA5jS0nhYvfRmjX_Cac2GlA68ZFK1DpGmGK5GR0y3BIOwPi2FxFS6v5-vx-O3nPv6zHxk7t-nZWWItvWJz7_88Ar0FvOJFVqEkYuPQa3v6Fr-rq0-oM23Bkrshq4dQ01Q2Wrnn5EIvaXPB6HzEBoqdk3gKgfWahy0g",
+                                    "id": ""
+                                },
+                                "badge": "تیغه‌های ضدسایش هاردوکس",
+                                "badge_tone": "dark",
+                                "stock_badge": "",
+                                "stock_tone": "dark",
+                                "category": "ماشین‌آلات تخصصی • همزن صنعتی",
+                                "title": "میکسر ۵۰۰ کیلویی طرح پان بتن پلیمری و سنگ مهندسی",
+                                "desc": "میکسر خورشیدی با گیربکس تقویت‌شده روسی، اختلاط یکدست الیاف پلی‌پروپیلن و رزین بدون ایجاد گلوله سیمانی، با تخلیه پنوماتیک تحتانی.",
+                                "spec1_label": "توان موتور",
+                                "spec1_value": "۱۰ اسب موتوژن",
+                                "spec2_label": "حجم بارگیری",
+                                "spec2_value": "۵۰۰ کیلوگرم",
+                                "spec3_label": "ضخامت دیواره",
+                                "spec3_value": "۱۰ میلیمتر ST52",
+                                "price_label": "قیمت نهایی دستگاه:",
+                                "price": "۹۲,۰۰۰,۰۰۰",
+                                "price_raw": 92000000,
+                                "button_text": "سفارش ساخت سفارشی میکسر",
+                                "button_icon": {
+                                    "value": "bi bi-gear",
+                                    "library": "bootstrap-icons"
+                                },
+                                "button_link": {
+                                    "url": "tel:09122302685"
+                                },
+                                "filter": "machinery",
+                                "_id": "60b45c9"
+                            },
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuD7-DFWh1kux3KDnzt5Fas4XGRaHeWm-NLvL0Sdr3fTgI0GV1IiN1xABZMd5rhEiHmXQEom8O8ULA-GWIXHkTIT4Wp96KqPVPP8wq9cqYKXaCZ8KCrKFUGZUDnuqtELsRJy0VbhBBLwMg3__0nOF1d9mD4cChHTVIrPwlFA9q85RAM6weL5EK7Gn12v11RNLBKJRNNQ_M1YlXQhhFX0k_zWK1ZVIYfp10Y-gKSAdr16UcIlC38RdC23Pg",
+                                    "id": ""
+                                },
+                                "badge": "دو تکه با پین تراز",
+                                "badge_tone": "dark",
+                                "stock_badge": "",
+                                "stock_tone": "dark",
+                                "category": "قالب‌های نرده و صراحی • نما رومی",
+                                "title": "قالب صراحی گرد رومی ۷۰ سانتی فایبرگلاس نشکن",
+                                "desc": "مناسب تولید نرده تراس و محوطه ویلایی با خط درز نامرئی، مقاومت ضربه‌ای بسیار بالا و قابلیت مسلح‌سازی با میلگرد سایز ۸.",
+                                "spec1_label": "ارتفاع",
+                                "spec1_value": "۷۰ سانتی‌متر",
+                                "spec2_label": "جنس قالب",
+                                "spec2_value": "کامپوزیت پلیمری",
+                                "spec3_label": "سیستم بست",
+                                "spec3_value": "پیچ و گیره فلزی",
+                                "price_label": "قیمت هر دست کامل:",
+                                "price": "۲۹۰,۰۰۰",
+                                "price_raw": 290000,
+                                "button_text": "خرید قالب صراحی",
+                                "button_icon": {
+                                    "value": "bi bi-cart-plus",
+                                    "library": "bootstrap-icons"
+                                },
+                                "button_link": {
+                                    "url": "tel:09354431321"
+                                },
+                                "filter": "molds ready-stock",
+                                "_id": "4478626"
+                            },
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCWVFEm6r3I60viYo5wEPk9hdjjWm6GmzooqsjwIHkHi79mqGSuEAKU2h9TkZ-5P1S4sFynEzF5gk7udvO4dIIigL9cRn-UdVHyn2N3L5unAXBazHv_KVnScXqHC_T-_hnPUiPefVozLPc-misq0VHD6rIDhJ_HCWkgU3pea67qNjVIS8jScDY_idGzkiA35Y6HX5cB_DUJaWqhUiSaTzKTaKAUbUM24-PsVUi8h8YqfEVc6tNrmugHLA",
+                                    "id": ""
+                                },
+                                "badge": "ابعاد ۵۰×۳۰ سانت",
+                                "badge_tone": "sage",
+                                "stock_badge": "",
+                                "stock_tone": "dark",
+                                "category": "قالب‌های محوطه • دورباغچه و جدول",
+                                "title": "قالب جدول و دورباغچه فانتزی مدل سنتی و مدرن",
+                                "desc": "سطح صیقلی بدون نیاز به اسیدشویی، خارج‌سازی سریع قطعه از قالب در کمتر از ۲۴ ساعت، مقاوم در برابر سایش سیمان و شن نخودی.",
+                                "spec1_label": "طول قطعه",
+                                "spec1_value": "۵۰ سانتی‌متر",
+                                "spec2_label": "ارتفاع",
+                                "spec2_value": "۳۰ سانتی‌متر",
+                                "spec3_label": "متریال",
+                                "spec3_value": "ABS کره مقاوم",
+                                "price_label": "قیمت هر قالب:",
+                                "price": "۸۵,۰۰۰",
+                                "price_raw": 85000,
+                                "button_text": "خرید قالب دورباغچه",
+                                "button_icon": {
+                                    "value": "bi bi-cart-plus",
+                                    "library": "bootstrap-icons"
+                                },
+                                "button_link": {
+                                    "url": "tel:09354431321"
+                                },
+                                "filter": "molds ready-stock",
+                                "_id": "de30893"
+                            },
+                            {
+                                "image": {
+                                    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDM9zeS42wQH2sQiQpWLTNVt2VVw8X6S4zWSAu9iDT-iCnyy4I9PYlxpysOk4AoMi9sqIh5AB3w8xJRAVKwASIn5X6ruy5-T9rTWE3rjkSURCTHKY10KUwX-46qh53YOoGKSpZbWxsLwsxxHqTxy3mSiChZZl5gmWTKpIjvINH2BiEsP21riygV2Ho6hqFBKxjx_dEjj-KTPIinrBK1I_X-VLcyEZo3hds2_ydlogRcfN8tts1vI1Mn0g",
+                                    "id": ""
+                                },
+                                "badge": "مقاوم به اشعه UV خورشید",
+                                "badge_tone": "dark",
+                                "stock_badge": "",
+                                "stock_tone": "dark",
+                                "category": "رنگ و افزودنی‌ها • پیگمنت بایفروکس",
+                                "title": "رنگدانه معدنی اکسید آهن قرمز، اخرایی و مشکی آلمانی",
+                                "desc": "پیگمنت پودری میکرونیزه وارداتی ضدبورشدگی در مقابل نور آفتاب، بدون تداخل با گیرش اولیه سیمان سفید و سیاه، کیسه اورجینال ۲۵ کیلویی.",
+                                "spec1_label": "وزن کیسه",
+                                "spec1_value": "۲۵ کیلوگرم خالص",
+                                "spec2_label": "پایداری نوری",
+                                "spec2_value": "گرید ۸ و ۱۰ صنعتی",
+                                "spec3_label": "کشور مبدأ",
+                                "spec3_value": "آلمان (Bayferrox)",
+                                "price_label": "قیمت هر کیسه ۲۵ کیلویی:",
+                                "price": "۳,۸۰۰,۰۰۰",
+                                "price_raw": 3800000,
+                                "button_text": "استعلام کالیته رنگ و سفارش",
+                                "button_icon": {
+                                    "value": "bi bi-palette",
+                                    "library": "bootstrap-icons"
+                                },
+                                "button_link": {
+                                    "url": "tel:09354431321"
+                                },
+                                "filter": "materials ready-stock",
+                                "_id": "eec2a74"
+                            }
+                        ],
+                        "search_placeholder": "جستجوی قالب، ویبره، رزین یا ابعاد...",
+                        "chips": [
+                            {
+                                "key": "molds",
+                                "label": "قالب‌های ABS و کامپوزیت (۴)",
+                                "icon": "",
+                                "_id": "cabd170"
+                            },
+                            {
+                                "key": "machinery",
+                                "label": "ماشین‌آلات و میکسرها (۲)",
+                                "icon": "",
+                                "_id": "10be522"
+                            },
+                            {
+                                "key": "materials",
+                                "label": "رزین و رنگدانه‌های صنعتی (۲)",
+                                "icon": "",
+                                "_id": "69a79ff"
+                            },
+                            {
+                                "key": "ready-stock",
+                                "label": "تحویل فوری از انبار",
+                                "icon": "bi bi-dot-pulse",
+                                "_id": "7363eee"
+                            }
+                        ],
+                        "footer_note": "نمایش ۱ تا ۸ از بیش از ۴۰۰ مدل قالب و ماشین‌آلات موجود در انبار مرکزی"
+                    },
+                    "elements": []
+                }
+            ],
+            "id": "4ad6742",
+            "isInner": false
+        },
+        {
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "ls-root ls-n-wrap"
+            },
+            "elements": [
+                {
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1216
+                        },
+                        "flex_direction": "row",
+                        "flex_direction_tablet": "column",
+                        "flex_direction_mobile": "column",
+                        "flex_gap": {
+                            "column": "40",
+                            "row": "40",
+                            "isLinked": true,
+                            "unit": "px",
+                            "size": 40
+                        },
+                        "flex_align_items": "center",
+                        "flex_align_items_tablet": "stretch",
+                        "flex_align_items_mobile": "stretch",
+                        "flex_wrap": "nowrap",
+                        "flex_wrap_tablet": "nowrap",
+                        "flex_wrap_mobile": "nowrap",
+                        "padding": {
+                            "unit": "px",
+                            "top": "64",
+                            "right": "32",
+                            "bottom": "64",
+                            "left": "32",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "64",
+                            "right": "16",
+                            "bottom": "64",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "64",
+                            "right": "16",
+                            "bottom": "64",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "css_classes": "ls-n-section bg-surface-dark text-on-tertiary my-space-lg overflow-hidden",
+                        "html_tag": "section"
+                    },
+                    "elements": [
+                        {
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "flex_direction": "column",
+                                "flex_gap": {
+                                    "column": "16",
+                                    "row": "16",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 16
+                                },
+                                "flex_align_items": "flex-start",
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": true
+                                },
+                                "width": {
+                                    "unit": "custom",
+                                    "size": "calc(66.667% - 13.33px)"
+                                },
+                                "width_tablet": {
+                                    "unit": "%",
+                                    "size": 100
+                                },
+                                "width_mobile": {
+                                    "unit": "%",
+                                    "size": 100
                                 }
                             },
-                            "elements": []
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "row",
+                                        "flex_gap": {
+                                            "column": "4",
+                                            "row": "4",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 4
+                                        },
+                                        "flex_align_items": "center",
+                                        "flex_wrap": "nowrap",
+                                        "flex_wrap_tablet": "nowrap",
+                                        "flex_wrap_mobile": "nowrap",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "4",
+                                            "right": "16",
+                                            "bottom": "4",
+                                            "left": "16",
+                                            "isLinked": false
+                                        },
+                                        "width": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "width_mobile": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "css_classes": "ls-n-pill text-primary-fixed font-label-badge text-label-badge bg-primary-container/40 rounded-full"
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "icon",
+                                            "settings": {
+                                                "selected_icon": {
+                                                    "value": "bi bi-headset",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "_css_classes": "ls-n ls-n-icon text-[16px]"
+                                            },
+                                            "elements": [],
+                                            "id": "241b168"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "مشاوره تخصصی مهندسی و راه‌اندازی خط تولید کارگاهی",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n"
+                                            },
+                                            "elements": [],
+                                            "id": "1d4d30c"
+                                        }
+                                    ],
+                                    "id": "b076bf3",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "نمی‌دانید چه قالبی برای شرایط بازار منطقه شما پرسودتر است؟",
+                                        "header_size": "h2",
+                                        "_css_classes": "ls-n font-headline-lg text-headline-lg text-on-tertiary"
+                                    },
+                                    "elements": [],
+                                    "id": "e6fa044"
+                                },
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "<p>مهندسین لاریجانی استون، از تیراژ روزانه تا محاسبه مقدار مصرف رزین پلی‌کربوکسیلات، درصد سیمان، دانه‌بندی سیلیس و انتخاب ابعاد میز ویبره را به صورت کاملاً رایگان برای کارگاه شما آنالیز می‌کنند.</p>",
+                                        "_css_classes": "ls-n font-body-lg text-body-lg text-on-tertiary-container leading-relaxed"
+                                    },
+                                    "elements": [],
+                                    "id": "4e24c5c"
+                                },
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "icon-list",
+                                    "settings": {
+                                        "view": "inline",
+                                        "icon_list": [
+                                            {
+                                                "text": "تست قالب‌ها قبل از بارگیری",
+                                                "selected_icon": {
+                                                    "value": "bi bi-check-lg",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "_id": "f3b9bdc"
+                                            },
+                                            {
+                                                "text": "ارائه طرح اختلاط اختصاصی",
+                                                "selected_icon": {
+                                                    "value": "bi bi-check-lg",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "_id": "542ccf4"
+                                            },
+                                            {
+                                                "text": "آموزش ترکیب رنگ رگه‌ای و گرانیتی",
+                                                "selected_icon": {
+                                                    "value": "bi bi-check-lg",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "_id": "77076de"
+                                            }
+                                        ],
+                                        "_css_classes": "ls-n ls-n-checks pt-space-xs font-body-sm text-body-sm text-outline-variant"
+                                    },
+                                    "elements": [],
+                                    "id": "6a856cb"
+                                }
+                            ],
+                            "id": "e8fa5ca",
+                            "isInner": true
+                        },
+                        {
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "flex_direction": "column",
+                                "flex_gap": {
+                                    "column": "16",
+                                    "row": "16",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 16
+                                },
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "24",
+                                    "right": "24",
+                                    "bottom": "24",
+                                    "left": "24",
+                                    "isLinked": true
+                                },
+                                "width": {
+                                    "unit": "custom",
+                                    "size": "calc(33.333% - 26.67px)"
+                                },
+                                "width_tablet": {
+                                    "unit": "%",
+                                    "size": 100
+                                },
+                                "width_mobile": {
+                                    "unit": "%",
+                                    "size": 100
+                                },
+                                "css_classes": "bg-surface-footer/80 rounded-2xl"
+                            },
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "4",
+                                            "row": "4",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 4
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "ارتباط مستقیم با مدیر فنی (مهندس لاریجانی):",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n text-body-sm font-body-sm text-outline-variant"
+                                            },
+                                            "elements": [],
+                                            "id": "1181cd6"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "button",
+                                            "settings": {
+                                                "text": "۰۹۱۲ ۲۳۰ ۲۶۸۵",
+                                                "link": {
+                                                    "url": "tel:09122302685",
+                                                    "is_external": "",
+                                                    "nofollow": ""
+                                                },
+                                                "selected_icon": {
+                                                    "value": "bi bi-telephone",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "icon_align": "row-reverse",
+                                                "_css_classes": "ls-n ls-n-btn ls-n-btn--phone ls-n-btn--phone-lg ls-n-btn--arrow"
+                                            },
+                                            "elements": [],
+                                            "id": "9a3b08f"
+                                        }
+                                    ],
+                                    "id": "47192ec",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "column",
+                                        "flex_gap": {
+                                            "column": "4",
+                                            "row": "4",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 4
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "مسئول واحد فروش و توزیع قالب و رزین:",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n text-body-sm font-body-sm text-outline-variant"
+                                            },
+                                            "elements": [],
+                                            "id": "992d223"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "button",
+                                            "settings": {
+                                                "text": "۰۹۳۵ ۴۴۳ ۱۳۲۱",
+                                                "link": {
+                                                    "url": "tel:09354431321",
+                                                    "is_external": "",
+                                                    "nofollow": ""
+                                                },
+                                                "selected_icon": {
+                                                    "value": "bi bi-phone",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "icon_align": "row-reverse",
+                                                "_css_classes": "ls-n ls-n-btn ls-n-btn--phone ls-n-btn--arrow"
+                                            },
+                                            "elements": [],
+                                            "id": "dbd6dd5"
+                                        }
+                                    ],
+                                    "id": "95d5e39",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "button",
+                                    "settings": {
+                                        "text": "درخواست تماس فوری کارشناس",
+                                        "link": {
+                                            "url": "tel:09122302685",
+                                            "is_external": "",
+                                            "nofollow": ""
+                                        },
+                                        "_css_classes": "ls-n ls-n-btn ls-n-btn--primary ls-n-btn--block"
+                                    },
+                                    "elements": [],
+                                    "id": "a9c75c8"
+                                }
+                            ],
+                            "id": "040615a",
+                            "isInner": true
                         }
-                    ]
+                    ],
+                    "id": "6afe2c6",
+                    "isInner": true
                 }
-            ]
+            ],
+            "id": "2edba23",
+            "isInner": false
         },
         {
-            "id": "6382d00",
-            "elType": "section",
+            "elType": "container",
             "settings": {
-                "layout": "full_width",
-                "gap": "no",
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_gap": {
+                    "column": "0",
+                    "row": "0",
+                    "isLinked": true,
+                    "unit": "px",
+                    "size": 0
+                },
                 "padding": {
                     "unit": "px",
                     "top": "0",
@@ -456,71 +801,467 @@
                     "bottom": "0",
                     "left": "0",
                     "isLinked": true
-                }
+                },
+                "css_classes": "ls-root ls-n-wrap"
             },
             "elements": [
                 {
-                    "id": "e48115f",
-                    "elType": "column",
+                    "elType": "container",
                     "settings": {
-                        "_column_size": 100,
-                        "_inline_size": null,
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1216
+                        },
+                        "flex_direction": "column",
+                        "flex_gap": {
+                            "column": "0",
+                            "row": "0",
+                            "isLinked": true,
+                            "unit": "px",
+                            "size": 0
+                        },
                         "padding": {
                             "unit": "px",
-                            "top": "0",
-                            "right": "0",
-                            "bottom": "0",
-                            "left": "0",
-                            "isLinked": true
-                        }
+                            "top": "40",
+                            "right": "32",
+                            "bottom": "40",
+                            "left": "32",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "40",
+                            "right": "16",
+                            "bottom": "40",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "40",
+                            "right": "16",
+                            "bottom": "40",
+                            "left": "16",
+                            "isLinked": false
+                        },
+                        "css_classes": "ls-n-section",
+                        "html_tag": "section"
                     },
                     "elements": [
                         {
-                            "id": "f85a65a",
-                            "elType": "widget",
-                            "widgetType": "ls-icon-cards",
+                            "elType": "container",
                             "settings": {
-                                "variant": "guide",
-                                "columns": "3",
-                                "columns_tablet": "3",
-                                "section_bg": "none",
-                                "heading_eyebrow": "راهنمای تخصصی کارگاهی",
-                                "heading_title": "تفاوت قالب‌های ABS پلیمری لاریجانی با قالب‌های ارزان‌قیمت بازیافتی",
-                                "items": [
-                                    {
-                                        "icon": {
-                                            "value": "bi bi-patch-check-fill",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "title": "ضدپوسته و عدم تغییر فرم",
-                                        "desc": "به دلیل استفاده از ورق‌های درجه یک با ضخامت واقعی ۴ و ۵ میلی‌متر، حرارت ناشی از هیدراتاسیون سیمان و ضربات ویبره موجب خمیدگی لبه‌ها و پریدگی گوشه سنگ تولیدی نمی‌شود.",
-                                        "_id": "ab079b8"
-                                    },
-                                    {
-                                        "icon": {
-                                            "value": "bi bi-magic",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "title": "جدایش بدون روغن نامرغوب",
-                                        "desc": "سطوح قالب‌ها در فرآیند پولیش CNC صیقل داده شده‌اند؛ بنابراین سنگ بدون ایجاد لکه چربی یا حباب‌های هوای ریز به آسانی با یک چرخش دست از قالب خارج می‌شود.",
-                                        "_id": "f53e1b4"
-                                    },
-                                    {
-                                        "icon": {
-                                            "value": "bi bi-arrow-repeat",
-                                            "library": "bootstrap-icons"
-                                        },
-                                        "title": "توجیه اقتصادی تیراژ بالا",
-                                        "desc": "در حالی که قالب‌های نامرغوب پس از ۵۰ الی ۸۰ شات دچار شکنندگی می‌شوند، قالب‌های لاریجانی استون حداقل ۵۰۰ سیکل بدون افت براقیت سطح سنگ، بازدهی مداوم خواهند داشت.",
-                                        "_id": "82a4c15"
-                                    }
-                                ]
+                                "content_width": "full",
+                                "flex_direction": "column",
+                                "flex_gap": {
+                                    "column": "16",
+                                    "row": "16",
+                                    "isLinked": true,
+                                    "unit": "px",
+                                    "size": 16
+                                },
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "40",
+                                    "right": "40",
+                                    "bottom": "40",
+                                    "left": "40",
+                                    "isLinked": true
+                                },
+                                "css_classes": "bg-surface-card rounded-2xl shadow-sm"
                             },
-                            "elements": []
+                            "elements": [
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "flex_direction": "row",
+                                        "flex_gap": {
+                                            "column": "4",
+                                            "row": "4",
+                                            "isLinked": true,
+                                            "unit": "px",
+                                            "size": 4
+                                        },
+                                        "flex_align_items": "center",
+                                        "flex_wrap": "nowrap",
+                                        "flex_wrap_tablet": "nowrap",
+                                        "flex_wrap_mobile": "nowrap",
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "4",
+                                            "left": "0",
+                                            "isLinked": false
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "icon",
+                                            "settings": {
+                                                "selected_icon": {
+                                                    "value": "bi bi-journal-bookmark",
+                                                    "library": "bootstrap-icons"
+                                                },
+                                                "_css_classes": "ls-n ls-n-icon text-primary text-[20px]"
+                                            },
+                                            "elements": [],
+                                            "id": "bcab5e8"
+                                        },
+                                        {
+                                            "elType": "widget",
+                                            "widgetType": "heading",
+                                            "settings": {
+                                                "title": "راهنمای تخصصی کارگاهی",
+                                                "header_size": "span",
+                                                "_css_classes": "ls-n font-label-nav text-label-nav text-primary"
+                                            },
+                                            "elements": [],
+                                            "id": "c4c974f"
+                                        }
+                                    ],
+                                    "id": "ca7a2a3",
+                                    "isInner": true
+                                },
+                                {
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "تفاوت قالب‌های ABS پلیمری لاریجانی با قالب‌های ارزان‌قیمت بازیافتی",
+                                        "header_size": "h2",
+                                        "_css_classes": "ls-n font-headline-md text-headline-md text-on-surface"
+                                    },
+                                    "elements": [],
+                                    "id": "5f08492"
+                                },
+                                {
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "container_type": "grid",
+                                        "grid_columns_grid": {
+                                            "unit": "fr",
+                                            "size": 3
+                                        },
+                                        "grid_columns_grid_tablet": {
+                                            "unit": "fr",
+                                            "size": 3
+                                        },
+                                        "grid_columns_grid_mobile": {
+                                            "unit": "fr",
+                                            "size": 1
+                                        },
+                                        "grid_rows_grid": {
+                                            "unit": "custom",
+                                            "size": "auto"
+                                        },
+                                        "grid_gaps": {
+                                            "column": "24",
+                                            "row": "24",
+                                            "isLinked": true,
+                                            "unit": "px"
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "4",
+                                                    "row": "4",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 4
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "16",
+                                                    "right": "16",
+                                                    "bottom": "16",
+                                                    "left": "16",
+                                                    "isLinked": true
+                                                },
+                                                "css_classes": "ls-n-card bg-surface-canvas rounded-xl"
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "container",
+                                                    "settings": {
+                                                        "content_width": "full",
+                                                        "flex_direction": "row",
+                                                        "flex_gap": {
+                                                            "column": "4",
+                                                            "row": "4",
+                                                            "isLinked": true,
+                                                            "unit": "px",
+                                                            "size": 4
+                                                        },
+                                                        "flex_align_items": "center",
+                                                        "flex_wrap": "nowrap",
+                                                        "flex_wrap_tablet": "nowrap",
+                                                        "flex_wrap_mobile": "nowrap",
+                                                        "padding": {
+                                                            "unit": "px",
+                                                            "top": "0",
+                                                            "right": "0",
+                                                            "bottom": "0",
+                                                            "left": "0",
+                                                            "isLinked": true
+                                                        }
+                                                    },
+                                                    "elements": [
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "icon",
+                                                            "settings": {
+                                                                "selected_icon": {
+                                                                    "value": "bi bi-patch-check-fill",
+                                                                    "library": "bootstrap-icons"
+                                                                },
+                                                                "_css_classes": "ls-n ls-n-icon text-primary text-[20px]"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "86e20ee"
+                                                        },
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "ضدپوسته و عدم تغییر فرم",
+                                                                "header_size": "h3",
+                                                                "_css_classes": "ls-n font-headline-sm text-headline-sm text-on-surface"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "c382462"
+                                                        }
+                                                    ],
+                                                    "id": "ad7c3cd",
+                                                    "isInner": true
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>به دلیل استفاده از ورق‌های درجه یک با ضخامت واقعی ۴ و ۵ میلی‌متر، حرارت ناشی از هیدراتاسیون سیمان و ضربات ویبره موجب خمیدگی لبه‌ها و پریدگی گوشه سنگ تولیدی نمی‌شود.</p>",
+                                                        "_css_classes": "ls-n font-body-sm text-body-sm leading-relaxed text-on-surface-variant"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "4d18d0f"
+                                                }
+                                            ],
+                                            "id": "0215b46",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "4",
+                                                    "row": "4",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 4
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "16",
+                                                    "right": "16",
+                                                    "bottom": "16",
+                                                    "left": "16",
+                                                    "isLinked": true
+                                                },
+                                                "css_classes": "ls-n-card bg-surface-canvas rounded-xl"
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "container",
+                                                    "settings": {
+                                                        "content_width": "full",
+                                                        "flex_direction": "row",
+                                                        "flex_gap": {
+                                                            "column": "4",
+                                                            "row": "4",
+                                                            "isLinked": true,
+                                                            "unit": "px",
+                                                            "size": 4
+                                                        },
+                                                        "flex_align_items": "center",
+                                                        "flex_wrap": "nowrap",
+                                                        "flex_wrap_tablet": "nowrap",
+                                                        "flex_wrap_mobile": "nowrap",
+                                                        "padding": {
+                                                            "unit": "px",
+                                                            "top": "0",
+                                                            "right": "0",
+                                                            "bottom": "0",
+                                                            "left": "0",
+                                                            "isLinked": true
+                                                        }
+                                                    },
+                                                    "elements": [
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "icon",
+                                                            "settings": {
+                                                                "selected_icon": {
+                                                                    "value": "bi bi-magic",
+                                                                    "library": "bootstrap-icons"
+                                                                },
+                                                                "_css_classes": "ls-n ls-n-icon text-primary text-[20px]"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "5254bf2"
+                                                        },
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "جدایش بدون روغن نامرغوب",
+                                                                "header_size": "h3",
+                                                                "_css_classes": "ls-n font-headline-sm text-headline-sm text-on-surface"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "239c7f2"
+                                                        }
+                                                    ],
+                                                    "id": "e0f3f6d",
+                                                    "isInner": true
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>سطوح قالب‌ها در فرآیند پولیش CNC صیقل داده شده‌اند؛ بنابراین سنگ بدون ایجاد لکه چربی یا حباب‌های هوای ریز به آسانی با یک چرخش دست از قالب خارج می‌شود.</p>",
+                                                        "_css_classes": "ls-n font-body-sm text-body-sm leading-relaxed text-on-surface-variant"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "e739bbc"
+                                                }
+                                            ],
+                                            "id": "38b39d8",
+                                            "isInner": true
+                                        },
+                                        {
+                                            "elType": "container",
+                                            "settings": {
+                                                "content_width": "full",
+                                                "flex_direction": "column",
+                                                "flex_gap": {
+                                                    "column": "4",
+                                                    "row": "4",
+                                                    "isLinked": true,
+                                                    "unit": "px",
+                                                    "size": 4
+                                                },
+                                                "padding": {
+                                                    "unit": "px",
+                                                    "top": "16",
+                                                    "right": "16",
+                                                    "bottom": "16",
+                                                    "left": "16",
+                                                    "isLinked": true
+                                                },
+                                                "css_classes": "ls-n-card bg-surface-canvas rounded-xl"
+                                            },
+                                            "elements": [
+                                                {
+                                                    "elType": "container",
+                                                    "settings": {
+                                                        "content_width": "full",
+                                                        "flex_direction": "row",
+                                                        "flex_gap": {
+                                                            "column": "4",
+                                                            "row": "4",
+                                                            "isLinked": true,
+                                                            "unit": "px",
+                                                            "size": 4
+                                                        },
+                                                        "flex_align_items": "center",
+                                                        "flex_wrap": "nowrap",
+                                                        "flex_wrap_tablet": "nowrap",
+                                                        "flex_wrap_mobile": "nowrap",
+                                                        "padding": {
+                                                            "unit": "px",
+                                                            "top": "0",
+                                                            "right": "0",
+                                                            "bottom": "0",
+                                                            "left": "0",
+                                                            "isLinked": true
+                                                        }
+                                                    },
+                                                    "elements": [
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "icon",
+                                                            "settings": {
+                                                                "selected_icon": {
+                                                                    "value": "bi bi-arrow-repeat",
+                                                                    "library": "bootstrap-icons"
+                                                                },
+                                                                "_css_classes": "ls-n ls-n-icon text-primary text-[20px]"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "d4c1e3d"
+                                                        },
+                                                        {
+                                                            "elType": "widget",
+                                                            "widgetType": "heading",
+                                                            "settings": {
+                                                                "title": "توجیه اقتصادی تیراژ بالا",
+                                                                "header_size": "h3",
+                                                                "_css_classes": "ls-n font-headline-sm text-headline-sm text-on-surface"
+                                                            },
+                                                            "elements": [],
+                                                            "id": "5c7c339"
+                                                        }
+                                                    ],
+                                                    "id": "4e229e7",
+                                                    "isInner": true
+                                                },
+                                                {
+                                                    "elType": "widget",
+                                                    "widgetType": "text-editor",
+                                                    "settings": {
+                                                        "editor": "<p>در حالی که قالب‌های نامرغوب پس از ۵۰ الی ۸۰ شات دچار شکنندگی می‌شوند، قالب‌های لاریجانی استون حداقل ۵۰۰ سیکل بدون افت براقیت سطح سنگ، بازدهی مداوم خواهند داشت.</p>",
+                                                        "_css_classes": "ls-n font-body-sm text-body-sm leading-relaxed text-on-surface-variant"
+                                                    },
+                                                    "elements": [],
+                                                    "id": "0b4e3e5"
+                                                }
+                                            ],
+                                            "id": "bac027c",
+                                            "isInner": true
+                                        }
+                                    ],
+                                    "id": "74f7c52",
+                                    "isInner": true
+                                }
+                            ],
+                            "id": "6c1e4fa",
+                            "isInner": true
                         }
-                    ]
+                    ],
+                    "id": "fa54ba2",
+                    "isInner": true
                 }
-            ]
+            ],
+            "id": "4af1d72",
+            "isInner": false
         }
     ],
     "page_settings": {

@@ -9,6 +9,8 @@
 defined( 'ABSPATH' ) || exit;
 
 require_once LS_DIR . '/inc/demo/pages.php';
+require_once LS_DIR . '/inc/demo/widget-defaults.php';
+require_once LS_DIR . '/inc/demo/native.php';
 
 /**
  * Random Elementor element id.
@@ -73,63 +75,120 @@ function ls_el_widget( $w ) {
 }
 
 /**
- * Build Elementor data from layout rows.
+ * Build Elementor data from layout rows (Containers).
+ *
+ * Row formats:
+ *   [ 'n' => element tree ]                      – native layout (inc/demo/native.php)
+ *   [ 'w' => 'ls-widget', 's' => settings ]      – theme widget, full width
+ *   [ 'cols' => [ [ size%, [ widgets ] ], … ] ]  – boxed row of theme widgets
  *
  * @param array $rows Rows.
  * @return array
  */
 function ls_el_build( $rows ) {
-	$zero = array( 'unit' => 'px', 'top' => '0', 'right' => '0', 'bottom' => '0', 'left' => '0', 'isLinked' => true );
-	$out  = array();
+	$out = array();
 	foreach ( $rows as $row ) {
+		if ( isset( $row['n'] ) ) {
+			$out[] = ls_el_native( $row['n'] );
+			continue;
+		}
 		if ( isset( $row['cols'] ) ) {
 			$cols = array();
 			foreach ( $row['cols'] as $col ) {
-				$cols[] = array(
-					'id'       => ls_el_id(),
-					'elType'   => 'column',
-					'settings' => array(
-						'_column_size' => (int) round( $col[0] ),
-						'_inline_size' => $col[0],
-						'padding'      => array( 'unit' => 'px', 'top' => '0', 'right' => '12', 'bottom' => '0', 'left' => '12', 'isLinked' => false ),
-					),
-					'elements' => array_map( 'ls_el_widget', $col[1] ),
+				$cols[] = ls_n_c(
+					array_map( 'ls_el_widget', $col[1] ),
+					array( 'width' => array( (float) $col[0], 100, 100 ), 'pad' => ls_n_box( 0, 12 ) )
 				);
 			}
-			$out[] = array(
-				'id'       => ls_el_id(),
-				'elType'   => 'section',
-				'settings' => array(
-					'layout'          => 'boxed',
-					'content_width'   => array( 'unit' => 'px', 'size' => 1280 ),
-					'gap'             => 'no',
-					'padding'         => array( 'unit' => 'px', 'top' => '40', 'right' => '20', 'bottom' => '40', 'left' => '20', 'isLinked' => false ),
-					'padding_mobile'  => array( 'unit' => 'px', 'top' => '24', 'right' => '4', 'bottom' => '24', 'left' => '4', 'isLinked' => false ),
-					'structure'       => '20',
-				),
-				'elements' => $cols,
+			$out[] = ls_el_native(
+				ls_n_c(
+					$cols,
+					array(
+						'dir'   => array( 'row', 'column', 'column' ),
+						'boxed' => 1240,
+						'pad'   => array( ls_n_box( 40, 20 ), ls_n_box( 40, 20 ), ls_n_box( 24, 4 ) ),
+						'class' => 'ls-n-cols',
+					)
+				)
 			);
 			continue;
 		}
-		$out[] = array(
-			'id'       => ls_el_id(),
-			'elType'   => 'section',
-			'settings' => array(
-				'layout'  => 'full_width',
-				'gap'     => 'no',
-				'padding' => $zero,
-			),
-			'elements' => array(
-				array(
-					'id'       => ls_el_id(),
-					'elType'   => 'column',
-					'settings' => array( '_column_size' => 100, '_inline_size' => null, 'padding' => $zero ),
-					'elements' => array( ls_el_widget( $row ) ),
-				),
-			),
-		);
+		$native = ls_el_native_row( $row );
+		$out[]  = ls_el_native( $native ? $native : ls_n_widget_row( ls_el_widget( $row ) ) );
 	}
 	return $out;
+}
+
+/**
+ * Native Elementor version of a theme-widget row, when one exists.
+ * Disable with add_filter( 'ls_native_layouts', '__return_false' ).
+ *
+ * @param array $row Row ([ 'w' => type, 's' => settings ]).
+ * @return array|null Element tree or null.
+ */
+function ls_el_native_row( $row ) {
+	$enabled = function_exists( 'apply_filters' ) ? apply_filters( 'ls_native_layouts', true, $row ) : true;
+	if ( ! $enabled ) {
+		return null;
+	}
+	$s       = $row['s'] ?? array();
+	$variant = $s['variant'] ?? '';
+	switch ( $row['w'] ) {
+		case 'ls-icon-cards':
+			$el = ls_nr_icon_cards( $s );
+			break;
+		case 'ls-about':
+			$el = ls_nr_about( $s );
+			break;
+		case 'ls-testimonials':
+			$el = 'slider' === ( $s['layout'] ?? '' ) ? null : ls_nr_testimonials( $s );
+			break;
+		case 'ls-cta':
+			$el = in_array( $variant ? $variant : 'dark-card', array( 'dark-card', 'dark-strip', 'soft-card', 'consult-band' ), true ) ? ls_nr_cta( $s ) : null;
+			break;
+		case 'ls-steps':
+			$el = ls_nr_steps( $s );
+			break;
+		case 'ls-page-banner':
+			$el = '' !== ( $s['title'] ?? 'x' ) ? ls_nr_page_banner( $s ) : null;
+			break;
+		case 'ls-contact-cards':
+			$el = ls_nr_contact_cards( $s );
+			break;
+		default:
+			$el = null;
+	}
+	if ( $el && ! empty( $s['_element_id'] ) ) {
+		$el['settings']['_element_id'] = $s['_element_id'];
+	}
+	return $el;
+}
+
+/**
+ * Finalise a native element tree: ids, isInner flags, normalised widget settings.
+ *
+ * @param array $el    Element.
+ * @param int   $depth Depth.
+ * @return array
+ */
+function ls_el_native( $el, $depth = 0 ) {
+	if ( empty( $el['id'] ) ) {
+		$el['id'] = ls_el_id();
+		if ( 'widget' === $el['elType'] ) {
+			$el['settings'] = ls_el_normalize( $el['settings'] );
+		}
+	}
+	if ( 'container' === $el['elType'] ) {
+		$el['isInner'] = $depth > 0;
+	}
+	$children = array();
+	foreach ( (array) ( $el['elements'] ?? array() ) as $child ) {
+		if ( $child ) {
+			$children[] = ls_el_native( $child, $depth + 1 );
+		}
+	}
+	$el['elements'] = $children;
+	return $el;
 }
 
 /**
@@ -424,6 +483,7 @@ function ls_setup_page() {
 			<?php wp_nonce_field( 'ls_import', 'ls_import_nonce' ); ?>
 			<h2><?php esc_html_e( 'درون‌ریزی دمو', 'larijani' ); ?></h2>
 			<p><label><input type="checkbox" name="ls_parts[]" value="pages" checked> <?php esc_html_e( 'برگه‌ها (اصلی، اصلی کلاسیک، خدمات، نمونه‌کارها، فروشگاه/کاتالوگ، تماس، وبلاگ، نمونه محصول)', 'larijani' ); ?></label></p>
+			<p><label><input type="checkbox" name="ls_parts[]" value="rebuild"> <?php esc_html_e( 'بازسازی چیدمان برگه‌ها و قالب‌هایی که قبلاً توسط قالب ساخته شده‌اند با نسخه جدید (ویجت‌های بومی المنتور). عنوان، نشانی و منوها حفظ می‌شوند و چیدمان قبلی پشتیبان‌گیری می‌شود؛ تغییرات دستی شما در آن برگه‌ها جایگزین می‌شود.', 'larijani' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="front" checked> <?php esc_html_e( 'تنظیم «صفحه اصلی» و «وبلاگ تخصصی» به‌عنوان صفحه نخست و صفحه نوشته‌ها', 'larijani' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="templates" checked> <?php esc_html_e( 'قالب‌های تم‌بیلدر (هدر، فوتر، تک‌نوشته، آرشیو، محصول، فروشگاه، ۴۰۴)', 'larijani' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="assign" checked> <?php esc_html_e( 'اتصال قالب‌های تم‌بیلدر به سایت (شرط نمایش پرو یا تنظیمات سفارشی‌سازی)', 'larijani' ); ?></label></p>
@@ -464,6 +524,26 @@ function ls_handle_import() {
 add_action( 'admin_init', 'ls_handle_import' );
 
 /**
+ * Layouts are built with Flexbox Containers (Elementor's default since 3.16).
+ * Older installations may still have the feature off: switch it on, otherwise
+ * container content is not displayed. Opt out with the
+ * "ls_enable_elementor_containers" filter.
+ *
+ * @return bool True when it was switched on now.
+ */
+function ls_elementor_ensure_containers() {
+	if ( ! ls_has_elementor() || ! class_exists( '\\Elementor\\Plugin' ) || ! apply_filters( 'ls_enable_elementor_containers', true ) ) {
+		return false;
+	}
+	$experiments = \Elementor\Plugin::$instance->experiments ?? null;
+	if ( ! $experiments || ! method_exists( $experiments, 'is_feature_active' ) || $experiments->is_feature_active( 'container' ) ) {
+		return false;
+	}
+	update_option( 'elementor_experiment-container', 'active' );
+	return true;
+}
+
+/**
  * Run the import (also usable from WP-CLI: wp eval 'ls_run_import();').
  *
  * @param array $parts Parts.
@@ -484,8 +564,12 @@ function ls_run_import( $parts = array( 'pages', 'front', 'templates', 'assign',
 		$log[] = __( 'رنگ‌ها و فونت سراسری المنتور تنظیم شد.', 'larijani' );
 	}
 
+	if ( ls_elementor_ensure_containers() ) {
+		$log[] = __( 'قابلیت «کانتینر» المنتور (پیش‌فرض نسخه‌های جدید) فعال شد؛ چیدمان برگه‌ها با کانتینر ساخته می‌شود.', 'larijani' );
+	}
 	$layouts = ls_demo_layouts();
 	$pages   = array();
+	$rebuilt = 0;
 	if ( in_array( 'pages', $parts, true ) ) {
 		$map = array(
 			'home'           => 'home',
@@ -503,6 +587,9 @@ function ls_run_import( $parts = array( 'pages', 'front', 'templates', 'assign',
 				continue;
 			}
 			$pages[ $key ] = ls_import_page( $slug, $layouts[ $key ]['title'], $layouts[ $key ]['rows'] );
+			if ( in_array( 'rebuild', $parts, true ) && ls_rebuild_layout( $pages[ $key ], $layouts[ $key ]['rows'], 'wp-page' ) ) {
+				++$rebuilt;
+			}
 			if ( ! empty( $layouts[ $key ]['meta'] ) && $pages[ $key ] ) {
 				foreach ( $layouts[ $key ]['meta'] as $mk => $mv ) {
 					add_post_meta( $pages[ $key ], $mk, $mv, true );
@@ -512,6 +599,10 @@ function ls_run_import( $parts = array( 'pages', 'front', 'templates', 'assign',
 		$blog = get_page_by_path( 'blog' );
 		$pages['blog'] = $blog ? $blog->ID : wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => __( 'وبلاگ تخصصی', 'larijani' ), 'post_name' => 'blog' ) );
 		$log[] = sprintf( /* translators: %d count */ __( '%d برگه ساخته/به‌روز شد.', 'larijani' ), count( $pages ) );
+		if ( $rebuilt ) {
+			/* translators: %d: number of pages. */
+			$log[] = sprintf( __( 'چیدمان %d برگه با نسخه جدید (ویجت‌های بومی المنتور) بازسازی شد؛ نسخه قبلی پشتیبان‌گیری شد.', 'larijani' ), $rebuilt );
+		}
 		if ( in_array( 'front', $parts, true ) ) {
 			update_option( 'show_on_front', 'page' );
 			update_option( 'page_on_front', $pages['home'] );
@@ -530,7 +621,10 @@ function ls_run_import( $parts = array( 'pages', 'front', 'templates', 'assign',
 			if ( in_array( $layout['kind'], array( 'product', 'product-archive' ), true ) && ! ls_has_woo() ) {
 				continue;
 			}
-			ls_import_template( $key, $layout, $assign );
+			$tid = ls_import_template( $key, $layout, $assign );
+			if ( in_array( 'rebuild', $parts, true ) ) {
+				ls_rebuild_layout( $tid, $layout['rows'], get_post_meta( $tid, '_elementor_template_type', true ) );
+			}
 			$n++;
 		}
 		if ( ls_has_elementor_pro() && $assign ) {
@@ -592,6 +686,29 @@ function ls_import_page( $slug, $title, $rows ) {
 }
 
 /**
+ * Replace the layout of a page/template created by the theme (ownership meta
+ * "_ls_demo_page"), keeping its ID, title, slug and menu links. The previous
+ * Elementor data is kept in "_ls_elementor_data_backup" (restorable).
+ *
+ * @param int    $id   Post id.
+ * @param array  $rows Layout rows.
+ * @param string $type Elementor template type.
+ * @return bool True when rebuilt.
+ */
+function ls_rebuild_layout( $id, $rows, $type ) {
+	if ( ! $id || ! get_post_meta( $id, '_ls_demo_page', true ) ) {
+		return false;
+	}
+	$old = get_post_meta( $id, '_elementor_data', true );
+	if ( $old ) {
+		update_post_meta( $id, '_ls_elementor_data_backup', wp_slash( is_string( $old ) ? $old : wp_json_encode( $old ) ) );
+		update_post_meta( $id, '_ls_elementor_data_backup_date', current_time( 'mysql' ) );
+	}
+	ls_save_elementor_data( $id, ls_el_build( $rows ), $type );
+	return true;
+}
+
+/**
  * Save Elementor data on a post.
  *
  * @param int    $id Post id.
@@ -604,6 +721,10 @@ function ls_save_elementor_data( $id, $data, $type ) {
 	update_post_meta( $id, '_elementor_version', defined( 'ELEMENTOR_VERSION' ) ? ELEMENTOR_VERSION : '3.20.0' );
 	update_post_meta( $id, '_elementor_data', wp_slash( wp_json_encode( $data, JSON_UNESCAPED_UNICODE ) ) );
 	update_post_meta( $id, '_elementor_page_settings', array( 'hide_title' => 'yes' ) );
+	// Drop Elementor's per-post render/CSS caches so the new layout is used.
+	foreach ( array( '_elementor_element_cache', '_elementor_css', '_elementor_page_assets' ) as $cache ) {
+		delete_post_meta( $id, $cache );
+	}
 }
 
 /**
@@ -1065,60 +1186,57 @@ function ls_import_products() {
  * Menus.
  */
 function ls_import_menus() {
-	$url = static function ( $slug ) {
-		$p = get_page_by_path( $slug );
-		return $p ? get_permalink( $p ) : home_url( '/' . $slug . '/' );
-	};
-	$shop = ls_has_woo() ? get_permalink( wc_get_page_id( 'shop' ) ) : $url( 'shop' );
-	$menus = array(
+	// Targets: [ 'page', slug ] (linked to the page object, so slug changes never
+	// break the menu), [ 'cat', product-category slug ], [ 'home' ], [ 'privacy' ], [ 'url', url ].
+	$menus     = array(
 		'primary'           => array(
 			__( 'منوی اصلی', 'larijani' ),
 			array(
-				array( __( 'صفحه اصلی', 'larijani' ), home_url( '/' ) ),
-				array( __( 'فروشگاه و کاتالوگ', 'larijani' ), $shop ),
-				array( __( 'خدمات و خطوط تولید', 'larijani' ), $url( 'services' ) ),
-				array( __( 'نمونه کارها', 'larijani' ), $url( 'portfolio' ) ),
-				array( __( 'وبلاگ تخصصی', 'larijani' ), $url( 'blog' ) ),
-				array( __( 'تماس با ما', 'larijani' ), $url( 'contact' ) ),
+				array( __( 'صفحه اصلی', 'larijani' ), array( 'home' ) ),
+				array( __( 'فروشگاه و کاتالوگ', 'larijani' ), array( 'shop' ) ),
+				array( __( 'خدمات و خطوط تولید', 'larijani' ), array( 'page', 'services' ) ),
+				array( __( 'نمونه کارها', 'larijani' ), array( 'page', 'portfolio' ) ),
+				array( __( 'وبلاگ تخصصی', 'larijani' ), array( 'page', 'blog' ) ),
+				array( __( 'تماس با ما', 'larijani' ), array( 'page', 'contact' ) ),
 			),
 		),
 		'drawer_categories' => array(
 			__( 'دسته‌بندی‌های موبایل', 'larijani' ),
 			array(
-				array( __( 'قالب کفپوش', 'larijani' ), $shop ),
-				array( __( 'میز ویبره سنگین', 'larijani' ), $shop ),
-				array( __( 'قالب صراحی و نما', 'larijani' ), $shop ),
-				array( __( 'رزین روان‌کننده', 'larijani' ), $shop ),
+				array( __( 'قالب کفپوش', 'larijani' ), array( 'cat', 'mold' ) ),
+				array( __( 'میز ویبره سنگین', 'larijani' ), array( 'cat', 'machinery' ) ),
+				array( __( 'قالب صراحی و نما', 'larijani' ), array( 'cat', 'mold' ) ),
+				array( __( 'رزین روان‌کننده', 'larijani' ), array( 'cat', 'chemical' ) ),
 			),
 		),
 		'footer_quick'      => array(
 			__( 'فوتر – دسترسی سریع', 'larijani' ),
 			array(
-				array( __( 'صفحه اصلی', 'larijani' ), home_url( '/' ) ),
-				array( __( 'فروشگاه قالب‌های نشکن', 'larijani' ), $shop ),
-				array( __( 'خدمات و خطوط تولید', 'larijani' ), $url( 'services' ) ),
-				array( __( 'نمونه کارها', 'larijani' ), $url( 'portfolio' ) ),
-				array( __( 'فرمولاسیون و مقالات', 'larijani' ), $url( 'blog' ) ),
-				array( __( 'تماس با واحد فروش', 'larijani' ), $url( 'contact' ) ),
+				array( __( 'صفحه اصلی', 'larijani' ), array( 'home' ) ),
+				array( __( 'فروشگاه قالب‌های نشکن', 'larijani' ), array( 'shop' ) ),
+				array( __( 'خدمات و خطوط تولید', 'larijani' ), array( 'page', 'services' ) ),
+				array( __( 'نمونه کارها', 'larijani' ), array( 'page', 'portfolio' ) ),
+				array( __( 'فرمولاسیون و مقالات', 'larijani' ), array( 'page', 'blog' ) ),
+				array( __( 'تماس با واحد فروش', 'larijani' ), array( 'page', 'contact' ) ),
 			),
 		),
 		'footer_categories' => array(
 			__( 'فوتر – دسته‌بندی تجهیزات', 'larijani' ),
 			array(
-				array( __( 'قالب کفپوش و سنگفرش', 'larijani' ), $shop ),
-				array( __( 'قالب جدول و دورباغچه', 'larijani' ), $shop ),
-				array( __( 'قالب نما و صراحی رومی', 'larijani' ), $shop ),
-				array( __( 'رزین روان‌کننده بتن', 'larijani' ), $shop ),
-				array( __( 'رنگدانه‌های معدنی اکسید آهن', 'larijani' ), $shop ),
-				array( __( 'روغن قالب پایه گیاهی', 'larijani' ), $shop ),
+				array( __( 'قالب کفپوش و سنگفرش', 'larijani' ), array( 'cat', 'mold' ) ),
+				array( __( 'قالب جدول و دورباغچه', 'larijani' ), array( 'cat', 'mold' ) ),
+				array( __( 'قالب نما و صراحی رومی', 'larijani' ), array( 'cat', 'mold' ) ),
+				array( __( 'میز ویبره و ماشین‌آلات', 'larijani' ), array( 'cat', 'machinery' ) ),
+				array( __( 'رزین روان‌کننده بتن', 'larijani' ), array( 'cat', 'chemical' ) ),
+				array( __( 'رنگدانه‌های معدنی اکسید آهن', 'larijani' ), array( 'cat', 'chemical' ) ),
 			),
 		),
 		'footer_bottom'     => array(
 			__( 'فوتر – لینک‌های پایین', 'larijani' ),
 			array(
-				array( __( 'قوانین و ضمانت محصولات', 'larijani' ), $url( 'contact' ) ),
-				array( __( 'حریم خصوصی', 'larijani' ), get_privacy_policy_url() ? get_privacy_policy_url() : home_url( '/' ) ),
-				array( __( 'نقشه سایت', 'larijani' ), home_url( '/wp-sitemap.xml' ) ),
+				array( __( 'قوانین و ضمانت محصولات', 'larijani' ), array( 'page', 'contact' ) ),
+				array( __( 'حریم خصوصی', 'larijani' ), array( 'privacy' ) ),
+				array( __( 'نقشه سایت', 'larijani' ), array( 'url', home_url( '/wp-sitemap.xml' ) ) ),
 			),
 		),
 	);
@@ -1134,19 +1252,54 @@ function ls_import_menus() {
 		}
 		if ( ! $existing ) {
 			foreach ( $menu[1] as $item ) {
-				wp_update_nav_menu_item(
-					$menu_id,
-					0,
-					array(
-						'menu-item-title'  => $item[0],
-						'menu-item-url'    => $item[1],
-						'menu-item-status' => 'publish',
-						'menu-item-type'   => 'custom',
-					)
-				);
+				wp_update_nav_menu_item( $menu_id, 0, array_merge( array( 'menu-item-title' => $item[0], 'menu-item-status' => 'publish' ), ls_menu_item_target( $item[1] ) ) );
 			}
 		}
 		$locations[ $location ] = $menu_id;
 	}
 	set_theme_mod( 'nav_menu_locations', $locations );
+}
+
+/**
+ * Nav menu item fields for a demo menu target.
+ *
+ * @param array $t Target.
+ * @return array
+ */
+function ls_menu_item_target( $t ) {
+	$object = static function ( $id, $type = 'page' ) {
+		return array( 'menu-item-type' => 'post_type', 'menu-item-object' => $type, 'menu-item-object-id' => (int) $id );
+	};
+	$custom = static function ( $url ) {
+		return array( 'menu-item-type' => 'custom', 'menu-item-url' => esc_url_raw( $url ) );
+	};
+	$shop_id = ls_has_woo() ? (int) wc_get_page_id( 'shop' ) : 0;
+	if ( $shop_id <= 0 ) {
+		$page    = get_page_by_path( 'shop' );
+		$shop_id = $page ? $page->ID : 0;
+	}
+	switch ( $t[0] ) {
+		case 'home':
+			return $custom( home_url( '/' ) );
+		case 'shop':
+			return $shop_id ? $object( $shop_id ) : $custom( home_url( '/shop/' ) );
+		case 'page':
+			$page = get_page_by_path( $t[1] );
+			return $page ? $object( $page->ID ) : $custom( home_url( '/' . $t[1] . '/' ) );
+		case 'cat':
+			$term = ls_has_woo() ? get_term_by( 'slug', $t[1], 'product_cat' ) : false;
+			if ( $term && ! is_wp_error( $term ) ) {
+				return array( 'menu-item-type' => 'taxonomy', 'menu-item-object' => 'product_cat', 'menu-item-object-id' => (int) $term->term_id );
+			}
+			// Without WooCommerce the catalog page filters itself from ?ls_cat=.
+			return $custom( add_query_arg( 'ls_cat', rawurlencode( $t[1] ), $shop_id ? get_permalink( $shop_id ) : home_url( '/shop/' ) ) );
+		case 'privacy':
+			$pid = (int) get_option( 'wp_page_for_privacy_policy' );
+			if ( $pid && 'publish' === get_post_status( $pid ) ) {
+				return $object( $pid );
+			}
+			return ls_menu_item_target( array( 'page', 'contact' ) );
+		default:
+			return $custom( $t[1] ?? home_url( '/' ) );
+	}
 }

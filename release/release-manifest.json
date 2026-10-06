@@ -1,22 +1,23 @@
 {
   "name": "Larijani Stone",
-  "version": "1.2.0",
-  "release_type": "release candidate (staging verification with real Elementor required)",
-  "date": "2026-10-05",
-  "source_commit": "fe181c02a3d3fcaffa2f9520c0e30ad081a4792e",
+  "version": "1.3.0",
+  "release_type": "release",
+  "date": "2026-10-06",
+  "source_commit": "2002179200f1441f025233122226afa50f6cfc15",
   "branch": "claude/wordpress-elementor-theme-conversion-t2rwiw",
   "requirements": {
     "wordpress": ">= 6.5 (runtime-tested 6.5.5, 7.1.2)",
     "php": ">= 7.4 (runtime-tested 8.3.6; 7.4 static only)",
-    "elementor": "recommended (real plugin NOT EXECUTED in QA)",
+    "elementor": ">= 3.20 recommended (runtime-tested 3.35.9 and 4.0.8, built from official source tags)",
+    "elementor_pro": "optional (NOT EXECUTED)",
     "woocommerce": "optional (runtime-tested 11.1.2)"
   },
   "artifacts": [
     {
       "file": "larijani-stone.zip",
-      "sha256": "a8f32759b304d4d2bd745eccbf85441c0a38f59d92404760354d0ea33482f328",
-      "bytes": 850709,
-      "files": 142,
+      "sha256": "a661593a35754be9fab38eb800675386a7ba7d78920b938761802d1c7e2bc5dc",
+      "bytes": 920142,
+      "files": 145,
       "root_folder": [
         "larijani-stone"
       ],
@@ -25,7 +26,7 @@
     },
     {
       "file": "larijani-stone-child.zip",
-      "sha256": "e99aaa7185210f7c8b9ac57be5880355f90ff3f90f555b099c73fb056b0c30de",
+      "sha256": "e40d00556b2fe8827273a5b8894bfe59d9b1e0ff8f30a9f54209ef0dc8317b8e",
       "bytes": 1179,
       "files": 2,
       "root_folder": [
@@ -35,6 +36,7 @@
       "contains_dev_files": false
     }
   ],
+  "install_test": "Theme_Upgrader install of release/larijani-stone.zip on a clean WordPress 7.1.2 + Elementor 4.0.8: install OK, activation + auto-setup OK, 75/75 route×width checks PASS, 0 theme log entries",
   "excluded_from_theme_zip": [
     "src/",
     "build/",
@@ -54,5 +56,5 @@
     "Bootstrap Icons": "MIT"
   },
   "qa_report": "docs/qa/qa-report.json",
-  "release_ready": false
+  "release_ready": true
 }

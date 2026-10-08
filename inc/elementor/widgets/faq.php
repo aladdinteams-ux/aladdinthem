@@ -83,7 +83,7 @@ class Larijani_Widget_FAQ extends Larijani_Widget_Base {
 		$dark_title = 'header' === $s['icon_position'];
 		?>
 		<section class="w-full py-space-xl <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
 				<div class="<?php echo 'center' === $h['align'] ? 'flex flex-col items-center text-center' : ''; ?>"><?php echo $badge . larijani_section_heading( $h ); // phpcs:ignore ?></div>
 				<div class="grid grid-cols-1 <?php echo esc_attr( $cols ); ?> gap-space-md <?php echo $this->on( $s, 'narrow' ) ? 'max-w-5xl mx-auto w-full' : ''; ?>">
 					<?php foreach ( $s['items'] as $i => $it ) : ?>

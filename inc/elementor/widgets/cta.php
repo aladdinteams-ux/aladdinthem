@@ -170,7 +170,7 @@ class Larijani_Widget_CTA extends Larijani_Widget_Base {
 		if ( 'consult-band' === $v ) :
 			?>
 			<section class="w-full bg-surface-dark text-on-tertiary py-space-2xl my-space-lg relative overflow-hidden">
-				<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin relative z-10">
+				<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin relative z-10">
 					<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
 						<div class="lg:col-span-8 flex flex-col gap-space-md">
 							<?php if ( $s['badge'] ) : ?>
@@ -210,7 +210,7 @@ class Larijani_Widget_CTA extends Larijani_Widget_Base {
 		if ( 'dark-strip' === $v ) :
 			?>
 			<section class="w-full bg-surface-dark text-on-tertiary py-space-xl">
-				<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin flex flex-col sm:flex-row items-center justify-between gap-space-md">
+				<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col sm:flex-row items-center justify-between gap-space-md">
 					<div class="flex items-center gap-space-md">
 						<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 text-2xl"><?php echo larijani_icon( $s['icon'] ); // phpcs:ignore ?></div>
 						<div class="flex flex-col">
@@ -231,7 +231,7 @@ class Larijani_Widget_CTA extends Larijani_Widget_Base {
 		if ( 'soft-card' === $v ) :
 			?>
 			<section class="w-full py-space-xl <?php echo esc_attr( $bg ); ?>">
-				<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+				<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 					<div class="bg-secondary-container/60 rounded-3xl p-space-lg lg:p-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
 						<div class="flex items-center gap-space-md">
 							<div class="w-14 h-14 rounded-2xl bg-surface-card flex items-center justify-center text-primary shrink-0 shadow-sm text-[28px]"><?php echo larijani_icon( $s['icon'] ); // phpcs:ignore ?></div>

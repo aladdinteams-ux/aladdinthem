@@ -173,12 +173,12 @@ class Larijani_Widget_Shop_Hero extends Larijani_Widget_Base {
 	protected function render_bar( $s, $title, $desc ) {
 		?>
 		<section class="w-full bg-surface-canvas py-space-sm">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<nav class="flex items-center flex-wrap gap-space-xs text-body-sm font-body-sm text-outline" aria-label="<?php esc_attr_e( 'مسیر صفحه', 'larijani-stone' ); ?>"><?php echo larijani_breadcrumb_html(); // phpcs:ignore ?></nav>
 			</div>
 		</section>
 		<section class="w-full bg-surface-card shadow-sm py-space-xl">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-lg">
 					<div class="flex flex-col gap-space-xs max-w-3xl">
 						<?php if ( $s['badge'] ) : ?>

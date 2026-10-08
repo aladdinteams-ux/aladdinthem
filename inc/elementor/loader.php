@@ -292,7 +292,68 @@ add_action( 'admin_init', 'larijani_maybe_setup_kit' );
  */
 function larijani_elementor_fonts( $fonts ) {
 	$fonts['Vazirmatn'] = 'system';
+	if ( 'custom' === larijani_opt( 'font_family' ) && larijani_font_url() ) {
+		$fonts['LarijaniCustom'] = 'system'; // Loaded by the theme (@font-face in the inline CSS).
+	}
 	return $fonts;
+}
+
+/**
+ * Elementor family name for the font chosen in the theme settings.
+ *
+ * @return string
+ */
+function larijani_kit_font_name() {
+	$family = larijani_opt( 'font_family' );
+	if ( 'system' === $family ) {
+		return 'Tahoma';
+	}
+	return ( 'custom' === $family && larijani_font_url() ) ? 'LarijaniCustom' : 'Vazirmatn';
+}
+
+/**
+ * When the site font changes, update Elementor's global fonts – but only the
+ * entries that still hold a font set by this theme (the user's own choices in
+ * Site Settings are never overwritten).
+ */
+function larijani_sync_kit_font() {
+	if ( ! larijani_has_elementor() ) {
+		return;
+	}
+	$kit_id = (int) get_option( 'elementor_active_kit' );
+	$data   = $kit_id ? get_post_meta( $kit_id, '_elementor_page_settings', true ) : null;
+	if ( ! is_array( $data ) ) {
+		return;
+	}
+	$theme_fonts = array( 'Vazirmatn', 'Tahoma', 'LarijaniCustom' );
+	$new         = larijani_kit_font_name();
+	$changed     = false;
+	if ( isset( $data['system_typography'] ) && is_array( $data['system_typography'] ) ) {
+		foreach ( $data['system_typography'] as $i => $t ) {
+			if ( isset( $t['typography_font_family'] ) && in_array( $t['typography_font_family'], $theme_fonts, true ) && $t['typography_font_family'] !== $new ) {
+				$data['system_typography'][ $i ]['typography_font_family'] = $new;
+				$changed = true;
+			}
+		}
+	}
+	if ( isset( $data['body_typography_font_family'] ) && in_array( $data['body_typography_font_family'], $theme_fonts, true ) && $data['body_typography_font_family'] !== $new ) {
+		$data['body_typography_font_family'] = $new;
+		$changed                             = true;
+	}
+	// Default width for new Elementor containers, only while it still holds a value set by the theme.
+	$width = absint( larijani_opt( 'container_width' ) );
+	$prev  = (int) get_option( 'larijani_kit_container_width', 1280 );
+	if ( $width && isset( $data['container_width']['size'] ) && (int) $data['container_width']['size'] === $prev && $prev !== $width ) {
+		$data['container_width']['size'] = $width;
+		update_option( 'larijani_kit_container_width', $width, false );
+		$changed = true;
+	}
+	if ( $changed ) {
+		update_post_meta( $kit_id, '_elementor_page_settings', $data );
+		if ( class_exists( '\Elementor\Plugin' ) && isset( \Elementor\Plugin::$instance->files_manager ) ) {
+			\Elementor\Plugin::$instance->files_manager->clear_cache();
+		}
+	}
 }
 add_filter( 'elementor/fonts/additional_fonts', 'larijani_elementor_fonts' );
 

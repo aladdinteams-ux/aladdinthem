@@ -217,6 +217,13 @@ function larijani_auto_setup() {
 	}
 	delete_option( 'ls_auto_setup_pending' );
 	$fresh = (bool) get_option( 'fresh_site' );
+	// A site that already has its own pages/posts is never changed automatically:
+	// the owner chooses what to import in the setup wizard.
+	if ( ! $fresh && larijani_site_has_content() ) {
+		update_option( 'ls_auto_setup_done', time(), false );
+		set_transient( 'ls_show_setup_notice', 'wizard', DAY_IN_SECONDS );
+		return;
+	}
 	$parts = array( 'pages', 'templates', 'assign', 'menus', 'projects', 'kit' );
 	// Never replace a static front page the owner already chose.
 	if ( $fresh || 'page' !== get_option( 'show_on_front' ) || ! get_post( (int) get_option( 'page_on_front' ) ) ) {
@@ -470,28 +477,28 @@ function larijani_setup_page() {
 		<?php if ( $report ) : ?>
 		<div class="notice notice-success"><p><?php echo wp_kses_post( $report ); ?></p></div>
 		<?php endif; ?>
-		<div class="ls-card ls-card-wide">
-			<h2><?php esc_html_e( 'وضعیت افزونه‌ها', 'larijani-stone' ); ?></h2>
-			<ul>
-				<?php foreach ( $status as $label => $ok ) : ?>
-				<li><?php echo $ok ? '✅' : '⚪'; ?> <?php echo esc_html( $label ); ?></li>
-				<?php endforeach; ?>
-			</ul>
-			<p><?php esc_html_e( 'المنتور رایگان برای ویرایش بصری لازم است. با المنتور پرو، قالب‌های هدر، فوتر، تک‌نوشته، آرشیو، محصول و فروشگاه با شرط نمایش در تم‌بیلدر ثبت می‌شوند. بدون پرو، همین قالب‌ها از طریق «سفارشی‌سازی › تنظیمات قالب لاریجانی › تم‌بیلدر» به سایت متصل می‌شوند.', 'larijani-stone' ); ?></p>
-		</div>
+		<?php larijani_wizard_sections(); ?>
+		<?php larijani_wizard_journal_card(); ?>
 		<form method="post" class="ls-card ls-card-wide">
 			<?php wp_nonce_field( 'ls_import', 'ls_import_nonce' ); ?>
-			<h2><?php esc_html_e( 'درون‌ریزی دمو', 'larijani-stone' ); ?></h2>
+			<h2><?php esc_html_e( '۳. درون‌ریزی دمو', 'larijani-stone' ); ?></h2>
+			<p class="description"><?php esc_html_e( 'درون‌ریزی فقط محتوای جدید می‌سازد؛ برگه‌ها، نوشته‌ها، محصولات و منوهای موجود شما حذف یا بازنویسی نمی‌شوند. منوها فقط به جایگاه‌های خالی متصل می‌شوند و قالب‌های تم‌بیلدر فقط وقتی متصل می‌شوند که برای آن بخش قالب دیگری انتخاب نکرده باشید. هر اجرا ثبت می‌شود و قابل برگرداندن است.', 'larijani-stone' ); ?></p>
+			<?php
+			$larijani_front     = 'page' === get_option( 'show_on_front' ) ? (int) get_option( 'page_on_front' ) : 0;
+			$larijani_own_front = $larijani_front && get_post( $larijani_front ) && ! get_post_meta( $larijani_front, '_ls_demo_page', true );
+			$larijani_has_own   = larijani_site_has_content();
+			?>
 			<p><label><input type="checkbox" name="ls_parts[]" value="pages" checked> <?php esc_html_e( 'برگه‌ها (اصلی، اصلی کلاسیک، خدمات، نمونه‌کارها، فروشگاه/کاتالوگ، تماس، وبلاگ، نمونه محصول)', 'larijani-stone' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="rebuild"> <?php esc_html_e( 'بازسازی چیدمان برگه‌ها و قالب‌هایی که قبلاً توسط قالب ساخته شده‌اند با نسخه جدید (ویجت‌های بومی المنتور). عنوان، نشانی و منوها حفظ می‌شوند و چیدمان قبلی پشتیبان‌گیری می‌شود؛ تغییرات دستی شما در آن برگه‌ها جایگزین می‌شود.', 'larijani-stone' ); ?></label></p>
-			<p><label><input type="checkbox" name="ls_parts[]" value="front" checked> <?php esc_html_e( 'تنظیم «صفحه اصلی» و «وبلاگ تخصصی» به‌عنوان صفحه نخست و صفحه نوشته‌ها', 'larijani-stone' ); ?></label></p>
+			<p><label><input type="checkbox" name="ls_parts[]" value="front" <?php checked( ! $larijani_own_front ); ?>> <?php esc_html_e( 'تنظیم «صفحه اصلی» و «وبلاگ تخصصی» به‌عنوان صفحه نخست و صفحه نوشته‌ها', 'larijani-stone' ); ?></label>
+			<?php if ( $larijani_own_front ) : ?><br><span class="description" style="color:#b32d2e"><?php echo esc_html( sprintf( /* translators: %s: page title */ __( 'صفحه نخست فعلی سایت شما «%s» است؛ فقط در صورتی تیک بزنید که می‌خواهید جایگزین شود.', 'larijani-stone' ), get_the_title( $larijani_front ) ) ); ?></span><?php endif; ?></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="templates" checked> <?php esc_html_e( 'قالب‌های تم‌بیلدر (هدر، فوتر، تک‌نوشته، آرشیو، محصول، فروشگاه، ۴۰۴)', 'larijani-stone' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="assign" checked> <?php esc_html_e( 'اتصال قالب‌های تم‌بیلدر به سایت (شرط نمایش پرو یا تنظیمات سفارشی‌سازی)', 'larijani-stone' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="menus" checked> <?php esc_html_e( 'منوها (اصلی، موبایل، فوتر)', 'larijani-stone' ); ?></label></p>
-			<p><label><input type="checkbox" name="ls_parts[]" value="posts" checked> <?php esc_html_e( 'مقالات نمونه وبلاگ', 'larijani-stone' ); ?></label></p>
+			<p><label><input type="checkbox" name="ls_parts[]" value="posts" <?php checked( ! $larijani_has_own ); ?>> <?php esc_html_e( 'مقالات نمونه وبلاگ', 'larijani-stone' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="projects" checked> <?php esc_html_e( 'نمونه‌کارهای نمونه', 'larijani-stone' ); ?></label></p>
 			<?php if ( larijani_has_woo() ) : ?>
-			<p><label><input type="checkbox" name="ls_parts[]" value="products" checked> <?php esc_html_e( 'محصولات نمونه ووکامرس', 'larijani-stone' ); ?></label></p>
+			<p><label><input type="checkbox" name="ls_parts[]" value="products" <?php checked( ! $larijani_has_own ); ?>> <?php esc_html_e( 'محصولات نمونه ووکامرس', 'larijani-stone' ); ?></label></p>
 			<?php endif; ?>
 			<p><label><input type="checkbox" name="ls_parts[]" value="images" checked> <?php esc_html_e( 'کپی تصاویر طرح در کتابخانه رسانه (نیازمند دسترسی سرور به اینترنت)', 'larijani-stone' ); ?></label></p>
 			<p><label><input type="checkbox" name="ls_parts[]" value="kit" checked> <?php esc_html_e( 'رنگ‌ها و فونت سراسری المنتور (Site Settings)', 'larijani-stone' ); ?></label></p>
@@ -550,6 +557,27 @@ function larijani_elementor_ensure_containers() {
  * @return string Report HTML.
  */
 function larijani_run_import( $parts = array( 'pages', 'front', 'templates', 'assign', 'menus', 'posts', 'projects', 'products', 'images', 'kit' ) ) {
+	larijani_journal_start( $parts );
+	try {
+		$report = larijani_run_import_steps( $parts );
+	} catch ( Throwable $e ) {
+		larijani_journal_end( 'failed', __( 'خطا در هنگام ساخت محتوا.', 'larijani-stone' ) );
+		if ( defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG ) {
+			error_log( 'Larijani import: ' . $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+		}
+		return esc_html__( 'درون‌ریزی کامل نشد. موارد ساخته‌شده را می‌توانید از بخش «آخرین درون‌ریزی» برگردانید و دوباره تلاش کنید. جزئیات فنی در لاگ خطای سرور (در حالت اشکال‌زدایی) ثبت شده است.', 'larijani-stone' );
+	}
+	larijani_journal_end( 'done' );
+	return $report;
+}
+
+/**
+ * The import steps (see larijani_run_import()).
+ *
+ * @param array $parts Parts.
+ * @return string Report HTML.
+ */
+function larijani_run_import_steps( $parts ) {
 	if ( function_exists( 'set_time_limit' ) ) {
 		@set_time_limit( 300 ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
 	}
@@ -787,7 +815,28 @@ function larijani_import_template( $key, $layout, $assign ) {
 		'error-404'       => array( 'include/singular/not_found404' ),
 	);
 	if ( $pro ) {
-		update_post_meta( $id, '_elementor_conditions', $conditions[ $layout['kind'] ] ?? array() );
+		// Never compete with a Theme Builder template the owner already uses for this location.
+		$other = get_posts(
+			array(
+				'post_type'      => 'elementor_library',
+				'post_status'    => 'publish',
+				'posts_per_page' => 1,
+				'fields'         => 'ids',
+				'post__not_in'   => array( $id ), // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_post__not_in
+				'meta_query'     => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
+					array( 'key' => '_elementor_template_type', 'value' => $layout['kind'] ),
+					array( 'key' => '_elementor_conditions', 'compare' => 'EXISTS' ),
+					array( 'key' => '_ls_demo_page', 'compare' => 'NOT EXISTS' ),
+				),
+			)
+		);
+		$has_own = false;
+		foreach ( $other as $oid ) {
+			$has_own = $has_own || (bool) array_filter( (array) get_post_meta( $oid, '_elementor_conditions', true ) );
+		}
+		if ( ! $has_own ) {
+			update_post_meta( $id, '_elementor_conditions', $conditions[ $layout['kind'] ] ?? array() );
+		}
 	} else {
 		$opt = array(
 			'header'          => 'ls_tb_header',
@@ -799,7 +848,11 @@ function larijani_import_template( $key, $layout, $assign ) {
 			'error-404'       => 'ls_tb_404',
 		);
 		if ( isset( $opt[ $layout['kind'] ] ) ) {
-			set_theme_mod( $opt[ $layout['kind'] ], $id );
+			$current = (int) get_theme_mod( $opt[ $layout['kind'] ] );
+			// Keep a template the owner picked; only fill an empty or broken slot.
+			if ( ! $current || ! get_post( $current ) || $current === $id ) {
+				set_theme_mod( $opt[ $layout['kind'] ], $id );
+			}
 		}
 	}
 	return $id;

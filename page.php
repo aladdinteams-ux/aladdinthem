@@ -21,12 +21,12 @@ while ( have_posts() ) :
 	?>
 	<div class="ls-root bg-surface-canvas">
 		<section class="w-full py-space-md">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<nav class="flex items-center flex-wrap gap-2 text-on-surface-variant font-body-sm text-body-sm" aria-label="<?php esc_attr_e( 'مسیر صفحه', 'larijani-stone' ); ?>"><?php echo larijani_breadcrumb_html(); // phpcs:ignore ?></nav>
 			</div>
 		</section>
 		<section class="w-full pb-space-2xl">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-surface-card rounded-3xl p-6 sm:p-10 shadow-sm' ); ?>>
 					<h1 class="font-headline-lg text-headline-lg text-surface-dark mb-6"><?php the_title(); ?></h1>
 					<?php if ( has_post_thumbnail() ) : ?>

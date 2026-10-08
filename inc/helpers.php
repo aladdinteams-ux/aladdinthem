@@ -28,6 +28,15 @@ function larijani_option_defaults() {
 		'ls_color_border'        => '#E8ECE6',
 		'ls_color_secondary'     => '#8DA184',
 		'ls_color_text'          => '#2D3748',
+
+		'ls_font_family'         => 'vazirmatn',
+		'ls_font_custom_url'     => '',
+		'ls_font_scale_heading'  => '100',
+		'ls_font_scale_body'     => '100',
+		'ls_font_scale_tablet'   => '100',
+		'ls_font_scale_mobile'   => '100',
+		'ls_container_width'     => '1280',
+		'ls_button_radius'       => '',
 		// Contact.
 		'ls_phone_1'         => '09122302685',
 		'ls_phone_1_label'   => 'مشاوره خط تولید',

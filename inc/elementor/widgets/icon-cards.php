@@ -89,7 +89,7 @@ class Larijani_Widget_Icon_Cards extends Larijani_Widget_Base {
 		if ( 'guide' === $v ) {
 			?>
 			<section class="w-full py-space-xl <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
-				<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+				<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 					<div class="bg-surface-card rounded-2xl p-space-xl shadow-sm">
 						<?php if ( $s['heading_eyebrow'] ) : ?>
 						<div class="flex items-center gap-space-xs text-primary mb-space-xs"><i class="bi bi-journal-bookmark text-[20px]" aria-hidden="true"></i><span class="font-label-nav text-label-nav"><?php echo esc_html( $s['heading_eyebrow'] ); ?></span></div>

@@ -66,6 +66,9 @@ add_action( 'wp_enqueue_scripts', 'larijani_enqueue_assets', 20 );
  * Preload the main font for faster Persian text rendering.
  */
 function larijani_preload_font() {
+	if ( 'vazirmatn' !== larijani_opt( 'font_family' ) && ! ( 'custom' === larijani_opt( 'font_family' ) && ! larijani_font_url() ) ) {
+		return; // Another font is selected: do not download Vazirmatn.
+	}
 	printf(
 		'<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>' . "\n",
 		esc_url( LARIJANI_URI . '/assets/fonts/vazirmatn/Vazirmatn-Variable.woff2' )

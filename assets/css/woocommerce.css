@@ -1,5 +1,5 @@
 /* Larijani Stone – WooCommerce cart, checkout & account styling (RTL). */
-.woocommerce, .woocommerce-page { font-family: 'Vazirmatn', Tahoma, sans-serif; }
+.woocommerce, .woocommerce-page { font-family: var(--ls-font, 'Vazirmatn', Tahoma, sans-serif); }
 .woocommerce-cart .ls-main, .woocommerce-checkout .ls-main, .woocommerce-account .ls-main { padding: 2rem 1rem 4rem; }
 .woocommerce-cart .ls-main > .woocommerce, .woocommerce-checkout .ls-main > .woocommerce, .woocommerce-account .ls-main > .woocommerce,
 .woocommerce-cart .ls-prose, .woocommerce-checkout .ls-prose { max-width: 80rem; margin-inline: auto; }

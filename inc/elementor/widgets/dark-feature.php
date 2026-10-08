@@ -74,7 +74,7 @@ class Larijani_Widget_Dark_Feature extends Larijani_Widget_Base {
 		$ring = $this->on( $s, 'show_ring' );
 		?>
 		<section class="w-full py-space-2xl <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<div class="bg-surface-dark rounded-2xl p-space-lg lg:p-space-xl text-on-tertiary shadow-xl relative overflow-hidden">
 					<div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
 					<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">

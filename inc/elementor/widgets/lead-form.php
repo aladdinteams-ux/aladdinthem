@@ -312,7 +312,7 @@ class Larijani_Widget_Lead_Form extends Larijani_Widget_Base {
 		}
 		?>
 		<section class="w-full py-space-2xl <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<?php if ( 'form' === $s['layout'] ) : ?>
 					<?php echo $form; // phpcs:ignore ?>
 				<?php elseif ( 'split-card' === $s['layout'] ) : ?>

@@ -95,7 +95,7 @@ class Larijani_Widget_Steps extends Larijani_Widget_Base {
 		$cols  = array( 1 => 'md:grid-cols-1', 2 => 'md:grid-cols-2', 3 => 'md:grid-cols-3', 4 => 'md:grid-cols-4', 5 => 'md:grid-cols-5', 6 => 'md:grid-cols-6' );
 		?>
 		<section class="w-full py-space-2xl <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-2xl">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-2xl">
 				<?php echo $this->heading( $s, array( 'mb' => '' ) ); // phpcs:ignore ?>
 				<div class="grid grid-cols-1 <?php echo esc_attr( ( (int) $s['columns_tablet'] > 1 ? 'sm:grid-cols-2 ' : '' ) . ( $cols[ (int) $s['columns'] ] ?? 'md:grid-cols-5' ) ); ?> gap-space-md relative">
 					<?php foreach ( $s['steps'] as $i => $st ) : ?>

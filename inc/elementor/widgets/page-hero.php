@@ -77,7 +77,7 @@ class Larijani_Widget_Page_Hero extends Larijani_Widget_Base {
 		$card = $this->on( $s, 'show_card' );
 		?>
 		<section class="w-full relative overflow-hidden py-space-xl lg:py-space-2xl bg-gradient-to-b from-surface-canvas via-surface to-surface-canvas">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
 					<div class="<?php echo $card ? 'lg:col-span-7' : 'lg:col-span-12'; ?> flex flex-col gap-space-md">
 						<?php if ( $s['badge'] ) : ?>

@@ -118,7 +118,7 @@ class Larijani_Widget_Portfolio extends Larijani_Widget_Base {
 		$cols = array( 1 => 'lg:grid-cols-1', 2 => 'lg:grid-cols-2', 3 => 'lg:grid-cols-3', 4 => 'lg:grid-cols-4' );
 		?>
 		<section class="w-full pb-space-2xl <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>" data-ls-filter-scope data-ls-count-suffix="<?php echo esc_attr( $s['count_suffix'] ); ?>">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<?php if ( $this->on( $s, 'show_filters' ) && count( $filters ) > 1 ) : ?>
 				<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-card p-space-sm rounded-2xl shadow-sm mb-space-xl">
 					<div class="flex items-center gap-space-xs overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 scrollbar-none"><?php echo larijani_filter_buttons( $filters, 'pill' ); // phpcs:ignore ?></div>

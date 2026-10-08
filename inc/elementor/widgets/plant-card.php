@@ -110,6 +110,6 @@ class Larijani_Widget_Plant_Card extends Larijani_Widget_Base {
 			echo $inner; // phpcs:ignore
 			return;
 		}
-		echo '<section class="w-full py-space-xl"><div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">' . $inner . '</div></section>'; // phpcs:ignore
+		echo '<section class="w-full py-space-xl"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">' . $inner . '</div></section>'; // phpcs:ignore
 	}
 }

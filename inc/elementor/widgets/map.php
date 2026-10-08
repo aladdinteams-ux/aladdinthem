@@ -86,7 +86,7 @@ class Larijani_Widget_Map extends Larijani_Widget_Base {
 		$h = larijani_heading_from_settings( $s, array( 'mb' => '' ) );
 		?>
 		<section class="w-full py-space-xl <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<div class="flex flex-col gap-space-lg">
 					<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
 						<div class="flex flex-col gap-space-xs max-w-xl">

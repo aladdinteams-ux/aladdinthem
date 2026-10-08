@@ -27,6 +27,8 @@
   --ls-c-border: #E8ECE6;
   --ls-c-secondary: #8DA184;
   --ls-c-text: #2D3748;
+  /* Typography & layout (Larijani Stone › تایپوگرافی و چیدمان). */
+  --ls-font: 'Vazirmatn', Tahoma, system-ui, sans-serif;
 }
 
 body {
@@ -42,7 +44,7 @@ body {
 
 body.ls-theme {
   margin: 0;
-  font-family: 'Vazirmatn', Tahoma, system-ui, sans-serif;
+  font-family: var(--ls-font);
   background-color: var(--ls-canvas);
   color: var(--ls-text);
   -webkit-font-smoothing: antialiased;
@@ -64,7 +66,7 @@ body.ls-theme ::selection {
   border-style: solid;
   border-color: #e5e7eb;
 }
-:where(.ls-root) { font-family: 'Vazirmatn', Tahoma, system-ui, sans-serif; line-height: 1.5; }
+:where(.ls-root) { font-family: var(--ls-font); line-height: 1.5; }
 :where(.ls-root) :is(h1, h2, h3, h4, h5, h6) { font-size: inherit; font-weight: inherit; margin: 0; line-height: inherit; color: inherit; font-family: inherit; }
 :where(.ls-root) :is(p, blockquote, dl, dd, figure, pre, hr) { margin: 0; }
 /* Long unbroken strings (model codes, URLs) may break instead of widening their container. */

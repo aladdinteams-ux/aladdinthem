@@ -71,7 +71,7 @@ class Larijani_Widget_Contact_Cards extends Larijani_Widget_Base {
 		$cols = array( 1 => 'md:grid-cols-1', 2 => 'md:grid-cols-2', 3 => 'md:grid-cols-3', 4 => 'md:grid-cols-4' );
 		?>
 		<section class="w-full py-space-lg">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<div class="grid grid-cols-1 <?php echo esc_attr( $cols[ (int) $s['columns'] ] ?? 'md:grid-cols-3' ); ?> gap-space-lg">
 					<?php foreach ( $s['items'] as $it ) : ?>
 					<div class="bg-surface-card rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">

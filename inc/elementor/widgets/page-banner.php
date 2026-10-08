@@ -55,7 +55,7 @@ class Larijani_Widget_Page_Banner extends Larijani_Widget_Base {
 		$side  = $this->on( $s, 'show_side' );
 		?>
 		<section class="w-full pb-space-lg">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<div class="bg-surface-dark text-on-tertiary rounded-3xl p-space-lg lg:p-space-2xl relative overflow-hidden shadow-xl">
 					<div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
 					<div class="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-secondary-container/10 blur-2xl pointer-events-none"></div>

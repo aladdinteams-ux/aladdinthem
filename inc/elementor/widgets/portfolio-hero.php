@@ -83,7 +83,7 @@ class Larijani_Widget_Portfolio_Hero extends Larijani_Widget_Base {
 		$icon_tones = array( 'dark' => 'bg-surface-dark text-primary-fixed', 'sage' => 'bg-secondary-container text-on-secondary-container' );
 		?>
 		<section class="relative w-full bg-surface-canvas overflow-hidden pt-space-xl pb-space-2xl">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<?php if ( $s['badge'] ) : ?>
 				<div class="flex items-center flex-wrap gap-space-sm mb-space-md">
 					<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed text-label-badge font-label-badge tracking-wider"><span class="w-2 h-2 rounded-full bg-accent-emerald animate-pulse"></span><?php echo esc_html( $s['badge'] ); ?></span>

@@ -25,6 +25,7 @@ function larijani_settings_tabs() {
 		'ls_footer'  => array( __( 'فوتر', 'larijani-stone' ), 'dashicons-editor-insertmore' ),
 		'ls_blog'    => array( __( 'وبلاگ', 'larijani-stone' ), 'dashicons-welcome-write-blog' ),
 		'ls_forms'   => array( __( 'فرم‌ها', 'larijani-stone' ), 'dashicons-email-alt' ),
+		'ls_style'   => array( __( 'تایپوگرافی و چیدمان', 'larijani-stone' ), 'dashicons-editor-textcolor' ),
 		'ls_builder' => array( __( 'تم‌بیلدر', 'larijani-stone' ), 'dashicons-layout' ),
 	);
 }
@@ -158,6 +159,9 @@ function larijani_settings_save() {
 	$values   = isset( $_POST['ls'] ) && is_array( $_POST['ls'] ) ? wp_unslash( $_POST['ls'] ) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- sanitized per field below.
 	$reset    = ! empty( $_POST['ls_reset'] );
 
+	if ( $reset ) {
+		larijani_settings_backup( wp_list_pluck( wp_list_filter( $fields, array( 0 => $tab ) ), 1 ) );
+	}
 	foreach ( $fields as $f ) {
 		list( $section, $key, , $type ) = $f;
 		if ( $section !== $tab ) {
@@ -177,6 +181,9 @@ function larijani_settings_save() {
 	if ( 'ls_brand' === $tab && larijani_has_elementor() && function_exists( 'larijani_setup_elementor_kit' ) ) {
 		larijani_setup_elementor_kit( true ); // Keep Elementor global colours in sync.
 	}
+	if ( 'ls_style' === $tab && function_exists( 'larijani_sync_kit_font' ) ) {
+		larijani_sync_kit_font();
+	}
 
 	wp_safe_redirect(
 		add_query_arg(
@@ -191,6 +198,102 @@ function larijani_settings_save() {
 	exit;
 }
 add_action( 'admin_post_ls_save_settings', 'larijani_settings_save' );
+
+/**
+ * Keep a copy of the current values before a reset, so it can be undone.
+ *
+ * @param string[] $keys Theme mod keys.
+ */
+function larijani_settings_backup( $keys ) {
+	$mods = array();
+	foreach ( $keys as $key ) {
+		$val = get_theme_mod( $key, null );
+		if ( null !== $val ) {
+			$mods[ $key ] = $val;
+		}
+	}
+	update_option(
+		'larijani_settings_backup',
+		array(
+			'time' => time(),
+			'keys' => array_values( $keys ),
+			'mods' => $mods,
+		),
+		false
+	);
+}
+
+/**
+ * Reset every theme setting (colours, contact, header, footer, typography, builder) to the defaults.
+ */
+function larijani_settings_reset_all() {
+	if ( ! current_user_can( 'edit_theme_options' ) ) {
+		wp_die( esc_html__( 'شما اجازه تغییر تنظیمات قالب را ندارید.', 'larijani-stone' ), 403 );
+	}
+	check_admin_referer( 'ls_reset_all' );
+	$keys = array_merge( wp_list_pluck( larijani_option_fields(), 1 ), wp_list_pluck( larijani_builder_fields(), 1 ) );
+	larijani_settings_backup( $keys );
+	foreach ( $keys as $key ) {
+		remove_theme_mod( $key );
+	}
+	if ( function_exists( 'larijani_sync_kit_font' ) ) {
+		larijani_sync_kit_font();
+	}
+	wp_safe_redirect( admin_url( 'admin.php?page=ls-settings&updated=reset' ) );
+	exit;
+}
+add_action( 'admin_post_ls_reset_all', 'larijani_settings_reset_all' );
+
+/**
+ * Undo the last reset.
+ */
+function larijani_settings_restore() {
+	if ( ! current_user_can( 'edit_theme_options' ) ) {
+		wp_die( esc_html__( 'شما اجازه تغییر تنظیمات قالب را ندارید.', 'larijani-stone' ), 403 );
+	}
+	check_admin_referer( 'ls_restore_settings' );
+	$backup  = get_option( 'larijani_settings_backup' );
+	$allowed = array_merge( wp_list_pluck( larijani_option_fields(), 1 ), wp_list_pluck( larijani_builder_fields(), 1 ) );
+	if ( is_array( $backup ) && ! empty( $backup['mods'] ) ) {
+		foreach ( $backup['mods'] as $key => $val ) {
+			if ( in_array( $key, $allowed, true ) ) {
+				set_theme_mod( $key, $val );
+			}
+		}
+		delete_option( 'larijani_settings_backup' );
+		if ( function_exists( 'larijani_sync_kit_font' ) ) {
+			larijani_sync_kit_font();
+		}
+	}
+	wp_safe_redirect( admin_url( 'admin.php?page=ls-settings&updated=restored' ) );
+	exit;
+}
+add_action( 'admin_post_ls_restore_settings', 'larijani_settings_restore' );
+
+/**
+ * Reset / restore card on the overview tab.
+ */
+function larijani_settings_reset_card() {
+	$backup = get_option( 'larijani_settings_backup' );
+	?>
+	<div class="ls-card">
+		<h2><span class="dashicons dashicons-image-rotate"></span> <?php esc_html_e( 'بازنشانی تنظیمات', 'larijani-stone' ); ?></h2>
+		<p><?php esc_html_e( 'همه تنظیمات قالب (رنگ‌ها، تماس، هدر، فوتر، تایپوگرافی و تم‌بیلدر) به حالت اولیه طرح برمی‌گردد. برگه‌ها، منوها و محتوای سایت تغییر نمی‌کنند و یک نسخه پشتیبان از مقادیر فعلی نگه داشته می‌شود.', 'larijani-stone' ); ?></p>
+		<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+			<input type="hidden" name="action" value="ls_reset_all">
+			<?php wp_nonce_field( 'ls_reset_all' ); ?>
+			<button type="submit" class="button button-link-delete" data-ls-confirm="<?php esc_attr_e( 'همه تنظیمات قالب به پیش‌فرض برگردد؟ (قابل بازگردانی است)', 'larijani-stone' ); ?>"><?php esc_html_e( 'بازنشانی همه تنظیمات', 'larijani-stone' ); ?></button>
+		</form>
+		<?php if ( is_array( $backup ) && ! empty( $backup['mods'] ) ) : ?>
+		<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" style="margin-top:8px">
+			<input type="hidden" name="action" value="ls_restore_settings">
+			<?php wp_nonce_field( 'ls_restore_settings' ); ?>
+			<button type="submit" class="button"><?php echo esc_html( sprintf( /* translators: %s: date */ __( 'بازگردانی تنظیمات قبل از بازنشانی (%s)', 'larijani-stone' ), larijani_jalali_date( (int) $backup['time'] ) ) ); ?></button>
+		</form>
+		<?php endif; ?>
+	</div>
+	<?php
+}
 
 /**
  * Render one field.
@@ -348,7 +451,7 @@ function larijani_settings_page() {
 			</div>
 		</div>
 		<?php if ( $updated ) : ?>
-		<div class="notice notice-success is-dismissible"><p><?php echo 'reset' === $updated ? esc_html__( 'تنظیمات این بخش به حالت پیش‌فرض برگشت.', 'larijani-stone' ) : esc_html__( 'تنظیمات ذخیره شد.', 'larijani-stone' ); ?></p></div>
+		<div class="notice notice-success is-dismissible"><p><?php echo 'reset' === $updated ? esc_html__( 'تنظیمات به حالت پیش‌فرض برگشت. نسخه قبلی از «پیشخوان قالب › بازنشانی تنظیمات» قابل بازگردانی است.', 'larijani-stone' ) : ( 'restored' === $updated ? esc_html__( 'تنظیمات قبلی بازگردانی شد.', 'larijani-stone' ) : esc_html__( 'تنظیمات ذخیره شد.', 'larijani-stone' ) ); ?></p></div>
 		<?php endif; ?>
 		<nav class="nav-tab-wrapper ls-tabs">
 			<?php foreach ( $tabs as $slug => $t ) : ?>
@@ -358,6 +461,9 @@ function larijani_settings_page() {
 		<?php
 		if ( 'overview' === $tab ) {
 			larijani_settings_overview();
+			echo '<div class="ls-cards">';
+			larijani_settings_reset_card();
+			echo '</div>';
 			echo '</div>';
 			return;
 		}
@@ -375,6 +481,16 @@ function larijani_settings_page() {
 					: esc_html__( 'بدون المنتور پرو هم می‌توانید برای هدر، فوتر، نوشته‌ها، آرشیو، محصولات و ۴۰۴ یک قالب ذخیره‌شده المنتور انتخاب کنید.', 'larijani-stone' );
 				?>
 			</p>
+			<?php endif; ?>
+			<?php if ( 'ls_brand' === $tab ) : ?>
+			<p class="description">
+				<?php esc_html_e( 'لوگو و آیکون سایت (فاوآیکن) از تنظیمات استاندارد وردپرس خوانده می‌شوند:', 'larijani-stone' ); ?>
+				<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=custom_logo' ) ); ?>"><?php esc_html_e( 'تغییر لوگو', 'larijani-stone' ); ?></a> |
+				<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[control]=site_icon' ) ); ?>"><?php esc_html_e( 'تغییر آیکون سایت', 'larijani-stone' ); ?></a>
+			</p>
+			<?php endif; ?>
+			<?php if ( 'ls_style' === $tab ) : ?>
+			<p class="description"><?php esc_html_e( 'مقادیر «طرح اصلی» ظاهر فعلی قالب را دقیقاً حفظ می‌کنند. این تنظیمات روی بخش‌های قالب و ویجت‌های لاریجانی اعمال می‌شود؛ تنظیماتی که در تب Style المنتور برای یک ویجت مشخص کرده‌اید همیشه اولویت دارند. عرض بخش‌های کانتینری المنتور از تنظیمات هر بخش در المنتور تعیین می‌شود.', 'larijani-stone' ); ?></p>
 			<?php endif; ?>
 			<table class="form-table" role="presentation">
 				<?php

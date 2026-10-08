@@ -80,6 +80,81 @@ function larijani_option_fields() {
 			array( 'ls_blog', 'ls_blog_show_views', __( 'نمایش تعداد بازدید', 'larijani-stone' ), 'checkbox' ),
 
 			array( 'ls_forms', 'ls_leads_email', __( 'ایمیل دریافت درخواست‌ها (خالی = ایمیل مدیر)', 'larijani-stone' ), 'email' ),
+
+			array(
+				'ls_style',
+				'ls_font_family',
+				__( 'فونت سایت', 'larijani-stone' ),
+				'select',
+				array(
+					'vazirmatn' => __( 'وزیرمتن (همراه قالب، طرح اصلی)', 'larijani-stone' ),
+					'system'    => __( 'فونت سیستم (Tahoma / Segoe UI؛ بدون دانلود فونت)', 'larijani-stone' ),
+					'custom'    => __( 'فونت دلخواه (فایل WOFF2 خودتان)', 'larijani-stone' ),
+				),
+			),
+			array( 'ls_style', 'ls_font_custom_url', __( 'نشانی فایل فونت دلخواه (WOFF2 یا WOFF، بارگذاری‌شده در همین سایت)', 'larijani-stone' ), 'url' ),
+			array( 'ls_style', 'ls_font_scale_heading', __( 'اندازه تیترها', 'larijani-stone' ), 'select', array(
+					'85'  => '۸۵٪',
+					'90'  => '۹۰٪',
+					'95'  => '۹۵٪',
+					'100' => __( '۱۰۰٪ (طرح اصلی)', 'larijani-stone' ),
+					'105' => '۱۰۵٪',
+					'110' => '۱۱۰٪',
+					'120' => '۱۲۰٪',
+				) ),
+			array( 'ls_style', 'ls_font_scale_body', __( 'اندازه متن‌ها', 'larijani-stone' ), 'select', array(
+					'85'  => '۸۵٪',
+					'90'  => '۹۰٪',
+					'95'  => '۹۵٪',
+					'100' => __( '۱۰۰٪ (طرح اصلی)', 'larijani-stone' ),
+					'105' => '۱۰۵٪',
+					'110' => '۱۱۰٪',
+					'120' => '۱۲۰٪',
+				) ),
+			array( 'ls_style', 'ls_font_scale_tablet', __( 'ضریب اندازه فونت در تبلت (۷۶۸ تا ۱۰۲۳ پیکسل)', 'larijani-stone' ), 'select', array(
+					'85'  => '۸۵٪',
+					'90'  => '۹۰٪',
+					'95'  => '۹۵٪',
+					'100' => __( '۱۰۰٪ (طرح اصلی)', 'larijani-stone' ),
+					'105' => '۱۰۵٪',
+					'110' => '۱۱۰٪',
+					'120' => '۱۲۰٪',
+				) ),
+			array( 'ls_style', 'ls_font_scale_mobile', __( 'ضریب اندازه فونت در موبایل (کمتر از ۷۶۸ پیکسل)', 'larijani-stone' ), 'select', array(
+					'85'  => '۸۵٪',
+					'90'  => '۹۰٪',
+					'95'  => '۹۵٪',
+					'100' => __( '۱۰۰٪ (طرح اصلی)', 'larijani-stone' ),
+					'105' => '۱۰۵٪',
+					'110' => '۱۱۰٪',
+					'120' => '۱۲۰٪',
+				) ),
+			array(
+				'ls_style',
+				'ls_container_width',
+				__( 'عرض محتوای صفحات قالب', 'larijani-stone' ),
+				'select',
+				array(
+					'1140' => '۱۱۴۰px',
+					'1200' => '۱۲۰۰px',
+					'1280' => __( '۱۲۸۰px (طرح اصلی)', 'larijani-stone' ),
+					'1360' => '۱۳۶۰px',
+					'1440' => '۱۴۴۰px',
+				),
+			),
+			array(
+				'ls_style',
+				'ls_button_radius',
+				__( 'گردی گوشه دکمه‌ها', 'larijani-stone' ),
+				'select',
+				array(
+					''     => __( 'طرح اصلی', 'larijani-stone' ),
+					'0'    => __( 'بدون گردی', 'larijani-stone' ),
+					'6'    => __( 'کم (۶px)', 'larijani-stone' ),
+					'12'   => __( 'متوسط (۱۲px)', 'larijani-stone' ),
+					'9999' => __( 'کپسولی', 'larijani-stone' ),
+				),
+			),
 		)
 	);
 }
@@ -107,6 +182,7 @@ function larijani_customize_register( $wp_customize ) {
 		'ls_footer'  => __( 'فوتر', 'larijani-stone' ),
 		'ls_blog'    => __( 'وبلاگ', 'larijani-stone' ),
 		'ls_forms'   => __( 'فرم‌ها و درخواست‌ها', 'larijani-stone' ),
+		'ls_style'   => __( 'تایپوگرافی و چیدمان', 'larijani-stone' ),
 	);
 	foreach ( $sections as $id => $title ) {
 		$wp_customize->add_section( $id, array( 'title' => $title, 'panel' => 'ls_panel' ) );
@@ -200,5 +276,50 @@ function larijani_customizer_css() {
 			$css .= $var . ':' . $val . ';';
 		}
 	}
-	return $css ? ':root{' . $css . '}' : '';
+	// Typography & layout: only values that differ from the original design are printed.
+	$font_face = '';
+	$family    = larijani_opt( 'font_family' );
+	if ( 'system' === $family ) {
+		$css .= "--ls-font:Tahoma,'Segoe UI',system-ui,-apple-system,sans-serif;";
+	} elseif ( 'custom' === $family && larijani_font_url() ) {
+		$font_face = "@font-face{font-family:'LarijaniCustom';src:url('" . esc_url( larijani_font_url() ) . "');font-weight:100 900;font-display:swap}";
+		$css      .= "--ls-font:'LarijaniCustom','Vazirmatn',Tahoma,system-ui,sans-serif;";
+	}
+	foreach ( array( '--ls-fs-h' => 'font_scale_heading', '--ls-fs-b' => 'font_scale_body' ) as $var => $key ) {
+		$scale = absint( larijani_opt( $key ) );
+		if ( $scale && 100 !== $scale ) {
+			$css .= $var . ':' . ( $scale / 100 ) . ';';
+		}
+	}
+	$width = absint( larijani_opt( 'container_width' ) );
+	if ( $width && 1280 !== $width ) {
+		$css .= '--ls-container:' . $width . 'px;';
+	}
+	$out = $font_face . ( $css ? ':root{' . $css . '}' : '' );
+	foreach ( array( 'font_scale_tablet' => '(min-width:768px) and (max-width:1023.98px)', 'font_scale_mobile' => '(max-width:767.98px)' ) as $key => $media ) {
+		$scale = absint( larijani_opt( $key ) );
+		if ( $scale && 100 !== $scale ) {
+			$out .= '@media ' . $media . '{:root{--ls-fs-r:' . ( $scale / 100 ) . '}}';
+		}
+	}
+	$radius = larijani_opt( 'button_radius' );
+	if ( '' !== (string) $radius && in_array( (string) $radius, array( '0', '6', '12', '9999' ), true ) ) {
+		// Theme buttons only; Elementor's own Button widget keeps its per-widget Style settings.
+		$out .= '.ls-root :is(button[type=submit],a[class~="bg-primary-container"],a[class~="bg-primary"],button[class~="bg-primary-container"]){border-radius:' . absint( $radius ) . 'px}';
+	}
+	return $out;
+}
+
+/**
+ * Validated custom font URL (same site, WOFF2/WOFF only).
+ *
+ * @return string
+ */
+function larijani_font_url() {
+	$url = (string) larijani_opt( 'font_custom_url' );
+	if ( ! $url || ! preg_match( '/\.(woff2?)(\?.*)?$/i', wp_parse_url( $url, PHP_URL_PATH ) . '' ) || preg_match( '/[\s\'"()\\\\]/', $url ) ) {
+		return '';
+	}
+	$host = wp_parse_url( $url, PHP_URL_HOST );
+	return ( ! $host || wp_parse_url( home_url(), PHP_URL_HOST ) === $host ) ? $url : '';
 }

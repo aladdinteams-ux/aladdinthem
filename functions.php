@@ -31,6 +31,7 @@ require_once LARIJANI_DIR . '/inc/elementor/fallback.php';
 require_once LARIJANI_DIR . '/inc/elementor/loader.php';
 require_once LARIJANI_DIR . '/inc/demo/importer.php';
 require_once LARIJANI_DIR . '/inc/admin/settings.php';
+require_once LARIJANI_DIR . '/inc/admin/setup-wizard.php';
 require_once LARIJANI_DIR . '/inc/migrations.php';
 require_once LARIJANI_DIR . '/inc/compat.php';
 

@@ -99,7 +99,7 @@ class Larijani_Widget_Performance extends Larijani_Widget_Base {
 		<section class="w-full bg-surface-dark text-on-tertiary py-space-2xl relative overflow-hidden">
 			<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary-container/20 blur-3xl pointer-events-none"></div>
 			<div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin relative z-10">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin relative z-10">
 				<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
 					<div class="lg:col-span-5 flex flex-col gap-space-md">
 						<?php if ( $s['eyebrow'] ) : ?><span class="text-secondary-fixed text-label-badge font-label-badge tracking-wider"><?php echo esc_html( $s['eyebrow'] ); ?></span><?php endif; ?>

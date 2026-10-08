@@ -22,12 +22,12 @@ while ( have_posts() ) :
 	?>
 	<div class="ls-root bg-surface-canvas">
 		<section class="w-full py-space-md">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<nav class="flex items-center flex-wrap gap-2 text-on-surface-variant font-body-sm text-body-sm"><?php echo larijani_breadcrumb_html(); // phpcs:ignore ?></nav>
 			</div>
 		</section>
 		<section class="w-full pb-space-2xl">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
 				<div class="lg:col-span-8 flex flex-col gap-space-lg">
 					<div class="relative rounded-3xl overflow-hidden shadow-xl aspect-[16/10] bg-surface-dark">
 						<?php the_post_thumbnail( 'large', array( 'class' => 'w-full h-full object-cover' ) ); ?>

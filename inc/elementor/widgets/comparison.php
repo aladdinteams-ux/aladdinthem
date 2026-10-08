@@ -78,7 +78,7 @@ class Larijani_Widget_Comparison extends Larijani_Widget_Base {
 		$tones = array( 'dark' => 'text-surface-dark', 'emerald' => 'text-accent-emerald', 'primary' => 'text-primary' );
 		?>
 		<section class="w-full py-space-2xl <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
 				<?php echo $this->heading( $s, array( 'mb' => '' ) ); // phpcs:ignore ?>
 				<div class="w-full overflow-x-auto bg-surface-card rounded-2xl shadow-sm">
 					<table class="w-full text-right border-collapse min-w-[640px]">

@@ -64,7 +64,7 @@ class Larijani_Widget_Breadcrumb extends Larijani_Widget_Base {
 		}
 		?>
 		<section class="w-full <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?> py-space-md <?php echo $this->on( $s, 'bordered' ) ? 'border-b border-border-subtle' : ''; ?>">
-			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
+			<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
 				<div class="flex flex-wrap items-center justify-between gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
 					<nav aria-label="<?php esc_attr_e( 'مسیر صفحه', 'larijani-stone' ); ?>" class="flex items-center flex-wrap gap-space-xs"><?php echo larijani_breadcrumb_html( array( 'separator' => $s['separator'], 'items' => $items, 'current_class' => 'font-bold text-on-surface truncate max-w-xs sm:max-w-md' ) ); // phpcs:ignore ?></nav>
 					<?php if ( 'status' === $s['right_style'] && $s['status_text'] ) : ?>

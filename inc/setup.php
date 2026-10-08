@@ -167,20 +167,6 @@ function larijani_track_views() {
 add_action( 'template_redirect', 'larijani_track_views' );
 
 /**
- * Allow SVG logo uploads for administrators only.
- *
- * @param array $mimes Mimes.
- * @return array
- */
-function larijani_upload_mimes( $mimes ) {
-	if ( current_user_can( 'manage_options' ) ) {
-		$mimes['svg'] = 'image/svg+xml';
-	}
-	return $mimes;
-}
-add_filter( 'upload_mimes', 'larijani_upload_mimes' );
-
-/**
  * Show an admin notice recommending Elementor.
  */
 function larijani_admin_notice_plugins() {

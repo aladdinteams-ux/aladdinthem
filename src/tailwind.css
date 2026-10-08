@@ -143,7 +143,14 @@ body.ls-theme ::selection {
 }
 
 /* Sticky header offset for anchor links. */
-html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+html { scroll-padding-top: 6rem; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+@media (prefers-reduced-motion: reduce) {
+  .ls-root *, .ls-root *::before, .ls-root *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+/* WordPress core classes (comments by the post author, gallery captions). */
+.bypostauthor { --ls-by-post-author: 1; } /* Author names are already emphasised by the comment template. */
+.gallery-caption { display: block; }
 
 /* Drawer / modal states toggled by assets/js/theme.js. */
 .ls-root .ls-drawer { visibility: hidden; transition: transform .3s ease, visibility 0s linear .3s; }

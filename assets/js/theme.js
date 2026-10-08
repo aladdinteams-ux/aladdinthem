@@ -23,6 +23,9 @@
 		parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 		return toFa(parts.join('.'));
 	}
+	function reducedMotion() {
+		return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+	}
 	function $all(root, sel) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
 	function once(el, key) {
 		var k = 'lsInit' + key;
@@ -95,6 +98,22 @@
 	/* ------------------------------------------------------------------
 	 * AJAX lead forms.
 	 * ---------------------------------------------------------------- */
+	// Signed single-use token (Larijani Stone Core). Fetched on the first
+	// interaction, so full-page caches never serve a stale one.
+	function fetchToken(form) {
+		var input = form.querySelector('[data-ls-token]');
+		if (!input) { return Promise.resolve(); }
+		if (input.value) { return Promise.resolve(); }
+		if (form._lsTokenReq) { return form._lsTokenReq; }
+		var body = new FormData();
+		body.set('action', 'larijani_form_token');
+		form._lsTokenReq = fetch(CFG.ajaxUrl, { method: 'POST', body: body, credentials: 'same-origin' })
+			.then(function (r) { return r.json(); })
+			.then(function (res) { if (res && res.success && res.data) { input.value = res.data.token; } })
+			.catch(function () {})
+			.then(function () { form._lsTokenReq = null; });
+		return form._lsTokenReq;
+	}
 	function initForms(root) {
 		$all(root, 'form[data-ls-form]').forEach(function (form) {
 			if (!once(form, 'Form')) { return; }
@@ -104,10 +123,72 @@
 					if (out) { out.textContent = Array.prototype.map.call(input.files, function (f) { return f.name; }).join('، '); }
 				});
 			});
+			['focusin', 'pointerdown', 'touchstart'].forEach(function (ev) {
+				form.addEventListener(ev, function () { fetchToken(form); }, { passive: true });
+			});
+			var err = form.querySelector('[data-ls-error]');
+			var ok = form.querySelector('[data-ls-success]');
+			var btn = form.querySelector('[type="submit"]');
+			function showError(msg) {
+				if (err) { err.textContent = msg || T.error || 'Error'; err.classList.remove('hidden'); }
+			}
+			function done() {
+				form.classList.remove('is-loading');
+				form.removeAttribute('aria-busy');
+				form._lsBusy = false;
+				if (btn) { btn.disabled = false; }
+			}
+			function send(retries) {
+				var data = new FormData(form);
+				if (!data.get('action')) { data.set('action', 'larijani_lead'); }
+				data.set('ls_page', window.location.href);
+				$all(form, 'input[type="tel"]').forEach(function (f) { if (f.name) { data.set(f.name, toEn(f.value)); } });
+				fetch(CFG.ajaxUrl, { method: 'POST', body: data, credentials: 'same-origin' })
+					.then(function (r) { return r.json().catch(function () { return { success: false }; }); })
+					.then(function (res) {
+						var info = (res && res.data) || {};
+						var tokenEl = form.querySelector('[data-ls-token]');
+						if (!res || !res.success) {
+							// Minimum fill-in time not reached yet: wait and resend once.
+							if (info.code === 'too_fast' && retries > 0) {
+								setTimeout(function () { send(retries - 1); }, (Math.max(1, info.retry || 1) * 1000) + 250);
+								return;
+							}
+							// Token expired (e.g. tab left open for hours): get a new one and resend.
+							if (info.code === 'expired' && tokenEl && retries > 0) {
+								tokenEl.value = '';
+								fetchToken(form).then(function () { send(retries - 1); });
+								return;
+							}
+							done();
+							showError(info.message);
+							if (info.field) {
+								var bad = form.querySelector('[name="fields[' + info.field + ']"], [name="fields[' + info.field + '][]"]');
+								if (bad) { bad.focus(); }
+							}
+							return;
+						}
+						done();
+						if (tokenEl) { tokenEl.value = ''; } // Single use: the next interaction fetches a new one.
+						var tracking = info.tracking || '';
+						if (ok) {
+							$all(ok, '[data-ls-success-text]').forEach(function (s) {
+								s.textContent = s.getAttribute('data-ls-success-text').replace('{tracking}', tracking);
+							});
+							ok.classList.remove('hidden');
+							if (ok.classList.contains('items-start') || ok.classList.contains('gap-space-sm')) { ok.classList.add('flex'); }
+							ok.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'nearest' });
+						}
+						form.reset();
+						$all(form, '[data-ls-file-names]').forEach(function (n) { n.textContent = ''; });
+						if (btn && form.querySelectorAll('input:not([type=hidden])').length === 1) { btn.disabled = true; }
+						document.dispatchEvent(new CustomEvent('ls:lead', { detail: { form: form, tracking: tracking } }));
+					})
+					.catch(function () { done(); showError(); });
+			}
 			form.addEventListener('submit', function (e) {
 				e.preventDefault();
-				var err = form.querySelector('[data-ls-error]');
-				var ok = form.querySelector('[data-ls-success]');
+				if (form._lsBusy) { return; } // Prevent double submission.
 				if (err) { err.classList.add('hidden'); err.textContent = ''; }
 				var missing = $all(form, '[required]').filter(function (f) {
 					if (f.type === 'checkbox') { return !f.checked; }
@@ -115,42 +196,14 @@
 				});
 				if (missing.length) {
 					missing[0].focus();
-					if (err) { err.textContent = T.required || 'Required'; err.classList.remove('hidden'); }
+					showError(T.required || 'Required');
 					return;
 				}
-				var data = new FormData(form);
-				data.set('action', 'ls_lead');
-				data.set('ls_page', window.location.href);
-				$all(form, 'input[type="tel"]').forEach(function (f) { if (f.name) { data.set(f.name, toEn(f.value)); } });
+				form._lsBusy = true;
 				form.classList.add('is-loading');
-				var btn = form.querySelector('[type="submit"]');
-				fetch(CFG.ajaxUrl, { method: 'POST', body: data, credentials: 'same-origin' })
-					.then(function (r) { return r.json().catch(function () { return { success: false }; }); })
-					.then(function (res) {
-						form.classList.remove('is-loading');
-						if (res && res.success) {
-							var tracking = res.data && res.data.tracking ? res.data.tracking : '';
-							if (ok) {
-								$all(ok, '[data-ls-success-text]').forEach(function (s) {
-									s.textContent = s.getAttribute('data-ls-success-text').replace('{tracking}', tracking);
-								});
-								ok.classList.remove('hidden');
-								if (ok.classList.contains('items-start') || ok.classList.contains('gap-space-sm')) { ok.classList.add('flex'); }
-								ok.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-							}
-							form.reset();
-							$all(form, '[data-ls-file-names]').forEach(function (n) { n.textContent = ''; });
-							if (btn && form.querySelectorAll('input:not([type=hidden])').length === 1) { btn.disabled = true; }
-							document.dispatchEvent(new CustomEvent('ls:lead', { detail: { form: form, tracking: tracking } }));
-						} else if (err) {
-							err.textContent = (res && res.data && res.data.message) || T.error || 'Error';
-							err.classList.remove('hidden');
-						}
-					})
-					.catch(function () {
-						form.classList.remove('is-loading');
-						if (err) { err.textContent = T.error || 'Error'; err.classList.remove('hidden'); }
-					});
+				form.setAttribute('aria-busy', 'true');
+				if (btn) { btn.disabled = true; }
+				fetchToken(form).then(function () { send(2); });
 			});
 		});
 	}
@@ -422,7 +475,7 @@
 					if (!track || !track.firstElementChild) { return; }
 					var step = track.firstElementChild.getBoundingClientRect().width + 24;
 					// RTL: "next" scrolls toward the left (negative scrollLeft in modern browsers).
-					track.scrollBy({ left: b.getAttribute('data-ls-slide') === 'next' ? -step : step, behavior: 'smooth' });
+					track.scrollBy({ left: b.getAttribute('data-ls-slide') === 'next' ? -step : step, behavior: reducedMotion() ? 'auto' : 'smooth' });
 				});
 			});
 		});
@@ -455,6 +508,8 @@
 		var els = $all(root, '[data-ls-counter], [data-ls-ring], [data-ls-bar]').filter(function (el) { return once(el, 'Reveal'); });
 		if (!els.length) { return; }
 		var inEditor = document.body.classList.contains('elementor-editor-active');
+		// Reduced motion: keep the final values, skip the animation.
+		if (reducedMotion()) { return; }
 		els.forEach(function (el) {
 			if (el.hasAttribute('data-ls-ring')) { el.style.strokeDashoffset = el.getAttribute('stroke-dasharray'); }
 			if (el.hasAttribute('data-ls-bar')) { el.dataset.w = el.style.width; el.style.width = '0%'; }

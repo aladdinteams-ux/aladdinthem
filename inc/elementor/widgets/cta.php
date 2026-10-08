@@ -117,8 +117,19 @@ class Larijani_Widget_CTA extends Larijani_Widget_Base {
 		ob_start();
 		?>
 		<form class="flex <?php echo 'inline' === $layout ? 'flex-col sm:flex-row' : 'flex-col'; ?> gap-2" data-ls-form>
-			<?php echo larijani_form_hidden_fields( $s['form_name'] ); // phpcs:ignore ?>
-			<input type="hidden" name="labels[phone]" value="<?php esc_attr_e( 'شماره تماس', 'larijani-stone' ); ?>"><input type="hidden" name="types[phone]" value="tel">
+			<?php
+			echo larijani_form_hidden_fields( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built from escaped parts.
+				$s['form_name'],
+				array(
+					'phone' => array(
+						'label'    => __( 'شماره تماس', 'larijani-stone' ),
+						// The inline variant is a free text box: accept a phone number or an e-mail.
+						'type'     => 'inline' === $layout ? 'contact' : 'tel',
+						'required' => true,
+					),
+				)
+			);
+			?>
 			<?php if ( 'inline' === $layout ) : ?>
 			<input class="flex-1 px-4 py-3 sm:py-3.5 rounded-xl bg-white text-gray-900 placeholder:text-gray-400 text-xs sm:text-sm focus:ring-2 focus:ring-primary-container border-0" name="fields[phone]" placeholder="<?php echo esc_attr( $s['form_placeholder'] ); ?>" aria-label="<?php echo esc_attr( $s['form_placeholder'] ? $s['form_placeholder'] : __( 'شماره تماس', 'larijani-stone' ) ); ?>" type="text" required>
 			<button class="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl bg-primary-container hover:bg-primary text-white font-bold text-xs sm:text-sm shadow-md transition whitespace-nowrap" type="submit"><?php echo esc_html( $s['form_button'] ); ?></button>

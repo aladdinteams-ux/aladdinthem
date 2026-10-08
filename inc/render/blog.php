@@ -421,8 +421,18 @@ function larijani_render_newsletter( $s = array() ) {
 		<div class="flex items-center gap-2 mb-2"><?php echo larijani_icon( $s['icon'], 'text-primary text-base' ); // phpcs:ignore ?><h2 class="font-headline-sm text-headline-sm text-on-surface"><?php echo esc_html( $s['title'] ); ?></h2></div>
 		<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4"><?php echo esc_html( $s['desc'] ); ?></p>
 		<form class="flex flex-col gap-3" data-ls-form>
-			<?php echo larijani_form_hidden_fields( $s['title'] ); // phpcs:ignore ?>
-			<input type="hidden" name="labels[phone]" value="<?php esc_attr_e( 'شماره همراه', 'larijani-stone' ); ?>"><input type="hidden" name="types[phone]" value="tel">
+			<?php
+			echo larijani_form_hidden_fields( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built from escaped parts.
+				$s['title'],
+				array(
+					'phone' => array(
+						'label'    => __( 'شماره همراه', 'larijani-stone' ),
+						'type'     => 'tel',
+						'required' => true,
+					),
+				)
+			);
+			?>
 			<input class="w-full px-4 py-2.5 rounded-xl bg-surface-canvas text-on-surface placeholder:text-outline font-body-md text-body-md focus:bg-white shadow-inner" name="fields[phone]" aria-label="<?php esc_attr_e( 'شماره همراه', 'larijani-stone' ); ?>" placeholder="<?php echo esc_attr( $s['placeholder'] ); ?>" required type="tel">
 			<button class="w-full py-2.5 rounded-xl bg-primary-container hover:bg-primary text-white font-headline-sm text-headline-sm transition-all shadow-sm" type="submit"><?php echo esc_html( $s['button'] ); ?></button>
 			<div class="hidden text-center font-body-sm text-body-sm text-accent-emerald" data-ls-success><?php echo esc_html( $s['success'] ); ?></div>

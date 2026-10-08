@@ -637,7 +637,11 @@ function larijani_run_import( $parts = array( 'pages', 'front', 'templates', 'as
 		$log[] = sprintf( /* translators: %d count */ __( '%d مقاله نمونه ساخته شد.', 'larijani-stone' ), larijani_import_posts() );
 	}
 	if ( in_array( 'projects', $parts, true ) ) {
-		$log[] = sprintf( /* translators: %d count */ __( '%d نمونه‌کار ساخته شد.', 'larijani-stone' ), larijani_import_projects() );
+		if ( post_type_exists( 'ls_project' ) ) {
+			$log[] = sprintf( /* translators: %d count */ __( '%d نمونه‌کار ساخته شد.', 'larijani-stone' ), larijani_import_projects() );
+		} else {
+			$log[] = __( 'نمونه‌کارها ساخته نشدند: افزونه همراه «Larijani Stone Core» فعال نیست. پس از فعال‌سازی آن، راه‌اندازی را دوباره اجرا کنید (موارد موجود تکراری ساخته نمی‌شوند).', 'larijani-stone' );
+		}
 	}
 	if ( in_array( 'products', $parts, true ) && larijani_has_woo() ) {
 		$log[] = sprintf( /* translators: %d count */ __( '%d محصول نمونه ساخته شد.', 'larijani-stone' ), larijani_import_products() );
@@ -1063,6 +1067,9 @@ function larijani_demo_comments( $post_id ) {
  * @return int
  */
 function larijani_import_projects() {
+	if ( ! post_type_exists( 'ls_project' ) || ! taxonomy_exists( 'ls_project_cat' ) ) {
+		return 0;
+	}
 	$cats  = array(
 		'facade'     => 'نمای مدرن و سنگ سه‌بعدی',
 		'paving'     => 'موزاییک و واش‌بتن',

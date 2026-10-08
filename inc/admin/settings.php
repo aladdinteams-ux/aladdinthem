@@ -260,7 +260,7 @@ function larijani_settings_overview() {
 			'order'          => 'ASC',
 		)
 	);
-	$leads = wp_count_posts( 'ls_lead' );
+	$leads = post_type_exists( 'ls_lead' ) ? wp_count_posts( 'ls_lead' ) : null;
 	?>
 	<div class="ls-cards">
 		<div class="ls-card">
@@ -280,9 +280,13 @@ function larijani_settings_overview() {
 		</div>
 		<div class="ls-card">
 			<h2><span class="dashicons dashicons-email-alt"></span> <?php esc_html_e( 'درخواست‌های مشتریان', 'larijani-stone' ); ?></h2>
+			<?php if ( $leads ) : ?>
 			<p class="ls-big"><?php echo esc_html( larijani_fa_num( (int) ( $leads->private ?? 0 ) ) ); ?></p>
 			<p><?php esc_html_e( 'فرم‌های تماس، مشاوره و استعلام قیمت در این بخش ذخیره و به ایمیل شما ارسال می‌شوند.', 'larijani-stone' ); ?></p>
 			<a class="button button-primary" href="<?php echo esc_url( admin_url( 'edit.php?post_type=ls_lead' ) ); ?>"><?php esc_html_e( 'مشاهده درخواست‌ها', 'larijani-stone' ); ?></a>
+			<?php else : ?>
+			<p><?php esc_html_e( 'برای ذخیره امن درخواست‌ها و فایل‌های مشتریان، افزونه همراه «Larijani Stone Core» را نصب و فعال کنید.', 'larijani-stone' ); ?></p>
+			<?php endif; ?>
 		</div>
 		<div class="ls-card">
 			<h2><span class="dashicons dashicons-admin-tools"></span> <?php esc_html_e( 'راه‌اندازی خودکار', 'larijani-stone' ); ?></h2>

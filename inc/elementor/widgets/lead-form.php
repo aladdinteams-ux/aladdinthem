@@ -131,10 +131,24 @@ class Larijani_Widget_Lead_Form extends Larijani_Widget_Base {
 		$input_bg = 'canvas' === $s['card_style'] ? 'bg-surface-card shadow-sm' : 'bg-surface-canvas';
 		$base     = 'w-full ' . $input_bg . ' text-surface-dark rounded-xl font-body-md text-body-md placeholder:text-outline-variant focus:bg-white focus:shadow-sm focus:ring-2 focus:ring-primary-container/30 transition-all';
 		$uid      = $this->get_id();
+		$schema   = array();
+		foreach ( $s['fields'] as $i => $f ) {
+			$schema[ $f['name'] ? sanitize_key( $f['name'] ) : 'field_' . $i ] = array(
+				'label'    => $f['label'],
+				'type'     => $f['type'],
+				'required' => 'yes' === $f['required'],
+				'options'  => in_array( $f['type'], array( 'select', 'checkboxes' ), true ) ? array_map(
+					function ( $opt ) {
+						return ltrim( $opt, '*' );
+					},
+					larijani_lines( $f['options'] )
+				) : array(),
+			);
+		}
 		ob_start();
 		?>
 		<form class="flex flex-col gap-space-md" data-ls-form enctype="multipart/form-data" novalidate>
-			<?php echo larijani_form_hidden_fields( $s['form_name'] ); // phpcs:ignore ?>
+			<?php echo larijani_form_hidden_fields( $s['form_name'], $schema ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built from escaped parts. ?>
 			<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
 			<?php foreach ( $s['fields'] as $i => $f ) : ?>
 				<?php
@@ -147,8 +161,6 @@ class Larijani_Widget_Lead_Form extends Larijani_Widget_Base {
 				$align = 'yes' === $f['ltr'] ? ' text-right' : '';
 				?>
 				<div class="flex flex-col gap-1.5 <?php echo esc_attr( $span ); ?>">
-					<input type="hidden" name="labels[<?php echo esc_attr( $key ); ?>]" value="<?php echo esc_attr( wp_strip_all_tags( $f['label'] ) ); ?>">
-					<input type="hidden" name="types[<?php echo esc_attr( $key ); ?>]" value="<?php echo esc_attr( $f['type'] ); ?>">
 					<?php if ( 'consent' !== $f['type'] ) : ?>
 					<label class="font-label-nav text-label-nav text-surface-dark flex items-center gap-1" for="<?php echo esc_attr( $id ); ?>"><span><?php echo esc_html( $f['label'] ); ?></span><?php if ( $req ) : ?><span class="text-error">*</span><?php endif; ?></label>
 					<?php endif; ?>

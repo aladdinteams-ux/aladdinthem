@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return string
  */
-function ls_blog_url() {
+function larijani_blog_url() {
 	$id = (int) get_option( 'page_for_posts' );
 	return $id ? get_permalink( $id ) : home_url( '/' );
 }
@@ -22,18 +22,18 @@ function ls_blog_url() {
  *
  * @param array $s Settings.
  */
-function ls_render_blog_hero( $s = array() ) {
+function larijani_render_blog_hero( $s = array() ) {
 	$s = wp_parse_args(
 		$s,
 		array(
-			'badge'          => __( 'مرجع مهندسی سنگ مصنوعی و افزودنی‌های بتن', 'larijani' ),
+			'badge'          => __( 'مرجع مهندسی سنگ مصنوعی و افزودنی‌های بتن', 'larijani-stone' ),
 			'title'          => '',
 			'desc'           => '',
 			'show_search'    => 'yes',
-			'search_placeholder' => __( 'جستجو در بین مقالات، فرمول‌ها، عیوب بتن، رزین LS و تجهیزات...', 'larijani' ),
-			'search_button'  => __( 'جستجو', 'larijani' ),
+			'search_placeholder' => __( 'جستجو در بین مقالات، فرمول‌ها، عیوب بتن، رزین LS و تجهیزات...', 'larijani-stone' ),
+			'search_button'  => __( 'جستجو', 'larijani-stone' ),
 			'show_cats'      => 'yes',
-			'all_label'      => __( 'همه مقالات', 'larijani' ),
+			'all_label'      => __( 'همه مقالات', 'larijani-stone' ),
 			'cats_limit'     => 6,
 			'auto_title'     => 'yes',
 		)
@@ -45,10 +45,10 @@ function ls_render_blog_hero( $s = array() ) {
 		$desc  = get_the_archive_description() ? wp_strip_all_tags( get_the_archive_description() ) : $desc;
 	} elseif ( 'yes' === $s['auto_title'] && is_search() ) {
 		/* translators: %s query */
-		$title = sprintf( __( 'نتایج جستجو برای «%s»', 'larijani' ), get_search_query() );
+		$title = sprintf( __( 'نتایج جستجو برای «%s»', 'larijani-stone' ), get_search_query() );
 	}
 	if ( ! $title ) {
-		$title = __( 'آرشیو جامع مقالات، دانشنامه و راهنمای فنی سنگ مصنوعی و بتن پلیمری', 'larijani' );
+		$title = __( 'آرشیو جامع مقالات، دانشنامه و راهنمای فنی سنگ مصنوعی و بتن پلیمری', 'larijani-stone' );
 	}
 	$current_cat = is_category() ? get_queried_object_id() : 0;
 	$cats        = get_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'number' => (int) $s['cats_limit'], 'hide_empty' => true ) );
@@ -64,7 +64,7 @@ function ls_render_blog_hero( $s = array() ) {
 					<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider"><?php echo esc_html( $s['badge'] ); ?></span>
 				</div>
 				<?php endif; ?>
-				<h1 class="font-headline-lg text-headline-lg sm:text-[2.25rem] text-on-surface leading-tight mb-5"><?php echo ls_kses( $title ); // phpcs:ignore ?></h1>
+				<h1 class="font-headline-lg text-headline-lg sm:text-[2.25rem] text-on-surface leading-tight mb-5"><?php echo larijani_kses( $title ); // phpcs:ignore ?></h1>
 				<?php if ( $desc ) : ?>
 				<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed mb-8"><?php echo esc_html( $desc ); ?></p>
 				<?php endif; ?>
@@ -73,7 +73,7 @@ function ls_render_blog_hero( $s = array() ) {
 					<input type="hidden" name="post_type" value="post">
 					<label class="flex items-center gap-3 w-full px-3 py-2 flex-1">
 						<i class="bi bi-search text-outline text-lg" aria-hidden="true"></i>
-						<span class="screen-reader-text"><?php esc_html_e( 'جستجو', 'larijani' ); ?></span>
+						<span class="screen-reader-text"><?php esc_html_e( 'جستجو', 'larijani-stone' ); ?></span>
 						<input class="w-full bg-transparent border-0 p-0 focus:ring-0 text-on-surface placeholder:text-outline font-body-md text-body-md" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php echo esc_attr( $s['search_placeholder'] ); ?>" type="search">
 					</label>
 					<button class="w-full sm:w-auto px-6 py-3 rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm hover:bg-primary transition-all flex items-center justify-center gap-2 shadow-sm flex-shrink-0" type="submit">
@@ -83,7 +83,7 @@ function ls_render_blog_hero( $s = array() ) {
 				<?php endif; ?>
 				<?php if ( 'yes' === $s['show_cats'] && $cats ) : ?>
 				<div class="w-full flex items-center justify-center gap-2 flex-wrap">
-					<a href="<?php echo esc_url( ls_blog_url() ); ?>" class="px-4 py-2 rounded-full <?php echo $current_cat ? 'bg-surface-card text-on-surface-variant hover:text-on-surface hover:bg-white font-label-nav text-label-nav' : 'bg-primary-container text-on-primary font-headline-sm text-headline-sm'; ?> shadow-sm transition-all"><?php echo esc_html( $s['all_label'] ); ?></a>
+					<a href="<?php echo esc_url( larijani_blog_url() ); ?>" class="px-4 py-2 rounded-full <?php echo $current_cat ? 'bg-surface-card text-on-surface-variant hover:text-on-surface hover:bg-white font-label-nav text-label-nav' : 'bg-primary-container text-on-primary font-headline-sm text-headline-sm'; ?> shadow-sm transition-all"><?php echo esc_html( $s['all_label'] ); ?></a>
 					<?php foreach ( $cats as $cat ) : ?>
 					<a href="<?php echo esc_url( get_category_link( $cat ) ); ?>" class="px-4 py-2 rounded-full <?php echo $current_cat === $cat->term_id ? 'bg-primary-container text-on-primary font-headline-sm text-headline-sm' : 'bg-surface-card text-on-surface-variant hover:text-on-surface hover:bg-white font-label-nav text-label-nav'; ?> shadow-sm transition-all"><?php echo esc_html( $cat->name ); ?></a>
 					<?php endforeach; ?>
@@ -101,7 +101,7 @@ function ls_render_blog_hero( $s = array() ) {
  * @param int $post_id Explicit post id.
  * @return WP_Post|null
  */
-function ls_get_featured_post( $post_id = 0 ) {
+function larijani_get_featured_post( $post_id = 0 ) {
 	if ( $post_id ) {
 		return get_post( $post_id );
 	}
@@ -124,27 +124,27 @@ function ls_get_featured_post( $post_id = 0 ) {
  *
  * @param array $s Settings.
  */
-function ls_render_featured_post( $s = array() ) {
+function larijani_render_featured_post( $s = array() ) {
 	$s    = wp_parse_args(
 		$s,
 		array(
 			'post_id'       => 0,
-			'badge'         => __( 'مقاله ویژه تحریریه', 'larijani' ),
+			'badge'         => __( 'مقاله ویژه تحریریه', 'larijani-stone' ),
 			'metrics'       => array(),
 			'author_role'   => '',
-			'button_text'   => __( 'مطالعه مقاله کامل', 'larijani' ),
+			'button_text'   => __( 'مطالعه مقاله کامل', 'larijani-stone' ),
 			'fallback'      => array(),
 		)
 	);
-	$post = ls_get_featured_post( (int) $s['post_id'] );
+	$post = larijani_get_featured_post( (int) $s['post_id'] );
 	if ( $post ) {
-		$d      = ls_post_data( $post );
-		$image  = ls_post_image_url( $post, 'large' );
+		$d      = larijani_post_data( $post );
+		$image  = larijani_post_image_url( $post, 'large' );
 		$author = get_post_meta( $post->ID, '_ls_author_name', true );
 		$author = $author ? $author : get_the_author_meta( 'display_name', $post->post_author );
 		$role   = $s['author_role'] ? $s['author_role'] : (string) get_post_meta( $post->ID, '_ls_author_role', true );
 		$role   = $role ? $role : get_the_author_meta( 'description', $post->post_author );
-		$views  = ls_post_views( $post->ID );
+		$views  = larijani_post_views( $post->ID );
 	} elseif ( $s['fallback'] ) {
 		$d      = $s['fallback'];
 		$image  = $d['image'];
@@ -158,7 +158,7 @@ function ls_render_featured_post( $s = array() ) {
 	?>
 	<div class="bg-surface-card rounded-3xl shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
 		<a href="<?php echo esc_url( $d['url'] ); ?>" class="lg:col-span-7 relative min-h-[300px] lg:min-h-[460px] overflow-hidden group block">
-			<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image:url('<?php echo esc_url( $image ? $image : LS_URI . '/assets/images/placeholder.svg' ); ?>')"></div>
+			<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image:url('<?php echo esc_url( $image ? $image : LARIJANI_URI . '/assets/images/placeholder.svg' ); ?>')"></div>
 			<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/80 via-surface-dark/20 to-transparent lg:hidden"></div>
 			<div class="absolute top-4 right-4 flex items-center gap-2">
 				<?php if ( $s['badge'] ) : ?>
@@ -174,10 +174,10 @@ function ls_render_featured_post( $s = array() ) {
 				<div class="flex items-center flex-wrap gap-3 text-outline text-xs mb-4">
 					<span class="flex items-center gap-1"><i class="bi bi-calendar3" aria-hidden="true"></i><?php echo esc_html( $d['date'] ); ?></span>
 					<span>•</span>
-					<span class="flex items-center gap-1"><i class="bi bi-clock" aria-hidden="true"></i><?php echo esc_html( sprintf( /* translators: %s minutes */ __( '%s دقیقه مطالعه', 'larijani' ), ls_fa_num( $d['reading'] ) ) ); ?></span>
-					<?php if ( $views && ls_opt( 'blog_show_views' ) ) : ?>
+					<span class="flex items-center gap-1"><i class="bi bi-clock" aria-hidden="true"></i><?php echo esc_html( sprintf( /* translators: %s minutes */ __( '%s دقیقه مطالعه', 'larijani-stone' ), larijani_fa_num( $d['reading'] ) ) ); ?></span>
+					<?php if ( $views && larijani_opt( 'blog_show_views' ) ) : ?>
 					<span>•</span>
-					<span class="flex items-center gap-1"><i class="bi bi-eye" aria-hidden="true"></i><?php echo esc_html( sprintf( /* translators: %s views */ __( '%s بازدید', 'larijani' ), ls_fa_number_format( $views ) ) ); ?></span>
+					<span class="flex items-center gap-1"><i class="bi bi-eye" aria-hidden="true"></i><?php echo esc_html( sprintf( /* translators: %s views */ __( '%s بازدید', 'larijani-stone' ), larijani_fa_number_format( $views ) ) ); ?></span>
 					<?php endif; ?>
 				</div>
 				<h2 class="font-headline-md text-headline-md text-on-surface leading-snug mb-4 hover:text-primary transition-colors"><a href="<?php echo esc_url( $d['url'] ); ?>"><?php echo esc_html( $d['title'] ); ?></a></h2>
@@ -188,7 +188,7 @@ function ls_render_featured_post( $s = array() ) {
 					<div class="flex flex-col">
 						<span class="font-body-sm text-body-sm text-outline"><?php echo esc_html( $m['label'] ?? '' ); ?></span>
 						<div class="flex items-baseline gap-1 mt-0.5">
-							<span class="font-headline-md text-headline-md <?php echo esc_attr( ls_tone( $m['tone'] ?? 'primary', 'text' ) ); ?> font-bold" dir="ltr"><?php echo esc_html( $m['value'] ?? '' ); ?></span>
+							<span class="font-headline-md text-headline-md <?php echo esc_attr( larijani_tone( $m['tone'] ?? 'primary', 'text' ) ); ?> font-bold" dir="ltr"><?php echo esc_html( $m['value'] ?? '' ); ?></span>
 							<span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $m['unit'] ?? '' ); ?></span>
 						</div>
 					</div>
@@ -198,7 +198,7 @@ function ls_render_featured_post( $s = array() ) {
 			</div>
 			<div class="flex items-center justify-between gap-3 pt-4 flex-wrap">
 				<div class="flex items-center gap-3">
-					<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm"><?php echo esc_html( ls_initials( $author ) ); ?></div>
+					<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-sm"><?php echo esc_html( larijani_initials( $author ) ); ?></div>
 					<div class="flex flex-col">
 						<span class="text-xs font-bold text-on-surface"><?php echo esc_html( $author ); ?></span>
 						<?php if ( $role ) : ?><span class="font-body-sm text-body-sm text-outline"><?php echo esc_html( $role ); ?></span><?php endif; ?>
@@ -218,7 +218,7 @@ function ls_render_featured_post( $s = array() ) {
  *
  * @param array $s Settings.
  */
-function ls_render_posts_grid( $s = array() ) {
+function larijani_render_posts_grid( $s = array() ) {
 	$s = wp_parse_args(
 		$s,
 		array(
@@ -235,14 +235,14 @@ function ls_render_posts_grid( $s = array() ) {
 			'bar_title'       => '',
 			'show_count'      => 'yes',
 			'pagination'      => 'yes',
-			'read_more'       => __( 'ادامه مطلب تخصصی', 'larijani' ),
-			'empty_text'      => __( 'مطلبی یافت نشد.', 'larijani' ),
+			'read_more'       => __( 'ادامه مطلب تخصصی', 'larijani-stone' ),
+			'empty_text'      => __( 'مطلبی یافت نشد.', 'larijani-stone' ),
 			'gap'             => 'gap-6',
 		)
 	);
 	$own_query = 'current' !== $s['source'];
 	if ( $own_query ) {
-		$args = ls_posts_query_args(
+		$args = larijani_posts_query_args(
 			array(
 				'posts_per_page'  => $s['posts_per_page'],
 				'category'        => $s['category'],
@@ -256,7 +256,7 @@ function ls_render_posts_grid( $s = array() ) {
 			$args['paged'] = max( 1, (int) get_query_var( 'paged' ), (int) get_query_var( 'page' ) );
 		}
 		if ( 'yes' === $s['exclude_featured'] ) {
-			$featured = ls_get_featured_post();
+			$featured = larijani_get_featured_post();
 			if ( $featured ) {
 				$args['post__not_in'] = array_merge( $args['post__not_in'] ?? array(), array( $featured->ID ) );
 			}
@@ -278,21 +278,21 @@ function ls_render_posts_grid( $s = array() ) {
 				<h3 class="font-headline-md text-headline-md text-on-surface"><?php echo esc_html( $s['bar_title'] ); ?></h3>
 			</div>
 			<?php if ( 'yes' === $s['show_count'] && $total ) : ?>
-			<span class="font-body-sm text-body-sm text-outline"><?php echo esc_html( sprintf( /* translators: 1 from 2 to 3 total */ __( 'نمایش %1$s تا %2$s از %3$s نوشتار تخصصی', 'larijani' ), ls_fa_num( $from ), ls_fa_num( $to ), ls_fa_num( $total ) ) ); ?></span>
+			<span class="font-body-sm text-body-sm text-outline"><?php echo esc_html( sprintf( /* translators: 1 from 2 to 3 total */ __( 'نمایش %1$s تا %2$s از %3$s نوشتار تخصصی', 'larijani-stone' ), larijani_fa_num( $from ), larijani_fa_num( $to ), larijani_fa_num( $total ) ) ); ?></span>
 			<?php endif; ?>
 		</div>
 		<?php
 	endif;
 
 	if ( $query->have_posts() ) {
-		echo '<div class="grid ' . esc_attr( ls_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) . ' ' . $s['gap'] ) . '">';
+		echo '<div class="grid ' . esc_attr( larijani_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) . ' ' . $s['gap'] ) . '">';
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			echo ls_post_card( ls_post_data( get_post() ), $s['card_style'], array( 'read_more' => $s['read_more'] ) ); // phpcs:ignore
+			echo larijani_post_card( larijani_post_data( get_post() ), $s['card_style'], array( 'read_more' => $s['read_more'] ) ); // phpcs:ignore
 		}
 		echo '</div>';
 		if ( 'yes' === $s['pagination'] ) {
-			echo '<div class="pt-8">' . ls_pagination( $query ) . '</div>'; // phpcs:ignore
+			echo '<div class="pt-8">' . larijani_pagination( $query ) . '</div>'; // phpcs:ignore
 		}
 	} else {
 		echo '<div class="bg-surface-card rounded-2xl p-8 text-center text-on-surface-variant shadow-sm">' . esc_html( $s['empty_text'] ) . '</div>';
@@ -311,15 +311,15 @@ function ls_render_posts_grid( $s = array() ) {
  *
  * @param array $s Settings.
  */
-function ls_render_download_card( $s = array() ) {
+function larijani_render_download_card( $s = array() ) {
 	$s = wp_parse_args(
 		$s,
 		array(
 			'icon'   => 'bi bi-file-earmark-pdf-fill',
-			'badge'  => __( 'ویرایش زمستان ۱۴۰۴', 'larijani' ),
-			'title'  => __( 'هندبوک جامع جداول اختلاط بتن سمنت‌پلاست', 'larijani' ),
-			'desc'   => __( 'شامل ۱۲ فرمول آزمون‌شده آزمایشگاهی بر اساس نوع سیمان، فصول سرد و گرم، و جداول عیار پیگمنت‌های معدنی اکسید آهن.', 'larijani' ),
-			'button' => __( 'دانلود مستقیم فایل PDF (۱۴ مگابایت)', 'larijani' ),
+			'badge'  => __( 'ویرایش زمستان ۱۴۰۴', 'larijani-stone' ),
+			'title'  => __( 'هندبوک جامع جداول اختلاط بتن سمنت‌پلاست', 'larijani-stone' ),
+			'desc'   => __( 'شامل ۱۲ فرمول آزمون‌شده آزمایشگاهی بر اساس نوع سیمان، فصول سرد و گرم، و جداول عیار پیگمنت‌های معدنی اکسید آهن.', 'larijani-stone' ),
+			'button' => __( 'دانلود مستقیم فایل PDF (۱۴ مگابایت)', 'larijani-stone' ),
 			'link'   => '#',
 		)
 	);
@@ -327,11 +327,11 @@ function ls_render_download_card( $s = array() ) {
 	<div class="relative bg-surface-dark text-white rounded-3xl p-6 shadow-md overflow-hidden">
 		<div class="absolute -top-12 -left-12 w-40 h-40 rounded-full bg-primary-container/30 blur-2xl"></div>
 		<div class="relative z-10">
-			<div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-2xl mb-4"><?php echo ls_icon( $s['icon'], 'text-accent-amber' ); // phpcs:ignore ?></div>
+			<div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-2xl mb-4"><?php echo larijani_icon( $s['icon'], 'text-accent-amber' ); // phpcs:ignore ?></div>
 			<?php if ( $s['badge'] ) : ?><span class="px-2.5 py-1 rounded-full bg-white/10 text-white/80 font-label-badge text-label-badge inline-block mb-2"><?php echo esc_html( $s['badge'] ); ?></span><?php endif; ?>
 			<h2 class="font-headline-sm text-headline-sm text-white mb-2 leading-snug"><?php echo esc_html( $s['title'] ); ?></h2>
 			<p class="font-body-sm text-body-sm text-slate-300 leading-relaxed mb-5"><?php echo esc_html( $s['desc'] ); ?></p>
-			<a class="w-full py-3 rounded-xl bg-primary-container hover:bg-primary text-white font-headline-sm text-headline-sm transition-all flex items-center justify-center gap-2 shadow-sm" <?php echo ls_link_attrs( $s['link'] ); // phpcs:ignore ?>>
+			<a class="w-full py-3 rounded-xl bg-primary-container hover:bg-primary text-white font-headline-sm text-headline-sm transition-all flex items-center justify-center gap-2 shadow-sm" <?php echo larijani_link_attrs( $s['link'] ); // phpcs:ignore ?>>
 				<i class="bi bi-cloud-arrow-down-fill" aria-hidden="true"></i><span><?php echo esc_html( $s['button'] ); ?></span>
 			</a>
 		</div>
@@ -344,11 +344,11 @@ function ls_render_download_card( $s = array() ) {
  *
  * @param array $s Settings { title, icon, count, orderby, style (card|compact), suffix }.
  */
-function ls_render_popular_posts( $s = array() ) {
+function larijani_render_popular_posts( $s = array() ) {
 	$s     = wp_parse_args(
 		$s,
 		array(
-			'title'   => __( 'مباحث پرطرفدار کارگاه‌ها', 'larijani' ),
+			'title'   => __( 'مباحث پرطرفدار کارگاه‌ها', 'larijani-stone' ),
 			'icon'    => 'bi bi-fire',
 			'count'   => 4,
 			'orderby' => 'views',
@@ -360,17 +360,17 @@ function ls_render_popular_posts( $s = array() ) {
 	if ( $s['items'] ) {
 		$items = $s['items'];
 	} else {
-		$posts = get_posts( ls_posts_query_args( array( 'posts_per_page' => $s['count'], 'orderby' => $s['orderby'] ) ) );
+		$posts = get_posts( larijani_posts_query_args( array( 'posts_per_page' => $s['count'], 'orderby' => $s['orderby'] ) ) );
 		if ( ! $posts && 'views' === $s['orderby'] ) {
 			$posts = get_posts( array( 'posts_per_page' => $s['count'] ) );
 		}
 		foreach ( $posts as $p ) {
-			$v       = ls_post_views( $p->ID );
+			$v       = larijani_post_views( $p->ID );
 			$items[] = array(
 				'title' => get_the_title( $p ),
 				'url'   => get_permalink( $p ),
 				/* translators: %s views */
-				'meta'  => $v ? sprintf( __( '%s مطالعه', 'larijani' ), ls_fa_number_format( $v ) ) : ls_post_date( $p->ID ),
+				'meta'  => $v ? sprintf( __( '%s مطالعه', 'larijani-stone' ), larijani_fa_number_format( $v ) ) : larijani_post_date( $p->ID ),
 			);
 		}
 	}
@@ -380,13 +380,13 @@ function ls_render_popular_posts( $s = array() ) {
 	?>
 	<div class="bg-surface-card rounded-<?php echo 'compact' === $s['style'] ? '3xl' : '2xl'; ?> p-6 shadow-sm">
 		<div class="flex items-center gap-2 mb-4 pb-2">
-			<?php echo ls_icon( $s['icon'], 'text-accent-amber text-lg' ); // phpcs:ignore ?>
+			<?php echo larijani_icon( $s['icon'], 'text-accent-amber text-lg' ); // phpcs:ignore ?>
 			<h2 class="font-headline-sm text-headline-sm text-on-surface font-black"><?php echo esc_html( $s['title'] ); ?></h2>
 		</div>
 		<div class="flex flex-col gap-<?php echo 'compact' === $s['style'] ? '3' : '4'; ?>">
 			<?php foreach ( $items as $i => $it ) : ?>
 			<a class="flex items-start gap-3 group" href="<?php echo esc_url( is_array( $it['url'] ) ? ( $it['url']['url'] ?? '#' ) : $it['url'] ); ?>">
-				<span class="<?php echo 'compact' === $s['style'] ? 'w-6 h-6' : 'w-7 h-7'; ?> rounded-lg bg-surface-canvas text-primary font-bold flex items-center justify-center flex-shrink-0 text-sm group-hover:bg-primary-container group-hover:text-white transition-colors"><?php echo esc_html( ls_fa_num( $i + 1 ) ); ?></span>
+				<span class="<?php echo 'compact' === $s['style'] ? 'w-6 h-6' : 'w-7 h-7'; ?> rounded-lg bg-surface-canvas text-primary font-bold flex items-center justify-center flex-shrink-0 text-sm group-hover:bg-primary-container group-hover:text-white transition-colors"><?php echo esc_html( larijani_fa_num( $i + 1 ) ); ?></span>
 				<div class="flex flex-col">
 					<span class="<?php echo 'compact' === $s['style'] ? 'font-body-sm text-body-sm text-on-surface' : 'font-body-md text-body-md text-on-surface font-semibold'; ?> group-hover:text-primary transition-colors line-clamp-2"><?php echo esc_html( $it['title'] ); ?></span>
 					<?php if ( ! empty( $it['meta'] ) && 'compact' !== $s['style'] ) : ?><span class="font-body-sm text-body-sm text-outline mt-1"><?php echo esc_html( $it['meta'] ); ?></span><?php endif; ?>
@@ -403,27 +403,27 @@ function ls_render_popular_posts( $s = array() ) {
  *
  * @param array $s Settings.
  */
-function ls_render_newsletter( $s = array() ) {
+function larijani_render_newsletter( $s = array() ) {
 	$s = wp_parse_args(
 		$s,
 		array(
-			'title'       => __( 'پیامک و خبرنامه عیب‌یابی فرمولاسیون', 'larijani' ),
+			'title'       => __( 'پیامک و خبرنامه عیب‌یابی فرمولاسیون', 'larijani-stone' ),
 			'icon'        => 'bi bi-bell-fill',
-			'desc'        => __( 'نکات هفتگی حل مسائل کارگاهی (ترک‌خوردگی، چسبیدن به قالب، دیرگیر شدن بتن در سرما) مستقیماً به موبایل شما ارسال می‌شود.', 'larijani' ),
-			'placeholder' => __( 'شماره تماس همراه (مثال: ۰۹۱۲۳۴۵۶۷۸۹)', 'larijani' ),
-			'button'      => __( 'عضویت رایگان در شبکه کارگاهی', 'larijani' ),
-			'note'        => __( 'بدون ارسال پیام‌های تبلیغاتی تکراری', 'larijani' ),
-			'success'     => __( 'شماره شما با موفقیت برای دریافت پیامک‌های فنی ثبت شد.', 'larijani' ),
+			'desc'        => __( 'نکات هفتگی حل مسائل کارگاهی (ترک‌خوردگی، چسبیدن به قالب، دیرگیر شدن بتن در سرما) مستقیماً به موبایل شما ارسال می‌شود.', 'larijani-stone' ),
+			'placeholder' => __( 'شماره تماس همراه (مثال: ۰۹۱۲۳۴۵۶۷۸۹)', 'larijani-stone' ),
+			'button'      => __( 'عضویت رایگان در شبکه کارگاهی', 'larijani-stone' ),
+			'note'        => __( 'بدون ارسال پیام‌های تبلیغاتی تکراری', 'larijani-stone' ),
+			'success'     => __( 'شماره شما با موفقیت برای دریافت پیامک‌های فنی ثبت شد.', 'larijani-stone' ),
 		)
 	);
 	?>
 	<div class="bg-surface-card rounded-2xl p-6 shadow-sm">
-		<div class="flex items-center gap-2 mb-2"><?php echo ls_icon( $s['icon'], 'text-primary text-base' ); // phpcs:ignore ?><h2 class="font-headline-sm text-headline-sm text-on-surface"><?php echo esc_html( $s['title'] ); ?></h2></div>
+		<div class="flex items-center gap-2 mb-2"><?php echo larijani_icon( $s['icon'], 'text-primary text-base' ); // phpcs:ignore ?><h2 class="font-headline-sm text-headline-sm text-on-surface"><?php echo esc_html( $s['title'] ); ?></h2></div>
 		<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4"><?php echo esc_html( $s['desc'] ); ?></p>
 		<form class="flex flex-col gap-3" data-ls-form>
-			<?php echo ls_form_hidden_fields( $s['title'] ); // phpcs:ignore ?>
-			<input type="hidden" name="labels[phone]" value="<?php esc_attr_e( 'شماره همراه', 'larijani' ); ?>"><input type="hidden" name="types[phone]" value="tel">
-			<input class="w-full px-4 py-2.5 rounded-xl bg-surface-canvas text-on-surface placeholder:text-outline font-body-md text-body-md focus:bg-white shadow-inner" name="fields[phone]" aria-label="<?php esc_attr_e( 'شماره همراه', 'larijani' ); ?>" placeholder="<?php echo esc_attr( $s['placeholder'] ); ?>" required type="tel">
+			<?php echo larijani_form_hidden_fields( $s['title'] ); // phpcs:ignore ?>
+			<input type="hidden" name="labels[phone]" value="<?php esc_attr_e( 'شماره همراه', 'larijani-stone' ); ?>"><input type="hidden" name="types[phone]" value="tel">
+			<input class="w-full px-4 py-2.5 rounded-xl bg-surface-canvas text-on-surface placeholder:text-outline font-body-md text-body-md focus:bg-white shadow-inner" name="fields[phone]" aria-label="<?php esc_attr_e( 'شماره همراه', 'larijani-stone' ); ?>" placeholder="<?php echo esc_attr( $s['placeholder'] ); ?>" required type="tel">
 			<button class="w-full py-2.5 rounded-xl bg-primary-container hover:bg-primary text-white font-headline-sm text-headline-sm transition-all shadow-sm" type="submit"><?php echo esc_html( $s['button'] ); ?></button>
 			<div class="hidden text-center font-body-sm text-body-sm text-accent-emerald" data-ls-success><?php echo esc_html( $s['success'] ); ?></div>
 			<div class="hidden ls-form-error text-center" data-ls-error></div>
@@ -438,8 +438,8 @@ function ls_render_newsletter( $s = array() ) {
  *
  * @param array $s Settings { title, count, taxonomy }.
  */
-function ls_render_tag_cloud( $s = array() ) {
-	$s    = wp_parse_args( $s, array( 'title' => __( 'کلیدواژه‌های فنی', 'larijani' ), 'count' => 12, 'taxonomy' => 'post_tag', 'items' => array() ) );
+function larijani_render_tag_cloud( $s = array() ) {
+	$s    = wp_parse_args( $s, array( 'title' => __( 'کلیدواژه‌های فنی', 'larijani-stone' ), 'count' => 12, 'taxonomy' => 'post_tag', 'items' => array() ) );
 	$tags = $s['items'];
 	if ( ! $tags ) {
 		$terms = get_terms( array( 'taxonomy' => $s['taxonomy'], 'orderby' => 'count', 'order' => 'DESC', 'number' => (int) $s['count'] ) );
@@ -469,8 +469,8 @@ function ls_render_tag_cloud( $s = array() ) {
  *
  * @param array $s Settings.
  */
-function ls_render_toc( $s = array() ) {
-	$s = wp_parse_args( $s, array( 'title' => __( 'فهرست عناوین مقاله', 'larijani' ), 'selector' => '.ls-article h2', 'items' => array() ) );
+function larijani_render_toc( $s = array() ) {
+	$s = wp_parse_args( $s, array( 'title' => __( 'فهرست عناوین مقاله', 'larijani-stone' ), 'selector' => '.ls-article h2', 'items' => array() ) );
 	?>
 	<div class="bg-surface-card rounded-3xl p-6 shadow-sm space-y-4" data-ls-toc="<?php echo esc_attr( $s['selector'] ); ?>">
 		<div class="flex items-center gap-2 text-surface-dark"><i class="bi bi-book text-[20px] text-primary-container" aria-hidden="true"></i><h3 class="font-headline-sm text-headline-sm font-black"><?php echo esc_html( $s['title'] ); ?></h3></div>
@@ -488,25 +488,25 @@ function ls_render_toc( $s = array() ) {
  *
  * @param array $s Settings.
  */
-function ls_render_resin_calculator( $s = array() ) {
+function larijani_render_resin_calculator( $s = array() ) {
 	$s = wp_parse_args(
 		$s,
 		array(
-			'title'        => __( 'محاسبه‌گر مصرف رزین', 'larijani' ),
-			'badge'        => __( 'فرمول LS-500', 'larijani' ),
-			'desc'         => __( 'وزن سیمان مصرفی در هر بچ اختلاط میکسر را وارد کنید:', 'larijani' ),
-			'input_label'  => __( 'سیمان مصرفی در میکسر:', 'larijani' ),
+			'title'        => __( 'محاسبه‌گر مصرف رزین', 'larijani-stone' ),
+			'badge'        => __( 'فرمول LS-500', 'larijani-stone' ),
+			'desc'         => __( 'وزن سیمان مصرفی در هر بچ اختلاط میکسر را وارد کنید:', 'larijani-stone' ),
+			'input_label'  => __( 'سیمان مصرفی در میکسر:', 'larijani-stone' ),
 			'min'          => 50,
 			'max'          => 600,
 			'step'         => 25,
 			'value'        => 100,
-			'unit'         => __( 'کیلوگرم', 'larijani' ),
-			'out1_label'   => __( 'رزین پیشنهادی:', 'larijani' ),
+			'unit'         => __( 'کیلوگرم', 'larijani-stone' ),
+			'out1_label'   => __( 'رزین پیشنهادی:', 'larijani-stone' ),
 			'out1_factor'  => 0.009,
-			'out1_unit'    => __( 'کیلوگرم', 'larijani' ),
-			'out2_label'   => __( 'حداکثر آب مجاز:', 'larijani' ),
+			'out1_unit'    => __( 'کیلوگرم', 'larijani-stone' ),
+			'out2_label'   => __( 'حداکثر آب مجاز:', 'larijani-stone' ),
 			'out2_factor'  => 0.28,
-			'out2_unit'    => __( 'لیتر', 'larijani' ),
+			'out2_unit'    => __( 'لیتر', 'larijani-stone' ),
 		)
 	);
 	?>
@@ -520,18 +520,18 @@ function ls_render_resin_calculator( $s = array() ) {
 			<div class="space-y-1.5">
 				<div class="flex justify-between font-body-sm text-body-sm">
 					<span class="text-on-surface-variant"><?php echo esc_html( $s['input_label'] ); ?></span>
-					<span class="font-bold text-surface-dark" data-calc-label><?php echo esc_html( ls_fa_num( $s['value'] ) . ' ' . $s['unit'] ); ?></span>
+					<span class="font-bold text-surface-dark" data-calc-label><?php echo esc_html( larijani_fa_num( $s['value'] ) . ' ' . $s['unit'] ); ?></span>
 				</div>
-				<input class="w-full cursor-pointer" aria-label="<?php echo esc_attr( $s['label'] ?? __( 'میزان مصرف', 'larijani' ) ); ?>" data-calc-input max="<?php echo esc_attr( $s['max'] ); ?>" min="<?php echo esc_attr( $s['min'] ); ?>" step="<?php echo esc_attr( $s['step'] ); ?>" type="range" value="<?php echo esc_attr( $s['value'] ); ?>">
+				<input class="w-full cursor-pointer" aria-label="<?php echo esc_attr( $s['label'] ?? __( 'میزان مصرف', 'larijani-stone' ) ); ?>" data-calc-input max="<?php echo esc_attr( $s['max'] ); ?>" min="<?php echo esc_attr( $s['min'] ); ?>" step="<?php echo esc_attr( $s['step'] ); ?>" type="range" value="<?php echo esc_attr( $s['value'] ); ?>">
 			</div>
 			<div class="grid grid-cols-2 gap-2 pt-2">
 				<div class="p-3 rounded-2xl bg-surface-canvas flex flex-col justify-between">
 					<span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $s['out1_label'] ); ?></span>
-					<div class="mt-1 flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm text-accent-emerald font-black" data-calc-out1><?php echo esc_html( ls_fa_num( round( $s['value'] * $s['out1_factor'], 2 ) ) ); ?></span><span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $s['out1_unit'] ); ?></span></div>
+					<div class="mt-1 flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm text-accent-emerald font-black" data-calc-out1><?php echo esc_html( larijani_fa_num( round( $s['value'] * $s['out1_factor'], 2 ) ) ); ?></span><span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $s['out1_unit'] ); ?></span></div>
 				</div>
 				<div class="p-3 rounded-2xl bg-surface-canvas flex flex-col justify-between">
 					<span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $s['out2_label'] ); ?></span>
-					<div class="mt-1 flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm text-accent-cobalt font-black" data-calc-out2><?php echo esc_html( ls_fa_num( round( $s['value'] * $s['out2_factor'], 1 ) ) ); ?></span><span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $s['out2_unit'] ); ?></span></div>
+					<div class="mt-1 flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm text-accent-cobalt font-black" data-calc-out2><?php echo esc_html( larijani_fa_num( round( $s['value'] * $s['out2_factor'], 1 ) ) ); ?></span><span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $s['out2_unit'] ); ?></span></div>
 				</div>
 			</div>
 		</div>
@@ -544,32 +544,32 @@ function ls_render_resin_calculator( $s = array() ) {
  *
  * @param array $s Settings.
  */
-function ls_render_sidebar_cta( $s = array() ) {
+function larijani_render_sidebar_cta( $s = array() ) {
 	$s = wp_parse_args(
 		$s,
 		array(
 			'icon'     => 'bi bi-headset',
-			'title'    => __( 'نیاز به اصلاح فرمولاسیون یا رفع حباب در خط تولید دارید؟', 'larijani' ),
-			'desc'     => __( 'مشاوره مستقیم با مهندس مسعود لاریجانی و ارسال نمونه رایگان رزین LS-500 برای تست در کارگاه شما.', 'larijani' ),
+			'title'    => __( 'نیاز به اصلاح فرمولاسیون یا رفع حباب در خط تولید دارید؟', 'larijani-stone' ),
+			'desc'     => __( 'مشاوره مستقیم با مهندس مسعود لاریجانی و ارسال نمونه رایگان رزین LS-500 برای تست در کارگاه شما.', 'larijani-stone' ),
 			'button_1' => '',
 			'link_1'   => '',
-			'button_2' => __( 'ارسال تصاویر قطعات معیوب در واتساپ', 'larijani' ),
+			'button_2' => __( 'ارسال تصاویر قطعات معیوب در واتساپ', 'larijani-stone' ),
 			'link_2'   => '',
 		)
 	);
-	$phone = ls_opt( 'phone_1' );
-	$b1    = $s['button_1'] ? $s['button_1'] : sprintf( /* translators: %s phone */ __( 'تماس مستقیم: %s', 'larijani' ), ls_fa_num( $phone ) );
+	$phone = larijani_opt( 'phone_1' );
+	$b1    = $s['button_1'] ? $s['button_1'] : sprintf( /* translators: %s phone */ __( 'تماس مستقیم: %s', 'larijani-stone' ), larijani_fa_num( $phone ) );
 	?>
 	<div class="bg-gradient-to-br from-surface-dark to-surface-footer rounded-3xl p-6 text-on-tertiary-container shadow-xl space-y-4">
-		<div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-primary-fixed text-[26px]"><?php echo ls_icon( $s['icon'] ); // phpcs:ignore ?></div>
+		<div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-primary-fixed text-[26px]"><?php echo larijani_icon( $s['icon'] ); // phpcs:ignore ?></div>
 		<div class="space-y-1">
 			<h2 class="font-headline-sm text-headline-sm text-white font-black"><?php echo esc_html( $s['title'] ); ?></h2>
 			<p class="font-body-sm text-body-sm text-tertiary-fixed leading-relaxed"><?php echo esc_html( $s['desc'] ); ?></p>
 		</div>
 		<div class="pt-2 flex flex-col gap-2">
-			<a class="w-full py-3 px-4 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-nav text-label-nav text-center flex items-center justify-center gap-2 shadow-lg transition-all" <?php echo ls_link_attrs( ! empty( $s['link_1']['url'] ) || ( is_string( $s['link_1'] ) && $s['link_1'] ) ? $s['link_1'] : ls_tel( $phone ) ); // phpcs:ignore ?>><i class="bi bi-telephone" aria-hidden="true"></i><?php echo esc_html( $b1 ); ?></a>
+			<a class="w-full py-3 px-4 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-nav text-label-nav text-center flex items-center justify-center gap-2 shadow-lg transition-all" <?php echo larijani_link_attrs( ! empty( $s['link_1']['url'] ) || ( is_string( $s['link_1'] ) && $s['link_1'] ) ? $s['link_1'] : larijani_tel( $phone ) ); // phpcs:ignore ?>><i class="bi bi-telephone" aria-hidden="true"></i><?php echo esc_html( $b1 ); ?></a>
 			<?php if ( $s['button_2'] ) : ?>
-			<a class="w-full py-2.5 px-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-body-sm text-body-sm text-center flex items-center justify-center gap-2 transition-all" <?php echo ls_link_attrs( ! empty( $s['link_2']['url'] ) || ( is_string( $s['link_2'] ) && $s['link_2'] ) ? $s['link_2'] : array( 'url' => ls_whatsapp_url(), 'is_external' => true ) ); // phpcs:ignore ?>><i class="bi bi-whatsapp" aria-hidden="true"></i><?php echo esc_html( $s['button_2'] ); ?></a>
+			<a class="w-full py-2.5 px-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-body-sm text-body-sm text-center flex items-center justify-center gap-2 transition-all" <?php echo larijani_link_attrs( ! empty( $s['link_2']['url'] ) || ( is_string( $s['link_2'] ) && $s['link_2'] ) ? $s['link_2'] : array( 'url' => larijani_whatsapp_url(), 'is_external' => true ) ); // phpcs:ignore ?>><i class="bi bi-whatsapp" aria-hidden="true"></i><?php echo esc_html( $s['button_2'] ); ?></a>
 			<?php endif; ?>
 		</div>
 	</div>
@@ -581,14 +581,14 @@ function ls_render_sidebar_cta( $s = array() ) {
  *
  * @param array $s Settings.
  */
-function ls_render_promo_box( $s = array() ) {
+function larijani_render_promo_box( $s = array() ) {
 	$s = wp_parse_args(
 		$s,
 		array(
 			'icon'  => 'bi bi-journal-bookmark',
-			'title' => __( 'هندبوک جامع ۳۲ فرمول تست شده', 'larijani' ),
-			'desc'  => __( 'شامل کاتالوگ جامع اختلاط برای تولید سنگ پله، جدول، کفپوش‌های پرتردد و سنگ‌های آنتیک دکوراتیو داخلی.', 'larijani' ),
-			'link_text' => __( 'درخواست نسخه چاپی یا PDF', 'larijani' ),
+			'title' => __( 'هندبوک جامع ۳۲ فرمول تست شده', 'larijani-stone' ),
+			'desc'  => __( 'شامل کاتالوگ جامع اختلاط برای تولید سنگ پله، جدول، کفپوش‌های پرتردد و سنگ‌های آنتیک دکوراتیو داخلی.', 'larijani-stone' ),
+			'link_text' => __( 'درخواست نسخه چاپی یا PDF', 'larijani-stone' ),
 			'link'  => '#',
 			'tone'  => 'sage',
 		)
@@ -596,10 +596,10 @@ function ls_render_promo_box( $s = array() ) {
 	$bg = 'light' === $s['tone'] ? 'bg-surface-container-low' : 'bg-secondary-container/60';
 	?>
 	<div class="<?php echo esc_attr( $bg ); ?> rounded-3xl p-6 shadow-sm space-y-3">
-		<div class="flex items-center gap-2 text-on-secondary-container"><?php echo ls_icon( $s['icon'], 'text-[22px]' ); // phpcs:ignore ?><span class="font-headline-sm text-title-card font-black"><?php echo esc_html( $s['title'] ); ?></span></div>
+		<div class="flex items-center gap-2 text-on-secondary-container"><?php echo larijani_icon( $s['icon'], 'text-[22px]' ); // phpcs:ignore ?><span class="font-headline-sm text-title-card font-black"><?php echo esc_html( $s['title'] ); ?></span></div>
 		<p class="font-body-sm text-body-sm text-on-secondary-container leading-relaxed"><?php echo esc_html( $s['desc'] ); ?></p>
 		<?php if ( $s['link_text'] ) : ?>
-		<a class="inline-flex items-center gap-1.5 text-primary-container font-label-nav text-label-nav hover:underline pt-1" <?php echo ls_link_attrs( $s['link'] ); // phpcs:ignore ?>><?php echo esc_html( $s['link_text'] ); ?><i class="bi bi-arrow-left" aria-hidden="true"></i></a>
+		<a class="inline-flex items-center gap-1.5 text-primary-container font-label-nav text-label-nav hover:underline pt-1" <?php echo larijani_link_attrs( $s['link'] ); // phpcs:ignore ?>><?php echo esc_html( $s['link_text'] ); ?><i class="bi bi-arrow-left" aria-hidden="true"></i></a>
 		<?php endif; ?>
 	</div>
 	<?php
@@ -608,12 +608,12 @@ function ls_render_promo_box( $s = array() ) {
 /**
  * Default archive sidebar.
  */
-function ls_render_archive_sidebar() {
+function larijani_render_archive_sidebar() {
 	echo '<div class="sticky top-24 flex flex-col gap-6">';
-	ls_render_download_card();
-	ls_render_popular_posts();
-	ls_render_newsletter();
-	ls_render_tag_cloud();
+	larijani_render_download_card();
+	larijani_render_popular_posts();
+	larijani_render_newsletter();
+	larijani_render_tag_cloud();
 	if ( is_active_sidebar( 'blog-sidebar' ) ) {
 		echo '<div class="ls-widget-area">';
 		dynamic_sidebar( 'blog-sidebar' );
@@ -631,7 +631,7 @@ function ls_render_archive_sidebar() {
  *
  * @param array $s Settings.
  */
-function ls_render_post_hero( $s = array() ) {
+function larijani_render_post_hero( $s = array() ) {
 	$s       = wp_parse_args(
 		$s,
 		array(
@@ -647,16 +647,16 @@ function ls_render_post_hero( $s = array() ) {
 		)
 	);
 	$post_id = get_the_ID();
-	$cat     = ls_primary_category( $post_id );
-	$views   = ls_post_views( $post_id );
+	$cat     = larijani_primary_category( $post_id );
+	$views   = larijani_post_views( $post_id );
 	$author_id = (int) get_post_field( 'post_author', $post_id );
 	$author  = get_the_author_meta( 'display_name', $author_id );
 	$role    = $s['author_role'] ? $s['author_role'] : wp_trim_words( get_the_author_meta( 'description', $author_id ), 8 );
 	$caption = $s['caption'] ? $s['caption'] : get_post_meta( $post_id, '_ls_image_caption', true );
 	$ibadge  = $s['image_badge'] ? $s['image_badge'] : get_post_meta( $post_id, '_ls_image_badge', true );
-	$share   = ls_share_links();
+	$share   = larijani_share_links();
 	if ( ! $s['metrics'] ) {
-		$s['metrics'] = ls_post_metrics( $post_id );
+		$s['metrics'] = larijani_post_metrics( $post_id );
 	}
 	$author_meta = get_post_meta( $post_id, '_ls_author_name', true );
 	if ( $author_meta ) {
@@ -666,7 +666,7 @@ function ls_render_post_hero( $s = array() ) {
 	?>
 	<?php if ( 'yes' === $s['show_breadcrumb'] ) : ?>
 	<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-12 pt-6 pb-4">
-		<nav class="flex items-center flex-wrap gap-2 text-on-surface-variant font-body-sm text-body-sm" aria-label="<?php esc_attr_e( 'مسیر صفحه', 'larijani' ); ?>"><?php echo ls_breadcrumb_html(); // phpcs:ignore ?></nav>
+		<nav class="flex items-center flex-wrap gap-2 text-on-surface-variant font-body-sm text-body-sm" aria-label="<?php esc_attr_e( 'مسیر صفحه', 'larijani-stone' ); ?>"><?php echo larijani_breadcrumb_html(); // phpcs:ignore ?></nav>
 	</section>
 	<?php endif; ?>
 	<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-12 py-6">
@@ -676,12 +676,12 @@ function ls_render_post_hero( $s = array() ) {
 				<?php if ( $cat ) : ?>
 				<a href="<?php echo esc_url( get_category_link( $cat ) ); ?>" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge"><i class="bi bi-bookmark-star" aria-hidden="true"></i><?php echo esc_html( $cat->name ); ?></a>
 				<?php endif; ?>
-				<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-card text-on-surface-variant font-label-badge text-label-badge shadow-sm"><i class="bi bi-stopwatch" aria-hidden="true"></i><?php echo esc_html( sprintf( /* translators: %s minutes */ __( '%s دقیقه زمان مطالعه', 'larijani' ), ls_fa_num( ls_reading_time() ) ) ); ?></span>
-				<?php if ( $views && ls_opt( 'blog_show_views' ) ) : ?>
-				<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-card text-on-surface-variant font-label-badge text-label-badge shadow-sm"><i class="bi bi-eye" aria-hidden="true"></i><?php echo esc_html( sprintf( /* translators: %s views */ __( '%s بازدید تخصصی', 'larijani' ), ls_fa_number_format( $views ) ) ); ?></span>
+				<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-card text-on-surface-variant font-label-badge text-label-badge shadow-sm"><i class="bi bi-stopwatch" aria-hidden="true"></i><?php echo esc_html( sprintf( /* translators: %s minutes */ __( '%s دقیقه زمان مطالعه', 'larijani-stone' ), larijani_fa_num( larijani_reading_time() ) ) ); ?></span>
+				<?php if ( $views && larijani_opt( 'blog_show_views' ) ) : ?>
+				<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-card text-on-surface-variant font-label-badge text-label-badge shadow-sm"><i class="bi bi-eye" aria-hidden="true"></i><?php echo esc_html( sprintf( /* translators: %s views */ __( '%s بازدید تخصصی', 'larijani-stone' ), larijani_fa_number_format( $views ) ) ); ?></span>
 				<?php endif; ?>
 				<?php if ( comments_open() || get_comments_number() ) : ?>
-				<a href="#comments" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-card text-on-surface-variant font-label-badge text-label-badge shadow-sm"><i class="bi bi-chat" aria-hidden="true"></i><?php echo esc_html( sprintf( /* translators: %s comments */ __( '%s پرسش و پاسخ کارگاهی', 'larijani' ), ls_fa_num( get_comments_number() ) ) ); ?></a>
+				<a href="#comments" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-card text-on-surface-variant font-label-badge text-label-badge shadow-sm"><i class="bi bi-chat" aria-hidden="true"></i><?php echo esc_html( sprintf( /* translators: %s comments */ __( '%s پرسش و پاسخ کارگاهی', 'larijani-stone' ), larijani_fa_num( get_comments_number() ) ) ); ?></a>
 				<?php endif; ?>
 			</div>
 			<?php endif; ?>
@@ -694,25 +694,25 @@ function ls_render_post_hero( $s = array() ) {
 						<?php echo get_avatar( $author_id, 88, '', $author, array( 'class' => 'w-11 h-11 rounded-xl object-cover' ) ); ?>
 					</div>
 					<div class="flex flex-col">
-						<div class="flex items-center gap-2"><span class="font-title-card text-title-card text-surface-dark font-black"><?php echo esc_html( $author ); ?></span><i class="bi bi-patch-check-fill text-[15px] text-accent-emerald" title="<?php esc_attr_e( 'تایید هویت فنی', 'larijani' ); ?>" aria-hidden="true"></i></div>
-						<span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( trim( $role . ( $role ? ' | ' : '' ) . ls_post_date() ) ); ?></span>
+						<div class="flex items-center gap-2"><span class="font-title-card text-title-card text-surface-dark font-black"><?php echo esc_html( $author ); ?></span><i class="bi bi-patch-check-fill text-[15px] text-accent-emerald" title="<?php esc_attr_e( 'تایید هویت فنی', 'larijani-stone' ); ?>" aria-hidden="true"></i></div>
+						<span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( trim( $role . ( $role ? ' | ' : '' ) . larijani_post_date() ) ); ?></span>
 					</div>
 				</div>
 				<?php endif; ?>
 				<?php if ( 'yes' === $s['show_share'] ) : ?>
 				<div class="flex items-center gap-2">
-					<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-card hover:bg-surface-container text-on-surface font-body-sm text-body-sm shadow-sm transition-all" type="button" data-ls-copy="<?php echo esc_url( get_permalink() ); ?>" title="<?php esc_attr_e( 'کپی لینک مقاله', 'larijani' ); ?>"><i class="bi bi-link-45deg text-[18px] text-primary-container" aria-hidden="true"></i><span class="hidden sm:inline"><?php esc_html_e( 'کپی پیوند', 'larijani' ); ?></span></button>
-					<a class="w-10 h-10 rounded-xl bg-surface-card hover:bg-surface-container flex items-center justify-center shadow-sm transition-all" href="<?php echo esc_url( $share['whatsapp'] ); ?>" target="_blank" rel="noopener" title="<?php esc_attr_e( 'ارسال به واتساپ', 'larijani' ); ?>"><i class="bi bi-whatsapp text-[18px] text-accent-emerald" aria-hidden="true"></i></a>
-					<a class="w-10 h-10 rounded-xl bg-surface-card hover:bg-surface-container flex items-center justify-center shadow-sm transition-all" href="<?php echo esc_url( $share['telegram'] ); ?>" target="_blank" rel="noopener" title="<?php esc_attr_e( 'اشتراک در تلگرام', 'larijani' ); ?>"><i class="bi bi-telegram text-[18px] text-accent-cobalt" aria-hidden="true"></i></a>
-					<a class="w-10 h-10 rounded-xl bg-surface-card hover:bg-secondary-container flex items-center justify-center shadow-sm transition-all" href="<?php echo esc_url( $share['linkedin'] ); ?>" target="_blank" rel="noopener" title="<?php esc_attr_e( 'لینکدین', 'larijani' ); ?>"><i class="bi bi-linkedin text-[17px] text-primary-container" aria-hidden="true"></i></a>
+					<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-card hover:bg-surface-container text-on-surface font-body-sm text-body-sm shadow-sm transition-all" type="button" data-ls-copy="<?php echo esc_url( get_permalink() ); ?>" title="<?php esc_attr_e( 'کپی لینک مقاله', 'larijani-stone' ); ?>"><i class="bi bi-link-45deg text-[18px] text-primary-container" aria-hidden="true"></i><span class="hidden sm:inline"><?php esc_html_e( 'کپی پیوند', 'larijani-stone' ); ?></span></button>
+					<a class="w-10 h-10 rounded-xl bg-surface-card hover:bg-surface-container flex items-center justify-center shadow-sm transition-all" href="<?php echo esc_url( $share['whatsapp'] ); ?>" target="_blank" rel="noopener" title="<?php esc_attr_e( 'ارسال به واتساپ', 'larijani-stone' ); ?>"><i class="bi bi-whatsapp text-[18px] text-accent-emerald" aria-hidden="true"></i></a>
+					<a class="w-10 h-10 rounded-xl bg-surface-card hover:bg-surface-container flex items-center justify-center shadow-sm transition-all" href="<?php echo esc_url( $share['telegram'] ); ?>" target="_blank" rel="noopener" title="<?php esc_attr_e( 'اشتراک در تلگرام', 'larijani-stone' ); ?>"><i class="bi bi-telegram text-[18px] text-accent-cobalt" aria-hidden="true"></i></a>
+					<a class="w-10 h-10 rounded-xl bg-surface-card hover:bg-secondary-container flex items-center justify-center shadow-sm transition-all" href="<?php echo esc_url( $share['linkedin'] ); ?>" target="_blank" rel="noopener" title="<?php esc_attr_e( 'لینکدین', 'larijani-stone' ); ?>"><i class="bi bi-linkedin text-[17px] text-primary-container" aria-hidden="true"></i></a>
 				</div>
 				<?php endif; ?>
 			</div>
 			<?php endif; ?>
-			<?php $hero_img = 'yes' === $s['show_image'] ? ls_post_image_url( $post_id, 'ls-wide' ) : ''; ?>
+			<?php $hero_img = 'yes' === $s['show_image'] ? larijani_post_image_url( $post_id, 'ls-wide' ) : ''; ?>
 			<?php if ( $hero_img ) : ?>
 			<div class="relative w-full rounded-3xl overflow-hidden shadow-xl aspect-[16/9] sm:aspect-[21/9] max-h-[520px]">
-				<?php echo ls_img( $hero_img, 'w-full h-full object-cover', get_the_title( $post_id ), 'ls-wide', false ); // phpcs:ignore ?>
+				<?php echo larijani_img( $hero_img, 'w-full h-full object-cover', get_the_title( $post_id ), 'ls-wide', false ); // phpcs:ignore ?>
 				<?php if ( $caption || $ibadge ) : ?>
 				<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/80 via-surface-dark/20 to-transparent"></div>
 				<div class="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 left-4 sm:left-6 flex flex-wrap items-center justify-between gap-4 text-on-primary">
@@ -726,9 +726,9 @@ function ls_render_post_hero( $s = array() ) {
 			<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
 				<?php foreach ( $s['metrics'] as $m ) : ?>
 				<div class="bg-surface-card rounded-2xl p-5 shadow-sm flex flex-col justify-between">
-					<div class="flex items-center justify-between text-on-surface-variant gap-2"><span class="font-body-sm text-body-sm font-semibold"><?php echo esc_html( $m['label'] ?? '' ); ?></span><?php echo ls_icon( $m['icon'] ?? '', 'text-[20px] ' . ls_tone( $m['tone'] ?? 'primary', 'text' ) ); // phpcs:ignore ?></div>
+					<div class="flex items-center justify-between text-on-surface-variant gap-2"><span class="font-body-sm text-body-sm font-semibold"><?php echo esc_html( $m['label'] ?? '' ); ?></span><?php echo larijani_icon( $m['icon'] ?? '', 'text-[20px] ' . larijani_tone( $m['tone'] ?? 'primary', 'text' ) ); // phpcs:ignore ?></div>
 					<div class="mt-3 flex items-baseline gap-2 flex-wrap"><span class="font-headline-lg text-headline-lg <?php echo 'emerald' === ( $m['value_tone'] ?? '' ) ? 'text-accent-emerald' : 'text-surface-dark'; ?> font-black tracking-tight"><?php echo esc_html( $m['value'] ?? '' ); ?></span><span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $m['unit'] ?? '' ); ?></span></div>
-					<?php if ( ! empty( $m['note'] ) ) : ?><div class="mt-2 <?php echo 'emerald' === ( $m['note_tone'] ?? '' ) ? 'text-accent-emerald' : 'text-on-surface-variant'; ?> font-body-sm text-body-sm flex items-center gap-1"><?php echo ls_icon( $m['note_icon'] ?? 'bi bi-check2', 'text-[13px]' ); // phpcs:ignore ?><?php echo esc_html( $m['note'] ); ?></div><?php endif; ?>
+					<?php if ( ! empty( $m['note'] ) ) : ?><div class="mt-2 <?php echo 'emerald' === ( $m['note_tone'] ?? '' ) ? 'text-accent-emerald' : 'text-on-surface-variant'; ?> font-body-sm text-body-sm flex items-center gap-1"><?php echo larijani_icon( $m['note_icon'] ?? 'bi bi-check2', 'text-[13px]' ); // phpcs:ignore ?><?php echo esc_html( $m['note'] ); ?></div><?php endif; ?>
 				</div>
 				<?php endforeach; ?>
 			</div>
@@ -744,7 +744,7 @@ function ls_render_post_hero( $s = array() ) {
  * @param string $content HTML.
  * @return array [ [id, html], ... ]
  */
-function ls_split_content_sections( $content ) {
+function larijani_split_content_sections( $content ) {
 	$parts    = preg_split( '/(?=<h2[\s>])|(?=<div class="ls-article-block)/i', $content );
 	$sections = array();
 	$n        = 0;
@@ -760,7 +760,7 @@ function ls_split_content_sections( $content ) {
 			} else {
 				$id = 'section-' . $n;
 			}
-			$badge = '<span class="w-9 h-9 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold shrink-0 text-base">' . esc_html( ls_fa_num( str_pad( (string) $n, 2, '0', STR_PAD_LEFT ) ) ) . '</span>';
+			$badge = '<span class="w-9 h-9 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold shrink-0 text-base">' . esc_html( larijani_fa_num( str_pad( (string) $n, 2, '0', STR_PAD_LEFT ) ) ) . '</span>';
 			$head  = '<div class="flex items-center gap-3 not-prose">' . $badge . '<h2 id="' . esc_attr( $id ) . '" class="!m-0 font-headline-md text-headline-md text-surface-dark font-black">' . $m[2] . '</h2></div>';
 			$part  = $head . substr( ltrim( $part ), strlen( $m[0] ) );
 		}
@@ -774,16 +774,16 @@ function ls_split_content_sections( $content ) {
  *
  * @param array $s Settings.
  */
-function ls_render_post_body( $s = array() ) {
+function larijani_render_post_body( $s = array() ) {
 	$s = wp_parse_args(
 		$s,
 		array(
 			'split_sections' => 'yes',
 			'show_tags'      => 'yes',
-			'tags_label'     => __( 'برچسب‌های تخصصی:', 'larijani' ),
+			'tags_label'     => __( 'برچسب‌های تخصصی:', 'larijani-stone' ),
 			'show_author'    => 'yes',
-			'author_prefix'  => __( 'درباره نویسنده:', 'larijani' ),
-			'author_cta'     => __( 'گفتگوی مستقیم با نویسنده', 'larijani' ),
+			'author_prefix'  => __( 'درباره نویسنده:', 'larijani-stone' ),
+			'author_cta'     => __( 'گفتگوی مستقیم با نویسنده', 'larijani-stone' ),
 			'show_nav'       => 'yes',
 		)
 	);
@@ -791,7 +791,7 @@ function ls_render_post_body( $s = array() ) {
 	$content = str_replace( ']]>', ']]&gt;', $content );
 	echo '<div class="ls-article flex flex-col gap-10">';
 	if ( 'yes' === $s['split_sections'] ) {
-		foreach ( ls_split_content_sections( $content ) as $sec ) {
+		foreach ( larijani_split_content_sections( $content ) as $sec ) {
 			if ( 0 === strpos( ltrim( $sec[1] ), '<div class="ls-article-block' ) ) {
 				echo $sec[1]; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- post content.
 				continue;
@@ -825,10 +825,10 @@ function ls_render_post_body( $s = array() ) {
 				<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
 					<div>
 						<h3 class="font-headline-sm text-headline-sm text-surface-dark font-black"><?php echo esc_html( trim( $s['author_prefix'] . ' ' . $name ) ); ?></h3>
-						<a class="font-body-sm text-body-sm text-primary-container font-bold" href="<?php echo esc_url( get_author_posts_url( $aid ) ); ?>"><?php esc_html_e( 'همه نوشته‌های نویسنده', 'larijani' ); ?></a>
+						<a class="font-body-sm text-body-sm text-primary-container font-bold" href="<?php echo esc_url( get_author_posts_url( $aid ) ); ?>"><?php esc_html_e( 'همه نوشته‌های نویسنده', 'larijani-stone' ); ?></a>
 					</div>
 					<?php if ( $s['author_cta'] ) : ?>
-					<a class="inline-flex items-center gap-1.5 text-primary-container hover:text-primary font-label-nav text-body-sm" href="<?php echo esc_url( ls_tel( ls_opt( 'phone_1' ) ) ); ?>"><i class="bi bi-telephone-forward" aria-hidden="true"></i><?php echo esc_html( $s['author_cta'] ); ?></a>
+					<a class="inline-flex items-center gap-1.5 text-primary-container hover:text-primary font-label-nav text-body-sm" href="<?php echo esc_url( larijani_tel( larijani_opt( 'phone_1' ) ) ); ?>"><i class="bi bi-telephone-forward" aria-hidden="true"></i><?php echo esc_html( $s['author_cta'] ); ?></a>
 					<?php endif; ?>
 				</div>
 				<?php if ( $bio ) : ?><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"><?php echo esc_html( $bio ); ?></p><?php endif; ?>
@@ -843,12 +843,12 @@ function ls_render_post_body( $s = array() ) {
 		if ( $prev || $next ) {
 			echo '<div class="grid grid-cols-1 md:grid-cols-2 gap-4">';
 			if ( $prev ) {
-				echo '<a class="p-6 rounded-2xl bg-surface-card hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between group" href="' . esc_url( get_permalink( $prev ) ) . '"><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><i class="bi bi-arrow-right group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>' . esc_html__( 'مقاله قبلی', 'larijani' ) . '</div><span class="font-title-card text-title-card text-surface-dark font-bold mt-2">' . esc_html( get_the_title( $prev ) ) . '</span></a>';
+				echo '<a class="p-6 rounded-2xl bg-surface-card hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between group" href="' . esc_url( get_permalink( $prev ) ) . '"><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><i class="bi bi-arrow-right group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>' . esc_html__( 'مقاله قبلی', 'larijani-stone' ) . '</div><span class="font-title-card text-title-card text-surface-dark font-bold mt-2">' . esc_html( get_the_title( $prev ) ) . '</span></a>';
 			} else {
 				echo '<span></span>';
 			}
 			if ( $next ) {
-				echo '<a class="p-6 rounded-2xl bg-surface-card hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between text-left group" href="' . esc_url( get_permalink( $next ) ) . '"><div class="flex items-center justify-end gap-2 text-on-surface-variant font-body-sm text-body-sm">' . esc_html__( 'مقاله بعدی', 'larijani' ) . '<i class="bi bi-arrow-left group-hover:-translate-x-1 transition-transform" aria-hidden="true"></i></div><span class="font-title-card text-title-card text-surface-dark font-bold mt-2 text-right">' . esc_html( get_the_title( $next ) ) . '</span></a>';
+				echo '<a class="p-6 rounded-2xl bg-surface-card hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between text-left group" href="' . esc_url( get_permalink( $next ) ) . '"><div class="flex items-center justify-end gap-2 text-on-surface-variant font-body-sm text-body-sm">' . esc_html__( 'مقاله بعدی', 'larijani-stone' ) . '<i class="bi bi-arrow-left group-hover:-translate-x-1 transition-transform" aria-hidden="true"></i></div><span class="font-title-card text-title-card text-surface-dark font-bold mt-2 text-right">' . esc_html( get_the_title( $next ) ) . '</span></a>';
 			}
 			echo '</div>';
 		}
@@ -861,11 +861,11 @@ function ls_render_post_body( $s = array() ) {
  *
  * @param array $s Settings.
  */
-function ls_render_related_posts( $s = array() ) {
-	$s     = wp_parse_args( $s, array( 'title' => __( 'مقالات و فرمولاسیون‌های مرتبط کارگاهی', 'larijani' ), 'count' => 3, 'link_text' => __( 'مشاهده همه', 'larijani' ) ) );
-	$posts = get_posts( ls_posts_query_args( array( 'posts_per_page' => $s['count'], 'related' => true ) ) );
+function larijani_render_related_posts( $s = array() ) {
+	$s     = wp_parse_args( $s, array( 'title' => __( 'مقالات و فرمولاسیون‌های مرتبط کارگاهی', 'larijani-stone' ), 'count' => 3, 'link_text' => __( 'مشاهده همه', 'larijani-stone' ) ) );
+	$posts = get_posts( larijani_posts_query_args( array( 'posts_per_page' => $s['count'], 'related' => true ) ) );
 	if ( ! $posts ) {
-		$posts = get_posts( ls_posts_query_args( array( 'posts_per_page' => $s['count'], 'exclude_current' => true ) ) );
+		$posts = get_posts( larijani_posts_query_args( array( 'posts_per_page' => $s['count'], 'exclude_current' => true ) ) );
 	}
 	if ( ! $posts ) {
 		return;
@@ -874,11 +874,11 @@ function ls_render_related_posts( $s = array() ) {
 	<div class="space-y-4 pt-4">
 		<div class="flex items-center justify-between gap-3">
 			<h3 class="font-headline-md text-headline-md text-surface-dark font-black"><?php echo esc_html( $s['title'] ); ?></h3>
-			<?php if ( $s['link_text'] ) : ?><a class="font-body-sm text-body-sm text-primary-container font-bold hover:underline flex items-center gap-1 shrink-0" href="<?php echo esc_url( ls_blog_url() ); ?>"><?php echo esc_html( $s['link_text'] ); ?><i class="bi bi-arrow-left" aria-hidden="true"></i></a><?php endif; ?>
+			<?php if ( $s['link_text'] ) : ?><a class="font-body-sm text-body-sm text-primary-container font-bold hover:underline flex items-center gap-1 shrink-0" href="<?php echo esc_url( larijani_blog_url() ); ?>"><?php echo esc_html( $s['link_text'] ); ?><i class="bi bi-arrow-left" aria-hidden="true"></i></a><?php endif; ?>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 			<?php foreach ( $posts as $p ) : ?>
-				<?php echo ls_post_card( ls_post_data( $p ), 'related' ); // phpcs:ignore ?>
+				<?php echo larijani_post_card( larijani_post_data( $p ), 'related' ); // phpcs:ignore ?>
 			<?php endforeach; ?>
 		</div>
 	</div>
@@ -890,32 +890,32 @@ function ls_render_related_posts( $s = array() ) {
  *
  * @param array $s Settings.
  */
-function ls_render_post_comments( $s = array() ) {
-	$s = wp_parse_args( $s, array( 'badge' => __( 'پاسخگویی مستقیم توسط تیم فنی', 'larijani' ) ) );
+function larijani_render_post_comments( $s = array() ) {
+	$s = wp_parse_args( $s, array( 'badge' => __( 'پاسخگویی مستقیم توسط تیم فنی', 'larijani-stone' ) ) );
 	if ( ! comments_open() && ! get_comments_number() ) {
 		return;
 	}
-	$GLOBALS['ls_comments_badge'] = $s['badge'];
+	$GLOBALS['larijani_comments_badge'] = $s['badge'];
 	comments_template();
 }
 
 /**
  * Default single post sidebar.
  */
-function ls_render_single_sidebar() {
+function larijani_render_single_sidebar() {
 	echo '<div class="sticky top-28 space-y-6">';
-	ls_render_toc();
-	ls_render_resin_calculator();
-	ls_render_sidebar_cta();
-	ls_render_popular_posts(
+	larijani_render_toc();
+	larijani_render_resin_calculator();
+	larijani_render_sidebar_cta();
+	larijani_render_popular_posts(
 		array(
-			'title' => __( 'پربازدیدترین فرمول‌های ماه', 'larijani' ),
+			'title' => __( 'پربازدیدترین فرمول‌های ماه', 'larijani-stone' ),
 			'icon'  => '',
 			'count' => 3,
 			'style' => 'compact',
 		)
 	);
-	ls_render_promo_box();
+	larijani_render_promo_box();
 	if ( is_active_sidebar( 'blog-sidebar' ) ) {
 		echo '<div class="ls-widget-area">';
 		dynamic_sidebar( 'blog-sidebar' );
@@ -931,9 +931,9 @@ function ls_render_single_sidebar() {
  * @param int $post_id Post id.
  * @return array
  */
-function ls_post_metrics( $post_id ) {
+function larijani_post_metrics( $post_id ) {
 	$out = array();
-	foreach ( ls_lines( (string) get_post_meta( $post_id, '_ls_metrics', true ) ) as $line ) {
+	foreach ( larijani_lines( (string) get_post_meta( $post_id, '_ls_metrics', true ) ) as $line ) {
 		$p = array_map( 'trim', explode( '|', $line ) );
 		if ( count( $p ) < 2 ) {
 			continue;

@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  * @param array      $fallback Fallback items [ [title, url], ... ].
  * @return array[] { title, url, active, children[] }
  */
-function ls_menu_items( $location, $fallback = array() ) {
+function larijani_menu_items( $location, $fallback = array() ) {
 	$menu_id = 0;
 	if ( is_numeric( $location ) && (int) $location > 0 ) {
 		$menu_id = (int) $location;
@@ -83,7 +83,7 @@ function ls_menu_items( $location, $fallback = array() ) {
  * @param string $fallback Fallback.
  * @return string
  */
-function ls_page_url( $slug, $fallback = '#' ) {
+function larijani_page_url( $slug, $fallback = '#' ) {
 	$page = get_page_by_path( $slug );
 	return $page ? get_permalink( $page ) : $fallback;
 }
@@ -93,14 +93,14 @@ function ls_page_url( $slug, $fallback = '#' ) {
  *
  * @return array
  */
-function ls_default_nav() {
+function larijani_default_nav() {
 	return array(
-		array( __( 'صفحه اصلی', 'larijani' ), home_url( '/' ) ),
-		array( __( 'فروشگاه و کاتالوگ', 'larijani' ), ls_has_woo() ? get_permalink( wc_get_page_id( 'shop' ) ) : ls_page_url( 'shop' ) ),
-		array( __( 'خدمات و خطوط تولید', 'larijani' ), ls_page_url( 'services' ) ),
-		array( __( 'نمونه کارها', 'larijani' ), ls_page_url( 'portfolio', get_post_type_archive_link( 'ls_project' ) ) ),
-		array( __( 'وبلاگ تخصصی', 'larijani' ), ls_page_url( 'blog', get_post_type_archive_link( 'post' ) ) ),
-		array( __( 'تماس با ما', 'larijani' ), ls_page_url( 'contact' ) ),
+		array( __( 'صفحه اصلی', 'larijani-stone' ), home_url( '/' ) ),
+		array( __( 'فروشگاه و کاتالوگ', 'larijani-stone' ), larijani_has_woo() ? get_permalink( wc_get_page_id( 'shop' ) ) : larijani_page_url( 'shop' ) ),
+		array( __( 'خدمات و خطوط تولید', 'larijani-stone' ), larijani_page_url( 'services' ) ),
+		array( __( 'نمونه کارها', 'larijani-stone' ), larijani_page_url( 'portfolio', get_post_type_archive_link( 'ls_project' ) ) ),
+		array( __( 'وبلاگ تخصصی', 'larijani-stone' ), larijani_page_url( 'blog', get_post_type_archive_link( 'post' ) ) ),
+		array( __( 'تماس با ما', 'larijani-stone' ), larijani_page_url( 'contact' ) ),
 	);
 }
 
@@ -109,8 +109,8 @@ function ls_default_nav() {
  *
  * @return array[] [ [label, url|null], ... ]
  */
-function ls_breadcrumb_trail() {
-	$trail = array( array( __( 'صفحه اصلی', 'larijani' ), home_url( '/' ) ) );
+function larijani_breadcrumb_trail() {
+	$trail = array( array( __( 'صفحه اصلی', 'larijani-stone' ), home_url( '/' ) ) );
 
 	if ( is_front_page() ) {
 		return $trail;
@@ -143,17 +143,17 @@ function ls_breadcrumb_trail() {
 	}
 
 	if ( is_home() ) {
-		$trail[] = array( get_the_title( (int) get_option( 'page_for_posts' ) ) ?: __( 'وبلاگ', 'larijani' ), null );
+		$trail[] = array( get_the_title( (int) get_option( 'page_for_posts' ) ) ?: __( 'وبلاگ', 'larijani-stone' ), null );
 	} elseif ( is_singular( 'post' ) ) {
 		$blog = (int) get_option( 'page_for_posts' );
-		$trail[] = array( $blog ? get_the_title( $blog ) : __( 'وبلاگ', 'larijani' ), $blog ? get_permalink( $blog ) : home_url( '/' ) );
+		$trail[] = array( $blog ? get_the_title( $blog ) : __( 'وبلاگ', 'larijani-stone' ), $blog ? get_permalink( $blog ) : home_url( '/' ) );
 		$cats = get_the_category();
 		if ( $cats ) {
 			$trail[] = array( $cats[0]->name, get_category_link( $cats[0] ) );
 		}
 		$trail[] = array( get_the_title(), null );
 	} elseif ( is_singular( 'ls_project' ) ) {
-		$trail[] = array( __( 'نمونه کارها', 'larijani' ), ls_page_url( 'portfolio', get_post_type_archive_link( 'ls_project' ) ) );
+		$trail[] = array( __( 'نمونه کارها', 'larijani-stone' ), larijani_page_url( 'portfolio', get_post_type_archive_link( 'ls_project' ) ) );
 		$trail[] = array( get_the_title(), null );
 	} elseif ( is_page() ) {
 		foreach ( array_reverse( get_post_ancestors( get_the_ID() ) ) as $anc ) {
@@ -168,13 +168,13 @@ function ls_breadcrumb_trail() {
 		$trail[] = array( post_type_archive_title( '', false ), null );
 	} elseif ( is_search() ) {
 		/* translators: %s search query */
-		$trail[] = array( sprintf( __( 'جستجو: %s', 'larijani' ), get_search_query() ), null );
+		$trail[] = array( sprintf( __( 'جستجو: %s', 'larijani-stone' ), get_search_query() ), null );
 	} elseif ( is_author() ) {
 		$trail[] = array( get_the_author_meta( 'display_name', (int) get_query_var( 'author' ) ), null );
 	} elseif ( is_archive() ) {
 		$trail[] = array( wp_strip_all_tags( get_the_archive_title() ), null );
 	} elseif ( is_404() ) {
-		$trail[] = array( __( 'صفحه پیدا نشد', 'larijani' ), null );
+		$trail[] = array( __( 'صفحه پیدا نشد', 'larijani-stone' ), null );
 	}
 	return apply_filters( 'ls_breadcrumb_trail', $trail );
 }
@@ -185,7 +185,7 @@ function ls_breadcrumb_trail() {
  * @param array $args { separator: chevron|slash, current_class }.
  * @return string
  */
-function ls_breadcrumb_html( $args = array() ) {
+function larijani_breadcrumb_html( $args = array() ) {
 	$args = wp_parse_args(
 		$args,
 		array(
@@ -196,14 +196,14 @@ function ls_breadcrumb_html( $args = array() ) {
 	);
 
 	// SEO plugins first (they output schema too).
-	if ( null === $args['items'] && function_exists( 'yoast_breadcrumb' ) && ! ls_is_elementor_editor() ) {
+	if ( null === $args['items'] && function_exists( 'yoast_breadcrumb' ) && ! larijani_is_elementor_editor() ) {
 		$yoast = yoast_breadcrumb( '<span class="ls-yoast-bc">', '</span>', false );
 		if ( $yoast ) {
 			return $yoast;
 		}
 	}
 
-	$trail = null !== $args['items'] ? $args['items'] : ls_breadcrumb_trail();
+	$trail = null !== $args['items'] ? $args['items'] : larijani_breadcrumb_trail();
 	$sep   = 'slash' === $args['separator'] ? '<span class="text-outline-variant">/</span>' : '<i class="bi bi-chevron-left text-xs opacity-40" aria-hidden="true"></i>';
 	$out   = array();
 	$last  = count( $trail ) - 1;
@@ -227,7 +227,7 @@ function ls_breadcrumb_html( $args = array() ) {
  * @param WP_Query|null $query Query.
  * @return string
  */
-function ls_pagination( $query = null ) {
+function larijani_pagination( $query = null ) {
 	global $wp_query;
 	$query = $query ? $query : $wp_query;
 	if ( $query->max_num_pages < 2 ) {
@@ -239,16 +239,16 @@ function ls_pagination( $query = null ) {
 			'total'     => $query->max_num_pages,
 			'current'   => $current,
 			'mid_size'  => 1,
-			'prev_text' => '<i class="bi bi-chevron-right" aria-hidden="true"></i><span class="screen-reader-text">' . __( 'قبلی', 'larijani' ) . '</span>',
-			'next_text' => '<i class="bi bi-chevron-left" aria-hidden="true"></i><span class="screen-reader-text">' . __( 'بعدی', 'larijani' ) . '</span>',
+			'prev_text' => '<i class="bi bi-chevron-right" aria-hidden="true"></i><span class="screen-reader-text">' . __( 'قبلی', 'larijani-stone' ) . '</span>',
+			'next_text' => '<i class="bi bi-chevron-left" aria-hidden="true"></i><span class="screen-reader-text">' . __( 'بعدی', 'larijani-stone' ) . '</span>',
 			'type'      => 'array',
 		)
 	);
 	if ( ! $links ) {
 		return '';
 	}
-	$links = array_map( 'ls_fa_num_html_safe', $links );
-	return '<nav class="ls-pagination flex items-center justify-center flex-wrap gap-2" aria-label="' . esc_attr__( 'صفحه‌بندی', 'larijani' ) . '">' . implode( '', $links ) . '</nav>';
+	$links = array_map( 'larijani_fa_num_html_safe', $links );
+	return '<nav class="ls-pagination flex items-center justify-center flex-wrap gap-2" aria-label="' . esc_attr__( 'صفحه‌بندی', 'larijani-stone' ) . '">' . implode( '', $links ) . '</nav>';
 }
 
 /**
@@ -257,11 +257,11 @@ function ls_pagination( $query = null ) {
  * @param string $html HTML.
  * @return string
  */
-function ls_fa_num_html_safe( $html ) {
+function larijani_fa_num_html_safe( $html ) {
 	return preg_replace_callback(
 		'/>([^<]+)</u',
 		static function ( $m ) {
-			return '>' . ls_fa_num( $m[1] ) . '<';
+			return '>' . larijani_fa_num( $m[1] ) . '<';
 		},
 		$html
 	);
@@ -272,7 +272,7 @@ function ls_fa_num_html_safe( $html ) {
  *
  * @return array
  */
-function ls_share_links() {
+function larijani_share_links() {
 	$url   = rawurlencode( get_permalink() );
 	$title = rawurlencode( get_the_title() );
 	return array(
@@ -288,18 +288,18 @@ function ls_share_links() {
  *
  * @return array [ [icon, url, label], ... ]
  */
-function ls_social_profiles() {
+function larijani_social_profiles() {
 	$out = array();
 	$map = array(
-		'whatsapp'  => array( 'bi bi-whatsapp', __( 'واتساپ', 'larijani' ) ),
-		'telegram'  => array( 'bi bi-telegram', __( 'تلگرام', 'larijani' ) ),
-		'instagram' => array( 'bi bi-instagram', __( 'اینستاگرام', 'larijani' ) ),
-		'eitaa'     => array( 'bi bi-chat-dots-fill', __( 'ایتا', 'larijani' ) ),
-		'aparat'    => array( 'bi bi-play-btn-fill', __( 'آپارات', 'larijani' ) ),
-		'linkedin'  => array( 'bi bi-linkedin', __( 'لینکدین', 'larijani' ) ),
+		'whatsapp'  => array( 'bi bi-whatsapp', __( 'واتساپ', 'larijani-stone' ) ),
+		'telegram'  => array( 'bi bi-telegram', __( 'تلگرام', 'larijani-stone' ) ),
+		'instagram' => array( 'bi bi-instagram', __( 'اینستاگرام', 'larijani-stone' ) ),
+		'eitaa'     => array( 'bi bi-chat-dots-fill', __( 'ایتا', 'larijani-stone' ) ),
+		'aparat'    => array( 'bi bi-play-btn-fill', __( 'آپارات', 'larijani-stone' ) ),
+		'linkedin'  => array( 'bi bi-linkedin', __( 'لینکدین', 'larijani-stone' ) ),
 	);
 	foreach ( $map as $key => $meta ) {
-		$val = 'whatsapp' === $key ? ( ls_opt( 'whatsapp' ) ? ls_whatsapp_url() : '' ) : ls_opt( $key );
+		$val = 'whatsapp' === $key ? ( larijani_opt( 'whatsapp' ) ? larijani_whatsapp_url() : '' ) : larijani_opt( $key );
 		if ( $val ) {
 			$out[] = array( $meta[0], $val, $meta[1] );
 		}
@@ -314,15 +314,15 @@ function ls_social_profiles() {
  * @param array|null $media     Optional override media.
  * @return string
  */
-function ls_logo_img( $img_class = 'w-full h-full object-contain', $media = null ) {
+function larijani_logo_img( $img_class = 'w-full h-full object-contain', $media = null ) {
 	if ( is_array( $media ) && ( ! empty( $media['url'] ) || ! empty( $media['id'] ) ) ) {
-		return ls_img( $media, $img_class, ls_opt( 'brand_name' ), 'medium', false );
+		return larijani_img( $media, $img_class, larijani_opt( 'brand_name' ), 'medium', false );
 	}
 	$logo_id = (int) get_theme_mod( 'custom_logo' );
 	if ( $logo_id ) {
-		return wp_get_attachment_image( $logo_id, 'medium', false, array( 'class' => $img_class, 'alt' => ls_opt( 'brand_name' ), 'loading' => 'eager' ) );
+		return wp_get_attachment_image( $logo_id, 'medium', false, array( 'class' => $img_class, 'alt' => larijani_opt( 'brand_name' ), 'loading' => 'eager' ) );
 	}
-	return '<img src="' . esc_url( LS_URI . '/assets/images/logo.svg' ) . '" class="' . esc_attr( $img_class ) . '" alt="' . esc_attr( ls_opt( 'brand_name' ) ) . '">';
+	return '<img src="' . esc_url( LARIJANI_URI . '/assets/images/logo.svg' ) . '" class="' . esc_attr( $img_class ) . '" alt="' . esc_attr( larijani_opt( 'brand_name' ) ) . '">';
 }
 
 /**
@@ -331,7 +331,7 @@ function ls_logo_img( $img_class = 'w-full h-full object-contain', $media = null
  * @param array $s Settings: source, posts_per_page, category, orderby, exclude_current, offset.
  * @return array
  */
-function ls_posts_query_args( $s ) {
+function larijani_posts_query_args( $s ) {
 	$args = array(
 		'post_type'           => 'post',
 		'posts_per_page'      => isset( $s['posts_per_page'] ) ? (int) $s['posts_per_page'] : 6,
@@ -374,8 +374,8 @@ function ls_posts_query_args( $s ) {
  * @param string $taxonomy Taxonomy.
  * @return array
  */
-function ls_term_options( $taxonomy = 'category' ) {
-	$out   = array( '' => __( 'همه', 'larijani' ) );
+function larijani_term_options( $taxonomy = 'category' ) {
+	$out   = array( '' => __( 'همه', 'larijani-stone' ) );
 	$terms = get_terms( array( 'taxonomy' => $taxonomy, 'hide_empty' => false ) );
 	if ( ! is_wp_error( $terms ) ) {
 		foreach ( $terms as $t ) {
@@ -391,7 +391,7 @@ function ls_term_options( $taxonomy = 'category' ) {
  * @param int|null $post_id Post.
  * @return WP_Term|null
  */
-function ls_primary_category( $post_id = null ) {
+function larijani_primary_category( $post_id = null ) {
 	$cats = get_the_category( $post_id );
 	return $cats ? $cats[0] : null;
 }
@@ -403,11 +403,11 @@ function ls_primary_category( $post_id = null ) {
  * @param int|null $post_id Post.
  * @return string
  */
-function ls_post_date( $post_id = null ) {
-	if ( ls_opt( 'jalali_dates' ) ) {
-		return ls_jalali_date( (int) get_post_time( 'U', true, $post_id ) );
+function larijani_post_date( $post_id = null ) {
+	if ( larijani_opt( 'jalali_dates' ) ) {
+		return larijani_jalali_date( (int) get_post_time( 'U', true, $post_id ) );
 	}
-	return ls_fa_num( get_the_date( '', $post_id ) );
+	return larijani_fa_num( get_the_date( '', $post_id ) );
 }
 
 /**
@@ -416,23 +416,23 @@ function ls_post_date( $post_id = null ) {
  * @param int $timestamp Unix timestamp.
  * @return string
  */
-function ls_time_ago( $timestamp ) {
+function larijani_time_ago( $timestamp ) {
 	$diff  = max( 0, time() - (int) $timestamp );
 	$units = array(
-		YEAR_IN_SECONDS   => __( 'سال', 'larijani' ),
-		MONTH_IN_SECONDS  => __( 'ماه', 'larijani' ),
-		WEEK_IN_SECONDS   => __( 'هفته', 'larijani' ),
-		DAY_IN_SECONDS    => __( 'روز', 'larijani' ),
-		HOUR_IN_SECONDS   => __( 'ساعت', 'larijani' ),
-		MINUTE_IN_SECONDS => __( 'دقیقه', 'larijani' ),
+		YEAR_IN_SECONDS   => __( 'سال', 'larijani-stone' ),
+		MONTH_IN_SECONDS  => __( 'ماه', 'larijani-stone' ),
+		WEEK_IN_SECONDS   => __( 'هفته', 'larijani-stone' ),
+		DAY_IN_SECONDS    => __( 'روز', 'larijani-stone' ),
+		HOUR_IN_SECONDS   => __( 'ساعت', 'larijani-stone' ),
+		MINUTE_IN_SECONDS => __( 'دقیقه', 'larijani-stone' ),
 	);
 	foreach ( $units as $sec => $label ) {
 		if ( $diff >= $sec ) {
 			/* translators: 1: number 2: unit */
-			return ls_fa_num( sprintf( __( '%1$d %2$s پیش', 'larijani' ), floor( $diff / $sec ), $label ) );
+			return larijani_fa_num( sprintf( __( '%1$d %2$s پیش', 'larijani-stone' ), floor( $diff / $sec ), $label ) );
 		}
 	}
-	return __( 'لحظاتی پیش', 'larijani' );
+	return __( 'لحظاتی پیش', 'larijani-stone' );
 }
 
 /**
@@ -444,20 +444,20 @@ function ls_time_ago( $timestamp ) {
  * @param array      $args    Args.
  * @param int        $depth   Depth.
  */
-function ls_comment_item( $comment, $args, $depth ) {
+function larijani_comment_item( $comment, $args, $depth ) {
 	$is_reply = $depth > 1;
 	$staff    = $comment->user_id && ( user_can( $comment->user_id, 'moderate_comments' ) || (int) get_post_field( 'post_author', $comment->comment_post_ID ) === (int) $comment->user_id );
 	$staff    = $staff || get_comment_meta( $comment->comment_ID, '_ls_staff', true );
 	$badge    = get_comment_meta( $comment->comment_ID, '_ls_badge', true );
 	$name     = get_comment_author( $comment );
-	$time     = ls_time_ago( (int) get_comment_date( 'U', $comment ) );
+	$time     = larijani_time_ago( (int) get_comment_date( 'U', $comment ) );
 	$reply    = get_comment_reply_link(
 		array_merge(
 			$args,
 			array(
 				'depth'      => $depth,
 				'max_depth'  => $args['max_depth'],
-				'reply_text' => __( 'پاسخ', 'larijani' ),
+				'reply_text' => __( 'پاسخ', 'larijani-stone' ),
 				'before'     => '<span class="font-body-sm text-body-sm font-bold text-primary-container">',
 				'after'      => '</span>',
 			)
@@ -470,9 +470,9 @@ function ls_comment_item( $comment, $args, $depth ) {
 		<div class="mr-4 lg:mr-8 p-5 rounded-xl bg-surface-card space-y-2 border-r-4 border-primary-container">
 			<div class="flex items-center justify-between gap-2 flex-wrap">
 				<div class="flex items-center gap-2 flex-wrap">
-					<span class="font-headline-sm text-body-md text-surface-dark font-black"><?php echo esc_html( sprintf( /* translators: %s name */ __( 'پاسخ %s', 'larijani' ), $name ) ); ?></span>
+					<span class="font-headline-sm text-body-md text-surface-dark font-black"><?php echo esc_html( sprintf( /* translators: %s name */ __( 'پاسخ %s', 'larijani-stone' ), $name ) ); ?></span>
 					<?php if ( $staff ) : ?>
-					<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge"><i class="bi bi-patch-check-fill text-[12px]" aria-hidden="true"></i><?php esc_html_e( 'تایید شده توسط واحد فنی', 'larijani' ); ?></span>
+					<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge"><i class="bi bi-patch-check-fill text-[12px]" aria-hidden="true"></i><?php esc_html_e( 'تایید شده توسط واحد فنی', 'larijani-stone' ); ?></span>
 					<?php endif; ?>
 				</div>
 				<span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $time ); ?></span>
@@ -484,7 +484,7 @@ function ls_comment_item( $comment, $args, $depth ) {
 		<div class="p-6 rounded-2xl bg-surface-canvas space-y-4">
 			<div class="flex items-center justify-between gap-3 flex-wrap">
 				<div class="flex items-center gap-3">
-					<div class="w-10 h-10 rounded-full bg-surface-card flex items-center justify-center font-bold text-primary-container text-sm"><?php echo esc_html( ls_initials( $name ) ); ?></div>
+					<div class="w-10 h-10 rounded-full bg-surface-card flex items-center justify-center font-bold text-primary-container text-sm"><?php echo esc_html( larijani_initials( $name ) ); ?></div>
 					<div>
 						<span class="font-headline-sm text-body-lg text-surface-dark font-black"><?php echo esc_html( $name ); ?></span>
 						<span class="block font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $time ); ?></span>
@@ -495,7 +495,7 @@ function ls_comment_item( $comment, $args, $depth ) {
 				<?php endif; ?>
 			</div>
 			<?php if ( '0' === $comment->comment_approved ) : ?>
-			<p class="font-body-sm text-body-sm text-accent-amber"><?php esc_html_e( 'دیدگاه شما پس از بررسی منتشر می‌شود.', 'larijani' ); ?></p>
+			<p class="font-body-sm text-body-sm text-accent-amber"><?php esc_html_e( 'دیدگاه شما پس از بررسی منتشر می‌شود.', 'larijani-stone' ); ?></p>
 			<?php endif; ?>
 			<div class="font-body-md text-body-md text-on-surface leading-relaxed"><?php comment_text( $comment ); ?></div>
 			<?php echo $reply ? wp_kses_post( $reply ) : ''; ?>
@@ -511,13 +511,13 @@ function ls_comment_item( $comment, $args, $depth ) {
  * @param array $fields Fields.
  * @return array
  */
-function ls_comment_form_fields( $fields ) {
+function larijani_comment_form_fields( $fields ) {
 	if ( isset( $fields['url'] ) ) {
 		unset( $fields['url'] );
 	}
 	if ( isset( $fields['cookies'] ) ) {
 		$checked           = empty( $_COOKIE[ 'comment_author_' . COOKIEHASH ] ) ? '' : ' checked'; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated
-		$fields['cookies'] = '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $checked . '> <label for="wp-comment-cookies-consent">' . esc_html__( 'نام و ایمیل من برای دیدگاه‌های بعدی در این مرورگر ذخیره شود.', 'larijani' ) . '</label></p>';
+		$fields['cookies'] = '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $checked . '> <label for="wp-comment-cookies-consent">' . esc_html__( 'نام و ایمیل من برای دیدگاه‌های بعدی در این مرورگر ذخیره شود.', 'larijani-stone' ) . '</label></p>';
 	}
 	if ( isset( $fields['comment'] ) ) {
 		$comment = $fields['comment'];
@@ -531,4 +531,4 @@ function ls_comment_form_fields( $fields ) {
 	}
 	return $fields;
 }
-add_filter( 'comment_form_fields', 'ls_comment_form_fields' );
+add_filter( 'comment_form_fields', 'larijani_comment_form_fields' );

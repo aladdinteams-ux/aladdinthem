@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Performance widget.
  */
-class LS_Widget_Performance extends LS_Widget_Base {
+class Larijani_Widget_Performance extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-performance';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS نمودار میله‌ای مقایسه (تیره)', 'larijani' );
+		return __( 'LS نمودار میله‌ای مقایسه (تیره)', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -26,17 +26,17 @@ class LS_Widget_Performance extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_text', __( 'متن و ویژگی‌ها', 'larijani' ) );
-		$this->ctl( 'eyebrow', 'text', __( 'متن بالای عنوان', 'larijani' ), 'راز ماندگاری پروژه‌ها' );
-		$this->ctl( 'title', 'textarea', __( 'عنوان', 'larijani' ), 'چرا سنگ‌های ساخته‌شده با قالب و فرمول ما هرگز پوسته و خرد نمی‌شوند؟', array( 'rows' => 2 ) );
-		$this->ctl( 'desc', 'textarea', __( 'توضیح', 'larijani' ), 'تفاوت اصلی یک قطعه بتنی معمولی با سنگ پلیمری مهندسی لاریجانی استون، کنترل دقیق منحنی ارتعاش، خروج کامل حباب‌های ریز میکروسکوپی و نسبت آب به سیمان کمتر از ۰.۲۸ با رزین‌های نسل جدید است.' );
+		$this->section( 'sec_text', __( 'متن و ویژگی‌ها', 'larijani-stone' ) );
+		$this->ctl( 'eyebrow', 'text', __( 'متن بالای عنوان', 'larijani-stone' ), 'راز ماندگاری پروژه‌ها' );
+		$this->ctl( 'title', 'textarea', __( 'عنوان', 'larijani-stone' ), 'چرا سنگ‌های ساخته‌شده با قالب و فرمول ما هرگز پوسته و خرد نمی‌شوند؟', array( 'rows' => 2 ) );
+		$this->ctl( 'desc', 'textarea', __( 'توضیح', 'larijani-stone' ), 'تفاوت اصلی یک قطعه بتنی معمولی با سنگ پلیمری مهندسی لاریجانی استون، کنترل دقیق منحنی ارتعاش، خروج کامل حباب‌های ریز میکروسکوپی و نسبت آب به سیمان کمتر از ۰.۲۸ با رزین‌های نسل جدید است.' );
 		$this->rep(
 			'features',
-			__( 'ویژگی‌ها', 'larijani' ),
+			__( 'ویژگی‌ها', 'larijani-stone' ),
 			array(
-				array( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'speedometer2' ),
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'text', 'text', __( 'توضیح', 'larijani' ), '' ),
+				array( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'speedometer2' ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'text', 'text', __( 'توضیح', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'icon' => 'speedometer2', 'title' => 'ارتعاش فرکانس متغیر (Variable Frequency)', 'text' => 'جداسازی کامل ریزحباب‌ها بدون ته‌نشین شدن سنگدانه‌های سنگین' ),
@@ -46,17 +46,17 @@ class LS_Widget_Performance extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_chart', __( 'نمودار', 'larijani' ) );
-		$this->ctl( 'chart_title', 'text', __( 'عنوان نمودار', 'larijani' ), 'نمودار آزمایشگاهی مقاومت سایشی و یخبندان' );
-		$this->ctl( 'chart_badge', 'text', __( 'برچسب', 'larijani' ), 'گزارش آزمایشگاه مقاومت مصالح' );
+		$this->section( 'sec_chart', __( 'نمودار', 'larijani-stone' ) );
+		$this->ctl( 'chart_title', 'text', __( 'عنوان نمودار', 'larijani-stone' ), 'نمودار آزمایشگاهی مقاومت سایشی و یخبندان' );
+		$this->ctl( 'chart_badge', 'text', __( 'برچسب', 'larijani-stone' ), 'گزارش آزمایشگاه مقاومت مصالح' );
 		$this->rep(
 			'bars',
-			__( 'میله‌ها', 'larijani' ),
+			__( 'میله‌ها', 'larijani-stone' ),
 			array(
-				array( 'label', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'value', 'text', __( 'مقدار نوشتاری', 'larijani' ), '' ),
-				array( 'percent', 'number', __( 'درصد طول', 'larijani' ), 50, array( 'min' => 0, 'max' => 100 ) ),
-				array( 'style', 'select', __( 'رنگ', 'larijani' ), 'gradient', array( 'options' => array( 'gradient' => __( 'گرادیان سبز', 'larijani' ), 'grey' => __( 'خاکستری', 'larijani' ), 'dark' => __( 'تیره', 'larijani' ) ) ) ),
+				array( 'label', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'value', 'text', __( 'مقدار نوشتاری', 'larijani-stone' ), '' ),
+				array( 'percent', 'number', __( 'درصد طول', 'larijani-stone' ), 50, array( 'min' => 0, 'max' => 100 ) ),
+				array( 'style', 'select', __( 'رنگ', 'larijani-stone' ), 'gradient', array( 'options' => array( 'gradient' => __( 'گرادیان سبز', 'larijani-stone' ), 'grey' => __( 'خاکستری', 'larijani-stone' ), 'dark' => __( 'تیره', 'larijani-stone' ) ) ) ),
 			),
 			array(
 				array( 'label' => 'سنگ پلیمری لاریجانی استون (با رزین فرموله)', 'value' => '۵۲ مگاپاسکال (فشاری)', 'percent' => 95, 'style' => 'gradient' ),
@@ -67,11 +67,11 @@ class LS_Widget_Performance extends LS_Widget_Base {
 		);
 		$this->rep(
 			'chips',
-			__( 'کارت‌های کوچک زیر نمودار', 'larijani' ),
+			__( 'کارت‌های کوچک زیر نمودار', 'larijani-stone' ),
 			array(
-				array( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'thermometer-half' ),
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'text', 'text', __( 'مقدار', 'larijani' ), '' ),
+				array( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'thermometer-half' ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'text', 'text', __( 'مقدار', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'icon' => 'thermometer-half', 'title' => 'تحمل حرارتی', 'text' => '-۳۰°C تا +۱۵۰°C' ),
@@ -108,7 +108,7 @@ class LS_Widget_Performance extends LS_Widget_Base {
 						<div class="flex flex-col gap-space-sm pt-space-xs">
 							<?php foreach ( $s['features'] as $f ) : ?>
 							<div class="flex items-start gap-space-sm">
-								<div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-primary-fixed shrink-0 text-[16px]"><?php echo ls_icon( $f['icon'] ); // phpcs:ignore ?></div>
+								<div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-primary-fixed shrink-0 text-[16px]"><?php echo larijani_icon( $f['icon'] ); // phpcs:ignore ?></div>
 								<div class="flex flex-col"><span class="text-title-card font-title-card text-on-tertiary"><?php echo esc_html( $f['title'] ); ?></span><span class="text-body-sm font-body-sm text-outline-variant"><?php echo esc_html( $f['text'] ); ?></span></div>
 							</div>
 							<?php endforeach; ?>
@@ -134,7 +134,7 @@ class LS_Widget_Performance extends LS_Widget_Base {
 						<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-space-md pt-space-md">
 							<?php foreach ( $s['chips'] as $c ) : ?>
 							<div class="bg-surface-dark p-3 rounded-xl flex items-center gap-2">
-								<?php echo ls_icon( $c['icon'], 'text-secondary-fixed text-[18px]' ); // phpcs:ignore ?>
+								<?php echo larijani_icon( $c['icon'], 'text-secondary-fixed text-[18px]' ); // phpcs:ignore ?>
 								<div class="flex flex-col"><span class="text-body-sm font-body-sm text-on-tertiary"><?php echo esc_html( $c['title'] ); ?></span><span class="text-label-badge font-label-badge text-outline-variant"><?php echo esc_html( $c['text'] ); ?></span></div>
 							</div>
 							<?php endforeach; ?>

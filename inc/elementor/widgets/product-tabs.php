@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Product tabs widget.
  */
-class LS_Widget_Product_Tabs extends LS_Widget_Base {
+class Larijani_Widget_Product_Tabs extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-product-tabs';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS تب‌های محصول (مشخصات، فرمولاسیون، نظرات)', 'larijani' );
+		return __( 'LS تب‌های محصول (مشخصات، فرمولاسیون، نظرات)', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -26,20 +26,20 @@ class LS_Widget_Product_Tabs extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_source', __( 'منبع', 'larijani' ) );
-		$this->ctl( 'source', 'select', __( 'منبع', 'larijani' ), 'auto', array( 'options' => array( 'auto' => __( 'خودکار (محصول جاری ووکامرس)', 'larijani' ), 'manual' => __( 'دستی', 'larijani' ) ) ) );
+		$this->section( 'sec_source', __( 'منبع', 'larijani-stone' ) );
+		$this->ctl( 'source', 'select', __( 'منبع', 'larijani-stone' ), 'auto', array( 'options' => array( 'auto' => __( 'خودکار (محصول جاری ووکامرس)', 'larijani-stone' ), 'manual' => __( 'دستی', 'larijani-stone' ) ) ) );
 		$this->end();
 
-		$this->section( 'sec_specs', __( 'تب مشخصات', 'larijani' ) );
-		$this->ctl( 'tab1_label', 'text', __( 'عنوان تب', 'larijani' ), 'مشخصات فنی و متریال ورق' );
-		$this->ctl( 'spec_title', 'text', __( 'عنوان', 'larijani' ), 'آنالیز متالورژی و ساختار فیزیکی قالب DS-904' );
-		$this->ctl( 'spec_text', 'textarea', __( 'متن (حالت دستی)', 'larijani' ), 'تمامی قالب‌های سری کریستالی لاریجانی استون به روش وکیوم‌فرمینگ دقیق CNC تحت حرارت یکنواخت مادون قرمز تولید می‌شوند. لبه‌های تقویت‌شده دوبل با زاویه خروج ۱.۵ درجه تضمین می‌کند که بلوک بتنی سنگین بدون نیاز به چکش‌کاری یا ضربه‌های مخرب به راحتی پس از ۲۴ ساعت از قالب جدا شود.' );
+		$this->section( 'sec_specs', __( 'تب مشخصات', 'larijani-stone' ) );
+		$this->ctl( 'tab1_label', 'text', __( 'عنوان تب', 'larijani-stone' ), 'مشخصات فنی و متریال ورق' );
+		$this->ctl( 'spec_title', 'text', __( 'عنوان', 'larijani-stone' ), 'آنالیز متالورژی و ساختار فیزیکی قالب DS-904' );
+		$this->ctl( 'spec_text', 'textarea', __( 'متن (حالت دستی)', 'larijani-stone' ), 'تمامی قالب‌های سری کریستالی لاریجانی استون به روش وکیوم‌فرمینگ دقیق CNC تحت حرارت یکنواخت مادون قرمز تولید می‌شوند. لبه‌های تقویت‌شده دوبل با زاویه خروج ۱.۵ درجه تضمین می‌کند که بلوک بتنی سنگین بدون نیاز به چکش‌کاری یا ضربه‌های مخرب به راحتی پس از ۲۴ ساعت از قالب جدا شود.' );
 		$this->rep(
 			'spec_rows',
-			__( 'ردیف‌های مشخصات', 'larijani' ),
+			__( 'ردیف‌های مشخصات', 'larijani-stone' ),
 			array(
-				array( 'label', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'value', 'text', __( 'مقدار', 'larijani' ), '' ),
+				array( 'label', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'value', 'text', __( 'مقدار', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'label' => 'ضخامت اولیه ورق', 'value' => '۴.۰۰ میلی‌متر ± ۰.۱' ),
@@ -51,25 +51,25 @@ class LS_Widget_Product_Tabs extends LS_Widget_Base {
 			),
 			'{{{ label }}}'
 		);
-		$this->ctl( 'use_attributes', 'switch', __( 'در حالت ووکامرس از ویژگی‌های محصول استفاده شود', 'larijani' ), 'yes' );
-		$this->ctl( 'highlight_title', 'text', __( 'عنوان کارت ویژه', 'larijani' ), 'چرا ABS نو به جای ورق بازیافتی؟' );
-		$this->ctl( 'highlight_text', 'textarea', __( 'متن کارت ویژه', 'larijani' ), 'ورق‌های ضایعاتی یا گرانولی در بازار پس از ۲۰ بار ویبره دچار شکستگی گوشه‌ها و کدر شدن سطح سنگ می‌شوند. پلیمرهای ویرجین لاریجانی استون بدون افت براقیت سطح، سطح سنگ بتنی را شبیه به سنگ گرانیت صیقلی طبیعی خارج می‌سازند.' );
-		$this->ctl( 'datasheet_text', 'text', __( 'متن دکمه دیتاشیت', 'larijani' ), 'دانلود برگه مشخصات فنی PDF' );
-		$this->ctl( 'datasheet_link', 'url', __( 'فایل دیتاشیت', 'larijani' ), '#' );
+		$this->ctl( 'use_attributes', 'switch', __( 'در حالت ووکامرس از ویژگی‌های محصول استفاده شود', 'larijani-stone' ), 'yes' );
+		$this->ctl( 'highlight_title', 'text', __( 'عنوان کارت ویژه', 'larijani-stone' ), 'چرا ABS نو به جای ورق بازیافتی؟' );
+		$this->ctl( 'highlight_text', 'textarea', __( 'متن کارت ویژه', 'larijani-stone' ), 'ورق‌های ضایعاتی یا گرانولی در بازار پس از ۲۰ بار ویبره دچار شکستگی گوشه‌ها و کدر شدن سطح سنگ می‌شوند. پلیمرهای ویرجین لاریجانی استون بدون افت براقیت سطح، سطح سنگ بتنی را شبیه به سنگ گرانیت صیقلی طبیعی خارج می‌سازند.' );
+		$this->ctl( 'datasheet_text', 'text', __( 'متن دکمه دیتاشیت', 'larijani-stone' ), 'دانلود برگه مشخصات فنی PDF' );
+		$this->ctl( 'datasheet_link', 'url', __( 'فایل دیتاشیت', 'larijani-stone' ), '#' );
 		$this->end();
 
-		$this->section( 'sec_formula', __( 'تب فرمولاسیون', 'larijani' ) );
-		$this->ctl( 'tab2_label', 'text', __( 'عنوان تب', 'larijani' ), 'دستورالعمل و فرمولاسیون اختصاصی سنگ' );
-		$this->ctl( 'formula_title', 'text', __( 'عنوان', 'larijani' ), 'فرمولاسیون طلایی سنگ دکوراتیو کریستالی (ویژه هر ۱ مترمربع = ۶.۶ قالب)' );
-		$this->ctl( 'formula_subtitle', 'text', __( 'زیرعنوان', 'larijani' ), 'طراحی شده بر مبنای استاندارد ملی ایران و تست‌های آزمایشگاه پلیمر لاریجانی استون' );
+		$this->section( 'sec_formula', __( 'تب فرمولاسیون', 'larijani-stone' ) );
+		$this->ctl( 'tab2_label', 'text', __( 'عنوان تب', 'larijani-stone' ), 'دستورالعمل و فرمولاسیون اختصاصی سنگ' );
+		$this->ctl( 'formula_title', 'text', __( 'عنوان', 'larijani-stone' ), 'فرمولاسیون طلایی سنگ دکوراتیو کریستالی (ویژه هر ۱ مترمربع = ۶.۶ قالب)' );
+		$this->ctl( 'formula_subtitle', 'text', __( 'زیرعنوان', 'larijani-stone' ), 'طراحی شده بر مبنای استاندارد ملی ایران و تست‌های آزمایشگاه پلیمر لاریجانی استون' );
 		$this->rep(
 			'formula_items',
-			__( 'اقلام فرمول', 'larijani' ),
+			__( 'اقلام فرمول', 'larijani-stone' ),
 			array(
-				array( 'label', 'text', __( 'ماده', 'larijani' ), '' ),
-				array( 'value', 'text', __( 'مقدار', 'larijani' ), '' ),
-				array( 'note', 'text', __( 'یادداشت', 'larijani' ), '' ),
-				array( 'tone', 'select', __( 'رنگ مقدار', 'larijani' ), 'dark', array( 'options' => array( 'dark' => __( 'تیره', 'larijani' ), 'primary' => __( 'سبز برند', 'larijani' ), 'emerald' => __( 'زمردی', 'larijani' ) ) ) ),
+				array( 'label', 'text', __( 'ماده', 'larijani-stone' ), '' ),
+				array( 'value', 'text', __( 'مقدار', 'larijani-stone' ), '' ),
+				array( 'note', 'text', __( 'یادداشت', 'larijani-stone' ), '' ),
+				array( 'tone', 'select', __( 'رنگ مقدار', 'larijani-stone' ), 'dark', array( 'options' => array( 'dark' => __( 'تیره', 'larijani-stone' ), 'primary' => __( 'سبز برند', 'larijani-stone' ), 'emerald' => __( 'زمردی', 'larijani-stone' ) ) ) ),
 			),
 			array(
 				array( 'label' => 'سیمان سفید یا خاکستری عیار ۴۰۰', 'value' => '۱۸ کیلوگرم', 'note' => 'تیپ ۲ یا سیمان سفید ساوه' ),
@@ -81,10 +81,10 @@ class LS_Widget_Product_Tabs extends LS_Widget_Base {
 		);
 		$this->rep(
 			'formula_steps',
-			__( 'مراحل', 'larijani' ),
+			__( 'مراحل', 'larijani-stone' ),
 			array(
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'text', 'textarea', __( 'متن', 'larijani' ), '' ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'text', 'textarea', __( 'متن', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'title' => 'میکس خشک', 'text' => 'سیلیس و سیمان را به مدت ۲ دقیقه در میکسر طرح پن به صورت خشک مخلوط کنید تا کاملاً یکنواخت شوند.' ),
@@ -94,16 +94,16 @@ class LS_Widget_Product_Tabs extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_reviews', __( 'تب نظرات', 'larijani' ) );
-		$this->ctl( 'tab3_label', 'text', __( 'عنوان تب', 'larijani' ), 'دیدگاه‌ها و تجربیات کارگاه‌ها' );
-		$this->ctl( 'rating', 'number', __( 'امتیاز (حالت دستی)', 'larijani' ), 4.9, array( 'step' => 0.1 ) );
-		$this->ctl( 'review_count', 'number', __( 'تعداد نظرات (حالت دستی)', 'larijani' ), 24 );
+		$this->section( 'sec_reviews', __( 'تب نظرات', 'larijani-stone' ) );
+		$this->ctl( 'tab3_label', 'text', __( 'عنوان تب', 'larijani-stone' ), 'دیدگاه‌ها و تجربیات کارگاه‌ها' );
+		$this->ctl( 'rating', 'number', __( 'امتیاز (حالت دستی)', 'larijani-stone' ), 4.9, array( 'step' => 0.1 ) );
+		$this->ctl( 'review_count', 'number', __( 'تعداد نظرات (حالت دستی)', 'larijani-stone' ), 24 );
 		$this->rep(
 			'rating_bars',
-			__( 'نوار امتیازها', 'larijani' ),
+			__( 'نوار امتیازها', 'larijani-stone' ),
 			array(
-				array( 'label', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'percent', 'number', __( 'درصد', 'larijani' ), 0 ),
+				array( 'label', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'percent', 'number', __( 'درصد', 'larijani-stone' ), 0 ),
 			),
 			array(
 				array( 'label' => '۵ ستاره', 'percent' => 92 ),
@@ -114,12 +114,12 @@ class LS_Widget_Product_Tabs extends LS_Widget_Base {
 		);
 		$this->rep(
 			'reviews',
-			__( 'نظرات (حالت دستی)', 'larijani' ),
+			__( 'نظرات (حالت دستی)', 'larijani-stone' ),
 			array(
-				array( 'name', 'text', __( 'نام', 'larijani' ), '' ),
-				array( 'meta', 'text', __( 'توضیح', 'larijani' ), '' ),
-				array( 'stars', 'number', __( 'ستاره', 'larijani' ), 5 ),
-				array( 'text', 'textarea', __( 'متن', 'larijani' ), '' ),
+				array( 'name', 'text', __( 'نام', 'larijani-stone' ), '' ),
+				array( 'meta', 'text', __( 'توضیح', 'larijani-stone' ), '' ),
+				array( 'stars', 'number', __( 'ستاره', 'larijani-stone' ), 5 ),
+				array( 'text', 'textarea', __( 'متن', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'name' => 'مهندس کاویانی (کارگاه بتن اکسپوز اصفهان)', 'meta' => 'خریدار ۱۲۰ عدد قالب کد DS-904', 'stars' => 5, 'text' => '«حدود ۶ ماه است که با این قالب‌ها روزانه ۱۲۰ قطعه می‌ریزیم. با اینکه میز ویبره ما ارتعاش بالایی دارد، لبه‌های قالب ذره‌ای تاب برنداشته و گوشه‌های سنگ کاملاً ۹۰ درجه و گونیا درمی‌آید. به نسبت قالب‌های لاستیکی خیلی سبک‌تر و شستشوی آن هم سریع‌تر است.»' ),
@@ -127,7 +127,7 @@ class LS_Widget_Product_Tabs extends LS_Widget_Base {
 			),
 			'{{{ name }}}'
 		);
-		$this->ctl( 'review_button', 'text', __( 'دکمه ثبت تجربه', 'larijani' ), 'ثبت تجربه و عکس تولیدی شما' );
+		$this->ctl( 'review_button', 'text', __( 'دکمه ثبت تجربه', 'larijani-stone' ), 'ثبت تجربه و عکس تولیدی شما' );
 		$this->end();
 
 		$this->style_controls();
@@ -140,7 +140,7 @@ class LS_Widget_Product_Tabs extends LS_Widget_Base {
 	 */
 	protected function render_widget( $s ) {
 		$product = null;
-		if ( 'auto' === $s['source'] && ls_has_woo() ) {
+		if ( 'auto' === $s['source'] && larijani_has_woo() ) {
 			$product = wc_get_product( get_the_ID() );
 		}
 		$d = array(
@@ -176,7 +176,7 @@ class LS_Widget_Product_Tabs extends LS_Widget_Base {
 					}
 				}
 				if ( $product->get_weight() ) {
-					$rows[] = array( 'label' => __( 'وزن', 'larijani' ), 'value' => wc_format_weight( $product->get_weight() ) );
+					$rows[] = array( 'label' => __( 'وزن', 'larijani-stone' ), 'value' => wc_format_weight( $product->get_weight() ) );
 				}
 				$d['spec_rows'] = $rows;
 			}
@@ -194,7 +194,7 @@ class LS_Widget_Product_Tabs extends LS_Widget_Base {
 			$d['formula_html']  = $formula;
 		}
 		echo '<section class="w-full py-space-xl bg-surface-card shadow-sm"><div class="max-w-7xl mx-auto px-4 sm:px-gutter">';
-		ls_render_product_tabs( $d );
+		larijani_render_product_tabs( $d );
 		echo '</div></section>';
 	}
 }

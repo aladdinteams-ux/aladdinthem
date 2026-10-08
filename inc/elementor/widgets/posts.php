@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Posts widget.
  */
-class LS_Widget_Posts extends LS_Widget_Base {
+class Larijani_Widget_Posts extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-posts';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS آخرین مقالات', 'larijani' );
+		return __( 'LS آخرین مقالات', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -26,7 +26,7 @@ class LS_Widget_Posts extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_heading', __( 'عنوان بخش', 'larijani' ) );
+		$this->section( 'sec_heading', __( 'عنوان بخش', 'larijani-stone' ) );
 		$this->heading_controls(
 			array(
 				'eyebrow'   => 'دانش فنی و تخصصی',
@@ -36,21 +36,21 @@ class LS_Widget_Posts extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_query', __( 'نوشته‌ها', 'larijani' ) );
-		$this->ctl( 'source', 'select', __( 'منبع', 'larijani' ), 'posts', array( 'options' => array( 'posts' => __( 'نوشته‌های وبلاگ', 'larijani' ), 'manual' => __( 'دستی', 'larijani' ) ) ) );
-		$this->ctl( 'posts_per_page', 'number', __( 'تعداد', 'larijani' ), 3, array( 'condition' => array( 'source' => 'posts' ) ) );
-		$this->ctl( 'category', 'select', __( 'دسته', 'larijani' ), '', array( 'options' => ls_term_options( 'category' ), 'condition' => array( 'source' => 'posts' ) ) );
-		$this->ctl( 'orderby', 'select', __( 'مرتب‌سازی', 'larijani' ), 'date', array( 'options' => array( 'date' => __( 'جدیدترین', 'larijani' ), 'views' => __( 'پربازدیدترین', 'larijani' ), 'comments' => __( 'پربحث‌ترین', 'larijani' ), 'rand' => __( 'تصادفی', 'larijani' ) ), 'condition' => array( 'source' => 'posts' ) ) );
+		$this->section( 'sec_query', __( 'نوشته‌ها', 'larijani-stone' ) );
+		$this->ctl( 'source', 'select', __( 'منبع', 'larijani-stone' ), 'posts', array( 'options' => array( 'posts' => __( 'نوشته‌های وبلاگ', 'larijani-stone' ), 'manual' => __( 'دستی', 'larijani-stone' ) ) ) );
+		$this->ctl( 'posts_per_page', 'number', __( 'تعداد', 'larijani-stone' ), 3, array( 'condition' => array( 'source' => 'posts' ) ) );
+		$this->ctl( 'category', 'select', __( 'دسته', 'larijani-stone' ), '', array( 'options' => larijani_term_options( 'category' ), 'condition' => array( 'source' => 'posts' ) ) );
+		$this->ctl( 'orderby', 'select', __( 'مرتب‌سازی', 'larijani-stone' ), 'date', array( 'options' => array( 'date' => __( 'جدیدترین', 'larijani-stone' ), 'views' => __( 'پربازدیدترین', 'larijani-stone' ), 'comments' => __( 'پربحث‌ترین', 'larijani-stone' ), 'rand' => __( 'تصادفی', 'larijani-stone' ) ), 'condition' => array( 'source' => 'posts' ) ) );
 		$this->rep(
 			'items',
-			__( 'کارت‌ها', 'larijani' ),
+			__( 'کارت‌ها', 'larijani-stone' ),
 			array(
-				array( 'image', 'media', __( 'تصویر', 'larijani' ), '' ),
-				array( 'category', 'text', __( 'دسته', 'larijani' ), '' ),
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'excerpt', 'textarea', __( 'خلاصه', 'larijani' ), '' ),
-				array( 'date', 'text', __( 'تاریخ', 'larijani' ), '' ),
-				array( 'link', 'url', __( 'لینک', 'larijani' ), '#' ),
+				array( 'image', 'media', __( 'تصویر', 'larijani-stone' ), '' ),
+				array( 'category', 'text', __( 'دسته', 'larijani-stone' ), '' ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'excerpt', 'textarea', __( 'خلاصه', 'larijani-stone' ), '' ),
+				array( 'date', 'text', __( 'تاریخ', 'larijani-stone' ), '' ),
+				array( 'link', 'url', __( 'لینک', 'larijani-stone' ), '#' ),
 			),
 			array(
 				array( 'image' => 'blog_1', 'category' => 'آموزش و فرمولاسیون', 'title' => 'فرمول استاندارد تولید سنگ مصنوعی پلیمری با رزین پلی‌کربوکسیلات', 'excerpt' => 'بررسی درصد دقیق سنگ‌دانه‌ها، میکروسیلیس و روان‌کننده بتن جهت رسیدن به حداکثر مقاومت خمشی و جلوگیری از ترک.', 'date' => '۱۴ اسفند ۱۴۰۳' ),
@@ -60,8 +60,8 @@ class LS_Widget_Posts extends LS_Widget_Base {
 			'{{{ title }}}',
 			array( 'condition' => array( 'source' => 'manual' ) )
 		);
-		$this->ctl( 'card_style', 'select', __( 'سبک کارت', 'larijani' ), 'home', array( 'options' => array( 'home' => __( 'صفحه اصلی', 'larijani' ), 'archive' => __( 'آرشیو', 'larijani' ), 'related' => __( 'مرتبط', 'larijani' ) ) ) );
-		$this->ctl( 'read_more', 'text', __( 'متن ادامه مطلب', 'larijani' ), 'ادامه مطلب' );
+		$this->ctl( 'card_style', 'select', __( 'سبک کارت', 'larijani-stone' ), 'home', array( 'options' => array( 'home' => __( 'صفحه اصلی', 'larijani-stone' ), 'archive' => __( 'آرشیو', 'larijani-stone' ), 'related' => __( 'مرتبط', 'larijani-stone' ) ) ) );
+		$this->ctl( 'read_more', 'text', __( 'متن ادامه مطلب', 'larijani-stone' ), 'ادامه مطلب' );
 		$this->columns_controls( 3, 3, 1, 4 );
 		$this->bg_control( 'white-bordered' );
 		$this->end();
@@ -77,9 +77,9 @@ class LS_Widget_Posts extends LS_Widget_Base {
 	protected function render_widget( $s ) {
 		$cards = array();
 		if ( 'posts' === $s['source'] ) {
-			$posts = get_posts( ls_posts_query_args( array( 'posts_per_page' => $s['posts_per_page'], 'category' => $s['category'], 'orderby' => $s['orderby'], 'exclude_current' => true ) ) );
+			$posts = get_posts( larijani_posts_query_args( array( 'posts_per_page' => $s['posts_per_page'], 'category' => $s['category'], 'orderby' => $s['orderby'], 'exclude_current' => true ) ) );
 			foreach ( $posts as $p ) {
-				$cards[] = ls_post_data( $p );
+				$cards[] = larijani_post_data( $p );
 			}
 		}
 		if ( ! $cards ) {
@@ -95,12 +95,12 @@ class LS_Widget_Posts extends LS_Widget_Base {
 			}
 		}
 		?>
-		<section class="py-12 sm:py-16 <?php echo esc_attr( ls_section_bg( $s['section_bg'] ) ); ?>">
+		<section class="py-12 sm:py-16 <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<?php echo $this->heading( $s ); // phpcs:ignore ?>
-				<div class="grid <?php echo esc_attr( ls_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) ); ?> gap-5 sm:gap-6">
+				<div class="grid <?php echo esc_attr( larijani_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) ); ?> gap-5 sm:gap-6">
 					<?php foreach ( $cards as $c ) : ?>
-						<?php echo ls_post_card( $c, $s['card_style'], array( 'read_more' => $s['read_more'] ) ); // phpcs:ignore ?>
+						<?php echo larijani_post_card( $c, $s['card_style'], array( 'read_more' => $s['read_more'] ) ); // phpcs:ignore ?>
 					<?php endforeach; ?>
 				</div>
 			</div>
@@ -114,6 +114,6 @@ class LS_Widget_Posts extends LS_Widget_Base {
 	 * @return string
 	 */
 	protected function heading_fallback_url() {
-		return ls_blog_url();
+		return larijani_blog_url();
 	}
 }

@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Minimal stand-in for \Elementor\Repeater (collects field definitions only).
  */
-class LS_Fallback_Repeater {
+class Larijani_Fallback_Repeater {
 
 	/**
 	 * Controls.
@@ -52,21 +52,21 @@ class LS_Fallback_Repeater {
  * Minimal widget base used only when Elementor is unavailable. It records
  * control defaults so saved settings can be completed exactly like Elementor does.
  */
-abstract class LS_Fallback_Widget {
+abstract class Larijani_Fallback_Widget {
 
 	/**
 	 * Element data.
 	 *
 	 * @var array
 	 */
-	protected $ls_data = array();
+	protected $larijani_data = array();
 
 	/**
 	 * Control definitions.
 	 *
 	 * @var array
 	 */
-	protected $ls_controls = array();
+	protected $larijani_controls = array();
 
 	/**
 	 * Constructor.
@@ -75,7 +75,7 @@ abstract class LS_Fallback_Widget {
 	 * @param mixed $args Unused.
 	 */
 	public function __construct( $data = array(), $args = null ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
-		$this->ls_data = is_array( $data ) ? $data : array();
+		$this->larijani_data = is_array( $data ) ? $data : array();
 		$this->register_controls();
 	}
 
@@ -102,7 +102,7 @@ abstract class LS_Fallback_Widget {
 	 * @param array  $args Args.
 	 */
 	public function add_control( $id, $args ) {
-		$this->ls_controls[ $id ] = $args;
+		$this->larijani_controls[ $id ] = $args;
 	}
 
 	/**
@@ -112,7 +112,7 @@ abstract class LS_Fallback_Widget {
 	 * @param array  $args Args.
 	 */
 	public function add_responsive_control( $id, $args ) {
-		$this->ls_controls[ $id ] = $args;
+		$this->larijani_controls[ $id ] = $args;
 	}
 
 	/**
@@ -121,7 +121,7 @@ abstract class LS_Fallback_Widget {
 	 * @return string
 	 */
 	public function get_id() {
-		return isset( $this->ls_data['id'] ) ? (string) $this->ls_data['id'] : substr( md5( spl_object_hash( $this ) ), 0, 7 );
+		return isset( $this->larijani_data['id'] ) ? (string) $this->larijani_data['id'] : substr( md5( spl_object_hash( $this ) ), 0, 7 );
 	}
 
 	/**
@@ -130,9 +130,9 @@ abstract class LS_Fallback_Widget {
 	 * @return array
 	 */
 	public function get_settings_for_display() {
-		$saved = isset( $this->ls_data['settings'] ) && is_array( $this->ls_data['settings'] ) ? $this->ls_data['settings'] : array();
+		$saved = isset( $this->larijani_data['settings'] ) && is_array( $this->larijani_data['settings'] ) ? $this->larijani_data['settings'] : array();
 		$out   = array();
-		foreach ( $this->ls_controls as $id => $c ) {
+		foreach ( $this->larijani_controls as $id => $c ) {
 			if ( array_key_exists( 'default', $c ) ) {
 				$out[ $id ] = $c['default'];
 			}
@@ -144,7 +144,7 @@ abstract class LS_Fallback_Widget {
 			$out[ $k ] = $v;
 		}
 		// Like Elementor, complete repeater rows with their field defaults.
-		foreach ( $this->ls_controls as $id => $c ) {
+		foreach ( $this->larijani_controls as $id => $c ) {
 			if ( empty( $c['fields'] ) || empty( $out[ $id ] ) || ! is_array( $out[ $id ] ) ) {
 				continue;
 			}
@@ -165,7 +165,7 @@ abstract class LS_Fallback_Widget {
 	/**
 	 * Print the widget (wraps the protected render()).
 	 */
-	public function ls_print() {
+	public function larijani_print() {
 		$this->render();
 	}
 
@@ -180,8 +180,8 @@ abstract class LS_Fallback_Widget {
  *
  * @return bool
  */
-function ls_fallback_active() {
-	return ! ls_has_elementor() && ! defined( 'ELEMENTOR_VERSION' ) && (bool) apply_filters( 'ls_fallback_render', true );
+function larijani_fallback_active() {
+	return ! larijani_has_elementor() && ! defined( 'ELEMENTOR_VERSION' ) && (bool) apply_filters( 'ls_fallback_render', true );
 }
 
 /**
@@ -190,17 +190,17 @@ function ls_fallback_active() {
  * @param string $type Widget type.
  * @return string Class name or ''.
  */
-function ls_fallback_widget_class( $type ) {
+function larijani_fallback_widget_class( $type ) {
 	if ( 0 !== strpos( $type, 'ls-' ) ) {
 		return '';
 	}
 	$slug = substr( $type, 3 );
-	$map  = ls_elementor_widgets();
+	$map  = larijani_elementor_widgets();
 	if ( empty( $map[ $slug ] ) ) {
 		return '';
 	}
-	require_once LS_DIR . '/inc/elementor/class-widget-base.php';
-	$file = LS_DIR . '/inc/elementor/widgets/' . $slug . '.php';
+	require_once LARIJANI_DIR . '/inc/elementor/class-widget-base.php';
+	$file = LARIJANI_DIR . '/inc/elementor/widgets/' . $slug . '.php';
 	if ( file_exists( $file ) ) {
 		require_once $file;
 	}
@@ -214,7 +214,7 @@ function ls_fallback_widget_class( $type ) {
  * @param string $side top|right|bottom|left.
  * @return string CSS value or ''.
  */
-function ls_fallback_dim( $dim, $side ) {
+function larijani_fallback_dim( $dim, $side ) {
 	if ( ! is_array( $dim ) || ! isset( $dim[ $side ] ) || '' === $dim[ $side ] ) {
 		return '';
 	}
@@ -226,7 +226,7 @@ function ls_fallback_dim( $dim, $side ) {
  *
  * @param array $elements Elements.
  */
-function ls_fallback_render_elements( $elements ) {
+function larijani_fallback_render_elements( $elements ) {
 	foreach ( (array) $elements as $el ) {
 		if ( ! is_array( $el ) || empty( $el['elType'] ) ) {
 			continue;
@@ -234,13 +234,13 @@ function ls_fallback_render_elements( $elements ) {
 		$s = isset( $el['settings'] ) && is_array( $el['settings'] ) ? $el['settings'] : array();
 		switch ( $el['elType'] ) {
 			case 'container':
-				ls_fallback_render_container( $el );
+				larijani_fallback_render_container( $el );
 				break;
 			case 'section':
 				$boxed = 'boxed' === ( $s['layout'] ?? '' ) || 'boxed' === ( $s['content_width'] ?? '' );
 				$style = '';
 				foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
-					$v = ls_fallback_dim( $s['padding'] ?? array(), $side );
+					$v = larijani_fallback_dim( $s['padding'] ?? array(), $side );
 					if ( '' !== $v ) {
 						$style .= 'padding-' . $side . ':' . $v . ';';
 					}
@@ -251,24 +251,24 @@ function ls_fallback_render_elements( $elements ) {
 				echo '<div class="ls-fb-section"' . ( $style ? ' style="' . esc_attr( $style ) . '"' : '' ) . '>';
 				$max = $boxed && ! empty( $s['content_width']['size'] ) ? (int) $s['content_width']['size'] : 0;
 				echo '<div class="ls-fb-row"' . ( $max ? ' style="max-width:' . esc_attr( $max ) . 'px;margin-inline:auto"' : '' ) . '>';
-				ls_fallback_render_elements( $el['elements'] ?? array() );
+				larijani_fallback_render_elements( $el['elements'] ?? array() );
 				echo '</div></div>';
 				break;
 			case 'column':
 				$w     = ! empty( $s['_inline_size'] ) ? (float) $s['_inline_size'] : (float) ( $s['_column_size'] ?? 100 );
 				$style = '--ls-fb-w:' . $w . '%;';
 				foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
-					$v = ls_fallback_dim( $s['padding'] ?? array(), $side );
+					$v = larijani_fallback_dim( $s['padding'] ?? array(), $side );
 					if ( '' !== $v ) {
 						$style .= 'padding-' . $side . ':' . $v . ';';
 					}
 				}
 				echo '<div class="ls-fb-col" style="' . esc_attr( $style ) . '">';
-				ls_fallback_render_elements( $el['elements'] ?? array() );
+				larijani_fallback_render_elements( $el['elements'] ?? array() );
 				echo '</div>';
 				break;
 			case 'widget':
-				ls_fallback_render_widget( $el );
+				larijani_fallback_render_widget( $el );
 				break;
 		}
 	}
@@ -279,13 +279,13 @@ function ls_fallback_render_elements( $elements ) {
  *
  * @param array $el Element.
  */
-function ls_fallback_render_widget( $el ) {
+function larijani_fallback_render_widget( $el ) {
 	$type  = (string) ( $el['widgetType'] ?? '' );
 	$s     = isset( $el['settings'] ) && is_array( $el['settings'] ) ? $el['settings'] : array();
-	$class = ls_fallback_widget_class( $type );
+	$class = larijani_fallback_widget_class( $type );
 	if ( ! $class ) {
 		// Core widgets: Elementor's own markup so the theme CSS applies.
-		if ( ls_fallback_native_widget( $el ) ) {
+		if ( larijani_fallback_native_widget( $el ) ) {
 			return;
 		}
 		if ( 'shortcode' === $type ) {
@@ -297,7 +297,7 @@ function ls_fallback_render_widget( $el ) {
 	}
 	echo '<div class="ls-fb-widget">';
 	$widget = new $class( $el );
-	$widget->ls_print();
+	$widget->larijani_print();
 	echo '</div>';
 }
 
@@ -308,7 +308,7 @@ function ls_fallback_render_widget( $el ) {
  * @param string $key Key.
  * @return array [ '' => v, '_tablet' => v, '_mobile' => v ] (only set ones).
  */
-function ls_fallback_resp( $s, $key ) {
+function larijani_fallback_resp( $s, $key ) {
 	$out = array();
 	foreach ( array( '', '_tablet', '_mobile' ) as $sfx ) {
 		if ( isset( $s[ $key . $sfx ] ) && '' !== $s[ $key . $sfx ] && array() !== $s[ $key . $sfx ] ) {
@@ -323,7 +323,7 @@ function ls_fallback_resp( $s, $key ) {
  *
  * @param array $el Element.
  */
-function ls_fallback_render_container( $el ) {
+function larijani_fallback_render_container( $el ) {
 	$s     = isset( $el['settings'] ) && is_array( $el['settings'] ) ? $el['settings'] : array();
 	$id    = preg_replace( '/[^a-z0-9]/i', '', (string) ( $el['id'] ?? wp_rand() ) );
 	$grid  = 'grid' === ( $s['container_type'] ?? '' );
@@ -333,14 +333,14 @@ function ls_fallback_render_container( $el ) {
 		return is_numeric( $v ) ? (float) $v . $unit : '';
 	};
 	$css['']['--display'] = $grid ? 'grid' : 'flex';
-	foreach ( ls_fallback_resp( $s, 'padding' ) as $sfx => $p ) {
+	foreach ( larijani_fallback_resp( $s, 'padding' ) as $sfx => $p ) {
 		foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
 			if ( isset( $p[ $side ] ) && '' !== $p[ $side ] ) {
 				$css[ $sfx ][ '--padding-' . $side ] = $num( $p[ $side ], $p['unit'] ?? 'px' );
 			}
 		}
 	}
-	foreach ( ls_fallback_resp( $s, $grid ? 'grid_gaps' : 'flex_gap' ) as $sfx => $g ) {
+	foreach ( larijani_fallback_resp( $s, $grid ? 'grid_gaps' : 'flex_gap' ) as $sfx => $g ) {
 		$col = $num( $g['column'] ?? ( $g['size'] ?? '' ), $g['unit'] ?? 'px' );
 		$row = $num( $g['row'] ?? ( $g['size'] ?? '' ), $g['unit'] ?? 'px' );
 		if ( '' !== $col ) {
@@ -349,7 +349,7 @@ function ls_fallback_render_container( $el ) {
 		}
 	}
 	if ( $grid ) {
-		foreach ( ls_fallback_resp( $s, 'grid_columns_grid' ) as $sfx => $c ) {
+		foreach ( larijani_fallback_resp( $s, 'grid_columns_grid' ) as $sfx => $c ) {
 			if ( isset( $c['size'] ) && is_numeric( $c['size'] ) ) {
 				$css[ $sfx ]['--e-con-grid-template-columns'] = 'repeat(' . (int) $c['size'] . ', minmax(0, 1fr))';
 			}
@@ -362,7 +362,7 @@ function ls_fallback_render_container( $el ) {
 		}
 	} else {
 		foreach ( array( 'flex_direction' => '--flex-direction', 'flex_align_items' => '--align-items', 'flex_justify_content' => '--justify-content' ) as $key => $var ) {
-			foreach ( ls_fallback_resp( $s, $key ) as $sfx => $d ) {
+			foreach ( larijani_fallback_resp( $s, $key ) as $sfx => $d ) {
 				$css[ $sfx ][ $var ] = (string) $d;
 			}
 		}
@@ -370,11 +370,11 @@ function ls_fallback_render_container( $el ) {
 			$css['']['--flex-wrap'] = $s['flex_wrap'];
 		}
 	}
-	foreach ( ls_fallback_resp( $s, 'boxed_width' ) as $sfx => $w ) {
+	foreach ( larijani_fallback_resp( $s, 'boxed_width' ) as $sfx => $w ) {
 		$css[ $sfx ]['--content-width'] = 'min(100%, ' . $num( $w['size'] ?? '', $w['unit'] ?? 'px' ) . ')';
 	}
 	if ( ! $boxed ) {
-		foreach ( ls_fallback_resp( $s, 'width' ) as $sfx => $w ) {
+		foreach ( larijani_fallback_resp( $s, 'width' ) as $sfx => $w ) {
 			$css[ $sfx ]['--width'] = 'custom' === ( $w['unit'] ?? '' ) ? (string) $w['size'] : $num( $w['size'] ?? '', $w['unit'] ?? '%' );
 		}
 	}
@@ -404,14 +404,14 @@ function ls_fallback_render_container( $el ) {
 		$classes[] = $s['css_classes'];
 	}
 	$tag   = in_array( $s['html_tag'] ?? '', array( 'section', 'article', 'aside', 'header', 'footer', 'nav', 'main', 'a' ), true ) ? $s['html_tag'] : 'div';
-	$attrs = 'a' === $tag ? ls_fallback_link_attrs( $s['link'] ?? '' ) : '';
+	$attrs = 'a' === $tag ? larijani_fallback_link_attrs( $s['link'] ?? '' ) : '';
 	$tag   = 'a' === $tag && ! $attrs ? 'div' : $tag;
 	echo '<style>' . $rules . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- values sanitised above.
 	echo '<' . $tag . ' class="' . esc_attr( implode( ' ', $classes ) ) . '"' . ( ! empty( $s['_element_id'] ) ? ' id="' . esc_attr( $s['_element_id'] ) . '"' : '' ) . $attrs . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- $tag is whitelisted, $attrs escaped.
 	if ( $boxed ) {
 		echo '<div class="e-con-inner">';
 	}
-	ls_fallback_render_elements( $el['elements'] ?? array() );
+	larijani_fallback_render_elements( $el['elements'] ?? array() );
 	if ( $boxed ) {
 		echo '</div>';
 	}
@@ -424,7 +424,7 @@ function ls_fallback_render_container( $el ) {
  * @param mixed $icon Icon setting.
  * @return string
  */
-function ls_fallback_icon( $icon ) {
+function larijani_fallback_icon( $icon ) {
 	$v = is_array( $icon ) ? ( $icon['value'] ?? '' ) : (string) $icon;
 	if ( is_array( $v ) ) {
 		return ! empty( $v['url'] ) ? '<img src="' . esc_url( $v['url'] ) . '" alt="" width="16" height="16">' : '';
@@ -438,7 +438,7 @@ function ls_fallback_icon( $icon ) {
  * @param mixed $link Link.
  * @return string Attributes (escaped) or '' when there is no URL.
  */
-function ls_fallback_link_attrs( $link ) {
+function larijani_fallback_link_attrs( $link ) {
 	$url = is_array( $link ) ? ( $link['url'] ?? '' ) : (string) $link;
 	if ( '' === $url ) {
 		return '';
@@ -455,7 +455,7 @@ function ls_fallback_link_attrs( $link ) {
  * @param array $el Element.
  * @return bool True when handled.
  */
-function ls_fallback_native_widget( $el ) {
+function larijani_fallback_native_widget( $el ) {
 	$type = (string) ( $el['widgetType'] ?? '' );
 	$s    = isset( $el['settings'] ) && is_array( $el['settings'] ) ? $el['settings'] : array();
 	$id   = preg_replace( '/[^a-z0-9]/i', '', (string) ( $el['id'] ?? '' ) );
@@ -464,7 +464,7 @@ function ls_fallback_native_widget( $el ) {
 		case 'heading':
 			$tag   = in_array( $s['header_size'] ?? 'h2', array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span', 'p' ), true ) ? $s['header_size'] : 'h2';
 			$title = wp_kses_post( $s['title'] ?? '' );
-			$attrs = ls_fallback_link_attrs( $s['link'] ?? '' );
+			$attrs = larijani_fallback_link_attrs( $s['link'] ?? '' );
 			$html  = '<' . $tag . ' class="elementor-heading-title elementor-size-default">' . ( $attrs ? '<a' . $attrs . '>' . $title . '</a>' : $title ) . '</' . $tag . '>';
 			break;
 		case 'text-editor':
@@ -474,7 +474,7 @@ function ls_fallback_native_widget( $el ) {
 			if ( ! empty( $s['image']['url'] ) ) {
 				$img   = ! empty( $s['image']['id'] ) ? wp_get_attachment_image( (int) $s['image']['id'], $s['image_size'] ?? 'large', false, array( 'loading' => 'lazy' ) ) : '';
 				$html  = $img ? $img : '<img src="' . esc_url( $s['image']['url'] ) . '" alt="' . esc_attr( $s['image']['alt'] ?? '' ) . '" loading="lazy" decoding="async">';
-				$attrs = 'custom' === ( $s['link_to'] ?? '' ) ? ls_fallback_link_attrs( $s['link'] ?? '' ) : '';
+				$attrs = 'custom' === ( $s['link_to'] ?? '' ) ? larijani_fallback_link_attrs( $s['link'] ?? '' ) : '';
 				$html  = $attrs ? '<a' . $attrs . '>' . $html . '</a>' : $html;
 			}
 			break;
@@ -482,23 +482,23 @@ function ls_fallback_native_widget( $el ) {
 			if ( '' === (string) ( $s['text'] ?? '' ) ) {
 				return true;
 			}
-			$attrs = ls_fallback_link_attrs( $s['link'] ?? '' );
-			$icon  = ls_fallback_icon( $s['selected_icon'] ?? '' );
+			$attrs = larijani_fallback_link_attrs( $s['link'] ?? '' );
+			$icon  = larijani_fallback_icon( $s['selected_icon'] ?? '' );
 			$dir   = 'row' === ( $s['icon_align'] ?? ( is_rtl() ? 'row-reverse' : 'row' ) ) ? 'row' : 'row-reverse';
 			$inner = '<span class="elementor-button-content-wrapper" style="flex-direction:' . $dir . '">' . ( $icon ? '<span class="elementor-button-icon">' . $icon . '</span>' : '' ) . '<span class="elementor-button-text">' . esc_html( $s['text'] ) . '</span></span>';
 			$html  = $attrs ? '<a class="elementor-button elementor-button-link elementor-size-sm"' . $attrs . '>' . $inner . '</a>' : '<span class="elementor-button elementor-size-sm">' . $inner . '</span>';
 			break;
 		case 'icon':
-			$icon  = ls_fallback_icon( $s['selected_icon'] ?? '' );
-			$attrs = ls_fallback_link_attrs( $s['link'] ?? '' );
+			$icon  = larijani_fallback_icon( $s['selected_icon'] ?? '' );
+			$attrs = larijani_fallback_link_attrs( $s['link'] ?? '' );
 			$html  = '<div class="elementor-icon-wrapper">' . ( $attrs ? '<a class="elementor-icon"' . $attrs . '>' . $icon . '</a>' : '<div class="elementor-icon">' . $icon . '</div>' ) . '</div>';
 			break;
 		case 'icon-list':
 			$items = '';
 			foreach ( (array) ( $s['icon_list'] ?? array() ) as $it ) {
-				$icon   = ls_fallback_icon( $it['selected_icon'] ?? '' );
+				$icon   = larijani_fallback_icon( $it['selected_icon'] ?? '' );
 				$inner  = ( $icon ? '<span class="elementor-icon-list-icon">' . $icon . '</span>' : '' ) . '<span class="elementor-icon-list-text">' . esc_html( $it['text'] ?? '' ) . '</span>';
-				$attrs  = ls_fallback_link_attrs( $it['link'] ?? '' );
+				$attrs  = larijani_fallback_link_attrs( $it['link'] ?? '' );
 				$items .= '<li class="elementor-icon-list-item">' . ( $attrs ? '<a' . $attrs . '>' . $inner . '</a>' : $inner ) . '</li>';
 			}
 			$html = '<ul class="elementor-icon-list-items' . ( 'inline' === ( $s['view'] ?? '' ) ? ' elementor-inline-items' : '' ) . '">' . $items . '</ul>';
@@ -510,7 +510,7 @@ function ls_fallback_native_widget( $el ) {
 				$stars .= $i <= $rating ? '<i class="elementor-star-full">&#9733;</i>' : '<i class="elementor-star-empty">&#9734;</i>';
 			}
 			/* translators: %s: rating out of 5. */
-			$html = '<div class="elementor-star-rating" title="' . esc_attr( sprintf( __( 'امتیاز %s از ۵', 'larijani' ), $rating ) ) . '">' . $stars . '</div>';
+			$html = '<div class="elementor-star-rating" title="' . esc_attr( sprintf( __( 'امتیاز %s از ۵', 'larijani-stone' ), $rating ) ) . '">' . $stars . '</div>';
 			break;
 		case 'progress':
 			$pct  = max( 0, min( 100, (int) ( $s['percent']['size'] ?? 0 ) ) );
@@ -521,7 +521,7 @@ function ls_fallback_native_widget( $el ) {
 	}
 	$rules = '';
 	$media = array( '' => '', '_tablet' => '@media (max-width:1024px)', '_mobile' => '@media (max-width:767px)' );
-	foreach ( ls_fallback_resp( $s, '_margin' ) as $sfx => $m ) {
+	foreach ( larijani_fallback_resp( $s, '_margin' ) as $sfx => $m ) {
 		$vals = array();
 		foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
 			$vals[] = is_numeric( $m[ $side ] ?? '' ) ? (float) $m[ $side ] . ( $m['unit'] ?? 'px' ) : '0';
@@ -543,7 +543,7 @@ function ls_fallback_native_widget( $el ) {
  * @param int $post_id Post id.
  * @return string HTML ('' when the post has no layout).
  */
-function ls_fallback_render_post( $post_id ) {
+function larijani_fallback_render_post( $post_id ) {
 	static $stack = array();
 	if ( isset( $stack[ $post_id ] ) ) {
 		return '';
@@ -556,7 +556,7 @@ function ls_fallback_render_post( $post_id ) {
 	$stack[ $post_id ] = true;
 	ob_start();
 	echo '<div class="ls-fb-content">';
-	ls_fallback_render_elements( $data );
+	larijani_fallback_render_elements( $data );
 	echo '</div>';
 	unset( $stack[ $post_id ] );
 	return (string) ob_get_clean();
@@ -568,15 +568,15 @@ function ls_fallback_render_post( $post_id ) {
  * @param string $content Content.
  * @return string
  */
-function ls_fallback_the_content( $content ) {
-	if ( ! ls_fallback_active() ) {
+function larijani_fallback_the_content( $content ) {
+	if ( ! larijani_fallback_active() ) {
 		return $content;
 	}
 	$id = get_the_ID();
 	if ( ! $id || 'builder' !== get_post_meta( $id, '_elementor_edit_mode', true ) ) {
 		return $content;
 	}
-	$html = ls_fallback_render_post( $id );
+	$html = larijani_fallback_render_post( $id );
 	return '' !== $html ? $html : $content;
 }
-add_filter( 'the_content', 'ls_fallback_the_content', 9999 );
+add_filter( 'the_content', 'larijani_fallback_the_content', 9999 );

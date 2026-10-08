@@ -11,18 +11,18 @@ get_header();
 
 while ( have_posts() ) :
 	the_post();
-	if ( ls_is_built_with_elementor( get_the_ID() ) ) {
+	if ( larijani_is_built_with_elementor( get_the_ID() ) ) {
 		the_content();
 		continue;
 	}
-	if ( ls_do_location( 'single' ) ) {
+	if ( larijani_do_location( 'single' ) ) {
 		continue;
 	}
 	?>
 	<div class="ls-root bg-surface-canvas">
 		<section class="w-full py-space-md">
 			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin">
-				<nav class="flex items-center flex-wrap gap-2 text-on-surface-variant font-body-sm text-body-sm" aria-label="<?php esc_attr_e( 'مسیر صفحه', 'larijani' ); ?>"><?php echo ls_breadcrumb_html(); // phpcs:ignore ?></nav>
+				<nav class="flex items-center flex-wrap gap-2 text-on-surface-variant font-body-sm text-body-sm" aria-label="<?php esc_attr_e( 'مسیر صفحه', 'larijani-stone' ); ?>"><?php echo larijani_breadcrumb_html(); // phpcs:ignore ?></nav>
 			</div>
 		</section>
 		<section class="w-full pb-space-2xl">

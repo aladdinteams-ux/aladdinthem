@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array
  */
-function ls_widget_defaults() {
+function larijani_widget_defaults() {
 	return array(
 		'ls-icon-cards' => array(
 			'defaults' => array(

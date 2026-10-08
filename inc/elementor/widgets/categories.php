@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Categories widget.
  */
-class LS_Widget_Categories extends LS_Widget_Base {
+class Larijani_Widget_Categories extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-categories';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS دسته‌بندی‌های اصلی', 'larijani' );
+		return __( 'LS دسته‌بندی‌های اصلی', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -26,7 +26,7 @@ class LS_Widget_Categories extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_heading', __( 'عنوان بخش', 'larijani' ) );
+		$this->section( 'sec_heading', __( 'عنوان بخش', 'larijani-stone' ) );
 		$this->heading_controls(
 			array(
 				'title'     => 'دسته‌بندی‌های اصلی لاریجانی استون',
@@ -36,17 +36,17 @@ class LS_Widget_Categories extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_items', __( 'دسته‌ها', 'larijani' ) );
-		$this->ctl( 'source', 'select', __( 'منبع', 'larijani' ), 'manual', array( 'options' => array( 'manual' => __( 'دستی', 'larijani' ), 'product_cat' => __( 'دسته‌های محصول ووکامرس', 'larijani' ) ) ) );
-		$this->ctl( 'limit', 'number', __( 'تعداد دسته‌ها', 'larijani' ), 6, array( 'condition' => array( 'source' => 'product_cat' ) ) );
+		$this->section( 'sec_items', __( 'دسته‌ها', 'larijani-stone' ) );
+		$this->ctl( 'source', 'select', __( 'منبع', 'larijani-stone' ), 'manual', array( 'options' => array( 'manual' => __( 'دستی', 'larijani-stone' ), 'product_cat' => __( 'دسته‌های محصول ووکامرس', 'larijani-stone' ) ) ) );
+		$this->ctl( 'limit', 'number', __( 'تعداد دسته‌ها', 'larijani-stone' ), 6, array( 'condition' => array( 'source' => 'product_cat' ) ) );
 		$this->rep(
 			'items',
-			__( 'دسته‌ها', 'larijani' ),
+			__( 'دسته‌ها', 'larijani-stone' ),
 			array(
-				array( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'grid-3x3-gap' ),
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'sub', 'text', __( 'زیرعنوان', 'larijani' ), '' ),
-				array( 'link', 'url', __( 'لینک', 'larijani' ), '#' ),
+				array( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'grid-3x3-gap' ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'sub', 'text', __( 'زیرعنوان', 'larijani-stone' ), '' ),
+				array( 'link', 'url', __( 'لینک', 'larijani-stone' ), '#' ),
 			),
 			array(
 				array( 'icon' => 'grid-3x3-gap', 'title' => 'قالب کفپوش و واش‌بتن', 'sub' => 'بیش از ۱۲۰ طرح' ),
@@ -81,7 +81,7 @@ class LS_Widget_Categories extends LS_Widget_Base {
 					'icon'  => $icon ? $icon : 'bi bi-grid-3x3-gap',
 					'title' => $t->name,
 					/* translators: %s count */
-					'sub'   => sprintf( __( '%s محصول', 'larijani' ), ls_fa_num( $t->count ) ),
+					'sub'   => sprintf( __( '%s محصول', 'larijani-stone' ), larijani_fa_num( $t->count ) ),
 					'link'  => get_term_link( $t ),
 				);
 			}
@@ -89,13 +89,13 @@ class LS_Widget_Categories extends LS_Widget_Base {
 			$items = $s['items'];
 		}
 		?>
-		<section class="py-16 sm:py-20 <?php echo esc_attr( ls_section_bg( $s['section_bg'] ) ); ?>">
+		<section class="py-16 sm:py-20 <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<?php echo $this->heading( $s ); // phpcs:ignore ?>
-				<div class="grid <?php echo esc_attr( ls_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) ); ?> gap-3 sm:gap-4">
+				<div class="grid <?php echo esc_attr( larijani_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) ); ?> gap-3 sm:gap-4">
 					<?php foreach ( $items as $it ) : ?>
-					<a class="bg-white p-4 sm:p-5 rounded-2xl border border-gray-200/80 hover:border-primary-container hover:shadow-soft transition text-center flex flex-col items-center group" <?php echo ls_link_attrs( ( empty( $it['link']['url'] ) || '#' === $it['link']['url'] ) ? $this->heading_fallback_url() : $it['link'] ); // phpcs:ignore ?>>
-						<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-surface-canvas group-hover:bg-primary-container text-primary-container group-hover:text-white flex items-center justify-center mb-3 transition text-2xl"><?php echo ls_icon( $it['icon'] ); // phpcs:ignore ?></div>
+					<a class="bg-white p-4 sm:p-5 rounded-2xl border border-gray-200/80 hover:border-primary-container hover:shadow-soft transition text-center flex flex-col items-center group" <?php echo larijani_link_attrs( ( empty( $it['link']['url'] ) || '#' === $it['link']['url'] ) ? $this->heading_fallback_url() : $it['link'] ); // phpcs:ignore ?>>
+						<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-surface-canvas group-hover:bg-primary-container text-primary-container group-hover:text-white flex items-center justify-center mb-3 transition text-2xl"><?php echo larijani_icon( $it['icon'] ); // phpcs:ignore ?></div>
 						<h3 class="font-bold text-gray-900 text-xs sm:text-sm group-hover:text-primary-container transition"><?php echo esc_html( $it['title'] ); ?></h3>
 						<?php if ( $it['sub'] ) : ?><span class="text-[11px] sm:text-xs text-gray-500 mt-1 font-medium"><?php echo esc_html( $it['sub'] ); ?></span><?php endif; ?>
 					</a>
@@ -112,6 +112,6 @@ class LS_Widget_Categories extends LS_Widget_Base {
 	 * @return string
 	 */
 	protected function heading_fallback_url() {
-		return ls_page_url( 'shop', function_exists( 'wc_get_page_id' ) && wc_get_page_id( 'shop' ) > 0 ? get_permalink( wc_get_page_id( 'shop' ) ) : home_url( '/' ) );
+		return larijani_page_url( 'shop', function_exists( 'wc_get_page_id' ) && wc_get_page_id( 'shop' ) > 0 ? get_permalink( wc_get_page_id( 'shop' ) ) : home_url( '/' ) );
 	}
 }

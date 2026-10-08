@@ -17,15 +17,15 @@ defined( 'ABSPATH' ) || exit;
  * created by the theme still render their saved layout.
  */
 if ( class_exists( 'Elementor\\Widget_Base' ) ) {
-	abstract class LS_Widget_Parent extends \Elementor\Widget_Base {} // phpcs:ignore Generic.Files.OneObjectStructurePerFile.MultipleFound
+	abstract class Larijani_Widget_Parent extends \Elementor\Widget_Base {} // phpcs:ignore Generic.Files.OneObjectStructurePerFile.MultipleFound
 } else {
-	abstract class LS_Widget_Parent extends LS_Fallback_Widget {} // phpcs:ignore Generic.Files.OneObjectStructurePerFile.MultipleFound
+	abstract class Larijani_Widget_Parent extends Larijani_Fallback_Widget {} // phpcs:ignore Generic.Files.OneObjectStructurePerFile.MultipleFound
 }
 
 /**
  * Base widget.
  */
-abstract class LS_Widget_Base extends LS_Widget_Parent {
+abstract class Larijani_Widget_Base extends Larijani_Widget_Parent {
 
 	/**
 	 * Elementor control-type / tab constant, or its documented string value without Elementor.
@@ -183,16 +183,16 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 				break;
 			case 'media':
 				$c['dynamic'] = array( 'active' => true );
-				$c['default'] = is_array( $default ) ? $default : ( $default ? ls_demo_media( $default ) : array( 'url' => '' ) );
+				$c['default'] = is_array( $default ) ? $default : ( $default ? larijani_demo_media( $default ) : array( 'url' => '' ) );
 				break;
 			case 'icon':
-				$c['default'] = is_array( $default ) ? $default : ( $default ? ls_bi( $default ) : array( 'value' => '', 'library' => '' ) );
+				$c['default'] = is_array( $default ) ? $default : ( $default ? larijani_bi( $default ) : array( 'value' => '', 'library' => '' ) );
 				$c['skin']    = 'inline';
 				$c['label_block'] = false;
 				break;
 			case 'switch':
-				$c['label_on']     = __( 'بله', 'larijani' );
-				$c['label_off']    = __( 'خیر', 'larijani' );
+				$c['label_on']     = __( 'بله', 'larijani-stone' );
+				$c['label_off']    = __( 'خیر', 'larijani-stone' );
 				$c['return_value'] = 'yes';
 				break;
 			case 'heading':
@@ -226,7 +226,7 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 	 * @param array  $args Extra args.
 	 */
 	protected function rep( $id, $label, $fields, $defaults, $title_field = '{{{ title }}}', $args = array() ) {
-		$r = class_exists( 'Elementor\\Repeater' ) ? new \Elementor\Repeater() : new LS_Fallback_Repeater();
+		$r = class_exists( 'Elementor\\Repeater' ) ? new \Elementor\Repeater() : new Larijani_Fallback_Repeater();
 		foreach ( $fields as $f ) {
 			$r->add_control( $f[0], $this->spec( $f[1], $f[2], $f[3] ?? '', $f[4] ?? array() ) );
 		}
@@ -238,9 +238,9 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 		foreach ( $defaults as &$row ) {
 			foreach ( $row as $k => $v ) {
 				if ( isset( $ftypes[ $k ] ) && 'media' === $ftypes[ $k ] && is_string( $v ) ) {
-					$row[ $k ] = $v ? ls_demo_media( $v ) : array( 'url' => '' );
+					$row[ $k ] = $v ? larijani_demo_media( $v ) : array( 'url' => '' );
 				} elseif ( isset( $ftypes[ $k ] ) && 'icon' === $ftypes[ $k ] && is_string( $v ) ) {
-					$row[ $k ] = $v ? ls_bi( $v ) : array( 'value' => '', 'library' => '' );
+					$row[ $k ] = $v ? larijani_bi( $v ) : array( 'value' => '', 'library' => '' );
 				} elseif ( isset( $ftypes[ $k ] ) && 'url' === $ftypes[ $k ] && is_string( $v ) ) {
 					$row[ $k ] = array( 'url' => $v );
 				}
@@ -269,41 +269,41 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 	 */
 	protected function heading_controls( $d = array() ) {
 		$d = wp_parse_args( $d, array( 'eyebrow' => '', 'title' => '', 'desc' => '', 'link_text' => '', 'link' => '#', 'align' => 'split', 'tag' => 'h2' ) );
-		$this->ctl( 'heading_eyebrow', 'text', __( 'متن بالای عنوان', 'larijani' ), $d['eyebrow'] );
-		$this->ctl( 'heading_title', 'textarea', __( 'عنوان بخش', 'larijani' ), $d['title'], array( 'rows' => 2, 'description' => __( 'می‌توانید از &lt;br&gt; و &lt;span class="text-primary-container"&gt; استفاده کنید.', 'larijani' ) ) );
-		$this->ctl( 'heading_desc', 'textarea', __( 'توضیح بخش', 'larijani' ), $d['desc'] );
-		$this->ctl( 'heading_link_text', 'text', __( 'متن لینک', 'larijani' ), $d['link_text'] );
-		$this->ctl( 'heading_link', 'url', __( 'لینک', 'larijani' ), $d['link'], array( 'condition' => array( 'heading_link_text!' => '' ) ) );
+		$this->ctl( 'heading_eyebrow', 'text', __( 'متن بالای عنوان', 'larijani-stone' ), $d['eyebrow'] );
+		$this->ctl( 'heading_title', 'textarea', __( 'عنوان بخش', 'larijani-stone' ), $d['title'], array( 'rows' => 2, 'description' => __( 'می‌توانید از &lt;br&gt; و &lt;span class="text-primary-container"&gt; استفاده کنید.', 'larijani-stone' ) ) );
+		$this->ctl( 'heading_desc', 'textarea', __( 'توضیح بخش', 'larijani-stone' ), $d['desc'] );
+		$this->ctl( 'heading_link_text', 'text', __( 'متن لینک', 'larijani-stone' ), $d['link_text'] );
+		$this->ctl( 'heading_link', 'url', __( 'لینک', 'larijani-stone' ), $d['link'], array( 'condition' => array( 'heading_link_text!' => '' ) ) );
 		$this->ctl(
 			'heading_align',
 			'select',
-			__( 'چیدمان عنوان', 'larijani' ),
+			__( 'چیدمان عنوان', 'larijani-stone' ),
 			$d['align'],
 			array(
 				'options' => array(
-					'split'  => __( 'عنوان راست / لینک چپ', 'larijani' ),
-					'split-desc' => __( 'عنوان راست / توضیح چپ', 'larijani' ),
-					'center' => __( 'وسط‌چین', 'larijani' ),
-					'start'  => __( 'راست‌چین ستونی', 'larijani' ),
+					'split'  => __( 'عنوان راست / لینک چپ', 'larijani-stone' ),
+					'split-desc' => __( 'عنوان راست / توضیح چپ', 'larijani-stone' ),
+					'center' => __( 'وسط‌چین', 'larijani-stone' ),
+					'start'  => __( 'راست‌چین ستونی', 'larijani-stone' ),
 				),
 			)
 		);
 		$this->ctl(
 			'heading_style',
 			'select',
-			__( 'سبک عنوان', 'larijani' ),
+			__( 'سبک عنوان', 'larijani-stone' ),
 			$d['style'] ?? 'classic',
 			array(
 				'options' => array(
-					'classic' => __( 'صفحه اصلی (درشت و فشرده)', 'larijani' ),
-					'token'   => __( 'صفحات داخلی (سیستم طراحی)', 'larijani' ),
+					'classic' => __( 'صفحه اصلی (درشت و فشرده)', 'larijani-stone' ),
+					'token'   => __( 'صفحات داخلی (سیستم طراحی)', 'larijani-stone' ),
 				),
 			)
 		);
 		$this->ctl(
 			'heading_tag',
 			'select',
-			__( 'تگ HTML عنوان', 'larijani' ),
+			__( 'تگ HTML عنوان', 'larijani-stone' ),
 			$d['tag'],
 			array( 'options' => array( 'h1' => 'H1', 'h2' => 'H2', 'h3' => 'H3', 'h4' => 'H4', 'div' => 'div' ) )
 		);
@@ -315,7 +315,7 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 	 * @param string $default Default key.
 	 */
 	protected function bg_control( $default = 'none' ) {
-		$this->ctl( 'section_bg', 'select', __( 'پس‌زمینه بخش', 'larijani' ), $default, array( 'options' => ls_section_bg_options() ) );
+		$this->ctl( 'section_bg', 'select', __( 'پس‌زمینه بخش', 'larijani-stone' ), $default, array( 'options' => larijani_section_bg_options() ) );
 	}
 
 	/**
@@ -329,12 +329,12 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 	protected function columns_controls( $desktop = 4, $tablet = 2, $mobile = 1, $max = 6 ) {
 		$opts = array();
 		for ( $i = 1; $i <= $max; $i++ ) {
-			$opts[ (string) $i ] = ls_fa_num( $i );
+			$opts[ (string) $i ] = larijani_fa_num( $i );
 		}
 		$small = array_slice( $opts, 0, 4, true );
-		$this->ctl( 'columns', 'select', __( 'ستون‌ها – دسکتاپ', 'larijani' ), (string) $desktop, array( 'options' => $opts ) );
-		$this->ctl( 'columns_tablet', 'select', __( 'ستون‌ها – تبلت', 'larijani' ), (string) $tablet, array( 'options' => $small ) );
-		$this->ctl( 'columns_mobile', 'select', __( 'ستون‌ها – موبایل', 'larijani' ), (string) $mobile, array( 'options' => array_slice( $opts, 0, 2, true ) ) );
+		$this->ctl( 'columns', 'select', __( 'ستون‌ها – دسکتاپ', 'larijani-stone' ), (string) $desktop, array( 'options' => $opts ) );
+		$this->ctl( 'columns_tablet', 'select', __( 'ستون‌ها – تبلت', 'larijani-stone' ), (string) $tablet, array( 'options' => $small ) );
+		$this->ctl( 'columns_mobile', 'select', __( 'ستون‌ها – موبایل', 'larijani-stone' ), (string) $mobile, array( 'options' => array_slice( $opts, 0, 2, true ) ) );
 	}
 
 	/**
@@ -348,17 +348,17 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 		$this->start_controls_section(
 			'ls_style_colors',
 			array(
-				'label' => __( 'رنگ‌های قالب (فقط این ویجت)', 'larijani' ),
+				'label' => __( 'رنگ‌های قالب (فقط این ویجت)', 'larijani-stone' ),
 				'tab'   => self::cm( 'TAB_STYLE' ),
 			)
 		);
 		$vars = array(
-			'primary'       => __( 'رنگ اصلی (سبز برند)', 'larijani' ),
-			'primary-hover' => __( 'رنگ اصلی – هاور / تیره‌تر', 'larijani' ),
-			'secondary'     => __( 'سبز روشن', 'larijani' ),
-			'dark'          => __( 'رنگ تیره (بازالت)', 'larijani' ),
-			'canvas'        => __( 'زمینه کرم سنگی', 'larijani' ),
-			'border'        => __( 'خطوط و حاشیه', 'larijani' ),
+			'primary'       => __( 'رنگ اصلی (سبز برند)', 'larijani-stone' ),
+			'primary-hover' => __( 'رنگ اصلی – هاور / تیره‌تر', 'larijani-stone' ),
+			'secondary'     => __( 'سبز روشن', 'larijani-stone' ),
+			'dark'          => __( 'رنگ تیره (بازالت)', 'larijani-stone' ),
+			'canvas'        => __( 'زمینه کرم سنگی', 'larijani-stone' ),
+			'border'        => __( 'خطوط و حاشیه', 'larijani-stone' ),
 		);
 		foreach ( $vars as $var => $label ) {
 			$this->add_control(
@@ -376,14 +376,14 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 			$this->start_controls_section(
 				'ls_style_layout',
 				array(
-					'label' => __( 'چیدمان بخش', 'larijani' ),
+					'label' => __( 'چیدمان بخش', 'larijani-stone' ),
 					'tab'   => self::cm( 'TAB_STYLE' ),
 				)
 			);
 			$this->add_responsive_control(
 				'ls_container_width',
 				array(
-					'label'      => __( 'حداکثر عرض محتوا', 'larijani' ),
+					'label'      => __( 'حداکثر عرض محتوا', 'larijani-stone' ),
 					'type'       => self::cm( 'SLIDER' ),
 					'size_units' => array( 'px', '%', 'vw' ),
 					'range'      => array( 'px' => array( 'min' => 600, 'max' => 1920 ) ),
@@ -393,7 +393,7 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 			$this->add_responsive_control(
 				'ls_section_padding',
 				array(
-					'label'      => __( 'فاصله داخلی بخش (بالا/پایین)', 'larijani' ),
+					'label'      => __( 'فاصله داخلی بخش (بالا/پایین)', 'larijani-stone' ),
 					'type'       => self::cm( 'DIMENSIONS' ),
 					'size_units' => array( 'px', 'rem', 'em' ),
 					'allowed_dimensions' => 'vertical',
@@ -403,7 +403,7 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 			$this->add_control(
 				'ls_section_bg_color',
 				array(
-					'label'     => __( 'رنگ پس‌زمینه سفارشی بخش', 'larijani' ),
+					'label'     => __( 'رنگ پس‌زمینه سفارشی بخش', 'larijani-stone' ),
 					'type'      => self::cm( 'COLOR' ),
 					'selectors' => array( '{{WRAPPER}} .ls-root > :first-child' => 'background-color: {{VALUE}};' ),
 				)
@@ -415,18 +415,18 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 			$this->start_controls_section(
 				'ls_style_typo',
 				array(
-					'label' => __( 'تایپوگرافی', 'larijani' ),
+					'label' => __( 'تایپوگرافی', 'larijani-stone' ),
 					'tab'   => self::cm( 'TAB_STYLE' ),
 				)
 			);
-			$this->add_control( 'ls_title_color', array( 'label' => __( 'رنگ عناوین', 'larijani' ), 'type' => self::cm( 'COLOR' ), 'selectors' => array( '{{WRAPPER}} :is(h1,h2,h3)' => 'color: {{VALUE}};' ) ) );
+			$this->add_control( 'ls_title_color', array( 'label' => __( 'رنگ عناوین', 'larijani-stone' ), 'type' => self::cm( 'COLOR' ), 'selectors' => array( '{{WRAPPER}} :is(h1,h2,h3)' => 'color: {{VALUE}};' ) ) );
 			if ( class_exists( 'Elementor\\Group_Control_Typography' ) ) {
-				$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array( 'name' => 'ls_title_typo', 'label' => __( 'عناوین اصلی', 'larijani' ), 'selector' => '{{WRAPPER}} :is(h1,h2)' ) );
-				$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array( 'name' => 'ls_card_title_typo', 'label' => __( 'عنوان کارت‌ها', 'larijani' ), 'selector' => '{{WRAPPER}} :is(h3,h4,h5)' ) );
+				$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array( 'name' => 'ls_title_typo', 'label' => __( 'عناوین اصلی', 'larijani-stone' ), 'selector' => '{{WRAPPER}} :is(h1,h2)' ) );
+				$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array( 'name' => 'ls_card_title_typo', 'label' => __( 'عنوان کارت‌ها', 'larijani-stone' ), 'selector' => '{{WRAPPER}} :is(h3,h4,h5)' ) );
 			}
-			$this->add_control( 'ls_text_color', array( 'label' => __( 'رنگ متن‌ها', 'larijani' ), 'type' => self::cm( 'COLOR' ), 'selectors' => array( '{{WRAPPER}} p' => 'color: {{VALUE}};' ) ) );
+			$this->add_control( 'ls_text_color', array( 'label' => __( 'رنگ متن‌ها', 'larijani-stone' ), 'type' => self::cm( 'COLOR' ), 'selectors' => array( '{{WRAPPER}} p' => 'color: {{VALUE}};' ) ) );
 			if ( class_exists( 'Elementor\\Group_Control_Typography' ) ) {
-				$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array( 'name' => 'ls_text_typo', 'label' => __( 'متن‌ها', 'larijani' ), 'selector' => '{{WRAPPER}} p' ) );
+				$this->add_group_control( \Elementor\Group_Control_Typography::get_type(), array( 'name' => 'ls_text_typo', 'label' => __( 'متن‌ها', 'larijani-stone' ), 'selector' => '{{WRAPPER}} p' ) );
 			}
 			$this->end_controls_section();
 		}
@@ -471,7 +471,7 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 				$s['heading_link_text'] = '';
 			}
 		}
-		return ls_section_heading( ls_heading_from_settings( $s, $extra ) );
+		return larijani_section_heading( larijani_heading_from_settings( $s, $extra ) );
 	}
 
 	/**
@@ -491,7 +491,7 @@ abstract class LS_Widget_Base extends LS_Widget_Parent {
 	 * @return string
 	 */
 	protected function t( $s, $key ) {
-		return isset( $s[ $key ] ) ? ls_kses( $s[ $key ] ) : '';
+		return isset( $s[ $key ] ) ? larijani_kses( $s[ $key ] ) : '';
 	}
 
 	/**

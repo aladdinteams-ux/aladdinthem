@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Page hero.
  */
-class LS_Widget_Page_Hero extends LS_Widget_Base {
+class Larijani_Widget_Page_Hero extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-page-hero';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS هیرو صفحات داخلی (خدمات)', 'larijani' );
+		return __( 'LS هیرو صفحات داخلی (خدمات)', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -26,24 +26,24 @@ class LS_Widget_Page_Hero extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_text', __( 'متن و دکمه‌ها', 'larijani' ) );
-		$this->ctl( 'badge', 'text', __( 'برچسب', 'larijani' ), 'دانش فنی + ماشین‌آلات سنگین + قالب‌های صادراتی' );
-		$this->ctl( 'badge_icon', 'icon', __( 'آیکون برچسب', 'larijani' ), 'gear-wide-connected' );
-		$this->ctl( 'title', 'textarea', __( 'عنوان', 'larijani' ), 'خدمات تخصصی، فرمولاسیون و راه‌اندازی صفر تا صد', array( 'rows' => 2 ) );
-		$this->ctl( 'title_highlight', 'text', __( 'خط دوم رنگی', 'larijani' ), 'خطوط تولید بتن و سنگ مصنوعی' );
-		$this->ctl( 'desc', 'textarea', __( 'توضیح', 'larijani' ), 'از تجهیز کارگاه در ابعاد ۵۰ تا ۱۰۰۰ مترمربع تا انتقال فرمولاسیون اختصاصی سمنت‌پلاست بدون حباب، مقاوم در برابر یخبندان منفی ۳۰ درجه و بیش از ۴۰۰ طرح قالب انحصاری نشکن.' );
-		$this->ctl( 'btn1_text', 'text', __( 'دکمه اول', 'larijani' ), 'درخواست ارزیابی و مشاوره رایگان' );
-		$this->ctl( 'btn1_link', 'url', __( 'لینک دکمه اول', 'larijani' ), '#consultation-form' );
-		$this->ctl( 'btn1_icon', 'icon', __( 'آیکون دکمه اول', 'larijani' ), 'arrow-down' );
-		$this->ctl( 'btn2_text', 'text', __( 'دکمه دوم', 'larijani' ), '۰۹۱۲ ۲۳۰ ۲۶۸۵' );
-		$this->ctl( 'btn2_link', 'url', __( 'لینک دکمه دوم', 'larijani' ), 'tel:09122302685' );
-		$this->ctl( 'btn2_icon', 'icon', __( 'آیکون دکمه دوم', 'larijani' ), 'telephone' );
+		$this->section( 'sec_text', __( 'متن و دکمه‌ها', 'larijani-stone' ) );
+		$this->ctl( 'badge', 'text', __( 'برچسب', 'larijani-stone' ), 'دانش فنی + ماشین‌آلات سنگین + قالب‌های صادراتی' );
+		$this->ctl( 'badge_icon', 'icon', __( 'آیکون برچسب', 'larijani-stone' ), 'gear-wide-connected' );
+		$this->ctl( 'title', 'textarea', __( 'عنوان', 'larijani-stone' ), 'خدمات تخصصی، فرمولاسیون و راه‌اندازی صفر تا صد', array( 'rows' => 2 ) );
+		$this->ctl( 'title_highlight', 'text', __( 'خط دوم رنگی', 'larijani-stone' ), 'خطوط تولید بتن و سنگ مصنوعی' );
+		$this->ctl( 'desc', 'textarea', __( 'توضیح', 'larijani-stone' ), 'از تجهیز کارگاه در ابعاد ۵۰ تا ۱۰۰۰ مترمربع تا انتقال فرمولاسیون اختصاصی سمنت‌پلاست بدون حباب، مقاوم در برابر یخبندان منفی ۳۰ درجه و بیش از ۴۰۰ طرح قالب انحصاری نشکن.' );
+		$this->ctl( 'btn1_text', 'text', __( 'دکمه اول', 'larijani-stone' ), 'درخواست ارزیابی و مشاوره رایگان' );
+		$this->ctl( 'btn1_link', 'url', __( 'لینک دکمه اول', 'larijani-stone' ), '#consultation-form' );
+		$this->ctl( 'btn1_icon', 'icon', __( 'آیکون دکمه اول', 'larijani-stone' ), 'arrow-down' );
+		$this->ctl( 'btn2_text', 'text', __( 'دکمه دوم', 'larijani-stone' ), '۰۹۱۲ ۲۳۰ ۲۶۸۵' );
+		$this->ctl( 'btn2_link', 'url', __( 'لینک دکمه دوم', 'larijani-stone' ), 'tel:09122302685' );
+		$this->ctl( 'btn2_icon', 'icon', __( 'آیکون دکمه دوم', 'larijani-stone' ), 'telephone' );
 		$this->rep(
 			'metrics',
-			__( 'آمار سریع', 'larijani' ),
+			__( 'آمار سریع', 'larijani-stone' ),
 			array(
-				array( 'value', 'text', __( 'عدد', 'larijani' ), '' ),
-				array( 'label', 'text', __( 'عنوان', 'larijani' ), '' ),
+				array( 'value', 'text', __( 'عدد', 'larijani-stone' ), '' ),
+				array( 'label', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'value' => '۴۰۰+', 'label' => 'مدل قالب نشکن ABS' ),
@@ -54,15 +54,15 @@ class LS_Widget_Page_Hero extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_card', __( 'کارت تصویری', 'larijani' ) );
-		$this->ctl( 'show_card', 'switch', __( 'نمایش کارت', 'larijani' ), 'yes' );
-		$this->ctl( 'image', 'media', __( 'تصویر', 'larijani' ), 'services_hero' );
-		$this->ctl( 'card_badge', 'text', __( 'برچسب', 'larijani' ), 'سیستم تولید صنعتی پیوسته' );
-		$this->ctl( 'card_code', 'text', __( 'کد / متن کوچک', 'larijani' ), 'TECH-SPEC 2026' );
-		$this->ctl( 'card_title', 'text', __( 'عنوان', 'larijani' ), 'پکیج انتقال تکنولوژی و دانش فنی' );
-		$this->ctl( 'card_desc', 'textarea', __( 'توضیح', 'larijani' ), 'شامل دفترچه استانداردهای اختلاط مصالح دانه‌بندی، روش تزریق پیگمنت‌های اکسید آهن، کنترل اسلامپ بتن پلیمری و ترفندهای پولیش طبیعی سطح سنگ.' );
-		$this->ctl( 'card_note', 'text', __( 'یادداشت پایین', 'larijani' ), 'تضمین خروجی بدون حفره (Pinhole-Free)' );
-		$this->ctl( 'card_note_right', 'text', __( 'متن سمت چپ پایین', 'larijani' ), 'ضمانت کتبی' );
+		$this->section( 'sec_card', __( 'کارت تصویری', 'larijani-stone' ) );
+		$this->ctl( 'show_card', 'switch', __( 'نمایش کارت', 'larijani-stone' ), 'yes' );
+		$this->ctl( 'image', 'media', __( 'تصویر', 'larijani-stone' ), 'services_hero' );
+		$this->ctl( 'card_badge', 'text', __( 'برچسب', 'larijani-stone' ), 'سیستم تولید صنعتی پیوسته' );
+		$this->ctl( 'card_code', 'text', __( 'کد / متن کوچک', 'larijani-stone' ), 'TECH-SPEC 2026' );
+		$this->ctl( 'card_title', 'text', __( 'عنوان', 'larijani-stone' ), 'پکیج انتقال تکنولوژی و دانش فنی' );
+		$this->ctl( 'card_desc', 'textarea', __( 'توضیح', 'larijani-stone' ), 'شامل دفترچه استانداردهای اختلاط مصالح دانه‌بندی، روش تزریق پیگمنت‌های اکسید آهن، کنترل اسلامپ بتن پلیمری و ترفندهای پولیش طبیعی سطح سنگ.' );
+		$this->ctl( 'card_note', 'text', __( 'یادداشت پایین', 'larijani-stone' ), 'تضمین خروجی بدون حفره (Pinhole-Free)' );
+		$this->ctl( 'card_note_right', 'text', __( 'متن سمت چپ پایین', 'larijani-stone' ), 'ضمانت کتبی' );
 		$this->end();
 
 		$this->style_controls();
@@ -81,7 +81,7 @@ class LS_Widget_Page_Hero extends LS_Widget_Base {
 				<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
 					<div class="<?php echo $card ? 'lg:col-span-7' : 'lg:col-span-12'; ?> flex flex-col gap-space-md">
 						<?php if ( $s['badge'] ) : ?>
-						<div class="inline-flex items-center gap-2 self-start bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-label-badge font-label-badge shadow-sm"><?php echo ls_icon( $s['badge_icon'], 'text-[14px]' ); // phpcs:ignore ?><span><?php echo esc_html( $s['badge'] ); ?></span></div>
+						<div class="inline-flex items-center gap-2 self-start bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-label-badge font-label-badge shadow-sm"><?php echo larijani_icon( $s['badge_icon'], 'text-[14px]' ); // phpcs:ignore ?><span><?php echo esc_html( $s['badge'] ); ?></span></div>
 						<?php endif; ?>
 						<h1 class="font-black text-surface-dark tracking-tight leading-snug text-[24px] sm:text-[32px]">
 							<?php echo $this->t( $s, 'title' ); // phpcs:ignore ?>
@@ -90,10 +90,10 @@ class LS_Widget_Page_Hero extends LS_Widget_Base {
 						<?php if ( $s['desc'] ) : ?><p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed"><?php echo $this->t( $s, 'desc' ); // phpcs:ignore ?></p><?php endif; ?>
 						<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
 							<?php if ( $s['btn1_text'] ) : ?>
-							<a class="inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-primary text-on-primary font-label-nav text-label-nav px-space-xl py-3 rounded-full shadow-md hover:shadow-lg transition-all" <?php echo ls_link_attrs( $s['btn1_link'] ); // phpcs:ignore ?>><span><?php echo esc_html( $s['btn1_text'] ); ?></span><?php echo ls_icon( $s['btn1_icon'], 'text-[16px]' ); // phpcs:ignore ?></a>
+							<a class="inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-primary text-on-primary font-label-nav text-label-nav px-space-xl py-3 rounded-full shadow-md hover:shadow-lg transition-all" <?php echo larijani_link_attrs( $s['btn1_link'] ); // phpcs:ignore ?>><span><?php echo esc_html( $s['btn1_text'] ); ?></span><?php echo larijani_icon( $s['btn1_icon'], 'text-[16px]' ); // phpcs:ignore ?></a>
 							<?php endif; ?>
 							<?php if ( $s['btn2_text'] ) : ?>
-							<a class="inline-flex items-center justify-center gap-2 bg-surface-card hover:bg-surface-container text-surface-dark font-label-nav text-label-nav px-space-lg py-3 rounded-full shadow-sm transition-all" <?php echo ls_link_attrs( $s['btn2_link'] ); // phpcs:ignore ?>><?php echo ls_icon( $s['btn2_icon'], 'text-[16px] text-primary' ); // phpcs:ignore ?><span dir="ltr"><?php echo esc_html( $s['btn2_text'] ); ?></span></a>
+							<a class="inline-flex items-center justify-center gap-2 bg-surface-card hover:bg-surface-container text-surface-dark font-label-nav text-label-nav px-space-lg py-3 rounded-full shadow-sm transition-all" <?php echo larijani_link_attrs( $s['btn2_link'] ); // phpcs:ignore ?>><?php echo larijani_icon( $s['btn2_icon'], 'text-[16px] text-primary' ); // phpcs:ignore ?><span dir="ltr"><?php echo esc_html( $s['btn2_text'] ); ?></span></a>
 							<?php endif; ?>
 						</div>
 						<?php if ( $s['metrics'] ) : ?>
@@ -111,7 +111,7 @@ class LS_Widget_Page_Hero extends LS_Widget_Base {
 					<div class="lg:col-span-5 relative">
 						<div class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-dark text-on-tertiary">
 							<div class="h-64 sm:h-72 w-full relative">
-								<?php echo ls_img( $s['image'], 'w-full h-full object-cover opacity-85', '', 'large', false ); // phpcs:ignore ?>
+								<?php echo larijani_img( $s['image'], 'w-full h-full object-cover opacity-85', '', 'large', false ); // phpcs:ignore ?>
 								<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/40 to-transparent"></div>
 							</div>
 							<div class="p-space-lg flex flex-col gap-space-sm relative -mt-12 bg-surface-dark/95 backdrop-blur-md rounded-t-2xl">

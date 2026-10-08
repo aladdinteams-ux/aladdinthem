@@ -12,14 +12,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Header widget.
  */
-class LS_Widget_Header extends LS_Widget_Base {
+class Larijani_Widget_Header extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-header';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS هدر سایت', 'larijani' );
+		return __( 'LS هدر سایت', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -33,60 +33,60 @@ class LS_Widget_Header extends LS_Widget_Base {
 	 */
 	protected function menu_options() {
 		$opts = array(
-			'primary'           => __( 'جایگاه «منوی اصلی»', 'larijani' ),
-			'drawer_categories' => __( 'جایگاه «دسته‌بندی‌های منوی موبایل»', 'larijani' ),
+			'primary'           => __( 'جایگاه «منوی اصلی»', 'larijani-stone' ),
+			'drawer_categories' => __( 'جایگاه «دسته‌بندی‌های منوی موبایل»', 'larijani-stone' ),
 		);
 		foreach ( wp_get_nav_menus() as $m ) {
-			$opts[ (string) $m->term_id ] = sprintf( /* translators: %s menu */ __( 'منو: %s', 'larijani' ), $m->name );
+			$opts[ (string) $m->term_id ] = sprintf( /* translators: %s menu */ __( 'منو: %s', 'larijani-stone' ), $m->name );
 		}
 		return $opts;
 	}
 
 	/** Controls. */
 	protected function register_controls() {
-		$hint = __( 'خالی = خواندن از سفارشی‌سازی › تنظیمات قالب لاریجانی', 'larijani' );
+		$hint = __( 'خالی = خواندن از سفارشی‌سازی › تنظیمات قالب لاریجانی', 'larijani-stone' );
 
-		$this->section( 'sec_topbar', __( 'نوار بالا', 'larijani' ) );
+		$this->section( 'sec_topbar', __( 'نوار بالا', 'larijani-stone' ) );
 		$this->ctl(
 			'style',
 			'select',
-			__( 'طرح هدر', 'larijani' ),
+			__( 'طرح هدر', 'larijani-stone' ),
 			'inherit',
 			array(
 				'options' => array(
-					'inherit' => __( 'طبق تنظیمات قالب / برگه', 'larijani' ),
-					'dark'    => __( 'نوار بالای تیره', 'larijani' ),
-					'light'   => __( 'نوار بالای روشن (کلاسیک)', 'larijani' ),
+					'inherit' => __( 'طبق تنظیمات قالب / برگه', 'larijani-stone' ),
+					'dark'    => __( 'نوار بالای تیره', 'larijani-stone' ),
+					'light'   => __( 'نوار بالای روشن (کلاسیک)', 'larijani-stone' ),
 				),
 			)
 		);
-		$this->ctl( 'show_topbar', 'switch', __( 'نمایش نوار اطلاعات (دسکتاپ)', 'larijani' ), 'yes' );
-		$this->ctl( 'address', 'text', __( 'آدرس', 'larijani' ), '', array( 'description' => $hint ) );
-		$this->ctl( 'hours', 'text', __( 'ساعات کاری', 'larijani' ), '', array( 'description' => $hint ) );
-		$this->ctl( 'phone', 'text', __( 'تلفن', 'larijani' ), '', array( 'description' => $hint ) );
-		$this->ctl( 'whatsapp_label', 'text', __( 'متن لینک واتساپ', 'larijani' ), '' );
+		$this->ctl( 'show_topbar', 'switch', __( 'نمایش نوار اطلاعات (دسکتاپ)', 'larijani-stone' ), 'yes' );
+		$this->ctl( 'address', 'text', __( 'آدرس', 'larijani-stone' ), '', array( 'description' => $hint ) );
+		$this->ctl( 'hours', 'text', __( 'ساعات کاری', 'larijani-stone' ), '', array( 'description' => $hint ) );
+		$this->ctl( 'phone', 'text', __( 'تلفن', 'larijani-stone' ), '', array( 'description' => $hint ) );
+		$this->ctl( 'whatsapp_label', 'text', __( 'متن لینک واتساپ', 'larijani-stone' ), '' );
 		$this->end();
 
-		$this->section( 'sec_brand', __( 'لوگو و نام برند', 'larijani' ) );
-		$this->ctl( 'logo', 'media', __( 'لوگو', 'larijani' ), array( 'url' => '' ), array( 'description' => __( 'خالی = لوگوی سایت (سفارشی‌سازی › هویت سایت)', 'larijani' ) ) );
-		$this->ctl( 'brand', 'text', __( 'نام برند', 'larijani' ), '', array( 'description' => $hint ) );
-		$this->ctl( 'tagline', 'text', __( 'شعار', 'larijani' ), '', array( 'description' => $hint ) );
+		$this->section( 'sec_brand', __( 'لوگو و نام برند', 'larijani-stone' ) );
+		$this->ctl( 'logo', 'media', __( 'لوگو', 'larijani-stone' ), array( 'url' => '' ), array( 'description' => __( 'خالی = لوگوی سایت (سفارشی‌سازی › هویت سایت)', 'larijani-stone' ) ) );
+		$this->ctl( 'brand', 'text', __( 'نام برند', 'larijani-stone' ), '', array( 'description' => $hint ) );
+		$this->ctl( 'tagline', 'text', __( 'شعار', 'larijani-stone' ), '', array( 'description' => $hint ) );
 		$this->end();
 
-		$this->section( 'sec_nav', __( 'منو و دکمه‌ها', 'larijani' ) );
-		$this->ctl( 'menu', 'select', __( 'منوی اصلی', 'larijani' ), 'primary', array( 'options' => $this->menu_options(), 'description' => __( 'زیرمنوها به صورت منوی کشویی نمایش داده می‌شوند.', 'larijani' ) ) );
-		$this->ctl( 'show_search', 'switch', __( 'دکمه جستجو', 'larijani' ), 'yes' );
-		$this->ctl( 'cta_text', 'text', __( 'متن دکمه اصلی', 'larijani' ), '', array( 'description' => $hint ) );
-		$this->ctl( 'cta_short', 'text', __( 'متن کوتاه دکمه (تبلت)', 'larijani' ), '' );
-		$this->ctl( 'cta_link', 'url', __( 'لینک دکمه اصلی', 'larijani' ), array( 'url' => '' ), array( 'description' => __( 'خالی = تماس تلفنی', 'larijani' ) ) );
-		$this->ctl( 'sticky', 'switch', __( 'هدر چسبان', 'larijani' ), 'yes' );
+		$this->section( 'sec_nav', __( 'منو و دکمه‌ها', 'larijani-stone' ) );
+		$this->ctl( 'menu', 'select', __( 'منوی اصلی', 'larijani-stone' ), 'primary', array( 'options' => $this->menu_options(), 'description' => __( 'زیرمنوها به صورت منوی کشویی نمایش داده می‌شوند.', 'larijani-stone' ) ) );
+		$this->ctl( 'show_search', 'switch', __( 'دکمه جستجو', 'larijani-stone' ), 'yes' );
+		$this->ctl( 'cta_text', 'text', __( 'متن دکمه اصلی', 'larijani-stone' ), '', array( 'description' => $hint ) );
+		$this->ctl( 'cta_short', 'text', __( 'متن کوتاه دکمه (تبلت)', 'larijani-stone' ), '' );
+		$this->ctl( 'cta_link', 'url', __( 'لینک دکمه اصلی', 'larijani-stone' ), array( 'url' => '' ), array( 'description' => __( 'خالی = تماس تلفنی', 'larijani-stone' ) ) );
+		$this->ctl( 'sticky', 'switch', __( 'هدر چسبان', 'larijani-stone' ), 'yes' );
 		$this->end();
 
-		$this->section( 'sec_drawer', __( 'منوی موبایل', 'larijani' ) );
-		$this->ctl( 'drawer_main', 'text', __( 'عنوان بخش اصلی', 'larijani' ), __( 'بخش‌های اصلی', 'larijani' ) );
-		$this->ctl( 'drawer_cats', 'text', __( 'عنوان دسته‌بندی‌ها', 'larijani' ), __( 'دسته‌بندی تجهیزات', 'larijani' ) );
-		$this->ctl( 'drawer_cats_menu', 'select', __( 'منوی دسته‌بندی‌ها', 'larijani' ), 'drawer_categories', array( 'options' => $this->menu_options() ) );
-		$this->ctl( 'drawer_whatsapp', 'text', __( 'متن دکمه واتساپ', 'larijani' ), __( 'پیام در واتساپ', 'larijani' ) );
+		$this->section( 'sec_drawer', __( 'منوی موبایل', 'larijani-stone' ) );
+		$this->ctl( 'drawer_main', 'text', __( 'عنوان بخش اصلی', 'larijani-stone' ), __( 'بخش‌های اصلی', 'larijani-stone' ) );
+		$this->ctl( 'drawer_cats', 'text', __( 'عنوان دسته‌بندی‌ها', 'larijani-stone' ), __( 'دسته‌بندی تجهیزات', 'larijani-stone' ) );
+		$this->ctl( 'drawer_cats_menu', 'select', __( 'منوی دسته‌بندی‌ها', 'larijani-stone' ), 'drawer_categories', array( 'options' => $this->menu_options() ) );
+		$this->ctl( 'drawer_whatsapp', 'text', __( 'متن دکمه واتساپ', 'larijani-stone' ), __( 'پیام در واتساپ', 'larijani-stone' ) );
 		$this->end();
 
 		$this->style_controls( array( 'typography' => false, 'layout' => false ) );
@@ -119,6 +119,6 @@ class LS_Widget_Header extends LS_Widget_Base {
 			'drawer_cats_menu' => $s['drawer_cats_menu'],
 			'drawer_whatsapp'  => $s['drawer_whatsapp'],
 		);
-		ls_render_site_header( $args );
+		larijani_render_site_header( $args );
 	}
 }

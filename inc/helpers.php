@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array
  */
-function ls_option_defaults() {
+function larijani_option_defaults() {
 	return array(
 		// Brand.
 		'ls_brand_name'        => 'لاریجانی استون',
@@ -87,11 +87,11 @@ function ls_option_defaults() {
  * @param string $key Option key (with or without the ls_ prefix).
  * @return mixed
  */
-function ls_opt( $key ) {
+function larijani_opt( $key ) {
 	if ( 0 !== strpos( $key, 'ls_' ) ) {
 		$key = 'ls_' . $key;
 	}
-	$defaults = ls_option_defaults();
+	$defaults = larijani_option_defaults();
 	return get_theme_mod( $key, isset( $defaults[ $key ] ) ? $defaults[ $key ] : '' );
 }
 
@@ -101,7 +101,7 @@ function ls_opt( $key ) {
  * @param mixed ...$values Candidates.
  * @return mixed
  */
-function ls_first( ...$values ) {
+function larijani_first( ...$values ) {
 	foreach ( $values as $v ) {
 		if ( is_array( $v ) ) {
 			if ( ! empty( $v['url'] ) || ! empty( $v['value'] ) || ! empty( $v['id'] ) ) {
@@ -122,7 +122,7 @@ function ls_first( ...$values ) {
  * @param string|int $str Input.
  * @return string
  */
-function ls_fa_num( $str ) {
+function larijani_fa_num( $str ) {
 	return strtr( (string) $str, array( '0' => '۰', '1' => '۱', '2' => '۲', '3' => '۳', '4' => '۴', '5' => '۵', '6' => '۶', '7' => '۷', '8' => '۸', '9' => '۹' ) );
 }
 
@@ -132,7 +132,7 @@ function ls_fa_num( $str ) {
  * @param string $str Input.
  * @return string
  */
-function ls_en_num( $str ) {
+function larijani_en_num( $str ) {
 	return strtr( (string) $str, array( '۰' => '0', '۱' => '1', '۲' => '2', '۳' => '3', '۴' => '4', '۵' => '5', '۶' => '6', '۷' => '7', '۸' => '8', '۹' => '9', '٠' => '0', '١' => '1', '٢' => '2', '٣' => '3', '٤' => '4', '٥' => '5', '٦' => '6', '٧' => '7', '٨' => '8', '٩' => '9' ) );
 }
 
@@ -143,12 +143,12 @@ function ls_en_num( $str ) {
  * @param bool   $spaced Insert spaces.
  * @return string
  */
-function ls_phone_display( $phone, $spaced = true ) {
-	$p = preg_replace( '/\D+/', '', ls_en_num( $phone ) );
+function larijani_phone_display( $phone, $spaced = true ) {
+	$p = preg_replace( '/\D+/', '', larijani_en_num( $phone ) );
 	if ( $spaced && 11 === strlen( $p ) ) {
 		$p = substr( $p, 0, 4 ) . ' ' . substr( $p, 4, 3 ) . ' ' . substr( $p, 7 );
 	}
-	return ls_fa_num( $p );
+	return larijani_fa_num( $p );
 }
 
 /**
@@ -157,8 +157,8 @@ function ls_phone_display( $phone, $spaced = true ) {
  * @param string $phone Phone.
  * @return string
  */
-function ls_tel( $phone ) {
-	return 'tel:' . preg_replace( '/[^\d+]/', '', ls_en_num( $phone ) );
+function larijani_tel( $phone ) {
+	return 'tel:' . preg_replace( '/[^\d+]/', '', larijani_en_num( $phone ) );
 }
 
 /**
@@ -168,8 +168,8 @@ function ls_tel( $phone ) {
  * @param string $text   Optional prefilled text.
  * @return string
  */
-function ls_whatsapp_url( $number = '', $text = '' ) {
-	$number = preg_replace( '/\D+/', '', ls_en_num( $number ? $number : ls_opt( 'whatsapp' ) ) );
+function larijani_whatsapp_url( $number = '', $text = '' ) {
+	$number = preg_replace( '/\D+/', '', larijani_en_num( $number ? $number : larijani_opt( 'whatsapp' ) ) );
 	if ( 0 === strpos( $number, '0' ) ) {
 		$number = '98' . substr( $number, 1 );
 	}
@@ -189,7 +189,7 @@ function ls_whatsapp_url( $number = '', $text = '' ) {
  * @param array        $attrs Extra attributes.
  * @return string
  */
-function ls_icon( $icon, $class = '', $attrs = array() ) {
+function larijani_icon( $icon, $class = '', $attrs = array() ) {
 	if ( empty( $icon ) ) {
 		return '';
 	}
@@ -224,7 +224,7 @@ function ls_icon( $icon, $class = '', $attrs = array() ) {
  * @param string $name Icon name without the "bi-" prefix.
  * @return array
  */
-function ls_bi( $name ) {
+function larijani_bi( $name ) {
 	return array(
 		'value'   => 'bi bi-' . $name,
 		'library' => 'bootstrap-icons',
@@ -238,7 +238,7 @@ function ls_bi( $name ) {
  * @param string $size  Image size.
  * @return string URL.
  */
-function ls_img_url( $media, $size = 'large' ) {
+function larijani_img_url( $media, $size = 'large' ) {
 	if ( is_array( $media ) ) {
 		if ( ! empty( $media['id'] ) ) {
 			$src = wp_get_attachment_image_url( (int) $media['id'], $size );
@@ -264,10 +264,10 @@ function ls_img_url( $media, $size = 'large' ) {
  * @param bool   $lazy  Lazy load.
  * @return string
  */
-function ls_img( $media, $class = '', $alt = '', $size = 'large', $lazy = true ) {
-	$url = ls_img_url( $media, $size );
+function larijani_img( $media, $class = '', $alt = '', $size = 'large', $lazy = true ) {
+	$url = larijani_img_url( $media, $size );
 	if ( ! $url ) {
-		$url = LS_URI . '/assets/images/placeholder.svg';
+		$url = LARIJANI_URI . '/assets/images/placeholder.svg';
 	}
 	if ( ! $alt && is_array( $media ) && ! empty( $media['alt'] ) ) {
 		$alt = $media['alt'];
@@ -290,7 +290,7 @@ function ls_img( $media, $class = '', $alt = '', $size = 'large', $lazy = true )
  * @param array|string $link URL value.
  * @return string
  */
-function ls_link_attrs( $link ) {
+function larijani_link_attrs( $link ) {
 	if ( is_string( $link ) ) {
 		return 'href="' . esc_url( $link ? $link : '#' ) . '"';
 	}
@@ -324,7 +324,7 @@ function ls_link_attrs( $link ) {
  * @param string $text Text.
  * @return string
  */
-function ls_kses( $text ) {
+function larijani_kses( $text ) {
 	return wp_kses(
 		(string) $text,
 		array(
@@ -347,7 +347,7 @@ function ls_kses( $text ) {
  * @param string $text Text.
  * @return array
  */
-function ls_lines( $text ) {
+function larijani_lines( $text ) {
 	return array_values( array_filter( array_map( 'trim', preg_split( '/\r\n|\r|\n/', (string) $text ) ), 'strlen' ) );
 }
 
@@ -358,7 +358,7 @@ function ls_lines( $text ) {
  * @param string $kind badge|soft|icon|text.
  * @return string
  */
-function ls_tone( $tone, $kind = 'badge' ) {
+function larijani_tone( $tone, $kind = 'badge' ) {
 	$map = array(
 		'badge' => array(
 			'primary' => 'bg-primary-container text-white',
@@ -401,15 +401,15 @@ function ls_tone( $tone, $kind = 'badge' ) {
  *
  * @return array
  */
-function ls_tone_options() {
+function larijani_tone_options() {
 	return array(
-		'primary' => __( 'سبز برند', 'larijani' ),
-		'amber'   => __( 'کهربایی', 'larijani' ),
-		'emerald' => __( 'زمردی', 'larijani' ),
-		'cobalt'  => __( 'آبی کبالت', 'larijani' ),
-		'dark'    => __( 'تیره', 'larijani' ),
-		'light'   => __( 'روشن', 'larijani' ),
-		'sage'    => __( 'سبز ملایم', 'larijani' ),
+		'primary' => __( 'سبز برند', 'larijani-stone' ),
+		'amber'   => __( 'کهربایی', 'larijani-stone' ),
+		'emerald' => __( 'زمردی', 'larijani-stone' ),
+		'cobalt'  => __( 'آبی کبالت', 'larijani-stone' ),
+		'dark'    => __( 'تیره', 'larijani-stone' ),
+		'light'   => __( 'روشن', 'larijani-stone' ),
+		'sage'    => __( 'سبز ملایم', 'larijani-stone' ),
 	);
 }
 
@@ -419,7 +419,7 @@ function ls_tone_options() {
  * @param string $bg Key.
  * @return string
  */
-function ls_section_bg( $bg ) {
+function larijani_section_bg( $bg ) {
 	$map = array(
 		'canvas'    => 'bg-surface-canvas',
 		'white'     => 'bg-white',
@@ -437,15 +437,15 @@ function ls_section_bg( $bg ) {
  *
  * @return array
  */
-function ls_section_bg_options() {
+function larijani_section_bg_options() {
 	return array(
-		'none'           => __( 'بدون پس‌زمینه', 'larijani' ),
-		'canvas'         => __( 'کرم سنگی (Canvas)', 'larijani' ),
-		'white'          => __( 'سفید', 'larijani' ),
-		'white-bordered' => __( 'سفید با خط مرزی', 'larijani' ),
-		'surface'        => __( 'Surface', 'larijani' ),
-		'low'            => __( 'آبی-خاکستری ملایم', 'larijani' ),
-		'dark'           => __( 'تیره', 'larijani' ),
+		'none'           => __( 'بدون پس‌زمینه', 'larijani-stone' ),
+		'canvas'         => __( 'کرم سنگی (Canvas)', 'larijani-stone' ),
+		'white'          => __( 'سفید', 'larijani-stone' ),
+		'white-bordered' => __( 'سفید با خط مرزی', 'larijani-stone' ),
+		'surface'        => __( 'Surface', 'larijani-stone' ),
+		'low'            => __( 'آبی-خاکستری ملایم', 'larijani-stone' ),
+		'dark'           => __( 'تیره', 'larijani-stone' ),
 	);
 }
 
@@ -455,7 +455,7 @@ function ls_section_bg_options() {
  * @param int|WP_Post|null $post Post.
  * @return int
  */
-function ls_reading_time( $post = null ) {
+function larijani_reading_time( $post = null ) {
 	$post = get_post( $post );
 	if ( ! $post ) {
 		return 1;
@@ -474,7 +474,7 @@ function ls_reading_time( $post = null ) {
  * @param int|null $post_id Post id.
  * @return int
  */
-function ls_post_views( $post_id = null ) {
+function larijani_post_views( $post_id = null ) {
 	$post_id = $post_id ? $post_id : get_the_ID();
 	return (int) get_post_meta( $post_id, 'ls_views', true );
 }
@@ -486,8 +486,8 @@ function ls_post_views( $post_id = null ) {
  * @param int       $decimals Decimals.
  * @return string
  */
-function ls_fa_number_format( $n, $decimals = 0 ) {
-	return ls_fa_num( number_format( (float) $n, $decimals, '.', ',' ) );
+function larijani_fa_number_format( $n, $decimals = 0 ) {
+	return larijani_fa_num( number_format( (float) $n, $decimals, '.', ',' ) );
 }
 
 /**
@@ -496,7 +496,7 @@ function ls_fa_number_format( $n, $decimals = 0 ) {
  * @param string $name Name.
  * @return string
  */
-function ls_initials( $name ) {
+function larijani_initials( $name ) {
 	$parts = preg_split( '/\s+/u', trim( wp_strip_all_tags( $name ) ) );
 	$parts = array_values( array_filter( $parts, static function ( $p ) {
 		return ! in_array( $p, array( 'مهندس', 'دکتر', 'حاج', 'آقای', 'خانم', 'جناب' ), true );
@@ -514,7 +514,7 @@ function ls_initials( $name ) {
  *
  * @return bool
  */
-function ls_has_elementor() {
+function larijani_has_elementor() {
 	return did_action( 'elementor/loaded' ) > 0;
 }
 
@@ -523,7 +523,7 @@ function ls_has_elementor() {
  *
  * @return bool
  */
-function ls_has_elementor_pro() {
+function larijani_has_elementor_pro() {
 	return defined( 'ELEMENTOR_PRO_VERSION' );
 }
 
@@ -532,7 +532,7 @@ function ls_has_elementor_pro() {
  *
  * @return bool
  */
-function ls_has_woo() {
+function larijani_has_woo() {
 	return class_exists( 'WooCommerce' );
 }
 
@@ -541,8 +541,8 @@ function ls_has_woo() {
  *
  * @return bool
  */
-function ls_is_elementor_editor() {
-	if ( ! ls_has_elementor() ) {
+function larijani_is_elementor_editor() {
+	if ( ! larijani_has_elementor() ) {
 		return false;
 	}
 	$plugin = \Elementor\Plugin::$instance;
@@ -557,14 +557,14 @@ function ls_is_elementor_editor() {
  * @param string      $size Image size.
  * @return string
  */
-function ls_post_image_url( $post, $size = 'large' ) {
+function larijani_post_image_url( $post, $size = 'large' ) {
 	$url = get_the_post_thumbnail_url( $post, $size );
 	if ( $url ) {
 		return $url;
 	}
 	$post = get_post( $post );
 	$key  = $post ? get_post_meta( $post->ID, '_ls_demo_image', true ) : '';
-	return $key ? ls_demo_image( $key ) : '';
+	return $key ? larijani_demo_image( $key ) : '';
 }
 
 /**
@@ -575,7 +575,7 @@ function ls_post_image_url( $post, $size = 'large' ) {
  * @param int $gd Day.
  * @return int[] [ year, month, day ]
  */
-function ls_gregorian_to_jalali( $gy, $gm, $gd ) {
+function larijani_gregorian_to_jalali( $gy, $gm, $gd ) {
 	$g_d_m = array( 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334 );
 	$gy2   = ( $gm > 2 ) ? ( $gy + 1 ) : $gy;
 	$days  = 355666 + ( 365 * $gy ) + intdiv( $gy2 + 3, 4 ) - intdiv( $gy2 + 99, 100 ) + intdiv( $gy2 + 399, 400 ) + $gd + $g_d_m[ $gm - 1 ];
@@ -603,9 +603,9 @@ function ls_gregorian_to_jalali( $gy, $gm, $gd ) {
  * @param int $timestamp Unix timestamp (site time zone is applied).
  * @return string
  */
-function ls_jalali_date( $timestamp ) {
+function larijani_jalali_date( $timestamp ) {
 	$months = array( 'فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند' );
 	$parts  = explode( '-', wp_date( 'Y-n-j', $timestamp ) );
-	list( $jy, $jm, $jd ) = ls_gregorian_to_jalali( (int) $parts[0], (int) $parts[1], (int) $parts[2] );
-	return ls_fa_num( $jd . ' ' . $months[ $jm - 1 ] . ' ' . $jy );
+	list( $jy, $jm, $jd ) = larijani_gregorian_to_jalali( (int) $parts[0], (int) $parts[1], (int) $parts[2] );
+	return larijani_fa_num( $jd . ' ' . $months[ $jm - 1 ] . ' ' . $jy );
 }

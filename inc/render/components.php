@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
  * @param array $h { eyebrow, title, desc, link_text, link, align (split|center|start), dark, tag, title_class }.
  * @return string
  */
-function ls_section_heading( $h ) {
+function larijani_section_heading( $h ) {
 	$h = wp_parse_args(
 		$h,
 		array(
@@ -36,11 +36,11 @@ function ls_section_heading( $h ) {
 	$title_c  = $h['dark'] ? 'text-white' : 'text-surface-dark';
 	$desc_c   = $h['dark'] ? 'text-slate-300' : ( 'token' === $h['style'] ? 'text-on-surface-variant' : 'text-slate-500' );
 	$eyebrow  = $h['eyebrow'] ? '<span class="' . ( 'token' === $h['style'] ? 'font-label-badge text-label-badge' : 'text-xs font-bold uppercase' ) . ' text-primary-container tracking-wider">' . esc_html( $h['eyebrow'] ) . '</span>' : '';
-	$title    = $h['title'] ? '<' . $tag . ' class="' . ( 'token' === $h['style'] ? 'font-headline-lg text-headline-lg' : 'text-xl sm:text-2xl lg:text-3xl font-black' ) . ' ' . $title_c . ' mt-1 leading-snug">' . ls_kses( $h['title'] ) . '</' . $tag . '>' : '';
-	$desc     = $h['desc'] ? '<p class="' . ( 'token' === $h['style'] ? 'font-body-md text-body-md' : 'text-xs sm:text-sm' ) . ' ' . $desc_c . ' mt-1 leading-relaxed">' . ls_kses( $h['desc'] ) . '</p>' : '';
+	$title    = $h['title'] ? '<' . $tag . ' class="' . ( 'token' === $h['style'] ? 'font-headline-lg text-headline-lg' : 'text-xl sm:text-2xl lg:text-3xl font-black' ) . ' ' . $title_c . ' mt-1 leading-snug">' . larijani_kses( $h['title'] ) . '</' . $tag . '>' : '';
+	$desc     = $h['desc'] ? '<p class="' . ( 'token' === $h['style'] ? 'font-body-md text-body-md' : 'text-xs sm:text-sm' ) . ' ' . $desc_c . ' mt-1 leading-relaxed">' . larijani_kses( $h['desc'] ) . '</p>' : '';
 	$link     = '';
 	if ( $h['link_text'] ) {
-		$link = '<a class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-primary-container hover:text-primary transition-colors self-start sm:self-auto group" ' . ls_link_attrs( $h['link'] ) . '><span>' . esc_html( $h['link_text'] ) . '</span><i class="bi bi-arrow-left transition-transform group-hover:-translate-x-1" aria-hidden="true"></i></a>';
+		$link = '<a class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-primary-container hover:text-primary transition-colors self-start sm:self-auto group" ' . larijani_link_attrs( $h['link'] ) . '><span>' . esc_html( $h['link_text'] ) . '</span><i class="bi bi-arrow-left transition-transform group-hover:-translate-x-1" aria-hidden="true"></i></a>';
 	}
 
 	if ( 'center' === $h['align'] ) {
@@ -62,7 +62,7 @@ function ls_section_heading( $h ) {
  * @param array $extra Extra.
  * @return array
  */
-function ls_heading_from_settings( $s, $extra = array() ) {
+function larijani_heading_from_settings( $s, $extra = array() ) {
 	return array_merge(
 		array(
 			'eyebrow'   => $s['heading_eyebrow'] ?? '',
@@ -86,7 +86,7 @@ function ls_heading_from_settings( $s, $extra = array() ) {
  * @param int|string $mobile Mobile columns.
  * @return string
  */
-function ls_grid_cols( $desktop = 4, $tablet = 2, $mobile = 1 ) {
+function larijani_grid_cols( $desktop = 4, $tablet = 2, $mobile = 1 ) {
 	$m = array( 1 => 'grid-cols-1', 2 => 'grid-cols-2', 3 => 'grid-cols-3', 4 => 'grid-cols-4' );
 	$t = array( 1 => 'sm:grid-cols-1', 2 => 'sm:grid-cols-2', 3 => 'sm:grid-cols-3', 4 => 'sm:grid-cols-4' );
 	$d = array( 1 => 'lg:grid-cols-1', 2 => 'lg:grid-cols-2', 3 => 'lg:grid-cols-3', 4 => 'lg:grid-cols-4', 5 => 'lg:grid-cols-5', 6 => 'lg:grid-cols-6' );
@@ -98,7 +98,7 @@ function ls_grid_cols( $desktop = 4, $tablet = 2, $mobile = 1 ) {
  *
  * @return array
  */
-function ls_product_card_defaults() {
+function larijani_product_card_defaults() {
 	return array(
 		'image'          => '',
 		'image_alt'      => '',
@@ -134,15 +134,15 @@ function ls_product_card_defaults() {
 /**
  * Render a product card.
  *
- * @param array  $p     Product data (see ls_product_card_defaults()).
+ * @param array  $p     Product data (see larijani_product_card_defaults()).
  * @param string $style classic | catalog | compact.
  * @return string
  */
-function ls_product_card( $p, $style = 'classic' ) {
-	$p    = wp_parse_args( $p, ls_product_card_defaults() );
-	$img  = ls_img( $p['image'], 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', $p['image_alt'] ? $p['image_alt'] : wp_strip_all_tags( $p['title'] ), 'ls-card' );
+function larijani_product_card( $p, $style = 'classic' ) {
+	$p    = wp_parse_args( $p, larijani_product_card_defaults() );
+	$img  = larijani_img( $p['image'], 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', $p['image_alt'] ? $p['image_alt'] : wp_strip_all_tags( $p['title'] ), 'ls-card' );
 	// Manual cards without a link point to the sample product page (or the shop), never to "#".
-	$url  = ( $p['url'] && '#' !== $p['url'] ) ? $p['url'] : ls_page_url( 'product-sample', ls_page_url( 'shop', home_url( '/' ) ) );
+	$url  = ( $p['url'] && '#' !== $p['url'] ) ? $p['url'] : larijani_page_url( 'product-sample', larijani_page_url( 'shop', home_url( '/' ) ) );
 	$burl = ( $p['button_url'] && '#' !== $p['button_url'] ) ? $p['button_url'] : $url;
 	$price = $p['price_html'] ? $p['price_html'] : esc_html( $p['price'] );
 	$data = ' data-category="' . esc_attr( $p['filter'] ) . '" data-price="' . esc_attr( (float) $p['price_raw'] ) . '" data-title="' . esc_attr( wp_strip_all_tags( $p['title'] ) ) . '"';
@@ -185,10 +185,10 @@ function ls_product_card( $p, $style = 'classic' ) {
 						<?php if ( $p['price_label'] ) : ?><span class="text-body-sm font-body-sm text-outline"><?php echo esc_html( $p['price_label'] ); ?></span><?php endif; ?>
 						<div class="flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm text-on-surface [&_del]:text-xs [&_del]:text-outline [&_ins]:no-underline"><?php echo $price; // phpcs:ignore ?></span><?php if ( $p['currency'] && ! $p['price_html'] && '' !== $p['price'] ) : ?><span class="text-body-sm font-body-sm text-outline"><?php echo esc_html( $p['currency'] ); ?></span><?php endif; ?></div>
 					</div>
-					<button class="w-10 h-10 rounded-full bg-surface-canvas hover:bg-secondary-container text-on-surface flex items-center justify-center transition-colors" type="button" title="<?php esc_attr_e( 'افزودن به علاقه‌مندی', 'larijani' ); ?>" aria-pressed="false" data-ls-wishlist="<?php echo esc_attr( sanitize_title( wp_strip_all_tags( $p['title'] ) ) ); ?>"><i class="bi bi-heart text-[18px]" aria-hidden="true"></i></button>
+					<button class="w-10 h-10 rounded-full bg-surface-canvas hover:bg-secondary-container text-on-surface flex items-center justify-center transition-colors" type="button" title="<?php esc_attr_e( 'افزودن به علاقه‌مندی', 'larijani-stone' ); ?>" aria-pressed="false" data-ls-wishlist="<?php echo esc_attr( sanitize_title( wp_strip_all_tags( $p['title'] ) ) ); ?>"><i class="bi bi-heart text-[18px]" aria-hidden="true"></i></button>
 				</div>
 				<?php if ( $p['button_text'] ) : ?>
-				<a class="w-full py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-nav text-label-nav flex items-center justify-center gap-space-xs transition-all shadow-sm <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>><?php echo ls_icon( $p['button_icon'] ? $p['button_icon'] : 'bi bi-cart-check', 'text-[18px]' ); // phpcs:ignore ?><span><?php echo esc_html( $p['button_text'] ); ?></span></a>
+				<a class="w-full py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-nav text-label-nav flex items-center justify-center gap-space-xs transition-all shadow-sm <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>><?php echo larijani_icon( $p['button_icon'] ? $p['button_icon'] : 'bi bi-cart-check', 'text-[18px]' ); // phpcs:ignore ?><span><?php echo esc_html( $p['button_text'] ); ?></span></a>
 				<?php endif; ?>
 			</div>
 		</article>
@@ -199,15 +199,15 @@ function ls_product_card( $p, $style = 'classic' ) {
 			<div class="relative h-48 sm:h-52 overflow-hidden bg-gray-100">
 				<a href="<?php echo esc_url( $url ); ?>" class="block w-full h-full"><?php echo $img; // phpcs:ignore ?></a>
 				<?php if ( $p['badge'] ) : ?>
-				<div class="absolute top-3 right-3 flex items-center gap-1.5"><span class="<?php echo esc_attr( ls_tone( $p['badge_tone'], 'badge' ) ); ?> text-[11px] font-bold px-2.5 py-1 rounded-lg shadow-sm"><?php echo esc_html( $p['badge'] ); ?></span></div>
+				<div class="absolute top-3 right-3 flex items-center gap-1.5"><span class="<?php echo esc_attr( larijani_tone( $p['badge_tone'], 'badge' ) ); ?> text-[11px] font-bold px-2.5 py-1 rounded-lg shadow-sm"><?php echo esc_html( $p['badge'] ); ?></span></div>
 				<?php endif; ?>
-				<button aria-label="<?php esc_attr_e( 'نشان کردن محصول', 'larijani' ); ?>" aria-pressed="false" class="absolute top-3 left-3 w-8 h-8 rounded-full bg-white/90 text-gray-600 hover:text-red-500 flex items-center justify-center transition shadow" type="button" data-ls-wishlist="<?php echo esc_attr( sanitize_title( wp_strip_all_tags( $p['title'] ) ) ); ?>"><i class="bi bi-heart text-[14px]" aria-hidden="true"></i></button>
+				<button aria-label="<?php esc_attr_e( 'نشان کردن محصول', 'larijani-stone' ); ?>" aria-pressed="false" class="absolute top-3 left-3 w-8 h-8 rounded-full bg-white/90 text-gray-600 hover:text-red-500 flex items-center justify-center transition shadow" type="button" data-ls-wishlist="<?php echo esc_attr( sanitize_title( wp_strip_all_tags( $p['title'] ) ) ); ?>"><i class="bi bi-heart text-[14px]" aria-hidden="true"></i></button>
 			</div>
 			<div class="p-4 flex-1 flex flex-col justify-between">
 				<div>
 					<h3 class="font-bold text-gray-900 text-sm sm:text-base group-hover:text-primary-container transition"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $p['title'] ); ?></a></h3>
 					<?php if ( $p['subtitle'] ) : ?>
-					<p class="text-xs text-gray-500 mt-1 flex items-center gap-1"><?php echo ls_icon( $p['subtitle_icon'], 'text-[13px] text-primary-container' ); // phpcs:ignore ?><?php echo esc_html( $p['subtitle'] ); ?></p>
+					<p class="text-xs text-gray-500 mt-1 flex items-center gap-1"><?php echo larijani_icon( $p['subtitle_icon'], 'text-[13px] text-primary-container' ); // phpcs:ignore ?><?php echo esc_html( $p['subtitle'] ); ?></p>
 					<?php endif; ?>
 					<?php if ( $p['specs'] ) : ?>
 					<div class="mt-4 pt-3 border-t border-gray-100 grid grid-cols-3 text-center text-xs text-gray-500">
@@ -235,7 +235,7 @@ function ls_product_card( $p, $style = 'classic' ) {
 			<a href="<?php echo esc_url( $url ); ?>" class="relative block w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
 				<?php echo $img; // phpcs:ignore ?>
 				<?php if ( $p['badge'] ) : ?>
-				<span class="absolute top-3 right-3 px-space-sm py-1 rounded-full <?php echo esc_attr( ls_tone( $p['badge_tone'] ) ); ?> text-body-sm font-bold shadow-sm"><?php echo esc_html( $p['badge'] ); ?></span>
+				<span class="absolute top-3 right-3 px-space-sm py-1 rounded-full <?php echo esc_attr( larijani_tone( $p['badge_tone'] ) ); ?> text-body-sm font-bold shadow-sm"><?php echo esc_html( $p['badge'] ); ?></span>
 				<?php endif; ?>
 				<?php if ( $p['code'] ) : ?>
 				<span class="absolute bottom-3 left-3 px-2 py-0.5 rounded-lg bg-surface-dark/80 text-surface-bright text-body-sm"><?php echo esc_html( $p['code'] ); ?></span>
@@ -268,11 +268,11 @@ function ls_product_card( $p, $style = 'classic' ) {
 					</div>
 					<div class="flex items-center gap-space-xs">
 						<?php if ( $p['chat_button'] ) : ?>
-						<a class="w-10 h-10 rounded-full bg-surface-canvas hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" href="<?php echo esc_url( $p['chat_url'] ? $p['chat_url'] : ls_whatsapp_url( '', wp_strip_all_tags( $p['title'] ) ) ); ?>" target="_blank" rel="noopener" title="<?php esc_attr_e( 'استعلام تیراژ', 'larijani' ); ?>"><i class="bi bi-chat-dots-fill" aria-hidden="true"></i></a>
+						<a class="w-10 h-10 rounded-full bg-surface-canvas hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" href="<?php echo esc_url( $p['chat_url'] ? $p['chat_url'] : larijani_whatsapp_url( '', wp_strip_all_tags( $p['title'] ) ) ); ?>" target="_blank" rel="noopener" title="<?php esc_attr_e( 'استعلام تیراژ', 'larijani-stone' ); ?>"><i class="bi bi-chat-dots-fill" aria-hidden="true"></i></a>
 						<?php endif; ?>
 						<?php if ( $p['button_text'] ) : ?>
 						<a class="px-space-md py-2 rounded-full <?php echo 'dark' === $p['button_style'] ? 'bg-surface-dark hover:bg-on-surface text-surface-bright' : 'bg-primary-container hover:bg-primary text-on-primary'; ?> text-body-sm font-label-nav flex items-center gap-1 shadow-sm transition-colors text-center min-w-0 <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>>
-							<?php echo ls_icon( $p['button_icon'] ); // phpcs:ignore ?><span><?php echo esc_html( $p['button_text'] ); ?></span>
+							<?php echo larijani_icon( $p['button_icon'] ); // phpcs:ignore ?><span><?php echo esc_html( $p['button_text'] ); ?></span>
 						</a>
 						<?php endif; ?>
 					</div>
@@ -300,8 +300,8 @@ function ls_product_card( $p, $style = 'classic' ) {
 					<?php if ( $p['price_label'] ) : ?><span class="font-body-sm text-body-sm text-on-surface-variant"><?php echo esc_html( $p['price_label'] ); ?></span><?php endif; ?>
 					<span class="font-headline-sm text-headline-sm text-on-surface font-black [&_del]:text-xs [&_del]:text-outline [&_ins]:no-underline"><?php echo $price; // phpcs:ignore ?> <?php if ( $p['currency'] && ! $p['price_html'] && '' !== $p['price'] ) : ?><span class="text-body-sm font-normal"><?php echo esc_html( $p['currency'] ); ?></span><?php endif; ?></span>
 				</div>
-				<a aria-label="<?php echo esc_attr( $p['button_text'] ? $p['button_text'] : __( 'خرید', 'larijani' ) ); ?>" class="w-10 h-10 rounded-full bg-surface-canvas hover:bg-primary-container hover:text-on-primary flex items-center justify-center text-on-surface transition-colors shadow-sm <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>>
-					<?php echo ls_icon( $p['button_icon'] ? $p['button_icon'] : 'bi bi-cart-plus' ); // phpcs:ignore ?>
+				<a aria-label="<?php echo esc_attr( $p['button_text'] ? $p['button_text'] : __( 'خرید', 'larijani-stone' ) ); ?>" class="w-10 h-10 rounded-full bg-surface-canvas hover:bg-primary-container hover:text-on-primary flex items-center justify-center text-on-surface transition-colors shadow-sm <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>>
+					<?php echo larijani_icon( $p['button_icon'] ? $p['button_icon'] : 'bi bi-cart-plus' ); // phpcs:ignore ?>
 				</a>
 			</div>
 		</div>
@@ -312,7 +312,7 @@ function ls_product_card( $p, $style = 'classic' ) {
 			<a href="<?php echo esc_url( $url ); ?>" class="relative block overflow-hidden aspect-[4/3]">
 				<?php echo $img; // phpcs:ignore ?>
 				<?php if ( $p['badge'] ) : ?>
-				<span class="absolute top-3 right-3 <?php echo esc_attr( ls_tone( $p['badge_tone'] ) ); ?> text-[11px] font-bold px-3 py-1 rounded-full shadow"><?php echo esc_html( $p['badge'] ); ?></span>
+				<span class="absolute top-3 right-3 <?php echo esc_attr( larijani_tone( $p['badge_tone'] ) ); ?> text-[11px] font-bold px-3 py-1 rounded-full shadow"><?php echo esc_html( $p['badge'] ); ?></span>
 				<?php endif; ?>
 			</a>
 			<div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
@@ -320,7 +320,7 @@ function ls_product_card( $p, $style = 'classic' ) {
 					<?php if ( $p['category'] ) : ?><span class="text-[11px] font-bold text-slate-500"><?php echo esc_html( $p['category'] ); ?></span><?php endif; ?>
 					<h3 class="text-sm sm:text-base font-black text-surface-dark mt-1 group-hover:text-primary-container transition-colors"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $p['title'] ); ?></a></h3>
 					<?php if ( $p['subtitle'] ) : ?>
-					<p class="text-xs text-slate-500 mt-1.5 flex items-center gap-1.5"><?php echo ls_icon( $p['subtitle_icon'], 'text-primary-container' ); // phpcs:ignore ?><span class="truncate"><?php echo esc_html( $p['subtitle'] ); ?></span></p>
+					<p class="text-xs text-slate-500 mt-1.5 flex items-center gap-1.5"><?php echo larijani_icon( $p['subtitle_icon'], 'text-primary-container' ); // phpcs:ignore ?><span class="truncate"><?php echo esc_html( $p['subtitle'] ); ?></span></p>
 					<?php endif; ?>
 					<?php if ( $p['specs'] ) : ?>
 					<div class="grid grid-cols-3 gap-1 sm:gap-2 border-y border-slate-100 py-3 my-3 text-[10px] sm:text-[11px] text-slate-600 text-center font-medium">
@@ -335,8 +335,8 @@ function ls_product_card( $p, $style = 'classic' ) {
 						<?php if ( $p['price_label'] ) : ?><div class="text-[10px] sm:text-[11px] text-slate-500"><?php echo esc_html( $p['price_label'] ); ?></div><?php endif; ?>
 						<div class="text-xs sm:text-sm font-black text-surface-dark [&_del]:text-[10px] [&_del]:text-slate-500 [&_ins]:no-underline"><?php echo $price; // phpcs:ignore ?> <?php if ( $p['currency'] && ! $p['price_html'] && '' !== $p['price'] ) : ?><span class="text-[10px] text-slate-500"><?php echo esc_html( $p['currency'] ); ?></span><?php endif; ?></div>
 					</div>
-					<a aria-label="<?php echo esc_attr( $p['button_text'] ? $p['button_text'] : __( 'مشاهده مشخصات', 'larijani' ) ); ?>" class="w-9 h-9 rounded-xl bg-surface-canvas text-primary-container hover:bg-primary-container hover:text-white border border-border-subtle flex items-center justify-center transition-colors <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>>
-						<?php echo ls_icon( $p['button_icon'] ? $p['button_icon'] : 'bi bi-arrow-left' ); // phpcs:ignore ?>
+					<a aria-label="<?php echo esc_attr( $p['button_text'] ? $p['button_text'] : __( 'مشاهده مشخصات', 'larijani-stone' ) ); ?>" class="w-9 h-9 rounded-xl bg-surface-canvas text-primary-container hover:bg-primary-container hover:text-white border border-border-subtle flex items-center justify-center transition-colors <?php echo esc_attr( $p['button_class'] ); ?>" href="<?php echo esc_url( $burl ); ?>" <?php echo $p['button_attrs']; // phpcs:ignore ?>>
+						<?php echo larijani_icon( $p['button_icon'] ? $p['button_icon'] : 'bi bi-arrow-left' ); // phpcs:ignore ?>
 					</a>
 				</div>
 			</div>
@@ -352,7 +352,7 @@ function ls_product_card( $p, $style = 'classic' ) {
  * @param array $p { image, title, desc, badge_1, badge_2, badge_2_tone, location, code, specs[], note, note_icon, note_tone, url, filter }.
  * @return string
  */
-function ls_project_card( $p ) {
+function larijani_project_card( $p ) {
 	$p = wp_parse_args(
 		$p,
 		array(
@@ -382,7 +382,7 @@ function ls_project_card( $p ) {
 	?>
 	<article class="ls-filter-item project-card group bg-surface-card rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden" data-category="<?php echo esc_attr( $p['filter'] ); ?>">
 		<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
-			<?php echo ls_img( $p['image'], 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-105', wp_strip_all_tags( $p['title'] ), 'ls-card' ); // phpcs:ignore ?>
+			<?php echo larijani_img( $p['image'], 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-105', wp_strip_all_tags( $p['title'] ), 'ls-card' ); // phpcs:ignore ?>
 			<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/80 via-transparent to-transparent opacity-90"></div>
 			<?php if ( $p['badge_1'] || $p['badge_2'] ) : ?>
 			<div class="absolute top-3 right-3 flex flex-wrap gap-1.5">
@@ -416,11 +416,11 @@ function ls_project_card( $p ) {
 			<?php endif; ?>
 			<div class="flex items-center justify-between pt-space-xs">
 				<span class="text-body-sm font-body-sm <?php echo 'emerald' === $p['note_tone'] ? 'text-accent-emerald' : 'text-tertiary'; ?> flex items-center gap-1">
-					<?php echo ls_icon( $p['note_icon'], 'text-[16px]' . ( 'emerald' === $p['note_tone'] ? '' : ' text-secondary' ) ); // phpcs:ignore ?>
+					<?php echo larijani_icon( $p['note_icon'], 'text-[16px]' . ( 'emerald' === $p['note_tone'] ? '' : ' text-secondary' ) ); // phpcs:ignore ?>
 					<?php echo esc_html( $p['note'] ); ?>
 				</span>
 				<?php if ( $p['url'] ) : ?>
-				<a class="w-9 h-9 rounded-full bg-surface-canvas hover:bg-primary-container hover:text-on-primary text-surface-dark flex items-center justify-center transition-colors" href="<?php echo esc_url( $p['url'] ); ?>" aria-label="<?php esc_attr_e( 'مشاهده پروژه', 'larijani' ); ?>"><i class="bi bi-arrow-left text-[16px]" aria-hidden="true"></i></a>
+				<a class="w-9 h-9 rounded-full bg-surface-canvas hover:bg-primary-container hover:text-on-primary text-surface-dark flex items-center justify-center transition-colors" href="<?php echo esc_url( $p['url'] ); ?>" aria-label="<?php esc_attr_e( 'مشاهده پروژه', 'larijani-stone' ); ?>"><i class="bi bi-arrow-left text-[16px]" aria-hidden="true"></i></a>
 				<?php else : ?>
 				<span class="w-9 h-9 rounded-full bg-surface-canvas text-surface-dark flex items-center justify-center"><i class="bi bi-arrow-left text-[16px]" aria-hidden="true"></i></span>
 				<?php endif; ?>
@@ -437,7 +437,7 @@ function ls_project_card( $p ) {
  * @param WP_Post|int $post Post.
  * @return array
  */
-function ls_project_data( $post ) {
+function larijani_project_data( $post ) {
 	$post  = get_post( $post );
 	$m     = static function ( $k ) use ( $post ) {
 		return get_post_meta( $post->ID, '_ls_' . $k, true );
@@ -450,7 +450,7 @@ function ls_project_data( $post ) {
 	}
 	$terms = get_the_terms( $post, 'ls_project_cat' );
 	return array(
-		'image'    => ls_post_image_url( $post, 'ls-card' ),
+		'image'    => larijani_post_image_url( $post, 'ls-card' ),
 		'title'    => get_the_title( $post ),
 		'desc'     => has_excerpt( $post ) ? get_the_excerpt( $post ) : wp_trim_words( wp_strip_all_tags( $post->post_content ), 30 ),
 		'badge_1'  => $m( 'badge_1' ),
@@ -471,16 +471,16 @@ function ls_project_data( $post ) {
  * @param WP_Post|int $post Post.
  * @return array
  */
-function ls_post_data( $post ) {
+function larijani_post_data( $post ) {
 	$post = get_post( $post );
-	$cat  = ls_primary_category( $post->ID );
+	$cat  = larijani_primary_category( $post->ID );
 	return array(
-		'image'    => ls_post_image_url( $post, 'ls-card' ),
+		'image'    => larijani_post_image_url( $post, 'ls-card' ),
 		'title'    => get_the_title( $post ),
 		'excerpt'  => has_excerpt( $post ) ? get_the_excerpt( $post ) : wp_trim_words( wp_strip_all_tags( strip_shortcodes( $post->post_content ) ), 26 ),
 		'category' => $cat ? $cat->name : '',
-		'date'     => ls_post_date( $post->ID ),
-		'reading'  => ls_reading_time( $post ),
+		'date'     => larijani_post_date( $post->ID ),
+		'reading'  => larijani_reading_time( $post ),
 		'url'      => get_permalink( $post ),
 		'badge_tone' => 'dark',
 	);
@@ -494,16 +494,16 @@ function ls_post_data( $post ) {
  * @param array  $o     Options { read_more }.
  * @return string
  */
-function ls_post_card( $p, $style = 'archive', $o = array() ) {
-	$o   = wp_parse_args( $o, array( 'read_more' => __( 'ادامه مطلب تخصصی', 'larijani' ) ) );
+function larijani_post_card( $p, $style = 'archive', $o = array() ) {
+	$o   = wp_parse_args( $o, array( 'read_more' => __( 'ادامه مطلب تخصصی', 'larijani-stone' ) ) );
 	$url = ! empty( $p['url'] ) ? $p['url'] : '#';
 	/* translators: %s minutes */
-	$reading = ! empty( $p['reading'] ) ? sprintf( __( '%s دقیقه مطالعه', 'larijani' ), ls_fa_num( $p['reading'] ) ) : '';
+	$reading = ! empty( $p['reading'] ) ? sprintf( __( '%s دقیقه مطالعه', 'larijani-stone' ), larijani_fa_num( $p['reading'] ) ) : '';
 	ob_start();
 	if ( 'home' === $style ) :
 		?>
 		<article class="flex flex-col bg-surface-canvas rounded-2xl border border-border-subtle overflow-hidden group hover:bg-white transition-all">
-			<a href="<?php echo esc_url( $url ); ?>" class="block aspect-[16/9] overflow-hidden"><?php echo ls_img( $p['image'], 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', $p['title'], 'ls-card' ); // phpcs:ignore ?></a>
+			<a href="<?php echo esc_url( $url ); ?>" class="block aspect-[16/9] overflow-hidden"><?php echo larijani_img( $p['image'], 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', $p['title'], 'ls-card' ); // phpcs:ignore ?></a>
 			<div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
 				<div>
 					<?php if ( ! empty( $p['category'] ) ) : ?><span class="text-[11px] font-bold text-primary-container"><?php echo esc_html( $p['category'] ); ?></span><?php endif; ?>
@@ -520,7 +520,7 @@ function ls_post_card( $p, $style = 'archive', $o = array() ) {
 	elseif ( 'related' === $style ) :
 		?>
 		<a href="<?php echo esc_url( $url ); ?>" class="bg-surface-card rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
-			<div class="aspect-[16/10] overflow-hidden"><?php echo ls_img( $p['image'], 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300', $p['title'], 'ls-card' ); // phpcs:ignore ?></div>
+			<div class="aspect-[16/10] overflow-hidden"><?php echo larijani_img( $p['image'], 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-300', $p['title'], 'ls-card' ); // phpcs:ignore ?></div>
 			<div class="p-5 flex flex-col flex-1 justify-between gap-3">
 				<div class="space-y-2">
 					<?php if ( ! empty( $p['category'] ) ) : ?><span class="font-label-badge text-label-badge px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container inline-block"><?php echo esc_html( $p['category'] ); ?></span><?php endif; ?>
@@ -538,7 +538,7 @@ function ls_post_card( $p, $style = 'archive', $o = array() ) {
 		<article class="bg-surface-card rounded-2xl shadow-sm overflow-hidden flex flex-col justify-between group hover:shadow-md transition-all duration-300">
 			<div>
 				<a href="<?php echo esc_url( $url ); ?>" class="relative block w-full aspect-[16/10] overflow-hidden">
-					<?php echo ls_img( $p['image'], 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', $p['title'], 'ls-card' ); // phpcs:ignore ?>
+					<?php echo larijani_img( $p['image'], 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500', $p['title'], 'ls-card' ); // phpcs:ignore ?>
 					<?php if ( ! empty( $p['category'] ) ) : ?>
 					<span class="absolute top-3 right-3 px-3 py-1 rounded-full <?php echo 'amber' === ( $p['badge_tone'] ?? '' ) ? 'bg-accent-amber/90' : 'bg-surface-dark/80'; ?> backdrop-blur-md text-white font-label-badge text-label-badge"><?php echo esc_html( $p['category'] ); ?></span>
 					<?php endif; ?>
@@ -570,7 +570,7 @@ function ls_post_card( $p, $style = 'archive', $o = array() ) {
  * @param string $style   pill | chip.
  * @return string
  */
-function ls_filter_buttons( $filters, $style = 'pill' ) {
+function larijani_filter_buttons( $filters, $style = 'pill' ) {
 	$out = '';
 	foreach ( $filters as $i => $f ) {
 		$active   = 0 === $i;
@@ -596,7 +596,7 @@ function ls_filter_buttons( $filters, $style = 'pill' ) {
 			esc_attr( $on ),
 			esc_attr( $off ),
 			$active ? 'true' : 'false',
-			$dot . ( ! empty( $f[2] ) ? ls_icon( $f[2], 'ml-1' ) . ' ' : '' ),
+			$dot . ( ! empty( $f[2] ) ? larijani_icon( $f[2], 'ml-1' ) . ' ' : '' ),
 			esc_html( $f[1] )
 		);
 	}

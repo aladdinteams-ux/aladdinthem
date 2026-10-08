@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Domain: larijani\n"
+"X-Domain: larijani-stone\n"
 
 #: single-ls_project.php:52
 msgid "مشخصات فنی پروژه"

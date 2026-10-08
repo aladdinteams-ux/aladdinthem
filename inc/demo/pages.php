@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array slug => [ title, kind, rows, extra ]
  */
-function ls_demo_layouts() {
+function larijani_demo_layouts() {
 	$cta_dark = array(
 		'w' => 'ls-cta',
 		's' => array( 'variant' => 'dark-card' ),
@@ -92,9 +92,9 @@ function ls_demo_layouts() {
 						'heading_desc'    => 'تجربه فعالان صنعت سنگ مصنوعی از همکاری با مجموعه لاریجانی استون',
 						'section_bg'      => 'canvas',
 						'items'           => array(
-							array( 'text' => 'ما خط تولید موزاییک پلیمری‌مون رو با دستگاه‌های مهندس لاریجانی تجهیز کردیم. کیفیت قالب‌ها بی‌نظیره؛ بعد از یک سال کار مداوم حتی یک مورد شکستگی یا تغییر زاویه نداشتیم.', 'name' => 'مهندس حسینی', 'role' => 'کارخانه موزاییک نگین اصفهان', 'avatar' => ls_demo_media( 'testimonial_1' ), 'stars' => 5 ),
-							array( 'text' => 'میز ویبره ۲ موتوره لاریجانی استون ارتعاش کاملاً یکنواختی میده که باعث شده ملات بدون حباب و مثل شیشه دربیاد. ارسال قالب‌های جدیدشون هم ظرف ۴۸ ساعت به تبریز رسید.', 'name' => 'علیرضا رادپور', 'role' => 'مدیر تولید سنگ مدرن تبریز', 'avatar' => ls_demo_media( 'testimonial_2' ), 'stars' => 5 ),
-							array( 'text' => 'فرمولاسیونی که برای رزین دادند مصرف سیمان کارگاه رو ۱۵٪ کاهش داد و همزمان مقاومت خمشی قطعات بالا رفت. تیم پشتیبانی همواره پاسخگوی سوالات فنی ما هستند.', 'name' => 'کامران مهدوی', 'role' => 'صنایع سنگ پارس - شیراز', 'avatar' => ls_demo_media( 'testimonial_3' ), 'stars' => 5 ),
+							array( 'text' => 'ما خط تولید موزاییک پلیمری‌مون رو با دستگاه‌های مهندس لاریجانی تجهیز کردیم. کیفیت قالب‌ها بی‌نظیره؛ بعد از یک سال کار مداوم حتی یک مورد شکستگی یا تغییر زاویه نداشتیم.', 'name' => 'مهندس حسینی', 'role' => 'کارخانه موزاییک نگین اصفهان', 'avatar' => larijani_demo_media( 'testimonial_1' ), 'stars' => 5 ),
+							array( 'text' => 'میز ویبره ۲ موتوره لاریجانی استون ارتعاش کاملاً یکنواختی میده که باعث شده ملات بدون حباب و مثل شیشه دربیاد. ارسال قالب‌های جدیدشون هم ظرف ۴۸ ساعت به تبریز رسید.', 'name' => 'علیرضا رادپور', 'role' => 'مدیر تولید سنگ مدرن تبریز', 'avatar' => larijani_demo_media( 'testimonial_2' ), 'stars' => 5 ),
+							array( 'text' => 'فرمولاسیونی که برای رزین دادند مصرف سیمان کارگاه رو ۱۵٪ کاهش داد و همزمان مقاومت خمشی قطعات بالا رفت. تیم پشتیبانی همواره پاسخگوی سوالات فنی ما هستند.', 'name' => 'کامران مهدوی', 'role' => 'صنایع سنگ پارس - شیراز', 'avatar' => larijani_demo_media( 'testimonial_3' ), 'stars' => 5 ),
 						),
 					),
 				),
@@ -284,7 +284,7 @@ function ls_demo_layouts() {
 		'catalog'         => array(
 			'title' => 'فروشگاه و کاتالوگ',
 			'kind'  => 'page',
-			'rows'  => ls_demo_shop_rows(),
+			'rows'  => larijani_demo_shop_rows(),
 		),
 		'store'           => array(
 			'title' => 'فروشگاه محصولات',
@@ -349,7 +349,7 @@ function ls_demo_layouts() {
 		'product-sample'  => array(
 			'title' => 'نمونه صفحه محصول',
 			'kind'  => 'page',
-			'rows'  => ls_demo_product_rows( 'manual' ),
+			'rows'  => larijani_demo_product_rows( 'manual' ),
 		),
 
 		// ------------------------------------------------------------------ Theme Builder templates.
@@ -411,12 +411,12 @@ function ls_demo_layouts() {
 		'tpl-product'         => array(
 			'title' => 'لاریجانی – تک‌محصول',
 			'kind'  => 'product',
-			'rows'  => ls_demo_product_rows( 'auto' ),
+			'rows'  => larijani_demo_product_rows( 'auto' ),
 		),
 		'tpl-product-archive' => array(
 			'title' => 'لاریجانی – فروشگاه',
 			'kind'  => 'product-archive',
-			'rows'  => ls_demo_shop_rows( 'auto' ),
+			'rows'  => larijani_demo_shop_rows( 'auto' ),
 		),
 		'tpl-404'             => array(
 			'title' => 'لاریجانی – صفحه ۴۰۴',
@@ -443,7 +443,7 @@ function ls_demo_layouts() {
  * @param string $source Catalog source.
  * @return array
  */
-function ls_demo_shop_rows( $source = 'manual' ) {
+function larijani_demo_shop_rows( $source = 'manual' ) {
 	return array(
 		array( 'w' => 'ls-shop-hero' ),
 		array( 'w' => 'ls-catalog', 's' => array( 'source' => $source ) ),
@@ -491,7 +491,7 @@ function ls_demo_shop_rows( $source = 'manual' ) {
  * @param string $source auto|manual.
  * @return array
  */
-function ls_demo_product_rows( $source = 'auto' ) {
+function larijani_demo_product_rows( $source = 'auto' ) {
 	return array(
 		array( 'w' => 'ls-product-detail', 's' => array( 'source' => $source ) ),
 		array( 'w' => 'ls-product-tabs', 's' => array( 'source' => $source ) ),

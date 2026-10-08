@@ -19,19 +19,19 @@ defined( 'ABSPATH' ) || exit;
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<a class="skip-link screen-reader-text" href="#ls-main"><?php esc_html_e( 'رفتن به محتوا', 'larijani' ); ?></a>
+<a class="skip-link screen-reader-text" href="#ls-main"><?php esc_html_e( 'رفتن به محتوا', 'larijani-stone' ); ?></a>
 <?php
 if ( ! ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_location( 'header' ) ) ) {
-	$ls_header_tpl = ls_tb_template_for( 'header' );
-	if ( $ls_header_tpl ) {
+	$larijani_header_tpl = larijani_tb_template_for( 'header' );
+	if ( $larijani_header_tpl ) {
 		echo '<div class="ls-tb-header">';
-		$ls_header_done = ls_render_elementor_template( $ls_header_tpl );
+		$larijani_header_done = larijani_render_elementor_template( $larijani_header_tpl );
 		echo '</div>';
-		if ( ! $ls_header_done ) {
-			ls_render_site_header();
+		if ( ! $larijani_header_done ) {
+			larijani_render_site_header();
 		}
 	} else {
-		ls_render_site_header();
+		larijani_render_site_header();
 	}
 }
 ?>

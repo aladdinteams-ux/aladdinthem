@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Products widget.
  */
-class LS_Widget_Products extends LS_Widget_Base {
+class Larijani_Widget_Products extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-products';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS محصولات (کارت محصول)', 'larijani' );
+		return __( 'LS محصولات (کارت محصول)', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -36,33 +36,33 @@ class LS_Widget_Products extends LS_Widget_Base {
 	 */
 	public static function card_fields() {
 		return array(
-			array( 'image', 'media', __( 'تصویر', 'larijani' ), '' ),
-			array( 'badge', 'text', __( 'برچسب روی تصویر', 'larijani' ), '' ),
-			array( 'badge_tone', 'select', __( 'رنگ برچسب', 'larijani' ), 'primary', array( 'options' => ls_tone_options() ) ),
-			array( 'stock_badge', 'text', __( 'برچسب موجودی پایین تصویر (سبک فروشگاه)', 'larijani' ), '' ),
-			array( 'stock_tone', 'select', __( 'رنگ برچسب موجودی', 'larijani' ), 'emerald', array( 'options' => array( 'emerald' => __( 'سبز با تیک', 'larijani' ), 'dark' => __( 'تیره', 'larijani' ) ) ) ),
-			array( 'category', 'text', __( 'دسته (بالای عنوان)', 'larijani' ), '' ),
-			array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-			array( 'subtitle', 'text', __( 'ویژگی کوتاه (سبک کلاسیک)', 'larijani' ), '' ),
-			array( 'desc', 'textarea', __( 'توضیح کوتاه (سبک کاتالوگ)', 'larijani' ), '' ),
-			array( 'code', 'text', __( 'کد محصول', 'larijani' ), '' ),
-			array( 'spec1_label', 'text', __( 'مشخصه ۱ – عنوان', 'larijani' ), '' ),
-			array( 'spec1_value', 'text', __( 'مشخصه ۱ – مقدار', 'larijani' ), '' ),
-			array( 'spec2_label', 'text', __( 'مشخصه ۲ – عنوان', 'larijani' ), '' ),
-			array( 'spec2_value', 'text', __( 'مشخصه ۲ – مقدار', 'larijani' ), '' ),
-			array( 'spec3_label', 'text', __( 'مشخصه ۳ – عنوان', 'larijani' ), '' ),
-			array( 'spec3_value', 'text', __( 'مشخصه ۳ – مقدار (سبز)', 'larijani' ), '' ),
-			array( 'price_label', 'text', __( 'عنوان قیمت', 'larijani' ), 'قیمت واحد' ),
-			array( 'price', 'text', __( 'قیمت', 'larijani' ), '' ),
-			array( 'currency', 'text', __( 'واحد پول', 'larijani' ), 'تومان' ),
-			array( 'price_raw', 'number', __( 'قیمت عددی (برای مرتب‌سازی)', 'larijani' ), 0 ),
-			array( 'link', 'url', __( 'لینک محصول', 'larijani' ), '#' ),
-			array( 'button_text', 'text', __( 'متن دکمه (سبک کاتالوگ)', 'larijani' ), '' ),
-			array( 'button_style', 'select', __( 'سبک دکمه', 'larijani' ), 'primary', array( 'options' => array( 'primary' => __( 'سبز', 'larijani' ), 'dark' => __( 'تیره', 'larijani' ) ) ) ),
-			array( 'button_icon', 'icon', __( 'آیکون دکمه', 'larijani' ), '' ),
-			array( 'button_link', 'url', __( 'لینک دکمه', 'larijani' ), '' ),
-			array( 'chat_button', 'switch', __( 'دکمه استعلام واتساپ', 'larijani' ), '' ),
-			array( 'filter', 'text', __( 'کلید فیلتر (دسته برای فیلتر کاتالوگ)', 'larijani' ), '' ),
+			array( 'image', 'media', __( 'تصویر', 'larijani-stone' ), '' ),
+			array( 'badge', 'text', __( 'برچسب روی تصویر', 'larijani-stone' ), '' ),
+			array( 'badge_tone', 'select', __( 'رنگ برچسب', 'larijani-stone' ), 'primary', array( 'options' => larijani_tone_options() ) ),
+			array( 'stock_badge', 'text', __( 'برچسب موجودی پایین تصویر (سبک فروشگاه)', 'larijani-stone' ), '' ),
+			array( 'stock_tone', 'select', __( 'رنگ برچسب موجودی', 'larijani-stone' ), 'emerald', array( 'options' => array( 'emerald' => __( 'سبز با تیک', 'larijani-stone' ), 'dark' => __( 'تیره', 'larijani-stone' ) ) ) ),
+			array( 'category', 'text', __( 'دسته (بالای عنوان)', 'larijani-stone' ), '' ),
+			array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+			array( 'subtitle', 'text', __( 'ویژگی کوتاه (سبک کلاسیک)', 'larijani-stone' ), '' ),
+			array( 'desc', 'textarea', __( 'توضیح کوتاه (سبک کاتالوگ)', 'larijani-stone' ), '' ),
+			array( 'code', 'text', __( 'کد محصول', 'larijani-stone' ), '' ),
+			array( 'spec1_label', 'text', __( 'مشخصه ۱ – عنوان', 'larijani-stone' ), '' ),
+			array( 'spec1_value', 'text', __( 'مشخصه ۱ – مقدار', 'larijani-stone' ), '' ),
+			array( 'spec2_label', 'text', __( 'مشخصه ۲ – عنوان', 'larijani-stone' ), '' ),
+			array( 'spec2_value', 'text', __( 'مشخصه ۲ – مقدار', 'larijani-stone' ), '' ),
+			array( 'spec3_label', 'text', __( 'مشخصه ۳ – عنوان', 'larijani-stone' ), '' ),
+			array( 'spec3_value', 'text', __( 'مشخصه ۳ – مقدار (سبز)', 'larijani-stone' ), '' ),
+			array( 'price_label', 'text', __( 'عنوان قیمت', 'larijani-stone' ), 'قیمت واحد' ),
+			array( 'price', 'text', __( 'قیمت', 'larijani-stone' ), '' ),
+			array( 'currency', 'text', __( 'واحد پول', 'larijani-stone' ), 'تومان' ),
+			array( 'price_raw', 'number', __( 'قیمت عددی (برای مرتب‌سازی)', 'larijani-stone' ), 0 ),
+			array( 'link', 'url', __( 'لینک محصول', 'larijani-stone' ), '#' ),
+			array( 'button_text', 'text', __( 'متن دکمه (سبک کاتالوگ)', 'larijani-stone' ), '' ),
+			array( 'button_style', 'select', __( 'سبک دکمه', 'larijani-stone' ), 'primary', array( 'options' => array( 'primary' => __( 'سبز', 'larijani-stone' ), 'dark' => __( 'تیره', 'larijani-stone' ) ) ) ),
+			array( 'button_icon', 'icon', __( 'آیکون دکمه', 'larijani-stone' ), '' ),
+			array( 'button_link', 'url', __( 'لینک دکمه', 'larijani-stone' ), '' ),
+			array( 'chat_button', 'switch', __( 'دکمه استعلام واتساپ', 'larijani-stone' ), '' ),
+			array( 'filter', 'text', __( 'کلید فیلتر (دسته برای فیلتر کاتالوگ)', 'larijani-stone' ), '' ),
 		);
 	}
 
@@ -107,7 +107,7 @@ class LS_Widget_Products extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_heading', __( 'عنوان بخش', 'larijani' ) );
+		$this->section( 'sec_heading', __( 'عنوان بخش', 'larijani-stone' ) );
 		$this->heading_controls(
 			array(
 				'eyebrow'   => 'محصولات برگزیده کارگاهی',
@@ -118,15 +118,15 @@ class LS_Widget_Products extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_source', __( 'محصولات', 'larijani' ) );
-		$this->ctl( 'source', 'select', __( 'منبع', 'larijani' ), 'manual', array( 'options' => array( 'manual' => __( 'کارت‌های دستی', 'larijani' ), 'woocommerce' => __( 'محصولات ووکامرس', 'larijani' ) ) ) );
-		$this->ctl( 'wc_query', 'select', __( 'نوع کوئری', 'larijani' ), 'recent', array( 'options' => array( 'recent' => __( 'جدیدترین', 'larijani' ), 'featured' => __( 'ویژه', 'larijani' ), 'best_selling' => __( 'پرفروش‌ترین', 'larijani' ), 'sale' => __( 'تخفیف‌دار', 'larijani' ), 'related' => __( 'مرتبط با محصول جاری', 'larijani' ), 'ids' => __( 'شناسه‌های مشخص', 'larijani' ) ), 'condition' => array( 'source' => 'woocommerce' ) ) );
-		$this->ctl( 'wc_ids', 'text', __( 'شناسه محصولات (با کاما)', 'larijani' ), '', array( 'condition' => array( 'source' => 'woocommerce', 'wc_query' => 'ids' ) ) );
-		$this->ctl( 'wc_cat', 'select', __( 'دسته محصول', 'larijani' ), '', array( 'options' => taxonomy_exists( 'product_cat' ) ? ls_term_options( 'product_cat' ) : array( '' => __( 'همه', 'larijani' ) ), 'condition' => array( 'source' => 'woocommerce' ) ) );
-		$this->ctl( 'wc_limit', 'number', __( 'تعداد', 'larijani' ), 4, array( 'condition' => array( 'source' => 'woocommerce' ) ) );
+		$this->section( 'sec_source', __( 'محصولات', 'larijani-stone' ) );
+		$this->ctl( 'source', 'select', __( 'منبع', 'larijani-stone' ), 'manual', array( 'options' => array( 'manual' => __( 'کارت‌های دستی', 'larijani-stone' ), 'woocommerce' => __( 'محصولات ووکامرس', 'larijani-stone' ) ) ) );
+		$this->ctl( 'wc_query', 'select', __( 'نوع کوئری', 'larijani-stone' ), 'recent', array( 'options' => array( 'recent' => __( 'جدیدترین', 'larijani-stone' ), 'featured' => __( 'ویژه', 'larijani-stone' ), 'best_selling' => __( 'پرفروش‌ترین', 'larijani-stone' ), 'sale' => __( 'تخفیف‌دار', 'larijani-stone' ), 'related' => __( 'مرتبط با محصول جاری', 'larijani-stone' ), 'ids' => __( 'شناسه‌های مشخص', 'larijani-stone' ) ), 'condition' => array( 'source' => 'woocommerce' ) ) );
+		$this->ctl( 'wc_ids', 'text', __( 'شناسه محصولات (با کاما)', 'larijani-stone' ), '', array( 'condition' => array( 'source' => 'woocommerce', 'wc_query' => 'ids' ) ) );
+		$this->ctl( 'wc_cat', 'select', __( 'دسته محصول', 'larijani-stone' ), '', array( 'options' => taxonomy_exists( 'product_cat' ) ? larijani_term_options( 'product_cat' ) : array( '' => __( 'همه', 'larijani-stone' ) ), 'condition' => array( 'source' => 'woocommerce' ) ) );
+		$this->ctl( 'wc_limit', 'number', __( 'تعداد', 'larijani-stone' ), 4, array( 'condition' => array( 'source' => 'woocommerce' ) ) );
 		$this->rep(
 			'items',
-			__( 'کارت‌ها', 'larijani' ),
+			__( 'کارت‌ها', 'larijani-stone' ),
 			self::card_fields(),
 			array(
 				array( 'image' => 'product_1', 'badge' => 'موتور ایتالیایی', 'category' => 'ماشین‌آلات بتن', 'title' => 'میز ویبره صنعتی دور متغیر', 'subtitle' => 'ورق ۸ میل ضد ارتعاش معکوس', 'spec1_label' => 'ابعاد', 'spec1_value' => '۲×۱ متر', 'spec2_label' => 'وزن', 'spec2_value' => '۳۵۰ kg', 'spec3_label' => 'گارانتی', 'spec3_value' => '۲ سال', 'price_label' => 'شروع قیمت از', 'price' => '۴۸,۰۰۰,۰۰۰', 'price_raw' => 48000000 ),
@@ -139,8 +139,8 @@ class LS_Widget_Products extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_layout', __( 'چیدمان', 'larijani' ) );
-		$this->ctl( 'card_style', 'select', __( 'سبک کارت', 'larijani' ), 'classic', array( 'options' => array( 'classic' => __( 'کلاسیک (صفحه اصلی)', 'larijani' ), 'catalog' => __( 'کاتالوگ (فروشگاه)', 'larijani' ), 'compact' => __( 'فشرده (محصولات مکمل)', 'larijani' ), 'showcase' => __( 'ویترین (صفحه اصلی کلاسیک)', 'larijani' ), 'store' => __( 'فروشگاه (دکمه تمام‌عرض)', 'larijani' ) ) ) );
+		$this->section( 'sec_layout', __( 'چیدمان', 'larijani-stone' ) );
+		$this->ctl( 'card_style', 'select', __( 'سبک کارت', 'larijani-stone' ), 'classic', array( 'options' => array( 'classic' => __( 'کلاسیک (صفحه اصلی)', 'larijani-stone' ), 'catalog' => __( 'کاتالوگ (فروشگاه)', 'larijani-stone' ), 'compact' => __( 'فشرده (محصولات مکمل)', 'larijani-stone' ), 'showcase' => __( 'ویترین (صفحه اصلی کلاسیک)', 'larijani-stone' ), 'store' => __( 'فروشگاه (دکمه تمام‌عرض)', 'larijani-stone' ) ) ) );
 		$this->columns_controls( 4, 2, 1, 4 );
 		$this->bg_control( 'none' );
 		$this->end();
@@ -155,7 +155,7 @@ class LS_Widget_Products extends LS_Widget_Base {
 	 * @return array
 	 */
 	protected function wc_cards( $s ) {
-		if ( ! ls_has_woo() ) {
+		if ( ! larijani_has_woo() ) {
 			return array();
 		}
 		$args = array(
@@ -193,7 +193,7 @@ class LS_Widget_Products extends LS_Widget_Base {
 		}
 		$cards = array();
 		foreach ( wc_get_products( $args ) as $product ) {
-			$cards[] = ls_wc_card_data( $product );
+			$cards[] = larijani_wc_card_data( $product );
 		}
 		return $cards;
 	}
@@ -206,17 +206,17 @@ class LS_Widget_Products extends LS_Widget_Base {
 	protected function render_widget( $s ) {
 		$cards = 'woocommerce' === $s['source'] ? $this->wc_cards( $s ) : array_map( array( __CLASS__, 'row_to_card' ), $s['items'] );
 		?>
-		<section class="py-12 sm:py-16 <?php echo esc_attr( ls_section_bg( $s['section_bg'] ) ); ?>">
+		<section class="py-12 sm:py-16 <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<?php echo $this->heading( $s ); // phpcs:ignore ?>
 				<?php if ( $cards ) : ?>
-				<div class="grid <?php echo esc_attr( ls_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) ); ?> gap-5 sm:gap-6">
+				<div class="grid <?php echo esc_attr( larijani_grid_cols( $s['columns'], $s['columns_tablet'], $s['columns_mobile'] ) ); ?> gap-5 sm:gap-6">
 					<?php foreach ( $cards as $card ) : ?>
-						<?php echo ls_product_card( $card, $s['card_style'] ); // phpcs:ignore ?>
+						<?php echo larijani_product_card( $card, $s['card_style'] ); // phpcs:ignore ?>
 					<?php endforeach; ?>
 				</div>
-				<?php elseif ( ls_is_elementor_editor() ) : ?>
-				<div class="p-6 rounded-2xl bg-white text-center text-sm text-slate-500"><?php esc_html_e( 'محصولی برای نمایش یافت نشد.', 'larijani' ); ?></div>
+				<?php elseif ( larijani_is_elementor_editor() ) : ?>
+				<div class="p-6 rounded-2xl bg-white text-center text-sm text-slate-500"><?php esc_html_e( 'محصولی برای نمایش یافت نشد.', 'larijani-stone' ); ?></div>
 				<?php endif; ?>
 			</div>
 		</section>
@@ -229,6 +229,6 @@ class LS_Widget_Products extends LS_Widget_Base {
 	 * @return string
 	 */
 	protected function heading_fallback_url() {
-		return ls_page_url( 'shop', function_exists( 'wc_get_page_id' ) && wc_get_page_id( 'shop' ) > 0 ? get_permalink( wc_get_page_id( 'shop' ) ) : home_url( '/' ) );
+		return larijani_page_url( 'shop', function_exists( 'wc_get_page_id' ) && wc_get_page_id( 'shop' ) > 0 ? get_permalink( wc_get_page_id( 'shop' ) ) : home_url( '/' ) );
 	}
 }

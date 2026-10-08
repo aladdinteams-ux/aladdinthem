@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return bool
  */
-function ls_seo_plugin_active() {
+function larijani_seo_plugin_active() {
 	$active = defined( 'WPSEO_VERSION' ) || defined( 'RANK_MATH_VERSION' ) || defined( 'SEOPRESS_VERSION' )
 		|| defined( 'AIOSEO_VERSION' ) || defined( 'THE_SEO_FRAMEWORK_VERSION' ) || class_exists( 'Slim_SEO\\Plugin' );
 	return (bool) apply_filters( 'ls_seo_plugin_active', $active );
@@ -33,8 +33,8 @@ function ls_seo_plugin_active() {
  * @param string $type organization|faq.
  * @return bool
  */
-function ls_theme_schema_enabled( $type ) {
-	return (bool) apply_filters( 'ls_theme_schema_enabled', ! ls_seo_plugin_active(), $type );
+function larijani_theme_schema_enabled( $type ) {
+	return (bool) apply_filters( 'ls_theme_schema_enabled', ! larijani_seo_plugin_active(), $type );
 }
 
 /**
@@ -43,7 +43,7 @@ function ls_theme_schema_enabled( $type ) {
  *
  * @param array $data Data.
  */
-function ls_print_json_ld( $data ) {
+function larijani_print_json_ld( $data ) {
 	$json = wp_json_encode( $data, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT );
 	if ( $json ) {
 		echo '<script type="application/ld+json">' . $json . '</script>' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- JSON with HTML characters hex-escaped.
@@ -54,51 +54,51 @@ function ls_print_json_ld( $data ) {
  * Organization entity from the theme settings (the same data the header,
  * footer and contact page display). Printed on the front page only.
  */
-function ls_organization_schema() {
-	if ( ! is_front_page() || ! ls_theme_schema_enabled( 'organization' ) ) {
+function larijani_organization_schema() {
+	if ( ! is_front_page() || ! larijani_theme_schema_enabled( 'organization' ) ) {
 		return;
 	}
-	$phones = array_filter( array( ls_opt( 'phone_1' ), ls_opt( 'phone_2' ) ) );
-	$same   = array_values( array_filter( array( ls_opt( 'instagram' ), ls_opt( 'telegram' ), ls_opt( 'linkedin' ), ls_opt( 'aparat' ), ls_opt( 'eitaa' ) ) ) );
+	$phones = array_filter( array( larijani_opt( 'phone_1' ), larijani_opt( 'phone_2' ) ) );
+	$same   = array_values( array_filter( array( larijani_opt( 'instagram' ), larijani_opt( 'telegram' ), larijani_opt( 'linkedin' ), larijani_opt( 'aparat' ), larijani_opt( 'eitaa' ) ) ) );
 	$logo   = get_theme_mod( 'custom_logo' ) ? wp_get_attachment_image_url( (int) get_theme_mod( 'custom_logo' ), 'full' ) : '';
 	$org    = array(
 		'@context'    => 'https://schema.org',
 		'@type'       => 'Organization',
 		'@id'         => home_url( '/#organization' ),
-		'name'        => ls_opt( 'brand_name' ) ? ls_opt( 'brand_name' ) : get_bloginfo( 'name' ),
+		'name'        => larijani_opt( 'brand_name' ) ? larijani_opt( 'brand_name' ) : get_bloginfo( 'name' ),
 		'url'         => home_url( '/' ),
-		'description' => wp_strip_all_tags( (string) ls_opt( 'footer_about' ) ),
+		'description' => wp_strip_all_tags( (string) larijani_opt( 'footer_about' ) ),
 	);
 	if ( $logo ) {
 		$org['logo'] = $logo;
 	}
-	if ( ls_opt( 'email' ) ) {
-		$org['email'] = sanitize_email( ls_opt( 'email' ) );
+	if ( larijani_opt( 'email' ) ) {
+		$org['email'] = sanitize_email( larijani_opt( 'email' ) );
 	}
 	if ( $phones ) {
 		$org['contactPoint'] = array();
 		foreach ( $phones as $i => $ph ) {
 			$org['contactPoint'][] = array(
 				'@type'       => 'ContactPoint',
-				'telephone'   => '+98' . ltrim( preg_replace( '/\D+/', '', ls_en_num( $ph ) ), '0' ),
+				'telephone'   => '+98' . ltrim( preg_replace( '/\D+/', '', larijani_en_num( $ph ) ), '0' ),
 				'contactType' => 0 === $i ? 'technical support' : 'sales',
 				'areaServed'  => 'IR',
 			);
 		}
 	}
-	if ( ls_opt( 'address' ) ) {
+	if ( larijani_opt( 'address' ) ) {
 		$org['address'] = array(
 			'@type'          => 'PostalAddress',
-			'streetAddress'  => wp_strip_all_tags( (string) ls_opt( 'address' ) ),
+			'streetAddress'  => wp_strip_all_tags( (string) larijani_opt( 'address' ) ),
 			'addressCountry' => 'IR',
 		);
 	}
 	if ( $same ) {
 		$org['sameAs'] = $same;
 	}
-	ls_print_json_ld( apply_filters( 'ls_organization_schema', $org ) );
+	larijani_print_json_ld( apply_filters( 'ls_organization_schema', $org ) );
 }
-add_action( 'wp_head', 'ls_organization_schema', 30 );
+add_action( 'wp_head', 'larijani_organization_schema', 30 );
 
 /**
  * Keep internal search result pages out of the index (core adds nothing here).
@@ -106,14 +106,14 @@ add_action( 'wp_head', 'ls_organization_schema', 30 );
  * @param array $robots Robots directives.
  * @return array
  */
-function ls_search_robots( $robots ) {
-	if ( is_search() && ! ls_seo_plugin_active() ) {
+function larijani_search_robots( $robots ) {
+	if ( is_search() && ! larijani_seo_plugin_active() ) {
 		$robots['noindex'] = true;
 		$robots['follow']  = true;
 	}
 	return $robots;
 }
-add_filter( 'wp_robots', 'ls_search_robots' );
+add_filter( 'wp_robots', 'larijani_search_robots' );
 
 /**
  * Basic meta description when no SEO plugin is active (plugins own it otherwise).
@@ -121,8 +121,8 @@ add_filter( 'wp_robots', 'ls_search_robots' );
  * the front page; falls back to the tagline and then the footer "about" text
  * (builder pages keep their content in Elementor data, not post_content).
  */
-function ls_meta_description() {
-	if ( ls_seo_plugin_active() || ! apply_filters( 'ls_meta_description_enabled', true ) || is_search() || is_404() ) {
+function larijani_meta_description() {
+	if ( larijani_seo_plugin_active() || ! apply_filters( 'ls_meta_description_enabled', true ) || is_search() || is_404() ) {
 		return;
 	}
 	$desc = '';
@@ -148,11 +148,11 @@ function ls_meta_description() {
 	}
 	if ( '' === $desc && ! is_paged() && ( is_front_page() || is_home() || is_page() || is_post_type_archive() ) ) {
 		$desc = trim( (string) get_bloginfo( 'description' ) );
-		$desc = '' !== $desc ? $desc : trim( (string) ls_opt( 'footer_about' ) );
+		$desc = '' !== $desc ? $desc : trim( (string) larijani_opt( 'footer_about' ) );
 	}
 	$desc = (string) apply_filters( 'ls_meta_description', wp_html_excerpt( $desc, 160, '…' ) );
 	if ( '' !== $desc ) {
 		echo '<meta name="description" content="' . esc_attr( $desc ) . '">' . "\n";
 	}
 }
-add_action( 'wp_head', 'ls_meta_description', 1 );
+add_action( 'wp_head', 'larijani_meta_description', 1 );

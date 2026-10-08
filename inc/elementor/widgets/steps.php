@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Steps widget.
  */
-class LS_Widget_Steps extends LS_Widget_Base {
+class Larijani_Widget_Steps extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-steps';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS مراحل / نقشه راه', 'larijani' );
+		return __( 'LS مراحل / نقشه راه', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -26,7 +26,7 @@ class LS_Widget_Steps extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_heading', __( 'عنوان بخش', 'larijani' ) );
+		$this->section( 'sec_heading', __( 'عنوان بخش', 'larijani-stone' ) );
 		$this->heading_controls(
 			array(
 				'eyebrow' => 'مراحل گام‌به‌گام راه‌اندازی',
@@ -38,16 +38,16 @@ class LS_Widget_Steps extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_steps', __( 'مراحل', 'larijani' ) );
+		$this->section( 'sec_steps', __( 'مراحل', 'larijani-stone' ) );
 		$this->rep(
 			'steps',
-			__( 'مراحل', 'larijani' ),
+			__( 'مراحل', 'larijani-stone' ),
 			array(
-				array( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'bar-chart-line' ),
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'desc', 'textarea', __( 'توضیح', 'larijani' ), '' ),
-				array( 'note', 'text', __( 'یادداشت پایین', 'larijani' ), '' ),
-				array( 'tone', 'select', __( 'رنگ شماره', 'larijani' ), 'primary', array( 'options' => array( 'dark' => __( 'تیره', 'larijani' ), 'primary' => __( 'سبز برند', 'larijani' ), 'sage' => __( 'سبز ثانویه', 'larijani' ) ) ) ),
+				array( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'bar-chart-line' ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'desc', 'textarea', __( 'توضیح', 'larijani-stone' ), '' ),
+				array( 'note', 'text', __( 'یادداشت پایین', 'larijani-stone' ), '' ),
+				array( 'tone', 'select', __( 'رنگ شماره', 'larijani-stone' ), 'primary', array( 'options' => array( 'dark' => __( 'تیره', 'larijani-stone' ), 'primary' => __( 'سبز برند', 'larijani-stone' ), 'sage' => __( 'سبز ثانویه', 'larijani-stone' ) ) ) ),
 			),
 			array(
 				array( 'icon' => 'bar-chart-line', 'tone' => 'dark', 'title' => 'مشاوره و امکان‌سنجی اولیه', 'desc' => 'بررسی متراژ فضا (برق ۳ فاز یا تک‌فاز، انبارش قالب‌ها) متناسب با بودجه اولیه و پتانسیل بازار منطقه شما.', 'note' => 'تحلیل ظرفیت تولید' ),
@@ -60,15 +60,15 @@ class LS_Widget_Steps extends LS_Widget_Base {
 		$this->columns_controls( 5, 2, 1, 6 );
 		$this->end();
 
-		$this->section( 'sec_gallery', __( 'کارت‌های تصویری زیر مراحل', 'larijani' ) );
+		$this->section( 'sec_gallery', __( 'کارت‌های تصویری زیر مراحل', 'larijani-stone' ) );
 		$this->rep(
 			'gallery',
-			__( 'کارت‌ها', 'larijani' ),
+			__( 'کارت‌ها', 'larijani-stone' ),
 			array(
-				array( 'image', 'media', __( 'تصویر', 'larijani' ), '' ),
-				array( 'eyebrow', 'text', __( 'متن کوچک', 'larijani' ), '' ),
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'desc', 'textarea', __( 'توضیح', 'larijani' ), '' ),
+				array( 'image', 'media', __( 'تصویر', 'larijani-stone' ), '' ),
+				array( 'eyebrow', 'text', __( 'متن کوچک', 'larijani-stone' ), '' ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'desc', 'textarea', __( 'توضیح', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'image' => 'services_gallery_1', 'eyebrow' => 'تست کارگاهی', 'title' => 'تست تراکم ارتعاشی در کارخانه آبیک', 'desc' => 'تمام میزهای ویبره پیش از تحویل با بارگذاری کامل قالب‌ها تحت سنجش شتاب‌سنج دیجیتال کالیبره می‌شوند.' ),
@@ -94,15 +94,15 @@ class LS_Widget_Steps extends LS_Widget_Base {
 		);
 		$cols  = array( 1 => 'md:grid-cols-1', 2 => 'md:grid-cols-2', 3 => 'md:grid-cols-3', 4 => 'md:grid-cols-4', 5 => 'md:grid-cols-5', 6 => 'md:grid-cols-6' );
 		?>
-		<section class="w-full py-space-2xl <?php echo esc_attr( ls_section_bg( $s['section_bg'] ) ); ?>">
+		<section class="w-full py-space-2xl <?php echo esc_attr( larijani_section_bg( $s['section_bg'] ) ); ?>">
 			<div class="max-w-[80rem] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-2xl">
 				<?php echo $this->heading( $s, array( 'mb' => '' ) ); // phpcs:ignore ?>
 				<div class="grid grid-cols-1 <?php echo esc_attr( ( (int) $s['columns_tablet'] > 1 ? 'sm:grid-cols-2 ' : '' ) . ( $cols[ (int) $s['columns'] ] ?? 'md:grid-cols-5' ) ); ?> gap-space-md relative">
 					<?php foreach ( $s['steps'] as $i => $st ) : ?>
 					<div class="bg-surface-card p-space-md rounded-2xl shadow-sm flex flex-col justify-between gap-space-md relative overflow-hidden">
 						<div class="flex items-center justify-between">
-							<span class="w-9 h-9 rounded-full <?php echo esc_attr( $tones[ $st['tone'] ] ?? $tones['primary'] ); ?> flex items-center justify-center font-headline-sm text-headline-sm"><?php echo esc_html( ls_fa_num( $i + 1 ) ); ?></span>
-							<?php echo ls_icon( $st['icon'], 'text-[22px] text-outline' ); // phpcs:ignore ?>
+							<span class="w-9 h-9 rounded-full <?php echo esc_attr( $tones[ $st['tone'] ] ?? $tones['primary'] ); ?> flex items-center justify-center font-headline-sm text-headline-sm"><?php echo esc_html( larijani_fa_num( $i + 1 ) ); ?></span>
+							<?php echo larijani_icon( $st['icon'], 'text-[22px] text-outline' ); // phpcs:ignore ?>
 						</div>
 						<div class="flex flex-col gap-1">
 							<h3 class="font-title-card text-title-card text-surface-dark"><?php echo esc_html( $st['title'] ); ?></h3>
@@ -116,7 +116,7 @@ class LS_Widget_Steps extends LS_Widget_Base {
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
 					<?php foreach ( $s['gallery'] as $g ) : ?>
 					<div class="bg-surface-card p-space-lg rounded-2xl shadow-sm flex flex-col sm:flex-row items-center gap-space-md">
-						<div class="w-full sm:w-44 h-36 rounded-xl overflow-hidden shrink-0"><?php echo ls_img( $g['image'], 'w-full h-full object-cover', $g['title'], 'ls-card' ); // phpcs:ignore ?></div>
+						<div class="w-full sm:w-44 h-36 rounded-xl overflow-hidden shrink-0"><?php echo larijani_img( $g['image'], 'w-full h-full object-cover', $g['title'], 'ls-card' ); // phpcs:ignore ?></div>
 						<div class="flex flex-col gap-1">
 							<span class="font-label-badge text-label-badge text-outline"><?php echo esc_html( $g['eyebrow'] ); ?></span>
 							<h3 class="font-headline-sm text-headline-sm text-surface-dark"><?php echo esc_html( $g['title'] ); ?></h3>

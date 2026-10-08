@@ -20,34 +20,34 @@ use Elementor\Modules\DynamicTags\Module as TagsModule;
  *
  * @return array
  */
-function ls_dynamic_contact_options() {
+function larijani_dynamic_contact_options() {
 	return array(
-		'brand_name'     => __( 'نام برند', 'larijani' ),
-		'brand_tagline'  => __( 'شعار', 'larijani' ),
-		'phone_1'        => __( 'تلفن اول', 'larijani' ),
-		'phone_1_fa'     => __( 'تلفن اول (فارسی، فاصله‌دار)', 'larijani' ),
-		'phone_2'        => __( 'تلفن دوم', 'larijani' ),
-		'phone_2_fa'     => __( 'تلفن دوم (فارسی، فاصله‌دار)', 'larijani' ),
-		'email'          => __( 'ایمیل', 'larijani' ),
-		'address'        => __( 'آدرس کامل', 'larijani' ),
-		'address_short'  => __( 'آدرس کوتاه', 'larijani' ),
-		'hours'          => __( 'ساعات کاری', 'larijani' ),
-		'hours_full'     => __( 'ساعات کاری کامل', 'larijani' ),
-		'footer_about'   => __( 'متن درباره ما', 'larijani' ),
+		'brand_name'     => __( 'نام برند', 'larijani-stone' ),
+		'brand_tagline'  => __( 'شعار', 'larijani-stone' ),
+		'phone_1'        => __( 'تلفن اول', 'larijani-stone' ),
+		'phone_1_fa'     => __( 'تلفن اول (فارسی، فاصله‌دار)', 'larijani-stone' ),
+		'phone_2'        => __( 'تلفن دوم', 'larijani-stone' ),
+		'phone_2_fa'     => __( 'تلفن دوم (فارسی، فاصله‌دار)', 'larijani-stone' ),
+		'email'          => __( 'ایمیل', 'larijani-stone' ),
+		'address'        => __( 'آدرس کامل', 'larijani-stone' ),
+		'address_short'  => __( 'آدرس کوتاه', 'larijani-stone' ),
+		'hours'          => __( 'ساعات کاری', 'larijani-stone' ),
+		'hours_full'     => __( 'ساعات کاری کامل', 'larijani-stone' ),
+		'footer_about'   => __( 'متن درباره ما', 'larijani-stone' ),
 	);
 }
 
 /**
  * Text tag: contact info.
  */
-class LS_Tag_Contact_Text extends Tag {
+class Larijani_Tag_Contact_Text extends Tag {
 	/** @return string */
 	public function get_name() {
 		return 'ls-contact-text';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'اطلاعات تماس سایت', 'larijani' );
+		return __( 'اطلاعات تماس سایت', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_group() {
@@ -62,9 +62,9 @@ class LS_Tag_Contact_Text extends Tag {
 		$this->add_control(
 			'field',
 			array(
-				'label'   => __( 'فیلد', 'larijani' ),
+				'label'   => __( 'فیلد', 'larijani-stone' ),
 				'type'    => Controls_Manager::SELECT,
-				'options' => ls_dynamic_contact_options(),
+				'options' => larijani_dynamic_contact_options(),
 				'default' => 'phone_1_fa',
 			)
 		);
@@ -73,24 +73,24 @@ class LS_Tag_Contact_Text extends Tag {
 	public function render() {
 		$field = $this->get_settings( 'field' );
 		if ( 'phone_1_fa' === $field || 'phone_2_fa' === $field ) {
-			echo esc_html( ls_phone_display( ls_opt( str_replace( '_fa', '', $field ) ) ) );
+			echo esc_html( larijani_phone_display( larijani_opt( str_replace( '_fa', '', $field ) ) ) );
 			return;
 		}
-		echo esc_html( ls_opt( $field ) );
+		echo esc_html( larijani_opt( $field ) );
 	}
 }
 
 /**
  * URL tag: tel / WhatsApp / e-mail / social links.
  */
-class LS_Tag_Contact_URL extends Data_Tag {
+class Larijani_Tag_Contact_URL extends Data_Tag {
 	/** @return string */
 	public function get_name() {
 		return 'ls-contact-url';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'لینک تماس سایت', 'larijani' );
+		return __( 'لینک تماس سایت', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_group() {
@@ -105,18 +105,18 @@ class LS_Tag_Contact_URL extends Data_Tag {
 		$this->add_control(
 			'field',
 			array(
-				'label'   => __( 'لینک', 'larijani' ),
+				'label'   => __( 'لینک', 'larijani-stone' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'tel_1'     => __( 'تماس با تلفن اول', 'larijani' ),
-					'tel_2'     => __( 'تماس با تلفن دوم', 'larijani' ),
-					'whatsapp'  => __( 'واتساپ', 'larijani' ),
-					'email'     => __( 'ایمیل', 'larijani' ),
-					'instagram' => __( 'اینستاگرام', 'larijani' ),
-					'telegram'  => __( 'تلگرام', 'larijani' ),
-					'eitaa'     => __( 'ایتا', 'larijani' ),
-					'aparat'    => __( 'آپارات', 'larijani' ),
-					'linkedin'  => __( 'لینکدین', 'larijani' ),
+					'tel_1'     => __( 'تماس با تلفن اول', 'larijani-stone' ),
+					'tel_2'     => __( 'تماس با تلفن دوم', 'larijani-stone' ),
+					'whatsapp'  => __( 'واتساپ', 'larijani-stone' ),
+					'email'     => __( 'ایمیل', 'larijani-stone' ),
+					'instagram' => __( 'اینستاگرام', 'larijani-stone' ),
+					'telegram'  => __( 'تلگرام', 'larijani-stone' ),
+					'eitaa'     => __( 'ایتا', 'larijani-stone' ),
+					'aparat'    => __( 'آپارات', 'larijani-stone' ),
+					'linkedin'  => __( 'لینکدین', 'larijani-stone' ),
 				),
 				'default' => 'tel_1',
 			)
@@ -124,7 +124,7 @@ class LS_Tag_Contact_URL extends Data_Tag {
 		$this->add_control(
 			'text',
 			array(
-				'label'     => __( 'متن پیش‌فرض واتساپ', 'larijani' ),
+				'label'     => __( 'متن پیش‌فرض واتساپ', 'larijani-stone' ),
 				'type'      => Controls_Manager::TEXT,
 				'condition' => array( 'field' => 'whatsapp' ),
 			)
@@ -140,15 +140,15 @@ class LS_Tag_Contact_URL extends Data_Tag {
 		$field = $this->get_settings( 'field' );
 		switch ( $field ) {
 			case 'tel_1':
-				return ls_tel( ls_opt( 'phone_1' ) );
+				return larijani_tel( larijani_opt( 'phone_1' ) );
 			case 'tel_2':
-				return ls_tel( ls_opt( 'phone_2' ) );
+				return larijani_tel( larijani_opt( 'phone_2' ) );
 			case 'whatsapp':
-				return ls_whatsapp_url( '', (string) $this->get_settings( 'text' ) );
+				return larijani_whatsapp_url( '', (string) $this->get_settings( 'text' ) );
 			case 'email':
-				return 'mailto:' . ls_opt( 'email' );
+				return 'mailto:' . larijani_opt( 'email' );
 			default:
-				return (string) ls_opt( $field );
+				return (string) larijani_opt( $field );
 		}
 	}
 }
@@ -156,14 +156,14 @@ class LS_Tag_Contact_URL extends Data_Tag {
 /**
  * Text tag: post info (reading time, views, primary category, author role).
  */
-class LS_Tag_Post_Meta_Text extends Tag {
+class Larijani_Tag_Post_Meta_Text extends Tag {
 	/** @return string */
 	public function get_name() {
 		return 'ls-post-meta';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'اطلاعات نوشته (لاریجانی)', 'larijani' );
+		return __( 'اطلاعات نوشته (لاریجانی)', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_group() {
@@ -178,14 +178,14 @@ class LS_Tag_Post_Meta_Text extends Tag {
 		$this->add_control(
 			'field',
 			array(
-				'label'   => __( 'فیلد', 'larijani' ),
+				'label'   => __( 'فیلد', 'larijani-stone' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'reading'  => __( 'زمان مطالعه', 'larijani' ),
-					'views'    => __( 'تعداد بازدید', 'larijani' ),
-					'category' => __( 'دسته اصلی', 'larijani' ),
-					'date'     => __( 'تاریخ انتشار', 'larijani' ),
-					'comments' => __( 'تعداد دیدگاه', 'larijani' ),
+					'reading'  => __( 'زمان مطالعه', 'larijani-stone' ),
+					'views'    => __( 'تعداد بازدید', 'larijani-stone' ),
+					'category' => __( 'دسته اصلی', 'larijani-stone' ),
+					'date'     => __( 'تاریخ انتشار', 'larijani-stone' ),
+					'comments' => __( 'تعداد دیدگاه', 'larijani-stone' ),
 				),
 				'default' => 'reading',
 			)
@@ -196,20 +196,20 @@ class LS_Tag_Post_Meta_Text extends Tag {
 		switch ( $this->get_settings( 'field' ) ) {
 			case 'reading':
 				/* translators: %s minutes */
-				echo esc_html( sprintf( __( '%s دقیقه مطالعه', 'larijani' ), ls_fa_num( ls_reading_time() ) ) );
+				echo esc_html( sprintf( __( '%s دقیقه مطالعه', 'larijani-stone' ), larijani_fa_num( larijani_reading_time() ) ) );
 				break;
 			case 'views':
-				echo esc_html( ls_fa_number_format( ls_post_views() ) );
+				echo esc_html( larijani_fa_number_format( larijani_post_views() ) );
 				break;
 			case 'category':
-				$c = ls_primary_category();
+				$c = larijani_primary_category();
 				echo esc_html( $c ? $c->name : '' );
 				break;
 			case 'date':
-				echo esc_html( ls_post_date() );
+				echo esc_html( larijani_post_date() );
 				break;
 			case 'comments':
-				echo esc_html( ls_fa_num( get_comments_number() ) );
+				echo esc_html( larijani_fa_num( get_comments_number() ) );
 				break;
 		}
 	}

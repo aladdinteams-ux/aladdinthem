@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Portfolio hero widget.
  */
-class LS_Widget_Portfolio_Hero extends LS_Widget_Base {
+class Larijani_Widget_Portfolio_Hero extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-portfolio-hero';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS هیرو نمونه‌کارها + آمار', 'larijani' );
+		return __( 'LS هیرو نمونه‌کارها + آمار', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -26,24 +26,24 @@ class LS_Widget_Portfolio_Hero extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_text', __( 'متن', 'larijani' ) );
-		$this->ctl( 'badge', 'text', __( 'برچسب', 'larijani' ), 'پورتفولیو پروژه‌های کشوری و بین‌المللی' );
-		$this->ctl( 'badge_note', 'text', __( 'متن کنار برچسب', 'larijani' ), 'خروجی ماشین‌آلات و قالب‌های فوق مهندسی لاریجانی استون' );
-		$this->ctl( 'title', 'textarea', __( 'عنوان', 'larijani' ), 'نمونه‌کارها و پروژه‌های اجرا شده با قالب‌ها و فرمولاسیون لاریجانی استون', array( 'rows' => 2 ) );
-		$this->ctl( 'desc', 'textarea', __( 'توضیح', 'larijani' ), 'ثمره اعتماد بیش از ۱۰,۰۰۰ کارگاه مستقل، شهرداری‌های کلان‌شهرها و معماران پیشرو. از هندسه‌های سه‌بعدی صخره‌ای تا کفپوش‌های فوق مقاوم صنعتی با پیگمنت‌های پایدار و رزین‌های اصلاح‌شده پلیمری.' );
+		$this->section( 'sec_text', __( 'متن', 'larijani-stone' ) );
+		$this->ctl( 'badge', 'text', __( 'برچسب', 'larijani-stone' ), 'پورتفولیو پروژه‌های کشوری و بین‌المللی' );
+		$this->ctl( 'badge_note', 'text', __( 'متن کنار برچسب', 'larijani-stone' ), 'خروجی ماشین‌آلات و قالب‌های فوق مهندسی لاریجانی استون' );
+		$this->ctl( 'title', 'textarea', __( 'عنوان', 'larijani-stone' ), 'نمونه‌کارها و پروژه‌های اجرا شده با قالب‌ها و فرمولاسیون لاریجانی استون', array( 'rows' => 2 ) );
+		$this->ctl( 'desc', 'textarea', __( 'توضیح', 'larijani-stone' ), 'ثمره اعتماد بیش از ۱۰,۰۰۰ کارگاه مستقل، شهرداری‌های کلان‌شهرها و معماران پیشرو. از هندسه‌های سه‌بعدی صخره‌ای تا کفپوش‌های فوق مقاوم صنعتی با پیگمنت‌های پایدار و رزین‌های اصلاح‌شده پلیمری.' );
 		$this->end();
 
-		$this->section( 'sec_mini', __( 'کارت‌های کناری', 'larijani' ) );
+		$this->section( 'sec_mini', __( 'کارت‌های کناری', 'larijani-stone' ) );
 		$this->rep(
 			'mini',
-			__( 'کارت‌ها', 'larijani' ),
+			__( 'کارت‌ها', 'larijani-stone' ),
 			array(
-				array( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'patch-check-fill' ),
-				array( 'icon_tone', 'select', __( 'رنگ آیکون', 'larijani' ), 'dark', array( 'options' => array( 'dark' => __( 'تیره', 'larijani' ), 'sage' => __( 'سبز ملایم', 'larijani' ) ) ) ),
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'text', 'text', __( 'متن', 'larijani' ), '' ),
-				array( 'value', 'text', __( 'مقدار سمت چپ', 'larijani' ), '' ),
-				array( 'value_tone', 'select', __( 'رنگ مقدار', 'larijani' ), 'emerald', array( 'options' => array( 'emerald' => __( 'زمردی', 'larijani' ), 'primary' => __( 'سبز برند', 'larijani' ) ) ) ),
+				array( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'patch-check-fill' ),
+				array( 'icon_tone', 'select', __( 'رنگ آیکون', 'larijani-stone' ), 'dark', array( 'options' => array( 'dark' => __( 'تیره', 'larijani-stone' ), 'sage' => __( 'سبز ملایم', 'larijani-stone' ) ) ) ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'text', 'text', __( 'متن', 'larijani-stone' ), '' ),
+				array( 'value', 'text', __( 'مقدار سمت چپ', 'larijani-stone' ), '' ),
+				array( 'value_tone', 'select', __( 'رنگ مقدار', 'larijani-stone' ), 'emerald', array( 'options' => array( 'emerald' => __( 'زمردی', 'larijani-stone' ), 'primary' => __( 'سبز برند', 'larijani-stone' ) ) ) ),
 			),
 			array(
 				array( 'icon' => 'patch-check-fill', 'icon_tone' => 'dark', 'title' => 'استاندارد ملی و بین‌المللی', 'text' => 'تست مقاومت سایشی و یخ‌زدگی', 'value' => 'A+', 'value_tone' => 'emerald' ),
@@ -52,14 +52,14 @@ class LS_Widget_Portfolio_Hero extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_stats', __( 'نوار آمار', 'larijani' ) );
+		$this->section( 'sec_stats', __( 'نوار آمار', 'larijani-stone' ) );
 		$this->rep(
 			'stats',
-			__( 'آمار', 'larijani' ),
+			__( 'آمار', 'larijani-stone' ),
 			array(
-				array( 'value', 'text', __( 'عدد', 'larijani' ), '' ),
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'text', 'text', __( 'توضیح', 'larijani' ), '' ),
+				array( 'value', 'text', __( 'عدد', 'larijani-stone' ), '' ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'text', 'text', __( 'توضیح', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'value' => '۱۰,۰۰۰+', 'title' => 'پروژه موفق شهری و ویلایی', 'text' => 'اجرا شده توسط تولیدکنندگان و پیمانکاران' ),
@@ -100,7 +100,7 @@ class LS_Widget_Portfolio_Hero extends LS_Widget_Base {
 						<?php foreach ( $s['mini'] as $m ) : ?>
 						<div class="bg-surface-card p-space-md rounded-xl shadow-sm flex items-center justify-between gap-3 flex-1">
 							<div class="flex items-center gap-space-sm">
-								<div class="w-10 h-10 rounded-lg <?php echo esc_attr( $icon_tones[ $m['icon_tone'] ] ?? $icon_tones['dark'] ); ?> flex items-center justify-center text-[20px]"><?php echo ls_icon( $m['icon'] ); // phpcs:ignore ?></div>
+								<div class="w-10 h-10 rounded-lg <?php echo esc_attr( $icon_tones[ $m['icon_tone'] ] ?? $icon_tones['dark'] ); ?> flex items-center justify-center text-[20px]"><?php echo larijani_icon( $m['icon'] ); // phpcs:ignore ?></div>
 								<div class="flex flex-col"><span class="text-title-card font-title-card text-surface-dark"><?php echo esc_html( $m['title'] ); ?></span><span class="text-body-sm font-body-sm text-outline"><?php echo esc_html( $m['text'] ); ?></span></div>
 							</div>
 							<span class="<?php echo 'primary' === $m['value_tone'] ? 'text-primary' : 'text-accent-emerald'; ?> text-headline-sm font-headline-sm"><?php echo esc_html( $m['value'] ); ?></span>

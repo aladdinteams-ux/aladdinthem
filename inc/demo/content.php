@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array
  */
-function ls_demo_projects() {
+function larijani_demo_projects() {
 	return array(
 		array( 'image' => 'project_1', 'filter' => 'facade', 'badge_1' => 'قالب پلیمر ABS نشکن', 'badge_2' => 'سنگ دکوراتیو ۳D', 'badge_2_tone' => 'dark', 'location' => 'تهران، برج اداری پارک‌وی', 'code' => 'کد قالب: ۳D-904', 'title' => 'نمای صخره‌ای و تاشو هندسی برج اداری', 'desc' => 'اجرای بیش از ۸۵۰ مترمربع پنل بتنی فوق سبک سه‌بعدی با زاویه‌های شکست نور شارپ. تولید شده با رزین پلی‌کربوکسیلات مقاوم و عاری از هرگونه حباب هوا.', 'spec1_label' => 'ابعاد تایل', 'spec1_value' => '۵۰×۵۰ سانتیمتر', 'spec2_label' => 'فرمول ترکیب', 'spec2_value' => 'ژل میکروسیلیس', 'spec3_label' => 'تراکم ارتعاش', 'spec3_value' => '۳۵۰۰ دور/دقیقه', 'note' => 'فاقد تغییر رنگ در تابش UV', 'note_icon' => 'patch-check-fill', 'note_tone' => 'emerald' ),
 		array( 'image' => 'project_2', 'filter' => 'paving', 'badge_1' => 'واش‌بتن آنتی‌اسلیپ', 'badge_2' => 'سنگدانه مرمر الیگودرز', 'badge_2_tone' => 'sage', 'location' => 'لواسان، شهرک ویلایی سرو', 'code' => 'کد قالب: WB-4040', 'title' => 'محوطه‌سازی و کفسازی ویلای مدرن لواسان', 'desc' => 'تولید ۱,۴۰۰ مترمربع تایل واش‌بتن شیاردار با تکنولوژی ارتعاش فشرده لاریجانی استون، مقاومت یخبندان تا ۳۵ دوره سرمای شدید بدون پوسته‌شدن.', 'spec1_label' => 'ضخامت قطعه', 'spec1_value' => '۳.۵ سانتیمتر', 'spec2_label' => 'رزین مصرفی', 'spec2_value' => 'کربوکسیلات کد ۶۰', 'spec3_label' => 'مقاومت فشاری', 'spec3_value' => '۴۸ مگاپاسکال', 'note' => 'جذب آب زیر ۳ درصد', 'note_icon' => 'droplet-fill', 'note_tone' => 'muted' ),
@@ -28,7 +28,7 @@ function ls_demo_projects() {
  *
  * @return array
  */
-function ls_demo_catalog() {
+function larijani_demo_catalog() {
 	return array(
 		array( 'image' => 'catalog_1', 'filter' => 'mold', 'badge' => 'تزریق ABS نشکن', 'badge_tone' => 'light', 'code' => 'کد: LS-M102', 'title' => 'قالب سنگ پلیمری طرح سه‌بعدی کریستالی و صخره‌ای', 'desc' => 'ورق ضخامت ۴ میل خالص، بدون لچکی و تغییر زاویه در بیش از ۱۰۰ بار ویبره بتن خودتراکم.', 'spec1_label' => 'ابعاد', 'spec1_value' => '۳۰×۵۰ سانت', 'spec2_label' => 'ضخامت', 'spec2_value' => '۴ میلی‌متر', 'spec3_label' => 'جدایش قطعه', 'spec3_value' => 'بدون اسید', 'price_label' => 'قیمت واحد', 'price' => '۱۲۵,۰۰۰', 'price_raw' => 125000, 'button_text' => 'خرید قالب', 'button_icon' => 'cart-plus-fill', 'chat_button' => 'yes' ),
 		array( 'image' => 'catalog_2', 'filter' => 'machinery', 'badge' => 'گارانتی ۲۴ ماهه', 'badge_tone' => 'amber', 'code' => 'کد: LS-VT200', 'title' => 'میز ویبره صنعتی دور متغیر لاریجانی استون', 'desc' => 'دارای ۲ موتور ارتعاشی وارداتی ایتالیایی، ورق رویه ۸ میلی‌متر، شاسی تیرآهن ۱۴ دوبل ضد تاب‌برداشتن.', 'spec1_label' => 'ابعاد میز', 'spec1_value' => '۲×۱ متر', 'spec2_label' => 'ظرفیت بار', 'spec2_value' => '۸۰۰ کیلو', 'spec3_label' => 'اینورتر', 'spec3_value' => 'دارد (LS کره)', 'price_label' => 'قیمت مصوب', 'price' => '۴۸,۰۰۰,۰۰۰', 'price_raw' => 48000000, 'button_text' => 'سفارش مستقیم', 'button_style' => 'dark', 'button_icon' => 'telephone-outbound-fill', 'button_link' => 'tel:09122302685' ),
@@ -46,7 +46,7 @@ function ls_demo_catalog() {
  *
  * @return array
  */
-function ls_demo_cross_sell() {
+function larijani_demo_cross_sell() {
 	return array(
 		array( 'image' => 'cross_1', 'badge' => 'گالن ۲۰ لیتری', 'title' => 'فوق‌روان‌کننده پلی‌کربوکسیلات نانو (LS-500)', 'desc' => 'کاهش ۳۰ درصدی آب مصرفی، افزایش مقاومت فشاری تا ۷۵ مگاپاسکال و روان‌سازی کامل گوشه‌های تیز قالب.', 'price_label' => 'قیمت هر گالن:', 'price' => '۱,۶۵۰,۰۰۰', 'button_icon' => 'cart-plus' ),
 		array( 'image' => 'cross_2', 'badge' => 'آب‌گریز ضدشوره', 'title' => 'رزین سیلر براق‌کننده و نانو محافظ سنگ نما', 'desc' => 'ایجاد لایه خودتمیزشونده و جلوه خیس (Wet Look) دائمی در برابر اشعه UV آفتاب بدون زردشدگی.', 'price_label' => 'قیمت ظرف ۴ لیتری:', 'price' => '۸۸۰,۰۰۰', 'button_icon' => 'cart-plus' ),
@@ -60,7 +60,7 @@ function ls_demo_cross_sell() {
  *
  * @return array
  */
-function ls_demo_store_items() {
+function larijani_demo_store_items() {
 	return array(
 		array( 'image' => 'store_1', 'badge' => 'گارانتی ۲۴ ماهه', 'badge_tone' => 'dark', 'stock_badge' => 'موجود در کارخانه', 'stock_tone' => 'emerald', 'category' => 'تجهیزات خط تولید • ماشین‌آلات', 'title' => 'میز ویبره صنعتی دور متغیر لاریجانی استون', 'desc' => 'دارای ۲ عدد الکتروموتور ۳۰۰۰ دور ایتالیایی، صفحه ورق ۸ میل ضدرنگ، فنرهای لول ارتعاشی سایلنت جهت خروج ۱۰۰٪ حباب‌های هوا.', 'spec1_label' => 'ابعاد صفحه', 'spec1_value' => '۲۰۰×۱۰۰ سانتی‌متر', 'spec2_label' => 'سیستم لرزش', 'spec2_value' => 'فرکانس متغیر اینورتری', 'spec3_label' => 'ظرفیت بار', 'spec3_value' => '۸۰۰ کیلوگرم', 'price_label' => 'قیمت کارخانه:', 'price' => '۴۸,۰۰۰,۰۰۰', 'price_raw' => 48000000, 'button_text' => 'سفارش مستقیم و هماهنگی ارسال', 'button_icon' => 'cart-check', 'button_link' => 'tel:09122302685', 'filter' => 'machinery ready-stock' ),
 		array( 'image' => 'store_2', 'badge' => 'طرح سه‌بعدی لوکس (تصویر شاخص)', 'badge_tone' => 'amber', 'stock_badge' => 'قالب تزریق ABS', 'stock_tone' => 'dark', 'category' => 'قالب‌های نما و دکوراتیو • دیواری', 'title' => 'قالب سنگ پلیمری طرح سه‌بعدی کریستالی و صخره‌ای', 'desc' => 'قالب فوق‌دقیق ژئومتریک پلیمری با زاویه‌های شکسته نوری جهت خلق نمای مدرن داخلی و ویلایی با رهایش آسان و بدون چسبندگی.', 'spec1_label' => 'ابعاد تایل', 'spec1_value' => '۵۰×۳۰ سانتی‌متر', 'spec2_label' => 'ضخامت قالب', 'spec2_value' => '۴ میلی‌متر نو', 'spec3_label' => 'تعداد شات', 'spec3_value' => '+۵۰۰ بار تولید', 'price_label' => 'قیمت هر عدد قالب:', 'price' => '۱۳۵,۰۰۰', 'price_raw' => 135000, 'button_text' => 'خرید تعدادی و عمده قالب', 'button_icon' => 'cart-plus', 'button_link' => 'tel:09354431321', 'filter' => 'molds ready-stock' ),

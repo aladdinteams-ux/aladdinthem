@@ -15,5 +15,5 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 }
 ?>
 <div <?php wc_product_class( 'ls-wc-loop-item grid', $product ); ?>>
-	<?php echo ls_product_card( ls_wc_card_data( $product ), apply_filters( 'ls_wc_loop_card_style', 'catalog' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped inside the card renderer. ?>
+	<?php echo larijani_product_card( larijani_wc_card_data( $product ), apply_filters( 'ls_wc_loop_card_style', 'catalog' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped inside the card renderer. ?>
 </div>

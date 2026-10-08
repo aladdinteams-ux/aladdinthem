@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array
  */
-function ls_lead_mimes() {
+function larijani_lead_mimes() {
 	return apply_filters(
 		'ls_lead_mimes',
 		array(
@@ -34,25 +34,25 @@ function ls_lead_mimes() {
 /**
  * Handle a submission.
  */
-function ls_handle_lead() {
+function larijani_handle_lead() {
 	// phpcs:disable WordPress.Security.NonceVerification.Missing -- public form, see file header.
 	if ( ! empty( $_POST['ls_hp'] ) ) {
 		wp_send_json_success( array( 'tracking' => 'LS-' . wp_rand( 10000, 99999 ) ) ); // Silently accept bots.
 	}
 	$ts = isset( $_POST['ls_ts'] ) ? (int) $_POST['ls_ts'] : 0;
 	if ( $ts && ( time() - $ts ) < 2 ) {
-		wp_send_json_error( array( 'message' => __( 'ارسال بسیار سریع بود؛ لطفاً دوباره تلاش کنید.', 'larijani' ) ), 400 );
+		wp_send_json_error( array( 'message' => __( 'ارسال بسیار سریع بود؛ لطفاً دوباره تلاش کنید.', 'larijani-stone' ) ), 400 );
 	}
 
 	$ip  = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '0';
 	$key = 'ls_lead_rl_' . md5( $ip );
 	$hits = (int) get_transient( $key );
 	if ( $hits >= 8 ) {
-		wp_send_json_error( array( 'message' => __( 'تعداد درخواست‌ها زیاد است. لطفاً چند دقیقه دیگر تلاش کنید یا تماس بگیرید.', 'larijani' ) ), 429 );
+		wp_send_json_error( array( 'message' => __( 'تعداد درخواست‌ها زیاد است. لطفاً چند دقیقه دیگر تلاش کنید یا تماس بگیرید.', 'larijani-stone' ) ), 429 );
 	}
 	set_transient( $key, $hits + 1, 10 * MINUTE_IN_SECONDS );
 
-	$form_name = isset( $_POST['ls_form_name'] ) ? sanitize_text_field( wp_unslash( $_POST['ls_form_name'] ) ) : __( 'فرم تماس', 'larijani' );
+	$form_name = isset( $_POST['ls_form_name'] ) ? sanitize_text_field( wp_unslash( $_POST['ls_form_name'] ) ) : __( 'فرم تماس', 'larijani-stone' );
 	$page      = isset( $_POST['ls_page'] ) ? esc_url_raw( wp_unslash( $_POST['ls_page'] ) ) : '';
 	$raw       = isset( $_POST['fields'] ) && is_array( $_POST['fields'] ) ? wp_unslash( $_POST['fields'] ) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 	$labels    = isset( $_POST['labels'] ) && is_array( $_POST['labels'] ) ? wp_unslash( $_POST['labels'] ) : array(); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -75,7 +75,7 @@ function ls_handle_lead() {
 			$value = sanitize_text_field( $value );
 		}
 		if ( 'tel' === $type && ! $phone ) {
-			$phone = ls_en_num( $value );
+			$phone = larijani_en_num( $value );
 		}
 		if ( 'text' === $type && ! $name ) {
 			$name = $value;
@@ -87,10 +87,10 @@ function ls_handle_lead() {
 	}
 
 	if ( ! $rows || ( '' === trim( implode( '', wp_list_pluck( $rows, 'value' ) ) ) ) ) {
-		wp_send_json_error( array( 'message' => __( 'لطفاً فرم را تکمیل کنید.', 'larijani' ) ), 400 );
+		wp_send_json_error( array( 'message' => __( 'لطفاً فرم را تکمیل کنید.', 'larijani-stone' ) ), 400 );
 	}
 	if ( $phone && ! preg_match( '/^\+?\d[\d\s\-]{7,15}$/', $phone ) ) {
-		wp_send_json_error( array( 'message' => __( 'شماره تماس معتبر نیست.', 'larijani' ) ), 400 );
+		wp_send_json_error( array( 'message' => __( 'شماره تماس معتبر نیست.', 'larijani-stone' ) ), 400 );
 	}
 
 	$tracking = 'LS-' . wp_rand( 10000, 99999 );
@@ -105,7 +105,7 @@ function ls_handle_lead() {
 		true
 	);
 	if ( is_wp_error( $lead_id ) ) {
-		wp_send_json_error( array( 'message' => __( 'ذخیره درخواست ممکن نشد.', 'larijani' ) ), 500 );
+		wp_send_json_error( array( 'message' => __( 'ذخیره درخواست ممکن نشد.', 'larijani-stone' ) ), 500 );
 	}
 
 	update_post_meta( $lead_id, '_ls_lead_fields', $rows );
@@ -114,19 +114,19 @@ function ls_handle_lead() {
 	update_post_meta( $lead_id, '_ls_lead_phone', $phone );
 	update_post_meta( $lead_id, '_ls_lead_tracking', $tracking );
 
-	$attachments = ls_handle_lead_files( $lead_id );
+	$attachments = larijani_handle_lead_files( $lead_id );
 	if ( $attachments ) {
 		update_post_meta( $lead_id, '_ls_lead_files', $attachments );
 	}
 
-	ls_send_lead_email( $title, $rows, $tracking, $page, $attachments, $lead_id );
+	larijani_send_lead_email( $title, $rows, $tracking, $page, $attachments, $lead_id );
 
 	do_action( 'ls_lead_submitted', $lead_id, $rows, $form_name );
 
 	wp_send_json_success( array( 'tracking' => $tracking ) );
 }
-add_action( 'wp_ajax_ls_lead', 'ls_handle_lead' );
-add_action( 'wp_ajax_nopriv_ls_lead', 'ls_handle_lead' );
+add_action( 'wp_ajax_ls_lead', 'larijani_handle_lead' );
+add_action( 'wp_ajax_nopriv_ls_lead', 'larijani_handle_lead' );
 
 /**
  * Store uploaded files (max 5, 20MB each).
@@ -134,7 +134,7 @@ add_action( 'wp_ajax_nopriv_ls_lead', 'ls_handle_lead' );
  * @param int $lead_id Lead id.
  * @return int[] Attachment ids.
  */
-function ls_handle_lead_files( $lead_id ) {
+function larijani_handle_lead_files( $lead_id ) {
 	if ( empty( $_FILES['ls_files']['name'] ) || ! is_array( $_FILES['ls_files']['name'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 		return array();
 	}
@@ -163,7 +163,7 @@ function ls_handle_lead_files( $lead_id ) {
 			$file,
 			array(
 				'test_form' => false,
-				'mimes'     => ls_lead_mimes(),
+				'mimes'     => larijani_lead_mimes(),
 			)
 		);
 		if ( empty( $upload['file'] ) || ! empty( $upload['error'] ) ) {
@@ -199,8 +199,8 @@ function ls_handle_lead_files( $lead_id ) {
  * @param array  $attachments Attachment ids.
  * @param int    $lead_id Lead id.
  */
-function ls_send_lead_email( $title, $rows, $tracking, $page, $attachments, $lead_id ) {
-	$to = ls_opt( 'leads_email' );
+function larijani_send_lead_email( $title, $rows, $tracking, $page, $attachments, $lead_id ) {
+	$to = larijani_opt( 'leads_email' );
 	if ( ! $to || ! is_email( $to ) ) {
 		$to = get_option( 'admin_email' );
 	}
@@ -211,14 +211,14 @@ function ls_send_lead_email( $title, $rows, $tracking, $page, $attachments, $lea
 		$html .= '<tr><th style="text-align:right;background:#F8F9F7;border:1px solid #E8ECE6;width:35%">' . esc_html( $row['label'] ) . '</th><td style="border:1px solid #E8ECE6">' . nl2br( esc_html( $row['value'] ) ) . '</td></tr>';
 	}
 	$html .= '</table>';
-	$html .= '<p>' . esc_html__( 'کد پیگیری:', 'larijani' ) . ' <b>' . esc_html( $tracking ) . '</b></p>';
+	$html .= '<p>' . esc_html__( 'کد پیگیری:', 'larijani-stone' ) . ' <b>' . esc_html( $tracking ) . '</b></p>';
 	if ( $page ) {
-		$html .= '<p>' . esc_html__( 'صفحه:', 'larijani' ) . ' <a href="' . esc_url( $page ) . '">' . esc_html( $page ) . '</a></p>';
+		$html .= '<p>' . esc_html__( 'صفحه:', 'larijani-stone' ) . ' <a href="' . esc_url( $page ) . '">' . esc_html( $page ) . '</a></p>';
 	}
 	foreach ( (array) $attachments as $att ) {
-		$html .= '<p><a href="' . esc_url( wp_get_attachment_url( $att ) ) . '">' . esc_html__( 'فایل پیوست', 'larijani' ) . '</a></p>';
+		$html .= '<p><a href="' . esc_url( wp_get_attachment_url( $att ) ) . '">' . esc_html__( 'فایل پیوست', 'larijani-stone' ) . '</a></p>';
 	}
-	$html .= '<p><a href="' . esc_url( admin_url( 'post.php?post=' . $lead_id . '&action=edit' ) ) . '">' . esc_html__( 'مشاهده در پیشخوان', 'larijani' ) . '</a></p></div>';
+	$html .= '<p><a href="' . esc_url( admin_url( 'post.php?post=' . $lead_id . '&action=edit' ) ) . '">' . esc_html__( 'مشاهده در پیشخوان', 'larijani-stone' ) . '</a></p></div>';
 
 	wp_mail( $to, '[' . get_bloginfo( 'name' ) . '] ' . $title, $html, array( 'Content-Type: text/html; charset=UTF-8' ) );
 }
@@ -229,7 +229,7 @@ function ls_send_lead_email( $title, $rows, $tracking, $page, $attachments, $lea
  * @param string $form_name Human readable form name (stored with the lead).
  * @return string
  */
-function ls_form_hidden_fields( $form_name ) {
+function larijani_form_hidden_fields( $form_name ) {
 	return sprintf(
 		'<input type="hidden" name="action" value="ls_lead"><input type="hidden" name="ls_form_name" value="%s"><input type="hidden" name="ls_ts" value="%d"><div aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%%);white-space:nowrap;opacity:0;pointer-events:none"><label>Leave empty<input type="text" name="ls_hp" tabindex="-1" autocomplete="off"></label></div>',
 		esc_attr( $form_name ),

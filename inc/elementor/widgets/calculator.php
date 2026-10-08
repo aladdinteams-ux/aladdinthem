@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * LS_Widget_Calculator.
  */
-class LS_Widget_Calculator extends LS_Widget_Base {
+class Larijani_Widget_Calculator extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-calculator';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS ماشین‌حساب مصرف (رزین)', 'larijani' );
+		return __( 'LS ماشین‌حساب مصرف (رزین)', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -30,22 +30,22 @@ class LS_Widget_Calculator extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_main', __( 'محتوا', 'larijani' ) );
-		$this->ctl( 'title', 'text', __( 'عنوان', 'larijani' ), 'محاسبه‌گر مصرف رزین' );
-		$this->ctl( 'badge', 'text', __( 'برچسب', 'larijani' ), 'فرمول LS-500' );
-		$this->ctl( 'desc', 'text', __( 'توضیح', 'larijani' ), 'وزن سیمان مصرفی در هر بچ اختلاط میکسر را وارد کنید:' );
-		$this->ctl( 'input_label', 'text', __( 'برچسب ورودی', 'larijani' ), 'سیمان مصرفی در میکسر:' );
-		$this->ctl( 'unit', 'text', __( 'واحد ورودی', 'larijani' ), 'کیلوگرم' );
-		$this->ctl( 'min', 'number', __( 'حداقل', 'larijani' ), 50 );
-		$this->ctl( 'max', 'number', __( 'حداکثر', 'larijani' ), 600 );
-		$this->ctl( 'step', 'number', __( 'گام', 'larijani' ), 25 );
-		$this->ctl( 'value', 'number', __( 'مقدار پیش‌فرض', 'larijani' ), 100 );
-		$this->ctl( 'out1_label', 'text', __( 'خروجی ۱ – عنوان', 'larijani' ), 'رزین پیشنهادی:' );
-		$this->ctl( 'out1_factor', 'number', __( 'خروجی ۱ – ضریب', 'larijani' ), 0.009, array( 'step' => 0.001 ) );
-		$this->ctl( 'out1_unit', 'text', __( 'خروجی ۱ – واحد', 'larijani' ), 'کیلوگرم' );
-		$this->ctl( 'out2_label', 'text', __( 'خروجی ۲ – عنوان', 'larijani' ), 'حداکثر آب مجاز:' );
-		$this->ctl( 'out2_factor', 'number', __( 'خروجی ۲ – ضریب', 'larijani' ), 0.28, array( 'step' => 0.01 ) );
-		$this->ctl( 'out2_unit', 'text', __( 'خروجی ۲ – واحد', 'larijani' ), 'لیتر' );
+		$this->section( 'sec_main', __( 'محتوا', 'larijani-stone' ) );
+		$this->ctl( 'title', 'text', __( 'عنوان', 'larijani-stone' ), 'محاسبه‌گر مصرف رزین' );
+		$this->ctl( 'badge', 'text', __( 'برچسب', 'larijani-stone' ), 'فرمول LS-500' );
+		$this->ctl( 'desc', 'text', __( 'توضیح', 'larijani-stone' ), 'وزن سیمان مصرفی در هر بچ اختلاط میکسر را وارد کنید:' );
+		$this->ctl( 'input_label', 'text', __( 'برچسب ورودی', 'larijani-stone' ), 'سیمان مصرفی در میکسر:' );
+		$this->ctl( 'unit', 'text', __( 'واحد ورودی', 'larijani-stone' ), 'کیلوگرم' );
+		$this->ctl( 'min', 'number', __( 'حداقل', 'larijani-stone' ), 50 );
+		$this->ctl( 'max', 'number', __( 'حداکثر', 'larijani-stone' ), 600 );
+		$this->ctl( 'step', 'number', __( 'گام', 'larijani-stone' ), 25 );
+		$this->ctl( 'value', 'number', __( 'مقدار پیش‌فرض', 'larijani-stone' ), 100 );
+		$this->ctl( 'out1_label', 'text', __( 'خروجی ۱ – عنوان', 'larijani-stone' ), 'رزین پیشنهادی:' );
+		$this->ctl( 'out1_factor', 'number', __( 'خروجی ۱ – ضریب', 'larijani-stone' ), 0.009, array( 'step' => 0.001 ) );
+		$this->ctl( 'out1_unit', 'text', __( 'خروجی ۱ – واحد', 'larijani-stone' ), 'کیلوگرم' );
+		$this->ctl( 'out2_label', 'text', __( 'خروجی ۲ – عنوان', 'larijani-stone' ), 'حداکثر آب مجاز:' );
+		$this->ctl( 'out2_factor', 'number', __( 'خروجی ۲ – ضریب', 'larijani-stone' ), 0.28, array( 'step' => 0.01 ) );
+		$this->ctl( 'out2_unit', 'text', __( 'خروجی ۲ – واحد', 'larijani-stone' ), 'لیتر' );
 		$this->end();
 		$this->style_controls( array( 'layout' => false ) );
 	}
@@ -56,7 +56,7 @@ class LS_Widget_Calculator extends LS_Widget_Base {
 	 * @param array $s Settings.
 	 */
 	protected function render_widget( $s ) {
-		ls_render_resin_calculator(
+		larijani_render_resin_calculator(
 			array(
 				'title' => $s['title'],
 				'badge' => $s['badge'],

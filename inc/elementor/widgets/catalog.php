@@ -13,14 +13,14 @@ require_once __DIR__ . '/products.php';
 /**
  * Catalog widget.
  */
-class LS_Widget_Catalog extends LS_Widget_Base {
+class Larijani_Widget_Catalog extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-catalog';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS کاتالوگ محصولات (فیلتر + جستجو)', 'larijani' );
+		return __( 'LS کاتالوگ محصولات (فیلتر + جستجو)', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -33,22 +33,22 @@ class LS_Widget_Catalog extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_source', __( 'منبع محصولات', 'larijani' ) );
-		$this->ctl( 'source', 'select', __( 'منبع', 'larijani' ), 'auto', array( 'options' => array( 'auto' => __( 'خودکار (ووکامرس اگر فعال باشد)', 'larijani' ), 'woocommerce' => __( 'ووکامرس', 'larijani' ), 'manual' => __( 'کارت‌های دستی', 'larijani' ) ) ) );
-		$this->ctl( 'use_main_query', 'select', __( 'کوئری ووکامرس', 'larijani' ), 'auto', array( 'options' => array( 'auto' => __( 'خودکار (در صفحه فروشگاه از کوئری اصلی)', 'larijani' ), 'yes' => __( 'همیشه کوئری اصلی صفحه', 'larijani' ), 'no' => __( 'کوئری سفارشی', 'larijani' ) ) ) );
-		$this->ctl( 'posts_per_page', 'number', __( 'تعداد در صفحه (کوئری سفارشی)', 'larijani' ), 12 );
-		$this->ctl( 'category', 'select', __( 'دسته (کوئری سفارشی)', 'larijani' ), '', array( 'options' => taxonomy_exists( 'product_cat' ) ? ls_term_options( 'product_cat' ) : array( '' => __( 'همه', 'larijani' ) ) ) );
-		$this->ctl( 'columns', 'select', __( 'ستون‌ها در دسکتاپ', 'larijani' ), '3', array( 'options' => array( '2' => '۲', '3' => '۳', '4' => '۴' ) ) );
+		$this->section( 'sec_source', __( 'منبع محصولات', 'larijani-stone' ) );
+		$this->ctl( 'source', 'select', __( 'منبع', 'larijani-stone' ), 'auto', array( 'options' => array( 'auto' => __( 'خودکار (ووکامرس اگر فعال باشد)', 'larijani-stone' ), 'woocommerce' => __( 'ووکامرس', 'larijani-stone' ), 'manual' => __( 'کارت‌های دستی', 'larijani-stone' ) ) ) );
+		$this->ctl( 'use_main_query', 'select', __( 'کوئری ووکامرس', 'larijani-stone' ), 'auto', array( 'options' => array( 'auto' => __( 'خودکار (در صفحه فروشگاه از کوئری اصلی)', 'larijani-stone' ), 'yes' => __( 'همیشه کوئری اصلی صفحه', 'larijani-stone' ), 'no' => __( 'کوئری سفارشی', 'larijani-stone' ) ) ) );
+		$this->ctl( 'posts_per_page', 'number', __( 'تعداد در صفحه (کوئری سفارشی)', 'larijani-stone' ), 12 );
+		$this->ctl( 'category', 'select', __( 'دسته (کوئری سفارشی)', 'larijani-stone' ), '', array( 'options' => taxonomy_exists( 'product_cat' ) ? larijani_term_options( 'product_cat' ) : array( '' => __( 'همه', 'larijani-stone' ) ) ) );
+		$this->ctl( 'columns', 'select', __( 'ستون‌ها در دسکتاپ', 'larijani-stone' ), '3', array( 'options' => array( '2' => '۲', '3' => '۳', '4' => '۴' ) ) );
 		$this->end();
 
-		$this->section( 'sec_manual', __( 'کارت‌های دستی', 'larijani' ), 'content', array( 'source' => 'manual' ) );
+		$this->section( 'sec_manual', __( 'کارت‌های دستی', 'larijani-stone' ), 'content', array( 'source' => 'manual' ) );
 		$this->rep(
 			'chips',
-			__( 'دسته‌های فیلتر', 'larijani' ),
+			__( 'دسته‌های فیلتر', 'larijani-stone' ),
 			array(
-				array( 'key', 'text', __( 'کلید (همان «کلید فیلتر» کارت‌ها)', 'larijani' ), '' ),
-				array( 'label', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'bounding-box-circles' ),
+				array( 'key', 'text', __( 'کلید (همان «کلید فیلتر» کارت‌ها)', 'larijani-stone' ), '' ),
+				array( 'label', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'bounding-box-circles' ),
 			),
 			array(
 				array( 'key' => 'mold', 'label' => 'قالب‌های ABS و کامپوزیت', 'icon' => 'bounding-box-circles' ),
@@ -58,14 +58,14 @@ class LS_Widget_Catalog extends LS_Widget_Base {
 			),
 			'{{{ label }}}'
 		);
-		$this->rep( 'items', __( 'محصولات', 'larijani' ), LS_Widget_Products::card_fields(), ls_demo_catalog(), '{{{ title }}}' );
+		$this->rep( 'items', __( 'محصولات', 'larijani-stone' ), Larijani_Widget_Products::card_fields(), larijani_demo_catalog(), '{{{ title }}}' );
 		$this->rep(
 			'filter_boxes',
-			__( 'باکس‌های فیلتر سایدبار', 'larijani' ),
+			__( 'باکس‌های فیلتر سایدبار', 'larijani-stone' ),
 			array(
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'layers-half' ),
-				array( 'options', 'textarea', __( 'گزینه‌ها (هر خط: عنوان|تعداد|کلید فیلتر)', 'larijani' ), '', array( 'rows' => 5 ) ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'layers-half' ),
+				array( 'options', 'textarea', __( 'گزینه‌ها (هر خط: عنوان|تعداد|کلید فیلتر)', 'larijani-stone' ), '', array( 'rows' => 5 ) ),
 			),
 			array(
 				array( 'title' => 'نوع متریال ساخت', 'icon' => 'layers-half', 'options' => "ABS نو کره‌ای درجه یک|۴|mold\nفایبرگلاس نشکن مقاوم|۱|mold\nفولاد صنعتی و ضدسایش ST52|۲|machinery\nپلیمر مایع و پودر صنعتی|۲|chemical" ),
@@ -75,28 +75,28 @@ class LS_Widget_Catalog extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_labels', __( 'متن‌ها و سایدبار', 'larijani' ) );
-		$this->ctl( 'search_placeholder', 'text', __( 'راهنمای جستجو', 'larijani' ), 'جستجو در نام قالب، ابعاد، میکسر یا مواد...' );
-		$this->ctl( 'all_label', 'text', __( 'عنوان «همه»', 'larijani' ), 'همه محصولات' );
+		$this->section( 'sec_labels', __( 'متن‌ها و سایدبار', 'larijani-stone' ) );
+		$this->ctl( 'search_placeholder', 'text', __( 'راهنمای جستجو', 'larijani-stone' ), 'جستجو در نام قالب، ابعاد، میکسر یا مواد...' );
+		$this->ctl( 'all_label', 'text', __( 'عنوان «همه»', 'larijani-stone' ), 'همه محصولات' );
 		$this->ctl(
 			'layout',
 			'select',
-			__( 'طرح فروشگاه', 'larijani' ),
+			__( 'طرح فروشگاه', 'larijani-stone' ),
 			'sidebar',
 			array(
 				'options' => array(
-					'sidebar' => __( 'کاتالوگ با سایدبار فیلتر (۳ ستون)', 'larijani' ),
-					'store'   => __( 'فروشگاه تمام‌عرض (۴ ستون، مرتب‌سازی کشویی)', 'larijani' ),
+					'sidebar' => __( 'کاتالوگ با سایدبار فیلتر (۳ ستون)', 'larijani-stone' ),
+					'store'   => __( 'فروشگاه تمام‌عرض (۴ ستون، مرتب‌سازی کشویی)', 'larijani-stone' ),
 				),
 			)
 		);
-		$this->ctl( 'show_sidebar', 'switch', __( 'نمایش سایدبار', 'larijani' ), 'yes', array( 'condition' => array( 'layout' => 'sidebar' ) ) );
-		$this->ctl( 'footer_note', 'text', __( 'متن زیر محصولات (کارت‌های دستی)', 'larijani' ), '' );
-		$this->ctl( 'show_price', 'switch', __( 'فیلتر قیمت (ووکامرس)', 'larijani' ), 'yes' );
-		$this->ctl( 'advisory_title', 'text', __( 'عنوان باکس پیشنهاد', 'larijani' ), 'پیشنهاد راه‌اندازی' );
-		$this->ctl( 'advisory_text', 'textarea', __( 'متن باکس پیشنهاد', 'larijani' ), 'برای راه‌اندازی کارگاه سنگ مصنوعی در متراژ ۱۵۰ متر، بسته شامل ۲۵۰ قالب ABS، میز ویبره ۲×۱ و میکسر ۵۰۰ کیلویی اقتصادی‌ترین گزینه تولید است.' );
-		$this->ctl( 'advisory_link_text', 'text', __( 'متن لینک باکس', 'larijani' ), 'دریافت پکیج جامع خط تولید' );
-		$this->ctl( 'advisory_link', 'url', __( 'لینک باکس', 'larijani' ), 'tel:09122302685' );
+		$this->ctl( 'show_sidebar', 'switch', __( 'نمایش سایدبار', 'larijani-stone' ), 'yes', array( 'condition' => array( 'layout' => 'sidebar' ) ) );
+		$this->ctl( 'footer_note', 'text', __( 'متن زیر محصولات (کارت‌های دستی)', 'larijani-stone' ), '' );
+		$this->ctl( 'show_price', 'switch', __( 'فیلتر قیمت (ووکامرس)', 'larijani-stone' ), 'yes' );
+		$this->ctl( 'advisory_title', 'text', __( 'عنوان باکس پیشنهاد', 'larijani-stone' ), 'پیشنهاد راه‌اندازی' );
+		$this->ctl( 'advisory_text', 'textarea', __( 'متن باکس پیشنهاد', 'larijani-stone' ), 'برای راه‌اندازی کارگاه سنگ مصنوعی در متراژ ۱۵۰ متر، بسته شامل ۲۵۰ قالب ABS، میز ویبره ۲×۱ و میکسر ۵۰۰ کیلویی اقتصادی‌ترین گزینه تولید است.' );
+		$this->ctl( 'advisory_link_text', 'text', __( 'متن لینک باکس', 'larijani-stone' ), 'دریافت پکیج جامع خط تولید' );
+		$this->ctl( 'advisory_link', 'url', __( 'لینک باکس', 'larijani-stone' ), 'tel:09122302685' );
 		$this->end();
 
 		$this->style_controls();
@@ -108,10 +108,10 @@ class LS_Widget_Catalog extends LS_Widget_Base {
 	 * @param array $s Settings.
 	 */
 	protected function render_widget( $s ) {
-		$source = 'auto' === $s['source'] ? ( ls_has_woo() ? 'woocommerce' : 'manual' ) : $s['source'];
+		$source = 'auto' === $s['source'] ? ( larijani_has_woo() ? 'woocommerce' : 'manual' ) : $s['source'];
 		$args   = array(
 			'source'             => $source,
-			'items'              => array_map( array( 'LS_Widget_Products', 'row_to_card' ), (array) $s['items'] ),
+			'items'              => array_map( array( 'Larijani_Widget_Products', 'row_to_card' ), (array) $s['items'] ),
 			'chips'              => $s['chips'],
 			'use_main_query'     => $s['use_main_query'],
 			'posts_per_page'     => $s['posts_per_page'],
@@ -130,7 +130,7 @@ class LS_Widget_Catalog extends LS_Widget_Base {
 			'footer_note'        => $s['footer_note'] ?? '',
 		);
 		echo '<section class="w-full py-space-lg"><div class="max-w-7xl mx-auto px-4 sm:px-gutter">';
-		ls_render_catalog( $args );
+		larijani_render_catalog( $args );
 		echo '</div></section>';
 	}
 }

@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @param array $s Settings (empty values fall back to Customizer options).
  */
-function ls_render_site_footer( $s = array() ) {
+function larijani_render_site_footer( $s = array() ) {
 	$s = wp_parse_args(
 		array_filter(
 			(array) $s,
@@ -22,60 +22,60 @@ function ls_render_site_footer( $s = array() ) {
 		),
 		array(
 			'logo'        => null,
-			'brand'       => ls_opt( 'brand_name' ),
-			'tagline'     => ls_opt( 'brand_tagline_alt' ),
-			'about'       => ls_opt( 'footer_about' ),
-			'hours'       => ls_opt( 'hours_full' ),
-			'col1_title'  => ls_opt( 'footer_col1_title' ),
+			'brand'       => larijani_opt( 'brand_name' ),
+			'tagline'     => larijani_opt( 'brand_tagline_alt' ),
+			'about'       => larijani_opt( 'footer_about' ),
+			'hours'       => larijani_opt( 'hours_full' ),
+			'col1_title'  => larijani_opt( 'footer_col1_title' ),
 			'col1_menu'   => 'footer_quick',
-			'col2_title'  => ls_opt( 'footer_col2_title' ),
+			'col2_title'  => larijani_opt( 'footer_col2_title' ),
 			'col2_menu'   => 'footer_categories',
-			'col3_title'  => ls_opt( 'footer_col3_title' ),
-			'address'     => ls_opt( 'address' ),
-			'phone_1'     => ls_opt( 'phone_1' ),
-			'phone_2'     => ls_opt( 'phone_2' ),
-			'email'       => ls_opt( 'email' ),
-			'copyright'   => ls_opt( 'footer_copyright' ),
+			'col3_title'  => larijani_opt( 'footer_col3_title' ),
+			'address'     => larijani_opt( 'address' ),
+			'phone_1'     => larijani_opt( 'phone_1' ),
+			'phone_2'     => larijani_opt( 'phone_2' ),
+			'email'       => larijani_opt( 'email' ),
+			'copyright'   => larijani_opt( 'footer_copyright' ),
 			'bottom_menu' => 'footer_bottom',
-			'bg_image'    => ls_opt( 'footer_bg_image' ),
+			'bg_image'    => larijani_opt( 'footer_bg_image' ),
 			'show_social' => 'yes',
 		)
 	);
 
-	$bg = ls_img_url( $s['bg_image'], 'full' );
+	$bg = larijani_img_url( $s['bg_image'], 'full' );
 	if ( ! $bg ) {
-		$bg = ls_demo_image( 'footer_bg' );
+		$bg = larijani_demo_image( 'footer_bg' );
 	}
 	$style = $bg ? sprintf( "background-image: linear-gradient(rgba(18,23,21,.92), rgba(18,23,21,.96)), url('%s'); background-size: cover; background-position: center;", esc_url( $bg ) ) : '';
 
-	$col1 = ls_menu_items(
+	$col1 = larijani_menu_items(
 		$s['col1_menu'],
 		array(
-			array( __( 'صفحه اصلی', 'larijani' ), home_url( '/' ) ),
-			array( __( 'فروشگاه قالب‌های نشکن', 'larijani' ), ls_page_url( 'shop' ) ),
-			array( __( 'خدمات و خطوط تولید', 'larijani' ), ls_page_url( 'services' ) ),
-			array( __( 'نمونه کارها', 'larijani' ), ls_page_url( 'portfolio' ) ),
-			array( __( 'فرمولاسیون و مقالات', 'larijani' ), ls_page_url( 'blog' ) ),
-			array( __( 'تماس با واحد فروش', 'larijani' ), ls_page_url( 'contact' ) ),
+			array( __( 'صفحه اصلی', 'larijani-stone' ), home_url( '/' ) ),
+			array( __( 'فروشگاه قالب‌های نشکن', 'larijani-stone' ), larijani_page_url( 'shop' ) ),
+			array( __( 'خدمات و خطوط تولید', 'larijani-stone' ), larijani_page_url( 'services' ) ),
+			array( __( 'نمونه کارها', 'larijani-stone' ), larijani_page_url( 'portfolio' ) ),
+			array( __( 'فرمولاسیون و مقالات', 'larijani-stone' ), larijani_page_url( 'blog' ) ),
+			array( __( 'تماس با واحد فروش', 'larijani-stone' ), larijani_page_url( 'contact' ) ),
 		)
 	);
-	$col2 = ls_menu_items(
+	$col2 = larijani_menu_items(
 		$s['col2_menu'],
 		array(
-			array( __( 'قالب کفپوش و سنگفرش', 'larijani' ), '#' ),
-			array( __( 'قالب جدول و دورباغچه', 'larijani' ), '#' ),
-			array( __( 'قالب نما و صراحی رومی', 'larijani' ), '#' ),
-			array( __( 'رزین روان‌کننده بتن', 'larijani' ), '#' ),
-			array( __( 'رنگدانه‌های معدنی اکسید آهن', 'larijani' ), '#' ),
-			array( __( 'روغن قالب پایه گیاهی', 'larijani' ), '#' ),
+			array( __( 'قالب کفپوش و سنگفرش', 'larijani-stone' ), '#' ),
+			array( __( 'قالب جدول و دورباغچه', 'larijani-stone' ), '#' ),
+			array( __( 'قالب نما و صراحی رومی', 'larijani-stone' ), '#' ),
+			array( __( 'رزین روان‌کننده بتن', 'larijani-stone' ), '#' ),
+			array( __( 'رنگدانه‌های معدنی اکسید آهن', 'larijani-stone' ), '#' ),
+			array( __( 'روغن قالب پایه گیاهی', 'larijani-stone' ), '#' ),
 		)
 	);
-	$bottom = ls_menu_items(
+	$bottom = larijani_menu_items(
 		$s['bottom_menu'],
 		array(
-			array( __( 'قوانین و ضمانت محصولات', 'larijani' ), '#' ),
-			array( __( 'حریم خصوصی', 'larijani' ), get_privacy_policy_url() ? get_privacy_policy_url() : '#' ),
-			array( __( 'نقشه سایت', 'larijani' ), home_url( '/wp-sitemap.xml' ) ),
+			array( __( 'قوانین و ضمانت محصولات', 'larijani-stone' ), '#' ),
+			array( __( 'حریم خصوصی', 'larijani-stone' ), get_privacy_policy_url() ? get_privacy_policy_url() : '#' ),
+			array( __( 'نقشه سایت', 'larijani-stone' ), home_url( '/wp-sitemap.xml' ) ),
 		)
 	);
 	?>
@@ -85,7 +85,7 @@ function ls_render_site_footer( $s = array() ) {
 				<div class="sm:col-span-2 lg:col-span-2">
 					<div class="flex items-center gap-3 mb-4">
 						<div class="w-12 h-12 rounded-xl bg-white p-1 border border-slate-200/80 flex items-center justify-center flex-shrink-0">
-							<?php echo ls_logo_img( 'w-full h-full object-contain', $s['logo'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo larijani_logo_img( 'w-full h-full object-contain', $s['logo'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</div>
 						<div>
 							<span class="text-lg sm:text-xl font-black text-white"><?php echo esc_html( $s['brand'] ); ?></span>
@@ -96,7 +96,7 @@ function ls_render_site_footer( $s = array() ) {
 					<?php if ( $s['hours'] ) : ?>
 					<div class="text-xs text-slate-400"><?php echo esc_html( $s['hours'] ); ?></div>
 					<?php endif; ?>
-					<?php $social = 'yes' === $s['show_social'] ? ls_social_profiles() : array(); ?>
+					<?php $social = 'yes' === $s['show_social'] ? larijani_social_profiles() : array(); ?>
 					<?php if ( $social ) : ?>
 					<div class="flex items-center gap-2 mt-5">
 						<?php foreach ( $social as $p ) : ?>
@@ -125,14 +125,14 @@ function ls_render_site_footer( $s = array() ) {
 						<?php endif; ?>
 						<?php foreach ( array( $s['phone_1'], $s['phone_2'] ) as $ph ) : ?>
 							<?php if ( $ph ) : ?>
-						<li class="flex items-center gap-2"><i class="bi bi-telephone text-brand-secondary" aria-hidden="true"></i><a class="persian-num hover:text-white transition-colors" dir="ltr" href="<?php echo esc_url( ls_tel( $ph ) ); ?>"><?php echo esc_html( ls_phone_display( $ph ) ); ?></a></li>
+						<li class="flex items-center gap-2"><i class="bi bi-telephone text-brand-secondary" aria-hidden="true"></i><a class="persian-num hover:text-white transition-colors" dir="ltr" href="<?php echo esc_url( larijani_tel( $ph ) ); ?>"><?php echo esc_html( larijani_phone_display( $ph ) ); ?></a></li>
 							<?php endif; ?>
 						<?php endforeach; ?>
 						<?php if ( $s['email'] ) : ?>
 						<li class="flex items-center gap-2"><i class="bi bi-envelope text-brand-secondary" aria-hidden="true"></i><a class="hover:text-white transition-colors" href="mailto:<?php echo esc_attr( antispambot( $s['email'] ) ); ?>"><?php echo esc_html( antispambot( $s['email'] ) ); ?></a></li>
 						<?php endif; ?>
 					</ul>
-					<?php $seal = ls_opt( 'footer_enamad' ); ?>
+					<?php $seal = larijani_opt( 'footer_enamad' ); ?>
 					<?php if ( $seal ) : ?>
 					<div class="mt-4 flex flex-wrap gap-2 [&_img]:bg-white [&_img]:rounded-xl [&_img]:p-1 [&_img]:max-h-24"><?php echo $seal; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- admin supplied trust seal. ?></div>
 					<?php endif; ?>

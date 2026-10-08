@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array
  */
-function ls_demo_images() {
+function larijani_demo_images() {
 	return array(
 		'logo' => 'https://lh3.googleusercontent.com/aida/AEtjO1U9OfuajSea80QDpjtRYopm7PN2YnnwgVwHCcdyF0q85XNhG19MtBabTJl_gBK1zr18jB1huHUwnEmLGrzlfwdHFc6qDyLxnVAnplGx-Y_p6gf_GazCnybVhqy5nO36lRU7hhonaMHD41dBXoxSNSmzaM6tnTgrS4Dc8EyYP8uBKy9NfAA1m0f71a2cPbQ3wPBVnXG7JQDV86BcWSnABqaLBj1SbEQ2tSMc5S4crfHPIjIYfMaezL86WqKA',
 		'logo_alt' => 'https://lh3.googleusercontent.com/aida/AEtjO1XWRJwzMTcXuC-VnLeMuHkkE61d7yuniR3FNJrvgjFp0aVwBXqH7XaCR2PH9sb7dpob7kroNC1R0YXxi5VubRa5Ss6du5IW64wdpIKdg3UmMRzzEwu-cKp_D5gVNlaukh0ApLqZwcZaKlErzvAqJlpDdwrGuIH53jKgltTL4xQQ1HUvV7Np7fgwh7Og5zc94eXk8qq7f8xaRG9Lx2TH4HdhMlozCB4mfdnA43PNO1jv9cvRMJ1ex2TrLn8H',
@@ -96,13 +96,13 @@ function ls_demo_images() {
  * @param string $key Key.
  * @return string
  */
-function ls_demo_image( $key ) {
-	$map = ls_demo_images();
+function larijani_demo_image( $key ) {
+	$map = larijani_demo_images();
 	$imported = get_option( 'ls_demo_images_local', array() );
 	if ( is_array( $imported ) && ! empty( $imported[ $key ] ) ) {
 		return $imported[ $key ];
 	}
-	return isset( $map[ $key ] ) ? $map[ $key ] : LS_URI . '/assets/images/placeholder.svg';
+	return isset( $map[ $key ] ) ? $map[ $key ] : LARIJANI_URI . '/assets/images/placeholder.svg';
 }
 
 /**
@@ -111,9 +111,9 @@ function ls_demo_image( $key ) {
  * @param string $key Key.
  * @return array
  */
-function ls_demo_media( $key ) {
+function larijani_demo_media( $key ) {
 	return array(
-		'url' => ls_demo_image( $key ),
+		'url' => larijani_demo_image( $key ),
 		'id'  => '',
 	);
 }

@@ -15,12 +15,12 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return array
  */
-function ls_migrations() {
+function larijani_migrations() {
 	return apply_filters(
 		'ls_migrations',
 		array(
-			'1.2.0' => 'ls_migrate_1_2_0',
-			'1.3.0' => 'ls_migrate_1_3_0',
+			'1.2.0' => 'larijani_migrate_1_2_0',
+			'1.3.0' => 'larijani_migrate_1_3_0',
 		)
 	);
 }
@@ -30,7 +30,7 @@ function ls_migrations() {
  *
  * @return bool
  */
-function ls_migrate_1_2_0() {
+function larijani_migrate_1_2_0() {
 	$ids = get_posts(
 		array(
 			'post_type'      => array( 'post', 'ls_project', 'product' ),
@@ -57,7 +57,7 @@ function ls_migrate_1_2_0() {
  *
  * @return bool
  */
-function ls_migrate_1_3_0() {
+function larijani_migrate_1_3_0() {
 	$ids = get_posts(
 		array(
 			'post_type'      => array( 'page', 'elementor_library' ),
@@ -80,7 +80,7 @@ function ls_migrate_1_3_0() {
 /**
  * One-time notice about rebuilding older demo pages with native widgets.
  */
-function ls_native_rebuild_notice() {
+function larijani_native_rebuild_notice() {
 	if ( ! get_option( 'ls_native_rebuild_notice' ) || ! current_user_can( 'manage_options' ) ) {
 		return;
 	}
@@ -90,28 +90,28 @@ function ls_native_rebuild_notice() {
 	}
 	$setup   = admin_url( 'admin.php?page=ls-setup' );
 	$dismiss = wp_nonce_url( add_query_arg( 'ls_dismiss_native', 1 ), 'ls_dismiss_native' );
-	echo '<div class="notice notice-info"><p>' . esc_html__( 'لاریجانی استون ۱.۳: بخش‌های ثابت صفحات اکنون با ویجت‌های بومی المنتور (عنوان، متن، دکمه، آیکون، تصویر…) ساخته می‌شوند. برگه‌های فعلی شما تغییر نکرده‌اند؛ برای به‌روزرسانی آن‌ها گزینه «بازسازی چیدمان» را در صفحه راه‌اندازی بزنید (نسخه قبلی پشتیبان‌گیری می‌شود).', 'larijani' ) . ' <a href="' . esc_url( $setup ) . '">' . esc_html__( 'راه‌اندازی و درون‌ریزی', 'larijani' ) . '</a> · <a href="' . esc_url( $dismiss ) . '">' . esc_html__( 'بستن', 'larijani' ) . '</a></p></div>';
+	echo '<div class="notice notice-info"><p>' . esc_html__( 'لاریجانی استون ۱.۳: بخش‌های ثابت صفحات اکنون با ویجت‌های بومی المنتور (عنوان، متن، دکمه، آیکون، تصویر…) ساخته می‌شوند. برگه‌های فعلی شما تغییر نکرده‌اند؛ برای به‌روزرسانی آن‌ها گزینه «بازسازی چیدمان» را در صفحه راه‌اندازی بزنید (نسخه قبلی پشتیبان‌گیری می‌شود).', 'larijani-stone' ) . ' <a href="' . esc_url( $setup ) . '">' . esc_html__( 'راه‌اندازی و درون‌ریزی', 'larijani-stone' ) . '</a> · <a href="' . esc_url( $dismiss ) . '">' . esc_html__( 'بستن', 'larijani-stone' ) . '</a></p></div>';
 }
-add_action( 'admin_notices', 'ls_native_rebuild_notice' );
+add_action( 'admin_notices', 'larijani_native_rebuild_notice' );
 
 /**
  * Run pending migrations.
  */
-function ls_maybe_migrate() {
+function larijani_maybe_migrate() {
 	$from = (string) get_option( 'ls_db_version', '0' );
-	if ( version_compare( $from, LS_VERSION, '>=' ) || ! current_user_can( 'manage_options' ) ) {
+	if ( version_compare( $from, LARIJANI_VERSION, '>=' ) || ! current_user_can( 'manage_options' ) ) {
 		return;
 	}
-	$steps = ls_migrations();
+	$steps = larijani_migrations();
 	uksort( $steps, 'version_compare' );
 	foreach ( $steps as $version => $callback ) {
-		if ( version_compare( $from, $version, '<' ) && version_compare( $version, LS_VERSION, '<=' ) && is_callable( $callback ) ) {
+		if ( version_compare( $from, $version, '<' ) && version_compare( $version, LARIJANI_VERSION, '<=' ) && is_callable( $callback ) ) {
 			if ( false === call_user_func( $callback ) ) {
 				return; // Retry on the next admin request; keep the old version.
 			}
 			update_option( 'ls_db_version', $version, true );
 		}
 	}
-	update_option( 'ls_db_version', LS_VERSION, true );
+	update_option( 'ls_db_version', LARIJANI_VERSION, true );
 }
-add_action( 'admin_init', 'ls_maybe_migrate', 1 );
+add_action( 'admin_init', 'larijani_maybe_migrate', 1 );

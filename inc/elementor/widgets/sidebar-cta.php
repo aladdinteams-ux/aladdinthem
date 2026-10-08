@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * LS_Widget_Sidebar_CTA.
  */
-class LS_Widget_Sidebar_CTA extends LS_Widget_Base {
+class Larijani_Widget_Sidebar_CTA extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-sidebar-cta';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS کارت پشتیبانی (سایدبار)', 'larijani' );
+		return __( 'LS کارت پشتیبانی (سایدبار)', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -30,14 +30,14 @@ class LS_Widget_Sidebar_CTA extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_main', __( 'محتوا', 'larijani' ) );
-		$this->ctl( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'headset' );
-		$this->ctl( 'title', 'text', __( 'عنوان', 'larijani' ), 'نیاز به اصلاح فرمولاسیون یا رفع حباب در خط تولید دارید؟' );
-		$this->ctl( 'desc', 'textarea', __( 'توضیح', 'larijani' ), 'مشاوره مستقیم با مهندس مسعود لاریجانی و ارسال نمونه رایگان رزین LS-500 برای تست در کارگاه شما.' );
-		$this->ctl( 'button_1', 'text', __( 'دکمه اول (خالی = شماره تلفن)', 'larijani' ), '' );
-		$this->ctl( 'link_1', 'url', __( 'لینک دکمه اول', 'larijani' ), '' );
-		$this->ctl( 'button_2', 'text', __( 'دکمه دوم', 'larijani' ), 'ارسال تصاویر قطعات معیوب در واتساپ' );
-		$this->ctl( 'link_2', 'url', __( 'لینک دکمه دوم', 'larijani' ), '' );
+		$this->section( 'sec_main', __( 'محتوا', 'larijani-stone' ) );
+		$this->ctl( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'headset' );
+		$this->ctl( 'title', 'text', __( 'عنوان', 'larijani-stone' ), 'نیاز به اصلاح فرمولاسیون یا رفع حباب در خط تولید دارید؟' );
+		$this->ctl( 'desc', 'textarea', __( 'توضیح', 'larijani-stone' ), 'مشاوره مستقیم با مهندس مسعود لاریجانی و ارسال نمونه رایگان رزین LS-500 برای تست در کارگاه شما.' );
+		$this->ctl( 'button_1', 'text', __( 'دکمه اول (خالی = شماره تلفن)', 'larijani-stone' ), '' );
+		$this->ctl( 'link_1', 'url', __( 'لینک دکمه اول', 'larijani-stone' ), '' );
+		$this->ctl( 'button_2', 'text', __( 'دکمه دوم', 'larijani-stone' ), 'ارسال تصاویر قطعات معیوب در واتساپ' );
+		$this->ctl( 'link_2', 'url', __( 'لینک دکمه دوم', 'larijani-stone' ), '' );
 		$this->end();
 		$this->style_controls( array( 'layout' => false ) );
 	}
@@ -48,7 +48,7 @@ class LS_Widget_Sidebar_CTA extends LS_Widget_Base {
 	 * @param array $s Settings.
 	 */
 	protected function render_widget( $s ) {
-		ls_render_sidebar_cta(
+		larijani_render_sidebar_cta(
 			array(
 				'icon' => $s['icon'],
 				'title' => $s['title'],

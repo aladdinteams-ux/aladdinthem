@@ -11,14 +11,14 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Product detail widget.
  */
-class LS_Widget_Product_Detail extends LS_Widget_Base {
+class Larijani_Widget_Product_Detail extends Larijani_Widget_Base {
 	/** @return string */
 	public function get_name() {
 		return 'ls-product-detail';
 	}
 	/** @return string */
 	public function get_title() {
-		return __( 'LS معرفی محصول (گالری + خرید)', 'larijani' );
+		return __( 'LS معرفی محصول (گالری + خرید)', 'larijani-stone' );
 	}
 	/** @return string */
 	public function get_icon() {
@@ -31,20 +31,20 @@ class LS_Widget_Product_Detail extends LS_Widget_Base {
 
 	/** Controls. */
 	protected function register_controls() {
-		$this->section( 'sec_source', __( 'منبع', 'larijani' ) );
-		$this->ctl( 'source', 'select', __( 'منبع اطلاعات', 'larijani' ), 'auto', array( 'options' => array( 'auto' => __( 'خودکار (محصول جاری ووکامرس)', 'larijani' ), 'manual' => __( 'دستی', 'larijani' ) ), 'description' => __( 'در حالت خودکار، فیلدهای اختصاصی را از تب «اطلاعات لاریجانی» در ویرایش محصول تکمیل کنید.', 'larijani' ) ) );
-		$this->ctl( 'show_breadcrumb', 'switch', __( 'نمایش مسیر صفحه', 'larijani' ), 'yes' );
+		$this->section( 'sec_source', __( 'منبع', 'larijani-stone' ) );
+		$this->ctl( 'source', 'select', __( 'منبع اطلاعات', 'larijani-stone' ), 'auto', array( 'options' => array( 'auto' => __( 'خودکار (محصول جاری ووکامرس)', 'larijani-stone' ), 'manual' => __( 'دستی', 'larijani-stone' ) ), 'description' => __( 'در حالت خودکار، فیلدهای اختصاصی را از تب «اطلاعات لاریجانی» در ویرایش محصول تکمیل کنید.', 'larijani-stone' ) ) );
+		$this->ctl( 'show_breadcrumb', 'switch', __( 'نمایش مسیر صفحه', 'larijani-stone' ), 'yes' );
 		$this->end();
 
-		$this->section( 'sec_manual', __( 'اطلاعات محصول (دستی)', 'larijani' ) );
-		$this->ctl( 'gallery', 'gallery', __( 'گالری تصاویر', 'larijani' ), array( ls_demo_media( 'single_main' ), ls_demo_media( 'single_thumb_2' ), ls_demo_media( 'single_thumb_3' ), ls_demo_media( 'single_thumb_4' ) ) );
+		$this->section( 'sec_manual', __( 'اطلاعات محصول (دستی)', 'larijani-stone' ) );
+		$this->ctl( 'gallery', 'gallery', __( 'گالری تصاویر', 'larijani-stone' ), array( larijani_demo_media( 'single_main' ), larijani_demo_media( 'single_thumb_2' ), larijani_demo_media( 'single_thumb_3' ), larijani_demo_media( 'single_thumb_4' ) ) );
 		$this->rep(
 			'image_badges',
-			__( 'برچسب‌های روی تصویر', 'larijani' ),
+			__( 'برچسب‌های روی تصویر', 'larijani-stone' ),
 			array(
-				array( 'text', 'text', __( 'متن', 'larijani' ), '' ),
-				array( 'tone', 'select', __( 'رنگ', 'larijani' ), 'primary', array( 'options' => array( 'primary' => __( 'سبز', 'larijani' ), 'amber' => __( 'کهربایی', 'larijani' ) ) ) ),
-				array( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'shield-check' ),
+				array( 'text', 'text', __( 'متن', 'larijani-stone' ), '' ),
+				array( 'tone', 'select', __( 'رنگ', 'larijani-stone' ), 'primary', array( 'options' => array( 'primary' => __( 'سبز', 'larijani-stone' ), 'amber' => __( 'کهربایی', 'larijani-stone' ) ) ) ),
+				array( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'shield-check' ),
 			),
 			array(
 				array( 'text' => 'ضمانت مادام‌العمر عدم شکستن ABS', 'tone' => 'primary', 'icon' => 'shield-check' ),
@@ -52,20 +52,20 @@ class LS_Widget_Product_Detail extends LS_Widget_Base {
 			),
 			'{{{ text }}}'
 		);
-		$this->ctl( 'stock_text', 'text', __( 'وضعیت موجودی', 'larijani' ), 'موجود در انبار مرکزی آبیک (ارسال فوری ۲۴ ساعته)' );
-		$this->ctl( 'code', 'text', __( 'کد فنی', 'larijani' ), 'DS-904' );
-		$this->ctl( 'hot_text', 'text', __( 'برچسب پرفروش', 'larijani' ), 'پرفروش‌ترین طرح سال' );
-		$this->ctl( 'title', 'text', __( 'نام محصول', 'larijani' ), 'قالب سنگ پلیمری طرح سه‌بعدی صخره‌ای و کریستالی' );
-		$this->ctl( 'subtitle', 'textarea', __( 'توضیح کوتاه', 'larijani' ), 'تولید شده از ورق کاملاً نو ABS سامسونگ کره با انعطاف‌پذیری فوق‌العاده و مقاومت سایشی بالا برای انواع بتن اکسپوز و سنگ آنتیک' );
-		$this->ctl( 'rating', 'number', __( 'امتیاز (۰ تا ۵)', 'larijani' ), 4.9, array( 'min' => 0, 'max' => 5, 'step' => 0.1 ) );
-		$this->ctl( 'review_count', 'number', __( 'تعداد نظرات', 'larijani' ), 24 );
-		$this->ctl( 'quality_note', 'text', __( 'تأییدیه کیفی', 'larijani' ), 'تأییدیه کنترل کیفی آزمایشگاه بتن لاریجانی' );
+		$this->ctl( 'stock_text', 'text', __( 'وضعیت موجودی', 'larijani-stone' ), 'موجود در انبار مرکزی آبیک (ارسال فوری ۲۴ ساعته)' );
+		$this->ctl( 'code', 'text', __( 'کد فنی', 'larijani-stone' ), 'DS-904' );
+		$this->ctl( 'hot_text', 'text', __( 'برچسب پرفروش', 'larijani-stone' ), 'پرفروش‌ترین طرح سال' );
+		$this->ctl( 'title', 'text', __( 'نام محصول', 'larijani-stone' ), 'قالب سنگ پلیمری طرح سه‌بعدی صخره‌ای و کریستالی' );
+		$this->ctl( 'subtitle', 'textarea', __( 'توضیح کوتاه', 'larijani-stone' ), 'تولید شده از ورق کاملاً نو ABS سامسونگ کره با انعطاف‌پذیری فوق‌العاده و مقاومت سایشی بالا برای انواع بتن اکسپوز و سنگ آنتیک' );
+		$this->ctl( 'rating', 'number', __( 'امتیاز (۰ تا ۵)', 'larijani-stone' ), 4.9, array( 'min' => 0, 'max' => 5, 'step' => 0.1 ) );
+		$this->ctl( 'review_count', 'number', __( 'تعداد نظرات', 'larijani-stone' ), 24 );
+		$this->ctl( 'quality_note', 'text', __( 'تأییدیه کیفی', 'larijani-stone' ), 'تأییدیه کنترل کیفی آزمایشگاه بتن لاریجانی' );
 		$this->rep(
 			'highlights',
-			__( 'مشخصات کلیدی', 'larijani' ),
+			__( 'مشخصات کلیدی', 'larijani-stone' ),
 			array(
-				array( 'label', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'value', 'text', __( 'مقدار', 'larijani' ), '' ),
+				array( 'label', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'value', 'text', __( 'مقدار', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'label' => 'ابعاد مفید قطعه', 'value' => '۳۰ × ۵۰ cm' ),
@@ -77,11 +77,11 @@ class LS_Widget_Product_Detail extends LS_Widget_Base {
 		);
 		$this->rep(
 			'trust',
-			__( 'نشان‌های زیر گالری', 'larijani' ),
+			__( 'نشان‌های زیر گالری', 'larijani-stone' ),
 			array(
-				array( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'arrow-repeat' ),
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'text', 'text', __( 'متن', 'larijani' ), '' ),
+				array( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'arrow-repeat' ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'text', 'text', __( 'متن', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'icon' => 'arrow-repeat', 'title' => '۵۰۰+ سیکل بتن', 'text' => 'ماندگاری فرم تضمینی' ),
@@ -89,22 +89,22 @@ class LS_Widget_Product_Detail extends LS_Widget_Base {
 				array( 'icon' => 'truck', 'title' => 'ارسال روزانه', 'text' => 'از انبار کارخانه آبیک' ),
 			)
 		);
-		$this->ctl( 'price_label', 'text', __( 'عنوان قیمت', 'larijani' ), 'قیمت هر عدد (تک‌فروشی):' );
-		$this->ctl( 'unit_price', 'number', __( 'قیمت واحد (عدد)', 'larijani' ), 125000 );
-		$this->ctl( 'bulk_price', 'number', __( 'قیمت عمده', 'larijani' ), 115000 );
-		$this->ctl( 'bulk_min', 'number', __( 'حداقل تعداد عمده', 'larijani' ), 50 );
-		$this->ctl( 'area_per_unit', 'number', __( 'سطح تولید هر عدد (مترمربع)', 'larijani' ), 0.15, array( 'step' => 0.01 ) );
-		$this->ctl( 'currency', 'text', __( 'واحد پول', 'larijani' ), 'تومان' );
-		$this->ctl( 'qty_default', 'number', __( 'تعداد پیش‌فرض', 'larijani' ), 10 );
-		$this->ctl( 'cart_link', 'url', __( 'لینک دکمه خرید (حالت دستی)', 'larijani' ), '' );
+		$this->ctl( 'price_label', 'text', __( 'عنوان قیمت', 'larijani-stone' ), 'قیمت هر عدد (تک‌فروشی):' );
+		$this->ctl( 'unit_price', 'number', __( 'قیمت واحد (عدد)', 'larijani-stone' ), 125000 );
+		$this->ctl( 'bulk_price', 'number', __( 'قیمت عمده', 'larijani-stone' ), 115000 );
+		$this->ctl( 'bulk_min', 'number', __( 'حداقل تعداد عمده', 'larijani-stone' ), 50 );
+		$this->ctl( 'area_per_unit', 'number', __( 'سطح تولید هر عدد (مترمربع)', 'larijani-stone' ), 0.15, array( 'step' => 0.01 ) );
+		$this->ctl( 'currency', 'text', __( 'واحد پول', 'larijani-stone' ), 'تومان' );
+		$this->ctl( 'qty_default', 'number', __( 'تعداد پیش‌فرض', 'larijani-stone' ), 10 );
+		$this->ctl( 'cart_link', 'url', __( 'لینک دکمه خرید (حالت دستی)', 'larijani-stone' ), '' );
 		$this->rep(
 			'guarantees',
-			__( 'تضمین‌ها', 'larijani' ),
+			__( 'تضمین‌ها', 'larijani-stone' ),
 			array(
-				array( 'icon', 'icon', __( 'آیکون', 'larijani' ), 'shield-fill-check' ),
-				array( 'tone', 'select', __( 'رنگ', 'larijani' ), 'emerald', array( 'options' => array( 'emerald' => __( 'سبز', 'larijani' ), 'amber' => __( 'کهربایی', 'larijani' ) ) ) ),
-				array( 'title', 'text', __( 'عنوان', 'larijani' ), '' ),
-				array( 'text', 'textarea', __( 'متن', 'larijani' ), '' ),
+				array( 'icon', 'icon', __( 'آیکون', 'larijani-stone' ), 'shield-fill-check' ),
+				array( 'tone', 'select', __( 'رنگ', 'larijani-stone' ), 'emerald', array( 'options' => array( 'emerald' => __( 'سبز', 'larijani-stone' ), 'amber' => __( 'کهربایی', 'larijani-stone' ) ) ) ),
+				array( 'title', 'text', __( 'عنوان', 'larijani-stone' ), '' ),
+				array( 'text', 'textarea', __( 'متن', 'larijani-stone' ), '' ),
 			),
 			array(
 				array( 'icon' => 'shield-fill-check', 'tone' => 'emerald', 'title' => 'تضمین تعویض بی‌قیدوشرط:', 'text' => 'در صورت هرگونه تغییر فرم، ترکیدگی در ارتعاش ویبره یا دفرمه شدن در ۶ ماه اول، قالب‌ها فوراً مرجوع و تعویض می‌گردند.' ),
@@ -113,14 +113,14 @@ class LS_Widget_Product_Detail extends LS_Widget_Base {
 		);
 		$this->end();
 
-		$this->section( 'sec_labels', __( 'برچسب‌ها و دکمه‌ها', 'larijani' ) );
-		$this->ctl( 'qty_label', 'text', __( 'برچسب تعداد', 'larijani' ), 'تعداد قالب:' );
-		$this->ctl( 'area_label', 'text', __( 'برچسب سطح', 'larijani' ), 'سطح تولید:' );
-		$this->ctl( 'total_label', 'text', __( 'برچسب مجموع', 'larijani' ), 'مجموع:' );
-		$this->ctl( 'cart_text', 'text', __( 'متن دکمه خرید', 'larijani' ), 'افزودن به سبد خرید کارگاهی' );
-		$this->ctl( 'consult_text', 'text', __( 'متن دکمه مشاوره', 'larijani' ), 'مشاوره تیراژ و خط تولید' );
-		$this->ctl( 'consult_link', 'url', __( 'لینک دکمه مشاوره', 'larijani' ), 'tel:09122302685' );
-		$this->ctl( 'show_wishlist', 'switch', __( 'دکمه علاقه‌مندی', 'larijani' ), 'yes' );
+		$this->section( 'sec_labels', __( 'برچسب‌ها و دکمه‌ها', 'larijani-stone' ) );
+		$this->ctl( 'qty_label', 'text', __( 'برچسب تعداد', 'larijani-stone' ), 'تعداد قالب:' );
+		$this->ctl( 'area_label', 'text', __( 'برچسب سطح', 'larijani-stone' ), 'سطح تولید:' );
+		$this->ctl( 'total_label', 'text', __( 'برچسب مجموع', 'larijani-stone' ), 'مجموع:' );
+		$this->ctl( 'cart_text', 'text', __( 'متن دکمه خرید', 'larijani-stone' ), 'افزودن به سبد خرید کارگاهی' );
+		$this->ctl( 'consult_text', 'text', __( 'متن دکمه مشاوره', 'larijani-stone' ), 'مشاوره تیراژ و خط تولید' );
+		$this->ctl( 'consult_link', 'url', __( 'لینک دکمه مشاوره', 'larijani-stone' ), 'tel:09122302685' );
+		$this->ctl( 'show_wishlist', 'switch', __( 'دکمه علاقه‌مندی', 'larijani-stone' ), 'yes' );
 		$this->end();
 
 		$this->style_controls();
@@ -142,15 +142,15 @@ class LS_Widget_Product_Detail extends LS_Widget_Base {
 			'show_wishlist' => $this->on( $s, 'show_wishlist' ) ? 'yes' : 'no',
 		);
 		$product = null;
-		if ( 'auto' === $s['source'] && ls_has_woo() ) {
+		if ( 'auto' === $s['source'] && larijani_has_woo() ) {
 			$product = wc_get_product( get_the_ID() );
-			if ( ! $product && ls_is_elementor_editor() ) {
+			if ( ! $product && larijani_is_elementor_editor() ) {
 				$ids     = wc_get_products( array( 'limit' => 1, 'return' => 'ids' ) );
 				$product = $ids ? wc_get_product( $ids[0] ) : null;
 			}
 		}
 		if ( $product ) {
-			$data = array_merge( ls_wc_detail_data( $product ), $labels );
+			$data = array_merge( larijani_wc_detail_data( $product ), $labels );
 			if ( ! $data['area_per_unit'] ) {
 				$data['area_label'] = '';
 			}
@@ -191,7 +191,7 @@ class LS_Widget_Product_Detail extends LS_Widget_Base {
 				$labels
 			);
 		}
-		if ( $product && function_exists( 'wc_print_notices' ) && ! ls_is_elementor_editor() ) {
+		if ( $product && function_exists( 'wc_print_notices' ) && ! larijani_is_elementor_editor() ) {
 			echo '<div class="max-w-7xl mx-auto px-4 sm:px-gutter pt-4 ls-wc-notices">';
 			wc_print_notices();
 			echo '</div>';
@@ -200,13 +200,13 @@ class LS_Widget_Product_Detail extends LS_Widget_Base {
 		<?php if ( $this->on( $s, 'show_breadcrumb' ) ) : ?>
 		<section class="w-full bg-surface-canvas py-space-sm">
 			<div class="max-w-7xl mx-auto px-4 sm:px-gutter">
-				<nav aria-label="<?php esc_attr_e( 'مسیر صفحه', 'larijani' ); ?>" class="flex items-center flex-wrap gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><?php echo ls_breadcrumb_html( $product ? array() : array( 'items' => array( array( __( 'صفحه اصلی', 'larijani' ), home_url( '/' ) ), array( __( 'فروشگاه و کاتالوگ', 'larijani' ), ls_page_url( 'shop' ) ), array( $data['title'], null ) ) ) ); // phpcs:ignore ?></nav>
+				<nav aria-label="<?php esc_attr_e( 'مسیر صفحه', 'larijani-stone' ); ?>" class="flex items-center flex-wrap gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><?php echo larijani_breadcrumb_html( $product ? array() : array( 'items' => array( array( __( 'صفحه اصلی', 'larijani-stone' ), home_url( '/' ) ), array( __( 'فروشگاه و کاتالوگ', 'larijani-stone' ), larijani_page_url( 'shop' ) ), array( $data['title'], null ) ) ) ); // phpcs:ignore ?></nav>
 			</div>
 		</section>
 		<?php endif; ?>
 		<section class="w-full py-space-md lg:py-space-xl">
 			<div class="max-w-7xl mx-auto px-4 sm:px-gutter">
-				<?php ls_render_product_detail( $data ); ?>
+				<?php larijani_render_product_detail( $data ); ?>
 			</div>
 		</section>
 		<?php

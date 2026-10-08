@@ -1,60 +1,89 @@
 {
   "name": "Larijani Stone",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "release_type": "release",
-  "date": "2026-10-06",
-  "source_commit": "2002179200f1441f025233122226afa50f6cfc15",
+  "date": "2026-10-08",
+  "source_commit": "see git log (commit that adds this manifest)",
   "branch": "claude/wordpress-elementor-theme-conversion-t2rwiw",
   "requirements": {
-    "wordpress": ">= 6.5 (runtime-tested 6.5.5, 7.1.2)",
-    "php": ">= 7.4 (runtime-tested 8.3.6; 7.4 static only)",
-    "elementor": ">= 3.20 recommended (runtime-tested 3.35.9 and 4.0.8, built from official source tags)",
-    "elementor_pro": "optional (NOT EXECUTED)",
-    "woocommerce": "optional (runtime-tested 11.1.2)"
+    "wordpress": ">= 6.5 (runtime-tested 7.1.2)",
+    "php": ">= 7.4 (runtime-tested 8.3.6; 7.4 static check only)",
+    "elementor": "free; runtime-tested 3.35.9 and 4.0.8 (built from official source tags)",
+    "elementor_pro": "optional — NOT EXECUTED",
+    "woocommerce": "optional (runtime-tested 11.1.2)",
+    "companion_plugin": "Larijani Stone Core 1.0.0 (required for projects, inquiries and forms; bundled)"
   },
   "artifacts": [
     {
       "file": "larijani-stone.zip",
-      "sha256": "a661593a35754be9fab38eb800675386a7ba7d78920b938761802d1c7e2bc5dc",
-      "bytes": 920142,
-      "files": 145,
+      "sha256": "89c74f2d53a070e9e847891590e8a8968456aa042b8159b8933755075f15fe09",
+      "bytes": 1112616,
+      "files": 143,
       "root_folder": [
         "larijani-stone"
       ],
-      "root_ok": true,
+      "contains_dev_files": false
+    },
+    {
+      "file": "larijani-stone-core.zip",
+      "sha256": "2d25246e472838a7f3326e29d18a7d903ae46d893f6219141ab6dc89c0bbdcdd",
+      "bytes": 35312,
+      "files": 11,
+      "root_folder": [
+        "larijani-stone-core"
+      ],
       "contains_dev_files": false
     },
     {
       "file": "larijani-stone-child.zip",
-      "sha256": "e40d00556b2fe8827273a5b8894bfe59d9b1e0ff8f30a9f54209ef0dc8317b8e",
+      "sha256": "fdde274eb02d572a5809695597690ede8e76414f0c53c9cccfbdc1705168c6ee",
       "bytes": 1179,
       "files": 2,
       "root_folder": [
         "larijani-stone-child"
       ],
-      "root_ok": true,
       "contains_dev_files": false
     }
   ],
-  "install_test": "Theme_Upgrader install of release/larijani-stone.zip on a clean WordPress 7.1.2 + Elementor 4.0.8: install OK, activation + auto-setup OK, 75/75 route×width checks PASS, 0 theme log entries",
-  "excluded_from_theme_zip": [
-    "src/",
-    "build/",
-    "package.json",
-    "package-lock.json",
-    "tailwind.config.js",
-    ".gitignore",
-    "release/",
-    "child-theme/",
-    "docs/qa/evidence/",
-    "node_modules/"
-  ],
-  "secrets_scan": "PASS (none found)",
+  "tests": {
+    "route_crawl": "8083 32/32, 8084 32/32 (before and after plugin), 8085 fresh ZIP 30/30, bad=0",
+    "visual_regression_vs_1.3.0": "30 screenshots, worst 0.021%, identical heights",
+    "forms_security_http": "token 9/9, validation 7/7, files 12/12, rate limits 3/3, roles 7/7, Apache .htaccess 4/4, migration PASS",
+    "phpunit": "43 tests / 115 assertions OK",
+    "woocommerce": "25/25",
+    "interactions": "24/24 (8083, 8084)",
+    "elementor_editor": "4.0.8 and 3.35.9: load, edit+publish, Style-tab override PASS",
+    "settings": "15/15",
+    "wizard": "install/import/no-duplicate/undo PASS",
+    "theme_check": "10 items (3 REQUIRED, wordpress.org-only: compatibility CPT fallback + bundled plugin ZIP)",
+    "phpcs_security": 0,
+    "php_compatibility_7.4": 0,
+    "not_executed": [
+      "MySQL/MariaDB",
+      "PHP 7.4 runtime",
+      "Elementor Pro",
+      "Nginx/LiteSpeed",
+      "real page cache",
+      "Yoast/Rank Math",
+      "real e-mail delivery",
+      "real devices / screen reader / Lighthouse",
+      "multisite"
+    ]
+  },
   "licenses": {
     "theme": "GPL-2.0-or-later",
+    "companion_plugin": "GPL-2.0-or-later",
     "Vazirmatn": "OFL-1.1",
-    "Bootstrap Icons": "MIT"
+    "Bootstrap Icons 1.13.1": "MIT",
+    "demo_images": "NOT INCLUDED; loaded from lh3.googleusercontent.com — licence UNKNOWN, must be replaced before commercial use"
   },
-  "qa_report": "docs/qa/qa-report.json",
-  "release_ready": true
+  "release_ready": false,
+  "release_blockers": [
+    "Demo image licence unknown (L1) — seller must supply licensed images or confirm rights"
+  ],
+  "reports": [
+    "docs/qa/COMMERCIAL-REPORT-1.4-FA.md",
+    "docs/qa/COMMERCIAL-AUDIT-1.4.md",
+    "docs/INSTALL-FA.md"
+  ]
 }

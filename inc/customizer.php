@@ -79,6 +79,7 @@ function larijani_option_fields() {
 			array( 'ls_blog', 'ls_jalali_dates', __( 'نمایش تاریخ‌ها به شمسی (هجری خورشیدی)', 'larijani-stone' ), 'checkbox' ),
 			array( 'ls_blog', 'ls_blog_show_views', __( 'نمایش تعداد بازدید', 'larijani-stone' ), 'checkbox' ),
 
+			array( 'ls_style', 'ls_block_remote_images', __( 'عدم بارگذاری تصاویر نمونه از سرور خارجی طراحی (تا وقتی تصاویر خودتان را جایگزین کنید، جای آن‌ها تصویر ساده نمایش داده می‌شود)', 'larijani-stone' ), 'checkbox' ),
 			array( 'ls_forms', 'ls_leads_email', __( 'ایمیل دریافت درخواست‌ها (خالی = ایمیل مدیر)', 'larijani-stone' ), 'email' ),
 
 			array(
@@ -320,6 +321,10 @@ function larijani_font_url() {
 	if ( ! $url || ! preg_match( '/\.(woff2?)(\?.*)?$/i', wp_parse_url( $url, PHP_URL_PATH ) . '' ) || preg_match( '/[\s\'"()\\\\]/', $url ) ) {
 		return '';
 	}
-	$host = wp_parse_url( $url, PHP_URL_HOST );
-	return ( ! $host || wp_parse_url( home_url(), PHP_URL_HOST ) === $host ) ? $url : '';
+	$scheme = wp_parse_url( $url, PHP_URL_SCHEME );
+	$host   = wp_parse_url( $url, PHP_URL_HOST );
+	if ( $scheme ) {
+		return ( in_array( strtolower( $scheme ), array( 'http', 'https' ), true ) && wp_parse_url( home_url(), PHP_URL_HOST ) === $host ) ? $url : '';
+	}
+	return ( 0 === strpos( $url, '/' ) && 0 !== strpos( $url, '//' ) ) ? $url : ''; // Site-relative path only.
 }

@@ -161,8 +161,20 @@ function larijani_track_views() {
 	if ( preg_match( '/bot|crawl|spider|slurp|preview/i', $ua ) ) {
 		return;
 	}
+	// Browser prefetch / prerender and HEAD requests are not views.
+	$purpose = isset( $_SERVER['HTTP_SEC_PURPOSE'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_SEC_PURPOSE'] ) ) : ( isset( $_SERVER['HTTP_PURPOSE'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_PURPOSE'] ) ) : '' );
+	if ( false !== stripos( $purpose, 'prefetch' ) || ( isset( $_SERVER['REQUEST_METHOD'] ) && 'HEAD' === $_SERVER['REQUEST_METHOD'] ) || ! apply_filters( 'ls_count_views', true ) ) {
+		return;
+	}
+	global $wpdb;
 	$id = get_queried_object_id();
-	update_post_meta( $id, 'ls_views', (int) get_post_meta( $id, 'ls_views', true ) + 1 );
+	// One atomic query instead of read + write (no lost updates under load).
+	$updated = $wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->postmeta} SET meta_value = meta_value + 1 WHERE post_id = %d AND meta_key = 'ls_views'", $id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	if ( ! $updated ) {
+		add_post_meta( $id, 'ls_views', 1, true );
+	} else {
+		wp_cache_delete( $id, 'post_meta' );
+	}
 }
 add_action( 'template_redirect', 'larijani_track_views' );
 

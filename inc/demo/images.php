@@ -102,6 +102,10 @@ function larijani_demo_image( $key ) {
 	if ( is_array( $imported ) && ! empty( $imported[ $key ] ) ) {
 		return $imported[ $key ];
 	}
+	// Owner opted out of loading sample images from the external design host.
+	if ( isset( $map[ $key ] ) && larijani_opt( 'block_remote_images' ) ) {
+		return LARIJANI_URI . '/assets/images/placeholder.svg';
+	}
 	return isset( $map[ $key ] ) ? $map[ $key ] : LARIJANI_URI . '/assets/images/placeholder.svg';
 }
 

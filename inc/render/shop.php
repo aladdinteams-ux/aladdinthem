@@ -182,12 +182,7 @@ function larijani_render_catalog( $s = array() ) {
 		<h2 class="screen-reader-text"><?php esc_html_e( 'فهرست محصولات', 'larijani-stone' ); ?></h2>
 		<?php if ( $store ) : ?>
 		<div class="bg-surface-card p-space-md rounded-2xl shadow-sm mb-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
-			<form class="relative w-full md:w-96" role="search" method="get" action="<?php echo esc_url( $is_woo ? get_permalink( wc_get_page_id( 'shop' ) ) : '' ); ?>" data-ls-catalog-search>
-				<?php if ( $is_woo ) : ?><input type="hidden" name="post_type" value="product"><?php endif; ?>
-				<label class="screen-reader-text" for="ls-catalog-s"><?php esc_html_e( 'جستجو', 'larijani-stone' ); ?></label>
-				<i class="bi bi-search absolute right-3 top-1/2 -translate-y-1/2 text-outline" aria-hidden="true"></i>
-				<input id="ls-catalog-s" class="w-full bg-surface-canvas text-on-surface pr-10 pl-4 py-2.5 rounded-xl font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-all" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php echo esc_attr( $s['search_placeholder'] ); ?>" type="search" data-ls-search-input>
-			</form>
+			<?php get_search_form( array( 'ls_variant' => 'catalog', 'ls_action' => $is_woo ? get_permalink( wc_get_page_id( 'shop' ) ) : '', 'ls_woo' => $is_woo, 'ls_placeholder' => $s['search_placeholder'] ) ); ?>
 			<div class="flex flex-wrap items-center justify-between md:justify-end gap-space-md w-full md:w-auto min-w-0">
 				<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-outline">
 					<span><?php echo esc_html( $s['results_label'] ); ?></span>
@@ -233,12 +228,7 @@ function larijani_render_catalog( $s = array() ) {
 		<?php else : ?>
 		<div class="p-space-md rounded-2xl bg-surface-card shadow-sm mb-space-lg flex flex-col gap-space-md">
 			<div class="flex flex-col md:flex-row items-center justify-between gap-space-md">
-				<form class="relative w-full md:w-96" role="search" method="get" action="<?php echo esc_url( $is_woo ? get_permalink( wc_get_page_id( 'shop' ) ) : '' ); ?>" data-ls-catalog-search>
-					<?php if ( $is_woo ) : ?><input type="hidden" name="post_type" value="product"><?php endif; ?>
-					<label class="screen-reader-text" for="ls-catalog-s"><?php esc_html_e( 'جستجو', 'larijani-stone' ); ?></label>
-					<input id="ls-catalog-s" class="w-full pr-11 pl-4 py-2.5 rounded-xl bg-surface-canvas text-on-surface font-body-md text-body-md focus:bg-surface-card transition-all placeholder:text-outline" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php echo esc_attr( $s['search_placeholder'] ); ?>" type="search" data-ls-search-input>
-					<i class="bi bi-search absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-base" aria-hidden="true"></i>
-				</form>
+				<?php get_search_form( array( 'ls_variant' => 'store', 'ls_action' => $is_woo ? get_permalink( wc_get_page_id( 'shop' ) ) : '', 'ls_woo' => $is_woo, 'ls_placeholder' => $s['search_placeholder'] ) ); ?>
 				<div class="flex items-center justify-between w-full md:w-auto gap-space-sm">
 					<span class="font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap"><?php echo esc_html( $s['sort_label'] ); ?></span>
 					<div class="flex items-center gap-space-xs bg-surface-canvas p-1 rounded-xl overflow-x-auto scrollbar-none">
@@ -519,7 +509,7 @@ function larijani_render_product_detail( $d ) {
 				<?php endif; ?>
 				<a href="<?php echo esc_url( larijani_img_url( $main, 'full' ) ); ?>" target="_blank" aria-label="<?php esc_attr_e( 'بزرگ‌نمایی عکس', 'larijani-stone' ); ?>" class="absolute top-4 left-4 z-10 w-10 h-10 rounded-full bg-surface-card/90 text-on-surface hover:text-primary-container flex items-center justify-center shadow-md backdrop-blur-sm transition-all" data-ls-zoom><i class="bi bi-arrows-fullscreen text-sm" aria-hidden="true"></i></a>
 				<div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-canvas relative flex items-center justify-center">
-					<?php echo larijani_img( $main, 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-105', $d['title'], 'large', false ); // phpcs:ignore ?>
+					<?php echo larijani_img( $main, 'w-full h-full object-cover transition-transform duration-500 group-hover:scale-105', $d['title'], 'large', 'high' ); // phpcs:ignore ?>
 				</div>
 			</div>
 			<?php if ( count( $gallery ) > 1 ) : ?>

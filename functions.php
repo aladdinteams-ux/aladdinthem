@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'LARIJANI_VERSION', '1.3.0' );
+define( 'LARIJANI_VERSION', '1.4.0' );
 define( 'LARIJANI_DIR', get_template_directory() );
 define( 'LARIJANI_URI', get_template_directory_uri() );
 
@@ -34,6 +34,7 @@ require_once LARIJANI_DIR . '/inc/admin/settings.php';
 require_once LARIJANI_DIR . '/inc/admin/setup-wizard.php';
 require_once LARIJANI_DIR . '/inc/migrations.php';
 require_once LARIJANI_DIR . '/inc/compat.php';
+require_once LARIJANI_DIR . '/inc/updater.php';
 
 if ( class_exists( 'WooCommerce' ) ) {
 	require_once LARIJANI_DIR . '/inc/woocommerce.php';

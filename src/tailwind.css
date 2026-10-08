@@ -185,6 +185,7 @@ body.admin-bar .ls-site-header header.sticky, body.admin-bar.ls-has-sticky-heade
 .ls-prose > * + * { margin-top: 1.1em; }
 /* Narrow-screen strategy for content tables: scroll inside the article, never the page. */
 .ls-prose table { display: block; max-width: 100%; overflow-x: auto; }
+.ls-prose :is(input:not([type=checkbox]):not([type=radio]), select, textarea, iframe, video, embed) { max-width: 100%; } /* Third-party forms/embeds (e.g. Contact Form 7 size="40") never overflow on mobile. */
 .ls-prose .overflow-x-auto > table { display: table; }
 .ls-prose h2, .ls-prose h3, .ls-prose h4 { color: var(--ls-dark); font-weight: 900; line-height: 1.4; margin-top: 1.8em; text-align: right; }
 .ls-prose h2 { font-size: 1.5rem; }

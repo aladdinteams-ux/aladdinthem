@@ -111,7 +111,7 @@ class Larijani_Widget_Page_Hero extends Larijani_Widget_Base {
 					<div class="lg:col-span-5 relative">
 						<div class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-dark text-on-tertiary">
 							<div class="h-64 sm:h-72 w-full relative">
-								<?php echo larijani_img( $s['image'], 'w-full h-full object-cover opacity-85', '', 'large', false ); // phpcs:ignore ?>
+								<?php echo larijani_img( $s['image'], 'w-full h-full object-cover opacity-85', '', 'large', 'high' ); // phpcs:ignore ?>
 								<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/40 to-transparent"></div>
 							</div>
 							<div class="p-space-lg flex flex-col gap-space-sm relative -mt-12 bg-surface-dark/95 backdrop-blur-md rounded-t-2xl">

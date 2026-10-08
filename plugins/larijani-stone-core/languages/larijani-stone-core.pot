@@ -1,0 +1,400 @@
+# Copyright (C) Larijani Stone
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Larijani Stone Core\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: larijani-stone-core\n"
+
+#: includes/leads-admin.php:14
+msgid "اطلاعات ثبت‌شده"
+msgstr ""
+
+#: includes/leads-admin.php:28 includes/leads-admin.php:77 includes/leads-admin.php:290 includes/privacy.php:73
+msgid "فرم"
+msgstr ""
+
+#: includes/leads-admin.php:30
+msgid "صفحه ارسال"
+msgstr ""
+
+#: includes/leads-admin.php:32 includes/leads-admin.php:78 includes/leads-admin.php:290 includes/privacy.php:69
+msgid "کد پیگیری"
+msgstr ""
+
+#: includes/leads-admin.php:43
+msgid "فایل پیوست (خصوصی)"
+msgstr ""
+
+#: includes/leads-admin.php:55
+msgid "فایل پیوست (قدیمی)"
+msgstr ""
+
+#: includes/leads-admin.php:58
+msgid "این فایل هنوز در پوشه عمومی است؛ از «درخواست‌ها › تنظیمات و امنیت» آن را به فضای خصوصی منتقل کنید."
+msgstr ""
+
+#: includes/leads-admin.php:75
+msgid "عنوان"
+msgstr ""
+
+#: includes/leads-admin.php:76 includes/leads-admin.php:290
+msgid "تلفن"
+msgstr ""
+
+#: includes/leads-admin.php:79 includes/leads-admin.php:290 includes/privacy.php:77
+msgid "تاریخ"
+msgstr ""
+
+#: includes/leads-admin.php:137 includes/leads-admin.php:181
+msgid "تنظیمات و امنیت درخواست‌ها"
+msgstr ""
+
+#: includes/leads-admin.php:137
+msgid "تنظیمات و امنیت"
+msgstr ""
+
+#: includes/leads-admin.php:146 includes/leads-admin.php:281 includes/migrate.php:94
+msgid "دسترسی غیرمجاز."
+msgstr ""
+
+#: includes/leads-admin.php:183
+msgid "ذخیره شد."
+msgstr ""
+
+#: includes/leads-admin.php:189
+msgid "%1$d فایل به فضای خصوصی منتقل شد؛ %2$d مورد ناموفق."
+msgstr ""
+
+#: includes/leads-admin.php:199
+msgid "ایمیل دریافت درخواست‌ها"
+msgstr ""
+
+#: includes/leads-admin.php:201
+msgid "خالی = ایمیل تنظیم‌شده در قالب یا ایمیل مدیر سایت."
+msgstr ""
+
+#: includes/leads-admin.php:204
+msgid "بارگذاری SVG"
+msgstr ""
+
+#: includes/leads-admin.php:205
+msgid "اجازه بارگذاری SVG فقط برای مدیران کل (فایل پیش از ذخیره پاک‌سازی می‌شود)."
+msgstr ""
+
+#: includes/leads-admin.php:208
+msgid "حذف افزونه"
+msgstr ""
+
+#: includes/leads-admin.php:209
+msgid "هنگام حذف کامل افزونه، درخواست‌ها و فایل‌های خصوصی هم حذف شوند (پیش‌فرض: خاموش؛ نمونه‌کارها هرگز حذف نمی‌شوند)."
+msgstr ""
+
+#: includes/leads-admin.php:215
+msgid "وضعیت فضای خصوصی فایل‌ها"
+msgstr ""
+
+#: includes/leads-admin.php:216
+msgid "فایل‌های ارسالی مشتریان در پوشه‌ای با نام تصادفی ذخیره می‌شوند که با .htaccess و web.config محافظت شده است. روی سرور Nginx این فایل‌ها خوانده نمی‌شوند؛ با دکمه زیر بررسی کنید و در صورت نیاز ثابت LARIJANI_CORE_PRIVATE_DIR را به مسیری بیرون از پوشه عمومی در wp-config.php تعریف کنید."
+msgstr ""
+
+#: includes/leads-admin.php:218
+msgid "محافظت‌شده: فایل آزمایشی از طریق اینترنت قابل دریافت نبود."
+msgstr ""
+
+#: includes/leads-admin.php:220
+msgid "هشدار: فایل آزمایشی از طریق اینترنت قابل دریافت بود. سرور شما .htaccess را اجرا نمی‌کند؛ قانون deny برای این پوشه در Nginx اضافه کنید یا LARIJANI_CORE_PRIVATE_DIR را تعریف کنید."
+msgstr ""
+
+#: includes/leads-admin.php:222
+msgid "بررسی ممکن نشد (سرور نتوانست به خودش درخواست بدهد)."
+msgstr ""
+
+#: includes/leads-admin.php:240
+msgid "بررسی دسترسی عمومی"
+msgstr ""
+
+#: includes/leads-admin.php:242
+msgid "فایل‌های قدیمی در پوشه عمومی"
+msgstr ""
+
+#: includes/leads-admin.php:247
+msgid "%d فایل پیوست از نسخه‌های قبلی قالب در کتابخانه رسانه (با لینک عمومی) وجود دارد. انتقال، هر فایل را به فضای خصوصی کپی و پس از تطبیق هش، نسخه عمومی را حذف می‌کند."
+msgstr ""
+
+#: includes/leads-admin.php:253
+msgid "انتقال امن فایل‌ها به فضای خصوصی"
+msgstr ""
+
+#: includes/leads-admin.php:256
+msgid "فایل قدیمی عمومی وجود ندارد."
+msgstr ""
+
+#: includes/leads-admin.php:259
+msgid "خروجی"
+msgstr ""
+
+#: includes/leads-admin.php:260
+msgid "دریافت فایل CSV درخواست‌ها"
+msgstr ""
+
+#: includes/leads-admin.php:290
+msgid "ایمیل"
+msgstr ""
+
+#: includes/leads-admin.php:290
+msgid "جزئیات"
+msgstr ""
+
+#: includes/svg.php:64
+msgid "بارگذاری SVG مجاز نیست."
+msgstr ""
+
+#: includes/svg.php:70
+msgid "فایل SVG معتبر نیست یا شامل محتوای ناامن است."
+msgstr ""
+
+#: includes/migrate.php:134
+msgid "لاریجانی استون: %d فایل پیوست مشتری از نسخه قبلی هنوز لینک عمومی دارد."
+msgstr ""
+
+#: includes/migrate.php:136
+msgid "انتقال امن به فضای خصوصی"
+msgstr ""
+
+#: includes/post-types.php:21 includes/post-types.php:26
+msgid "نمونه‌کارها"
+msgstr ""
+
+#: includes/post-types.php:22
+msgid "نمونه‌کار"
+msgstr ""
+
+#: includes/post-types.php:23
+msgid "افزودن پروژه جدید"
+msgstr ""
+
+#: includes/post-types.php:24
+msgid "ویرایش پروژه"
+msgstr ""
+
+#: includes/post-types.php:25
+msgid "همه پروژه‌ها"
+msgstr ""
+
+#: includes/post-types.php:43
+msgid "دسته‌های پروژه"
+msgstr ""
+
+#: includes/post-types.php:44
+msgid "دسته پروژه"
+msgstr ""
+
+#: includes/post-types.php:57 includes/privacy.php:97
+msgid "درخواست‌ها و استعلام‌ها"
+msgstr ""
+
+#: includes/post-types.php:58
+msgid "درخواست"
+msgstr ""
+
+#: includes/post-types.php:59
+msgid "درخواست‌ها"
+msgstr ""
+
+#: includes/post-types.php:60
+msgid "جزئیات درخواست"
+msgstr ""
+
+#: includes/post-types.php:61
+msgid "جستجوی درخواست‌ها"
+msgstr ""
+
+#: includes/post-types.php:62
+msgid "درخواستی یافت نشد."
+msgstr ""
+
+#: includes/post-types.php:113
+msgid "محل اجرا (مثلاً: تهران، برج اداری پارک‌وی)"
+msgstr ""
+
+#: includes/post-types.php:114
+msgid "کد / ظرفیت (مثلاً: کد قالب: ۳D-904)"
+msgstr ""
+
+#: includes/post-types.php:115
+msgid "برچسب اول روی تصویر"
+msgstr ""
+
+#: includes/post-types.php:116
+msgid "برچسب دوم روی تصویر"
+msgstr ""
+
+#: includes/post-types.php:117
+msgid "مشخصه ۱ – عنوان"
+msgstr ""
+
+#: includes/post-types.php:118
+msgid "مشخصه ۱ – مقدار"
+msgstr ""
+
+#: includes/post-types.php:119
+msgid "مشخصه ۲ – عنوان"
+msgstr ""
+
+#: includes/post-types.php:120
+msgid "مشخصه ۲ – مقدار"
+msgstr ""
+
+#: includes/post-types.php:121
+msgid "مشخصه ۳ – عنوان"
+msgstr ""
+
+#: includes/post-types.php:122
+msgid "مشخصه ۳ – مقدار"
+msgstr ""
+
+#: includes/post-types.php:123
+msgid "یادداشت پایین کارت (مثلاً: فاقد تغییر رنگ در تابش UV)"
+msgstr ""
+
+#: includes/post-types.php:124
+msgid "آیکون یادداشت (کلاس bootstrap، مثل bi bi-patch-check-fill)"
+msgstr ""
+
+#: includes/post-types.php:133
+msgid "مشخصات پروژه (کارت نمونه‌کار)"
+msgstr ""
+
+#: includes/uploads.php:432
+msgid "شما اجازه دسترسی به این فایل را ندارید."
+msgstr ""
+
+#: includes/uploads.php:442
+msgid "فایل پیدا نشد."
+msgstr ""
+
+#: includes/privacy.php:91
+msgid "فایل پیوست"
+msgstr ""
+
+#: includes/privacy.php:139 includes/privacy.php:154
+msgid "درخواست‌های لاریجانی استون"
+msgstr ""
+
+#: includes/privacy.php:167
+msgid "لاریجانی استون – فرم‌ها"
+msgstr ""
+
+#: includes/privacy.php:168
+msgid "اطلاعاتی که در فرم‌های درخواست و استعلام وارد می‌کنید (مانند نام، شماره تماس، ایمیل، توضیحات و فایل‌های پیوست) برای پاسخ‌گویی به درخواست شما ذخیره و به ایمیل مدیر سایت ارسال می‌شود. فایل‌های پیوست در فضای خصوصی سرور نگهداری می‌شوند و لینک عمومی ندارند. برای جلوگیری از هرزنامه، نشانی IP شما به‌صورت هش‌شده (غیرقابل بازگشت) نگهداری می‌شود. برای دریافت یا حذف اطلاعات خود با مدیر سایت تماس بگیرید."
+msgstr ""
+
+#: includes/forms.php:165
+msgid "این فیلد را خالی بگذارید"
+msgstr ""
+
+#: includes/forms.php:291
+msgid "اعتبار فرم به پایان رسیده است. لطفاً صفحه را تازه کنید و دوباره ارسال کنید."
+msgstr ""
+
+#: includes/forms.php:292
+msgid "ارسال بسیار سریع بود؛ لطفاً چند لحظه صبر کنید و دوباره ارسال کنید."
+msgstr ""
+
+#: includes/forms.php:293
+msgid "تعداد درخواست‌ها زیاد است. لطفاً کمی بعد تلاش کنید یا تماس بگیرید."
+msgstr ""
+
+#: includes/forms.php:294
+msgid "فرم معتبر نیست. لطفاً صفحه را تازه کنید."
+msgstr ""
+
+#: includes/forms.php:295
+msgid "لطفاً فرم را تکمیل کنید."
+msgstr ""
+
+#: includes/forms.php:296
+msgid "ثبت درخواست در حال حاضر ممکن نشد. لطفاً دوباره تلاش کنید یا تماس بگیرید."
+msgstr ""
+
+#: includes/forms.php:297
+msgid "تعداد فایل‌ها بیش از حد مجاز است."
+msgstr ""
+
+#: includes/forms.php:298
+msgid "حجم فایل بیش از حد مجاز است."
+msgstr ""
+
+#: includes/forms.php:299
+msgid "نوع فایل مجاز نیست. فرمت‌های مجاز: JPG، PNG، WEBP، PDF، DWG و ZIP."
+msgstr ""
+
+#: includes/forms.php:300
+msgid "محتوای فایل با پسوند آن مطابقت ندارد یا فایل معیوب است."
+msgstr ""
+
+#: includes/forms.php:301
+msgid "فایل ZIP شامل موارد غیرمجاز است یا بیش از حد بزرگ است."
+msgstr ""
+
+#: includes/forms.php:302
+msgid "ارسال فایل ZIP روی این سرور پشتیبانی نمی‌شود؛ لطفاً فایل‌ها را جداگانه ارسال کنید."
+msgstr ""
+
+#: includes/forms.php:303
+msgid "بارگذاری فایل ناموفق بود."
+msgstr ""
+
+#: includes/forms.php:508
+msgid "لطفاً «%s» را تکمیل کنید."
+msgstr ""
+
+#: includes/forms.php:511
+msgid "«%s» معتبر نیست. نمونه صحیح: ۰۹۱۲۳۴۵۶۷۸۹"
+msgstr ""
+
+#: includes/forms.php:514
+msgid "«%s» یک نشانی ایمیل معتبر نیست."
+msgstr ""
+
+#: includes/forms.php:517
+msgid "لطفاً در «%s» یک شماره تماس یا ایمیل معتبر وارد کنید."
+msgstr ""
+
+#: includes/forms.php:520
+msgid "«%s» باید عدد باشد."
+msgstr ""
+
+#: includes/forms.php:523
+msgid "متن «%s» بیش از حد طولانی است."
+msgstr ""
+
+#: includes/forms.php:527
+msgid "مقدار انتخاب‌شده برای «%s» معتبر نیست."
+msgstr ""
+
+#: includes/forms.php:599
+msgid "فرم تماس"
+msgstr ""
+
+#: includes/forms.php:711
+msgid "کد پیگیری:"
+msgstr ""
+
+#: includes/forms.php:713
+msgid "صفحه:"
+msgstr ""
+
+#: includes/forms.php:717
+msgid "%d فایل پیوست به‌صورت خصوصی ذخیره شد و فقط از پیشخوان قابل دریافت است."
+msgid_plural "%d فایل پیوست به‌صورت خصوصی ذخیره شد و فقط از پیشخوان قابل دریافت است."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/forms.php:719
+msgid "مشاهده در پیشخوان"
+msgstr ""
+

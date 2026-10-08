@@ -69,17 +69,7 @@ function larijani_render_blog_hero( $s = array() ) {
 				<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed mb-8"><?php echo esc_html( $desc ); ?></p>
 				<?php endif; ?>
 				<?php if ( 'yes' === $s['show_search'] ) : ?>
-				<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="w-full max-w-2xl bg-surface-card rounded-2xl shadow-sm p-2 flex flex-col sm:flex-row items-center gap-2 mb-8">
-					<input type="hidden" name="post_type" value="post">
-					<label class="flex items-center gap-3 w-full px-3 py-2 flex-1">
-						<i class="bi bi-search text-outline text-lg" aria-hidden="true"></i>
-						<span class="screen-reader-text"><?php esc_html_e( 'جستجو', 'larijani-stone' ); ?></span>
-						<input class="w-full bg-transparent border-0 p-0 focus:ring-0 text-on-surface placeholder:text-outline font-body-md text-body-md" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php echo esc_attr( $s['search_placeholder'] ); ?>" type="search">
-					</label>
-					<button class="w-full sm:w-auto px-6 py-3 rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm hover:bg-primary transition-all flex items-center justify-center gap-2 shadow-sm flex-shrink-0" type="submit">
-						<span><?php echo esc_html( $s['search_button'] ); ?></span><i class="bi bi-arrow-left" aria-hidden="true"></i>
-					</button>
-				</form>
+				<?php get_search_form( array( 'ls_variant' => 'blog', 'ls_placeholder' => $s['search_placeholder'], 'ls_button' => $s['search_button'] ) ); ?>
 				<?php endif; ?>
 				<?php if ( 'yes' === $s['show_cats'] && $cats ) : ?>
 				<div class="w-full flex items-center justify-center gap-2 flex-wrap">
@@ -722,7 +712,7 @@ function larijani_render_post_hero( $s = array() ) {
 			<?php $hero_img = 'yes' === $s['show_image'] ? larijani_post_image_url( $post_id, 'ls-wide' ) : ''; ?>
 			<?php if ( $hero_img ) : ?>
 			<div class="relative w-full rounded-3xl overflow-hidden shadow-xl aspect-[16/9] sm:aspect-[21/9] max-h-[520px]">
-				<?php echo larijani_img( $hero_img, 'w-full h-full object-cover', get_the_title( $post_id ), 'ls-wide', false ); // phpcs:ignore ?>
+				<?php echo larijani_img( $hero_img, 'w-full h-full object-cover', get_the_title( $post_id ), 'ls-wide', 'high' ); // phpcs:ignore ?>
 				<?php if ( $caption || $ibadge ) : ?>
 				<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/80 via-surface-dark/20 to-transparent"></div>
 				<div class="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 left-4 sm:left-6 flex flex-wrap items-center justify-between gap-4 text-on-primary">

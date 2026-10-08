@@ -28,7 +28,7 @@ msgstr ""
 msgid "مسیر صفحه"
 msgstr ""
 
-#: woocommerce/single-product.php:59 inc/render/shop.php:690
+#: woocommerce/single-product.php:59 inc/render/shop.php:680
 msgid "دستورالعمل و فرمولاسیون اختصاصی"
 msgstr ""
 
@@ -60,23 +60,15 @@ msgstr ""
 msgid "ممکن است آدرس تغییر کرده باشد. از جستجو استفاده کنید یا به صفحه اصلی برگردید."
 msgstr ""
 
-#: 404.php:23
-msgid "جستجو در سایت…"
-msgstr ""
-
-#: 404.php:24 searchform.php:16 inc/render/shop.php:187 inc/render/shop.php:238
-msgid "جستجو"
-msgstr ""
-
-#: 404.php:27 inc/admin/settings.php:305 inc/template-functions.php:98 inc/template-functions.php:113
+#: 404.php:23 inc/admin/settings.php:412 inc/template-functions.php:98 inc/template-functions.php:113
 msgid "صفحه اصلی"
 msgstr ""
 
-#: 404.php:28 inc/template-functions.php:103 inc/demo/importer.php:1200
+#: 404.php:24 inc/template-functions.php:103 inc/demo/importer.php:1260
 msgid "تماس با ما"
 msgstr ""
 
-#: taxonomy-ls_project_cat.php:13 archive-ls_project.php:13 inc/post-types.php:22
+#: taxonomy-ls_project_cat.php:13 archive-ls_project.php:13
 msgid "همه پروژه‌ها"
 msgstr ""
 
@@ -88,11 +80,43 @@ msgstr ""
 msgid "پروژه"
 msgstr ""
 
-#: searchform.php:12
+#: searchform.php:15 searchform.php:22 searchform.php:48 searchform.php:70
+msgid "جستجو"
+msgstr ""
+
+#: searchform.php:21
+msgid "جستجو در سایت…"
+msgstr ""
+
+#: searchform.php:40
+msgid "جستجو در محصولات، قالب‌ها و مقالات…"
+msgstr ""
+
+#: searchform.php:42
+msgid "محدوده جستجو"
+msgstr ""
+
+#: searchform.php:43 inc/template-functions.php:378 inc/elementor/widgets/catalog.php:40 inc/elementor/widgets/products.php:125
+msgid "همه"
+msgstr ""
+
+#: searchform.php:44 inc/elementor/widgets/catalog.php:61 inc/elementor/widgets/products.php:121
+msgid "محصولات"
+msgstr ""
+
+#: searchform.php:45
+msgid "مقالات"
+msgstr ""
+
+#: searchform.php:49 inc/migrations.php:93
+msgid "بستن"
+msgstr ""
+
+#: searchform.php:66
 msgid "جستجو برای:"
 msgstr ""
 
-#: searchform.php:14
+#: searchform.php:68
 msgid "جستجو…"
 msgstr ""
 
@@ -252,7 +276,7 @@ msgstr ""
 msgid "لینکدین (لینک)"
 msgstr ""
 
-#: inc/customizer.php:55 inc/elementor/widgets/header.php:53 inc/post-types.php:312
+#: inc/customizer.php:55 inc/elementor/widgets/header.php:53 inc/post-types.php:194
 msgid "طرح هدر"
 msgstr ""
 
@@ -333,35 +357,115 @@ msgid "نمایش تعداد بازدید"
 msgstr ""
 
 #: inc/customizer.php:82
+msgid "عدم بارگذاری تصاویر نمونه از سرور خارجی طراحی (تا وقتی تصاویر خودتان را جایگزین کنید، جای آن‌ها تصویر ساده نمایش داده می‌شود)"
+msgstr ""
+
+#: inc/customizer.php:83
 msgid "ایمیل دریافت درخواست‌ها (خالی = ایمیل مدیر)"
 msgstr ""
 
-#: inc/customizer.php:98
+#: inc/customizer.php:88
+msgid "فونت سایت"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "وزیرمتن (همراه قالب، طرح اصلی)"
+msgstr ""
+
+#: inc/customizer.php:92
+msgid "فونت سیستم (Tahoma / Segoe UI؛ بدون دانلود فونت)"
+msgstr ""
+
+#: inc/customizer.php:93
+msgid "فونت دلخواه (فایل WOFF2 خودتان)"
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "نشانی فایل فونت دلخواه (WOFF2 یا WOFF، بارگذاری‌شده در همین سایت)"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "اندازه تیترها"
+msgstr ""
+
+#: inc/customizer.php:101 inc/customizer.php:110 inc/customizer.php:119 inc/customizer.php:128
+msgid "۱۰۰٪ (طرح اصلی)"
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "اندازه متن‌ها"
+msgstr ""
+
+#: inc/customizer.php:115
+msgid "ضریب اندازه فونت در تبلت (۷۶۸ تا ۱۰۲۳ پیکسل)"
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "ضریب اندازه فونت در موبایل (کمتر از ۷۶۸ پیکسل)"
+msgstr ""
+
+#: inc/customizer.php:136
+msgid "عرض محتوای صفحات قالب"
+msgstr ""
+
+#: inc/customizer.php:141
+msgid "۱۲۸۰px (طرح اصلی)"
+msgstr ""
+
+#: inc/customizer.php:149
+msgid "گردی گوشه دکمه‌ها"
+msgstr ""
+
+#: inc/customizer.php:152
+msgid "طرح اصلی"
+msgstr ""
+
+#: inc/customizer.php:153
+msgid "بدون گردی"
+msgstr ""
+
+#: inc/customizer.php:154
+msgid "کم (۶px)"
+msgstr ""
+
+#: inc/customizer.php:155
+msgid "متوسط (۱۲px)"
+msgstr ""
+
+#: inc/customizer.php:156
+msgid "کپسولی"
+msgstr ""
+
+#: inc/customizer.php:174
 msgid "تنظیمات قالب لاریجانی"
 msgstr ""
 
-#: inc/customizer.php:104 inc/admin/settings.php:22
+#: inc/customizer.php:180 inc/admin/settings.php:22
 msgid "برند و رنگ‌ها"
 msgstr ""
 
-#: inc/customizer.php:105
+#: inc/customizer.php:181
 msgid "اطلاعات تماس و شبکه‌های اجتماعی"
 msgstr ""
 
-#: inc/customizer.php:106 inc/admin/settings.php:24 inc/admin/settings.php:107 inc/theme-builder.php:70
+#: inc/customizer.php:182 inc/admin/settings.php:24 inc/admin/settings.php:108 inc/theme-builder.php:70
 msgid "هدر"
 msgstr ""
 
-#: inc/customizer.php:107 inc/admin/settings.php:25 inc/admin/settings.php:108 inc/theme-builder.php:71
+#: inc/customizer.php:183 inc/admin/settings.php:25 inc/admin/settings.php:109 inc/theme-builder.php:71
 msgid "فوتر"
 msgstr ""
 
-#: inc/customizer.php:108 inc/admin/settings.php:26 inc/template-functions.php:146 inc/template-functions.php:149
+#: inc/customizer.php:184 inc/admin/settings.php:26 inc/template-functions.php:146 inc/template-functions.php:149
 msgid "وبلاگ"
 msgstr ""
 
-#: inc/customizer.php:109
+#: inc/customizer.php:185
 msgid "فرم‌ها و درخواست‌ها"
+msgstr ""
+
+#: inc/customizer.php:186 inc/admin/settings.php:28
+msgid "تایپوگرافی و چیدمان"
 msgstr ""
 
 #: inc/admin/settings.php:21
@@ -376,204 +480,472 @@ msgstr ""
 msgid "فرم‌ها"
 msgstr ""
 
-#: inc/admin/settings.php:28
+#: inc/admin/settings.php:29
 msgid "تم‌بیلدر"
 msgstr ""
 
-#: inc/admin/settings.php:37 inc/admin/settings.php:342
+#: inc/admin/settings.php:38 inc/admin/settings.php:449
 msgid "تنظیمات قالب لاریجانی استون"
 msgstr ""
 
-#: inc/admin/settings.php:38 inc/elementor/loader.php:104 inc/elementor/loader.php:180
+#: inc/admin/settings.php:39 inc/elementor/loader.php:104 inc/elementor/loader.php:180
 msgid "لاریجانی استون"
 msgstr ""
 
-#: inc/admin/settings.php:45 inc/admin/settings.php:45 inc/demo/importer.php:437
+#: inc/admin/settings.php:46 inc/admin/settings.php:46 inc/demo/importer.php:444
 msgid "تنظیمات قالب"
 msgstr ""
 
-#: inc/admin/settings.php:46 inc/admin/settings.php:46
+#: inc/admin/settings.php:47 inc/admin/settings.php:47
 msgid "منوها"
 msgstr ""
 
-#: inc/admin/settings.php:47 inc/admin/settings.php:47
+#: inc/admin/settings.php:48 inc/admin/settings.php:48
 msgid "سفارشی‌سازی زنده"
 msgstr ""
 
-#: inc/admin/settings.php:109 inc/theme-builder.php:72
+#: inc/admin/settings.php:110 inc/theme-builder.php:72
 msgid "تک‌نوشته (مقاله)"
 msgstr ""
 
-#: inc/admin/settings.php:110 inc/theme-builder.php:73
+#: inc/admin/settings.php:111 inc/theme-builder.php:73
 msgid "آرشیو وبلاگ / جستجو"
 msgstr ""
 
-#: inc/admin/settings.php:111 inc/theme-builder.php:74
+#: inc/admin/settings.php:112 inc/theme-builder.php:74
 msgid "تک‌محصول ووکامرس"
 msgstr ""
 
-#: inc/admin/settings.php:112 inc/theme-builder.php:75
+#: inc/admin/settings.php:113 inc/theme-builder.php:75
 msgid "فروشگاه و دسته‌های محصول"
 msgstr ""
 
-#: inc/admin/settings.php:113 inc/theme-builder.php:76
+#: inc/admin/settings.php:114 inc/theme-builder.php:76
 msgid "تک‌پروژه (نمونه‌کار)"
 msgstr ""
 
-#: inc/admin/settings.php:114 inc/theme-builder.php:77
+#: inc/admin/settings.php:115 inc/theme-builder.php:77
 msgid "برگه‌های بدون المنتور"
 msgstr ""
 
-#: inc/admin/settings.php:115 inc/theme-builder.php:78
+#: inc/admin/settings.php:116 inc/theme-builder.php:78
 msgid "صفحه ۴۰۴"
 msgstr ""
 
-#: inc/admin/settings.php:130
+#: inc/admin/settings.php:131
 msgid "— قالب پیش‌فرض پوسته —"
 msgstr ""
 
-#: inc/admin/settings.php:151
+#: inc/admin/settings.php:152 inc/admin/settings.php:231 inc/admin/settings.php:252
 msgid "شما اجازه تغییر تنظیمات قالب را ندارید."
 msgstr ""
 
-#: inc/admin/settings.php:229 inc/admin/settings.php:309
-msgid "ویرایش با المنتور"
+#: inc/admin/settings.php:280
+msgid "بازنشانی تنظیمات"
 msgstr ""
 
-#: inc/admin/settings.php:233
-msgid "انتخاب تصویر"
-msgstr ""
-
-#: inc/admin/settings.php:249
-msgid "المنتور"
-msgstr ""
-
-#: inc/admin/settings.php:249
-msgid "لازم برای ویرایش بصری صفحات (بدون آن، صفحات با همان طرح نمایش داده می‌شوند ولی قابل ویرایش بصری نیستند)."
-msgstr ""
-
-#: inc/admin/settings.php:250
-msgid "المنتور پرو"
-msgstr ""
-
-#: inc/admin/settings.php:250
-msgid "اختیاری؛ برای شرط‌های نمایش تم‌بیلدر. بدون آن تب «تم‌بیلدر» همین کار را انجام می‌دهد."
-msgstr ""
-
-#: inc/admin/settings.php:251 inc/elementor/widgets/catalog.php:37 inc/demo/importer.php:465
-msgid "ووکامرس"
-msgstr ""
-
-#: inc/admin/settings.php:251
-msgid "اختیاری؛ برای فروشگاه، سبد خرید و قیمت پلکانی."
-msgstr ""
-
-#: inc/admin/settings.php:267
-msgid "افزونه‌های مرتبط"
-msgstr ""
-
-#: inc/admin/settings.php:272
-msgid "فعال"
-msgstr ""
-
-#: inc/admin/settings.php:272
-msgid "غیرفعال"
-msgstr ""
-
-#: inc/admin/settings.php:275
-msgid "نصب / فعال‌سازی"
-msgstr ""
-
-#: inc/admin/settings.php:282
-msgid "درخواست‌های مشتریان"
-msgstr ""
-
-#: inc/admin/settings.php:284
-msgid "فرم‌های تماس، مشاوره و استعلام قیمت در این بخش ذخیره و به ایمیل شما ارسال می‌شوند."
+#: inc/admin/settings.php:281
+msgid "همه تنظیمات قالب (رنگ‌ها، تماس، هدر، فوتر، تایپوگرافی و تم‌بیلدر) به حالت اولیه طرح برمی‌گردد. برگه‌ها، منوها و محتوای سایت تغییر نمی‌کنند و یک نسخه پشتیبان از مقادیر فعلی نگه داشته می‌شود."
 msgstr ""
 
 #: inc/admin/settings.php:285
-msgid "مشاهده درخواست‌ها"
+msgid "همه تنظیمات قالب به پیش‌فرض برگردد؟ (قابل بازگردانی است)"
 msgstr ""
 
-#: inc/admin/settings.php:288
-msgid "راه‌اندازی خودکار"
+#: inc/admin/settings.php:285
+msgid "بازنشانی همه تنظیمات"
 msgstr ""
 
-#: inc/admin/settings.php:290
-msgid "برگه‌ها و منوهای قالب در %s ساخته شدند."
+#: inc/admin/settings.php:291
+msgid "بازگردانی تنظیمات قبل از بازنشانی (%s)"
 msgstr ""
 
-#: inc/admin/settings.php:292
-msgid "هنوز برگه‌های قالب ساخته نشده‌اند."
+#: inc/admin/settings.php:332 inc/admin/settings.php:416
+msgid "ویرایش با المنتور"
 msgstr ""
 
-#: inc/admin/settings.php:294
-msgid "راه‌اندازی / ساخت مجدد برگه‌ها"
+#: inc/admin/settings.php:336
+msgid "انتخاب تصویر"
 msgstr ""
 
-#: inc/admin/settings.php:299
-msgid "برگه‌ها و قالب‌های ساخته‌شده توسط پوسته"
+#: inc/admin/settings.php:352
+msgid "المنتور"
 msgstr ""
 
-#: inc/admin/settings.php:301 inc/elementor/widgets/sidebar-cta.php:35 inc/elementor/widgets/about.php:31 inc/elementor/widgets/about.php:45
-msgid "عنوان"
+#: inc/admin/settings.php:352
+msgid "لازم برای ویرایش بصری صفحات (بدون آن، صفحات با همان طرح نمایش داده می‌شوند ولی قابل ویرایش بصری نیستند)."
 msgstr ""
 
-#: inc/admin/settings.php:301 inc/elementor/widgets/lead-form.php:90
-msgid "نوع"
+#: inc/admin/settings.php:353
+msgid "المنتور پرو"
 msgstr ""
 
-#: inc/admin/settings.php:301
-msgid "عملیات"
+#: inc/admin/settings.php:353
+msgid "اختیاری؛ برای شرط‌های نمایش تم‌بیلدر. بدون آن تب «تم‌بیلدر» همین کار را انجام می‌دهد."
 msgstr ""
 
-#: inc/admin/settings.php:306
-msgid "برگه"
+#: inc/admin/settings.php:354 inc/elementor/widgets/catalog.php:37 inc/demo/importer.php:472
+msgid "ووکامرس"
 msgstr ""
 
-#: inc/admin/settings.php:306
-msgid "قالب المنتور"
-msgstr ""
-
-#: inc/admin/settings.php:312
-msgid "مشاهده"
-msgstr ""
-
-#: inc/admin/settings.php:343
-msgid "همه تنظیمات اینجا با «نمایش › سفارشی‌سازی» هماهنگ است و بلافاصله روی سایت و ویجت‌های المنتور اعمال می‌شود."
-msgstr ""
-
-#: inc/admin/settings.php:347
-msgid "تنظیمات این بخش به حالت پیش‌فرض برگشت."
-msgstr ""
-
-#: inc/admin/settings.php:347
-msgid "تنظیمات ذخیره شد."
+#: inc/admin/settings.php:354
+msgid "اختیاری؛ برای فروشگاه، سبد خرید و قیمت پلکانی."
 msgstr ""
 
 #: inc/admin/settings.php:370
-msgid "المنتور پرو فعال است: شرط‌های نمایش قالب‌ها را از «قالب‌ها › تم‌بیلدر» مدیریت کنید. انتخاب‌های زیر فقط وقتی استفاده می‌شوند که برای آن بخش شرط پرو تعریف نشده باشد."
+msgid "افزونه‌های مرتبط"
 msgstr ""
 
-#: inc/admin/settings.php:371
-msgid "بدون المنتور پرو هم می‌توانید برای هدر، فوتر، نوشته‌ها، آرشیو، محصولات و ۴۰۴ یک قالب ذخیره‌شده المنتور انتخاب کنید."
+#: inc/admin/settings.php:375 inc/admin/setup-wizard.php:46 inc/admin/setup-wizard.php:49 inc/admin/setup-wizard.php:50
+msgid "فعال"
+msgstr ""
+
+#: inc/admin/settings.php:375 inc/admin/setup-wizard.php:46 inc/admin/setup-wizard.php:49
+msgid "غیرفعال"
+msgstr ""
+
+#: inc/admin/settings.php:378
+msgid "نصب / فعال‌سازی"
 msgstr ""
 
 #: inc/admin/settings.php:385
-msgid "ذخیره تنظیمات"
+msgid "درخواست‌های مشتریان"
 msgstr ""
 
-#: inc/admin/settings.php:386
-msgid "تنظیمات این بخش به پیش‌فرض برگردد؟"
+#: inc/admin/settings.php:388
+msgid "فرم‌های تماس، مشاوره و استعلام قیمت در این بخش ذخیره و به ایمیل شما ارسال می‌شوند."
 msgstr ""
 
-#: inc/admin/settings.php:386
-msgid "بازگشت به پیش‌فرض"
+#: inc/admin/settings.php:389
+msgid "مشاهده درخواست‌ها"
+msgstr ""
+
+#: inc/admin/settings.php:391
+msgid "برای ذخیره امن درخواست‌ها و فایل‌های مشتریان، افزونه همراه «Larijani Stone Core» را نصب و فعال کنید."
+msgstr ""
+
+#: inc/admin/settings.php:395
+msgid "راه‌اندازی خودکار"
+msgstr ""
+
+#: inc/admin/settings.php:397
+msgid "برگه‌ها و منوهای قالب در %s ساخته شدند."
+msgstr ""
+
+#: inc/admin/settings.php:399
+msgid "هنوز برگه‌های قالب ساخته نشده‌اند."
+msgstr ""
+
+#: inc/admin/settings.php:401
+msgid "راه‌اندازی / ساخت مجدد برگه‌ها"
 msgstr ""
 
 #: inc/admin/settings.php:406
+msgid "برگه‌ها و قالب‌های ساخته‌شده توسط پوسته"
+msgstr ""
+
+#: inc/admin/settings.php:408 inc/elementor/widgets/sidebar-cta.php:35 inc/elementor/widgets/about.php:31 inc/elementor/widgets/about.php:45
+msgid "عنوان"
+msgstr ""
+
+#: inc/admin/settings.php:408 inc/elementor/widgets/lead-form.php:90
+msgid "نوع"
+msgstr ""
+
+#: inc/admin/settings.php:408
+msgid "عملیات"
+msgstr ""
+
+#: inc/admin/settings.php:413
+msgid "برگه"
+msgstr ""
+
+#: inc/admin/settings.php:413
+msgid "قالب المنتور"
+msgstr ""
+
+#: inc/admin/settings.php:419
+msgid "مشاهده"
+msgstr ""
+
+#: inc/admin/settings.php:450
+msgid "همه تنظیمات اینجا با «نمایش › سفارشی‌سازی» هماهنگ است و بلافاصله روی سایت و ویجت‌های المنتور اعمال می‌شود."
+msgstr ""
+
+#: inc/admin/settings.php:454
+msgid "تنظیمات به حالت پیش‌فرض برگشت. نسخه قبلی از «پیشخوان قالب › بازنشانی تنظیمات» قابل بازگردانی است."
+msgstr ""
+
+#: inc/admin/settings.php:454
+msgid "تنظیمات قبلی بازگردانی شد."
+msgstr ""
+
+#: inc/admin/settings.php:454
+msgid "تنظیمات ذخیره شد."
+msgstr ""
+
+#: inc/admin/settings.php:480
+msgid "المنتور پرو فعال است: شرط‌های نمایش قالب‌ها را از «قالب‌ها › تم‌بیلدر» مدیریت کنید. انتخاب‌های زیر فقط وقتی استفاده می‌شوند که برای آن بخش شرط پرو تعریف نشده باشد."
+msgstr ""
+
+#: inc/admin/settings.php:481
+msgid "بدون المنتور پرو هم می‌توانید برای هدر، فوتر، نوشته‌ها، آرشیو، محصولات و ۴۰۴ یک قالب ذخیره‌شده المنتور انتخاب کنید."
+msgstr ""
+
+#: inc/admin/settings.php:487
+msgid "لوگو و آیکون سایت (فاوآیکن) از تنظیمات استاندارد وردپرس خوانده می‌شوند:"
+msgstr ""
+
+#: inc/admin/settings.php:488
+msgid "تغییر لوگو"
+msgstr ""
+
+#: inc/admin/settings.php:489
+msgid "تغییر آیکون سایت"
+msgstr ""
+
+#: inc/admin/settings.php:493
+msgid "مقادیر «طرح اصلی» ظاهر فعلی قالب را دقیقاً حفظ می‌کنند. این تنظیمات روی بخش‌های قالب و ویجت‌های لاریجانی اعمال می‌شود؛ تنظیماتی که در تب Style المنتور برای یک ویجت مشخص کرده‌اید همیشه اولویت دارند. عرض بخش‌های کانتینری المنتور از تنظیمات هر بخش در المنتور تعیین می‌شود."
+msgstr ""
+
+#: inc/admin/settings.php:505
+msgid "ذخیره تنظیمات"
+msgstr ""
+
+#: inc/admin/settings.php:506
+msgid "تنظیمات این بخش به پیش‌فرض برگردد؟"
+msgstr ""
+
+#: inc/admin/settings.php:506
+msgid "بازگشت به پیش‌فرض"
+msgstr ""
+
+#: inc/admin/settings.php:526
 msgid "تنظیمات لاریجانی"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:34
+msgid "نسخه PHP"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:34
+msgid "حداقل ۷٫۴، پیشنهادی ۸٫۱ یا بالاتر"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:35
+msgid "نسخه وردپرس"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:35
+msgid "حداقل ۶٫۵"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:36
+msgid "حافظه PHP (memory_limit)"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:36
+msgid "حداقل 128M، پیشنهادی 256M برای المنتور"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:37
+msgid "حداکثر زمان اجرا"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:37
+msgid "نامحدود"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:37
+msgid "پیشنهادی ۱۲۰ ثانیه برای درون‌ریزی دمو"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:38
+msgid "حداکثر حجم بارگذاری"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:38
+msgid "پیشنهادی 32M برای فایل‌های پیوست فرم‌ها (DWG/ZIP)"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:40
+msgid "لازم برای متن فارسی"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:41
+msgid "لازم برای پاک‌سازی SVG"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:42
+msgid "لازم برای بررسی نوع فایل‌های ارسالی"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:43
+msgid "لازم برای بررسی فایل‌های ZIP و نصب افزونه"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:44
+msgid "برای نصب افزونه‌ها و دانلود تصاویر"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:46
+msgid "افزونه PHP: %s"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:49
+msgid "پردازش تصویر (GD یا Imagick)"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:49
+msgid "برای ساخت اندازه‌های تصاویر"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:50
+msgid "پیوند یکتا"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:50
+msgid "ساده"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:50
+msgid "برای نشانی‌های فارسی و سئو"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:52
+msgid "امکان نصب افزونه"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:52 inc/elementor/class-widget-base.php:194 inc/elementor/widgets/lead-form.php:195
+msgid "بله"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:52 inc/elementor/class-widget-base.php:195
+msgid "خیر"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:52
+msgid "در غیر این صورت افزونه‌ها را دستی بارگذاری کنید"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:68
+msgid "افزونه همراه قالب: نمونه‌کارها، درخواست‌ها، فرم‌های امن و نگهداری خصوصی فایل‌های مشتری. همراه قالب ارائه می‌شود."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:76
+msgid "رایگان؛ برای ویرایش بصری برگه‌ها. بدون آن برگه‌ها با همان طرح نمایش داده می‌شوند."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:84
+msgid "اختیاری؛ فقط اگر فروشگاه آنلاین لازم دارید."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:114
+msgid "شما اجازه نصب افزونه را ندارید."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:130
+msgid "بسته نصب در دسترس نیست (اتصال به wordpress.org یا فایل همراه قالب)."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:136
+msgid "نصب انجام نشد. ممکن است دسترسی نوشتن یا اطلاعات FTP لازم باشد."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:258
+msgid "دسترسی غیرمجاز."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:322
+msgid "درون‌ریزی قبلی برگردانده شد: %1$d مورد ساخته‌شده حذف شد، تنظیمات قبلی بازگردانی شد. %2$d مورد که پس از درون‌ریزی ویرایش شده بود حفظ شد."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:370
+msgid "افزونه %s نصب و فعال شد."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:370
+msgid "نصب افزونه ناموفق بود: %s"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:376
+msgid "۱. بررسی نیازمندی‌های سرور"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:384
+msgid "۲. افزونه‌ها"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:385
+msgid "هیچ افزونه‌ای بدون کلیک شما نصب یا فعال نمی‌شود. المنتور پرو لازم نیست؛ اگر نسخه قانونی آن را دارید، قالب از تم‌بیلدر آن هم پشتیبانی می‌کند."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:392
+msgid "لازم"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:392
+msgid "اختیاری"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:402
+msgid "فعال‌سازی"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:402
+msgid "نصب و فعال‌سازی"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:405
+msgid "نیازمند دسترسی مدیر کل"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:426
+msgid "آخرین درون‌ریزی"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:430
+msgid "با موفقیت انجام شد."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:432
+msgid "کامل نشد."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:432
+msgid "اجرا قطع شد (احتمالاً محدودیت زمان یا حافظه سرور)."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:432
+msgid "می‌توانید موارد ساخته‌شده را برگردانید و دوباره اجرا کنید."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:434
+msgid "برگردانده شده است."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:436
+msgid "در حال اجرا…"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:445
+msgid "موارد ساخته‌شده در آخرین درون‌ریزی حذف و تنظیمات قبلی بازگردانی شود؟ محتوای قبلی شما و مواردی که بعد از درون‌ریزی ویرایش کرده‌اید حفظ می‌شوند."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:446
+msgid "برگرداندن آخرین درون‌ریزی (%d مورد)"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:466
+msgid "لاریجانی استون:"
+msgstr ""
+
+#: inc/admin/setup-wizard.php:467
+msgid "افزونه همراه «Larijani Stone Core» فعال نیست؛ تا فعال‌سازی آن فرم‌های سایت درخواست ثبت نمی‌کنند و نمونه‌کارها مدیریت نمی‌شوند. محتوای قبلی شما حذف نشده است."
+msgstr ""
+
+#: inc/admin/setup-wizard.php:469
+msgid "نصب افزونه همراه"
 msgstr ""
 
 #: inc/theme-builder.php:35
@@ -620,15 +992,15 @@ msgstr ""
 msgid "دسته‌بندی‌های منوی موبایل"
 msgstr ""
 
-#: inc/setup.php:65 inc/demo/importer.php:1213
+#: inc/setup.php:65 inc/demo/importer.php:1273
 msgid "فوتر – دسترسی سریع"
 msgstr ""
 
-#: inc/setup.php:66 inc/demo/importer.php:1224
+#: inc/setup.php:66 inc/demo/importer.php:1284
 msgid "فوتر – دسته‌بندی تجهیزات"
 msgstr ""
 
-#: inc/setup.php:67 inc/demo/importer.php:1235
+#: inc/setup.php:67 inc/demo/importer.php:1295
 msgid "فوتر – لینک‌های پایین"
 msgstr ""
 
@@ -648,11 +1020,11 @@ msgstr ""
 msgid "فیلترهای ووکامرس (قیمت، ویژگی‌ها و …) را اینجا قرار دهید."
 msgstr ""
 
-#: inc/setup.php:195
+#: inc/setup.php:193
 msgid "برگه‌های قالب لاریجانی استون ساخته شده‌اند و نمایش داده می‌شوند؛ برای ویرایش بصری آن‌ها افزونه رایگان المنتور را نصب کنید."
 msgstr ""
 
-#: inc/setup.php:197
+#: inc/setup.php:195
 msgid "نصب المنتور"
 msgstr ""
 
@@ -664,23 +1036,19 @@ msgstr ""
 msgid "راه‌اندازی و درون‌ریزی"
 msgstr ""
 
-#: inc/migrations.php:93 inc/render/header.php:294
-msgid "بستن"
-msgstr ""
-
-#: inc/template-functions.php:99 inc/elementor/widgets/product-detail.php:203 inc/demo/importer.php:1196
+#: inc/template-functions.php:99 inc/elementor/widgets/product-detail.php:203 inc/demo/importer.php:1256
 msgid "فروشگاه و کاتالوگ"
 msgstr ""
 
-#: inc/template-functions.php:100 inc/render/footer.php:56 inc/demo/importer.php:1197 inc/demo/importer.php:1217
+#: inc/template-functions.php:100 inc/render/footer.php:56 inc/demo/importer.php:1257 inc/demo/importer.php:1277
 msgid "خدمات و خطوط تولید"
 msgstr ""
 
-#: inc/template-functions.php:101 inc/template-functions.php:156 inc/render/footer.php:57 inc/demo/importer.php:1198
+#: inc/template-functions.php:101 inc/template-functions.php:156 inc/render/footer.php:57 inc/demo/importer.php:1258
 msgid "نمونه کارها"
 msgstr ""
 
-#: inc/template-functions.php:102 inc/demo/importer.php:600 inc/demo/importer.php:1199
+#: inc/template-functions.php:102 inc/demo/importer.php:628 inc/demo/importer.php:1259
 msgid "وبلاگ تخصصی"
 msgstr ""
 
@@ -726,10 +1094,6 @@ msgstr ""
 
 #: inc/template-functions.php:299 inc/render/blog.php:707 inc/elementor/dynamic-tags.php:119
 msgid "لینکدین"
-msgstr ""
-
-#: inc/template-functions.php:378 inc/render/header.php:288 inc/elementor/widgets/catalog.php:40 inc/elementor/widgets/products.php:125
-msgid "همه"
 msgstr ""
 
 #: inc/template-functions.php:422
@@ -868,35 +1232,35 @@ msgstr ""
 msgid "آیکون (کلاس Bootstrap Icons، مثل bi bi-grid-3x3-gap)"
 msgstr ""
 
-#: inc/render/footer.php:55 inc/demo/importer.php:1216
+#: inc/render/footer.php:55 inc/demo/importer.php:1276
 msgid "فروشگاه قالب‌های نشکن"
 msgstr ""
 
-#: inc/render/footer.php:58 inc/demo/importer.php:1219
+#: inc/render/footer.php:58 inc/demo/importer.php:1279
 msgid "فرمولاسیون و مقالات"
 msgstr ""
 
-#: inc/render/footer.php:59 inc/demo/importer.php:1220
+#: inc/render/footer.php:59 inc/demo/importer.php:1280
 msgid "تماس با واحد فروش"
 msgstr ""
 
-#: inc/render/footer.php:65 inc/demo/importer.php:1226
+#: inc/render/footer.php:65 inc/demo/importer.php:1286
 msgid "قالب کفپوش و سنگفرش"
 msgstr ""
 
-#: inc/render/footer.php:66 inc/demo/importer.php:1227
+#: inc/render/footer.php:66 inc/demo/importer.php:1287
 msgid "قالب جدول و دورباغچه"
 msgstr ""
 
-#: inc/render/footer.php:67 inc/demo/importer.php:1228
+#: inc/render/footer.php:67 inc/demo/importer.php:1288
 msgid "قالب نما و صراحی رومی"
 msgstr ""
 
-#: inc/render/footer.php:68 inc/demo/importer.php:1230
+#: inc/render/footer.php:68 inc/demo/importer.php:1290
 msgid "رزین روان‌کننده بتن"
 msgstr ""
 
-#: inc/render/footer.php:69 inc/demo/importer.php:1231
+#: inc/render/footer.php:69 inc/demo/importer.php:1291
 msgid "رنگدانه‌های معدنی اکسید آهن"
 msgstr ""
 
@@ -904,15 +1268,15 @@ msgstr ""
 msgid "روغن قالب پایه گیاهی"
 msgstr ""
 
-#: inc/render/footer.php:76 inc/demo/importer.php:1237
+#: inc/render/footer.php:76 inc/demo/importer.php:1297
 msgid "قوانین و ضمانت محصولات"
 msgstr ""
 
-#: inc/render/footer.php:77 inc/demo/importer.php:1238
+#: inc/render/footer.php:77 inc/demo/importer.php:1298
 msgid "حریم خصوصی"
 msgstr ""
 
-#: inc/render/footer.php:78 inc/demo/importer.php:1239
+#: inc/render/footer.php:78 inc/demo/importer.php:1299
 msgid "نقشه سایت"
 msgstr ""
 
@@ -1004,167 +1368,167 @@ msgstr ""
 msgid "فهرست محصولات"
 msgstr ""
 
-#: inc/render/shop.php:202
+#: inc/render/shop.php:197
 msgid "پیشنهاد کارخانه (پرفروش‌ترین)"
 msgstr ""
 
-#: inc/render/shop.php:203
+#: inc/render/shop.php:198
 msgid "ارزان‌ترین متریال"
 msgstr ""
 
-#: inc/render/shop.php:204
+#: inc/render/shop.php:199
 msgid "گران‌ترین ماشین‌آلات"
 msgstr ""
 
-#: inc/render/shop.php:205
+#: inc/render/shop.php:200
 msgid "جدیدترین محصولات"
 msgstr ""
 
-#: inc/render/shop.php:205
+#: inc/render/shop.php:200
 msgid "بر اساس نام محصول"
 msgstr ""
 
-#: inc/render/shop.php:281
+#: inc/render/shop.php:271
 msgid "دسته‌بندی محصولات"
 msgstr ""
 
-#: inc/render/shop.php:294
+#: inc/render/shop.php:284
 msgid "از"
 msgstr ""
 
-#: inc/render/shop.php:295 inc/render/shop.php:333
+#: inc/render/shop.php:285 inc/render/shop.php:323
 msgid "تا"
 msgstr ""
 
-#: inc/render/shop.php:302 inc/render/shop.php:338
+#: inc/render/shop.php:292 inc/render/shop.php:328
 msgid "اعمال"
 msgstr ""
 
-#: inc/render/shop.php:332
+#: inc/render/shop.php:322
 msgid "از %s تومان"
 msgstr ""
 
-#: inc/render/shop.php:333
+#: inc/render/shop.php:323
 msgid "تومان"
 msgstr ""
 
-#: inc/render/shop.php:337
+#: inc/render/shop.php:327
 msgid "نمایش کلیه سفارشات"
 msgstr ""
 
-#: inc/render/shop.php:366
+#: inc/render/shop.php:356
 msgid "محصولی مطابق با جستجوی شما یافت نشد!"
 msgstr ""
 
-#: inc/render/shop.php:367
+#: inc/render/shop.php:357
 msgid "عبارت دیگری را امتحان کنید یا برای استعلام با ما تماس بگیرید."
 msgstr ""
 
-#: inc/render/shop.php:427
+#: inc/render/shop.php:417
 msgid "موجود در انبار"
 msgstr ""
 
-#: inc/render/shop.php:427
+#: inc/render/shop.php:417
 msgid "ناموجود – تماس بگیرید"
 msgstr ""
 
-#: inc/render/shop.php:435
+#: inc/render/shop.php:425
 msgid "پرفروش‌ترین طرح سال"
 msgstr ""
 
-#: inc/render/shop.php:443
+#: inc/render/shop.php:433
 msgid "قیمت هر عدد (تک‌فروشی):"
 msgstr ""
 
-#: inc/render/shop.php:448 inc/render/shop.php:485
+#: inc/render/shop.php:438 inc/render/shop.php:475
 msgid "مترمربع"
 msgstr ""
 
-#: inc/render/shop.php:470
+#: inc/render/shop.php:460
 msgid "کد فنی:"
 msgstr ""
 
-#: inc/render/shop.php:483
+#: inc/render/shop.php:473
 msgid "تخفیف تیراژ کارخانه‌ای"
 msgstr ""
 
-#: inc/render/shop.php:487
+#: inc/render/shop.php:477
 msgid "تعداد:"
 msgstr ""
 
-#: inc/render/shop.php:488
+#: inc/render/shop.php:478
 msgid "سطح تولید:"
 msgstr ""
 
-#: inc/render/shop.php:489
+#: inc/render/shop.php:479
 msgid "مجموع:"
 msgstr ""
 
-#: inc/render/shop.php:490
+#: inc/render/shop.php:480
 msgid "افزودن به سبد خرید"
 msgstr ""
 
-#: inc/render/shop.php:491
+#: inc/render/shop.php:481
 msgid "مشاوره تیراژ و خط تولید"
 msgstr ""
 
-#: inc/render/shop.php:520
+#: inc/render/shop.php:510
 msgid "بزرگ‌نمایی عکس"
 msgstr ""
 
-#: inc/render/shop.php:528
+#: inc/render/shop.php:518
 msgid "تصویر %d"
 msgstr ""
 
-#: inc/render/shop.php:565 inc/elementor/fallback.php:513
+#: inc/render/shop.php:555 inc/elementor/fallback.php:513
 msgid "امتیاز %s از ۵"
 msgstr ""
 
-#: inc/render/shop.php:571
+#: inc/render/shop.php:561
 msgid "(%s تجربه ثبت‌شده کارگاه‌های تولیدی)"
 msgstr ""
 
-#: inc/render/shop.php:596
+#: inc/render/shop.php:586
 msgid "استعلام قیمت تلفنی"
 msgstr ""
 
-#: inc/render/shop.php:603
+#: inc/render/shop.php:593
 msgid "بالای %s عدد:"
 msgstr ""
 
-#: inc/render/shop.php:620
+#: inc/render/shop.php:610
 msgid "افزایش"
 msgstr ""
 
-#: inc/render/shop.php:621 inc/elementor/widgets/sidebar-tags.php:35 inc/elementor/widgets/sidebar-popular.php:36 inc/elementor/widgets/related-posts.php:35
+#: inc/render/shop.php:611 inc/elementor/widgets/sidebar-tags.php:35 inc/elementor/widgets/sidebar-popular.php:36 inc/elementor/widgets/related-posts.php:35
 msgid "تعداد"
 msgstr ""
 
-#: inc/render/shop.php:622
+#: inc/render/shop.php:612
 msgid "کاهش"
 msgstr ""
 
-#: inc/render/shop.php:648 inc/render/components.php:204
+#: inc/render/shop.php:638 inc/render/components.php:204
 msgid "نشان کردن محصول"
 msgstr ""
 
-#: inc/render/shop.php:680
+#: inc/render/shop.php:670
 msgid "مشخصات فنی و متریال"
 msgstr ""
 
-#: inc/render/shop.php:688
+#: inc/render/shop.php:678
 msgid "دانلود برگه مشخصات فنی PDF"
 msgstr ""
 
-#: inc/render/shop.php:697
+#: inc/render/shop.php:687
 msgid "دیدگاه‌ها و تجربیات کارگاه‌ها"
 msgstr ""
 
-#: inc/render/shop.php:703
+#: inc/render/shop.php:693
 msgid "ثبت تجربه و عکس تولیدی شما"
 msgstr ""
 
-#: inc/render/shop.php:810
+#: inc/render/shop.php:800
 msgid "بر اساس %s نظر رسمی خریداران کارگاهی"
 msgstr ""
 
@@ -1184,83 +1548,83 @@ msgstr ""
 msgid "آرشیو جامع مقالات، دانشنامه و راهنمای فنی سنگ مصنوعی و بتن پلیمری"
 msgstr ""
 
-#: inc/render/blog.php:132
+#: inc/render/blog.php:122
 msgid "مقاله ویژه تحریریه"
 msgstr ""
 
-#: inc/render/blog.php:135
+#: inc/render/blog.php:125
 msgid "مطالعه مقاله کامل"
 msgstr ""
 
-#: inc/render/blog.php:177 inc/render/components.php:501 inc/elementor/dynamic-tags.php:199
+#: inc/render/blog.php:167 inc/render/components.php:501 inc/elementor/dynamic-tags.php:199
 msgid "%s دقیقه مطالعه"
 msgstr ""
 
-#: inc/render/blog.php:180
+#: inc/render/blog.php:170
 msgid "%s بازدید"
 msgstr ""
 
-#: inc/render/blog.php:238 inc/render/components.php:498
+#: inc/render/blog.php:228 inc/render/components.php:498
 msgid "ادامه مطلب تخصصی"
 msgstr ""
 
-#: inc/render/blog.php:239
+#: inc/render/blog.php:229
 msgid "مطلبی یافت نشد."
 msgstr ""
 
-#: inc/render/blog.php:281
+#: inc/render/blog.php:271
 msgid "نمایش %1$s تا %2$s از %3$s نوشتار تخصصی"
 msgstr ""
 
-#: inc/render/blog.php:319
+#: inc/render/blog.php:309
 msgid "ویرایش زمستان ۱۴۰۴"
 msgstr ""
 
-#: inc/render/blog.php:320
+#: inc/render/blog.php:310
 msgid "هندبوک جامع جداول اختلاط بتن سمنت‌پلاست"
 msgstr ""
 
-#: inc/render/blog.php:321
+#: inc/render/blog.php:311
 msgid "شامل ۱۲ فرمول آزمون‌شده آزمایشگاهی بر اساس نوع سیمان، فصول سرد و گرم، و جداول عیار پیگمنت‌های معدنی اکسید آهن."
 msgstr ""
 
-#: inc/render/blog.php:322
+#: inc/render/blog.php:312
 msgid "دانلود مستقیم فایل PDF (۱۴ مگابایت)"
 msgstr ""
 
-#: inc/render/blog.php:351
+#: inc/render/blog.php:341
 msgid "مباحث پرطرفدار کارگاه‌ها"
 msgstr ""
 
-#: inc/render/blog.php:373
+#: inc/render/blog.php:363
 msgid "%s مطالعه"
 msgstr ""
 
-#: inc/render/blog.php:410
+#: inc/render/blog.php:400
 msgid "پیامک و خبرنامه عیب‌یابی فرمولاسیون"
 msgstr ""
 
-#: inc/render/blog.php:412
+#: inc/render/blog.php:402
 msgid "نکات هفتگی حل مسائل کارگاهی (ترک‌خوردگی، چسبیدن به قالب، دیرگیر شدن بتن در سرما) مستقیماً به موبایل شما ارسال می‌شود."
 msgstr ""
 
-#: inc/render/blog.php:413
+#: inc/render/blog.php:403
 msgid "شماره تماس همراه (مثال: ۰۹۱۲۳۴۵۶۷۸۹)"
 msgstr ""
 
-#: inc/render/blog.php:414
+#: inc/render/blog.php:404
 msgid "عضویت رایگان در شبکه کارگاهی"
 msgstr ""
 
-#: inc/render/blog.php:415
+#: inc/render/blog.php:405
 msgid "بدون ارسال پیام‌های تبلیغاتی تکراری"
 msgstr ""
 
-#: inc/render/blog.php:416
+#: inc/render/blog.php:406
 msgid "شماره شما با موفقیت برای دریافت پیامک‌های فنی ثبت شد."
 msgstr ""
 
-#: inc/render/blog.php:425 inc/render/blog.php:426
+#: inc/render/blog.php:419 inc/render/blog.php:426
 msgid "شماره همراه"
 msgstr ""
 
@@ -1412,19 +1776,19 @@ msgstr ""
 msgid "پیام در واتساپ"
 msgstr ""
 
-#: inc/render/header.php:74 inc/demo/importer.php:1206
+#: inc/render/header.php:74 inc/demo/importer.php:1266
 msgid "قالب کفپوش"
 msgstr ""
 
-#: inc/render/header.php:75 inc/demo/importer.php:1207
+#: inc/render/header.php:75 inc/demo/importer.php:1267
 msgid "میز ویبره سنگین"
 msgstr ""
 
-#: inc/render/header.php:76 inc/demo/importer.php:1208
+#: inc/render/header.php:76 inc/demo/importer.php:1268
 msgid "قالب صراحی و نما"
 msgstr ""
 
-#: inc/render/header.php:77 inc/demo/importer.php:1209
+#: inc/render/header.php:77 inc/demo/importer.php:1269
 msgid "رزین روان‌کننده"
 msgstr ""
 
@@ -1432,7 +1796,7 @@ msgstr ""
 msgid "پشتیبانی فنی:"
 msgstr ""
 
-#: inc/render/header.php:158 inc/elementor/widgets/header.php:77 inc/demo/importer.php:1193
+#: inc/render/header.php:158 inc/elementor/widgets/header.php:77 inc/demo/importer.php:1253
 msgid "منوی اصلی"
 msgstr ""
 
@@ -1454,18 +1818,6 @@ msgstr ""
 
 #: inc/render/header.php:223
 msgid "بستن منو"
-msgstr ""
-
-#: inc/render/header.php:285
-msgid "جستجو در محصولات، قالب‌ها و مقالات…"
-msgstr ""
-
-#: inc/render/header.php:289 inc/elementor/widgets/catalog.php:61 inc/elementor/widgets/products.php:121
-msgid "محصولات"
-msgstr ""
-
-#: inc/render/header.php:290
-msgid "مقالات"
 msgstr ""
 
 #: inc/render/components.php:188
@@ -1570,14 +1922,6 @@ msgstr ""
 
 #: inc/elementor/loader.php:150
 msgid "Bootstrap Icons"
-msgstr ""
-
-#: inc/elementor/class-widget-base.php:194 inc/elementor/widgets/lead-form.php:183
-msgid "بله"
-msgstr ""
-
-#: inc/elementor/class-widget-base.php:195
-msgid "خیر"
 msgstr ""
 
 #: inc/elementor/class-widget-base.php:272 inc/elementor/widgets/about.php:30 inc/elementor/widgets/performance.php:30
@@ -2392,7 +2736,7 @@ msgstr ""
 msgid "شناسه نوشته (خالی = نوشته «ویژه تحریریه» یا آخرین نوشته)"
 msgstr ""
 
-#: inc/elementor/widgets/featured-post.php:36 inc/post-types.php:191
+#: inc/elementor/widgets/featured-post.php:36 inc/post-types.php:131
 msgid "سمت نویسنده"
 msgstr ""
 
@@ -2484,11 +2828,11 @@ msgstr ""
 msgid "تیره با حاشیه"
 msgstr ""
 
-#: inc/elementor/widgets/cta.php:70 inc/helpers.php:444
+#: inc/elementor/widgets/cta.php:70 inc/helpers.php:454
 msgid "سفید"
 msgstr ""
 
-#: inc/elementor/widgets/cta.php:73 inc/post-types.php:242 inc/post-types.php:269
+#: inc/elementor/widgets/cta.php:73
 msgid "فرم"
 msgstr ""
 
@@ -2516,7 +2860,7 @@ msgstr ""
 msgid "چیدمان"
 msgstr ""
 
-#: inc/elementor/widgets/cta.php:121 inc/elementor/widgets/cta.php:123 inc/elementor/widgets/cta.php:126
+#: inc/elementor/widgets/cta.php:125 inc/elementor/widgets/cta.php:134 inc/elementor/widgets/cta.php:137
 msgid "شماره تماس"
 msgstr ""
 
@@ -2672,27 +3016,27 @@ msgstr ""
 msgid "کد / ظرفیت"
 msgstr ""
 
-#: inc/elementor/widgets/portfolio.php:65 inc/elementor/widgets/products.php:49 inc/post-types.php:103
+#: inc/elementor/widgets/portfolio.php:65 inc/elementor/widgets/products.php:49
 msgid "مشخصه ۱ – عنوان"
 msgstr ""
 
-#: inc/elementor/widgets/portfolio.php:66 inc/elementor/widgets/products.php:50 inc/post-types.php:104
+#: inc/elementor/widgets/portfolio.php:66 inc/elementor/widgets/products.php:50
 msgid "مشخصه ۱ – مقدار"
 msgstr ""
 
-#: inc/elementor/widgets/portfolio.php:67 inc/elementor/widgets/products.php:51 inc/post-types.php:105
+#: inc/elementor/widgets/portfolio.php:67 inc/elementor/widgets/products.php:51
 msgid "مشخصه ۲ – عنوان"
 msgstr ""
 
-#: inc/elementor/widgets/portfolio.php:68 inc/elementor/widgets/products.php:52 inc/post-types.php:106
+#: inc/elementor/widgets/portfolio.php:68 inc/elementor/widgets/products.php:52
 msgid "مشخصه ۲ – مقدار"
 msgstr ""
 
-#: inc/elementor/widgets/portfolio.php:69 inc/elementor/widgets/products.php:53 inc/post-types.php:107
+#: inc/elementor/widgets/portfolio.php:69 inc/elementor/widgets/products.php:53
 msgid "مشخصه ۳ – عنوان"
 msgstr ""
 
-#: inc/elementor/widgets/portfolio.php:70 inc/post-types.php:108
+#: inc/elementor/widgets/portfolio.php:70
 msgid "مشخصه ۳ – مقدار"
 msgstr ""
 
@@ -3224,7 +3568,7 @@ msgstr ""
 msgid "نام فرم (برای شناسایی در درخواست‌ها)"
 msgstr ""
 
-#: inc/elementor/widgets/lead-form.php:90 inc/elementor/widgets/header.php:66 inc/post-types.php:268
+#: inc/elementor/widgets/lead-form.php:90 inc/elementor/widgets/header.php:66
 msgid "تلفن"
 msgstr ""
 
@@ -3316,7 +3660,7 @@ msgstr ""
 msgid "از {tracking} برای نمایش کد پیگیری استفاده کنید."
 msgstr ""
 
-#: inc/elementor/widgets/lead-form.php:176
+#: inc/elementor/widgets/lead-form.php:188
 msgid "انتخاب فایل از سیستم یا کشیدن به این بخش"
 msgstr ""
 
@@ -4020,368 +4364,280 @@ msgstr ""
 msgid "فقط آیکون در موبایل"
 msgstr ""
 
-#: inc/post-types.php:18 inc/post-types.php:23
+#: inc/post-types.php:47
 msgid "نمونه‌کارها"
 msgstr ""
 
-#: inc/post-types.php:19
+#: inc/post-types.php:48
 msgid "نمونه‌کار"
 msgstr ""
 
-#: inc/post-types.php:20
-msgid "افزودن پروژه جدید"
-msgstr ""
-
-#: inc/post-types.php:21
-msgid "ویرایش پروژه"
-msgstr ""
-
-#: inc/post-types.php:40
+#: inc/post-types.php:63
 msgid "دسته‌های پروژه"
 msgstr ""
 
-#: inc/post-types.php:41
-msgid "دسته پروژه"
-msgstr ""
-
-#: inc/post-types.php:54
+#: inc/post-types.php:73
 msgid "درخواست‌ها و استعلام‌ها"
 msgstr ""
 
-#: inc/post-types.php:55
-msgid "درخواست"
-msgstr ""
-
-#: inc/post-types.php:56
-msgid "درخواست‌ها"
-msgstr ""
-
-#: inc/post-types.php:57
-msgid "جزئیات درخواست"
-msgstr ""
-
-#: inc/post-types.php:99
-msgid "محل اجرا (مثلاً: تهران، برج اداری پارک‌وی)"
-msgstr ""
-
-#: inc/post-types.php:100
-msgid "کد / ظرفیت (مثلاً: کد قالب: ۳D-904)"
-msgstr ""
-
-#: inc/post-types.php:101
-msgid "برچسب اول روی تصویر"
-msgstr ""
-
-#: inc/post-types.php:102
-msgid "برچسب دوم روی تصویر"
-msgstr ""
-
-#: inc/post-types.php:109
-msgid "یادداشت پایین کارت (مثلاً: فاقد تغییر رنگ در تابش UV)"
-msgstr ""
-
-#: inc/post-types.php:110
-msgid "آیکون یادداشت (کلاس bootstrap، مثل bi bi-patch-check-fill)"
-msgstr ""
-
-#: inc/post-types.php:118
-msgid "مشخصات پروژه (کارت نمونه‌کار)"
-msgstr ""
-
-#: inc/post-types.php:119
-msgid "اطلاعات ثبت‌شده"
-msgstr ""
-
-#: inc/post-types.php:120
+#: inc/post-types.php:98
 msgid "تنظیمات مقاله (قالب لاریجانی)"
 msgstr ""
 
-#: inc/post-types.php:172
+#: inc/post-types.php:112
 msgid "مقاله ویژه تحریریه (نمایش در بالای آرشیو)"
 msgstr ""
 
-#: inc/post-types.php:176
+#: inc/post-types.php:116
 msgid "زمان مطالعه (دقیقه، خالی = خودکار)"
 msgstr ""
 
-#: inc/post-types.php:181
+#: inc/post-types.php:121
 msgid "کپشن روی تصویر شاخص"
 msgstr ""
 
-#: inc/post-types.php:186
+#: inc/post-types.php:126
 msgid "برچسب گوشه تصویر شاخص (مثل کد استاندارد)"
 msgstr ""
 
-#: inc/post-types.php:190
+#: inc/post-types.php:130
 msgid "نام نویسنده نمایشی (خالی = کاربر)"
 msgstr ""
 
-#: inc/post-types.php:197
+#: inc/post-types.php:137
 msgid "معرفی کوتاه نویسنده"
 msgstr ""
 
-#: inc/post-types.php:202
+#: inc/post-types.php:142
 msgid "کارت‌های شاخص زیر تصویر (هر خط یک کارت)"
 msgstr ""
 
-#: inc/post-types.php:203
+#: inc/post-types.php:143
 msgid "عنوان | مقدار | واحد | آیکون | رنگ | یادداشت | آیکون یادداشت"
 msgstr ""
 
-#: inc/post-types.php:243
-msgid "صفحه ارسال"
-msgstr ""
-
-#: inc/post-types.php:244
-msgid "کد پیگیری"
-msgstr ""
-
-#: inc/post-types.php:252 inc/forms.php:219
-msgid "فایل پیوست"
-msgstr ""
-
-#: inc/post-types.php:295
+#: inc/post-types.php:177
 msgid "تنظیمات برگه (قالب لاریجانی)"
 msgstr ""
 
-#: inc/post-types.php:308
+#: inc/post-types.php:190
 msgid "طبق تنظیمات قالب"
 msgstr ""
 
-#: inc/post-types.php:309
+#: inc/post-types.php:191
 msgid "هدر با نوار بالای تیره"
 msgstr ""
 
-#: inc/post-types.php:310
+#: inc/post-types.php:192
 msgid "هدر کلاسیک با نوار بالای روشن"
 msgstr ""
 
-#: inc/helpers.php:409
+#: inc/helpers.php:419
 msgid "آبی کبالت"
 msgstr ""
 
-#: inc/helpers.php:411
+#: inc/helpers.php:421
 msgid "روشن"
 msgstr ""
 
-#: inc/helpers.php:442
+#: inc/helpers.php:452
 msgid "بدون پس‌زمینه"
 msgstr ""
 
-#: inc/helpers.php:443
+#: inc/helpers.php:453
 msgid "کرم سنگی (Canvas)"
 msgstr ""
 
-#: inc/helpers.php:445
+#: inc/helpers.php:455
 msgid "سفید با خط مرزی"
 msgstr ""
 
-#: inc/helpers.php:446
+#: inc/helpers.php:456
 msgid "Surface"
 msgstr ""
 
-#: inc/helpers.php:447
+#: inc/helpers.php:457
 msgid "آبی-خاکستری ملایم"
 msgstr ""
 
-#: inc/demo/importer.php:279
+#: inc/demo/importer.php:286
 msgid "مقالات عمومی"
 msgstr ""
 
-#: inc/demo/importer.php:434
+#: inc/demo/importer.php:441
 msgid "قالب لاریجانی استون فعال شد و برگه‌ها، منوها و صفحه اصلی به‌صورت خودکار ساخته شدند."
 msgstr ""
 
-#: inc/demo/importer.php:435
+#: inc/demo/importer.php:442
 msgid "تنظیمات قالب در منوی «لاریجانی استون» پیشخوان است."
 msgstr ""
 
-#: inc/demo/importer.php:439
+#: inc/demo/importer.php:446
 msgid "مشاهده سایت"
 msgstr ""
 
-#: inc/demo/importer.php:445
+#: inc/demo/importer.php:452
 msgid "قالب لاریجانی استون فعال شد."
 msgstr ""
 
-#: inc/demo/importer.php:446
+#: inc/demo/importer.php:453
 msgid "برای ساخت خودکار صفحات، منوها و قالب‌های تم‌بیلدر:"
 msgstr ""
 
-#: inc/demo/importer.php:448
+#: inc/demo/importer.php:455
 msgid "راه‌اندازی یک‌کلیکی"
 msgstr ""
 
-#: inc/demo/importer.php:463
+#: inc/demo/importer.php:470
 msgid "المنتور (رایگان)"
 msgstr ""
 
-#: inc/demo/importer.php:464
+#: inc/demo/importer.php:471
 msgid "المنتور پرو (تم‌بیلدر)"
 msgstr ""
 
-#: inc/demo/importer.php:469
+#: inc/demo/importer.php:476
 msgid "راه‌اندازی قالب لاریجانی استون"
 msgstr ""
 
-#: inc/demo/importer.php:474
-msgid "وضعیت افزونه‌ها"
-msgstr ""
-
-#: inc/demo/importer.php:480
-msgid "المنتور رایگان برای ویرایش بصری لازم است. با المنتور پرو، قالب‌های هدر، فوتر، تک‌نوشته، آرشیو، محصول و فروشگاه با شرط نمایش در تم‌بیلدر ثبت می‌شوند. بدون پرو، همین قالب‌ها از طریق «سفارشی‌سازی › تنظیمات قالب لاریجانی › تم‌بیلدر» به سایت متصل می‌شوند."
-msgstr ""
-
 #: inc/demo/importer.php:484
-msgid "درون‌ریزی دمو"
+msgid "۳. درون‌ریزی دمو"
 msgstr ""
 
 #: inc/demo/importer.php:485
-msgid "برگه‌ها (اصلی، اصلی کلاسیک، خدمات، نمونه‌کارها، فروشگاه/کاتالوگ، تماس، وبلاگ، نمونه محصول)"
-msgstr ""
-
-#: inc/demo/importer.php:486
-msgid "بازسازی چیدمان برگه‌ها و قالب‌هایی که قبلاً توسط قالب ساخته شده‌اند با نسخه جدید (ویجت‌های بومی المنتور). عنوان، نشانی و منوها حفظ می‌شوند و چیدمان قبلی پشتیبان‌گیری می‌شود؛ تغییرات دستی شما در آن برگه‌ها جایگزین می‌شود."
-msgstr ""
-
-#: inc/demo/importer.php:487
-msgid "تنظیم «صفحه اصلی» و «وبلاگ تخصصی» به‌عنوان صفحه نخست و صفحه نوشته‌ها"
-msgstr ""
-
-#: inc/demo/importer.php:488
-msgid "قالب‌های تم‌بیلدر (هدر، فوتر، تک‌نوشته، آرشیو، محصول، فروشگاه، ۴۰۴)"
-msgstr ""
-
-#: inc/demo/importer.php:489
-msgid "اتصال قالب‌های تم‌بیلدر به سایت (شرط نمایش پرو یا تنظیمات سفارشی‌سازی)"
-msgstr ""
-
-#: inc/demo/importer.php:490
-msgid "منوها (اصلی، موبایل، فوتر)"
+msgid "درون‌ریزی فقط محتوای جدید می‌سازد؛ برگه‌ها، نوشته‌ها، محصولات و منوهای موجود شما حذف یا بازنویسی نمی‌شوند. منوها فقط به جایگاه‌های خالی متصل می‌شوند و قالب‌های تم‌بیلدر فقط وقتی متصل می‌شوند که برای آن بخش قالب دیگری انتخاب نکرده باشید. هر اجرا ثبت می‌شود و قابل برگرداندن است."
 msgstr ""
 
 #: inc/demo/importer.php:491
-msgid "مقالات نمونه وبلاگ"
+msgid "برگه‌ها (اصلی، اصلی کلاسیک، خدمات، نمونه‌کارها، فروشگاه/کاتالوگ، تماس، وبلاگ، نمونه محصول)"
 msgstr ""
 
 #: inc/demo/importer.php:492
-msgid "نمونه‌کارهای نمونه"
+msgid "بازسازی چیدمان برگه‌ها و قالب‌هایی که قبلاً توسط قالب ساخته شده‌اند با نسخه جدید (ویجت‌های بومی المنتور). عنوان، نشانی و منوها حفظ می‌شوند و چیدمان قبلی پشتیبان‌گیری می‌شود؛ تغییرات دستی شما در آن برگه‌ها جایگزین می‌شود."
+msgstr ""
+
+#: inc/demo/importer.php:493
+msgid "تنظیم «صفحه اصلی» و «وبلاگ تخصصی» به‌عنوان صفحه نخست و صفحه نوشته‌ها"
 msgstr ""
 
 #: inc/demo/importer.php:494
-msgid "محصولات نمونه ووکامرس"
+msgid "صفحه نخست فعلی سایت شما «%s» است؛ فقط در صورتی تیک بزنید که می‌خواهید جایگزین شود."
+msgstr ""
+
+#: inc/demo/importer.php:495
+msgid "قالب‌های تم‌بیلدر (هدر، فوتر، تک‌نوشته، آرشیو، محصول، فروشگاه، ۴۰۴)"
 msgstr ""
 
 #: inc/demo/importer.php:496
-msgid "کپی تصاویر طرح در کتابخانه رسانه (نیازمند دسترسی سرور به اینترنت)"
+msgid "اتصال قالب‌های تم‌بیلدر به سایت (شرط نمایش پرو یا تنظیمات سفارشی‌سازی)"
 msgstr ""
 
 #: inc/demo/importer.php:497
-msgid "رنگ‌ها و فونت سراسری المنتور (Site Settings)"
+msgid "منوها (اصلی، موبایل، فوتر)"
 msgstr ""
 
 #: inc/demo/importer.php:498
-msgid "شروع راه‌اندازی"
+msgid "مقالات نمونه وبلاگ"
 msgstr ""
 
 #: inc/demo/importer.php:499
-msgid "برگه‌ها و قالب‌های موجود با همین نامک بازنویسی نمی‌شوند؛ اجرای دوباره امن است."
+msgid "نمونه‌کارهای نمونه"
 msgstr ""
 
-#: inc/demo/importer.php:502
-msgid "فایل‌های قالب المنتور (JSON)"
+#: inc/demo/importer.php:501
+msgid "محصولات نمونه ووکامرس"
 msgstr ""
 
 #: inc/demo/importer.php:503
+msgid "کپی تصاویر طرح در کتابخانه رسانه (نیازمند دسترسی سرور به اینترنت)"
+msgstr ""
+
+#: inc/demo/importer.php:504
+msgid "رنگ‌ها و فونت سراسری المنتور (Site Settings)"
+msgstr ""
+
+#: inc/demo/importer.php:505
+msgid "شروع راه‌اندازی"
+msgstr ""
+
+#: inc/demo/importer.php:506
+msgid "برگه‌ها و قالب‌های موجود با همین نامک بازنویسی نمی‌شوند؛ اجرای دوباره امن است."
+msgstr ""
+
+#: inc/demo/importer.php:509
+msgid "فایل‌های قالب المنتور (JSON)"
+msgstr ""
+
+#: inc/demo/importer.php:510
 msgid "در پوشه elementor-templates قالب، فایل JSON همه صفحات و بخش‌ها قرار دارد. از «قالب‌ها › قالب‌های ذخیره‌شده › درون‌ریزی» می‌توانید آن‌ها را جداگانه وارد کنید."
 msgstr ""
 
-#: inc/demo/importer.php:559
-msgid "%d تصویر در کتابخانه رسانه کپی شد."
-msgstr ""
-
 #: inc/demo/importer.php:564
-msgid "رنگ‌ها و فونت سراسری المنتور تنظیم شد."
+msgid "خطا در هنگام ساخت محتوا."
 msgstr ""
 
 #: inc/demo/importer.php:568
+msgid "درون‌ریزی کامل نشد. موارد ساخته‌شده را می‌توانید از بخش «آخرین درون‌ریزی» برگردانید و دوباره تلاش کنید. جزئیات فنی در لاگ خطای سرور (در حالت اشکال‌زدایی) ثبت شده است."
+msgstr ""
+
+#: inc/demo/importer.php:587
+msgid "%d تصویر در کتابخانه رسانه کپی شد."
+msgstr ""
+
+#: inc/demo/importer.php:592
+msgid "رنگ‌ها و فونت سراسری المنتور تنظیم شد."
+msgstr ""
+
+#: inc/demo/importer.php:596
 msgid "قابلیت «کانتینر» المنتور (پیش‌فرض نسخه‌های جدید) فعال شد؛ چیدمان برگه‌ها با کانتینر ساخته می‌شود."
 msgstr ""
 
-#: inc/demo/importer.php:601
+#: inc/demo/importer.php:629
 msgid "%d برگه ساخته/به‌روز شد."
 msgstr ""
 
-#: inc/demo/importer.php:604
+#: inc/demo/importer.php:632
 msgid "چیدمان %d برگه با نسخه جدید (ویجت‌های بومی المنتور) بازسازی شد؛ نسخه قبلی پشتیبان‌گیری شد."
 msgstr ""
 
-#: inc/demo/importer.php:610
+#: inc/demo/importer.php:638
 msgid "صفحه اصلی و صفحه نوشته‌ها تنظیم شدند."
 msgstr ""
 
-#: inc/demo/importer.php:633
+#: inc/demo/importer.php:661
 msgid "%d قالب تم‌بیلدر ساخته شد."
 msgstr ""
 
-#: inc/demo/importer.php:637
+#: inc/demo/importer.php:665
 msgid "%d مقاله نمونه ساخته شد."
 msgstr ""
 
-#: inc/demo/importer.php:640
+#: inc/demo/importer.php:669
 msgid "%d نمونه‌کار ساخته شد."
 msgstr ""
 
-#: inc/demo/importer.php:643
+#: inc/demo/importer.php:671
+msgid "نمونه‌کارها ساخته نشدند: افزونه همراه «Larijani Stone Core» فعال نیست. پس از فعال‌سازی آن، راه‌اندازی را دوباره اجرا کنید (موارد موجود تکراری ساخته نمی‌شوند)."
+msgstr ""
+
+#: inc/demo/importer.php:675
 msgid "%d محصول نمونه ساخته شد."
 msgstr ""
 
-#: inc/demo/importer.php:647
+#: inc/demo/importer.php:679
 msgid "منوها ساخته و به جایگاه‌ها متصل شدند."
 msgstr ""
 
-#: inc/demo/importer.php:1204
+#: inc/demo/importer.php:1264
 msgid "دسته‌بندی‌های موبایل"
 msgstr ""
 
-#: inc/demo/importer.php:1229
+#: inc/demo/importer.php:1289
 msgid "میز ویبره و ماشین‌آلات"
 msgstr ""
 
-#: inc/forms.php:44
-msgid "ارسال بسیار سریع بود؛ لطفاً دوباره تلاش کنید."
-msgstr ""
-
-#: inc/forms.php:51
-msgid "تعداد درخواست‌ها زیاد است. لطفاً چند دقیقه دیگر تلاش کنید یا تماس بگیرید."
-msgstr ""
-
-#: inc/forms.php:55
-msgid "فرم تماس"
-msgstr ""
-
-#: inc/forms.php:90
-msgid "لطفاً فرم را تکمیل کنید."
-msgstr ""
-
-#: inc/forms.php:93
-msgid "شماره تماس معتبر نیست."
-msgstr ""
-
-#: inc/forms.php:108
-msgid "ذخیره درخواست ممکن نشد."
-msgstr ""
-
-#: inc/forms.php:214
-msgid "کد پیگیری:"
-msgstr ""
-
-#: inc/forms.php:216
-msgid "صفحه:"
-msgstr ""
-
-#: inc/forms.php:221
-msgid "مشاهده در پیشخوان"
+#: inc/forms.php:41
+msgid "ارسال فرم در حال حاضر فعال نیست. لطفاً از طریق تلفن با ما تماس بگیرید."
 msgstr ""
 
 #: header.php:22

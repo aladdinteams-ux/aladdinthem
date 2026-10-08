@@ -37,6 +37,7 @@ function larijani_option_defaults() {
 		'ls_font_scale_mobile'   => '100',
 		'ls_container_width'     => '1280',
 		'ls_button_radius'       => '',
+		'ls_block_remote_images' => false,
 		// Contact.
 		'ls_phone_1'         => '09122302685',
 		'ls_phone_1_label'   => 'مشاوره خط تولید',
@@ -270,7 +271,7 @@ function larijani_img_url( $media, $size = 'large' ) {
  * @param string $class Classes.
  * @param string $alt   Alt text.
  * @param string $size  Size.
- * @param bool   $lazy  Lazy load.
+ * @param bool|string $lazy Lazy load; false = eager, 'high' = eager + fetchpriority (hero / LCP images).
  * @return string
  */
 function larijani_img( $media, $class = '', $alt = '', $size = 'large', $lazy = true ) {
@@ -289,7 +290,7 @@ function larijani_img( $media, $class = '', $alt = '', $size = 'large', $lazy = 
 		esc_url( $url ),
 		esc_attr( $class ),
 		esc_attr( $alt ),
-		$lazy ? ' loading="lazy"' : ''
+		'high' === $lazy ? ' fetchpriority="high"' : ( $lazy ? ' loading="lazy"' : '' )
 	);
 }
 

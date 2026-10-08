@@ -450,3 +450,23 @@ function larijani_wizard_journal_card() {
 	</div>
 	<?php
 }
+
+/**
+ * Remind administrators to install the companion plugin (projects, inquiries, secure forms).
+ */
+function larijani_core_missing_notice() {
+	if ( larijani_has_core() || ! current_user_can( 'install_plugins' ) ) {
+		return;
+	}
+	if ( isset( $_GET['page'] ) && 'ls-setup' === $_GET['page'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return;
+	}
+	printf(
+		'<div class="notice notice-warning"><p><strong>%1$s</strong> %2$s <a class="button button-primary" href="%3$s">%4$s</a></p></div>',
+		esc_html__( 'لاریجانی استون:', 'larijani-stone' ),
+		esc_html__( 'افزونه همراه «Larijani Stone Core» فعال نیست؛ تا فعال‌سازی آن فرم‌های سایت درخواست ثبت نمی‌کنند و نمونه‌کارها مدیریت نمی‌شوند. محتوای قبلی شما حذف نشده است.', 'larijani-stone' ),
+		esc_url( admin_url( 'admin.php?page=ls-setup' ) ),
+		esc_html__( 'نصب افزونه همراه', 'larijani-stone' )
+	);
+}
+add_action( 'admin_notices', 'larijani_core_missing_notice' );

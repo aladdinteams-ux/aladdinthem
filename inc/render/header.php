@@ -280,19 +280,7 @@ function larijani_render_site_header( $s = array() ) {
 		<div aria-hidden="true" class="ls-backdrop fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] transition-opacity duration-300 opacity-0 pointer-events-none" data-ls-backdrop="<?php echo esc_attr( $uid ); ?>-search"></div>
 		<div id="<?php echo esc_attr( $uid ); ?>-search" class="ls-drawer fixed inset-x-0 top-0 z-[61] -translate-y-full transition-transform duration-300" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e( 'جستجو', 'larijani-stone' ); ?>" data-ls-drawer>
 			<div class="max-w-3xl mx-auto mt-6 px-4">
-				<form role="search" method="get" action="<?php echo esc_url( $home ); ?>" class="bg-white rounded-2xl shadow-2xl p-2 flex items-center gap-2">
-					<i class="bi bi-search text-outline text-lg px-3" aria-hidden="true"></i>
-					<input class="flex-1 py-3 border-0 focus:ring-0 text-on-surface text-base placeholder:text-outline" type="search" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php esc_attr_e( 'جستجو در محصولات، قالب‌ها و مقالات…', 'larijani-stone' ); ?>" data-ls-autofocus>
-					<?php if ( larijani_has_woo() ) : ?>
-					<select name="post_type" class="hidden sm:block bg-surface-canvas rounded-xl py-2.5 pr-3 text-sm text-on-surface-variant">
-						<option value=""><?php esc_html_e( 'همه', 'larijani-stone' ); ?></option>
-						<option value="product"><?php esc_html_e( 'محصولات', 'larijani-stone' ); ?></option>
-						<option value="post"><?php esc_html_e( 'مقالات', 'larijani-stone' ); ?></option>
-					</select>
-					<?php endif; ?>
-					<button type="submit" class="px-5 py-3 rounded-xl bg-primary-container hover:bg-primary text-white font-bold text-sm transition-colors"><?php esc_html_e( 'جستجو', 'larijani-stone' ); ?></button>
-					<button type="button" class="w-11 h-11 rounded-xl text-slate-500 hover:text-slate-800 flex items-center justify-center" data-ls-close aria-label="<?php esc_attr_e( 'بستن', 'larijani-stone' ); ?>"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
-				</form>
+				<?php get_search_form( array( 'ls_variant' => 'header', 'ls_action' => $home, 'ls_id' => $uid . '-s', 'aria_label' => __( 'جستجو', 'larijani-stone' ) ) ); ?>
 			</div>
 		</div>
 		<?php endif; ?>

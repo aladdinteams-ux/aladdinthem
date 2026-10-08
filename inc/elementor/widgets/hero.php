@@ -145,7 +145,7 @@ class Larijani_Widget_Hero extends Larijani_Widget_Base {
 
 					<div class="w-full lg:col-span-5 relative">
 						<div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border-2 sm:border-4 border-white max-w-lg mx-auto lg:max-w-none">
-							<?php echo larijani_img( $s['image'], 'w-full h-[320px] sm:h-[420px] lg:h-[480px] object-cover hover:scale-105 transition-transform duration-700', '', 'large', false ); // phpcs:ignore ?>
+							<?php echo larijani_img( $s['image'], 'w-full h-[320px] sm:h-[420px] lg:h-[480px] object-cover hover:scale-105 transition-transform duration-700', '', 'large', 'high' ); // phpcs:ignore ?>
 							<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 							<?php if ( $s['stat_value'] ) : ?>
 							<div class="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 sm:p-3 sm:px-4 shadow-lg border border-white/40 flex items-center gap-2.5 sm:gap-3 max-w-[85%]">

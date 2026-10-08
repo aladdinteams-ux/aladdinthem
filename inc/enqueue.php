@@ -22,7 +22,7 @@ function larijani_asset_ver( $rel ) {
  * Register assets (so Elementor widgets can declare them as dependencies).
  */
 function larijani_register_assets() {
-	wp_register_style( 'larijani-bootstrap-icons', LARIJANI_URI . '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css', array(), '1.11.3' );
+	wp_register_style( 'larijani-bootstrap-icons', LARIJANI_URI . '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css', array(), '1.13.1' );
 	wp_register_style( 'larijani-tailwind', LARIJANI_URI . '/assets/css/tailwind.css', array( 'larijani-bootstrap-icons' ), larijani_asset_ver( 'assets/css/tailwind.css' ) );
 	wp_register_style( 'larijani-style', LARIJANI_URI . '/style.css', array( 'larijani-tailwind' ), LARIJANI_VERSION );
 
@@ -80,7 +80,7 @@ add_action( 'wp_head', 'larijani_preload_font', 1 );
  * Icons inside the Elementor editor panel (icon picker preview).
  */
 function larijani_editor_styles() {
-	wp_enqueue_style( 'larijani-bootstrap-icons', LARIJANI_URI . '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css', array(), '1.11.3' );
+	wp_enqueue_style( 'larijani-bootstrap-icons', LARIJANI_URI . '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css', array(), '1.13.1' );
 	wp_enqueue_style( 'larijani-editor-panel', LARIJANI_URI . '/assets/css/elementor-editor.css', array(), larijani_asset_ver( 'assets/css/elementor-editor.css' ) );
 }
 add_action( 'elementor/editor/after_enqueue_styles', 'larijani_editor_styles' );
@@ -89,7 +89,7 @@ add_action( 'elementor/editor/after_enqueue_styles', 'larijani_editor_styles' );
  * Block editor (Gutenberg) styles.
  */
 function larijani_block_editor_assets() {
-	wp_enqueue_style( 'larijani-bootstrap-icons', LARIJANI_URI . '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css', array(), '1.11.3' );
+	wp_enqueue_style( 'larijani-bootstrap-icons', LARIJANI_URI . '/assets/vendor/bootstrap-icons/bootstrap-icons.min.css', array(), '1.13.1' );
 }
 add_action( 'enqueue_block_editor_assets', 'larijani_block_editor_assets' );
 

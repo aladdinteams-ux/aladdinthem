@@ -128,7 +128,7 @@ class Larijani_Widget_Hero_Classic extends Larijani_Widget_Base {
 					<div class="lg:col-span-6 relative mt-4 lg:mt-0">
 						<div class="relative mx-auto max-w-md lg:max-w-none">
 							<div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gray-100">
-								<?php echo larijani_img( $s['image'], 'w-full h-[320px] sm:h-[420px] lg:h-[480px] object-cover object-center', '', 'large', false ); // phpcs:ignore ?>
+								<?php echo larijani_img( $s['image'], 'w-full h-[320px] sm:h-[420px] lg:h-[480px] object-cover object-center', '', 'large', 'high' ); // phpcs:ignore ?>
 								<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 							</div>
 							<?php if ( $s['card_title'] ) : ?>

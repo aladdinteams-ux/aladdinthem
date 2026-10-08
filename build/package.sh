@@ -19,7 +19,7 @@ mkdir -p "$TMP/larijani-stone"
 tar -c \
 	--exclude='./.git' --exclude='./.gitignore' --exclude='./node_modules' --exclude='./src' --exclude='./build' \
 	--exclude='./package.json' --exclude='./package-lock.json' --exclude='./tailwind.config.js' \
-	--exclude='./release' --exclude='./child-theme' --exclude='./plugins' --exclude='./docs/qa' --exclude='*.DS_Store' \
+	--exclude='./release' --exclude='./child-theme' --exclude='./plugins' --exclude='./docs/qa' --exclude='./tests' --exclude='*.DS_Store' \
 	. | tar -x -C "$TMP/larijani-stone"
 ( cd "$TMP" && rm -f "$OUT/larijani-stone.zip" && zip -qrX "$OUT/larijani-stone.zip" larijani-stone )
 

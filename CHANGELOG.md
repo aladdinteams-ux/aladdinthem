@@ -1,5 +1,31 @@
 # Changelog — Larijani Stone
 
+## 1.4.0 — 2026-10-08 (commercial release)
+
+### Security
+- **Forms** are handled by the new companion plugin *Larijani Stone Core*: signed field schema (server enforces fields, labels, types, required flags and options), signed single-use submission token fetched on first interaction (minimum 3 s, maximum 2 h, atomic claim against replay and double submit), honeypot, rate limits per IP (attempts and successes), per phone and site-wide, duplicate detection (15 min), Iranian/international phone and e-mail validation, unguessable tracking codes `LS-YYMMDD-XXXXXX`, generic error messages.
+  The 1.3 time trap trusted a client-supplied timestamp and was skipped when it was missing; tracking codes were 5 random digits.
+- **Uploads**: extension allow-list, per-type size limits, magic-byte/image checks, ZIP inspection (blocked entry types, path traversal, zip bombs), private storage outside the media library (`.htaccess`/`web.config` deny, random directory, optional `LARIJANI_CORE_PRIVATE_DIR`), admin/editor-only download through a nonce-checked handler. 1.3 stored customer files as public media with public links in e-mails.
+- Admin-triggered, hash-verified migration of 1.3 public attachments into private storage.
+- SVG uploads (administrators) are rebuilt from an allow-list instead of being accepted raw.
+- Setup actions (plugin install, import, undo, reset/restore) require nonces and capabilities.
+
+### Architecture
+- Projects (`ls_project`, `ls_project_cat`) and inquiries (`ls_lead`) moved to the companion plugin with identical keys (no data conversion). Sites updated from 1.3 keep their projects/inquiries visible through a compatibility fallback until the plugin is installed.
+- PHP prefix `ls_` → `larijani_` (functions, classes, constants, globals); text domain `larijani-stone`. Deprecated `ls_*` wrappers for the public helpers; hook names, options and meta keys unchanged.
+
+### Added
+- Typography & layout settings (font, heading/body scale, tablet/mobile scale, content width, button radius, opt-out of external sample images); reset all settings with backup/restore; logo and site icon shortcuts.
+- Setup wizard: server requirements, plugin install/activation on click (bundled core plugin, Elementor, WooCommerce), import journal with undo; activation never imports into a site with existing content; theme-builder slots / Pro conditions and the front page are never taken over silently.
+- Optional update-provider hook (disabled by default, no external calls).
+- `readme.txt`, `screenshot.png`, Persian guide `docs/INSTALL-FA.md`, plugin POT, `build/package.sh`.
+
+### Improved
+- `prefers-reduced-motion`: smooth scrolling, counters, sliders and transitions respect it.
+- Hero/LCP images get `fetchpriority="high"`; Vazirmatn is preloaded only when used; view counter is a single atomic query and ignores prefetch/HEAD.
+- All search boxes use `get_search_form()` (filterable) and have labels.
+- Bootstrap Icons stylesheet version string matches the bundled 1.13.1.
+
 ## 1.3.0 — 2026-10-06 (native Elementor layouts)
 
 ### Changed

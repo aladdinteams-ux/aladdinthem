@@ -18,11 +18,7 @@ if ( ! larijani_do_location( '404' ) ) :
 				<span class="font-display-hero text-display-hero text-primary-container">۴۰۴</span>
 				<h1 class="font-headline-lg text-headline-lg text-surface-dark"><?php esc_html_e( 'صفحه مورد نظر پیدا نشد', 'larijani-stone' ); ?></h1>
 				<p class="font-body-lg text-body-lg text-on-surface-variant"><?php esc_html_e( 'ممکن است آدرس تغییر کرده باشد. از جستجو استفاده کنید یا به صفحه اصلی برگردید.', 'larijani-stone' ); ?></p>
-				<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="w-full max-w-xl bg-surface-card rounded-2xl shadow-sm p-2 flex items-center gap-2">
-					<i class="bi bi-search text-outline text-lg px-3" aria-hidden="true"></i>
-					<input class="flex-1 py-3 border-0 focus:ring-0 text-on-surface placeholder:text-outline" type="search" name="s" placeholder="<?php esc_attr_e( 'جستجو در سایت…', 'larijani-stone' ); ?>">
-					<button class="px-5 py-3 rounded-xl bg-primary-container hover:bg-primary text-white font-bold text-sm" type="submit"><?php esc_html_e( 'جستجو', 'larijani-stone' ); ?></button>
-				</form>
+				<?php get_search_form( array( 'ls_variant' => '404' ) ); ?>
 				<div class="flex flex-wrap items-center justify-center gap-3">
 					<a class="inline-flex items-center gap-2 bg-primary-container hover:bg-primary text-white font-bold text-sm px-6 py-3 rounded-full" href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="bi bi-house-door" aria-hidden="true"></i><?php esc_html_e( 'صفحه اصلی', 'larijani-stone' ); ?></a>
 					<a class="inline-flex items-center gap-2 bg-white text-surface-dark font-bold text-sm px-6 py-3 rounded-full shadow-sm" href="<?php echo esc_url( larijani_tel( larijani_opt( 'phone_1' ) ) ); ?>"><i class="bi bi-telephone" aria-hidden="true"></i><?php esc_html_e( 'تماس با ما', 'larijani-stone' ); ?></a>

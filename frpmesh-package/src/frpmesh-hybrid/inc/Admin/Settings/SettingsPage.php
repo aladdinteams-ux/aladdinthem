@@ -16,9 +16,11 @@ function frpmt_settings_page() {
  $sections=frpmt_sections();$theme=wp_get_theme();$logo=absint(frpmt_option('logo_id'))?:absint(get_theme_mod('custom_logo'));
  echo '<div class="wrap frpmt-admin" dir="rtl"><div class="frpmt-app">';
  echo '<header class="frpmt-top"><div class="frpmt-brand">';
+ $maker_logo='';foreach(array('svg','png','webp') as $ext){if(file_exists(get_template_directory().'/assets/images/aladdin-theme-logo.'.$ext)){$maker_logo=get_template_directory_uri().'/assets/images/aladdin-theme-logo.'.$ext;break;}}
  if ($logo) echo wp_get_attachment_image($logo,'thumbnail',false,array('class'=>'frpmt-brand-image','alt'=>''));
+ elseif ($maker_logo) echo '<img class="frpmt-brand-image" src="'.esc_url($maker_logo).'" alt="'.esc_attr__('علاءالدین تم','frpmesh-hybrid').'">';
  else echo '<span class="frpmt-brand-mark" aria-hidden="true">F</span>';
- echo '<span><strong>'.esc_html__('FRP Mesh','frpmesh-hybrid').'</strong><small>'.esc_html__('مرکز تنظیمات پوسته','frpmesh-hybrid').' · v'.esc_html($theme->get('Version')).'</small></span></div>';
+ echo '<span><strong>'.esc_html__('FRP Mesh','frpmesh-hybrid').'</strong><small>'.esc_html__('مرکز تنظیمات پوسته','frpmesh-hybrid').' · '.esc_html__('علاءالدین تم','frpmesh-hybrid').' · v'.esc_html($theme->get('Version')).'</small></span></div>';
  echo '<div class="frpmt-top-actions"><div class="frpmt-search-wrap"><label for="frpmt-search" class="screen-reader-text">'.esc_html__('جستجوی تنظیمات','frpmesh-hybrid').'</label><span class="frpmt-search-icon" aria-hidden="true">⌕</span><input id="frpmt-search" type="search" role="combobox" aria-controls="frpmt-results" aria-expanded="false" aria-autocomplete="list" placeholder="'.esc_attr__('جستجو؛ مثلاً لوگو، رنگ، موبایل…','frpmesh-hybrid').'" autocomplete="off"><div id="frpmt-results" class="frpmt-results" role="listbox" hidden></div></div><span id="frpmt-dirty" role="status" hidden>'.esc_html__('● تغییرات ذخیره‌نشده','frpmesh-hybrid').'</span><button type="submit" form="frpmt-form" class="button button-primary frpmt-save">'.esc_html__('ذخیره تغییرات','frpmesh-hybrid').'</button></div></header>';
  echo '<div id="frpmt-toast" role="status" aria-live="polite" hidden></div>';
  if (isset($_GET['settings-updated']) && 'true'===sanitize_text_field(wp_unslash($_GET['settings-updated']))) {echo '<div class="notice notice-success is-dismissible"><p>'.esc_html__('تنظیمات ذخیره شد.','frpmesh-hybrid').'</p></div>';}

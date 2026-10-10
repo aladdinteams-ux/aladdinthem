@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:wp="http://wordpress.org/export/1.2/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" version="2.0">
+  <channel>
+    <title>FRP Mesh — محتوای وبلاگ از فایل منبع</title>
+    <link>https://example.invalid/</link>
+    <description>شش راهنمای کوتاه اصل HTML، برای ورود اختیاری به‌صورت پیش‌نویس</description>
+    <language>fa</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    <wp:base_site_url>https://example.invalid/</wp:base_site_url>
+    <wp:base_blog_url>https://example.invalid/</wp:base_blog_url>
+    <wp:category>
+      <wp:term_id>1</wp:term_id>
+      <wp:category_nicename>basics</wp:category_nicename>
+      <wp:category_parent></wp:category_parent>
+      <wp:cat_name>آموزش و دانستنی‌ها</wp:cat_name>
+    </wp:category>
+    <item>
+      <title>فایبرگلاس چیست و FRP چه معنایی دارد؟</title>
+      <content:encoded>&lt;p&gt;فایبرگلاس در کاربردهای رایج به کامپوزیت الیاف شیشه و رزین اشاره دارد. الیاف نقش تقویت‌کننده و رزین نقش زمینه و اتصال اجزا را دارد. FRP عنوان گسترده‌تری برای پلیمرهای تقویت‌شده با الیاف است، نوع الیاف در تمام سیستم‌های FRP یکسان نیست.&lt;/p&gt;&lt;p&gt;عملکرد نهایی فقط به نام فایبرگلاس وابسته نیست. نوع رزین، آرایش الیاف، کیفیت اجرا و محیط بهره‌برداری باید با کاربرد موردنظر هماهنگ شوند.&lt;/p&gt;</content:encoded>
+      <excerpt:encoded>شناخت رابطه الیاف شیشه، رزین و خانواده کامپوزیت‌های تقویت‌شده.</excerpt:encoded>
+      <wp:post_id>10001</wp:post_id>
+      <wp:post_name>basics-guide</wp:post_name>
+      <wp:post_type>post</wp:post_type>
+      <wp:status>draft</wp:status>
+      <wp:comment_status>closed</wp:comment_status>
+      <wp:ping_status>closed</wp:ping_status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:is_sticky>0</wp:is_sticky>
+      <category domain="category" nicename="basics">آموزش و دانستنی‌ها</category>
+    </item>
+    <wp:category>
+      <wp:term_id>2</wp:term_id>
+      <wp:category_nicename>fibers</wp:category_nicename>
+      <wp:category_parent></wp:category_parent>
+      <wp:cat_name>الیاف فایبرگلاس</wp:cat_name>
+    </wp:category>
+    <item>
+      <title>تفاوت الیاف سوزنی و الیاف حصیری</title>
+      <content:encoded>&lt;p&gt;الیاف سوزنی معمولاً از رشته‌های کوتاه با آرایش پراکنده ساخته می‌شود. الیاف حصیری با ساختار بافته‌شده، آرایش مشخص‌تری از رشته‌ها دارد. این تفاوت بر رفتار لایه و روش کار با آن اثر می‌گذارد.&lt;/p&gt;&lt;p&gt;انتخاب یا ترکیب این الیاف باید با نیاز قطعه، شکل سطح، سیستم رزین و مشخصات فنی هماهنگ باشد. هیچ نوع الیافی برای تمام پروژه‌ها انتخاب برتر نیست.&lt;/p&gt;</content:encoded>
+      <excerpt:encoded>مروری بر آرایش رشته‌ها و نقش آن‌ها در طراحی لایه‌های تقویتی.</excerpt:encoded>
+      <wp:post_id>10002</wp:post_id>
+      <wp:post_name>fibers-guide</wp:post_name>
+      <wp:post_type>post</wp:post_type>
+      <wp:status>draft</wp:status>
+      <wp:comment_status>closed</wp:comment_status>
+      <wp:ping_status>closed</wp:ping_status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:is_sticky>0</wp:is_sticky>
+      <category domain="category" nicename="fibers">الیاف فایبرگلاس</category>
+    </item>
+    <wp:category>
+      <wp:term_id>3</wp:term_id>
+      <wp:category_nicename>resins</wp:category_nicename>
+      <wp:category_parent></wp:category_parent>
+      <wp:cat_name>رزین و کامپوزیت</wp:cat_name>
+    </wp:category>
+    <item>
+      <title>نقش رزین در سیستم فایبرگلاس</title>
+      <content:encoded>&lt;p&gt;رزین، الیاف را در یک زمینه پیوسته نگه می‌دارد و در انتقال بار، چسبندگی و رفتار پوشش نقش دارد. پلی‌استر، وینیل‌استر و اپوکسی از خانواده‌های رزین مورد استفاده در سیستم‌های کامپوزیتی هستند.&lt;/p&gt;&lt;p&gt;خواص محصولات هر خانواده متفاوت است. برای مخازن و محیط‌های شیمیایی، سازگاری محصول مشخص با نوع ماده، غلظت و دما باید بر اساس اطلاعات فنی سازنده بررسی شود.&lt;/p&gt;</content:encoded>
+      <excerpt:encoded>چرا انتخاب رزین باید با شرایط محیط و ماده در تماس هماهنگ باشد؟</excerpt:encoded>
+      <wp:post_id>10003</wp:post_id>
+      <wp:post_name>resins-guide</wp:post_name>
+      <wp:post_type>post</wp:post_type>
+      <wp:status>draft</wp:status>
+      <wp:comment_status>closed</wp:comment_status>
+      <wp:ping_status>closed</wp:ping_status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:is_sticky>0</wp:is_sticky>
+      <category domain="category" nicename="resins">رزین و کامپوزیت</category>
+    </item>
+    <wp:category>
+      <wp:term_id>4</wp:term_id>
+      <wp:category_nicename>execution</wp:category_nicename>
+      <wp:category_parent></wp:category_parent>
+      <wp:cat_name>اجرای فایبرگلاس</wp:cat_name>
+    </wp:category>
+    <item>
+      <title>آماده‌سازی سطح پیش از اجرای فایبرگلاس</title>
+      <content:encoded>&lt;p&gt;پیش از اجرا باید جنس بستر، وضعیت پوشش قبلی، آلودگی‌ها، ترک‌ها و جزئیات اتصال بررسی شوند. شرایط سطح بر چسبندگی و عملکرد سیستم اثر دارد.&lt;/p&gt;&lt;p&gt;روش ترمیم و پاک‌سازی، الزامات رطوبت سطح و مراحل اجرا باید با سیستم منتخب هماهنگ باشند. دستورالعمل یک سیستم را نمی‌توان بدون بررسی به تمام سطوح تعمیم داد.&lt;/p&gt;</content:encoded>
+      <excerpt:encoded>شناخت زیرکار، ترک‌ها و پوشش قبلی پیش از انتخاب روش اجرا.</excerpt:encoded>
+      <wp:post_id>10004</wp:post_id>
+      <wp:post_name>execution-guide</wp:post_name>
+      <wp:post_type>post</wp:post_type>
+      <wp:status>draft</wp:status>
+      <wp:comment_status>closed</wp:comment_status>
+      <wp:ping_status>closed</wp:ping_status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:is_sticky>0</wp:is_sticky>
+      <category domain="category" nicename="execution">اجرای فایبرگلاس</category>
+    </item>
+    <wp:category>
+      <wp:term_id>5</wp:term_id>
+      <wp:category_nicename>waterproofing</wp:category_nicename>
+      <wp:category_parent></wp:category_parent>
+      <wp:cat_name>ایزولاسیون و آب‌بندی</wp:cat_name>
+    </wp:category>
+    <item>
+      <title>آب‌بندی استخر، از تشخیص نشتی تا انتخاب پوشش</title>
+      <content:encoded>&lt;p&gt;در بررسی آب‌بندی استخر، علت نشتی، ترک‌ها، اتصالات و وضعیت زیرکار باید مشخص شوند. پوشش جدید به‌تنهایی جایگزین تشخیص مسئله اصلی نیست.&lt;/p&gt;&lt;p&gt;فایبرگلاس می‌تواند یکی از گزینه‌های بررسی باشد، به شرط سازگاری سیستم با بستر و شرایط تماس با آب. تعداد لایه‌ها، زمان عمل‌آوری و روش کنترل کیفیت به مشخصات پروژه وابسته‌اند.&lt;/p&gt;</content:encoded>
+      <excerpt:encoded>چه اطلاعاتی برای بررسی پوشش فایبرگلاس استخر لازم است؟</excerpt:encoded>
+      <wp:post_id>10005</wp:post_id>
+      <wp:post_name>waterproofing-guide</wp:post_name>
+      <wp:post_type>post</wp:post_type>
+      <wp:status>draft</wp:status>
+      <wp:comment_status>closed</wp:comment_status>
+      <wp:ping_status>closed</wp:ping_status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:is_sticky>0</wp:is_sticky>
+      <category domain="category" nicename="waterproofing">ایزولاسیون و آب‌بندی</category>
+    </item>
+    <wp:category>
+      <wp:term_id>6</wp:term_id>
+      <wp:category_nicename>industrial</wp:category_nicename>
+      <wp:category_parent></wp:category_parent>
+      <wp:cat_name>فایبرگلاس صنعتی</wp:cat_name>
+    </wp:category>
+    <item>
+      <title>پوشش مخازن و بررسی مقاومت شیمیایی</title>
+      <content:encoded>&lt;p&gt;برای مخزن صنعتی باید نوع ماده، غلظت، دما، شرایط شست‌وشو و وضعیت سطح داخلی مشخص باشند. مقاومت شیمیایی یک ویژگی عمومی و یکسان برای تمام پوشش‌های فایبرگلاس نیست.&lt;/p&gt;&lt;p&gt;انتخاب رزین و طراحی لایه‌ها به داده‌های فنی محصول و شرایط واقعی بهره‌برداری وابسته است. در کاربردهای حساس، بررسی تخصصی و الزامات ایمنی بخشی از تصمیم اجرایی هستند.&lt;/p&gt;</content:encoded>
+      <excerpt:encoded>نوع سیال، غلظت و دما، سه داده مهم برای بررسی پوشش مخزن.</excerpt:encoded>
+      <wp:post_id>10006</wp:post_id>
+      <wp:post_name>industrial-guide</wp:post_name>
+      <wp:post_type>post</wp:post_type>
+      <wp:status>draft</wp:status>
+      <wp:comment_status>closed</wp:comment_status>
+      <wp:ping_status>closed</wp:ping_status>
+      <wp:post_parent>0</wp:post_parent>
+      <wp:menu_order>0</wp:menu_order>
+      <wp:is_sticky>0</wp:is_sticky>
+      <category domain="category" nicename="industrial">فایبرگلاس صنعتی</category>
+    </item>
+  </channel>
+</rss>

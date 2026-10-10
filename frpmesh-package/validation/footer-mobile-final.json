@@ -1,0 +1,134 @@
+{
+  "reference": {
+    ".footer-grid": {
+      "height": 752.953125,
+      "width": 358,
+      "font": "15px / 28.5px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "grid",
+      "gap": "28px 20px",
+      "padding": "0px 0px 8px"
+    },
+    ".footer-grid>div:first-child": {
+      "height": 284.578125,
+      "width": 358,
+      "font": "15px / 28.5px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "block",
+      "gap": "normal",
+      "padding": "24px"
+    },
+    ".footer-grid>div:last-child": {
+      "height": 136.1875,
+      "width": 358,
+      "font": "15px / 28.5px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "block",
+      "gap": "normal",
+      "padding": "0px"
+    },
+    ".footer-contact-strip": {
+      "height": 167.15625,
+      "width": 358,
+      "font": "15px / 28.5px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "grid",
+      "gap": "20px",
+      "padding": "24px 0px"
+    },
+    ".footer-bottom": {
+      "height": 75,
+      "width": 358,
+      "font": "10px / 19px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "flex",
+      "gap": "16px",
+      "padding": "0px"
+    },
+    ".site-footer .brand": {
+      "height": 60,
+      "width": 308,
+      "font": "800 20px / 24px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "flex",
+      "gap": "14px",
+      "padding": "0px"
+    },
+    ".site-footer .brand-name": {
+      "height": 32.1875,
+      "width": 126.578125,
+      "font": "700 23px / 32.2px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "block",
+      "gap": "normal",
+      "padding": "0px"
+    },
+    ".footer-grid .footer-links": {
+      "height": 228,
+      "width": 169,
+      "font": "13px / 24.7px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "grid",
+      "gap": "2px",
+      "padding": "0px"
+    }
+  },
+  "actual": {
+    ".footer-grid": {
+      "height": 752.953125,
+      "width": 358,
+      "font": "15px / 28.5px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "grid",
+      "gap": "28px 20px",
+      "padding": "0px 0px 8px"
+    },
+    ".footer-grid>div:first-child": {
+      "height": 284.578125,
+      "width": 358,
+      "font": "15px / 28.5px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "block",
+      "gap": "normal",
+      "padding": "24px"
+    },
+    ".footer-grid>div:last-child": {
+      "height": 136.1875,
+      "width": 358,
+      "font": "15px / 28.5px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "block",
+      "gap": "normal",
+      "padding": "0px"
+    },
+    ".footer-contact-strip": {
+      "height": 167.15625,
+      "width": 358,
+      "font": "15px / 28.5px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "grid",
+      "gap": "20px",
+      "padding": "24px 0px"
+    },
+    ".footer-bottom": {
+      "height": 75,
+      "width": 358,
+      "font": "10px / 19px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "flex",
+      "gap": "16px",
+      "padding": "0px"
+    },
+    ".site-footer .brand": {
+      "height": 60,
+      "width": 308,
+      "font": "800 20px / 24px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "flex",
+      "gap": "14px",
+      "padding": "0px"
+    },
+    ".site-footer .brand-name": {
+      "height": 32.1875,
+      "width": 126.578125,
+      "font": "700 23px / 32.2px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "block",
+      "gap": "normal",
+      "padding": "0px"
+    },
+    ".footer-grid .footer-links": {
+      "height": 228,
+      "width": 169,
+      "font": "13px / 24.7px Vazirmatn, Tahoma, Arial, sans-serif",
+      "display": "grid",
+      "gap": "2px",
+      "padding": "0px"
+    }
+  }
+}

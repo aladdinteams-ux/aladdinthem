@@ -1,0 +1,1165 @@
+{
+  "title": "FRP v3 / article",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "00006c2",
+      "elType": "container",
+      "isInner": true,
+      "settings": {
+        "frpme_native": "00006c2",
+        "content_width": "full",
+        "html_tag": "div",
+        "css_classes": "frpme-native-box frpme-key-00006c2 frpme-page",
+        "_title": "خانه / وبلاگ / شناخت فایبرگلاس {{DYNAMIC:post-category}} SG / REA"
+      },
+      "elements": [
+        {
+          "id": "00006c3",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "00006c3",
+            "content_width": "full",
+            "html_tag": "div",
+            "css_classes": "frpme-native-box frpme-key-00006c3 frpme-page-tools-before",
+            "_title": "div"
+          },
+          "elements": []
+        },
+        {
+          "id": "00006c4",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "00006c4",
+            "content_width": "full",
+            "html_tag": "main",
+            "css_classes": "frpme-native-box frpme-key-00006c4 article-main",
+            "_title": "خانه / وبلاگ / شناخت فایبرگلاس {{DYNAMIC:post-category}} SG / REA",
+            "_element_id": "main"
+          },
+          "elements": [
+            {
+              "id": "00006c5",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00006c5",
+                "content_width": "full",
+                "html_tag": "div",
+                "css_classes": "frpme-native-box frpme-key-00006c5 article-progress",
+                "_title": "div"
+              },
+              "elements": [
+                {
+                  "id": "00006c6",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "00006c6",
+                    "_css_classes": "frpme-native-leaf frpme-key-00006c6",
+                    "_title": "پیام article-progress-bar",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "title": "​",
+                    "header_size": "span"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "00006c7",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00006c7",
+                "content_width": "full",
+                "html_tag": "nav",
+                "css_classes": "frpme-native-box frpme-key-00006c7 container article-crumb",
+                "_title": "خانه / وبلاگ / شناخت فایبرگلاس"
+              },
+              "elements": [
+                {
+                  "id": "00006c8",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "00006c8",
+                    "_css_classes": "frpme-native-leaf frpme-key-00006c8",
+                    "_title": "خانه",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "text": "خانه",
+                    "link": {
+                      "url": "{{URL:/}}",
+                      "is_external": false
+                    },
+                    "selected_icon": {
+                      "value": {
+                        "url": "{{ASSET:assets/icons/i-home.svg}}",
+                        "id": 0
+                      },
+                      "library": "svg"
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "00006c9",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "00006c9",
+                    "_css_classes": "frpme-native-leaf frpme-key-00006c9",
+                    "_title": "/",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "title": "/",
+                    "header_size": "span"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "00006ca",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "00006ca",
+                    "_css_classes": "frpme-native-leaf frpme-key-00006ca",
+                    "_title": "وبلاگ",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "text": "وبلاگ",
+                    "link": {
+                      "url": "{{URL:/blog/}}",
+                      "is_external": false
+                    },
+                    "selected_icon": {
+                      "value": "",
+                      "library": ""
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "00006cb",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "00006cb",
+                    "_css_classes": "frpme-native-leaf frpme-key-00006cb",
+                    "_title": "/",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "title": "/",
+                    "header_size": "span"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "00006cc",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "00006cc",
+                    "_css_classes": "frpme-native-leaf frpme-key-00006cc",
+                    "_title": "شناخت فایبرگلاس",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "title": "شناخت فایبرگلاس",
+                    "header_size": "span"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "00006cd",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00006cd",
+                "content_width": "full",
+                "html_tag": "header",
+                "css_classes": "frpme-native-box frpme-key-00006cd article-hero",
+                "_title": "{{DYNAMIC:post-category}} SG / READING ROOM {{DYNAMIC:post-title}"
+              },
+              "elements": [
+                {
+                  "id": "00006ce",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "00006ce",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-00006ce article-mouse-light",
+                    "_title": "div"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "00006cf",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "00006cf",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-00006cf container",
+                    "_title": "{{DYNAMIC:post-category}} SG / READING ROOM {{DYNAMIC:post-title}"
+                  },
+                  "elements": [
+                    {
+                      "id": "00006d0",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00006d0",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00006d0 article-hero-top",
+                        "_title": "{{DYNAMIC:post-category}} SG / READING ROOM"
+                      },
+                      "elements": [
+                        {
+                          "id": "00006d1",
+                          "elType": "widget",
+                          "widgetType": "frpme-data",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006d1",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006d1",
+                            "_title": "وردپرس / post-category",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "kind": "post-category"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006d2",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006d2",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006d2",
+                            "_title": "SG / READING ROOM",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "SG / READING ROOM",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "00006d3",
+                      "elType": "widget",
+                      "widgetType": "frpme-data",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "00006d3",
+                        "_css_classes": "frpme-native-leaf frpme-key-00006d3",
+                        "_title": "وردپرس / post-title",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "kind": "post-title"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "00006d4",
+                      "elType": "widget",
+                      "widgetType": "frpme-data",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "00006d4",
+                        "_css_classes": "frpme-native-leaf frpme-key-00006d4",
+                        "_title": "وردپرس / post-excerpt",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "kind": "post-excerpt"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "00006d5",
+                      "elType": "widget",
+                      "widgetType": "frpme-data",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "00006d5",
+                        "_css_classes": "frpme-native-leaf frpme-key-00006d5",
+                        "_title": "وردپرس / post-meta",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "kind": "post-meta"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "00006d6",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00006d6",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00006d6 article-hero-bottom",
+                        "_title": "شروع مطالعه اشتراک‌گذاری چاپ مقاله نشان کردن"
+                      },
+                      "elements": [
+                        {
+                          "id": "00006d7",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006d7",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006d7",
+                            "_title": "شروع مطالعه",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "شروع مطالعه ",
+                            "link": {
+                              "url": "#article-body",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006d8",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00006d8",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-00006d8 article-actions",
+                            "_title": "اشتراک‌گذاری چاپ مقاله نشان کردن"
+                          },
+                          "elements": [
+                            {
+                              "id": "00006d9",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006d9",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006d9",
+                                "_title": "اشتراک‌گذاری",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "اشتراک‌گذاری",
+                                "link": {
+                                  "url": "",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-project.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00006da",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006da",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006da",
+                                "_title": "چاپ مقاله",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "چاپ مقاله",
+                                "link": {
+                                  "url": "",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-office.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00006db",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006db",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006db",
+                                "_title": "نشان کردن",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "نشان کردن",
+                                "link": {
+                                  "url": "",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-identity.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                }
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "00006dc",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "00006dc",
+                        "_css_classes": "frpme-native-leaf frpme-key-00006dc",
+                        "_title": "پیام article-action-status",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "title": "​",
+                        "header_size": "p"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "00006dd",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00006dd",
+                "content_width": "full",
+                "html_tag": "div",
+                "css_classes": "frpme-native-box frpme-key-00006dd container article-layout",
+                "_title": "در این مقاله می‌خوانید ۰٪ مطالعه راهنمای مطالعه از شناخت تا بررسی"
+              },
+              "elements": [
+                {
+                  "id": "00006de",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "00006de",
+                    "content_width": "full",
+                    "html_tag": "aside",
+                    "css_classes": "frpme-native-box frpme-key-00006de article-sidebar",
+                    "_title": "در این مقاله می‌خوانید ۰٪ مطالعه راهنمای مطالعه از شناخت تا بررسی"
+                  },
+                  "elements": [
+                    {
+                      "id": "00006df",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00006df",
+                        "content_width": "full",
+                        "html_tag": "nav",
+                        "css_classes": "frpme-native-box frpme-key-00006df article-toc",
+                        "_title": "در این مقاله می‌خوانید ۰٪ مطالعه راهنمای مطالعه"
+                      },
+                      "elements": [
+                        {
+                          "id": "00006e0",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00006e0",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-00006e0 toc-top",
+                            "_title": "در این مقاله می‌خوانید"
+                          },
+                          "elements": [
+                            {
+                              "id": "00006e1",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006e1",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006e1",
+                                "_title": "آیکون #i-menu",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-menu.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00006e2",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006e2",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006e2",
+                                "_title": "در این مقاله می‌خوانید",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "در این مقاله می‌خوانید",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00006e3",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00006e3",
+                            "content_width": "full",
+                            "html_tag": "ol",
+                            "css_classes": "frpme-native-box frpme-key-00006e3 ",
+                            "_title": "ol"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006e4",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00006e4",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-00006e4 toc-progress",
+                            "_title": "۰٪ مطالعه راهنمای مطالعه"
+                          },
+                          "elements": [
+                            {
+                              "id": "00006e5",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006e5",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006e5",
+                                "_title": "۰٪ مطالعه",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰٪ مطالعه",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00006e6",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006e6",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006e6",
+                                "_title": "راهنمای مطالعه",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "راهنمای مطالعه",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "00006e7",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00006e7",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00006e7 article-sidebar-help",
+                        "_title": "از شناخت تا بررسی پروژه برای پروژه‌تان سوال دارید؟ نوع کاربرد و ش"
+                      },
+                      "elements": [
+                        {
+                          "id": "00006e8",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006e8",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006e8",
+                            "_title": "از شناخت تا بررسی پروژه",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "از شناخت تا بررسی پروژه",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006e9",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006e9",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006e9",
+                            "_title": "برای پروژه‌تان سوال دارید؟",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "برای پروژه‌تان<br/>سوال دارید؟",
+                            "header_size": "h2"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006ea",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006ea",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006ea",
+                            "_title": "نوع کاربرد و شرایط محل را با مجموعه مطرح کنید.",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "نوع کاربرد و شرایط محل را با مجموعه مطرح کنید."
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006eb",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006eb",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006eb",
+                            "_title": "گفتگو درباره پروژه",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "گفتگو درباره پروژه ",
+                            "link": {
+                              "url": "{{URL:/contact/}}",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "00006ec",
+                  "elType": "widget",
+                  "widgetType": "frpme-data",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "00006ec",
+                    "_css_classes": "frpme-native-leaf frpme-key-00006ec",
+                    "_title": "وردپرس / post-content",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "kind": "post-content"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "00006ed",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00006ed",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-00006ed section article-related",
+                "_title": "ادامه مسیر مطالعه موضوعات مرتبط همه مطالب {{DYNAMIC:related-posts"
+              },
+              "elements": [
+                {
+                  "id": "00006ee",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "00006ee",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-00006ee container",
+                    "_title": "ادامه مسیر مطالعه موضوعات مرتبط همه مطالب {{DYNAMIC:related-posts"
+                  },
+                  "elements": [
+                    {
+                      "id": "00006ef",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00006ef",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00006ef article-related-head",
+                        "_title": "ادامه مسیر مطالعه موضوعات مرتبط همه مطالب"
+                      },
+                      "elements": [
+                        {
+                          "id": "00006f0",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00006f0",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-00006f0 ",
+                            "_title": "ادامه مسیر مطالعه موضوعات مرتبط"
+                          },
+                          "elements": [
+                            {
+                              "id": "00006f1",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006f1",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006f1",
+                                "_title": "ادامه مسیر مطالعه",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "ادامه مسیر مطالعه",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00006f2",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006f2",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006f2",
+                                "_title": "موضوعات مرتبط",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "موضوعات مرتبط",
+                                "header_size": "h2"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00006f3",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006f3",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006f3",
+                            "_title": "همه مطالب",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "همه مطالب ",
+                            "link": {
+                              "url": "{{URL:/blog/}}",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "00006f4",
+                      "elType": "widget",
+                      "widgetType": "frpme-data",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "00006f4",
+                        "_css_classes": "frpme-native-leaf frpme-key-00006f4",
+                        "_title": "وردپرس / related-posts",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "kind": "related-posts"
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "00006f5",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "frpme_native": "00006f5",
+                "_css_classes": "frpme-native-leaf frpme-key-00006f5",
+                "_title": "article-top",
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": "",
+                  "text_color": "",
+                  "button_text_color": "",
+                  "background_color": "",
+                  "primary_color": "",
+                  "secondary_color": "",
+                  "caption_text_color": "",
+                  "link_color": ""
+                },
+                "text": "​",
+                "link": {
+                  "url": "",
+                  "is_external": false
+                },
+                "selected_icon": {
+                  "value": {
+                    "url": "{{ASSET:assets/icons/i-up.svg}}",
+                    "id": 0
+                  },
+                  "library": "svg"
+                }
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "00006f6",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "00006f6",
+            "content_width": "full",
+            "html_tag": "div",
+            "css_classes": "frpme-native-box frpme-key-00006f6 frpme-page-tools-after",
+            "_title": "div"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

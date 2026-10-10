@@ -1,0 +1,345 @@
+{
+  "title": "FRP v3 / header",
+  "type": "section",
+  "version": "0.4",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "00006f7",
+      "elType": "container",
+      "isInner": true,
+      "settings": {
+        "frpme_native": "00006f7",
+        "content_width": "full",
+        "html_tag": "div",
+        "css_classes": "frpme-native-box frpme-key-00006f7 frpme-chrome-header",
+        "_title": "سازه گستر عایق فایبرگلاس FRP MESH {{DYNAMIC:menu}} ۰۹۱۲۶۱۲۴۸۷۶ سا"
+      },
+      "elements": [
+        {
+          "id": "00006f8",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "00006f8",
+            "content_width": "full",
+            "html_tag": "header",
+            "css_classes": "frpme-native-box frpme-key-00006f8 site-header container",
+            "_title": "سازه گستر عایق فایبرگلاس FRP MESH {{DYNAMIC:menu}} ۰۹۱۲۶۱۲۴۸۷۶"
+          },
+          "elements": [
+            {
+              "id": "00006f9",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00006f9",
+                "content_width": "full",
+                "html_tag": "div",
+                "css_classes": "frpme-native-box frpme-key-00006f9 header-inner glass",
+                "_title": "سازه گستر عایق فایبرگلاس FRP MESH {{DYNAMIC:menu}} ۰۹۱۲۶۱۲۴۸۷۶"
+              },
+              "elements": [
+                {
+                  "id": "00006fa",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "00006fa",
+                    "content_width": "full",
+                    "html_tag": "a",
+                    "css_classes": "frpme-native-box frpme-key-00006fa brand",
+                    "_title": "سازه گستر عایق فایبرگلاس FRP MESH",
+                    "link": {
+                      "url": "{{URL:/}}"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "00006fb",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00006fb",
+                        "content_width": "full",
+                        "html_tag": "span",
+                        "css_classes": "frpme-native-box frpme-key-00006fb brand-symbol brand-original",
+                        "_title": "span"
+                      },
+                      "elements": [
+                        {
+                          "id": "00006fc",
+                          "elType": "widget",
+                          "widgetType": "image",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006fc",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006fc",
+                            "_title": "تصویر لوگوی فایبرگلاس سازه گستر",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "image": {
+                              "url": "{{ASSET:assets/images/6a278bcfcf9777b8.webp}}",
+                              "id": 0
+                            },
+                            "image_size": "full",
+                            "caption_source": "none",
+                            "link_to": "none"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "00006fd",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "00006fd",
+                        "_css_classes": "frpme-native-leaf frpme-key-00006fd",
+                        "_title": "سازه گستر عایق فایبرگلاس FRP MESH",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "title": "<span class=\"brand-name\"><span class=\"brand-name-main\">سازه</span> <span class=\"brand-name-accent\">گستر</span></span><small class=\"brand-subtitle\"><span>عایق فایبرگلاس</span><span class=\"brand-latin\" dir=\"ltr\" lang=\"en\">FRP MESH</span></small>",
+                        "header_size": "span"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "00006fe",
+                  "elType": "widget",
+                  "widgetType": "frpme-data",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "00006fe",
+                    "_css_classes": "frpme-native-leaf frpme-key-00006fe",
+                    "_title": "وردپرس / menu",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "kind": "menu"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "00006ff",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "00006ff",
+                    "_css_classes": "frpme-native-leaf frpme-key-00006ff",
+                    "_title": "۰۹۱۲۶۱۲۴۸۷۶",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "text": "۰۹۱۲۶۱۲۴۸۷۶",
+                    "link": {
+                      "url": "tel:+989126124876",
+                      "is_external": false
+                    },
+                    "selected_icon": {
+                      "value": {
+                        "url": "{{ASSET:assets/icons/i-phone.svg}}",
+                        "id": 0
+                      },
+                      "library": "svg"
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "0000700",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "0000700",
+                    "_css_classes": "frpme-native-leaf frpme-key-0000700",
+                    "_title": "menu-toggle",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "text": "​",
+                    "link": {
+                      "url": "",
+                      "is_external": false
+                    },
+                    "selected_icon": {
+                      "value": {
+                        "url": "{{ASSET:assets/icons/i-menu.svg}}",
+                        "id": 0
+                      },
+                      "library": "svg"
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0000701",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "0000701",
+            "content_width": "full",
+            "html_tag": "dialog",
+            "css_classes": "frpme-native-box frpme-key-0000701 mobile-drawer",
+            "_title": "سازه گستر {{DYNAMIC:menu}}",
+            "_element_id": "mobile-menu"
+          },
+          "elements": [
+            {
+              "id": "0000702",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "0000702",
+                "content_width": "full",
+                "html_tag": "div",
+                "css_classes": "frpme-native-box frpme-key-0000702 drawer-top",
+                "_title": "سازه گستر"
+              },
+              "elements": [
+                {
+                  "id": "0000703",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "0000703",
+                    "_css_classes": "frpme-native-leaf frpme-key-0000703",
+                    "_title": "سازه گستر",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "title": "سازه گستر",
+                    "header_size": "span"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "0000704",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "0000704",
+                    "_css_classes": "frpme-native-leaf frpme-key-0000704",
+                    "_title": "close-menu",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "text": "​",
+                    "link": {
+                      "url": "",
+                      "is_external": false
+                    },
+                    "selected_icon": {
+                      "value": {
+                        "url": "{{ASSET:assets/icons/i-close.svg}}",
+                        "id": 0
+                      },
+                      "library": "svg"
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "0000705",
+              "elType": "widget",
+              "widgetType": "frpme-data",
+              "isInner": false,
+              "settings": {
+                "frpme_native": "0000705",
+                "_css_classes": "frpme-native-leaf frpme-key-0000705",
+                "_title": "وردپرس / menu",
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": "",
+                  "text_color": "",
+                  "button_text_color": "",
+                  "background_color": "",
+                  "primary_color": "",
+                  "secondary_color": "",
+                  "caption_text_color": "",
+                  "link_color": ""
+                },
+                "kind": "menu"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

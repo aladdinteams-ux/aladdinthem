@@ -1,0 +1,1 @@
+<?php defined('ABSPATH') || exit;get_header();while(have_posts()){the_post();if(frpmt_elementor_location('single')){}elseif(frpmt_has_builder() || frpmt_is_editor_preview()){the_content();}else{echo '<main id="main"><h1>'.esc_html(get_the_title()).'</h1>';the_content();wp_link_pages();echo '</main>';}}get_footer();

@@ -1,0 +1,268 @@
+[
+  {
+    "source": "home",
+    "width": 1440,
+    "differences": [
+      {
+        "selector": ".hero-photo",
+        "key": "y",
+        "reference": 228.71875,
+        "actual": 233.921875
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "about",
+    "width": 1440,
+    "differences": [
+      {
+        "selector": "h1",
+        "key": "y",
+        "reference": 310.017333984375,
+        "actual": 308.5363464355469
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "services",
+    "width": 1440,
+    "differences": [
+      {
+        "selector": "h1",
+        "key": "y",
+        "reference": 291.6785583496094,
+        "actual": 290.4839782714844
+      },
+      {
+        "selector": ".site-footer",
+        "key": "y",
+        "reference": 8256.171875,
+        "actual": 8216.171875
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "contact",
+    "width": 1440,
+    "differences": [
+      {
+        "selector": "h1",
+        "key": "y",
+        "reference": 304.2005615234375,
+        "actual": 303.499267578125
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "home",
+    "width": 1024,
+    "differences": [
+      {
+        "selector": ".hero-photo",
+        "key": "y",
+        "reference": 218.84375,
+        "actual": 224.046875
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "about",
+    "width": 1024,
+    "differences": [
+      {
+        "selector": "h1",
+        "key": "y",
+        "reference": 311.05242919921875,
+        "actual": 308.8628845214844
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "services",
+    "width": 1024,
+    "differences": [
+      {
+        "selector": "h1",
+        "key": "y",
+        "reference": 293.40850830078125,
+        "actual": 290.8736572265625
+      },
+      {
+        "selector": ".site-footer",
+        "key": "y",
+        "reference": 8181.75,
+        "actual": 8141.75
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "contact",
+    "width": 1024,
+    "differences": [],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "home",
+    "width": 768,
+    "differences": [
+      {
+        "selector": ".site-footer",
+        "key": "y",
+        "reference": 17770.328125,
+        "actual": 17759.9375
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "about",
+    "width": 768,
+    "differences": [
+      {
+        "selector": ".site-footer",
+        "key": "y",
+        "reference": 9135.5,
+        "actual": 9131.90625
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "services",
+    "width": 768,
+    "differences": [
+      {
+        "selector": ".site-footer",
+        "key": "y",
+        "reference": 9019.78125,
+        "actual": 8905.71875
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "contact",
+    "width": 768,
+    "differences": [],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "home",
+    "width": 390,
+    "differences": [
+      {
+        "selector": ".site-footer",
+        "key": "y",
+        "reference": 21950.71875,
+        "actual": 21941.21875
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "about",
+    "width": 390,
+    "differences": [
+      {
+        "selector": ".site-footer",
+        "key": "y",
+        "reference": 12498.8125,
+        "actual": 12500.71875
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "services",
+    "width": 390,
+    "differences": [
+      {
+        "selector": "h1",
+        "key": "y",
+        "reference": 229.83843994140625,
+        "actual": 230.9669952392578
+      },
+      {
+        "selector": ".site-footer",
+        "key": "y",
+        "reference": 13262.96875,
+        "actual": 13173.59375
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  },
+  {
+    "source": "contact",
+    "width": 390,
+    "differences": [
+      {
+        "selector": "h1",
+        "key": "y",
+        "reference": 249.1425323486328,
+        "actual": 248.04425048828125
+      },
+      {
+        "selector": ".site-footer",
+        "key": "y",
+        "reference": 3996.65625,
+        "actual": 3961.46875
+      }
+    ],
+    "layout": {
+      "main": 1,
+      "overflow": 0
+    }
+  }
+]

@@ -1,0 +1,1 @@
+<?php defined('ABSPATH') || exit;get_header(); if(!frpmt_elementor_location('single')){ ?><main id="main" class="container section"><h1><?php echo esc_html__('صفحه پیدا نشد','frpmesh-hybrid'); ?></h1><?php get_search_form(); ?><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html__('برگشت به صفحه اصلی','frpmesh-hybrid'); ?></a></main><?php }get_footer(); ?>

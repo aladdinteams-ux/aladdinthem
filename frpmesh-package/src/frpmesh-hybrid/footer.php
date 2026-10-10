@@ -1,0 +1,1 @@
+<?php defined('ABSPATH') || exit;if(frpmt_elementor_location('footer')){}elseif(function_exists('frpme_chrome')){frpme_chrome('footer');}else{get_template_part('template-parts/footer/fallback');}wp_footer(); ?></body></html>

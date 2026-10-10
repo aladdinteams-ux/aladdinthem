@@ -1,0 +1,3405 @@
+{
+  "title": "FRP v3 / contact",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "000057c",
+      "elType": "container",
+      "isInner": true,
+      "settings": {
+        "frpme_native": "000057c",
+        "content_width": "full",
+        "html_tag": "div",
+        "css_classes": "frpme-native-box frpme-key-000057c frpme-page",
+        "_title": "خانه تماس با ما ارتباط مستقیم با مجموعه SG / CONTACT ارتباط با فا"
+      },
+      "elements": [
+        {
+          "id": "000057d",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "000057d",
+            "content_width": "full",
+            "html_tag": "div",
+            "css_classes": "frpme-native-box frpme-key-000057d frpme-page-tools-before",
+            "_title": "div"
+          },
+          "elements": []
+        },
+        {
+          "id": "000057e",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "000057e",
+            "content_width": "full",
+            "html_tag": "main",
+            "css_classes": "frpme-native-box frpme-key-000057e contact-main",
+            "_title": "خانه تماس با ما ارتباط مستقیم با مجموعه SG / CONTACT ارتباط با فا",
+            "_element_id": "main"
+          },
+          "elements": [
+            {
+              "id": "000057f",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "000057f",
+                "content_width": "full",
+                "html_tag": "nav",
+                "css_classes": "frpme-native-box frpme-key-000057f container contact-crumb",
+                "_title": "خانه تماس با ما"
+              },
+              "elements": [
+                {
+                  "id": "0000580",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "0000580",
+                    "_css_classes": "frpme-native-leaf frpme-key-0000580",
+                    "_title": "خانه",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "text": "خانه",
+                    "link": {
+                      "url": "{{URL:/}}",
+                      "is_external": false
+                    },
+                    "selected_icon": {
+                      "value": {
+                        "url": "{{ASSET:assets/icons/i-home.svg}}",
+                        "id": 0
+                      },
+                      "library": "svg"
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "0000581",
+                  "elType": "widget",
+                  "widgetType": "icon",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "0000581",
+                    "_css_classes": "frpme-native-leaf frpme-key-0000581",
+                    "_title": "آیکون #i-next",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "selected_icon": {
+                      "value": {
+                        "url": "{{ASSET:assets/icons/i-next.svg}}",
+                        "id": 0
+                      },
+                      "library": "svg"
+                    },
+                    "view": "default"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "0000582",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "0000582",
+                    "_css_classes": "frpme-native-leaf frpme-key-0000582",
+                    "_title": "تماس با ما",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "title": "تماس با ما",
+                    "header_size": "span"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "0000583",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "0000583",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-0000583 contact-hero",
+                "_title": "ارتباط مستقیم با مجموعه SG / CONTACT ارتباط با فایبرگلاس سازه گست"
+              },
+              "elements": [
+                {
+                  "id": "0000584",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "0000584",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-0000584 container contact-hero-grid",
+                    "_title": "ارتباط مستقیم با مجموعه SG / CONTACT ارتباط با فایبرگلاس سازه گست"
+                  },
+                  "elements": [
+                    {
+                      "id": "0000585",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000585",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-0000585 ",
+                        "_title": "ارتباط مستقیم با مجموعه SG / CONTACT ارتباط با فایبرگلاس سازه گست"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000586",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000586",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000586 contact-detail-line",
+                            "_title": "ارتباط مستقیم با مجموعه SG / CONTACT"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000587",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000587",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000587",
+                                "_title": "ارتباط مستقیم با مجموعه",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "ارتباط مستقیم با مجموعه",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000588",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000588",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000588",
+                                "_title": "SG / CONTACT",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "SG / CONTACT",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000589",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000589",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000589",
+                            "_title": "ارتباط با فایبرگلاس سازه گستر",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "ارتباط با فایبرگلاس سازه گستر",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "000058a",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "000058a",
+                            "_css_classes": "frpme-native-leaf frpme-key-000058a",
+                            "_title": "تماس با فایبرگلاس سازه گستر",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "تماس با فایبرگلاس<br/>سازه گستر",
+                            "header_size": "h1"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "000058b",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "000058b",
+                            "_css_classes": "frpme-native-leaf frpme-key-000058b",
+                            "_title": "درباره پروژه‌تان گفتگو کنیم. برای مشاوره خدمات فایبرگلاس، بررسی ا",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "درباره پروژه‌تان گفتگو کنیم. برای مشاوره خدمات فایبرگلاس، بررسی امکان اجرا و هماهنگی بازدید با مجموعه تماس بگیرید. نوع سطح، ابعاد تقریبی و شرح نیاز شما، نقطه شروع بررسی است."
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "000058c",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000058c",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-000058c actions",
+                            "_title": "همین حالا تماس بگیرید نشانی و مسیر دسترسی"
+                          },
+                          "elements": [
+                            {
+                              "id": "000058d",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000058d",
+                                "_css_classes": "frpme-native-leaf frpme-key-000058d",
+                                "_title": "همین حالا تماس بگیرید",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "همین حالا تماس بگیرید ",
+                                "link": {
+                                  "url": "tel:+989126124876",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-phone.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000058e",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000058e",
+                                "_css_classes": "frpme-native-leaf frpme-key-000058e",
+                                "_title": "نشانی و مسیر دسترسی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "نشانی و مسیر دسترسی ",
+                                "link": {
+                                  "url": "#contact-location",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-pin.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                }
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "000058f",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000058f",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-000058f contact-hero-note-box",
+                            "_title": "از شرح نیاز شما شروع می‌کنیم، شرایط محل و نوع کاربرد، مسیر بررسی "
+                          },
+                          "elements": [
+                            {
+                              "id": "0000590",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000590",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000590",
+                                "_title": "آیکون #i-project",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-project.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000591",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000591",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000591",
+                                "_title": "از شرح نیاز شما شروع می‌کنیم، شرایط محل و نوع کاربرد، مسیر بررسی ",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "از شرح نیاز شما شروع می‌کنیم، شرایط محل و نوع کاربرد، مسیر بررسی پروژه را مشخص می‌کنند.",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000592",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000592",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000592 hero-contact-note",
+                            "_title": "مشاوره اولیه • بررسی پروژه • هماهنگی بازدید"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000593",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000593",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000593",
+                                "_title": "مشاوره اولیه ",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "مشاوره اولیه ",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000594",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000594",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000594",
+                                "_title": "•",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "•",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000595",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000595",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000595",
+                                "_title": " بررسی پروژه ",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": " بررسی پروژه ",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000596",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000596",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000596",
+                                "_title": "•",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "•",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000597",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000597",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000597",
+                                "_title": " هماهنگی بازدید",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": " هماهنگی بازدید",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0000598",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000598",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-0000598 contact-switchboard",
+                        "_title": "خطوط ارتباطی مجموعه CONTACT / 01 تلفن همراه ۰۹۱۲ ۶۱۲ ۴۸۷۶ برای شر"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000599",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000599",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000599 switchboard-head",
+                            "_title": "خطوط ارتباطی مجموعه CONTACT / 01"
+                          },
+                          "elements": [
+                            {
+                              "id": "000059a",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "000059a",
+                                "content_width": "full",
+                                "html_tag": "span",
+                                "css_classes": "frpme-native-box frpme-key-000059a ",
+                                "_title": "خطوط ارتباطی مجموعه"
+                              },
+                              "elements": [
+                                {
+                                  "id": "000059b",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000059b",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000059b",
+                                    "_title": "آیکون #i-phone",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-phone.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000059c",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000059c",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000059c",
+                                    "_title": "خطوط ارتباطی مجموعه",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "خطوط ارتباطی مجموعه",
+                                    "header_size": "span"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "000059d",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000059d",
+                                "_css_classes": "frpme-native-leaf frpme-key-000059d",
+                                "_title": "CONTACT / 01",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "CONTACT / 01",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "000059e",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000059e",
+                            "content_width": "full",
+                            "html_tag": "a",
+                            "css_classes": "frpme-native-box frpme-key-000059e contact-primary-number",
+                            "_title": "تلفن همراه ۰۹۱۲ ۶۱۲ ۴۸۷۶ برای شروع گفتگو تماس بگیرید",
+                            "link": {
+                              "url": "tel:+989126124876"
+                            }
+                          },
+                          "elements": [
+                            {
+                              "id": "000059f",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000059f",
+                                "_css_classes": "frpme-native-leaf frpme-key-000059f",
+                                "_title": "تلفن همراه",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "تلفن همراه",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005a0",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005a0",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005a0",
+                                "_title": "۰۹۱۲ ۶۱۲ ۴۸۷۶",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰۹۱۲ ۶۱۲ ۴۸۷۶",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005a1",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00005a1",
+                                "content_width": "full",
+                                "html_tag": "small",
+                                "css_classes": "frpme-native-box frpme-key-00005a1 ",
+                                "_title": "برای شروع گفتگو تماس بگیرید"
+                              },
+                              "elements": [
+                                {
+                                  "id": "00005a2",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005a2",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005a2",
+                                    "_title": "برای شروع گفتگو تماس بگیرید ",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "برای شروع گفتگو تماس بگیرید ",
+                                    "header_size": "span"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "00005a3",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005a3",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005a3",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00005a4",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005a4",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-00005a4 switchboard-secondary",
+                            "_title": "تلفن دفتر ۰۲۱ ۳۳۴۸۱۳۰۷ تلفن همراه ۰۹۱۱ ۳۸۹۴۴۷۳"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005a5",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00005a5",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-00005a5 ",
+                                "_title": "تلفن دفتر ۰۲۱ ۳۳۴۸۱۳۰۷",
+                                "link": {
+                                  "url": "tel:+982133481307"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "00005a6",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005a6",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005a6",
+                                    "_title": "تلفن دفتر",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "تلفن دفتر",
+                                    "header_size": "span"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "00005a7",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005a7",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005a7",
+                                    "_title": "۰۲۱ ۳۳۴۸۱۳۰۷",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "۰۲۱ ۳۳۴۸۱۳۰۷",
+                                    "header_size": "span"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "00005a8",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005a8",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005a8",
+                                    "_title": "آیکون #i-office",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-office.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "00005a9",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00005a9",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-00005a9 ",
+                                "_title": "تلفن همراه ۰۹۱۱ ۳۸۹۴۴۷۳",
+                                "link": {
+                                  "url": "tel:+989113894473"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "00005aa",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005aa",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005aa",
+                                    "_title": "تلفن همراه",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "تلفن همراه",
+                                    "header_size": "span"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "00005ab",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005ab",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005ab",
+                                    "_title": "۰۹۱۱ ۳۸۹۴۴۷۳",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "۰۹۱۱ ۳۸۹۴۴۷۳",
+                                    "header_size": "span"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "00005ac",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005ac",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005ac",
+                                    "_title": "آیکون #i-phone",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-phone.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00005ad",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005ad",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005ad",
+                            "_title": "برای هماهنگی بازدید حضوری، پیش از مراجعه تماس بگیرید.",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "برای هماهنگی بازدید حضوری، پیش از مراجعه تماس بگیرید."
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "00005ae",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00005ae",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-00005ae section contact-channels",
+                "_title": "مسیر ارتباط شما تماس، مکاتبه یا مراجعه برای گفتگو درباره نیاز اجر"
+              },
+              "elements": [
+                {
+                  "id": "00005af",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "00005af",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-00005af container channels-grid",
+                    "_title": "مسیر ارتباط شما تماس، مکاتبه یا مراجعه برای گفتگو درباره نیاز اجر"
+                  },
+                  "elements": [
+                    {
+                      "id": "00005b0",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00005b0",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00005b0 ",
+                        "_title": "مسیر ارتباط شما تماس، مکاتبه یا مراجعه برای گفتگو درباره نیاز اجر"
+                      },
+                      "elements": [
+                        {
+                          "id": "00005b1",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005b1",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005b1",
+                            "_title": "مسیر ارتباط شما",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "مسیر ارتباط شما",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00005b2",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005b2",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005b2",
+                            "_title": "تماس، مکاتبه یا مراجعه",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "تماس، مکاتبه یا مراجعه",
+                            "header_size": "h2"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00005b3",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005b3",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005b3",
+                            "_title": "برای گفتگو درباره نیاز اجرایی تماس بگیرید. توضیحات مکتوب پروژه را",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "برای گفتگو درباره نیاز اجرایی تماس بگیرید. توضیحات مکتوب پروژه را می‌توانید به ایمیل پشتیبانی ارسال کنید."
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "00005b4",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00005b4",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00005b4 channel-email",
+                        "_title": "ایمیل پشتیبانی asgharjalali1357@gmail.com نوشتن ایمیل کپی نشانی"
+                      },
+                      "elements": [
+                        {
+                          "id": "00005b5",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005b5",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-00005b5 channel-label",
+                            "_title": "ایمیل پشتیبانی"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005b6",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005b6",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005b6",
+                                "_title": "آیکون #i-mail",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-mail.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005b7",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005b7",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005b7",
+                                "_title": "ایمیل پشتیبانی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "ایمیل پشتیبانی",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00005b8",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005b8",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005b8",
+                            "_title": "asgharjalali1357@gmail.com",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "asgharjalali1357@gmail.com",
+                            "link": {
+                              "url": "mailto:asgharjalali1357@gmail.com",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": "",
+                              "library": ""
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00005b9",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005b9",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-00005b9 email-actions",
+                            "_title": "نوشتن ایمیل کپی نشانی"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005ba",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005ba",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005ba",
+                                "_title": "نوشتن ایمیل",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "نوشتن ایمیل ",
+                                "link": {
+                                  "url": "mailto:asgharjalali1357@gmail.com",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005bb",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005bb",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005bb",
+                                "_title": "کپی نشانی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "کپی نشانی ",
+                                "link": {
+                                  "url": "",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-identity.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                }
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00005bc",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005bc",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005bc",
+                            "_title": "پیام copy-status",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "​",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "00005bd",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00005bd",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-00005bd section contact-location",
+                "_title": "نشانی مجموعه برای مراجعه، هماهنگ کنیم بزرگراه امام رضا، بعد از می",
+                "_element_id": "contact-location"
+              },
+              "elements": [
+                {
+                  "id": "00005be",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "00005be",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-00005be container location-grid",
+                    "_title": "نشانی مجموعه برای مراجعه، هماهنگ کنیم بزرگراه امام رضا، بعد از می"
+                  },
+                  "elements": [
+                    {
+                      "id": "00005bf",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00005bf",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00005bf location-info",
+                        "_title": "نشانی مجموعه برای مراجعه، هماهنگ کنیم بزرگراه امام رضا، بعد از می"
+                      },
+                      "elements": [
+                        {
+                          "id": "00005c0",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005c0",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005c0",
+                            "_title": "نشانی مجموعه",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "نشانی مجموعه",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00005c1",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005c1",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005c1",
+                            "_title": "برای مراجعه، هماهنگ کنیم",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "برای مراجعه،<br/>هماهنگ کنیم",
+                            "header_size": "h2"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00005c2",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005c2",
+                            "content_width": "full",
+                            "html_tag": "p",
+                            "css_classes": "frpme-native-box frpme-key-00005c2 location-address",
+                            "_title": "بزرگراه امام رضا، بعد از میدان آقانور، بیست‌متری تختی، نبش کوچه پ"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005c3",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005c3",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005c3",
+                                "_title": "آیکون #i-pin",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-pin.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005c4",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005c4",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005c4",
+                                "_title": "بزرگراه امام رضا، بعد از میدان آقانور، بیست‌متری تختی، نبش کوچه پ",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "بزرگراه امام رضا، بعد از میدان آقانور، بیست‌متری تختی، نبش کوچه پنجم، پلاک یک",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00005c5",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005c5",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005c5",
+                            "_title": "مسیریابی در گوگل‌مپ",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "مسیریابی در گوگل‌مپ ",
+                            "link": {
+                              "url": "https://www.google.com/maps/search/?api=1&query=35.618554380208934%2C51.49662278474296",
+                              "is_external": true
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00005c6",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005c6",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005c6",
+                            "_title": "این موقعیت بر اساس نقشه ارسالی مجموعه نمایش داده می‌شود. برای تأی",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "این موقعیت بر اساس نقشه ارسالی مجموعه نمایش داده می‌شود. برای تأیید محل مراجعه و امکان بازدید، با دفتر تماس بگیرید."
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00005c7",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005c7",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005c7",
+                            "_title": "تماس با دفتر، ۰۲۱۳۳۴۸۱۳۰۷",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "تماس با دفتر، <bdi>۰۲۱۳۳۴۸۱۳۰۷</bdi>",
+                            "link": {
+                              "url": "tel:+982133481307",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": "",
+                              "library": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "00005c8",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00005c8",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00005c8 contact-map",
+                        "_title": "موقعیت ثبت‌شده در نقشه ارسالی"
+                      },
+                      "elements": [
+                        {
+                          "id": "00005c9",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005c9",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005c9",
+                            "_title": "ابزار فنی",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "html": "<iframe allowfullscreen=\"\" height=\"500\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.372014759023!2d51.49662278474296!3d35.618554380208934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDM3JzA2LjgiTiA1McKwMjknNDAuMCJF!5e0!3m2!1sfa!2s!4v1623615726159!5m2!1sfa!2s\" title=\"نقشه موقعیت فایبرگلاس سازه گستر\" width=\"800\"></iframe>"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00005ca",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005ca",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-00005ca map-caption",
+                            "_title": "موقعیت ثبت‌شده در نقشه ارسالی"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005cb",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005cb",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005cb",
+                                "_title": "آیکون #i-pin",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-pin.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005cc",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005cc",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005cc",
+                                "_title": "موقعیت ثبت‌شده در نقشه ارسالی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "موقعیت ثبت‌شده در نقشه ارسالی",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "00005cd",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00005cd",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-00005cd section contact-ready",
+                "_title": "قبل از تماس گفتگوی دقیق‌تر، با اطلاعات روشن‌تر مواردی را که آماده"
+              },
+              "elements": [
+                {
+                  "id": "00005ce",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "00005ce",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-00005ce container",
+                    "_title": "قبل از تماس گفتگوی دقیق‌تر، با اطلاعات روشن‌تر مواردی را که آماده"
+                  },
+                  "elements": [
+                    {
+                      "id": "00005cf",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00005cf",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00005cf ready-heading",
+                        "_title": "قبل از تماس گفتگوی دقیق‌تر، با اطلاعات روشن‌تر مواردی را که آماده"
+                      },
+                      "elements": [
+                        {
+                          "id": "00005d0",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005d0",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-00005d0 ",
+                            "_title": "قبل از تماس گفتگوی دقیق‌تر، با اطلاعات روشن‌تر"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005d1",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005d1",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005d1",
+                                "_title": "قبل از تماس",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "قبل از تماس",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005d2",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005d2",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005d2",
+                                "_title": "گفتگوی دقیق‌تر، با اطلاعات روشن‌تر",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "گفتگوی دقیق‌تر، با اطلاعات روشن‌تر",
+                                "header_size": "h2"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00005d3",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005d3",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005d3",
+                            "_title": "مواردی را که آماده کرده‌اید علامت بزنید. این چک‌لیست فقط روی همین",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "مواردی را که آماده کرده‌اید علامت بزنید. این چک‌لیست فقط روی همین صفحه عمل می‌کند و اطلاعاتی ارسال نمی‌کند."
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "00005d4",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00005d4",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00005d4 contact-checklist",
+                        "_title": "۰1 نوع پروژه استخر، جکوزی، مخزن یا سطح ساختمانی ۰2 ابعاد تقریبی م"
+                      },
+                      "elements": [
+                        {
+                          "id": "00005d5",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005d5",
+                            "content_width": "full",
+                            "html_tag": "label",
+                            "css_classes": "frpme-native-box frpme-key-00005d5 ",
+                            "_title": "۰1 نوع پروژه استخر، جکوزی، مخزن یا سطح ساختمانی"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005d6",
+                              "elType": "widget",
+                              "widgetType": "frpme-field",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005d6",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005d6",
+                                "_title": "فیلد checkbox",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "field_type": "checkbox",
+                                "field_id": "",
+                                "name": "",
+                                "placeholder": "",
+                                "value": "",
+                                "min": "",
+                                "max": "",
+                                "step": "any",
+                                "required": "",
+                                "options": ""
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005d7",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005d7",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005d7",
+                                "_title": "۰1",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰1",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005d8",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005d8",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005d8",
+                                "_title": "آیکون #i-project",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-project.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005d9",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005d9",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005d9",
+                                "_title": "نوع پروژه استخر، جکوزی، مخزن یا سطح ساختمانی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "<strong>نوع پروژه</strong><small>استخر، جکوزی، مخزن یا سطح ساختمانی</small>",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005da",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00005da",
+                                "content_width": "full",
+                                "html_tag": "span",
+                                "css_classes": "frpme-native-box frpme-key-00005da ready-tick",
+                                "_title": "span"
+                              },
+                              "elements": [
+                                {
+                                  "id": "00005db",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005db",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005db",
+                                    "_title": "آیکون #i-check",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-check.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00005dc",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005dc",
+                            "content_width": "full",
+                            "html_tag": "label",
+                            "css_classes": "frpme-native-box frpme-key-00005dc ",
+                            "_title": "۰2 ابعاد تقریبی مساحت سطح یا اندازه‌های مخزن"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005dd",
+                              "elType": "widget",
+                              "widgetType": "frpme-field",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005dd",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005dd",
+                                "_title": "فیلد checkbox",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "field_type": "checkbox",
+                                "field_id": "",
+                                "name": "",
+                                "placeholder": "",
+                                "value": "",
+                                "min": "",
+                                "max": "",
+                                "step": "any",
+                                "required": "",
+                                "options": ""
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005de",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005de",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005de",
+                                "_title": "۰2",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰2",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005df",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005df",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005df",
+                                "_title": "آیکون #i-box",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-box.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005e0",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005e0",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005e0",
+                                "_title": "ابعاد تقریبی مساحت سطح یا اندازه‌های مخزن",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "<strong>ابعاد تقریبی</strong><small>مساحت سطح یا اندازه‌های مخزن</small>",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005e1",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00005e1",
+                                "content_width": "full",
+                                "html_tag": "span",
+                                "css_classes": "frpme-native-box frpme-key-00005e1 ready-tick",
+                                "_title": "span"
+                              },
+                              "elements": [
+                                {
+                                  "id": "00005e2",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005e2",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005e2",
+                                    "_title": "آیکون #i-check",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-check.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00005e3",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005e3",
+                            "content_width": "full",
+                            "html_tag": "label",
+                            "css_classes": "frpme-native-box frpme-key-00005e3 ",
+                            "_title": "۰3 تصاویر و وضعیت زیرکار محل نشتی، ترک‌ها و پوشش قبلی"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005e4",
+                              "elType": "widget",
+                              "widgetType": "frpme-field",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005e4",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005e4",
+                                "_title": "فیلد checkbox",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "field_type": "checkbox",
+                                "field_id": "",
+                                "name": "",
+                                "placeholder": "",
+                                "value": "",
+                                "min": "",
+                                "max": "",
+                                "step": "any",
+                                "required": "",
+                                "options": ""
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005e5",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005e5",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005e5",
+                                "_title": "۰3",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰3",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005e6",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005e6",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005e6",
+                                "_title": "آیکون #i-zoom",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-zoom.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005e7",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005e7",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005e7",
+                                "_title": "تصاویر و وضعیت زیرکار محل نشتی، ترک‌ها و پوشش قبلی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "<strong>تصاویر و وضعیت زیرکار</strong><small>محل نشتی، ترک‌ها و پوشش قبلی</small>",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005e8",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00005e8",
+                                "content_width": "full",
+                                "html_tag": "span",
+                                "css_classes": "frpme-native-box frpme-key-00005e8 ready-tick",
+                                "_title": "span"
+                              },
+                              "elements": [
+                                {
+                                  "id": "00005e9",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005e9",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005e9",
+                                    "_title": "آیکون #i-check",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-check.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00005ea",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005ea",
+                            "content_width": "full",
+                            "html_tag": "label",
+                            "css_classes": "frpme-native-box frpme-key-00005ea ",
+                            "_title": "۰4 شرایط بهره‌برداری برای مخزن، نوع سیال، غلظت و دما"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005eb",
+                              "elType": "widget",
+                              "widgetType": "frpme-field",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005eb",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005eb",
+                                "_title": "فیلد checkbox",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "field_type": "checkbox",
+                                "field_id": "",
+                                "name": "",
+                                "placeholder": "",
+                                "value": "",
+                                "min": "",
+                                "max": "",
+                                "step": "any",
+                                "required": "",
+                                "options": ""
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005ec",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005ec",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005ec",
+                                "_title": "۰4",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰4",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005ed",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005ed",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005ed",
+                                "_title": "آیکون #i-tank",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-tank.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005ee",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005ee",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005ee",
+                                "_title": "شرایط بهره‌برداری برای مخزن، نوع سیال، غلظت و دما",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "<strong>شرایط بهره‌برداری</strong><small>برای مخزن، نوع سیال، غلظت و دما</small>",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "00005ef",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00005ef",
+                                "content_width": "full",
+                                "html_tag": "span",
+                                "css_classes": "frpme-native-box frpme-key-00005ef ready-tick",
+                                "_title": "span"
+                              },
+                              "elements": [
+                                {
+                                  "id": "00005f0",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005f0",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005f0",
+                                    "_title": "آیکون #i-check",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-check.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "00005f1",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00005f1",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00005f1 ready-progress",
+                        "_title": "۰ از ۴ مورد آماده است"
+                      },
+                      "elements": [
+                        {
+                          "id": "00005f2",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005f2",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005f2",
+                            "_title": "۰ از ۴ مورد آماده است",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "۰ از ۴ مورد آماده است",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00005f3",
+                          "elType": "widget",
+                          "widgetType": "frpme-field",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00005f3",
+                            "_css_classes": "frpme-native-leaf frpme-key-00005f3",
+                            "_title": "فیلد ready-meter",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "field_type": "progress",
+                            "field_id": "ready-meter",
+                            "name": "",
+                            "placeholder": "",
+                            "value": "0",
+                            "min": "",
+                            "max": "4",
+                            "step": "any",
+                            "required": "",
+                            "options": ""
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "00005f4",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00005f4",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-00005f4 section contact-faq",
+                "_title": "پیش از شروع گفتگو سوالات متداول تماس با مجموعه چگونه درخواست مشاو"
+              },
+              "elements": [
+                {
+                  "id": "00005f5",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "00005f5",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-00005f5 container",
+                    "_title": "پیش از شروع گفتگو سوالات متداول تماس با مجموعه چگونه درخواست مشاو"
+                  },
+                  "elements": [
+                    {
+                      "id": "00005f6",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "00005f6",
+                        "_css_classes": "frpme-native-leaf frpme-key-00005f6",
+                        "_title": "پیش از شروع گفتگو",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "title": "پیش از شروع گفتگو",
+                        "header_size": "span"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "00005f7",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "00005f7",
+                        "_css_classes": "frpme-native-leaf frpme-key-00005f7",
+                        "_title": "سوالات متداول تماس با مجموعه",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "title": "سوالات متداول تماس با مجموعه",
+                        "header_size": "h2"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "00005f8",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00005f8",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00005f8 contact-faq-list",
+                        "_title": "چگونه درخواست مشاوره ثبت کنیم؟ با شماره ۰۹۱۲۶۱۲۴۸۷۶ تماس بگیرید ی"
+                      },
+                      "elements": [
+                        {
+                          "id": "00005f9",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005f9",
+                            "content_width": "full",
+                            "html_tag": "details",
+                            "css_classes": "frpme-native-box frpme-key-00005f9 ",
+                            "_title": "چگونه درخواست مشاوره ثبت کنیم؟ با شماره ۰۹۱۲۶۱۲۴۸۷۶ تماس بگیرید ی"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005fa",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00005fa",
+                                "content_width": "full",
+                                "html_tag": "summary",
+                                "css_classes": "frpme-native-box frpme-key-00005fa ",
+                                "_title": "چگونه درخواست مشاوره ثبت کنیم؟"
+                              },
+                              "elements": [
+                                {
+                                  "id": "00005fb",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005fb",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005fb",
+                                    "_title": "چگونه درخواست مشاوره ثبت کنیم؟",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "چگونه درخواست مشاوره ثبت کنیم؟",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "00005fc",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00005fc",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00005fc",
+                                    "_title": "آیکون #i-disclosure",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-disclosure.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "00005fd",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00005fd",
+                                "_css_classes": "frpme-native-leaf frpme-key-00005fd",
+                                "_title": "با شماره ۰۹۱۲۶۱۲۴۸۷۶ تماس بگیرید یا شرح پروژه را به ایمیل پشتیبان",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "با شماره ۰۹۱۲۶۱۲۴۸۷۶ تماس بگیرید یا شرح پروژه را به ایمیل پشتیبانی بفرستید. نوع پروژه، ابعاد و تصاویر محل به بررسی اولیه کمک می‌کنند."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00005fe",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00005fe",
+                            "content_width": "full",
+                            "html_tag": "details",
+                            "css_classes": "frpme-native-box frpme-key-00005fe ",
+                            "_title": "آیا امکان بازدید از پروژه وجود دارد؟ امکان بازدید، محدوده ارائه خ"
+                          },
+                          "elements": [
+                            {
+                              "id": "00005ff",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00005ff",
+                                "content_width": "full",
+                                "html_tag": "summary",
+                                "css_classes": "frpme-native-box frpme-key-00005ff ",
+                                "_title": "آیا امکان بازدید از پروژه وجود دارد؟"
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000600",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000600",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000600",
+                                    "_title": "آیا امکان بازدید از پروژه وجود دارد؟",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "آیا امکان بازدید از پروژه وجود دارد؟",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "0000601",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000601",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000601",
+                                    "_title": "آیکون #i-disclosure",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-disclosure.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0000602",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000602",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000602",
+                                "_title": "امکان بازدید، محدوده ارائه خدمات و شرایط آن هنگام تماس و بررسی پر",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "امکان بازدید، محدوده ارائه خدمات و شرایط آن هنگام تماس و بررسی پروژه مشخص می‌شوند. پیش از مراجعه یا برنامه‌ریزی بازدید هماهنگ کنید."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000603",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000603",
+                            "content_width": "full",
+                            "html_tag": "details",
+                            "css_classes": "frpme-native-box frpme-key-0000603 ",
+                            "_title": "برای بررسی پوشش مخزن چه اطلاعاتی لازم است؟ جنس مخزن، ابعاد، نوع س"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000604",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "0000604",
+                                "content_width": "full",
+                                "html_tag": "summary",
+                                "css_classes": "frpme-native-box frpme-key-0000604 ",
+                                "_title": "برای بررسی پوشش مخزن چه اطلاعاتی لازم است؟"
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000605",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000605",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000605",
+                                    "_title": "برای بررسی پوشش مخزن چه اطلاعاتی لازم است؟",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "برای بررسی پوشش مخزن چه اطلاعاتی لازم است؟",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "0000606",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000606",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000606",
+                                    "_title": "آیکون #i-disclosure",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-disclosure.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0000607",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000607",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000607",
+                                "_title": "جنس مخزن، ابعاد، نوع سیال، غلظت، دما و وضعیت پوشش قبلی را مطرح کن",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "جنس مخزن، ابعاد، نوع سیال، غلظت، دما و وضعیت پوشش قبلی را مطرح کنید. انتخاب سیستم پوشش به بررسی سازگاری مواد وابسته است."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0000608",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000608",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-0000608 contact-end",
+                        "_title": "پروژه شما از یک گفتگو شروع می‌شود برای آشنایی بیشتر، خدمات فایبرگ"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000609",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000609",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000609 ",
+                            "_title": "پروژه شما از یک گفتگو شروع می‌شود برای آشنایی بیشتر، خدمات فایبرگ"
+                          },
+                          "elements": [
+                            {
+                              "id": "000060a",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000060a",
+                                "_css_classes": "frpme-native-leaf frpme-key-000060a",
+                                "_title": "پروژه شما از یک گفتگو شروع می‌شود",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "پروژه شما از یک گفتگو شروع می‌شود",
+                                "header_size": "h2"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000060b",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "000060b",
+                                "content_width": "full",
+                                "html_tag": "p",
+                                "css_classes": "frpme-native-box frpme-key-000060b ",
+                                "_title": "برای آشنایی بیشتر، خدمات فایبرگلاس و نمونه پروژه‌ها را ببینید."
+                              },
+                              "elements": [
+                                {
+                                  "id": "000060c",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000060c",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000060c",
+                                    "_title": "برای آشنایی بیشتر، ",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "برای آشنایی بیشتر، ",
+                                    "header_size": "span"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000060d",
+                                  "elType": "widget",
+                                  "widgetType": "button",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000060d",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000060d",
+                                    "_title": "خدمات فایبرگلاس",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "text": "خدمات فایبرگلاس",
+                                    "link": {
+                                      "url": "{{URL:/services/}}",
+                                      "is_external": false
+                                    },
+                                    "selected_icon": {
+                                      "value": "",
+                                      "library": ""
+                                    }
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000060e",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000060e",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000060e",
+                                    "_title": " و ",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": " و ",
+                                    "header_size": "span"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000060f",
+                                  "elType": "widget",
+                                  "widgetType": "button",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000060f",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000060f",
+                                    "_title": "نمونه پروژه‌ها",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "text": "نمونه پروژه‌ها",
+                                    "link": {
+                                      "url": "{{URL:/gallery/}}",
+                                      "is_external": false
+                                    },
+                                    "selected_icon": {
+                                      "value": "",
+                                      "library": ""
+                                    }
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "0000610",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000610",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000610",
+                                    "_title": " را ببینید.",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": " را ببینید.",
+                                    "header_size": "span"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000611",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000611",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000611",
+                            "_title": "تماس با مجموعه",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "تماس با مجموعه ",
+                            "link": {
+                              "url": "tel:+989126124876",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-phone.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0000612",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "0000612",
+            "content_width": "full",
+            "html_tag": "div",
+            "css_classes": "frpme-native-box frpme-key-0000612 frpme-page-tools-after",
+            "_title": "div"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

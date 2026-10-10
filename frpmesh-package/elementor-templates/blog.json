@@ -1,0 +1,3921 @@
+{
+  "title": "FRP v3 / blog",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "0000613",
+      "elType": "container",
+      "isInner": true,
+      "settings": {
+        "frpme_native": "0000613",
+        "content_width": "full",
+        "html_tag": "div",
+        "css_classes": "frpme-native-box frpme-key-0000613 frpme-page",
+        "_title": "خانه / وبلاگ SG / KNOWLEDGE دانشنامه سازه گستر مرجع موضوعی فایبرگ"
+      },
+      "elements": [
+        {
+          "id": "0000614",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "0000614",
+            "content_width": "full",
+            "html_tag": "div",
+            "css_classes": "frpme-native-box frpme-key-0000614 frpme-page-tools-before",
+            "_title": "div"
+          },
+          "elements": []
+        },
+        {
+          "id": "0000615",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "0000615",
+            "content_width": "full",
+            "html_tag": "main",
+            "css_classes": "frpme-native-box frpme-key-0000615 blog-main",
+            "_title": "خانه / وبلاگ SG / KNOWLEDGE دانشنامه سازه گستر مرجع موضوعی فایبرگ",
+            "_element_id": "main"
+          },
+          "elements": [
+            {
+              "id": "0000616",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "0000616",
+                "content_width": "full",
+                "html_tag": "nav",
+                "css_classes": "frpme-native-box frpme-key-0000616 container blog-crumb",
+                "_title": "خانه / وبلاگ"
+              },
+              "elements": [
+                {
+                  "id": "0000617",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "0000617",
+                    "_css_classes": "frpme-native-leaf frpme-key-0000617",
+                    "_title": "خانه",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "text": "خانه",
+                    "link": {
+                      "url": "{{URL:/}}",
+                      "is_external": false
+                    },
+                    "selected_icon": {
+                      "value": {
+                        "url": "{{ASSET:assets/icons/i-home.svg}}",
+                        "id": 0
+                      },
+                      "library": "svg"
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "0000618",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "0000618",
+                    "_css_classes": "frpme-native-leaf frpme-key-0000618",
+                    "_title": "/",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "title": "/",
+                    "header_size": "span"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "0000619",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "frpme_native": "0000619",
+                    "_css_classes": "frpme-native-leaf frpme-key-0000619",
+                    "_title": "وبلاگ",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": "",
+                      "text_color": "",
+                      "button_text_color": "",
+                      "background_color": "",
+                      "primary_color": "",
+                      "secondary_color": "",
+                      "caption_text_color": "",
+                      "link_color": ""
+                    },
+                    "title": "وبلاگ",
+                    "header_size": "span"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "000061a",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "000061a",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-000061a blog-hero",
+                "_title": "SG / KNOWLEDGE دانشنامه سازه گستر مرجع موضوعی فایبرگلاس مقالات و "
+              },
+              "elements": [
+                {
+                  "id": "000061b",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "000061b",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-000061b container blog-hero-grid",
+                    "_title": "SG / KNOWLEDGE دانشنامه سازه گستر مرجع موضوعی فایبرگلاس مقالات و "
+                  },
+                  "elements": [
+                    {
+                      "id": "000061c",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "000061c",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-000061c ",
+                        "_title": "SG / KNOWLEDGE دانشنامه سازه گستر مرجع موضوعی فایبرگلاس مقالات و "
+                      },
+                      "elements": [
+                        {
+                          "id": "000061d",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000061d",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-000061d blog-edition",
+                            "_title": "SG / KNOWLEDGE دانشنامه سازه گستر"
+                          },
+                          "elements": [
+                            {
+                              "id": "000061e",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000061e",
+                                "_css_classes": "frpme-native-leaf frpme-key-000061e",
+                                "_title": "SG / KNOWLEDGE ",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "SG / KNOWLEDGE ",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000061f",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000061f",
+                                "_css_classes": "frpme-native-leaf frpme-key-000061f",
+                                "_title": "دانشنامه سازه گستر",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "دانشنامه سازه گستر",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000620",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000620",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000620",
+                            "_title": "مرجع موضوعی فایبرگلاس",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "مرجع موضوعی فایبرگلاس",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000621",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000621",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000621",
+                            "_title": "مقالات و وبلاگ فایبرگلاس",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "مقالات و وبلاگ<br/><span>فایبرگلاس</span>",
+                            "header_size": "h1"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000622",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000622",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000622",
+                            "_title": "وبلاگ فایبرگلاس سازه گستر، مسیری برای شناخت الیاف، رزین، کامپوزیت",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "وبلاگ فایبرگلاس سازه گستر، مسیری برای شناخت الیاف، رزین، کامپوزیت و کاربردهای اجرایی است. مطالب فایبرگلاس را بر اساس موضوع پیدا کنید و از شناخت مواد اولیه به بررسی آب‌بندی، ایزولاسیون و کاربردهای صنعتی برسید."
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000623",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000623",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000623",
+                            "_title": "پیدا کردن مطلب",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "پیدا کردن مطلب ",
+                            "link": {
+                              "url": "#blog-library",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000624",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000624",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000624 hero-topics",
+                            "_title": "شناخت مواد روش‌های اجرا کاربردهای صنعتی"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000625",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000625",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000625",
+                                "_title": "شناخت مواد",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "شناخت مواد",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000626",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000626",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000626",
+                                "_title": "روش‌های اجرا",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "روش‌های اجرا",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000627",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000627",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000627",
+                                "_title": "کاربردهای صنعتی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "کاربردهای صنعتی",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0000628",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000628",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-0000628 blog-hero-index",
+                        "_title": "مسیر شناخت فایبرگلاس 01 → 03 ۰۱ از مواد شروع کنید الیاف شیشه، سوز"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000629",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000629",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000629 index-top",
+                            "_title": "مسیر شناخت فایبرگلاس 01 → 03"
+                          },
+                          "elements": [
+                            {
+                              "id": "000062a",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000062a",
+                                "_css_classes": "frpme-native-leaf frpme-key-000062a",
+                                "_title": "مسیر شناخت فایبرگلاس",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "مسیر شناخت فایبرگلاس",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000062b",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000062b",
+                                "_css_classes": "frpme-native-leaf frpme-key-000062b",
+                                "_title": "01 → 03",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "01 → 03",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "000062c",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000062c",
+                            "content_width": "full",
+                            "html_tag": "a",
+                            "css_classes": "frpme-native-box frpme-key-000062c ",
+                            "_title": "۰۱ از مواد شروع کنید الیاف شیشه، سوزنی، حصیری و رزین",
+                            "link": {
+                              "url": "#blog-materials"
+                            }
+                          },
+                          "elements": [
+                            {
+                              "id": "000062d",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000062d",
+                                "_css_classes": "frpme-native-leaf frpme-key-000062d",
+                                "_title": "۰۱",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰۱",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000062e",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000062e",
+                                "_css_classes": "frpme-native-leaf frpme-key-000062e",
+                                "_title": "آیکون #i-fiber",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-fiber.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000062f",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000062f",
+                                "_css_classes": "frpme-native-leaf frpme-key-000062f",
+                                "_title": "از مواد شروع کنید الیاف شیشه، سوزنی، حصیری و رزین",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "<strong>از مواد شروع کنید</strong><em>الیاف شیشه، سوزنی، حصیری و رزین</em>",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000630",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000630",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000630",
+                                "_title": "آیکون #i-arrow",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000631",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000631",
+                            "content_width": "full",
+                            "html_tag": "a",
+                            "css_classes": "frpme-native-box frpme-key-0000631 ",
+                            "_title": "۰۲ روش اجرا را بشناسید آماده‌سازی، پوشش و آب‌بندی",
+                            "link": {
+                              "url": "#blog-execution"
+                            }
+                          },
+                          "elements": [
+                            {
+                              "id": "0000632",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000632",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000632",
+                                "_title": "۰۲",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰۲",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000633",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000633",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000633",
+                                "_title": "آیکون #i-layers",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-layers.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000634",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000634",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000634",
+                                "_title": "روش اجرا را بشناسید آماده‌سازی، پوشش و آب‌بندی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "<strong>روش اجرا را بشناسید</strong><em>آماده‌سازی، پوشش و آب‌بندی</em>",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000635",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000635",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000635",
+                                "_title": "آیکون #i-arrow",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000636",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000636",
+                            "content_width": "full",
+                            "html_tag": "a",
+                            "css_classes": "frpme-native-box frpme-key-0000636 ",
+                            "_title": "۰۳ کاربرد را بررسی کنید مخازن و شرایط بهره‌برداری صنعتی",
+                            "link": {
+                              "url": "#blog-industry"
+                            }
+                          },
+                          "elements": [
+                            {
+                              "id": "0000637",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000637",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000637",
+                                "_title": "۰۳",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰۳",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000638",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000638",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000638",
+                                "_title": "آیکون #i-tank",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-tank.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000639",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000639",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000639",
+                                "_title": "کاربرد را بررسی کنید مخازن و شرایط بهره‌برداری صنعتی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "<strong>کاربرد را بررسی کنید</strong><em>مخازن و شرایط بهره‌برداری صنعتی</em>",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000063a",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000063a",
+                                "_css_classes": "frpme-native-leaf frpme-key-000063a",
+                                "_title": "آیکون #i-arrow",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "000063b",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "000063b",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-000063b section blog-library",
+                "_title": "کتابخانه موضوعی آخرین مقالات فایبرگلاس موضوع را انتخاب کنید یا عب",
+                "_element_id": "blog-library"
+              },
+              "elements": [
+                {
+                  "id": "000063c",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "000063c",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-000063c container",
+                    "_title": "کتابخانه موضوعی آخرین مقالات فایبرگلاس موضوع را انتخاب کنید یا عب"
+                  },
+                  "elements": [
+                    {
+                      "id": "000063d",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "000063d",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-000063d blog-section-head",
+                        "_title": "کتابخانه موضوعی آخرین مقالات فایبرگلاس موضوع را انتخاب کنید یا عب"
+                      },
+                      "elements": [
+                        {
+                          "id": "000063e",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000063e",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-000063e ",
+                            "_title": "کتابخانه موضوعی آخرین مقالات فایبرگلاس"
+                          },
+                          "elements": [
+                            {
+                              "id": "000063f",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000063f",
+                                "_css_classes": "frpme-native-leaf frpme-key-000063f",
+                                "_title": "کتابخانه موضوعی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "کتابخانه موضوعی",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000640",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000640",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000640",
+                                "_title": "آخرین مقالات فایبرگلاس",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "آخرین مقالات فایبرگلاس",
+                                "header_size": "h2"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000641",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000641",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000641",
+                            "_title": "موضوع را انتخاب کنید یا عبارت موردنظر را جستجو کنید.",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "موضوع را انتخاب کنید یا عبارت موردنظر را جستجو کنید."
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0000642",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000642",
+                        "content_width": "full",
+                        "html_tag": "form",
+                        "css_classes": "frpme-native-box frpme-key-0000642 blog-search",
+                        "_title": "جستجو در راهنماها جستجو"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000643",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000643",
+                            "content_width": "full",
+                            "html_tag": "label",
+                            "css_classes": "frpme-native-box frpme-key-0000643 ",
+                            "_title": "جستجو در راهنماها"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000644",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000644",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000644",
+                                "_title": "آیکون #i-zoom",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-zoom.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000645",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000645",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000645",
+                                "_title": "جستجو در راهنماها",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "جستجو در راهنماها",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000646",
+                          "elType": "widget",
+                          "widgetType": "frpme-field",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000646",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000646",
+                            "_title": "فیلد blog-query",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "field_type": "search",
+                            "field_id": "blog-query",
+                            "name": "s",
+                            "placeholder": "مثلاً الیاف حصیری، رزین یا آب‌بندی استخر",
+                            "value": "",
+                            "min": "",
+                            "max": "",
+                            "step": "any",
+                            "required": "",
+                            "options": ""
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000647",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000647",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000647",
+                            "_title": "blog-clear",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "​",
+                            "link": {
+                              "url": "",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-close.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000648",
+                          "elType": "widget",
+                          "widgetType": "frpme-field",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000648",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000648",
+                            "_title": "فیلد post_type",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "field_type": "hidden",
+                            "field_id": "",
+                            "name": "post_type",
+                            "placeholder": "",
+                            "value": "post",
+                            "min": "",
+                            "max": "",
+                            "step": "any",
+                            "required": "",
+                            "options": ""
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000649",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000649",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000649",
+                            "_title": "جستجو",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "جستجو",
+                            "link": {
+                              "url": "",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": "",
+                              "library": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "000064a",
+                      "elType": "widget",
+                      "widgetType": "frpme-data",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "000064a",
+                        "_css_classes": "frpme-native-leaf frpme-key-000064a",
+                        "_title": "وردپرس / blog-filters",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "kind": "blog-filters"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "000064b",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "000064b",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-000064b blog-result-line",
+                        "_title": "۶ راهنمای موضوعی نشان‌شده‌ها"
+                      },
+                      "elements": [
+                        {
+                          "id": "000064c",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "000064c",
+                            "_css_classes": "frpme-native-leaf frpme-key-000064c",
+                            "_title": "۶ راهنمای موضوعی",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "۶ راهنمای موضوعی",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "000064d",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "000064d",
+                            "_css_classes": "frpme-native-leaf frpme-key-000064d",
+                            "_title": "نشان‌شده‌ها",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "نشان‌شده‌ها",
+                            "link": {
+                              "url": "",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-identity.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "000064e",
+                      "elType": "widget",
+                      "widgetType": "frpme-data",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "000064e",
+                        "_css_classes": "frpme-native-leaf frpme-key-000064e",
+                        "_title": "وردپرس / blog-cards",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "kind": "blog-cards"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "000064f",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "000064f",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-000064f blog-empty",
+                        "_title": "مطلبی با این عبارت پیدا نشد عبارت کوتاه‌تر یا موضوع دیگری را امتح",
+                        "_element_id": "blog-empty"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000650",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000650",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000650",
+                            "_title": "آیکون #i-zoom",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-zoom.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            },
+                            "view": "default"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000651",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000651",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000651",
+                            "_title": "مطلبی با این عبارت پیدا نشد",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "مطلبی با این عبارت پیدا نشد",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000652",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000652",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000652",
+                            "_title": "عبارت کوتاه‌تر یا موضوع دیگری را امتحان کنید.",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "عبارت کوتاه‌تر یا موضوع دیگری را امتحان کنید."
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0000653",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "0000653",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-0000653 section blog-pathways",
+                "_title": "۰1 آموزش و دانستنی‌های فایبرگلاس برای شروع، شناخت کامپوزیت و تفاو"
+              },
+              "elements": [
+                {
+                  "id": "0000654",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "0000654",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-0000654 container",
+                    "_title": "۰1 آموزش و دانستنی‌های فایبرگلاس برای شروع، شناخت کامپوزیت و تفاو"
+                  },
+                  "elements": [
+                    {
+                      "id": "0000655",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000655",
+                        "content_width": "full",
+                        "html_tag": "section",
+                        "css_classes": "frpme-native-box frpme-key-0000655 blog-path-row",
+                        "_title": "۰1 آموزش و دانستنی‌های فایبرگلاس برای شروع، شناخت کامپوزیت و تفاو",
+                        "_element_id": "blog-learning"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000656",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000656",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000656 path-title",
+                            "_title": "۰1 آموزش و دانستنی‌های فایبرگلاس برای شروع، شناخت کامپوزیت و تفاو"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000657",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "0000657",
+                                "content_width": "full",
+                                "html_tag": "span",
+                                "css_classes": "frpme-native-box frpme-key-0000657 path-emblem",
+                                "_title": "span"
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000658",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000658",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000658",
+                                    "_title": "آیکون #i-layers",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-layers.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0000659",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000659",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000659",
+                                "_title": "۰1",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰1",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000065a",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000065a",
+                                "_css_classes": "frpme-native-leaf frpme-key-000065a",
+                                "_title": "آموزش و دانستنی‌های فایبرگلاس",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "آموزش و دانستنی‌های فایبرگلاس",
+                                "header_size": "h2"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000065b",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000065b",
+                                "_css_classes": "frpme-native-leaf frpme-key-000065b",
+                                "_title": "برای شروع، شناخت کامپوزیت و تفاوت فایبرگلاس با FRP را بخوانید.",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "برای شروع، شناخت کامپوزیت و تفاوت فایبرگلاس با FRP را بخوانید."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "000065c",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000065c",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-000065c path-links",
+                            "_title": "فایبرگلاس چیست؟"
+                          },
+                          "elements": [
+                            {
+                              "id": "000065d",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "000065d",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-000065d ",
+                                "_title": "فایبرگلاس چیست؟",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "000065e",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000065e",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000065e",
+                                    "_title": "فایبرگلاس چیست؟",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "فایبرگلاس چیست؟",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000065f",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000065f",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000065f",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0000660",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000660",
+                        "content_width": "full",
+                        "html_tag": "section",
+                        "css_classes": "frpme-native-box frpme-key-0000660 blog-path-row",
+                        "_title": "۰2 الیاف و مواد اولیه فایبرگلاس ساختار لایه‌ها را از دو جزء اصلی،",
+                        "_element_id": "blog-materials"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000661",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000661",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000661 path-title",
+                            "_title": "۰2 الیاف و مواد اولیه فایبرگلاس ساختار لایه‌ها را از دو جزء اصلی،"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000662",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "0000662",
+                                "content_width": "full",
+                                "html_tag": "span",
+                                "css_classes": "frpme-native-box frpme-key-0000662 path-emblem",
+                                "_title": "span"
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000663",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000663",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000663",
+                                    "_title": "آیکون #i-fiber",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-fiber.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0000664",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000664",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000664",
+                                "_title": "۰2",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰2",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000665",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000665",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000665",
+                                "_title": "الیاف و مواد اولیه فایبرگلاس",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "الیاف و مواد اولیه فایبرگلاس",
+                                "header_size": "h2"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000666",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000666",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000666",
+                                "_title": "ساختار لایه‌ها را از دو جزء اصلی، الیاف و رزین، بشناسید.",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "ساختار لایه‌ها را از دو جزء اصلی، الیاف و رزین، بشناسید."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000667",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000667",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000667 path-links",
+                            "_title": "الیاف سوزنی الیاف حصیری رزین‌های فایبرگلاس"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000668",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "0000668",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-0000668 ",
+                                "_title": "الیاف سوزنی",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000669",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000669",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000669",
+                                    "_title": "الیاف سوزنی",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "الیاف سوزنی",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000066a",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000066a",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000066a",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "000066b",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "000066b",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-000066b ",
+                                "_title": "الیاف حصیری",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "000066c",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000066c",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000066c",
+                                    "_title": "الیاف حصیری",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "الیاف حصیری",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000066d",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000066d",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000066d",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "000066e",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "000066e",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-000066e ",
+                                "_title": "رزین‌های فایبرگلاس",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "000066f",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000066f",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000066f",
+                                    "_title": "رزین‌های فایبرگلاس",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "رزین‌های فایبرگلاس",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "0000670",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000670",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000670",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0000671",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000671",
+                        "content_width": "full",
+                        "html_tag": "section",
+                        "css_classes": "frpme-native-box frpme-key-0000671 blog-path-row",
+                        "_title": "۰3 اجرای فایبرگلاس و ایزولاسیون از شرایط زیرکار تا بررسی نشتی، ان",
+                        "_element_id": "blog-execution"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000672",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000672",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000672 path-title",
+                            "_title": "۰3 اجرای فایبرگلاس و ایزولاسیون از شرایط زیرکار تا بررسی نشتی، ان"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000673",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "0000673",
+                                "content_width": "full",
+                                "html_tag": "span",
+                                "css_classes": "frpme-native-box frpme-key-0000673 path-emblem",
+                                "_title": "span"
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000674",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000674",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000674",
+                                    "_title": "آیکون #i-roof",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-roof.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0000675",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000675",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000675",
+                                "_title": "۰3",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰3",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000676",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000676",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000676",
+                                "_title": "اجرای فایبرگلاس و ایزولاسیون",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "اجرای فایبرگلاس و ایزولاسیون",
+                                "header_size": "h2"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000677",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000677",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000677",
+                                "_title": "از شرایط زیرکار تا بررسی نشتی، انتخاب روش اجرا به پروژه وابسته اس",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "از شرایط زیرکار تا بررسی نشتی، انتخاب روش اجرا به پروژه وابسته است."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0000678",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000678",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000678 path-links",
+                            "_title": "اجرای فایبرگلاس آب‌بندی ایزولاسیون فایبرگلاس استخر"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000679",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "0000679",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-0000679 ",
+                                "_title": "اجرای فایبرگلاس",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "000067a",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000067a",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000067a",
+                                    "_title": "اجرای فایبرگلاس",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "اجرای فایبرگلاس",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000067b",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000067b",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000067b",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "000067c",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "000067c",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-000067c ",
+                                "_title": "آب‌بندی",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "000067d",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000067d",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000067d",
+                                    "_title": "آب‌بندی",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "آب‌بندی",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000067e",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000067e",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000067e",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "000067f",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "000067f",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-000067f ",
+                                "_title": "ایزولاسیون",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000680",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000680",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000680",
+                                    "_title": "ایزولاسیون",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "ایزولاسیون",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "0000681",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000681",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000681",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0000682",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "0000682",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-0000682 ",
+                                "_title": "فایبرگلاس استخر",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000683",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000683",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000683",
+                                    "_title": "فایبرگلاس استخر",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "فایبرگلاس استخر",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "0000684",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000684",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000684",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0000685",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000685",
+                        "content_width": "full",
+                        "html_tag": "section",
+                        "css_classes": "frpme-native-box frpme-key-0000685 blog-path-row",
+                        "_title": "۰4 فایبرگلاس صنعتی برای کاربردهای صنعتی، داده‌های بهره‌برداری و س",
+                        "_element_id": "blog-industry"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000686",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000686",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000686 path-title",
+                            "_title": "۰4 فایبرگلاس صنعتی برای کاربردهای صنعتی، داده‌های بهره‌برداری و س"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000687",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "0000687",
+                                "content_width": "full",
+                                "html_tag": "span",
+                                "css_classes": "frpme-native-box frpme-key-0000687 path-emblem",
+                                "_title": "span"
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000688",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000688",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000688",
+                                    "_title": "آیکون #i-tank",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-tank.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0000689",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000689",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000689",
+                                "_title": "۰4",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "۰4",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000068a",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000068a",
+                                "_css_classes": "frpme-native-leaf frpme-key-000068a",
+                                "_title": "فایبرگلاس صنعتی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "فایبرگلاس صنعتی",
+                                "header_size": "h2"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000068b",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000068b",
+                                "_css_classes": "frpme-native-leaf frpme-key-000068b",
+                                "_title": "برای کاربردهای صنعتی، داده‌های بهره‌برداری و سازگاری مواد اهمیت د",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "برای کاربردهای صنعتی، داده‌های بهره‌برداری و سازگاری مواد اهمیت دارند."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "000068c",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000068c",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-000068c path-links",
+                            "_title": "مخازن فایبرگلاس کاربردهای صنعتی مقاومت شیمیایی"
+                          },
+                          "elements": [
+                            {
+                              "id": "000068d",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "000068d",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-000068d ",
+                                "_title": "مخازن فایبرگلاس",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "000068e",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000068e",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000068e",
+                                    "_title": "مخازن فایبرگلاس",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "مخازن فایبرگلاس",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000068f",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000068f",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000068f",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0000690",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "0000690",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-0000690 ",
+                                "_title": "کاربردهای صنعتی",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000691",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000691",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000691",
+                                    "_title": "کاربردهای صنعتی",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "کاربردهای صنعتی",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "0000692",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000692",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000692",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0000693",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "0000693",
+                                "content_width": "full",
+                                "html_tag": "a",
+                                "css_classes": "frpme-native-box frpme-key-0000693 ",
+                                "_title": "مقاومت شیمیایی",
+                                "link": {
+                                  "url": "{{URL:/blog/}}"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "0000694",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000694",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000694",
+                                    "_title": "مقاومت شیمیایی",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "مقاومت شیمیایی",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "0000695",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "0000695",
+                                    "_css_classes": "frpme-native-leaf frpme-key-0000695",
+                                    "_title": "آیکون #i-arrow",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0000696",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "0000696",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-0000696 section blog-faq",
+                "_title": "پاسخ‌های پایه سوالات متداول فایبرگلاس فایبرگلاس چیست؟ فایبرگلاس د"
+              },
+              "elements": [
+                {
+                  "id": "0000697",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "0000697",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-0000697 container",
+                    "_title": "پاسخ‌های پایه سوالات متداول فایبرگلاس فایبرگلاس چیست؟ فایبرگلاس د"
+                  },
+                  "elements": [
+                    {
+                      "id": "0000698",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "0000698",
+                        "_css_classes": "frpme-native-leaf frpme-key-0000698",
+                        "_title": "پاسخ‌های پایه",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "title": "پاسخ‌های پایه",
+                        "header_size": "span"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "0000699",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "0000699",
+                        "_css_classes": "frpme-native-leaf frpme-key-0000699",
+                        "_title": "سوالات متداول فایبرگلاس",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "title": "سوالات متداول فایبرگلاس",
+                        "header_size": "h2"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "000069a",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "000069a",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-000069a blog-faq-grid",
+                        "_title": "فایبرگلاس چیست؟ فایبرگلاس در کاربردهای رایج به کامپوزیت الیاف شیش"
+                      },
+                      "elements": [
+                        {
+                          "id": "000069b",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000069b",
+                            "content_width": "full",
+                            "html_tag": "details",
+                            "css_classes": "frpme-native-box frpme-key-000069b ",
+                            "_title": "فایبرگلاس چیست؟ فایبرگلاس در کاربردهای رایج به کامپوزیت الیاف شیش"
+                          },
+                          "elements": [
+                            {
+                              "id": "000069c",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "000069c",
+                                "content_width": "full",
+                                "html_tag": "summary",
+                                "css_classes": "frpme-native-box frpme-key-000069c ",
+                                "_title": "فایبرگلاس چیست؟"
+                              },
+                              "elements": [
+                                {
+                                  "id": "000069d",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000069d",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000069d",
+                                    "_title": "فایبرگلاس چیست؟",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "فایبرگلاس چیست؟",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "000069e",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000069e",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000069e",
+                                    "_title": "آیکون #i-disclosure",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-disclosure.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "000069f",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000069f",
+                                "_css_classes": "frpme-native-leaf frpme-key-000069f",
+                                "_title": "فایبرگلاس در کاربردهای رایج به کامپوزیت الیاف شیشه و رزین اشاره د",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "فایبرگلاس در کاربردهای رایج به کامپوزیت الیاف شیشه و رزین اشاره دارد. الیاف نقش تقویت‌کننده و رزین نقش زمینه و اتصال اجزا را دارد. FRP عنوان گسترده‌تری برای پلیمرهای تقویت‌شده با الیاف است، نوع الیاف در تمام سیستم‌های FRP یکسان نیست."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00006a0",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00006a0",
+                            "content_width": "full",
+                            "html_tag": "details",
+                            "css_classes": "frpme-native-box frpme-key-00006a0 ",
+                            "_title": "الیاف سوزنی چه کاربردی دارد؟ الیاف سوزنی در برخی قطعات و پوشش‌های"
+                          },
+                          "elements": [
+                            {
+                              "id": "00006a1",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00006a1",
+                                "content_width": "full",
+                                "html_tag": "summary",
+                                "css_classes": "frpme-native-box frpme-key-00006a1 ",
+                                "_title": "الیاف سوزنی چه کاربردی دارد؟"
+                              },
+                              "elements": [
+                                {
+                                  "id": "00006a2",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00006a2",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00006a2",
+                                    "_title": "الیاف سوزنی چه کاربردی دارد؟",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "الیاف سوزنی چه کاربردی دارد؟",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "00006a3",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00006a3",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00006a3",
+                                    "_title": "آیکون #i-disclosure",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-disclosure.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "00006a4",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006a4",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006a4",
+                                "_title": "الیاف سوزنی در برخی قطعات و پوشش‌های کامپوزیتی به‌عنوان تقویت‌کنن",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "الیاف سوزنی در برخی قطعات و پوشش‌های کامپوزیتی به‌عنوان تقویت‌کننده به کار می‌رود. انتخاب وزن الیاف و ترکیب لایه‌ها به مشخصات سیستم وابسته است."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00006a5",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00006a5",
+                            "content_width": "full",
+                            "html_tag": "details",
+                            "css_classes": "frpme-native-box frpme-key-00006a5 ",
+                            "_title": "تفاوت الیاف سوزنی و حصیری چیست؟ الیاف سوزنی معمولاً آرایش پراکنده"
+                          },
+                          "elements": [
+                            {
+                              "id": "00006a6",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00006a6",
+                                "content_width": "full",
+                                "html_tag": "summary",
+                                "css_classes": "frpme-native-box frpme-key-00006a6 ",
+                                "_title": "تفاوت الیاف سوزنی و حصیری چیست؟"
+                              },
+                              "elements": [
+                                {
+                                  "id": "00006a7",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00006a7",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00006a7",
+                                    "_title": "تفاوت الیاف سوزنی و حصیری چیست؟",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "تفاوت الیاف سوزنی و حصیری چیست؟",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "00006a8",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00006a8",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00006a8",
+                                    "_title": "آیکون #i-disclosure",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-disclosure.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "00006a9",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006a9",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006a9",
+                                "_title": "الیاف سوزنی معمولاً آرایش پراکنده رشته‌های کوتاه دارد، در حالی که",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "الیاف سوزنی معمولاً آرایش پراکنده رشته‌های کوتاه دارد، در حالی که الیاف حصیری ساختار بافته‌شده دارد. کاربرد مناسب هرکدام با نیاز فنی و سیستم رزین تعیین می‌شود."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00006aa",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00006aa",
+                            "content_width": "full",
+                            "html_tag": "details",
+                            "css_classes": "frpme-native-box frpme-key-00006aa ",
+                            "_title": "فایبرگلاس در چه صنایعی استفاده می‌شود؟ کاربردهای آن شامل ساخت قطع"
+                          },
+                          "elements": [
+                            {
+                              "id": "00006ab",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00006ab",
+                                "content_width": "full",
+                                "html_tag": "summary",
+                                "css_classes": "frpme-native-box frpme-key-00006ab ",
+                                "_title": "فایبرگلاس در چه صنایعی استفاده می‌شود؟"
+                              },
+                              "elements": [
+                                {
+                                  "id": "00006ac",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00006ac",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00006ac",
+                                    "_title": "فایبرگلاس در چه صنایعی استفاده می‌شود؟",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "فایبرگلاس در چه صنایعی استفاده می‌شود؟",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "00006ad",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00006ad",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00006ad",
+                                    "_title": "آیکون #i-disclosure",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-disclosure.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "00006ae",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006ae",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006ae",
+                                "_title": "کاربردهای آن شامل ساخت قطعات، پوشش برخی سطوح، مخازن و تجهیزات صنع",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "کاربردهای آن شامل ساخت قطعات، پوشش برخی سطوح، مخازن و تجهیزات صنعتی است. مناسب بودن سیستم برای هر کاربرد باید جداگانه بررسی شود."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "00006af",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "00006af",
+                            "content_width": "full",
+                            "html_tag": "details",
+                            "css_classes": "frpme-native-box frpme-key-00006af ",
+                            "_title": "فایبرگلاس برای آب‌بندی چه کاربردی دارد؟ پوشش فایبرگلاس می‌تواند ب"
+                          },
+                          "elements": [
+                            {
+                              "id": "00006b0",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "00006b0",
+                                "content_width": "full",
+                                "html_tag": "summary",
+                                "css_classes": "frpme-native-box frpme-key-00006b0 ",
+                                "_title": "فایبرگلاس برای آب‌بندی چه کاربردی دارد؟"
+                              },
+                              "elements": [
+                                {
+                                  "id": "00006b1",
+                                  "elType": "widget",
+                                  "widgetType": "heading",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00006b1",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00006b1",
+                                    "_title": "فایبرگلاس برای آب‌بندی چه کاربردی دارد؟",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "title": "فایبرگلاس برای آب‌بندی چه کاربردی دارد؟",
+                                    "header_size": "h3"
+                                  },
+                                  "elements": []
+                                },
+                                {
+                                  "id": "00006b2",
+                                  "elType": "widget",
+                                  "widgetType": "icon",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "00006b2",
+                                    "_css_classes": "frpme-native-leaf frpme-key-00006b2",
+                                    "_title": "آیکون #i-disclosure",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "selected_icon": {
+                                      "value": {
+                                        "url": "{{ASSET:assets/icons/i-disclosure.svg}}",
+                                        "id": 0
+                                      },
+                                      "library": "svg"
+                                    },
+                                    "view": "default"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "00006b3",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "00006b3",
+                                "_css_classes": "frpme-native-leaf frpme-key-00006b3",
+                                "_title": "پوشش فایبرگلاس می‌تواند برای بررسی آب‌بندی استخر، مخزن یا برخی سط",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "editor": "پوشش فایبرگلاس می‌تواند برای بررسی آب‌بندی استخر، مخزن یا برخی سطوح مطرح شود. سازگاری مواد، آماده‌سازی سطح و جزئیات اجرا بر عملکرد آن اثر دارند."
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "00006b4",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "00006b4",
+                "content_width": "full",
+                "html_tag": "section",
+                "css_classes": "frpme-native-box frpme-key-00006b4 section blog-service-bridge",
+                "_title": "از مطالعه تا بررسی پروژه خدمات فایبرگلاس سازه گستر مطالعه راهنماه"
+              },
+              "elements": [
+                {
+                  "id": "00006b5",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "00006b5",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-00006b5 container",
+                    "_title": "از مطالعه تا بررسی پروژه خدمات فایبرگلاس سازه گستر مطالعه راهنماه"
+                  },
+                  "elements": [
+                    {
+                      "id": "00006b6",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00006b6",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00006b6 ",
+                        "_title": "از مطالعه تا بررسی پروژه خدمات فایبرگلاس سازه گستر مطالعه راهنماه"
+                      },
+                      "elements": [
+                        {
+                          "id": "00006b7",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006b7",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006b7",
+                            "_title": "از مطالعه تا بررسی پروژه",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "از مطالعه تا بررسی پروژه",
+                            "header_size": "span"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006b8",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006b8",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006b8",
+                            "_title": "خدمات فایبرگلاس سازه گستر",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "خدمات فایبرگلاس سازه گستر",
+                            "header_size": "h2"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006b9",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006b9",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006b9",
+                            "_title": "مطالعه راهنماها به شناخت اولیه کمک می‌کند. انتخاب پوشش و تصمیم اج",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "مطالعه راهنماها به شناخت اولیه کمک می‌کند. انتخاب پوشش و تصمیم اجرایی به بررسی شرایط واقعی پروژه وابسته است."
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006ba",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006ba",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006ba",
+                            "_title": "مشاهده خدمات",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "مشاهده خدمات ",
+                            "link": {
+                              "url": "{{URL:/services/}}",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "00006bb",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "00006bb",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-00006bb blog-contact-box",
+                        "_title": "با فایبرگلاس سازه گستر در ارتباط باشید برای گفتگو درباره نیاز پرو"
+                      },
+                      "elements": [
+                        {
+                          "id": "00006bc",
+                          "elType": "widget",
+                          "widgetType": "icon",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006bc",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006bc",
+                            "_title": "آیکون #i-phone",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-phone.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            },
+                            "view": "default"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006bd",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006bd",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006bd",
+                            "_title": "با فایبرگلاس سازه گستر در ارتباط باشید",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "با فایبرگلاس سازه گستر<br/>در ارتباط باشید",
+                            "header_size": "h2"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006be",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006be",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006be",
+                            "_title": "برای گفتگو درباره نیاز پروژه و هماهنگی بررسی اولیه تماس بگیرید.",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "برای گفتگو درباره نیاز پروژه و هماهنگی بررسی اولیه تماس بگیرید."
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006bf",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006bf",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006bf",
+                            "_title": "۰۹۱۲ ۶۱۲ ۴۸۷۶",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "۰۹۱۲ ۶۱۲ ۴۸۷۶",
+                            "link": {
+                              "url": "tel:+989126124876",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": "",
+                              "library": ""
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "00006c0",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "00006c0",
+                            "_css_classes": "frpme-native-leaf frpme-key-00006c0",
+                            "_title": "صفحه تماس با ما",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "text": "صفحه تماس با ما ",
+                            "link": {
+                              "url": "{{URL:/contact/}}",
+                              "is_external": false
+                            },
+                            "selected_icon": {
+                              "value": {
+                                "url": "{{ASSET:assets/icons/i-arrow.svg}}",
+                                "id": 0
+                              },
+                              "library": "svg"
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "00006c1",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "00006c1",
+            "content_width": "full",
+            "html_tag": "div",
+            "css_classes": "frpme-native-box frpme-key-00006c1 frpme-page-tools-after",
+            "_title": "div"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "home": {
+    "source": "home",
+    "main_attributes": {
+      "id": "main"
+    },
+    "components": [
+      "home-home",
+      "home-block-2",
+      "home-services",
+      "home-service-finder",
+      "home-fiberglass",
+      "home-cover-layers",
+      "home-materials",
+      "home-process",
+      "home-price",
+      "home-estimate",
+      "home-projects",
+      "home-about",
+      "home-home-articles",
+      "home-faq",
+      "home-contact",
+      "home-messages"
+    ],
+    "before": "home-tools-before",
+    "after": "home-tools-after"
+  },
+  "about": {
+    "source": "about",
+    "main_attributes": {
+      "class": "about-main",
+      "id": "main"
+    },
+    "components": [
+      "about-block-1",
+      "about-block-2",
+      "about-about-profile",
+      "about-block-4",
+      "about-about-identity",
+      "about-about-fields",
+      "about-about-experience",
+      "about-about-projects",
+      "about-about-why",
+      "about-about-approach",
+      "about-about-materials",
+      "about-about-applications",
+      "about-about-faq",
+      "about-about-contact"
+    ],
+    "before": "about-tools-before",
+    "after": "about-tools-after"
+  },
+  "services": {
+    "source": "services",
+    "main_attributes": {
+      "class": "services-main",
+      "id": "main"
+    },
+    "components": [
+      "services-block-1",
+      "services-block-2",
+      "services-service-selector",
+      "services-service-catalog",
+      "services-service-planner",
+      "services-service-applications",
+      "services-service-process",
+      "services-service-trust",
+      "services-service-projects",
+      "services-service-faq",
+      "services-service-contact",
+      "services-messages"
+    ],
+    "before": "services-tools-before",
+    "after": "services-tools-after"
+  },
+  "contact": {
+    "source": "contact",
+    "main_attributes": {
+      "id": "main",
+      "class": "contact-main"
+    },
+    "components": [
+      "contact-block-1",
+      "contact-block-2",
+      "contact-block-3",
+      "contact-contact-location",
+      "contact-block-5",
+      "contact-block-6",
+      "contact-messages"
+    ],
+    "before": "contact-tools-before",
+    "after": "contact-tools-after"
+  },
+  "blog": {
+    "source": "blog",
+    "main_attributes": {
+      "id": "main",
+      "class": "blog-main"
+    },
+    "components": [
+      "blog-block-1",
+      "blog-block-2",
+      "blog-blog-library",
+      "blog-block-4",
+      "blog-block-5",
+      "blog-block-6",
+      "blog-messages"
+    ],
+    "before": "blog-tools-before",
+    "after": "blog-tools-after"
+  },
+  "article": {
+    "source": "article",
+    "main_attributes": {
+      "class": "article-main",
+      "id": "main"
+    },
+    "components": [
+      "article-block-1",
+      "article-block-2",
+      "article-block-3",
+      "article-block-4",
+      "article-block-5",
+      "article-article-top",
+      "article-messages"
+    ],
+    "before": "article-tools-before",
+    "after": "article-tools-after"
+  }
+}

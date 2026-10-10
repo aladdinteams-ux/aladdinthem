@@ -1,0 +1,1060 @@
+{
+  "title": "FRP v3 / footer",
+  "type": "section",
+  "version": "0.4",
+  "page_settings": {
+    "hide_title": "yes"
+  },
+  "content": [
+    {
+      "id": "0000706",
+      "elType": "container",
+      "isInner": true,
+      "settings": {
+        "frpme_native": "0000706",
+        "content_width": "full",
+        "html_tag": "div",
+        "css_classes": "frpme-native-box frpme-key-0000706 frpme-chrome-footer",
+        "_title": "سازه گستر عایق فایبرگلاس FRP MESH عایق‌کاری استخر و جکوزی، اجرای "
+      },
+      "elements": [
+        {
+          "id": "0000707",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "frpme_native": "0000707",
+            "content_width": "full",
+            "html_tag": "footer",
+            "css_classes": "frpme-native-box frpme-key-0000707 site-footer footer-v2",
+            "_title": "سازه گستر عایق فایبرگلاس FRP MESH عایق‌کاری استخر و جکوزی، اجرای "
+          },
+          "elements": [
+            {
+              "id": "0000708",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "frpme_native": "0000708",
+                "content_width": "full",
+                "html_tag": "div",
+                "css_classes": "frpme-native-box frpme-key-0000708 container",
+                "_title": "سازه گستر عایق فایبرگلاس FRP MESH عایق‌کاری استخر و جکوزی، اجرای "
+              },
+              "elements": [
+                {
+                  "id": "0000709",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "0000709",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-0000709 footer-grid",
+                    "_title": "سازه گستر عایق فایبرگلاس FRP MESH عایق‌کاری استخر و جکوزی، اجرای "
+                  },
+                  "elements": [
+                    {
+                      "id": "000070a",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "000070a",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-000070a ",
+                        "_title": "سازه گستر عایق فایبرگلاس FRP MESH عایق‌کاری استخر و جکوزی، اجرای "
+                      },
+                      "elements": [
+                        {
+                          "id": "000070b",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000070b",
+                            "content_width": "full",
+                            "html_tag": "a",
+                            "css_classes": "frpme-native-box frpme-key-000070b brand",
+                            "_title": "سازه گستر عایق فایبرگلاس FRP MESH",
+                            "link": {
+                              "url": "{{URL:/}}"
+                            }
+                          },
+                          "elements": [
+                            {
+                              "id": "000070c",
+                              "elType": "container",
+                              "isInner": true,
+                              "settings": {
+                                "frpme_native": "000070c",
+                                "content_width": "full",
+                                "html_tag": "span",
+                                "css_classes": "frpme-native-box frpme-key-000070c brand-symbol brand-original",
+                                "_title": "span"
+                              },
+                              "elements": [
+                                {
+                                  "id": "000070d",
+                                  "elType": "widget",
+                                  "widgetType": "image",
+                                  "isInner": false,
+                                  "settings": {
+                                    "frpme_native": "000070d",
+                                    "_css_classes": "frpme-native-leaf frpme-key-000070d",
+                                    "_title": "تصویر لوگوی فایبرگلاس سازه گستر",
+                                    "__globals__": {
+                                      "title_color": "",
+                                      "typography_typography": "",
+                                      "text_color": "",
+                                      "button_text_color": "",
+                                      "background_color": "",
+                                      "primary_color": "",
+                                      "secondary_color": "",
+                                      "caption_text_color": "",
+                                      "link_color": ""
+                                    },
+                                    "image": {
+                                      "url": "{{ASSET:assets/images/6a278bcfcf9777b8.webp}}",
+                                      "id": 0
+                                    },
+                                    "image_size": "full",
+                                    "caption_source": "none",
+                                    "link_to": "none"
+                                  },
+                                  "elements": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "000070e",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000070e",
+                                "_css_classes": "frpme-native-leaf frpme-key-000070e",
+                                "_title": "سازه گستر عایق فایبرگلاس FRP MESH",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "<span class=\"brand-name\"><span class=\"brand-name-main\">سازه</span> <span class=\"brand-name-accent\">گستر</span></span><small class=\"brand-subtitle\"><span>عایق فایبرگلاس</span><span class=\"brand-latin\" dir=\"ltr\" lang=\"en\">FRP MESH</span></small>",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "000070f",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "000070f",
+                            "_css_classes": "frpme-native-leaf frpme-key-000070f",
+                            "_title": "عایق‌کاری استخر و جکوزی، اجرای پوشش فایبرگلاس و لاینینگ مخازن، اط",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "editor": "عایق‌کاری استخر و جکوزی، اجرای پوشش فایبرگلاس و لاینینگ مخازن، اطلاعات خدمات و راه‌های ارتباط با سازه گستر."
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000710",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000710",
+                            "content_width": "full",
+                            "html_tag": "div",
+                            "css_classes": "frpme-native-box frpme-key-0000710 footer-address",
+                            "_title": "بزرگراه امام رضا، بعد از میدان آقانور، بیست‌متری تختی، نبش کوچه پ"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000711",
+                              "elType": "widget",
+                              "widgetType": "icon",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000711",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000711",
+                                "_title": "آیکون #i-pin",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "selected_icon": {
+                                  "value": {
+                                    "url": "{{ASSET:assets/icons/i-pin.svg}}",
+                                    "id": 0
+                                  },
+                                  "library": "svg"
+                                },
+                                "view": "default"
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000712",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000712",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000712",
+                                "_title": "بزرگراه امام رضا، بعد از میدان آقانور، بیست‌متری تختی، نبش کوچه پ",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "title": "بزرگراه امام رضا، بعد از میدان آقانور، بیست‌متری تختی، نبش کوچه پنجم، پلاک یک",
+                                "header_size": "span"
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0000713",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000713",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-0000713 ",
+                        "_title": "دسترسی سریع درباره سازه گستر خدمات فایبرگلاس گالری نمونه‌کارها وب"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000714",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000714",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000714",
+                            "_title": "دسترسی سریع",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "دسترسی سریع",
+                            "header_size": "h3"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000715",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000715",
+                            "content_width": "full",
+                            "html_tag": "nav",
+                            "css_classes": "frpme-native-box frpme-key-0000715 footer-links",
+                            "_title": "درباره سازه گستر خدمات فایبرگلاس گالری نمونه‌کارها وبلاگ تماس با "
+                          },
+                          "elements": [
+                            {
+                              "id": "0000716",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000716",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000716",
+                                "_title": "درباره سازه گستر",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "درباره سازه گستر",
+                                "link": {
+                                  "url": "{{URL:/about/}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000717",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000717",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000717",
+                                "_title": "خدمات فایبرگلاس",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "خدمات فایبرگلاس",
+                                "link": {
+                                  "url": "{{URL:/services/}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000718",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000718",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000718",
+                                "_title": "گالری نمونه‌کارها",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "گالری نمونه‌کارها",
+                                "link": {
+                                  "url": "{{URL:/gallery/}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000719",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000719",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000719",
+                                "_title": "وبلاگ",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "وبلاگ",
+                                "link": {
+                                  "url": "{{URL:/blog/}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000071a",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000071a",
+                                "_css_classes": "frpme-native-leaf frpme-key-000071a",
+                                "_title": "تماس با ما",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "تماس با ما",
+                                "link": {
+                                  "url": "{{URL:/contact/}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "000071b",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "000071b",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-000071b ",
+                        "_title": "موضوعات کاربردی آب‌بندی استخر ایزولاسیون جکوزی پوشش فایبرگلاس مخا"
+                      },
+                      "elements": [
+                        {
+                          "id": "000071c",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "000071c",
+                            "_css_classes": "frpme-native-leaf frpme-key-000071c",
+                            "_title": "موضوعات کاربردی",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "موضوعات کاربردی",
+                            "header_size": "h3"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "000071d",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "000071d",
+                            "content_width": "full",
+                            "html_tag": "nav",
+                            "css_classes": "frpme-native-box frpme-key-000071d footer-links",
+                            "_title": "آب‌بندی استخر ایزولاسیون جکوزی پوشش فایبرگلاس مخازن آب‌بندی چاله "
+                          },
+                          "elements": [
+                            {
+                              "id": "000071e",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000071e",
+                                "_css_classes": "frpme-native-leaf frpme-key-000071e",
+                                "_title": "آب‌بندی استخر",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "آب‌بندی استخر",
+                                "link": {
+                                  "url": "{{URL:/#pool}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "000071f",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "000071f",
+                                "_css_classes": "frpme-native-leaf frpme-key-000071f",
+                                "_title": "ایزولاسیون جکوزی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "ایزولاسیون جکوزی",
+                                "link": {
+                                  "url": "{{URL:/#jacuzzi}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000720",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000720",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000720",
+                                "_title": "پوشش فایبرگلاس مخازن",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "پوشش فایبرگلاس مخازن",
+                                "link": {
+                                  "url": "{{URL:/#tank}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000721",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000721",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000721",
+                                "_title": "آب‌بندی چاله آسانسور",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "آب‌بندی چاله آسانسور",
+                                "link": {
+                                  "url": "{{URL:/#negative}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000722",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000722",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000722",
+                                "_title": "رفع نم و رطوبت ساختمان",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "رفع نم و رطوبت ساختمان",
+                                "link": {
+                                  "url": "{{URL:/#building}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0000723",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "frpme_native": "0000723",
+                        "content_width": "full",
+                        "html_tag": "div",
+                        "css_classes": "frpme-native-box frpme-key-0000723 ",
+                        "_title": "انواع الیاف الیاف سوزنی ترکیبی الیاف سوزنی الیاف حصیری تماس: ۰۹۱۲"
+                      },
+                      "elements": [
+                        {
+                          "id": "0000724",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "isInner": false,
+                          "settings": {
+                            "frpme_native": "0000724",
+                            "_css_classes": "frpme-native-leaf frpme-key-0000724",
+                            "_title": "انواع الیاف",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": "",
+                              "text_color": "",
+                              "button_text_color": "",
+                              "background_color": "",
+                              "primary_color": "",
+                              "secondary_color": "",
+                              "caption_text_color": "",
+                              "link_color": ""
+                            },
+                            "title": "انواع الیاف",
+                            "header_size": "h3"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0000725",
+                          "elType": "container",
+                          "isInner": true,
+                          "settings": {
+                            "frpme_native": "0000725",
+                            "content_width": "full",
+                            "html_tag": "nav",
+                            "css_classes": "frpme-native-box frpme-key-0000725 footer-links",
+                            "_title": "الیاف سوزنی ترکیبی الیاف سوزنی الیاف حصیری تماس: ۰۹۱۲۶۱۲۴۸۷۶"
+                          },
+                          "elements": [
+                            {
+                              "id": "0000726",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000726",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000726",
+                                "_title": "الیاف سوزنی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "الیاف سوزنی",
+                                "link": {
+                                  "url": "{{URL:/الیاف-سوزنی/}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000727",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000727",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000727",
+                                "_title": "ترکیبی الیاف سوزنی",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "ترکیبی الیاف سوزنی",
+                                "link": {
+                                  "url": "{{URL:/ترکیبی-الیاف-سوزنی/}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000728",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000728",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000728",
+                                "_title": "الیاف حصیری",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "الیاف حصیری",
+                                "link": {
+                                  "url": "{{URL:/الیاف-حصیری/}}",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "0000729",
+                              "elType": "widget",
+                              "widgetType": "button",
+                              "isInner": false,
+                              "settings": {
+                                "frpme_native": "0000729",
+                                "_css_classes": "frpme-native-leaf frpme-key-0000729",
+                                "_title": "تماس: ۰۹۱۲۶۱۲۴۸۷۶",
+                                "__globals__": {
+                                  "title_color": "",
+                                  "typography_typography": "",
+                                  "text_color": "",
+                                  "button_text_color": "",
+                                  "background_color": "",
+                                  "primary_color": "",
+                                  "secondary_color": "",
+                                  "caption_text_color": "",
+                                  "link_color": ""
+                                },
+                                "text": "تماس: ۰۹۱۲۶۱۲۴۸۷۶",
+                                "link": {
+                                  "url": "tel:+989126124876",
+                                  "is_external": false
+                                },
+                                "selected_icon": {
+                                  "value": "",
+                                  "library": ""
+                                }
+                              },
+                              "elements": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "000072a",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "000072a",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-000072a footer-contact-strip",
+                    "_title": "تلفن دفتر ۰۲۱ ۳۳۴۸۱۳۰۷ شماره همراه ۰۹۱۱ ۳۸۹۴۴۷۳ ایمیل پشتیبانی as"
+                  },
+                  "elements": [
+                    {
+                      "id": "000072b",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "000072b",
+                        "_css_classes": "frpme-native-leaf frpme-key-000072b",
+                        "_title": "تلفن دفتر ۰۲۱ ۳۳۴۸۱۳۰۷",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "text": "<span>تلفن دفتر <bdi>۰۲۱ ۳۳۴۸۱۳۰۷</bdi></span>",
+                        "link": {
+                          "url": "tel:+982133481307",
+                          "is_external": false
+                        },
+                        "selected_icon": {
+                          "value": {
+                            "url": "{{ASSET:assets/icons/i-phone.svg}}",
+                            "id": 0
+                          },
+                          "library": "svg"
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "000072c",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "000072c",
+                        "_css_classes": "frpme-native-leaf frpme-key-000072c",
+                        "_title": "شماره همراه ۰۹۱۱ ۳۸۹۴۴۷۳",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "text": "<span>شماره همراه <bdi>۰۹۱۱ ۳۸۹۴۴۷۳</bdi></span>",
+                        "link": {
+                          "url": "tel:+989113894473",
+                          "is_external": false
+                        },
+                        "selected_icon": {
+                          "value": {
+                            "url": "{{ASSET:assets/icons/i-phone.svg}}",
+                            "id": 0
+                          },
+                          "library": "svg"
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "000072d",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "000072d",
+                        "_css_classes": "frpme-native-leaf frpme-key-000072d",
+                        "_title": "ایمیل پشتیبانی asgharjalali1357@gmail.com",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "text": "<span>ایمیل پشتیبانی <bdi>asgharjalali1357@gmail.com</bdi></span>",
+                        "link": {
+                          "url": "mailto:asgharjalali1357@gmail.com",
+                          "is_external": false
+                        },
+                        "selected_icon": {
+                          "value": {
+                            "url": "{{ASSET:assets/icons/i-mail.svg}}",
+                            "id": 0
+                          },
+                          "library": "svg"
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "000072e",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "frpme_native": "000072e",
+                    "content_width": "full",
+                    "html_tag": "div",
+                    "css_classes": "frpme-native-box frpme-key-000072e footer-bottom",
+                    "_title": "تمامی حقوق عایق فایبر گلاس سازه گستر محفوظ است. بازگشت به ابتدای "
+                  },
+                  "elements": [
+                    {
+                      "id": "000072f",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "000072f",
+                        "_css_classes": "frpme-native-leaf frpme-key-000072f",
+                        "_title": "تمامی حقوق عایق فایبر گلاس سازه گستر محفوظ است.",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "title": "تمامی حقوق عایق فایبر گلاس سازه گستر محفوظ است.",
+                        "header_size": "span"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "0000730",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "frpme_native": "0000730",
+                        "_css_classes": "frpme-native-leaf frpme-key-0000730",
+                        "_title": "بازگشت به ابتدای صفحه",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "text_color": "",
+                          "button_text_color": "",
+                          "background_color": "",
+                          "primary_color": "",
+                          "secondary_color": "",
+                          "caption_text_color": "",
+                          "link_color": ""
+                        },
+                        "text": "بازگشت به ابتدای صفحه ",
+                        "link": {
+                          "url": "{{URL:/#home}}",
+                          "is_external": false
+                        },
+                        "selected_icon": {
+                          "value": {
+                            "url": "{{ASSET:assets/icons/i-up.svg}}",
+                            "id": 0
+                          },
+                          "library": "svg"
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

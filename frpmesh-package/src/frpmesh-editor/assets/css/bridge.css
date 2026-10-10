@@ -1,0 +1,27 @@
+/* Only integration wrappers are neutralized. Source component dimensions remain unchanged. */
+.frpme-design{direction:rtl;font:16px/1.9 Vazirmatn,Tahoma,Arial,sans-serif;color:var(--text,#0f172a)}
+.frpme-page,.frpme-page-tools-before,.frpme-page-tools-after,.frpme-chrome-header,.frpme-chrome-footer{display:contents}
+.frpme-body:not(.frpme-editing) .frpme-page>main>.elementor,.frpme-body:not(.frpme-editing) .frpme-builder-stack,.frpme-body:not(.frpme-editing) .frpme-builder-stack>.e-con-inner,.frpme-body:not(.frpme-editing) .frpme-builder-stack>[class*="elementor-widget-frpme-"],.frpme-body:not(.frpme-editing) .frpme-builder-stack>[class*="elementor-widget-frpme-"]>.elementor-widget-container{display:contents}
+.frpme-design .frpme-builder-stack{width:100%;max-width:none;margin:0;padding:0;gap:0;min-height:0}
+.frpme-design [class*="elementor-widget-frpme-"]{margin:0;width:100%;max-width:none;align-self:stretch}
+.frpme-design [class*="elementor-widget-frpme-"]>.elementor-widget-container{margin:0;padding:0;border:0;box-shadow:none;background:transparent}
+.frpme-design :is(h1,h2,h3,h4,h5,h6,p,a,button,input,select,textarea){font-family:inherit}
+.frpme-design :focus-visible{outline:2px solid var(--primary,#2563eb);outline-offset:4px}
+.frpme-design .blog-card h3 a{color:inherit;text-decoration:none}.frpme-design .blog-cover img{width:100%;height:100%;object-fit:cover}
+.frpme-design .frpme-pagination{margin-block:24px}.frpme-design .frpme-pagination ul{display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0}.frpme-design .frpme-pagination a,.frpme-design .frpme-pagination span{display:block;padding:8px 16px;border:1px solid var(--border);border-radius:12px}
+.frpme-design .article-body img{max-width:100%;height:auto}.frpme-design .article-body>h2,.frpme-design .article-body>h3{scroll-margin-top:130px}
+.frpme-design .frpme-skip{position:fixed;inset-block-start:8px;inset-inline-start:8px;z-index:999999;padding:8px 16px;background:#fff;color:#0f172a;transform:translateY(-150%)}.frpme-design .frpme-skip:focus{transform:none}
+body.admin-bar.frpme-body{--frpme-admin-height:32px}body.admin-bar.frpme-body .site-header{top:var(--frpme-admin-height)}@media(max-width:782px){body.admin-bar.frpme-body{--frpme-admin-height:46px}}
+@media(max-width:767px){.frpme-design{font-size:15px}}
+
+/* Native adapter boundaries are layout-transparent; source div selectors must not create extra grids. */
+.frpme-design .frpme-native-leaf,.frpme-design .frpme-native-leaf>.elementor-widget-container{display:contents!important}
+.frpme-design .frpme-data-fragment,.frpme-body>.elementor{display:contents}
+.frpme-design :where(.elementor-button){background:transparent;color:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;padding:0;border-radius:0;display:inline}
+.frpme-design :where(.elementor-heading-title){line-height:inherit}
+.frpme-design :where(.frpme-native-box){--width:initial;--min-height:initial;--row-gap:initial;--column-gap:initial;--flex-direction:initial;--justify-content:initial;--align-items:initial;--flex-wrap:initial;--border-radius:initial}
+.frpme-design .frpme-native-leaf>img.frpme-native-node{display:block}
+.frpme-editing .frpme-native-leaf>.elementor-element-overlay{display:none}
+@media(min-width:1025px){.frpme-design .frpme-native-leaf.elementor-hidden-desktop{display:none!important}}
+@media(min-width:768px) and (max-width:1024px){.frpme-design .frpme-native-leaf.elementor-hidden-tablet{display:none!important}}
+@media(max-width:767px){.frpme-design .frpme-native-leaf.elementor-hidden-mobile{display:none!important}}

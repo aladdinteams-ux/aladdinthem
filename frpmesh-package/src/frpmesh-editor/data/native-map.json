@@ -1,0 +1,10717 @@
+{
+  "0000001": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page",
+      "data-frpme-source": "home"
+    }
+  },
+  "0000002": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-before",
+      "data-frpme-component": "home-tools-before"
+    }
+  },
+  "0000003": {
+    "tag": "div",
+    "attrs": {
+      "class": "read-progress",
+      "id": "read-progress",
+      "aria-hidden": "true"
+    }
+  },
+  "0000004": {
+    "tag": "a",
+    "attrs": {
+      "class": "skip"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000005": {
+    "tag": "main",
+    "attrs": {
+      "id": "main"
+    }
+  },
+  "0000006": {
+    "tag": "section",
+    "attrs": {
+      "class": "hero",
+      "id": "home",
+      "data-frpme-component": "home-home"
+    }
+  },
+  "0000007": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000008": {
+    "tag": "div",
+    "attrs": {
+      "class": "hero-layout"
+    }
+  },
+  "0000009": {
+    "tag": "div",
+    "attrs": {
+      "class": "hero-copy"
+    }
+  },
+  "000000a": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000000b": {
+    "tag": "h1",
+    "attrs": {}
+  },
+  "000000c": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000000d": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "000000e": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000000f": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-light"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000010": {
+    "tag": "div",
+    "attrs": {
+      "class": "micro-meta"
+    }
+  },
+  "0000011": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000012": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000013": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000014": {
+    "tag": "div",
+    "attrs": {
+      "class": "hero-note"
+    }
+  },
+  "0000015": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-check"
+  },
+  "0000016": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000017": {
+    "tag": "div",
+    "attrs": {
+      "class": "hero-visual"
+    }
+  },
+  "0000018": {
+    "tag": "span",
+    "attrs": {
+      "class": "visual-index",
+      "aria-hidden": "true"
+    }
+  },
+  "0000019": {
+    "tag": "span",
+    "attrs": {
+      "class": "hero-image-note"
+    }
+  },
+  "000001a": {
+    "tag": "img",
+    "attrs": {
+      "class": "hero-photo",
+      "alt": "نمونه اجرای پوشش فایبرگلاس استخر از آرشیو سازه گستر",
+      "width": "1100",
+      "height": "700",
+      "fetchpriority": "high"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/9333502fd8f64358.webp}}"
+  },
+  "000001b": {
+    "tag": "div",
+    "attrs": {
+      "class": "float-card glass-dark"
+    }
+  },
+  "000001c": {
+    "tag": "span",
+    "attrs": {
+      "class": "icon-box",
+      "style": "margin:0"
+    }
+  },
+  "000001d": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-layers"
+  },
+  "000001e": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000001f": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000020": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000021": {
+    "tag": "nav",
+    "attrs": {
+      "class": "section-nav",
+      "aria-label": "راهنمای مطالعه صفحه",
+      "data-frpme-component": "home-block-2"
+    }
+  },
+  "0000022": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000023": {
+    "tag": "span",
+    "attrs": {
+      "class": "section-nav-label"
+    }
+  },
+  "0000024": {
+    "tag": "div",
+    "attrs": {
+      "class": "section-nav-links"
+    }
+  },
+  "0000025": {
+    "tag": "a",
+    "attrs": {
+      "href": "#services"
+    }
+  },
+  "0000026": {
+    "tag": "span",
+    "attrs": {
+      "class": "section-nav-number",
+      "aria-hidden": "true"
+    }
+  },
+  "0000027": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000028": {
+    "tag": "a",
+    "attrs": {
+      "href": "#service-finder"
+    }
+  },
+  "0000029": {
+    "tag": "span",
+    "attrs": {
+      "class": "section-nav-number",
+      "aria-hidden": "true"
+    }
+  },
+  "000002a": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000002b": {
+    "tag": "a",
+    "attrs": {
+      "href": "#process"
+    }
+  },
+  "000002c": {
+    "tag": "span",
+    "attrs": {
+      "class": "section-nav-number",
+      "aria-hidden": "true"
+    }
+  },
+  "000002d": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000002e": {
+    "tag": "a",
+    "attrs": {
+      "href": "#estimate"
+    }
+  },
+  "000002f": {
+    "tag": "span",
+    "attrs": {
+      "class": "section-nav-number",
+      "aria-hidden": "true"
+    }
+  },
+  "0000030": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000031": {
+    "tag": "a",
+    "attrs": {
+      "href": "#projects"
+    }
+  },
+  "0000032": {
+    "tag": "span",
+    "attrs": {
+      "class": "section-nav-number",
+      "aria-hidden": "true"
+    }
+  },
+  "0000033": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000034": {
+    "tag": "a",
+    "attrs": {
+      "href": "#faq"
+    }
+  },
+  "0000035": {
+    "tag": "span",
+    "attrs": {
+      "class": "section-nav-number",
+      "aria-hidden": "true"
+    }
+  },
+  "0000036": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000037": {
+    "tag": "section",
+    "attrs": {
+      "class": "section solutions",
+      "id": "services",
+      "data-frpme-component": "home-services"
+    }
+  },
+  "0000038": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000039": {
+    "tag": "div",
+    "attrs": {
+      "class": "section-head"
+    }
+  },
+  "000003a": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000003b": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000003c": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000003d": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000003e": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-grid"
+    }
+  },
+  "000003f": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card glass",
+      "id": "pool"
+    }
+  },
+  "0000040": {
+    "tag": "div",
+    "attrs": {
+      "class": "card-top"
+    }
+  },
+  "0000041": {
+    "tag": "span",
+    "attrs": {
+      "class": "icon-box"
+    }
+  },
+  "0000042": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-pool"
+  },
+  "0000043": {
+    "tag": "span",
+    "attrs": {
+      "class": "card-index"
+    }
+  },
+  "0000044": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000045": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000046": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000047": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card glass",
+      "id": "jacuzzi"
+    }
+  },
+  "0000048": {
+    "tag": "div",
+    "attrs": {
+      "class": "card-top"
+    }
+  },
+  "0000049": {
+    "tag": "span",
+    "attrs": {
+      "class": "icon-box"
+    }
+  },
+  "000004a": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-water"
+  },
+  "000004b": {
+    "tag": "span",
+    "attrs": {
+      "class": "card-index"
+    }
+  },
+  "000004c": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000004d": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000004e": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000004f": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card glass",
+      "id": "tank"
+    }
+  },
+  "0000050": {
+    "tag": "div",
+    "attrs": {
+      "class": "card-top"
+    }
+  },
+  "0000051": {
+    "tag": "span",
+    "attrs": {
+      "class": "icon-box"
+    }
+  },
+  "0000052": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-tank"
+  },
+  "0000053": {
+    "tag": "span",
+    "attrs": {
+      "class": "card-index"
+    }
+  },
+  "0000054": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000055": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000056": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000057": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card glass",
+      "id": "negative"
+    }
+  },
+  "0000058": {
+    "tag": "div",
+    "attrs": {
+      "class": "card-top"
+    }
+  },
+  "0000059": {
+    "tag": "span",
+    "attrs": {
+      "class": "icon-box"
+    }
+  },
+  "000005a": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-pressure"
+  },
+  "000005b": {
+    "tag": "span",
+    "attrs": {
+      "class": "card-index"
+    }
+  },
+  "000005c": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000005d": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000005e": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000005f": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card glass",
+      "id": "building"
+    }
+  },
+  "0000060": {
+    "tag": "div",
+    "attrs": {
+      "class": "card-top"
+    }
+  },
+  "0000061": {
+    "tag": "span",
+    "attrs": {
+      "class": "icon-box"
+    }
+  },
+  "0000062": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-roof"
+  },
+  "0000063": {
+    "tag": "span",
+    "attrs": {
+      "class": "card-index"
+    }
+  },
+  "0000064": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000065": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000066": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000067": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card glass",
+      "id": "wet-areas"
+    }
+  },
+  "0000068": {
+    "tag": "div",
+    "attrs": {
+      "class": "card-top"
+    }
+  },
+  "0000069": {
+    "tag": "span",
+    "attrs": {
+      "class": "icon-box"
+    }
+  },
+  "000006a": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-wet"
+  },
+  "000006b": {
+    "tag": "span",
+    "attrs": {
+      "class": "card-index"
+    }
+  },
+  "000006c": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000006d": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000006e": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000006f": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card glass",
+      "id": "strengthening"
+    }
+  },
+  "0000070": {
+    "tag": "div",
+    "attrs": {
+      "class": "card-top"
+    }
+  },
+  "0000071": {
+    "tag": "span",
+    "attrs": {
+      "class": "icon-box"
+    }
+  },
+  "0000072": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-fiber"
+  },
+  "0000073": {
+    "tag": "span",
+    "attrs": {
+      "class": "card-index"
+    }
+  },
+  "0000074": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000075": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000076": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000077": {
+    "tag": "section",
+    "attrs": {
+      "class": "section light-blue",
+      "id": "service-finder",
+      "data-frpme-component": "home-service-finder"
+    }
+  },
+  "0000078": {
+    "tag": "div",
+    "attrs": {
+      "class": "container tools-layout"
+    }
+  },
+  "0000079": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000007a": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000007b": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000007c": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "000007d": {
+    "tag": "div",
+    "attrs": {
+      "class": "mini-links"
+    }
+  },
+  "000007e": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000007f": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000080": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000081": {
+    "tag": "div",
+    "attrs": {
+      "class": "tools-panel glass"
+    }
+  },
+  "0000082": {
+    "tag": "h3",
+    "attrs": {
+      "class": "tool-heading"
+    }
+  },
+  "0000083": {
+    "tag": "div",
+    "attrs": {
+      "class": "choice-grid",
+      "role": "group",
+      "aria-label": "انتخاب نوع پروژه"
+    }
+  },
+  "0000084": {
+    "tag": "button",
+    "attrs": {
+      "class": "choice",
+      "data-project": "pool",
+      "aria-pressed": "true"
+    },
+    "icon_before": true,
+    "empty_button": false
+  },
+  "0000085": {
+    "tag": "button",
+    "attrs": {
+      "class": "choice",
+      "data-project": "tank",
+      "aria-pressed": "false"
+    },
+    "icon_before": true,
+    "empty_button": false
+  },
+  "0000086": {
+    "tag": "button",
+    "attrs": {
+      "class": "choice",
+      "data-project": "negative",
+      "aria-pressed": "false"
+    },
+    "icon_before": true,
+    "empty_button": false
+  },
+  "0000087": {
+    "tag": "button",
+    "attrs": {
+      "class": "choice",
+      "data-project": "building",
+      "aria-pressed": "false"
+    },
+    "icon_before": true,
+    "empty_button": false
+  },
+  "0000088": {
+    "tag": "div",
+    "attrs": {
+      "class": "recommendation",
+      "aria-live": "polite",
+      "aria-atomic": "true"
+    }
+  },
+  "0000089": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000008a": {
+    "tag": "h3",
+    "attrs": {
+      "id": "recommendation-title"
+    }
+  },
+  "000008b": {
+    "tag": "p",
+    "attrs": {
+      "id": "recommendation-text"
+    }
+  },
+  "000008c": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary",
+      "id": "recommendation-link"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000008d": {
+    "tag": "p",
+    "attrs": {
+      "class": "tool-small"
+    }
+  },
+  "000008e": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "fiberglass",
+      "data-frpme-component": "home-fiberglass"
+    }
+  },
+  "000008f": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000090": {
+    "tag": "div",
+    "attrs": {
+      "class": "intro-layout"
+    }
+  },
+  "0000091": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000092": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000093": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000094": {
+    "tag": "div",
+    "attrs": {
+      "class": "knowledge-content"
+    }
+  },
+  "0000095": {
+    "tag": "div",
+    "attrs": {
+      "class": "knowledge-definition"
+    }
+  },
+  "0000096": {
+    "tag": "div",
+    "attrs": {
+      "class": "knowledge-definition-copy"
+    }
+  },
+  "0000097": {
+    "tag": "span",
+    "attrs": {
+      "class": "knowledge-kicker"
+    }
+  },
+  "0000098": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000099": {
+    "tag": "div",
+    "attrs": {
+      "class": "knowledge-materials",
+      "aria-label": "اجزای اصلی فایبرگلاس"
+    }
+  },
+  "000009a": {
+    "tag": "div",
+    "attrs": {
+      "class": "knowledge-material"
+    }
+  },
+  "000009b": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-fiber"
+  },
+  "000009c": {
+    "tag": "strong",
+    "attrs": {}
+  },
+  "000009d": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000009e": {
+    "tag": "span",
+    "attrs": {
+      "class": "knowledge-plus",
+      "aria-hidden": "true"
+    }
+  },
+  "000009f": {
+    "tag": "div",
+    "attrs": {
+      "class": "knowledge-material"
+    }
+  },
+  "00000a0": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-water"
+  },
+  "00000a1": {
+    "tag": "strong",
+    "attrs": {}
+  },
+  "00000a2": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00000a3": {
+    "tag": "span",
+    "attrs": {
+      "class": "knowledge-composition"
+    }
+  },
+  "00000a4": {
+    "tag": "div",
+    "attrs": {
+      "class": "knowledge-details glass"
+    }
+  },
+  "00000a5": {
+    "tag": "article",
+    "attrs": {
+      "class": "knowledge-detail"
+    }
+  },
+  "00000a6": {
+    "tag": "div",
+    "attrs": {
+      "class": "knowledge-detail-heading"
+    }
+  },
+  "00000a7": {
+    "tag": "span",
+    "attrs": {
+      "class": "knowledge-detail-icon"
+    }
+  },
+  "00000a8": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-layers"
+  },
+  "00000a9": {
+    "tag": "span",
+    "attrs": {
+      "class": "knowledge-number",
+      "aria-hidden": "true"
+    }
+  },
+  "00000aa": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00000ab": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00000ac": {
+    "tag": "article",
+    "attrs": {
+      "class": "knowledge-detail"
+    }
+  },
+  "00000ad": {
+    "tag": "div",
+    "attrs": {
+      "class": "knowledge-detail-heading"
+    }
+  },
+  "00000ae": {
+    "tag": "span",
+    "attrs": {
+      "class": "knowledge-detail-icon"
+    }
+  },
+  "00000af": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-fiber"
+  },
+  "00000b0": {
+    "tag": "span",
+    "attrs": {
+      "class": "knowledge-number",
+      "aria-hidden": "true"
+    }
+  },
+  "00000b1": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00000b2": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00000b3": {
+    "tag": "article",
+    "attrs": {
+      "class": "knowledge-detail"
+    }
+  },
+  "00000b4": {
+    "tag": "div",
+    "attrs": {
+      "class": "knowledge-detail-heading"
+    }
+  },
+  "00000b5": {
+    "tag": "span",
+    "attrs": {
+      "class": "knowledge-detail-icon"
+    }
+  },
+  "00000b6": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-tank"
+  },
+  "00000b7": {
+    "tag": "span",
+    "attrs": {
+      "class": "knowledge-number",
+      "aria-hidden": "true"
+    }
+  },
+  "00000b8": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00000b9": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00000ba": {
+    "tag": "nav",
+    "attrs": {
+      "class": "knowledge-links",
+      "aria-label": "مطالعه بیشتر درباره فایبرگلاس"
+    }
+  },
+  "00000bb": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "00000bc": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "00000bd": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "00000be": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00000bf": {
+    "tag": "div",
+    "attrs": {
+      "class": "benefits"
+    }
+  },
+  "00000c0": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00000c1": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00000c2": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00000c3": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00000c4": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00000c5": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00000c6": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00000c7": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00000c8": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00000c9": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00000ca": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00000cb": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00000cc": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00000cd": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00000ce": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00000cf": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00000d0": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00000d1": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00000d2": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00000d3": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00000d4": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00000d5": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00000d6": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00000d7": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00000d8": {
+    "tag": "section",
+    "attrs": {
+      "class": "layer-section",
+      "id": "cover-layers",
+      "data-frpme-component": "home-cover-layers"
+    }
+  },
+  "00000d9": {
+    "tag": "div",
+    "attrs": {
+      "class": "container layer-layout"
+    }
+  },
+  "00000da": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-stage"
+    }
+  },
+  "00000db": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-stage-top"
+    }
+  },
+  "00000dc": {
+    "tag": "span",
+    "attrs": {
+      "class": "layer-stage-label"
+    }
+  },
+  "00000dd": {
+    "tag": "span",
+    "attrs": {
+      "class": "layer-active-label",
+      "id": "layer-active-label"
+    }
+  },
+  "00000de": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-canvas"
+    }
+  },
+  "00000df": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-orbit",
+      "aria-hidden": "true"
+    }
+  },
+  "00000e0": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-stack",
+      "id": "layer-stack",
+      "data-layer": "substrate",
+      "aria-hidden": "true"
+    }
+  },
+  "00000e1": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-plate"
+    }
+  },
+  "00000e2": {
+    "tag": "span",
+    "attrs": {
+      "class": "plate-number"
+    }
+  },
+  "00000e3": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-plate"
+    }
+  },
+  "00000e4": {
+    "tag": "span",
+    "attrs": {
+      "class": "plate-number"
+    }
+  },
+  "00000e5": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-plate"
+    }
+  },
+  "00000e6": {
+    "tag": "span",
+    "attrs": {
+      "class": "plate-number"
+    }
+  },
+  "00000e7": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-stage-foot"
+    }
+  },
+  "00000e8": {
+    "tag": "span",
+    "attrs": {
+      "class": "layer-foot-dot",
+      "aria-hidden": "true"
+    },
+    "empty": true
+  },
+  "00000e9": {
+    "tag": "span",
+    "attrs": {
+      "class": "layer-legend"
+    }
+  },
+  "00000ea": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00000eb": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00000ec": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00000ed": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "00000ee": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-controls",
+      "role": "group",
+      "aria-label": "شناخت اجزای پوشش"
+    }
+  },
+  "00000ef": {
+    "tag": "button",
+    "attrs": {
+      "class": "layer-control",
+      "data-layer-choice": "substrate",
+      "aria-pressed": "true"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00000f0": {
+    "tag": "button",
+    "attrs": {
+      "class": "layer-control",
+      "data-layer-choice": "fibers",
+      "aria-pressed": "false"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00000f1": {
+    "tag": "button",
+    "attrs": {
+      "class": "layer-control",
+      "data-layer-choice": "finish",
+      "aria-pressed": "false"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00000f2": {
+    "tag": "div",
+    "attrs": {
+      "class": "layer-description",
+      "aria-live": "polite",
+      "aria-atomic": "true"
+    }
+  },
+  "00000f3": {
+    "tag": "h3",
+    "attrs": {
+      "id": "layer-title"
+    }
+  },
+  "00000f4": {
+    "tag": "p",
+    "attrs": {
+      "id": "layer-text"
+    }
+  },
+  "00000f5": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00000f6": {
+    "tag": "section",
+    "attrs": {
+      "class": "section dark-section",
+      "id": "materials",
+      "data-frpme-component": "home-materials"
+    }
+  },
+  "00000f7": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00000f8": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00000f9": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00000fa": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "00000fb": {
+    "tag": "div",
+    "attrs": {
+      "class": "material-grid"
+    }
+  },
+  "00000fc": {
+    "tag": "a",
+    "attrs": {
+      "class": "material-card glass-dark",
+      "href": "{{URL:/الیاف-سوزنی/}}"
+    }
+  },
+  "00000fd": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00000fe": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00000ff": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000100": {
+    "tag": "a",
+    "attrs": {
+      "class": "material-card glass-dark",
+      "href": "{{URL:/ترکیبی-الیاف-سوزنی/}}"
+    }
+  },
+  "0000101": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000102": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000103": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000104": {
+    "tag": "a",
+    "attrs": {
+      "class": "material-card glass-dark",
+      "href": "{{URL:/الیاف-حصیری/}}"
+    }
+  },
+  "0000105": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000106": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000107": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000108": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "process",
+      "data-frpme-component": "home-process"
+    }
+  },
+  "0000109": {
+    "tag": "div",
+    "attrs": {
+      "class": "container process"
+    }
+  },
+  "000010a": {
+    "tag": "div",
+    "attrs": {
+      "class": "process-copy"
+    }
+  },
+  "000010b": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000010c": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000010d": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000010e": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-outline"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000010f": {
+    "tag": "ol",
+    "attrs": {
+      "class": "steps"
+    }
+  },
+  "0000110": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000111": {
+    "tag": "span",
+    "attrs": {
+      "class": "step-number"
+    }
+  },
+  "0000112": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000113": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000114": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000115": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000116": {
+    "tag": "span",
+    "attrs": {
+      "class": "step-number"
+    }
+  },
+  "0000117": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000118": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000119": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000011a": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "000011b": {
+    "tag": "span",
+    "attrs": {
+      "class": "step-number"
+    }
+  },
+  "000011c": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000011d": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000011e": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000011f": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000120": {
+    "tag": "span",
+    "attrs": {
+      "class": "step-number"
+    }
+  },
+  "0000121": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000122": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000123": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000124": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000125": {
+    "tag": "span",
+    "attrs": {
+      "class": "step-number"
+    }
+  },
+  "0000126": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000127": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000128": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000129": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "000012a": {
+    "tag": "span",
+    "attrs": {
+      "class": "step-number"
+    }
+  },
+  "000012b": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000012c": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000012d": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000012e": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "000012f": {
+    "tag": "span",
+    "attrs": {
+      "class": "step-number"
+    }
+  },
+  "0000130": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000131": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000132": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000133": {
+    "tag": "section",
+    "attrs": {
+      "class": "section light-blue",
+      "id": "price",
+      "data-frpme-component": "home-price"
+    }
+  },
+  "0000134": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000135": {
+    "tag": "div",
+    "attrs": {
+      "class": "price-content"
+    }
+  },
+  "0000136": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000137": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000138": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000139": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "000013a": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "000013b": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000013c": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-outline"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000013d": {
+    "tag": "ul",
+    "attrs": {}
+  },
+  "000013e": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "000013f": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000140": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000141": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000142": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000143": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000144": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000145": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000146": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000147": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000148": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000149": {
+    "tag": "p",
+    "attrs": {
+      "class": "tool-small"
+    }
+  },
+  "000014a": {
+    "tag": "div",
+    "attrs": {
+      "class": "table-wrap application-table",
+      "tabindex": "0",
+      "role": "region",
+      "aria-label": "کاربردها و شرایط بررسی فایبرگلاس"
+    }
+  },
+  "000014b": {
+    "tag": "div",
+    "attrs": {},
+    "table": true
+  },
+  "000014c": {
+    "tag": "section",
+    "attrs": {
+      "class": "section light-blue",
+      "id": "estimate",
+      "data-frpme-component": "home-estimate"
+    }
+  },
+  "000014d": {
+    "tag": "div",
+    "attrs": {
+      "class": "container tools-layout"
+    }
+  },
+  "000014e": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000014f": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000150": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000151": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "0000152": {
+    "tag": "p",
+    "attrs": {
+      "class": "tool-small"
+    }
+  },
+  "0000153": {
+    "tag": "div",
+    "attrs": {
+      "class": "mini-links"
+    }
+  },
+  "0000154": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000155": {
+    "tag": "div",
+    "attrs": {
+      "class": "tools-panel glass"
+    }
+  },
+  "0000156": {
+    "tag": "h3",
+    "attrs": {
+      "class": "tool-heading"
+    }
+  },
+  "0000157": {
+    "tag": "form",
+    "attrs": {
+      "id": "estimate-form",
+      "class": "estimate-form"
+    }
+  },
+  "0000158": {
+    "tag": "div",
+    "attrs": {
+      "class": "estimate-grid"
+    }
+  },
+  "0000159": {
+    "tag": "label",
+    "attrs": {
+      "class": "field"
+    }
+  },
+  "000015a": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000015b": {
+    "tag": "input",
+    "attrs": {
+      "name": "length",
+      "type": "number",
+      "min": "0.1",
+      "max": "200",
+      "step": "any",
+      "value": "8",
+      "required": "",
+      "inputmode": "decimal"
+    }
+  },
+  "000015c": {
+    "tag": "label",
+    "attrs": {
+      "class": "field"
+    }
+  },
+  "000015d": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000015e": {
+    "tag": "input",
+    "attrs": {
+      "name": "width",
+      "type": "number",
+      "min": "0.1",
+      "max": "200",
+      "step": "any",
+      "value": "4",
+      "required": "",
+      "inputmode": "decimal"
+    }
+  },
+  "000015f": {
+    "tag": "label",
+    "attrs": {
+      "class": "field"
+    }
+  },
+  "0000160": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000161": {
+    "tag": "input",
+    "attrs": {
+      "name": "depth",
+      "type": "number",
+      "min": "0.1",
+      "max": "20",
+      "step": "any",
+      "value": "1.5",
+      "required": "",
+      "inputmode": "decimal"
+    }
+  },
+  "0000162": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "0000163": {
+    "tag": "button",
+    "attrs": {
+      "type": "submit",
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000164": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "reset-estimate",
+      "class": "btn btn-outline"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000165": {
+    "tag": "p",
+    "attrs": {
+      "id": "estimate-error",
+      "class": "tool-error",
+      "role": "alert"
+    },
+    "empty": true
+  },
+  "0000166": {
+    "tag": "div",
+    "attrs": {
+      "class": "estimate-result",
+      "id": "estimate-result",
+      "tabindex": "-1",
+      "aria-live": "polite",
+      "aria-atomic": "true"
+    }
+  },
+  "0000167": {
+    "tag": "span",
+    "attrs": {
+      "class": "estimate-number",
+      "id": "estimate-total"
+    }
+  },
+  "0000168": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000169": {
+    "tag": "strong",
+    "attrs": {}
+  },
+  "000016a": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000016b": {
+    "tag": "div",
+    "attrs": {
+      "class": "estimate-details"
+    }
+  },
+  "000016c": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000016d": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000016e": {
+    "tag": "output",
+    "attrs": {
+      "id": "estimate-floor"
+    }
+  },
+  "000016f": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000170": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000171": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000172": {
+    "tag": "output",
+    "attrs": {
+      "id": "estimate-walls"
+    }
+  },
+  "0000173": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000174": {
+    "tag": "p",
+    "attrs": {
+      "class": "tool-small"
+    }
+  },
+  "0000175": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "0000176": {
+    "tag": "button",
+    "attrs": {
+      "class": "btn btn-outline",
+      "id": "copy-estimate",
+      "type": "button"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000177": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000178": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "projects",
+      "data-frpme-component": "home-projects"
+    }
+  },
+  "0000179": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "000017a": {
+    "tag": "div",
+    "attrs": {
+      "class": "section-head"
+    }
+  },
+  "000017b": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000017c": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000017d": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000017e": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000017f": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-outline"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000180": {
+    "tag": "div",
+    "attrs": {
+      "class": "project-grid"
+    }
+  },
+  "0000181": {
+    "tag": "figure",
+    "attrs": {
+      "class": "project"
+    }
+  },
+  "0000182": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "class": "project-trigger",
+      "aria-label": "بزرگ‌نمایی تصویر پروژه"
+    }
+  },
+  "0000183": {
+    "tag": "img",
+    "attrs": {
+      "alt": "نمونه اجرای پوشش در استخر از آرشیو سازه گستر",
+      "width": "800",
+      "height": "600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/9333502fd8f64358.webp}}"
+  },
+  "0000184": {
+    "tag": "span",
+    "attrs": {
+      "class": "project-zoom"
+    }
+  },
+  "0000185": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "0000186": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000187": {
+    "tag": "figcaption",
+    "attrs": {}
+  },
+  "0000188": {
+    "tag": "figure",
+    "attrs": {
+      "class": "project"
+    }
+  },
+  "0000189": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "class": "project-trigger",
+      "aria-label": "بزرگ‌نمایی تصویر پروژه"
+    }
+  },
+  "000018a": {
+    "tag": "img",
+    "attrs": {
+      "alt": "اجرای پوشش روی سطح ساختمانی از آرشیو سازه گستر",
+      "width": "800",
+      "height": "600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/8d51f838951b8219.webp}}"
+  },
+  "000018b": {
+    "tag": "span",
+    "attrs": {
+      "class": "project-zoom"
+    }
+  },
+  "000018c": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "000018d": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000018e": {
+    "tag": "figcaption",
+    "attrs": {}
+  },
+  "000018f": {
+    "tag": "figure",
+    "attrs": {
+      "class": "project"
+    }
+  },
+  "0000190": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "class": "project-trigger",
+      "aria-label": "بزرگ‌نمایی تصویر پروژه"
+    }
+  },
+  "0000191": {
+    "tag": "img",
+    "attrs": {
+      "alt": "اجرای پوشش فایبرگلاس در پروژه از آرشیو سازه گستر",
+      "width": "800",
+      "height": "600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/1729207e135a4764.webp}}"
+  },
+  "0000192": {
+    "tag": "span",
+    "attrs": {
+      "class": "project-zoom"
+    }
+  },
+  "0000193": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "0000194": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000195": {
+    "tag": "figcaption",
+    "attrs": {}
+  },
+  "0000196": {
+    "tag": "div",
+    "attrs": {
+      "class": "video-section"
+    }
+  },
+  "0000197": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000198": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000199": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000019a": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000019b": {
+    "tag": "video",
+    "attrs": {
+      "controls": "",
+      "playsinline": "",
+      "preload": "none",
+      "aria-label": "ویدیوی پروژه از سایت سازه گستر"
+    },
+    "default_video": "{{URL:/wp-content/uploads/2023/04/InShot_20230424_112321692.mp4}}"
+  },
+  "000019c": {
+    "tag": "section",
+    "attrs": {
+      "class": "section light-blue",
+      "id": "about",
+      "data-frpme-component": "home-about"
+    }
+  },
+  "000019d": {
+    "tag": "div",
+    "attrs": {
+      "class": "container intro-layout"
+    }
+  },
+  "000019e": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000019f": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00001a0": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00001a1": {
+    "tag": "aside",
+    "attrs": {
+      "class": "proposal-checklist glass",
+      "aria-labelledby": "proposal-title"
+    }
+  },
+  "00001a2": {
+    "tag": "div",
+    "attrs": {
+      "class": "proposal-heading"
+    }
+  },
+  "00001a3": {
+    "tag": "span",
+    "attrs": {
+      "class": "proposal-heading-icon"
+    }
+  },
+  "00001a4": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "00001a5": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00001a6": {
+    "tag": "span",
+    "attrs": {
+      "class": "proposal-kicker"
+    }
+  },
+  "00001a7": {
+    "tag": "h3",
+    "attrs": {
+      "id": "proposal-title"
+    }
+  },
+  "00001a8": {
+    "tag": "p",
+    "attrs": {
+      "class": "proposal-intro"
+    }
+  },
+  "00001a9": {
+    "tag": "div",
+    "attrs": {
+      "class": "proposal-items"
+    }
+  },
+  "00001aa": {
+    "tag": "label",
+    "attrs": {
+      "class": "proposal-item"
+    }
+  },
+  "00001ab": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox",
+      "class": "proposal-check",
+      "aria-describedby": "proposal-hint-1"
+    }
+  },
+  "00001ac": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00001ad": {
+    "tag": "label",
+    "attrs": {
+      "class": "proposal-item"
+    }
+  },
+  "00001ae": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox",
+      "class": "proposal-check",
+      "aria-describedby": "proposal-hint-2"
+    }
+  },
+  "00001af": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00001b0": {
+    "tag": "label",
+    "attrs": {
+      "class": "proposal-item"
+    }
+  },
+  "00001b1": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox",
+      "class": "proposal-check",
+      "aria-describedby": "proposal-hint-3"
+    }
+  },
+  "00001b2": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00001b3": {
+    "tag": "label",
+    "attrs": {
+      "class": "proposal-item"
+    }
+  },
+  "00001b4": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox",
+      "class": "proposal-check",
+      "aria-describedby": "proposal-hint-4"
+    }
+  },
+  "00001b5": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00001b6": {
+    "tag": "div",
+    "attrs": {
+      "class": "proposal-footer"
+    }
+  },
+  "00001b7": {
+    "tag": "span",
+    "attrs": {
+      "class": "proposal-status",
+      "id": "proposal-status",
+      "role": "status",
+      "aria-live": "polite"
+    }
+  },
+  "00001b8": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00001b9": {
+    "tag": "div",
+    "attrs": {
+      "class": "reading"
+    }
+  },
+  "00001ba": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00001bb": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00001bc": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00001bd": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00001be": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00001bf": {
+    "tag": "div",
+    "attrs": {
+      "class": "author-block glass"
+    }
+  },
+  "00001c0": {
+    "tag": "span",
+    "attrs": {
+      "class": "icon-box"
+    }
+  },
+  "00001c1": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-layers"
+  },
+  "00001c2": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00001c3": {
+    "tag": "h3",
+    "attrs": {
+      "style": "font-size:16px"
+    }
+  },
+  "00001c4": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00001c5": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00001c6": {
+    "tag": "section",
+    "attrs": {
+      "class": "section home-articles",
+      "id": "home-articles",
+      "data-frpme-component": "home-home-articles"
+    }
+  },
+  "00001c7": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00001c8": {
+    "tag": "div",
+    "attrs": {
+      "class": "home-articles-head"
+    }
+  },
+  "00001c9": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00001ca": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00001cb": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00001cc": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00001cd": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00001ce": {
+    "tag": "div",
+    "attrs": {
+      "class": "home-articles-track",
+      "id": "home-articles-track",
+      "tabindex": "0",
+      "role": "region",
+      "aria-label": "کاروسل راهنماهای فایبرگلاس"
+    },
+    "dynamic": "home-posts"
+  },
+  "00001cf": {
+    "tag": "div",
+    "attrs": {
+      "class": "home-articles-controls"
+    }
+  },
+  "00001d0": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00001d1": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "home-article-prev",
+      "aria-label": "مقالات قبلی",
+      "aria-controls": "home-articles-track"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "00001d2": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "home-article-next",
+      "aria-label": "مقالات بعدی",
+      "aria-controls": "home-articles-track"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "00001d3": {
+    "tag": "span",
+    "attrs": {
+      "id": "home-article-position",
+      "role": "status"
+    }
+  },
+  "00001d4": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00001d5": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "faq",
+      "data-frpme-component": "home-faq"
+    }
+  },
+  "00001d6": {
+    "tag": "div",
+    "attrs": {
+      "class": "container faq-layout"
+    }
+  },
+  "00001d7": {
+    "tag": "div",
+    "attrs": {
+      "class": "faq-intro"
+    }
+  },
+  "00001d8": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00001d9": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00001da": {
+    "tag": "p",
+    "attrs": {
+      "class": "faq-intro-copy"
+    }
+  },
+  "00001db": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00001dc": {
+    "tag": "div",
+    "attrs": {
+      "class": "faq-list"
+    }
+  },
+  "00001dd": {
+    "tag": "div",
+    "attrs": {
+      "class": "faq-search"
+    }
+  },
+  "00001de": {
+    "tag": "label",
+    "attrs": {
+      "for": "faq-query"
+    }
+  },
+  "00001df": {
+    "tag": "input",
+    "attrs": {
+      "type": "search",
+      "id": "faq-query",
+      "placeholder": "مثلاً قیمت، مخزن یا جکوزی…",
+      "autocomplete": "off"
+    }
+  },
+  "00001e0": {
+    "tag": "p",
+    "attrs": {
+      "class": "faq-result-count",
+      "id": "faq-result-count",
+      "role": "status"
+    },
+    "empty": true
+  },
+  "00001e1": {
+    "tag": "p",
+    "attrs": {
+      "class": "faq-empty",
+      "id": "faq-empty",
+      "hidden": ""
+    }
+  },
+  "00001e2": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00001e3": {
+    "tag": "button",
+    "attrs": {
+      "class": "btn btn-text",
+      "id": "reset-faq",
+      "type": "button"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00001e4": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00001e5": {
+    "tag": "a",
+    "attrs": {
+      "style": "color:var(--primary)"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00001e6": {
+    "tag": "details",
+    "attrs": {
+      "open": ""
+    }
+  },
+  "00001e7": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "00001e8": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-question"
+    }
+  },
+  "00001e9": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "00001ea": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "00001eb": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00001ec": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "00001ed": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "00001ee": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-question"
+    }
+  },
+  "00001ef": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "00001f0": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "00001f1": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00001f2": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "00001f3": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "00001f4": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-question"
+    }
+  },
+  "00001f5": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "00001f6": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "00001f7": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00001f8": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "00001f9": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "00001fa": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-question"
+    }
+  },
+  "00001fb": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "00001fc": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "00001fd": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00001fe": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "00001ff": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000200": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-question"
+    }
+  },
+  "0000201": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "0000202": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000203": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000204": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "0000205": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000206": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-question"
+    }
+  },
+  "0000207": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "0000208": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000209": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000020a": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "000020b": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "000020c": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-question"
+    }
+  },
+  "000020d": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "000020e": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "000020f": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000210": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "0000211": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000212": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-question"
+    }
+  },
+  "0000213": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "0000214": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000215": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000216": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "0000217": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000218": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-question"
+    }
+  },
+  "0000219": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "000021a": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "000021b": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000021c": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "000021d": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "000021e": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-question"
+    }
+  },
+  "000021f": {
+    "tag": "span",
+    "attrs": {
+      "class": "faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "0000220": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000221": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000222": {
+    "tag": "section",
+    "attrs": {
+      "class": "section light-blue",
+      "id": "contact",
+      "data-frpme-component": "home-contact"
+    }
+  },
+  "0000223": {
+    "tag": "div",
+    "attrs": {
+      "class": "container contact-grid"
+    }
+  },
+  "0000224": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000225": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000226": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000227": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "0000228": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "0000229": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000022a": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-outline"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000022b": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-card glass"
+    }
+  },
+  "000022c": {
+    "tag": "h3",
+    "attrs": {
+      "class": "contact-title"
+    }
+  },
+  "000022d": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-list"
+    }
+  },
+  "000022e": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-item"
+    }
+  },
+  "000022f": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-icon"
+    }
+  },
+  "0000230": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-phone"
+  },
+  "0000231": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-data"
+    }
+  },
+  "0000232": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-label"
+    }
+  },
+  "0000233": {
+    "tag": "a",
+    "attrs": {
+      "dir": "ltr"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000234": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-item"
+    }
+  },
+  "0000235": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-icon"
+    }
+  },
+  "0000236": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-phone"
+  },
+  "0000237": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-data"
+    }
+  },
+  "0000238": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-label"
+    }
+  },
+  "0000239": {
+    "tag": "a",
+    "attrs": {
+      "dir": "ltr"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000023a": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-item"
+    }
+  },
+  "000023b": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-icon"
+    }
+  },
+  "000023c": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-office"
+  },
+  "000023d": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-data"
+    }
+  },
+  "000023e": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-label"
+    }
+  },
+  "000023f": {
+    "tag": "a",
+    "attrs": {
+      "dir": "ltr"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000240": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-item contact-item-stacked"
+    }
+  },
+  "0000241": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-icon"
+    }
+  },
+  "0000242": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-mail"
+  },
+  "0000243": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-data"
+    }
+  },
+  "0000244": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-label"
+    }
+  },
+  "0000245": {
+    "tag": "a",
+    "attrs": {
+      "dir": "ltr"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000246": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-item contact-item-stacked"
+    }
+  },
+  "0000247": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-icon"
+    }
+  },
+  "0000248": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-pin"
+  },
+  "0000249": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-data"
+    }
+  },
+  "000024a": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-label"
+    }
+  },
+  "000024b": {
+    "tag": "address",
+    "attrs": {}
+  },
+  "000024c": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-after",
+      "data-frpme-component": "home-tools-after"
+    }
+  },
+  "000024d": {
+    "tag": "dialog",
+    "attrs": {
+      "class": "gallery-dialog",
+      "id": "gallery-dialog",
+      "aria-labelledby": "gallery-title"
+    }
+  },
+  "000024e": {
+    "tag": "div",
+    "attrs": {
+      "class": "gallery-toolbar"
+    }
+  },
+  "000024f": {
+    "tag": "h2",
+    "attrs": {
+      "id": "gallery-title"
+    }
+  },
+  "0000250": {
+    "tag": "span",
+    "attrs": {
+      "class": "gallery-counter",
+      "id": "gallery-counter"
+    },
+    "empty": true
+  },
+  "0000251": {
+    "tag": "button",
+    "attrs": {
+      "class": "close",
+      "id": "close-gallery",
+      "aria-label": "بستن تصویر"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "0000252": {
+    "tag": "img",
+    "attrs": {
+      "id": "gallery-image",
+      "alt": ""
+    },
+    "site_logo": false,
+    "default_image": ""
+  },
+  "0000253": {
+    "tag": "div",
+    "attrs": {
+      "class": "gallery-bottom"
+    }
+  },
+  "0000254": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "class": "gallery-arrow",
+      "id": "gallery-prev",
+      "aria-label": "تصویر قبلی"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "0000255": {
+    "tag": "span",
+    "attrs": {
+      "class": "gallery-caption",
+      "id": "gallery-caption",
+      "aria-live": "polite"
+    },
+    "empty": true
+  },
+  "0000256": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "class": "gallery-arrow",
+      "id": "gallery-next",
+      "aria-label": "تصویر بعدی"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "0000257": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "back-top",
+      "class": "back-top",
+      "aria-label": "بازگشت به ابتدای صفحه"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "0000258": {
+    "tag": "div",
+    "attrs": {
+      "class": "toast",
+      "id": "interaction-toast",
+      "role": "status",
+      "aria-live": "polite"
+    }
+  },
+  "0000259": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page",
+      "data-frpme-source": "about"
+    }
+  },
+  "000025a": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-before",
+      "data-frpme-component": "about-tools-before"
+    }
+  },
+  "000025b": {
+    "tag": "a",
+    "attrs": {
+      "class": "skip"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000025c": {
+    "tag": "main",
+    "attrs": {
+      "class": "about-main",
+      "id": "main"
+    }
+  },
+  "000025d": {
+    "tag": "nav",
+    "attrs": {
+      "class": "container about-breadcrumb",
+      "aria-label": "مسیر صفحه",
+      "data-frpme-component": "about-block-1"
+    }
+  },
+  "000025e": {
+    "tag": "ol",
+    "attrs": {}
+  },
+  "000025f": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000260": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "0000261": {
+    "tag": "li",
+    "attrs": {
+      "aria-hidden": "true",
+      "class": "breadcrumb-separator"
+    }
+  },
+  "0000262": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-next"
+  },
+  "0000263": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000264": {
+    "tag": "span",
+    "attrs": {
+      "aria-current": "page"
+    }
+  },
+  "0000265": {
+    "tag": "span",
+    "attrs": {
+      "class": "breadcrumb-caption",
+      "lang": "en",
+      "dir": "ltr"
+    }
+  },
+  "0000266": {
+    "tag": "section",
+    "attrs": {
+      "class": "about-hero",
+      "data-frpme-component": "about-block-2"
+    }
+  },
+  "0000267": {
+    "tag": "div",
+    "attrs": {
+      "class": "container about-hero-grid"
+    }
+  },
+  "0000268": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000269": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000026a": {
+    "tag": "h1",
+    "attrs": {}
+  },
+  "000026b": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000026c": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "000026d": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000026e": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-light"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000026f": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-topic-line"
+    }
+  },
+  "0000270": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000271": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000272": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000273": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-hero-image"
+    }
+  },
+  "0000274": {
+    "tag": "img",
+    "attrs": {
+      "alt": "نمونه اجرای پوشش در استخر از آرشیو فایبرگلاس سازه گستر",
+      "width": "800",
+      "height": "600",
+      "fetchpriority": "high"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/9333502fd8f64358.webp}}"
+  },
+  "0000275": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-image-caption"
+    }
+  },
+  "0000276": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000277": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000278": {
+    "tag": "section",
+    "attrs": {
+      "class": "section about-profile",
+      "id": "about-profile",
+      "data-frpme-component": "about-about-profile"
+    }
+  },
+  "0000279": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "000027a": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-profile-head"
+    }
+  },
+  "000027b": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000027c": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000027d": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000027e": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000027f": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-profile-layout"
+    }
+  },
+  "0000280": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-profile-menu",
+      "aria-label": "مسیر شناخت مجموعه"
+    }
+  },
+  "0000281": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "data-profile": "profile-story"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000282": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "data-profile": "profile-focus"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000283": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "data-profile": "profile-cooperation"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000284": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-profile-content"
+    }
+  },
+  "0000285": {
+    "tag": "article",
+    "attrs": {
+      "id": "profile-story"
+    }
+  },
+  "0000286": {
+    "tag": "span",
+    "attrs": {
+      "class": "profile-kicker"
+    }
+  },
+  "0000287": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000288": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000289": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000028a": {
+    "tag": "article",
+    "attrs": {
+      "id": "profile-focus"
+    }
+  },
+  "000028b": {
+    "tag": "span",
+    "attrs": {
+      "class": "profile-kicker"
+    }
+  },
+  "000028c": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000028d": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000028e": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000028f": {
+    "tag": "article",
+    "attrs": {
+      "id": "profile-cooperation"
+    }
+  },
+  "0000290": {
+    "tag": "span",
+    "attrs": {
+      "class": "profile-kicker"
+    }
+  },
+  "0000291": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000292": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000293": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000294": {
+    "tag": "nav",
+    "attrs": {
+      "class": "about-chapter-nav",
+      "aria-label": "بخش‌های درباره ما",
+      "data-frpme-component": "about-block-4"
+    }
+  },
+  "0000295": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000296": {
+    "tag": "div",
+    "attrs": {
+      "class": "chapter-label"
+    }
+  },
+  "0000297": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-identity"
+  },
+  "0000298": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000299": {
+    "tag": "strong",
+    "attrs": {}
+  },
+  "000029a": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "000029b": {
+    "tag": "div",
+    "attrs": {
+      "class": "chapter-links"
+    }
+  },
+  "000029c": {
+    "tag": "a",
+    "attrs": {
+      "href": "#about-identity"
+    }
+  },
+  "000029d": {
+    "tag": "span",
+    "attrs": {
+      "class": "chapter-number"
+    }
+  },
+  "000029e": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-identity"
+  },
+  "000029f": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00002a0": {
+    "tag": "a",
+    "attrs": {
+      "href": "#about-projects"
+    }
+  },
+  "00002a1": {
+    "tag": "span",
+    "attrs": {
+      "class": "chapter-number"
+    }
+  },
+  "00002a2": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-project"
+  },
+  "00002a3": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00002a4": {
+    "tag": "a",
+    "attrs": {
+      "href": "#about-approach"
+    }
+  },
+  "00002a5": {
+    "tag": "span",
+    "attrs": {
+      "class": "chapter-number"
+    }
+  },
+  "00002a6": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-process"
+  },
+  "00002a7": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00002a8": {
+    "tag": "a",
+    "attrs": {
+      "href": "#about-contact"
+    }
+  },
+  "00002a9": {
+    "tag": "span",
+    "attrs": {
+      "class": "chapter-number"
+    }
+  },
+  "00002aa": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-phone"
+  },
+  "00002ab": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00002ac": {
+    "tag": "section",
+    "attrs": {
+      "class": "section light-blue",
+      "id": "about-identity",
+      "data-frpme-component": "about-about-identity"
+    }
+  },
+  "00002ad": {
+    "tag": "div",
+    "attrs": {
+      "class": "container about-two-column"
+    }
+  },
+  "00002ae": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00002af": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00002b0": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00002b1": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-fact"
+    }
+  },
+  "00002b2": {
+    "tag": "strong",
+    "attrs": {}
+  },
+  "00002b3": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00002b4": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00002b5": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00002b6": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-copy"
+    }
+  },
+  "00002b7": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00002b8": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00002b9": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00002ba": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "about-fields",
+      "data-frpme-component": "about-about-fields"
+    }
+  },
+  "00002bb": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00002bc": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00002bd": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00002be": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-fields"
+    }
+  },
+  "00002bf": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-field"
+    }
+  },
+  "00002c0": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-layers"
+  },
+  "00002c1": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00002c2": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00002c3": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-field"
+    }
+  },
+  "00002c4": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-water"
+  },
+  "00002c5": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00002c6": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00002c7": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-field"
+    }
+  },
+  "00002c8": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-tank"
+  },
+  "00002c9": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00002ca": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00002cb": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-field"
+    }
+  },
+  "00002cc": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-fiber"
+  },
+  "00002cd": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00002ce": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00002cf": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "00002d0": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00002d1": {
+    "tag": "section",
+    "attrs": {
+      "class": "section light-blue",
+      "id": "about-experience",
+      "data-frpme-component": "about-about-experience"
+    }
+  },
+  "00002d2": {
+    "tag": "div",
+    "attrs": {
+      "class": "container about-two-column"
+    }
+  },
+  "00002d3": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00002d4": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00002d5": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00002d6": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "00002d7": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-evidence glass"
+    }
+  },
+  "00002d8": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00002d9": {
+    "tag": "ul",
+    "attrs": {}
+  },
+  "00002da": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00002db": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00002dc": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00002dd": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00002de": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00002df": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00002e0": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00002e1": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00002e2": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00002e3": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "about-projects",
+      "data-frpme-component": "about-about-projects"
+    }
+  },
+  "00002e4": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00002e5": {
+    "tag": "div",
+    "attrs": {
+      "class": "section-head"
+    }
+  },
+  "00002e6": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00002e7": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00002e8": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00002e9": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00002ea": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-outline"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00002eb": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-project-grid"
+    }
+  },
+  "00002ec": {
+    "tag": "figure",
+    "attrs": {}
+  },
+  "00002ed": {
+    "tag": "button",
+    "attrs": {
+      "class": "project-trigger about-project-trigger",
+      "type": "button",
+      "aria-label": "بزرگ‌نمایی، پوشش فایبرگلاس در استخر"
+    }
+  },
+  "00002ee": {
+    "tag": "img",
+    "attrs": {
+      "alt": "پوشش فایبرگلاس در استخر از آرشیو سازه گستر",
+      "width": "800",
+      "height": "600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/9333502fd8f64358.webp}}"
+  },
+  "00002ef": {
+    "tag": "span",
+    "attrs": {
+      "class": "project-zoom"
+    }
+  },
+  "00002f0": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "00002f1": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00002f2": {
+    "tag": "figcaption",
+    "attrs": {
+      "data-record": "۰۱"
+    }
+  },
+  "00002f3": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00002f4": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00002f5": {
+    "tag": "p",
+    "attrs": {
+      "class": "archive-description"
+    }
+  },
+  "00002f6": {
+    "tag": "span",
+    "attrs": {
+      "class": "archive-caption-label"
+    }
+  },
+  "00002f7": {
+    "tag": "figure",
+    "attrs": {}
+  },
+  "00002f8": {
+    "tag": "button",
+    "attrs": {
+      "class": "project-trigger about-project-trigger",
+      "type": "button",
+      "aria-label": "بزرگ‌نمایی، پوشش روی سطح ساختمانی"
+    }
+  },
+  "00002f9": {
+    "tag": "img",
+    "attrs": {
+      "alt": "پوشش روی سطح ساختمانی از آرشیو سازه گستر",
+      "width": "800",
+      "height": "600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/8d51f838951b8219.webp}}"
+  },
+  "00002fa": {
+    "tag": "span",
+    "attrs": {
+      "class": "project-zoom"
+    }
+  },
+  "00002fb": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "00002fc": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00002fd": {
+    "tag": "figcaption",
+    "attrs": {
+      "data-record": "۰۲"
+    }
+  },
+  "00002fe": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00002ff": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "0000300": {
+    "tag": "p",
+    "attrs": {
+      "class": "archive-description"
+    }
+  },
+  "0000301": {
+    "tag": "span",
+    "attrs": {
+      "class": "archive-caption-label"
+    }
+  },
+  "0000302": {
+    "tag": "figure",
+    "attrs": {}
+  },
+  "0000303": {
+    "tag": "button",
+    "attrs": {
+      "class": "project-trigger about-project-trigger",
+      "type": "button",
+      "aria-label": "بزرگ‌نمایی، نمایی از اجرای پوشش فایبرگلاس"
+    }
+  },
+  "0000304": {
+    "tag": "img",
+    "attrs": {
+      "alt": "نمایی از اجرای پوشش فایبرگلاس از آرشیو سازه گستر",
+      "width": "800",
+      "height": "600",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/1729207e135a4764.webp}}"
+  },
+  "0000305": {
+    "tag": "span",
+    "attrs": {
+      "class": "project-zoom"
+    }
+  },
+  "0000306": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "0000307": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000308": {
+    "tag": "figcaption",
+    "attrs": {
+      "data-record": "۰۳"
+    }
+  },
+  "0000309": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000030a": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "000030b": {
+    "tag": "p",
+    "attrs": {
+      "class": "archive-description"
+    }
+  },
+  "000030c": {
+    "tag": "span",
+    "attrs": {
+      "class": "archive-caption-label"
+    }
+  },
+  "000030d": {
+    "tag": "p",
+    "attrs": {
+      "class": "about-contact-note"
+    }
+  },
+  "000030e": {
+    "tag": "section",
+    "attrs": {
+      "class": "section light-blue",
+      "id": "about-why",
+      "data-frpme-component": "about-about-why"
+    }
+  },
+  "000030f": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000310": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000311": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000312": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "0000313": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-principles"
+    }
+  },
+  "0000314": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-principle"
+    }
+  },
+  "0000315": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000316": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000317": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-principle"
+    }
+  },
+  "0000318": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000319": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000031a": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-principle"
+    }
+  },
+  "000031b": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000031c": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000031d": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-principle"
+    }
+  },
+  "000031e": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000031f": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000320": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-principle"
+    }
+  },
+  "0000321": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000322": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000323": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-principle"
+    }
+  },
+  "0000324": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000325": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000326": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "about-approach",
+      "data-frpme-component": "about-about-approach"
+    }
+  },
+  "0000327": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000328": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000329": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000032a": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "000032b": {
+    "tag": "ol",
+    "attrs": {
+      "class": "about-workflow"
+    }
+  },
+  "000032c": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "000032d": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-workflow-number"
+    }
+  },
+  "000032e": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000032f": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000330": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000331": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000332": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-workflow-number"
+    }
+  },
+  "0000333": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000334": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000335": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000336": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000337": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-workflow-number"
+    }
+  },
+  "0000338": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000339": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000033a": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000033b": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "000033c": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-workflow-number"
+    }
+  },
+  "000033d": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000033e": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000033f": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000340": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000341": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-workflow-number"
+    }
+  },
+  "0000342": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000343": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000344": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000345": {
+    "tag": "section",
+    "attrs": {
+      "class": "section dark-section",
+      "id": "about-materials",
+      "data-frpme-component": "about-about-materials"
+    }
+  },
+  "0000346": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000347": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000348": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000349": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "000034a": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-materials"
+    }
+  },
+  "000034b": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-material"
+    }
+  },
+  "000034c": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-fiber"
+  },
+  "000034d": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000034e": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000034f": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000350": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-material"
+    }
+  },
+  "0000351": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-layers"
+  },
+  "0000352": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000353": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000354": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000355": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-material"
+    }
+  },
+  "0000356": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-water"
+  },
+  "0000357": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000358": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000359": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000035a": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "about-applications",
+      "data-frpme-component": "about-about-applications"
+    }
+  },
+  "000035b": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "000035c": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000035d": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000035e": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "000035f": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-applications"
+    }
+  },
+  "0000360": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-application"
+    }
+  },
+  "0000361": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000362": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000363": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-application"
+    }
+  },
+  "0000364": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000365": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000366": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-application"
+    }
+  },
+  "0000367": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000368": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000369": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-application"
+    }
+  },
+  "000036a": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000036b": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000036c": {
+    "tag": "article",
+    "attrs": {
+      "class": "about-application"
+    }
+  },
+  "000036d": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000036e": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000036f": {
+    "tag": "section",
+    "attrs": {
+      "class": "section light-blue",
+      "id": "about-faq",
+      "data-frpme-component": "about-about-faq"
+    }
+  },
+  "0000370": {
+    "tag": "div",
+    "attrs": {
+      "class": "container about-faq-grid"
+    }
+  },
+  "0000371": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000372": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000373": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000374": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "0000375": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000376": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-faq"
+    }
+  },
+  "0000377": {
+    "tag": "details",
+    "attrs": {
+      "open": ""
+    }
+  },
+  "0000378": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000379": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000037a": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "000037b": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "000037c": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000037d": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "000037e": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "000037f": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000380": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "0000381": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000382": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000383": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "0000384": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000385": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000386": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "0000387": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000388": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000389": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "000038a": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "000038b": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000038c": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "000038d": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "000038e": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000038f": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "0000390": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000391": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000392": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle",
+      "aria-hidden": "true"
+    }
+  },
+  "0000393": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000394": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000395": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "about-contact",
+      "data-frpme-component": "about-about-contact"
+    }
+  },
+  "0000396": {
+    "tag": "div",
+    "attrs": {
+      "class": "container about-contact"
+    }
+  },
+  "0000397": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000398": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000399": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000039a": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "000039b": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "000039c": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000039d": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-outline"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000039e": {
+    "tag": "div",
+    "attrs": {
+      "class": "mini-links"
+    }
+  },
+  "000039f": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00003a0": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00003a1": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-contact-panel glass"
+    }
+  },
+  "00003a2": {
+    "tag": "a",
+    "attrs": {
+      "href": "tel:+989126124876"
+    }
+  },
+  "00003a3": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-row-icon"
+    }
+  },
+  "00003a4": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-phone"
+  },
+  "00003a5": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-row-label"
+    }
+  },
+  "00003a6": {
+    "tag": "strong",
+    "attrs": {
+      "dir": "ltr"
+    }
+  },
+  "00003a7": {
+    "tag": "a",
+    "attrs": {
+      "href": "tel:+982133481307"
+    }
+  },
+  "00003a8": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-row-icon"
+    }
+  },
+  "00003a9": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-office"
+  },
+  "00003aa": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-row-label"
+    }
+  },
+  "00003ab": {
+    "tag": "strong",
+    "attrs": {
+      "dir": "ltr"
+    }
+  },
+  "00003ac": {
+    "tag": "a",
+    "attrs": {
+      "href": "mailto:asgharjalali1357@gmail.com",
+      "class": "contact-email-row"
+    }
+  },
+  "00003ad": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-row-icon"
+    }
+  },
+  "00003ae": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-mail"
+  },
+  "00003af": {
+    "tag": "span",
+    "attrs": {
+      "class": "contact-row-label"
+    }
+  },
+  "00003b0": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-email",
+      "dir": "ltr"
+    }
+  },
+  "00003b1": {
+    "tag": "p",
+    "attrs": {
+      "class": "about-contact-note"
+    }
+  },
+  "00003b2": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "00003b3": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00003b4": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-after",
+      "data-frpme-component": "about-tools-after"
+    }
+  },
+  "00003b5": {
+    "tag": "dialog",
+    "attrs": {
+      "class": "gallery-dialog",
+      "id": "about-gallery",
+      "aria-labelledby": "about-gallery-title"
+    }
+  },
+  "00003b6": {
+    "tag": "div",
+    "attrs": {
+      "class": "gallery-toolbar"
+    }
+  },
+  "00003b7": {
+    "tag": "h2",
+    "attrs": {
+      "id": "about-gallery-title"
+    }
+  },
+  "00003b8": {
+    "tag": "span",
+    "attrs": {
+      "class": "gallery-counter",
+      "id": "about-gallery-count"
+    },
+    "empty": true
+  },
+  "00003b9": {
+    "tag": "button",
+    "attrs": {
+      "class": "close",
+      "id": "about-gallery-close",
+      "aria-label": "بستن تصویر"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "00003ba": {
+    "tag": "img",
+    "attrs": {
+      "id": "about-gallery-image",
+      "alt": ""
+    },
+    "site_logo": false,
+    "default_image": ""
+  },
+  "00003bb": {
+    "tag": "div",
+    "attrs": {
+      "class": "gallery-bottom"
+    }
+  },
+  "00003bc": {
+    "tag": "button",
+    "attrs": {
+      "class": "gallery-arrow",
+      "id": "about-gallery-prev",
+      "aria-label": "تصویر قبلی"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "00003bd": {
+    "tag": "span",
+    "attrs": {
+      "class": "gallery-caption",
+      "id": "about-gallery-caption",
+      "aria-live": "polite"
+    },
+    "empty": true
+  },
+  "00003be": {
+    "tag": "button",
+    "attrs": {
+      "class": "gallery-arrow",
+      "id": "about-gallery-next",
+      "aria-label": "تصویر بعدی"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "00003bf": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page",
+      "data-frpme-source": "services"
+    }
+  },
+  "00003c0": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-before",
+      "data-frpme-component": "services-tools-before"
+    }
+  },
+  "00003c1": {
+    "tag": "a",
+    "attrs": {
+      "class": "skip"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00003c2": {
+    "tag": "main",
+    "attrs": {
+      "class": "services-main",
+      "id": "main"
+    }
+  },
+  "00003c3": {
+    "tag": "nav",
+    "attrs": {
+      "class": "container about-breadcrumb",
+      "aria-label": "مسیر صفحه",
+      "data-frpme-component": "services-block-1"
+    }
+  },
+  "00003c4": {
+    "tag": "ol",
+    "attrs": {}
+  },
+  "00003c5": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00003c6": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "00003c7": {
+    "tag": "li",
+    "attrs": {
+      "aria-hidden": "true"
+    }
+  },
+  "00003c8": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00003c9": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00003ca": {
+    "tag": "span",
+    "attrs": {
+      "aria-current": "page"
+    }
+  },
+  "00003cb": {
+    "tag": "span",
+    "attrs": {
+      "class": "breadcrumb-caption"
+    }
+  },
+  "00003cc": {
+    "tag": "section",
+    "attrs": {
+      "class": "service-hero",
+      "data-frpme-component": "services-block-2"
+    }
+  },
+  "00003cd": {
+    "tag": "div",
+    "attrs": {
+      "class": "container service-hero-grid"
+    }
+  },
+  "00003ce": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00003cf": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00003d0": {
+    "tag": "h1",
+    "attrs": {}
+  },
+  "00003d1": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00003d2": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "00003d3": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00003d4": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-light"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00003d5": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-hero-note"
+    }
+  },
+  "00003d6": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00003d7": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-directory"
+    }
+  },
+  "00003d8": {
+    "tag": "div",
+    "attrs": {
+      "class": "directory-title"
+    }
+  },
+  "00003d9": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00003da": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00003db": {
+    "tag": "a",
+    "attrs": {
+      "href": "#service-execution"
+    }
+  },
+  "00003dc": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-layers"
+  },
+  "00003dd": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00003de": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00003df": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "00003e0": {
+    "tag": "a",
+    "attrs": {
+      "href": "#service-waterproofing"
+    }
+  },
+  "00003e1": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-water"
+  },
+  "00003e2": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00003e3": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00003e4": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "00003e5": {
+    "tag": "a",
+    "attrs": {
+      "href": "#service-tanks"
+    }
+  },
+  "00003e6": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-tank"
+  },
+  "00003e7": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00003e8": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00003e9": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "00003ea": {
+    "tag": "a",
+    "attrs": {
+      "href": "#service-industrial"
+    }
+  },
+  "00003eb": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-fiber"
+  },
+  "00003ec": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00003ed": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00003ee": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "00003ef": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "service-selector",
+      "data-frpme-component": "services-service-selector"
+    }
+  },
+  "00003f0": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00003f1": {
+    "tag": "div",
+    "attrs": {
+      "class": "selector-head"
+    }
+  },
+  "00003f2": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00003f3": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00003f4": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00003f5": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00003f6": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-select-console"
+    }
+  },
+  "00003f7": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-select-buttons"
+    }
+  },
+  "00003f8": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "data-choice": "building",
+      "aria-pressed": "false"
+    }
+  },
+  "00003f9": {
+    "tag": "span",
+    "attrs": {
+      "class": "selector-option-icon"
+    }
+  },
+  "00003fa": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-office"
+  },
+  "00003fb": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00003fc": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "00003fd": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "data-choice": "pool",
+      "aria-pressed": "false"
+    }
+  },
+  "00003fe": {
+    "tag": "span",
+    "attrs": {
+      "class": "selector-option-icon"
+    }
+  },
+  "00003ff": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-water"
+  },
+  "0000400": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000401": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000402": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "data-choice": "tank",
+      "aria-pressed": "false"
+    }
+  },
+  "0000403": {
+    "tag": "span",
+    "attrs": {
+      "class": "selector-option-icon"
+    }
+  },
+  "0000404": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-tank"
+  },
+  "0000405": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000406": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000407": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "data-choice": "industry",
+      "aria-pressed": "false"
+    }
+  },
+  "0000408": {
+    "tag": "span",
+    "attrs": {
+      "class": "selector-option-icon"
+    }
+  },
+  "0000409": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-fiber"
+  },
+  "000040a": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000040b": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "000040c": {
+    "tag": "div",
+    "attrs": {
+      "class": "selector-result",
+      "id": "selector-result",
+      "aria-live": "polite"
+    }
+  },
+  "000040d": {
+    "tag": "span",
+    "attrs": {
+      "class": "selector-result-topline",
+      "aria-hidden": "true"
+    },
+    "empty": true
+  },
+  "000040e": {
+    "tag": "span",
+    "attrs": {
+      "class": "selector-result-label"
+    }
+  },
+  "000040f": {
+    "tag": "strong",
+    "attrs": {
+      "id": "selector-title"
+    }
+  },
+  "0000410": {
+    "tag": "p",
+    "attrs": {
+      "id": "selector-description"
+    }
+  },
+  "0000411": {
+    "tag": "a",
+    "attrs": {
+      "id": "selector-link"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000412": {
+    "tag": "span",
+    "attrs": {
+      "class": "selector-result-footnote"
+    }
+  },
+  "0000413": {
+    "tag": "section",
+    "attrs": {
+      "class": "section service-catalog",
+      "id": "service-catalog",
+      "data-frpme-component": "services-service-catalog"
+    }
+  },
+  "0000414": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000415": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000416": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000417": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "0000418": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-cards"
+    }
+  },
+  "0000419": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card",
+      "id": "service-execution"
+    }
+  },
+  "000041a": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-card-heading"
+    }
+  },
+  "000041b": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-card-top"
+    }
+  },
+  "000041c": {
+    "tag": "span",
+    "attrs": {
+      "class": "service-icon"
+    }
+  },
+  "000041d": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-layers"
+  },
+  "000041e": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000041f": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000420": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000421": {
+    "tag": "dl",
+    "attrs": {}
+  },
+  "0000422": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000423": {
+    "tag": "dt",
+    "attrs": {}
+  },
+  "0000424": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000425": {
+    "tag": "dd",
+    "attrs": {}
+  },
+  "0000426": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000427": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000428": {
+    "tag": "dt",
+    "attrs": {}
+  },
+  "0000429": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000042a": {
+    "tag": "dd",
+    "attrs": {}
+  },
+  "000042b": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000042c": {
+    "tag": "a",
+    "attrs": {
+      "class": "service-request",
+      "data-request": "execution"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000042d": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card",
+      "id": "service-waterproofing"
+    }
+  },
+  "000042e": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-card-heading"
+    }
+  },
+  "000042f": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-card-top"
+    }
+  },
+  "0000430": {
+    "tag": "span",
+    "attrs": {
+      "class": "service-icon"
+    }
+  },
+  "0000431": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-water"
+  },
+  "0000432": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000433": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000434": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000435": {
+    "tag": "dl",
+    "attrs": {}
+  },
+  "0000436": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000437": {
+    "tag": "dt",
+    "attrs": {}
+  },
+  "0000438": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000439": {
+    "tag": "dd",
+    "attrs": {}
+  },
+  "000043a": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000043b": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000043c": {
+    "tag": "dt",
+    "attrs": {}
+  },
+  "000043d": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000043e": {
+    "tag": "dd",
+    "attrs": {}
+  },
+  "000043f": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000440": {
+    "tag": "a",
+    "attrs": {
+      "class": "service-request",
+      "data-request": "waterproofing"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000441": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card",
+      "id": "service-tanks"
+    }
+  },
+  "0000442": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-card-heading"
+    }
+  },
+  "0000443": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-card-top"
+    }
+  },
+  "0000444": {
+    "tag": "span",
+    "attrs": {
+      "class": "service-icon"
+    }
+  },
+  "0000445": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-tank"
+  },
+  "0000446": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000447": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000448": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000449": {
+    "tag": "dl",
+    "attrs": {}
+  },
+  "000044a": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000044b": {
+    "tag": "dt",
+    "attrs": {}
+  },
+  "000044c": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000044d": {
+    "tag": "dd",
+    "attrs": {}
+  },
+  "000044e": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000044f": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000450": {
+    "tag": "dt",
+    "attrs": {}
+  },
+  "0000451": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000452": {
+    "tag": "dd",
+    "attrs": {}
+  },
+  "0000453": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000454": {
+    "tag": "a",
+    "attrs": {
+      "class": "service-request",
+      "data-request": "tanks"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000455": {
+    "tag": "article",
+    "attrs": {
+      "class": "service-card",
+      "id": "service-industrial"
+    }
+  },
+  "0000456": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-card-heading"
+    }
+  },
+  "0000457": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-card-top"
+    }
+  },
+  "0000458": {
+    "tag": "span",
+    "attrs": {
+      "class": "service-icon"
+    }
+  },
+  "0000459": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-fiber"
+  },
+  "000045a": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000045b": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000045c": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000045d": {
+    "tag": "dl",
+    "attrs": {}
+  },
+  "000045e": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000045f": {
+    "tag": "dt",
+    "attrs": {}
+  },
+  "0000460": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000461": {
+    "tag": "dd",
+    "attrs": {}
+  },
+  "0000462": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000463": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000464": {
+    "tag": "dt",
+    "attrs": {}
+  },
+  "0000465": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000466": {
+    "tag": "dd",
+    "attrs": {}
+  },
+  "0000467": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000468": {
+    "tag": "a",
+    "attrs": {
+      "class": "service-request",
+      "data-request": "industrial"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000469": {
+    "tag": "details",
+    "attrs": {
+      "class": "service-comparison",
+      "open": ""
+    }
+  },
+  "000046a": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "000046b": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000046c": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "000046d": {
+    "tag": "div",
+    "attrs": {
+      "class": "comparison-scroll",
+      "tabindex": "0",
+      "role": "region",
+      "aria-label": "جدول مقایسه خدمات"
+    }
+  },
+  "000046e": {
+    "tag": "span",
+    "attrs": {
+      "class": "comparison-mobile-hint"
+    }
+  },
+  "000046f": {
+    "tag": "div",
+    "attrs": {},
+    "table": true
+  },
+  "0000470": {
+    "tag": "section",
+    "attrs": {
+      "class": "section service-planner",
+      "id": "service-planner",
+      "data-frpme-component": "services-service-planner"
+    }
+  },
+  "0000471": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000472": {
+    "tag": "div",
+    "attrs": {
+      "class": "selector-head"
+    }
+  },
+  "0000473": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000474": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000475": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000476": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000477": {
+    "tag": "div",
+    "attrs": {
+      "class": "planner-grid"
+    }
+  },
+  "0000478": {
+    "tag": "div",
+    "attrs": {
+      "class": "planner-fields"
+    }
+  },
+  "0000479": {
+    "tag": "div",
+    "attrs": {
+      "class": "planner-panel-heading"
+    }
+  },
+  "000047a": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-identity"
+  },
+  "000047b": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000047c": {
+    "tag": "label",
+    "attrs": {
+      "for": "planner-type"
+    }
+  },
+  "000047d": {
+    "tag": "select",
+    "attrs": {
+      "id": "planner-type"
+    }
+  },
+  "000047e": {
+    "tag": "label",
+    "attrs": {
+      "for": "planner-area"
+    }
+  },
+  "000047f": {
+    "tag": "input",
+    "attrs": {
+      "id": "planner-area",
+      "type": "text",
+      "maxlength": "100",
+      "placeholder": "مثلاً ۶۰ مترمربع یا ابعاد مخزن"
+    }
+  },
+  "0000480": {
+    "tag": "label",
+    "attrs": {
+      "for": "planner-need"
+    }
+  },
+  "0000481": {
+    "tag": "textarea",
+    "attrs": {
+      "id": "planner-need",
+      "rows": "3",
+      "maxlength": "500",
+      "placeholder": "محل نشتی، وضعیت زیرکار یا نوع پوشش موردنیاز"
+    }
+  },
+  "0000482": {
+    "tag": "div",
+    "attrs": {
+      "class": "planner-checks"
+    }
+  },
+  "0000483": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000484": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000485": {
+    "tag": "label",
+    "attrs": {}
+  },
+  "0000486": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox",
+      "value": "تصاویر محل"
+    }
+  },
+  "0000487": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000488": {
+    "tag": "label",
+    "attrs": {}
+  },
+  "0000489": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox",
+      "value": "ابعاد تقریبی"
+    }
+  },
+  "000048a": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000048b": {
+    "tag": "label",
+    "attrs": {}
+  },
+  "000048c": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox",
+      "value": "وضعیت پوشش قبلی"
+    }
+  },
+  "000048d": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000048e": {
+    "tag": "label",
+    "attrs": {}
+  },
+  "000048f": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox",
+      "value": "شرایط بهره‌برداری"
+    }
+  },
+  "0000490": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000491": {
+    "tag": "div",
+    "attrs": {
+      "class": "planner-progress"
+    }
+  },
+  "0000492": {
+    "tag": "span",
+    "attrs": {
+      "id": "planner-progress-text"
+    }
+  },
+  "0000493": {
+    "tag": "progress",
+    "attrs": {
+      "id": "planner-progress",
+      "max": "4",
+      "value": "0",
+      "aria-label": "اطلاعات آماده پروژه"
+    }
+  },
+  "0000494": {
+    "tag": "div",
+    "attrs": {
+      "class": "planner-summary"
+    }
+  },
+  "0000495": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000496": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000497": {
+    "tag": "pre",
+    "attrs": {
+      "id": "planner-summary-text"
+    },
+    "empty": true
+  },
+  "0000498": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "0000499": {
+    "tag": "button",
+    "attrs": {
+      "class": "btn btn-primary",
+      "type": "button",
+      "id": "planner-copy"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000049a": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-outline"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000049b": {
+    "tag": "span",
+    "attrs": {
+      "class": "planner-status",
+      "id": "planner-status",
+      "role": "status"
+    },
+    "empty": true
+  },
+  "000049c": {
+    "tag": "span",
+    "attrs": {
+      "class": "planner-local-note"
+    }
+  },
+  "000049d": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "000049e": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000049f": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "service-applications",
+      "data-frpme-component": "services-service-applications"
+    }
+  },
+  "00004a0": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00004a1": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00004a2": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00004a3": {
+    "tag": "div",
+    "attrs": {
+      "class": "application-atlas"
+    }
+  },
+  "00004a4": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-heading"
+    }
+  },
+  "00004a5": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004a6": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004a7": {
+    "tag": "div",
+    "attrs": {
+      "class": "application-list"
+    }
+  },
+  "00004a8": {
+    "tag": "article",
+    "attrs": {}
+  },
+  "00004a9": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-marker"
+    }
+  },
+  "00004aa": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-roof"
+  },
+  "00004ab": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00004ac": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00004ad": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00004ae": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-tags",
+      "aria-label": "معیارهای بررسی"
+    }
+  },
+  "00004af": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004b0": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004b1": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004b2": {
+    "tag": "article",
+    "attrs": {}
+  },
+  "00004b3": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-marker"
+    }
+  },
+  "00004b4": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-pool"
+  },
+  "00004b5": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00004b6": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00004b7": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00004b8": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-tags",
+      "aria-label": "معیارهای بررسی"
+    }
+  },
+  "00004b9": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004ba": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004bb": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004bc": {
+    "tag": "article",
+    "attrs": {}
+  },
+  "00004bd": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-marker"
+    }
+  },
+  "00004be": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-tank"
+  },
+  "00004bf": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00004c0": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00004c1": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00004c2": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-tags",
+      "aria-label": "معیارهای بررسی"
+    }
+  },
+  "00004c3": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004c4": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004c5": {
+    "tag": "article",
+    "attrs": {}
+  },
+  "00004c6": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-marker"
+    }
+  },
+  "00004c7": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-water"
+  },
+  "00004c8": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00004c9": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00004ca": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00004cb": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-tags",
+      "aria-label": "معیارهای بررسی"
+    }
+  },
+  "00004cc": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004cd": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004ce": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004cf": {
+    "tag": "article",
+    "attrs": {}
+  },
+  "00004d0": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-marker"
+    }
+  },
+  "00004d1": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-cpu"
+  },
+  "00004d2": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00004d3": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00004d4": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00004d5": {
+    "tag": "div",
+    "attrs": {
+      "class": "atlas-tags",
+      "aria-label": "معیارهای بررسی"
+    }
+  },
+  "00004d6": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004d7": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004d8": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004d9": {
+    "tag": "p",
+    "attrs": {
+      "class": "atlas-note"
+    }
+  },
+  "00004da": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "00004db": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00004dc": {
+    "tag": "section",
+    "attrs": {
+      "class": "section service-process",
+      "id": "service-process",
+      "data-frpme-component": "services-service-process"
+    }
+  },
+  "00004dd": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00004de": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00004df": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00004e0": {
+    "tag": "ol",
+    "attrs": {}
+  },
+  "00004e1": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00004e2": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004e3": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00004e4": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "aria-pressed": "false",
+      "aria-controls": "service-process-detail"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00004e5": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00004e6": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00004e7": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004e8": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00004e9": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "aria-pressed": "false",
+      "aria-controls": "service-process-detail"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00004ea": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00004eb": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00004ec": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004ed": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00004ee": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "aria-pressed": "false",
+      "aria-controls": "service-process-detail"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00004ef": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00004f0": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00004f1": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004f2": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00004f3": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "aria-pressed": "false",
+      "aria-controls": "service-process-detail"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00004f4": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00004f5": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "00004f6": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004f7": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00004f8": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "aria-pressed": "false",
+      "aria-controls": "service-process-detail"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00004f9": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00004fa": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-process-control"
+    }
+  },
+  "00004fb": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00004fc": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "process-next"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00004fd": {
+    "tag": "p",
+    "attrs": {
+      "class": "service-process-detail",
+      "id": "service-process-detail",
+      "aria-live": "polite"
+    },
+    "empty": true
+  },
+  "00004fe": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "service-trust",
+      "data-frpme-component": "services-service-trust"
+    }
+  },
+  "00004ff": {
+    "tag": "div",
+    "attrs": {
+      "class": "container trust-grid"
+    }
+  },
+  "0000500": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000501": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000502": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000503": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "0000504": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000505": {
+    "tag": "div",
+    "attrs": {
+      "class": "trust-items"
+    }
+  },
+  "0000506": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000507": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "0000508": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000509": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000050a": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000050b": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "000050c": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000050d": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000050e": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000050f": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "0000510": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000511": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000512": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000513": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "0000514": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000515": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000516": {
+    "tag": "section",
+    "attrs": {
+      "class": "section service-projects",
+      "id": "service-projects",
+      "data-frpme-component": "services-service-projects"
+    }
+  },
+  "0000517": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000518": {
+    "tag": "div",
+    "attrs": {
+      "class": "selector-head"
+    }
+  },
+  "0000519": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000051a": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000051b": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000051c": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-outline"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000051d": {
+    "tag": "div",
+    "attrs": {
+      "class": "service-photo-grid"
+    }
+  },
+  "000051e": {
+    "tag": "figure",
+    "attrs": {}
+  },
+  "000051f": {
+    "tag": "button",
+    "attrs": {
+      "class": "service-photo",
+      "type": "button",
+      "aria-label": "بزرگ‌نمایی پوشش روی سطح ساختمانی"
+    }
+  },
+  "0000520": {
+    "tag": "img",
+    "attrs": {
+      "alt": "پوشش آبی روی سطح ساختمانی در کنار سازه فلزی",
+      "width": "800",
+      "height": "1000",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/1a97f7f6527dc004.webp}}"
+  },
+  "0000521": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000522": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "0000523": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000524": {
+    "tag": "figcaption",
+    "attrs": {}
+  },
+  "0000525": {
+    "tag": "figure",
+    "attrs": {}
+  },
+  "0000526": {
+    "tag": "button",
+    "attrs": {
+      "class": "service-photo",
+      "type": "button",
+      "aria-label": "بزرگ‌نمایی نمای دیگر از پوشش ساختمانی"
+    }
+  },
+  "0000527": {
+    "tag": "img",
+    "attrs": {
+      "alt": "نمای پوشش آبی روی سطح ساختمانی",
+      "width": "800",
+      "height": "1000",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/8b6ab45930f6e370.webp}}"
+  },
+  "0000528": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000529": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "000052a": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000052b": {
+    "tag": "figcaption",
+    "attrs": {}
+  },
+  "000052c": {
+    "tag": "figure",
+    "attrs": {}
+  },
+  "000052d": {
+    "tag": "button",
+    "attrs": {
+      "class": "service-photo",
+      "type": "button",
+      "aria-label": "بزرگ‌نمایی پوشش اجراشده در استخر"
+    }
+  },
+  "000052e": {
+    "tag": "img",
+    "attrs": {
+      "alt": "نمای پوشش تیره اجراشده در بدنه استخر",
+      "width": "800",
+      "height": "1000",
+      "loading": "lazy",
+      "decoding": "async"
+    },
+    "site_logo": false,
+    "default_image": "{{ASSET:assets/images/a1ed2479cdd4ae70.webp}}"
+  },
+  "000052f": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000530": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "0000531": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000532": {
+    "tag": "figcaption",
+    "attrs": {}
+  },
+  "0000533": {
+    "tag": "p",
+    "attrs": {
+      "class": "service-small"
+    }
+  },
+  "0000534": {
+    "tag": "section",
+    "attrs": {
+      "class": "section",
+      "id": "service-faq",
+      "data-frpme-component": "services-service-faq"
+    }
+  },
+  "0000535": {
+    "tag": "div",
+    "attrs": {
+      "class": "container service-faq-grid"
+    }
+  },
+  "0000536": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000537": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000538": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000539": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "000053a": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-text"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000053b": {
+    "tag": "div",
+    "attrs": {
+      "class": "about-faq"
+    }
+  },
+  "000053c": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "000053d": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "000053e": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000053f": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle"
+    }
+  },
+  "0000540": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000541": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000542": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "0000543": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000544": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000545": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle"
+    }
+  },
+  "0000546": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000547": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000548": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "0000549": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "000054a": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000054b": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle"
+    }
+  },
+  "000054c": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "000054d": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000054e": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "000054f": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000550": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000551": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle"
+    }
+  },
+  "0000552": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000553": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000554": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "0000555": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000556": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000557": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle"
+    }
+  },
+  "0000558": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000559": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000055a": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "000055b": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "000055c": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000055d": {
+    "tag": "span",
+    "attrs": {
+      "class": "about-faq-toggle"
+    }
+  },
+  "000055e": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "000055f": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000560": {
+    "tag": "section",
+    "attrs": {
+      "class": "section service-contact",
+      "id": "service-contact",
+      "data-frpme-component": "services-service-contact"
+    }
+  },
+  "0000561": {
+    "tag": "div",
+    "attrs": {
+      "class": "container service-contact-grid"
+    }
+  },
+  "0000562": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000563": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000564": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000565": {
+    "tag": "p",
+    "attrs": {
+      "class": "section-lead"
+    }
+  },
+  "0000566": {
+    "tag": "p",
+    "attrs": {
+      "id": "chosen-service",
+      "class": "chosen-service",
+      "aria-live": "polite"
+    }
+  },
+  "0000567": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000568": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-preparation"
+    }
+  },
+  "0000569": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000056a": {
+    "tag": "ul",
+    "attrs": {}
+  },
+  "000056b": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "000056c": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000056d": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "000056e": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000056f": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000570": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000571": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000572": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000573": {
+    "tag": "li",
+    "attrs": {}
+  },
+  "0000574": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000575": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000576": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-after",
+      "data-frpme-component": "services-tools-after"
+    }
+  },
+  "0000577": {
+    "tag": "dialog",
+    "attrs": {
+      "class": "service-image-dialog",
+      "id": "service-image-dialog",
+      "aria-label": "نمای بزرگ تصویر پروژه"
+    }
+  },
+  "0000578": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "service-image-close"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000579": {
+    "tag": "img",
+    "attrs": {
+      "id": "service-image",
+      "alt": ""
+    },
+    "site_logo": false,
+    "default_image": ""
+  },
+  "000057a": {
+    "tag": "p",
+    "attrs": {
+      "id": "service-image-caption"
+    },
+    "empty": true
+  },
+  "000057b": {
+    "tag": "div",
+    "attrs": {
+      "class": "services-reading-progress",
+      "aria-hidden": "true"
+    }
+  },
+  "000057c": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page",
+      "data-frpme-source": "contact"
+    }
+  },
+  "000057d": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-before",
+      "data-frpme-component": "contact-tools-before"
+    }
+  },
+  "000057e": {
+    "tag": "main",
+    "attrs": {
+      "id": "main",
+      "class": "contact-main"
+    }
+  },
+  "000057f": {
+    "tag": "nav",
+    "attrs": {
+      "class": "container contact-crumb",
+      "aria-label": "مسیر صفحه",
+      "data-frpme-component": "contact-block-1"
+    }
+  },
+  "0000580": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "0000581": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-next"
+  },
+  "0000582": {
+    "tag": "span",
+    "attrs": {
+      "aria-current": "page"
+    }
+  },
+  "0000583": {
+    "tag": "section",
+    "attrs": {
+      "class": "contact-hero",
+      "data-frpme-component": "contact-block-2"
+    }
+  },
+  "0000584": {
+    "tag": "div",
+    "attrs": {
+      "class": "container contact-hero-grid"
+    }
+  },
+  "0000585": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000586": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-detail-line"
+    }
+  },
+  "0000587": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000588": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000589": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "000058a": {
+    "tag": "h1",
+    "attrs": {}
+  },
+  "000058b": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000058c": {
+    "tag": "div",
+    "attrs": {
+      "class": "actions"
+    }
+  },
+  "000058d": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000058e": {
+    "tag": "a",
+    "attrs": {
+      "class": "contact-text-link"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000058f": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-hero-note-box"
+    }
+  },
+  "0000590": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-project"
+  },
+  "0000591": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000592": {
+    "tag": "div",
+    "attrs": {
+      "class": "hero-contact-note"
+    }
+  },
+  "0000593": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000594": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000595": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000596": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000597": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000598": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-switchboard"
+    }
+  },
+  "0000599": {
+    "tag": "div",
+    "attrs": {
+      "class": "switchboard-head"
+    }
+  },
+  "000059a": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000059b": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-phone"
+  },
+  "000059c": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000059d": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "000059e": {
+    "tag": "a",
+    "attrs": {
+      "class": "contact-primary-number",
+      "href": "tel:+989126124876"
+    }
+  },
+  "000059f": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00005a0": {
+    "tag": "strong",
+    "attrs": {
+      "dir": "ltr"
+    }
+  },
+  "00005a1": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "00005a2": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00005a3": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "00005a4": {
+    "tag": "div",
+    "attrs": {
+      "class": "switchboard-secondary"
+    }
+  },
+  "00005a5": {
+    "tag": "a",
+    "attrs": {
+      "href": "tel:+982133481307"
+    }
+  },
+  "00005a6": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00005a7": {
+    "tag": "strong",
+    "attrs": {
+      "dir": "ltr"
+    }
+  },
+  "00005a8": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-office"
+  },
+  "00005a9": {
+    "tag": "a",
+    "attrs": {
+      "href": "tel:+989113894473"
+    }
+  },
+  "00005aa": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00005ab": {
+    "tag": "strong",
+    "attrs": {
+      "dir": "ltr"
+    }
+  },
+  "00005ac": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-phone"
+  },
+  "00005ad": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00005ae": {
+    "tag": "section",
+    "attrs": {
+      "class": "section contact-channels",
+      "data-frpme-component": "contact-block-3"
+    }
+  },
+  "00005af": {
+    "tag": "div",
+    "attrs": {
+      "class": "container channels-grid"
+    }
+  },
+  "00005b0": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00005b1": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00005b2": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00005b3": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00005b4": {
+    "tag": "div",
+    "attrs": {
+      "class": "channel-email"
+    }
+  },
+  "00005b5": {
+    "tag": "div",
+    "attrs": {
+      "class": "channel-label"
+    }
+  },
+  "00005b6": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-mail"
+  },
+  "00005b7": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00005b8": {
+    "tag": "a",
+    "attrs": {
+      "dir": "ltr"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00005b9": {
+    "tag": "div",
+    "attrs": {
+      "class": "email-actions"
+    }
+  },
+  "00005ba": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00005bb": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "copy-email"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00005bc": {
+    "tag": "span",
+    "attrs": {
+      "class": "copy-status",
+      "id": "copy-status",
+      "role": "status"
+    },
+    "empty": true
+  },
+  "00005bd": {
+    "tag": "section",
+    "attrs": {
+      "class": "section contact-location",
+      "id": "contact-location",
+      "data-frpme-component": "contact-contact-location"
+    }
+  },
+  "00005be": {
+    "tag": "div",
+    "attrs": {
+      "class": "container location-grid"
+    }
+  },
+  "00005bf": {
+    "tag": "div",
+    "attrs": {
+      "class": "location-info"
+    }
+  },
+  "00005c0": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00005c1": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00005c2": {
+    "tag": "p",
+    "attrs": {
+      "class": "location-address"
+    }
+  },
+  "00005c3": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-pin"
+  },
+  "00005c4": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00005c5": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary",
+      "target": "_blank",
+      "rel": "noopener"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00005c6": {
+    "tag": "p",
+    "attrs": {
+      "class": "location-note"
+    }
+  },
+  "00005c7": {
+    "tag": "a",
+    "attrs": {
+      "class": "contact-office-link"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00005c8": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-map"
+    }
+  },
+  "00005c9": {
+    "tag": "iframe",
+    "attrs": {
+      "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.372014759023!2d51.49662278474296!3d35.618554380208934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDM3JzA2LjgiTiA1McKwMjknNDAuMCJF!5e0!3m2!1sfa!2s!4v1623615726159!5m2!1sfa!2s",
+      "title": "نقشه موقعیت فایبرگلاس سازه گستر",
+      "width": "800",
+      "height": "500",
+      "loading": "lazy",
+      "referrerpolicy": "no-referrer-when-downgrade",
+      "allowfullscreen": ""
+    },
+    "raw": true
+  },
+  "00005ca": {
+    "tag": "div",
+    "attrs": {
+      "class": "map-caption"
+    }
+  },
+  "00005cb": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-pin"
+  },
+  "00005cc": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "00005cd": {
+    "tag": "section",
+    "attrs": {
+      "class": "section contact-ready",
+      "data-frpme-component": "contact-block-5"
+    }
+  },
+  "00005ce": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00005cf": {
+    "tag": "div",
+    "attrs": {
+      "class": "ready-heading"
+    }
+  },
+  "00005d0": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00005d1": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00005d2": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00005d3": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00005d4": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-checklist"
+    }
+  },
+  "00005d5": {
+    "tag": "label",
+    "attrs": {}
+  },
+  "00005d6": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox"
+    }
+  },
+  "00005d7": {
+    "tag": "span",
+    "attrs": {
+      "class": "ready-number"
+    }
+  },
+  "00005d8": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-project"
+  },
+  "00005d9": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00005da": {
+    "tag": "span",
+    "attrs": {
+      "class": "ready-tick"
+    }
+  },
+  "00005db": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "00005dc": {
+    "tag": "label",
+    "attrs": {}
+  },
+  "00005dd": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox"
+    }
+  },
+  "00005de": {
+    "tag": "span",
+    "attrs": {
+      "class": "ready-number"
+    }
+  },
+  "00005df": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-box"
+  },
+  "00005e0": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00005e1": {
+    "tag": "span",
+    "attrs": {
+      "class": "ready-tick"
+    }
+  },
+  "00005e2": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "00005e3": {
+    "tag": "label",
+    "attrs": {}
+  },
+  "00005e4": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox"
+    }
+  },
+  "00005e5": {
+    "tag": "span",
+    "attrs": {
+      "class": "ready-number"
+    }
+  },
+  "00005e6": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "00005e7": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00005e8": {
+    "tag": "span",
+    "attrs": {
+      "class": "ready-tick"
+    }
+  },
+  "00005e9": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "00005ea": {
+    "tag": "label",
+    "attrs": {}
+  },
+  "00005eb": {
+    "tag": "input",
+    "attrs": {
+      "type": "checkbox"
+    }
+  },
+  "00005ec": {
+    "tag": "span",
+    "attrs": {
+      "class": "ready-number"
+    }
+  },
+  "00005ed": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-tank"
+  },
+  "00005ee": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00005ef": {
+    "tag": "span",
+    "attrs": {
+      "class": "ready-tick"
+    }
+  },
+  "00005f0": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-check"
+  },
+  "00005f1": {
+    "tag": "div",
+    "attrs": {
+      "class": "ready-progress"
+    }
+  },
+  "00005f2": {
+    "tag": "span",
+    "attrs": {
+      "id": "ready-status",
+      "aria-live": "polite"
+    }
+  },
+  "00005f3": {
+    "tag": "progress",
+    "attrs": {
+      "id": "ready-meter",
+      "max": "4",
+      "value": "0",
+      "aria-label": "میزان آمادگی اطلاعات پروژه"
+    }
+  },
+  "00005f4": {
+    "tag": "section",
+    "attrs": {
+      "class": "section contact-faq",
+      "data-frpme-component": "contact-block-6"
+    }
+  },
+  "00005f5": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00005f6": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00005f7": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00005f8": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-faq-list"
+    }
+  },
+  "00005f9": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "00005fa": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "00005fb": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00005fc": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "00005fd": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00005fe": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "00005ff": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000600": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000601": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000602": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000603": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "0000604": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "0000605": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000606": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "0000607": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000608": {
+    "tag": "div",
+    "attrs": {
+      "class": "contact-end"
+    }
+  },
+  "0000609": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000060a": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000060b": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000060c": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000060d": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000060e": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000060f": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000610": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "0000611": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000612": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-after",
+      "data-frpme-component": "contact-tools-after"
+    }
+  },
+  "0000613": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page",
+      "data-frpme-source": "blog"
+    }
+  },
+  "0000614": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-before",
+      "data-frpme-component": "blog-tools-before"
+    }
+  },
+  "0000615": {
+    "tag": "main",
+    "attrs": {
+      "id": "main",
+      "class": "blog-main"
+    }
+  },
+  "0000616": {
+    "tag": "nav",
+    "attrs": {
+      "class": "container blog-crumb",
+      "aria-label": "مسیر صفحه",
+      "data-frpme-component": "blog-block-1"
+    }
+  },
+  "0000617": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "0000618": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000619": {
+    "tag": "span",
+    "attrs": {
+      "aria-current": "page"
+    }
+  },
+  "000061a": {
+    "tag": "section",
+    "attrs": {
+      "class": "blog-hero",
+      "data-frpme-component": "blog-block-2"
+    }
+  },
+  "000061b": {
+    "tag": "div",
+    "attrs": {
+      "class": "container blog-hero-grid"
+    }
+  },
+  "000061c": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000061d": {
+    "tag": "div",
+    "attrs": {
+      "class": "blog-edition"
+    }
+  },
+  "000061e": {
+    "tag": "span",
+    "attrs": {},
+    "text_node": true
+  },
+  "000061f": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000620": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000621": {
+    "tag": "h1",
+    "attrs": {}
+  },
+  "0000622": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000623": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000624": {
+    "tag": "div",
+    "attrs": {
+      "class": "hero-topics",
+      "aria-label": "موضوعات وبلاگ"
+    }
+  },
+  "0000625": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000626": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000627": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000628": {
+    "tag": "div",
+    "attrs": {
+      "class": "blog-hero-index"
+    }
+  },
+  "0000629": {
+    "tag": "div",
+    "attrs": {
+      "class": "index-top"
+    }
+  },
+  "000062a": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000062b": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "000062c": {
+    "tag": "a",
+    "attrs": {
+      "href": "#blog-materials"
+    }
+  },
+  "000062d": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "000062e": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-fiber"
+  },
+  "000062f": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000630": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000631": {
+    "tag": "a",
+    "attrs": {
+      "href": "#blog-execution"
+    }
+  },
+  "0000632": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "0000633": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-layers"
+  },
+  "0000634": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000635": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000636": {
+    "tag": "a",
+    "attrs": {
+      "href": "#blog-industry"
+    }
+  },
+  "0000637": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "0000638": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-tank"
+  },
+  "0000639": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "000063a": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "000063b": {
+    "tag": "section",
+    "attrs": {
+      "class": "section blog-library",
+      "id": "blog-library",
+      "data-frpme-component": "blog-blog-library"
+    }
+  },
+  "000063c": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "000063d": {
+    "tag": "div",
+    "attrs": {
+      "class": "blog-section-head"
+    }
+  },
+  "000063e": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000063f": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000640": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000641": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000642": {
+    "tag": "form",
+    "attrs": {
+      "class": "blog-search",
+      "method": "get",
+      "action": "{{URL:/}}"
+    }
+  },
+  "0000643": {
+    "tag": "label",
+    "attrs": {
+      "for": "blog-query"
+    }
+  },
+  "0000644": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "0000645": {
+    "tag": "span",
+    "attrs": {
+      "class": "sr-only"
+    }
+  },
+  "0000646": {
+    "tag": "input",
+    "attrs": {
+      "type": "search",
+      "id": "blog-query",
+      "placeholder": "مثلاً الیاف حصیری، رزین یا آب‌بندی استخر",
+      "autocomplete": "off",
+      "name": "s"
+    }
+  },
+  "0000647": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "blog-clear",
+      "aria-label": "پاک کردن جستجو"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "0000648": {
+    "tag": "input",
+    "attrs": {
+      "type": "hidden",
+      "name": "post_type",
+      "value": "post"
+    }
+  },
+  "0000649": {
+    "tag": "button",
+    "attrs": {
+      "type": "submit"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000064a": {
+    "tag": "div",
+    "attrs": {
+      "class": "blog-filters",
+      "aria-label": "فیلتر موضوعی"
+    },
+    "dynamic": "blog-filters"
+  },
+  "000064b": {
+    "tag": "div",
+    "attrs": {
+      "class": "blog-result-line"
+    }
+  },
+  "000064c": {
+    "tag": "span",
+    "attrs": {
+      "id": "blog-result",
+      "role": "status"
+    }
+  },
+  "000064d": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "blog-bookmarked",
+      "aria-pressed": "false"
+    },
+    "icon_before": true,
+    "empty_button": false
+  },
+  "000064e": {
+    "tag": "div",
+    "attrs": {
+      "class": "blog-cards"
+    },
+    "dynamic": "blog-cards"
+  },
+  "000064f": {
+    "tag": "div",
+    "attrs": {
+      "class": "blog-empty",
+      "id": "blog-empty",
+      "hidden": ""
+    }
+  },
+  "0000650": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-zoom"
+  },
+  "0000651": {
+    "tag": "strong",
+    "attrs": {}
+  },
+  "0000652": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000653": {
+    "tag": "section",
+    "attrs": {
+      "class": "section blog-pathways",
+      "data-frpme-component": "blog-block-4"
+    }
+  },
+  "0000654": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000655": {
+    "tag": "section",
+    "attrs": {
+      "id": "blog-learning",
+      "class": "blog-path-row"
+    }
+  },
+  "0000656": {
+    "tag": "div",
+    "attrs": {
+      "class": "path-title"
+    }
+  },
+  "0000657": {
+    "tag": "span",
+    "attrs": {
+      "class": "path-emblem"
+    }
+  },
+  "0000658": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-layers"
+  },
+  "0000659": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "000065a": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000065b": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000065c": {
+    "tag": "div",
+    "attrs": {
+      "class": "path-links"
+    }
+  },
+  "000065d": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "000065e": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000065f": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000660": {
+    "tag": "section",
+    "attrs": {
+      "id": "blog-materials",
+      "class": "blog-path-row"
+    }
+  },
+  "0000661": {
+    "tag": "div",
+    "attrs": {
+      "class": "path-title"
+    }
+  },
+  "0000662": {
+    "tag": "span",
+    "attrs": {
+      "class": "path-emblem"
+    }
+  },
+  "0000663": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-fiber"
+  },
+  "0000664": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "0000665": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000666": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000667": {
+    "tag": "div",
+    "attrs": {
+      "class": "path-links"
+    }
+  },
+  "0000668": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "0000669": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000066a": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "000066b": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "000066c": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000066d": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "000066e": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "000066f": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000670": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000671": {
+    "tag": "section",
+    "attrs": {
+      "id": "blog-execution",
+      "class": "blog-path-row"
+    }
+  },
+  "0000672": {
+    "tag": "div",
+    "attrs": {
+      "class": "path-title"
+    }
+  },
+  "0000673": {
+    "tag": "span",
+    "attrs": {
+      "class": "path-emblem"
+    }
+  },
+  "0000674": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-roof"
+  },
+  "0000675": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "0000676": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "0000677": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000678": {
+    "tag": "div",
+    "attrs": {
+      "class": "path-links"
+    }
+  },
+  "0000679": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "000067a": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000067b": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "000067c": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "000067d": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000067e": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "000067f": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "0000680": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000681": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000682": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "0000683": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000684": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000685": {
+    "tag": "section",
+    "attrs": {
+      "id": "blog-industry",
+      "class": "blog-path-row"
+    }
+  },
+  "0000686": {
+    "tag": "div",
+    "attrs": {
+      "class": "path-title"
+    }
+  },
+  "0000687": {
+    "tag": "span",
+    "attrs": {
+      "class": "path-emblem"
+    }
+  },
+  "0000688": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-tank"
+  },
+  "0000689": {
+    "tag": "small",
+    "attrs": {}
+  },
+  "000068a": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000068b": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "000068c": {
+    "tag": "div",
+    "attrs": {
+      "class": "path-links"
+    }
+  },
+  "000068d": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "000068e": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000068f": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000690": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "0000691": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000692": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000693": {
+    "tag": "a",
+    "attrs": {
+      "href": "{{URL:/blog/}}"
+    }
+  },
+  "0000694": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000695": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-arrow"
+  },
+  "0000696": {
+    "tag": "section",
+    "attrs": {
+      "class": "section blog-faq",
+      "data-frpme-component": "blog-block-5"
+    }
+  },
+  "0000697": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000698": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "0000699": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "000069a": {
+    "tag": "div",
+    "attrs": {
+      "class": "blog-faq-grid"
+    }
+  },
+  "000069b": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "000069c": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "000069d": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000069e": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "000069f": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00006a0": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "00006a1": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "00006a2": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00006a3": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "00006a4": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00006a5": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "00006a6": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "00006a7": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00006a8": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "00006a9": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00006aa": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "00006ab": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "00006ac": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00006ad": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "00006ae": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00006af": {
+    "tag": "details",
+    "attrs": {}
+  },
+  "00006b0": {
+    "tag": "summary",
+    "attrs": {}
+  },
+  "00006b1": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "00006b2": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-disclosure"
+  },
+  "00006b3": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00006b4": {
+    "tag": "section",
+    "attrs": {
+      "class": "section blog-service-bridge",
+      "data-frpme-component": "blog-block-6"
+    }
+  },
+  "00006b5": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00006b6": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00006b7": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00006b8": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00006b9": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00006ba": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00006bb": {
+    "tag": "div",
+    "attrs": {
+      "class": "blog-contact-box"
+    }
+  },
+  "00006bc": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-phone"
+  },
+  "00006bd": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00006be": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00006bf": {
+    "tag": "a",
+    "attrs": {
+      "dir": "ltr"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00006c0": {
+    "tag": "a",
+    "attrs": {
+      "class": "blog-contact-link"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00006c1": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-after",
+      "data-frpme-component": "blog-tools-after"
+    }
+  },
+  "00006c2": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page",
+      "data-frpme-source": "article"
+    }
+  },
+  "00006c3": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-before",
+      "data-frpme-component": "article-tools-before"
+    }
+  },
+  "00006c4": {
+    "tag": "main",
+    "attrs": {
+      "class": "article-main",
+      "id": "main"
+    }
+  },
+  "00006c5": {
+    "tag": "div",
+    "attrs": {
+      "class": "article-progress",
+      "aria-hidden": "true",
+      "data-frpme-component": "article-block-1"
+    }
+  },
+  "00006c6": {
+    "tag": "span",
+    "attrs": {
+      "id": "article-progress-bar"
+    },
+    "empty": true
+  },
+  "00006c7": {
+    "tag": "nav",
+    "attrs": {
+      "class": "container article-crumb",
+      "aria-label": "مسیر صفحه",
+      "data-frpme-component": "article-block-2"
+    }
+  },
+  "00006c8": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "00006c9": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00006ca": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00006cb": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00006cc": {
+    "tag": "span",
+    "attrs": {
+      "aria-current": "page"
+    }
+  },
+  "00006cd": {
+    "tag": "header",
+    "attrs": {
+      "class": "article-hero",
+      "data-frpme-component": "article-block-3"
+    }
+  },
+  "00006ce": {
+    "tag": "div",
+    "attrs": {
+      "class": "article-mouse-light",
+      "aria-hidden": "true"
+    }
+  },
+  "00006cf": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00006d0": {
+    "tag": "div",
+    "attrs": {
+      "class": "article-hero-top"
+    }
+  },
+  "00006d1": {
+    "tag": "span",
+    "attrs": {
+      "class": "article-category"
+    },
+    "dynamic": "post-category"
+  },
+  "00006d2": {
+    "tag": "span",
+    "attrs": {
+      "class": "article-serial"
+    }
+  },
+  "00006d3": {
+    "tag": "h1",
+    "attrs": {},
+    "dynamic": "post-title"
+  },
+  "00006d4": {
+    "tag": "p",
+    "attrs": {
+      "class": "article-deck"
+    },
+    "dynamic": "post-excerpt"
+  },
+  "00006d5": {
+    "tag": "div",
+    "attrs": {
+      "class": "article-meta"
+    },
+    "dynamic": "post-meta"
+  },
+  "00006d6": {
+    "tag": "div",
+    "attrs": {
+      "class": "article-hero-bottom"
+    }
+  },
+  "00006d7": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary"
+    },
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00006d8": {
+    "tag": "div",
+    "attrs": {
+      "class": "article-actions"
+    }
+  },
+  "00006d9": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "article-share"
+    },
+    "icon_before": true,
+    "empty_button": false
+  },
+  "00006da": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "article-print"
+    },
+    "icon_before": true,
+    "empty_button": false
+  },
+  "00006db": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "article-save",
+      "aria-pressed": "false"
+    },
+    "icon_before": true,
+    "empty_button": false
+  },
+  "00006dc": {
+    "tag": "p",
+    "attrs": {
+      "id": "article-action-status",
+      "role": "status"
+    },
+    "empty": true
+  },
+  "00006dd": {
+    "tag": "div",
+    "attrs": {
+      "class": "container article-layout",
+      "data-frpme-component": "article-block-4"
+    }
+  },
+  "00006de": {
+    "tag": "aside",
+    "attrs": {
+      "class": "article-sidebar"
+    }
+  },
+  "00006df": {
+    "tag": "nav",
+    "attrs": {
+      "class": "article-toc",
+      "aria-label": "فهرست مطالب"
+    }
+  },
+  "00006e0": {
+    "tag": "div",
+    "attrs": {
+      "class": "toc-top"
+    }
+  },
+  "00006e1": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-menu"
+  },
+  "00006e2": {
+    "tag": "strong",
+    "attrs": {}
+  },
+  "00006e3": {
+    "tag": "ol",
+    "attrs": {}
+  },
+  "00006e4": {
+    "tag": "div",
+    "attrs": {
+      "class": "toc-progress"
+    }
+  },
+  "00006e5": {
+    "tag": "span",
+    "attrs": {
+      "id": "article-percent"
+    }
+  },
+  "00006e6": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "00006e7": {
+    "tag": "div",
+    "attrs": {
+      "class": "article-sidebar-help"
+    }
+  },
+  "00006e8": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00006e9": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00006ea": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "00006eb": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00006ec": {
+    "tag": "article",
+    "attrs": {
+      "id": "article-body",
+      "class": "article-body"
+    },
+    "dynamic": "post-content"
+  },
+  "00006ed": {
+    "tag": "section",
+    "attrs": {
+      "class": "section article-related",
+      "data-frpme-component": "article-block-5"
+    }
+  },
+  "00006ee": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "00006ef": {
+    "tag": "div",
+    "attrs": {
+      "class": "article-related-head"
+    }
+  },
+  "00006f0": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "00006f1": {
+    "tag": "span",
+    "attrs": {
+      "class": "eyebrow"
+    }
+  },
+  "00006f2": {
+    "tag": "h2",
+    "attrs": {}
+  },
+  "00006f3": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "00006f4": {
+    "tag": "div",
+    "attrs": {
+      "class": "article-related-grid"
+    },
+    "dynamic": "related-posts"
+  },
+  "00006f5": {
+    "tag": "button",
+    "attrs": {
+      "type": "button",
+      "id": "article-top",
+      "class": "article-top",
+      "aria-label": "بازگشت به بالای مقاله",
+      "hidden": "",
+      "data-frpme-component": "article-article-top"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "00006f6": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-page-tools-after",
+      "data-frpme-component": "article-tools-after"
+    }
+  },
+  "00006f7": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-chrome-header",
+      "data-frpme-component": "header"
+    }
+  },
+  "00006f8": {
+    "tag": "header",
+    "attrs": {
+      "class": "site-header container"
+    }
+  },
+  "00006f9": {
+    "tag": "div",
+    "attrs": {
+      "class": "header-inner glass"
+    }
+  },
+  "00006fa": {
+    "tag": "a",
+    "attrs": {
+      "class": "brand",
+      "href": "{{URL:/}}",
+      "aria-label": "سازه گستر، صفحه اصلی"
+    }
+  },
+  "00006fb": {
+    "tag": "span",
+    "attrs": {
+      "class": "brand-symbol brand-original"
+    }
+  },
+  "00006fc": {
+    "tag": "img",
+    "attrs": {
+      "alt": "لوگوی فایبرگلاس سازه گستر",
+      "width": "72",
+      "height": "68"
+    },
+    "site_logo": true,
+    "default_image": "{{ASSET:assets/images/6a278bcfcf9777b8.webp}}"
+  },
+  "00006fd": {
+    "tag": "span",
+    "attrs": {
+      "class": "brand-copy"
+    }
+  },
+  "00006fe": {
+    "tag": "nav",
+    "attrs": {
+      "class": "nav",
+      "aria-label": "ناوبری اصلی"
+    },
+    "dynamic": "menu"
+  },
+  "00006ff": {
+    "tag": "a",
+    "attrs": {
+      "class": "btn btn-primary header-cta"
+    },
+    "icon_before": true,
+    "empty_button": false
+  },
+  "0000700": {
+    "tag": "button",
+    "attrs": {
+      "class": "menu-toggle",
+      "id": "menu-toggle",
+      "aria-label": "باز کردن منو",
+      "aria-expanded": "false",
+      "aria-controls": "mobile-menu"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "0000701": {
+    "tag": "dialog",
+    "attrs": {
+      "class": "mobile-drawer",
+      "id": "mobile-menu",
+      "aria-label": "منوی اصلی"
+    }
+  },
+  "0000702": {
+    "tag": "div",
+    "attrs": {
+      "class": "drawer-top"
+    }
+  },
+  "0000703": {
+    "tag": "strong",
+    "attrs": {}
+  },
+  "0000704": {
+    "tag": "button",
+    "attrs": {
+      "class": "close",
+      "id": "close-menu",
+      "aria-label": "بستن منو"
+    },
+    "icon_before": true,
+    "empty_button": true
+  },
+  "0000705": {
+    "tag": "nav",
+    "attrs": {},
+    "dynamic": "menu"
+  },
+  "0000706": {
+    "tag": "div",
+    "attrs": {
+      "class": "frpme-chrome-footer",
+      "data-frpme-component": "footer"
+    }
+  },
+  "0000707": {
+    "tag": "footer",
+    "attrs": {
+      "class": "site-footer footer-v2"
+    }
+  },
+  "0000708": {
+    "tag": "div",
+    "attrs": {
+      "class": "container"
+    }
+  },
+  "0000709": {
+    "tag": "div",
+    "attrs": {
+      "class": "footer-grid"
+    }
+  },
+  "000070a": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000070b": {
+    "tag": "a",
+    "attrs": {
+      "class": "brand",
+      "href": "{{URL:/}}",
+      "aria-label": "سازه گستر، صفحه اصلی"
+    }
+  },
+  "000070c": {
+    "tag": "span",
+    "attrs": {
+      "class": "brand-symbol brand-original"
+    }
+  },
+  "000070d": {
+    "tag": "img",
+    "attrs": {
+      "alt": "لوگوی فایبرگلاس سازه گستر",
+      "width": "72",
+      "height": "68"
+    },
+    "site_logo": true,
+    "default_image": "{{ASSET:assets/images/6a278bcfcf9777b8.webp}}"
+  },
+  "000070e": {
+    "tag": "span",
+    "attrs": {
+      "class": "brand-copy"
+    }
+  },
+  "000070f": {
+    "tag": "p",
+    "attrs": {}
+  },
+  "0000710": {
+    "tag": "div",
+    "attrs": {
+      "class": "footer-address"
+    }
+  },
+  "0000711": {
+    "tag": "svg",
+    "attrs": {
+      "class": "icon",
+      "aria-hidden": "true"
+    },
+    "default_icon": "#i-pin"
+  },
+  "0000712": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000713": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000714": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000715": {
+    "tag": "nav",
+    "attrs": {
+      "class": "footer-links",
+      "aria-label": "صفحات مجموعه"
+    }
+  },
+  "0000716": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000717": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000718": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000719": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000071a": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000071b": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "000071c": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "000071d": {
+    "tag": "nav",
+    "attrs": {
+      "class": "footer-links",
+      "aria-label": "موضوعات خدمات"
+    }
+  },
+  "000071e": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000071f": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000720": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000721": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000722": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000723": {
+    "tag": "div",
+    "attrs": {}
+  },
+  "0000724": {
+    "tag": "h3",
+    "attrs": {}
+  },
+  "0000725": {
+    "tag": "nav",
+    "attrs": {
+      "class": "footer-links",
+      "aria-label": "صفحات الیاف"
+    }
+  },
+  "0000726": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000727": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000728": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "0000729": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  },
+  "000072a": {
+    "tag": "div",
+    "attrs": {
+      "class": "footer-contact-strip"
+    }
+  },
+  "000072b": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "000072c": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "000072d": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": true,
+    "empty_button": false
+  },
+  "000072e": {
+    "tag": "div",
+    "attrs": {
+      "class": "footer-bottom"
+    }
+  },
+  "000072f": {
+    "tag": "span",
+    "attrs": {}
+  },
+  "0000730": {
+    "tag": "a",
+    "attrs": {},
+    "icon_before": false,
+    "empty_button": false
+  }
+}

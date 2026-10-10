@@ -1,0 +1,31 @@
+{
+  "version": "3.6.0",
+  "wordpress_playground_frontend": {
+    "cases": 15,
+    "pages": [
+      "about",
+      "blog",
+      "contact",
+      "home",
+      "services"
+    ],
+    "widths": [
+      390,
+      768,
+      1440
+    ],
+    "http_200_and_one_main_and_no_horizontal_overflow": true,
+    "javascript_pageerrors": []
+  },
+  "elementor_editor": {
+    "frp_editor_confirmed": false,
+    "reason": "Loading overlay persisted in test; isolated baseline without FRP also had the overlay. External assets could not load in restricted QA network.",
+    "baseline_default_theme_loader_visible": true,
+    "baseline_default_theme_has_preview_iframe": true,
+    "requires_retest_in_real_wordpress": true
+  },
+  "visual": {
+    "legacy_report": "visual-results.json",
+    "exact_match_confirmed": false
+  }
+}

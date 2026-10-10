@@ -1,0 +1,1 @@
+<?php defined('ABSPATH') || exit;get_header();if(!frpmt_elementor_location('archive')){if(function_exists('frpme_render_page')){frpmt_reference('blog');}else{echo '<main id="main">';while(have_posts()){the_post();echo '<h2>'.esc_html(get_the_title()).'</h2>'; the_excerpt();}the_posts_pagination();echo '</main>';}}get_footer();

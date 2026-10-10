@@ -1,0 +1,46 @@
+const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const B = 'http://localhost:' + (process.env.PORT || 8083);
+const cookieStr = process.argv[2]; const pageId = process.argv[3];
+(async () => {
+  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+  const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } });
+  await ctx.addCookies(cookieStr.split('; ').map(c => { const i = c.indexOf('='); return { name: c.slice(0, i), value: c.slice(i + 1), domain: 'localhost', path: '/' }; }));
+  const p = await ctx.newPage();
+  const errs = []; p.on('pageerror', e => errs.push(e.message.slice(0, 160)));
+  await p.route(/googleusercontent|gravatar|elementor\.com|wordpress\.org|google/, r => r.abort());
+  await p.goto(B + '/wp-admin/post.php?post=' + pageId + '&action=elementor', { waitUntil: 'domcontentloaded', timeout: 120000 });
+  await p.waitForSelector('#elementor-panel', { timeout: 90000 });
+  const frame = await (await p.waitForSelector('#elementor-preview-iframe')).contentFrame();
+  await frame.waitForSelector('.elementor-widget-heading', { timeout: 60000 });
+  await p.waitForTimeout(1500);
+  const res = await p.evaluate(() => {
+    const out = {};
+    const all = elementor.getPreviewContainer().children;
+    const find = (cs, fn) => { for (const c of cs) { if (fn(c)) return c; const r = find(c.children || [], fn); if (r) return r; } return null; };
+    const heading = find(all, c => c.model.get('widgetType') === 'heading' && /ویرایش‌شده|پیشگام/.test(c.settings.get('title') || ''));
+    const btn = find(all, c => c.model.get('widgetType') === 'button');
+    const grid = find(all, c => c.model.get('elType') === 'container' && c.settings.get('container_type') === 'grid');
+    $e.run('document/elements/settings', { container: heading, settings: { title_color: '#ff0000', typography_typography: 'custom', typography_font_size: { unit: 'px', size: 40, sizes: [] } } });
+    $e.run('document/elements/settings', { container: btn, settings: { background_color: '#0000ff' } });
+    $e.run('document/elements/settings', { container: grid, settings: { grid_columns_grid: { unit: 'fr', size: 2, sizes: [] } } });
+    out.ids = { heading: heading.id, btn: btn.id, grid: grid.id };
+    return out;
+  });
+  await p.waitForTimeout(1000);
+  await p.evaluate(() => $e.run('document/save/publish'));
+  await p.waitForTimeout(5000);
+  await b.close();
+  const b2 = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+  const q = await b2.newPage({ viewport: { width: 1440, height: 900 } });
+  await q.goto(B + (process.env.FRONT || '/') + '?n=' + Date.now(), { waitUntil: 'load' });
+  res.front = await q.evaluate((ids) => {
+    const h = document.querySelector('.elementor-element-' + ids.heading + ' .elementor-heading-title');
+    const bt = document.querySelector('.elementor-element-' + ids.btn + ' .elementor-button');
+    const g = document.querySelector('.elementor-element-' + ids.grid);
+    const gi = g && (g.querySelector(':scope > .e-con-inner') || g);
+    return { headingColor: h && getComputedStyle(h).color, headingSize: h && getComputedStyle(h).fontSize, buttonBg: bt && getComputedStyle(bt).backgroundColor, gridCols: gi && getComputedStyle(gi).gridTemplateColumns.split(' ').length };
+  }, res.ids);
+  res.errors = errs;
+  console.log(JSON.stringify(res, null, 1));
+  await b2.close();
+})();

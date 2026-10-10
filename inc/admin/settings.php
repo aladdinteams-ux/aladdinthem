@@ -62,7 +62,7 @@ function larijani_settings_assets( $hook ) {
 	wp_enqueue_media();
 	$js = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) || ! file_exists( LARIJANI_DIR . '/assets/js/admin.min.js' ) ? 'assets/js/admin.js' : 'assets/js/admin.min.js';
 	wp_enqueue_script( 'larijani-admin', LARIJANI_URI . '/' . $js, array( 'jquery', 'wp-color-picker' ), LARIJANI_VERSION, true );
-	wp_enqueue_style( 'larijani-admin', LARIJANI_URI . '/assets/css/admin.css', array(), LARIJANI_VERSION );
+	wp_enqueue_style( 'larijani-admin', LARIJANI_URI . '/assets/css/admin.css', array(), larijani_asset_ver( 'assets/css/admin.css' ) );
 }
 add_action( 'admin_enqueue_scripts', 'larijani_settings_assets' );
 
@@ -443,13 +443,19 @@ function larijani_settings_page() {
 	$updated = isset( $_GET['updated'] ) ? sanitize_key( wp_unslash( $_GET['updated'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	?>
 	<div class="wrap ls-admin" dir="rtl">
+		<?php $larijani_author = larijani_theme_author(); ?>
 		<div class="ls-admin-head">
 			<img src="<?php echo esc_url( LARIJANI_URI . '/assets/images/logo.svg' ); ?>" alt="" width="44" height="44">
 			<div>
 				<h1><?php esc_html_e( 'تنظیمات قالب لاریجانی استون', 'larijani-stone' ); ?></h1>
 				<p><?php esc_html_e( 'همه تنظیمات اینجا با «نمایش › سفارشی‌سازی» هماهنگ است و بلافاصله روی سایت و ویجت‌های المنتور اعمال می‌شود.', 'larijani-stone' ); ?></p>
 			</div>
+			<div class="ls-author-badge">
+				<img src="<?php echo esc_url( $larijani_author['logo'] ); ?>" alt="<?php echo esc_attr( $larijani_author['name'] ); ?>" width="40" height="40">
+				<span><small><?php esc_html_e( 'طراحی و توسعه', 'larijani-stone' ); ?></small><strong><?php echo esc_html( $larijani_author['name'] ); ?></strong></span>
+			</div>
 		</div>
+		<hr class="wp-header-end">
 		<?php if ( $updated ) : ?>
 		<div class="notice notice-success is-dismissible"><p><?php echo 'reset' === $updated ? esc_html__( 'تنظیمات به حالت پیش‌فرض برگشت. نسخه قبلی از «پیشخوان قالب › بازنشانی تنظیمات» قابل بازگردانی است.', 'larijani-stone' ) : ( 'restored' === $updated ? esc_html__( 'تنظیمات قبلی بازگردانی شد.', 'larijani-stone' ) : esc_html__( 'تنظیمات ذخیره شد.', 'larijani-stone' ) ); ?></p></div>
 		<?php endif; ?>
@@ -463,6 +469,7 @@ function larijani_settings_page() {
 			larijani_settings_overview();
 			echo '<div class="ls-cards">';
 			larijani_settings_reset_card();
+			larijani_settings_about_card();
 			echo '</div>';
 			echo '</div>';
 			return;
@@ -529,3 +536,62 @@ function larijani_admin_bar_link( $bar ) {
 	);
 }
 add_action( 'admin_bar_menu', 'larijani_admin_bar_link', 80 );
+
+/**
+ * Theme author (shown in the settings, the setup page and the admin footer).
+ *
+ * @return array { name, name_en, logo, logo_dark, about }
+ */
+function larijani_theme_author() {
+	return apply_filters(
+		'ls_theme_author',
+		array(
+			'name'      => __( 'علاءالدین تم', 'larijani-stone' ),
+			'name_en'   => 'Aladdin Theme',
+			'logo'      => LARIJANI_URI . '/assets/images/aladdin-theme.png',
+			'logo_dark' => LARIJANI_URI . '/assets/images/aladdin-theme-dark.png',
+			'about'     => __( 'علاءالدین تم طراح و توسعه‌دهنده قالب‌های اختصاصی و راست‌چین وردپرس است؛ قالب‌هایی برای کسب‌وکارهای فارسی‌زبان که با المنتور و ووکامرس ساخته می‌شوند و در آن‌ها امنیت، سرعت و ویرایش آسان بدون نیاز به کدنویسی در اولویت است.', 'larijani-stone' ),
+		)
+	);
+}
+
+/**
+ * "About" card on the overview tab.
+ */
+function larijani_settings_about_card() {
+	$author = larijani_theme_author();
+	$theme  = wp_get_theme( get_template() );
+	?>
+	<div class="ls-card ls-about-card">
+		<div class="ls-about-head">
+			<img src="<?php echo esc_url( $author['logo_dark'] ); ?>" alt="<?php echo esc_attr( $author['name'] ); ?>" width="56" height="56">
+			<div>
+				<h2><?php echo esc_html( $author['name'] ); ?> <span>(<?php echo esc_html( $author['name_en'] ); ?>)</span></h2>
+				<p><?php echo esc_html( sprintf( /* translators: 1: theme name, 2: version */ __( 'سازنده قالب %1$s — نسخه %2$s', 'larijani-stone' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ) ); ?></p>
+			</div>
+		</div>
+		<p><?php echo esc_html( $author['about'] ); ?></p>
+		<p><?php esc_html_e( 'قالب لاریجانی استون برای شرکت‌های تولید و فروش تجهیزات، قالب و متریال سنگ مصنوعی طراحی شده است: صفحات آماده و قابل ویرایش با المنتور، فروشگاه ووکامرس، کاتالوگ با جستجو و فیلتر، نمونه‌کارها، فرم‌های امن استعلام با پیوست فایل، تنظیمات رنگ و تایپوگرافی و راه‌انداز یک‌کلیکی با امکان برگرداندن.', 'larijani-stone' ); ?></p>
+		<p class="ls-about-links">
+			<a class="button" href="<?php echo esc_url( admin_url( 'admin.php?page=ls-setup' ) ); ?>"><?php esc_html_e( 'راه‌اندازی و درون‌ریزی', 'larijani-stone' ); ?></a>
+			<a class="button" href="<?php echo esc_url( LARIJANI_URI . '/docs/INSTALL-FA.md' ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'راهنمای نصب و استفاده', 'larijani-stone' ); ?></a>
+		</p>
+	</div>
+	<?php
+}
+
+/**
+ * Credit in the admin footer of the theme's own screens.
+ *
+ * @param string $text Footer text.
+ * @return string
+ */
+function larijani_admin_footer_credit( $text ) {
+	$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+	if ( ! $screen || ( false === strpos( (string) $screen->id, 'ls-settings' ) && false === strpos( (string) $screen->id, 'ls-setup' ) ) ) {
+		return $text;
+	}
+	$author = larijani_theme_author();
+	return esc_html( sprintf( /* translators: 1: version, 2: author */ __( 'قالب لاریجانی استون %1$s — طراحی و توسعه: %2$s', 'larijani-stone' ), LARIJANI_VERSION, $author['name'] ) );
+}
+add_filter( 'admin_footer_text', 'larijani_admin_footer_credit' );

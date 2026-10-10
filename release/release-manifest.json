@@ -1,8 +1,8 @@
 {
   "name": "Larijani Stone",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "release_type": "release",
-  "date": "2026-10-08",
+  "date": "2026-10-10",
   "source_commit": "see git log (commit that adds this manifest)",
   "branch": "claude/wordpress-elementor-theme-conversion-t2rwiw",
   "requirements": {
@@ -16,9 +16,9 @@
   "artifacts": [
     {
       "file": "larijani-stone.zip",
-      "sha256": "89c74f2d53a070e9e847891590e8a8968456aa042b8159b8933755075f15fe09",
-      "bytes": 1112616,
-      "files": 143,
+      "sha256": "141f8b98e6d7c43b54d3cb0993f7fbccd7c4be2410061c7bb0582fd838392ecc",
+      "bytes": 1162399,
+      "files": 146,
       "root_folder": [
         "larijani-stone"
       ],
@@ -26,8 +26,8 @@
     },
     {
       "file": "larijani-stone-core.zip",
-      "sha256": "2d25246e472838a7f3326e29d18a7d903ae46d893f6219141ab6dc89c0bbdcdd",
-      "bytes": 35312,
+      "sha256": "f24e53aacd1178534cd64b6e9c8d666f6f858152d6c16b38f15368d01e8c8da3",
+      "bytes": 35336,
       "files": 11,
       "root_folder": [
         "larijani-stone-core"
@@ -36,8 +36,8 @@
     },
     {
       "file": "larijani-stone-child.zip",
-      "sha256": "fdde274eb02d572a5809695597690ede8e76414f0c53c9cccfbdc1705168c6ee",
-      "bytes": 1179,
+      "sha256": "0f853fde20dc2b7c82e494024946362f8d80370ee0b4a54cc0b2e24912eeddb1",
+      "bytes": 1204,
       "files": 2,
       "root_folder": [
         "larijani-stone-child"
@@ -49,7 +49,7 @@
     "route_crawl": "8083 32/32, 8084 32/32 (before and after plugin), 8085 fresh ZIP 30/30, bad=0",
     "visual_regression_vs_1.3.0": "30 screenshots, worst 0.021%, identical heights",
     "forms_security_http": "token 9/9, validation 7/7, files 12/12, rate limits 3/3, roles 7/7, Apache .htaccess 4/4, migration PASS",
-    "phpunit": "43 tests / 115 assertions OK",
+    "phpunit": "47 tests / 125 assertions OK",
     "woocommerce": "25/25",
     "interactions": "24/24 (8083, 8084)",
     "elementor_editor": "4.0.8 and 3.35.9: load, edit+publish, Style-tab override PASS",
@@ -68,7 +68,9 @@
       "real e-mail delivery",
       "real devices / screen reader / Lighthouse",
       "multisite"
-    ]
+    ],
+    "hero_search": "WooCommerce (8083): mold/paving 1, machinery/vibrating table 1, chemical/admixture 1, old URLs mapped, unknown category → whole shop, no-match → empty state; no WooCommerce (8085): client filter 1 of 8; keyboard dropdown PASS; 0 JS errors",
+    "header_active_item": "home, shop, category, product, blog, post, projects, project, contact: correct item"
   },
   "licenses": {
     "theme": "GPL-2.0-or-later",
@@ -85,5 +87,6 @@
     "docs/qa/COMMERCIAL-REPORT-1.4-FA.md",
     "docs/qa/COMMERCIAL-AUDIT-1.4.md",
     "docs/INSTALL-FA.md"
-  ]
+  ],
+  "author": "Aladdin Theme (علاءالدین تم)"
 }

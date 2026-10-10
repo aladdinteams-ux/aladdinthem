@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'LARIJANI_VERSION', '1.4.0' );
+define( 'LARIJANI_VERSION', '1.4.1' );
 define( 'LARIJANI_DIR', get_template_directory() );
 define( 'LARIJANI_URI', get_template_directory_uri() );
 
@@ -19,6 +19,7 @@ require_once LARIJANI_DIR . '/inc/enqueue.php';
 require_once LARIJANI_DIR . '/inc/customizer.php';
 require_once LARIJANI_DIR . '/inc/post-types.php';
 require_once LARIJANI_DIR . '/inc/forms.php';
+require_once LARIJANI_DIR . '/inc/search-filters.php';
 require_once LARIJANI_DIR . '/inc/template-functions.php';
 require_once LARIJANI_DIR . '/inc/theme-builder.php';
 require_once LARIJANI_DIR . '/inc/seo.php';

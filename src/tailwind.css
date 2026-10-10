@@ -391,3 +391,47 @@ body.admin-bar .ls-site-header header.sticky, body.admin-bar.ls-has-sticky-heade
 .ls-n-nowrap.elementor-widget-button .elementor-button { white-space: nowrap; }
 @media (max-width: 767px) { .ls-n-nowrap.elementor-widget-button .elementor-button { white-space: normal; } }
 a.e-con.ls-n-btn-sub, a.e-con.ls-n-btn-sub:hover { color: #fff; text-decoration: none; }
+
+/* ---------------------------------------------------------------------------
+ * Glass dropdowns (select[data-ls-select], enhanced by theme.js).
+ * ------------------------------------------------------------------------- */
+.ls-dd { position: relative; }
+.ls-dd-native { position: absolute !important; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; }
+.ls-dd-btn { display: flex; align-items: center; justify-content: space-between; gap: .5rem; position: relative; text-align: right; }
+.ls-dd-value { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ls-dd-chevron { position: absolute; left: .85rem; top: 50%; margin-top: -.45em; font-size: .75rem; color: #64748b; transition: transform .2s ease; }
+.ls-dd.is-open .ls-dd-chevron { transform: rotate(180deg); }
+.ls-dd.is-open .ls-dd-btn { border-color: var(--ls-primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ls-primary) 18%, transparent); }
+.ls-dd-btn:focus-visible { outline: 2px solid var(--ls-primary); outline-offset: 2px; }
+.ls-dd-list {
+	position: absolute; inset-inline-start: 0; top: calc(100% + .45rem); z-index: 60;
+	min-width: 100%; width: max-content; max-width: min(22rem, calc(100vw - 2rem));
+	max-height: 18rem; overflow-y: auto; overscroll-behavior: contain;
+	margin: 0; padding: .4rem; list-style: none;
+	border-radius: 1.15rem;
+	background: rgba(255, 255, 255, .74);
+	-webkit-backdrop-filter: blur(20px) saturate(180%);
+	backdrop-filter: blur(20px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, .7);
+	box-shadow: 0 24px 48px -16px rgba(22, 29, 26, .32), 0 2px 6px rgba(22, 29, 26, .06), inset 0 1px 0 rgba(255, 255, 255, .85);
+	scrollbar-width: thin;
+	animation: ls-dd-in .18s cubic-bezier(.2, .8, .2, 1);
+	transform-origin: top center;
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+	.ls-dd-list { background: rgba(255, 255, 255, .97); }
+}
+.ls-dd-list[hidden] { display: none; }
+.ls-dd-opt {
+	display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+	padding: .62rem .85rem; border-radius: .8rem; cursor: pointer;
+	font-size: .875rem; line-height: 1.5; color: var(--ls-dark); text-align: right; white-space: nowrap;
+	transition: background-color .12s ease, color .12s ease;
+}
+.ls-dd-opt + .ls-dd-opt { margin-top: 2px; }
+.ls-dd-opt.is-active { background: rgba(92, 103, 84, .1); background: color-mix(in srgb, var(--ls-primary) 11%, transparent); }
+.ls-dd-opt[aria-selected="true"] { color: var(--ls-primary); font-weight: 700; background: rgba(92, 103, 84, .14); background: color-mix(in srgb, var(--ls-primary) 15%, transparent); }
+.ls-dd-check { font-size: 1rem; opacity: 0; }
+.ls-dd-opt[aria-selected="true"] .ls-dd-check { opacity: 1; }
+@keyframes ls-dd-in { from { opacity: 0; transform: translateY(-6px) scale(.98); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .ls-dd-list { animation: none; } .ls-dd-chevron { transition: none; } }

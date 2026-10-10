@@ -1,5 +1,15 @@
 # Changelog — Larijani Stone
 
+## 1.4.1 — 2026-10-10
+
+### Fixed
+- **Header menu**: on the shop, product and product-category pages (and on projects) the "Blog" item was highlighted. WordPress marks the posts page as parent of every non-page view; the theme now highlights the shop page for WooCommerce views, the portfolio page for projects and the blog only for posts.
+- **Home page search panel** now really filters: tabs send the real product categories (`mold`, `machinery`, `chemical`; old values such as `molds` are mapped, unknown categories show the whole shop instead of an error page); each select option carries search words or a product tag/attribute slug and filters the WooCommerce shop (title, descriptions, SKU) or, without WooCommerce, the theme catalog page in the browser. Options can be limited to tabs; "order size" is informational and shows a bulk-price note. Active filters are listed above the results with remove links; no-match combinations show a clear empty state.
+
+### Added
+- Rounded "glass" dropdowns (translucent with backdrop blur) for the search panel selects, keyboard and screen-reader accessible (combobox + listbox), native select kept for the form.
+- Theme author **Aladdin Theme (علاءالدین تم)**: theme/plugin/child headers, readme, author badge and "about" card in the theme settings, credit in the admin footer of the theme screens.
+
 ## 1.4.0 — 2026-10-08 (commercial release)
 
 ### Security

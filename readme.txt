@@ -1,9 +1,9 @@
 === Larijani Stone ===
-Contributors: larijanistone
+Contributors: aladdintheme
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: rtl-language-support, e-commerce, custom-logo, custom-menu, featured-images, full-width-template, theme-options, threaded-comments, translation-ready
@@ -11,6 +11,8 @@ Tags: rtl-language-support, e-commerce, custom-logo, custom-menu, featured-image
 Right-to-left (Persian) business theme for Elementor (free version is enough) with an optional WooCommerce shop.
 
 == Description ==
+
+Designed and developed by Aladdin Theme (علاءالدین تم).
 
 Larijani Stone is a Persian (RTL) theme for industrial and building-material companies.
 It ships native Elementor layouts and 40+ Elementor widgets, a built-in theme builder for the
@@ -44,6 +46,9 @@ asks before replacing the front page. Every run is journaled and can be undone.
 
 == Changelog ==
 
+= 1.4.1 =
+* Working home page search filters with glass dropdowns; correct active menu item on shop/project pages; author credit (Aladdin Theme).
+
 = 1.4.0 =
 * Companion plugin for projects, inquiries and secure forms; private file storage.
 * Typography & layout settings, reset/restore, setup wizard, reversible demo import.
@@ -51,7 +56,7 @@ asks before replacing the front page. Every run is journaled and can be undone.
 
 == Copyright ==
 
-Larijani Stone WordPress Theme, Copyright (C) 2026 Larijani Stone.
+Larijani Stone WordPress Theme, Copyright (C) 2026 Aladdin Theme (علاءالدین تم).
 Larijani Stone is distributed under the terms of the GNU GPL v2 or later.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the
@@ -67,6 +72,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public 
 * Bootstrap Icons 1.13.1, Copyright (c) 2019-2024 The Bootstrap Authors.
   License: MIT (assets/vendor/bootstrap-icons/LICENSE). Source: https://icons.getbootstrap.com
 * assets/images/logo.svg, assets/images/placeholder.svg, screenshot.png: created for this theme, GPLv2 or later.
+* assets/images/aladdin-theme.png, aladdin-theme-dark.png: logo of Aladdin Theme, the theme author; trademark of its owner, used only to credit the author.
 * Sample images used by the demo content are NOT included in the package. They are loaded from
   the original design export (lh3.googleusercontent.com) or copied to your media library on
   request. Their licence has not been verified: replace them with your own images before

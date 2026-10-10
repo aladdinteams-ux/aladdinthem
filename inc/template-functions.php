@@ -8,6 +8,36 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Is a nav menu item the current section?
+ *
+ * @param WP_Post  $item    Menu item (after _wp_menu_item_classes_by_context()).
+ * @param string[] $classes Its classes.
+ * @return bool
+ */
+function larijani_menu_item_active( $item, $classes ) {
+	if ( array_intersect( $classes, array( 'current-menu-item', 'current_page_item', 'current-menu-ancestor', 'current-menu-parent' ) ) ) {
+		return true;
+	}
+	$object_id = (int) $item->object_id;
+	$is_page   = 'post_type' === $item->type && 'page' === $item->object;
+	// Shop, product and product-category views belong to the shop page.
+	if ( larijani_has_woo() && ( is_shop() || is_product() || is_product_taxonomy() ) ) {
+		return $is_page && (int) wc_get_page_id( 'shop' ) === $object_id;
+	}
+	// Projects belong to the portfolio page.
+	if ( is_post_type_archive( 'ls_project' ) || is_singular( 'ls_project' ) || is_tax( 'ls_project_cat' ) ) {
+		$portfolio = get_page_by_path( 'portfolio' );
+		return $is_page && $portfolio && (int) $portfolio->ID === $object_id;
+	}
+	// WordPress marks the posts page "current_page_parent" on every non-page view
+	// (shop, products, projects…). Only honour it for the blog itself.
+	if ( in_array( 'current_page_parent', $classes, true ) ) {
+		return is_home() || is_singular( 'post' ) || is_category() || is_tag() || is_date() || is_author();
+	}
+	return false;
+}
+
+/**
  * Get flat menu items (with one level of children) for a location or menu id.
  * Falls back to a sensible default list so the header looks right before
  * menus are configured.
@@ -40,7 +70,7 @@ function larijani_menu_items( $location, $fallback = array() ) {
 					'title'    => $item->title,
 					'url'      => $item->url,
 					'target'   => $item->target,
-					'active'   => (bool) array_intersect( $classes, array( 'current-menu-item', 'current-menu-ancestor', 'current-menu-parent', 'current_page_item', 'current_page_parent' ) ),
+					'active'   => larijani_menu_item_active( $item, $classes ),
 					'icon'     => '',
 					'children' => array(),
 				);

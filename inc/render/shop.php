@@ -344,12 +344,20 @@ function larijani_render_catalog( $s = array() ) {
 			<?php endif; ?>
 
 			<div class="<?php echo 'yes' === $s['show_sidebar'] ? 'lg:col-span-9' : 'lg:col-span-12'; ?> flex flex-col gap-space-lg">
+				<?php echo larijani_search_filter_bar(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped inside. ?>
 				<?php if ( $cards ) : ?>
 				<div class="grid grid-cols-1 <?php echo $store ? 'sm:grid-cols-2 lg:grid-cols-4 gap-space-lg' : 'md:grid-cols-2 ' . esc_attr( $cols[ (int) $s['columns'] ] ?? 'xl:grid-cols-3' ) . ' gap-space-md'; ?>" data-ls-catalog-grid>
 					<?php foreach ( $cards as $card ) : ?>
 						<?php echo larijani_product_card( $card, $card_style ); // phpcs:ignore ?>
 					<?php endforeach; ?>
 				</div>
+					<?php if ( ! $is_woo ) : ?>
+				<div class="hidden rounded-2xl bg-surface-card shadow-sm p-10 text-center flex-col items-center gap-3" data-ls-empty>
+					<i class="bi bi-search text-4xl text-outline" aria-hidden="true"></i>
+					<p class="font-headline-sm text-headline-sm text-on-surface"><?php esc_html_e( 'محصولی مطابق با جستجوی شما یافت نشد!', 'larijani-stone' ); ?></p>
+					<p class="font-body-md text-body-md text-on-surface-variant"><?php esc_html_e( 'فیلترها را تغییر دهید یا برای استعلام با ما تماس بگیرید.', 'larijani-stone' ); ?></p>
+				</div>
+					<?php endif; ?>
 				<?php else : ?>
 				<div class="rounded-2xl bg-surface-card shadow-sm p-10 text-center flex flex-col items-center gap-3">
 					<i class="bi bi-search text-4xl text-outline" aria-hidden="true"></i>

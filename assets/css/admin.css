@@ -26,3 +26,16 @@
 .ls-switch input:checked + span::before { transform: translateX(-18px); }
 .ls-switch input:focus-visible + span { outline: 2px solid #2271b1; outline-offset: 2px; }
 .ls-admin .submit { display: flex; gap: 12px; align-items: center; }
+
+.ls-author-badge { margin-inline-start: auto; display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #e3e9f2; border-radius: 14px; padding: 6px 12px 6px 8px; }
+.ls-admin-head .ls-author-badge img { background: none; padding: 0; border-radius: 10px; }
+.ls-author-badge span { display: flex; flex-direction: column; line-height: 1.4; }
+.ls-author-badge small { color: #64748b; font-size: 11px; }
+.ls-author-badge strong { color: #24548a; font-size: 13px; }
+.ls-about-card .ls-about-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.ls-about-card .ls-about-head img { border-radius: 14px; }
+.ls-about-card h2 { margin: 0 0 2px; }
+.ls-about-card h2 span { color: #64748b; font-weight: 500; font-size: 12px; }
+.ls-about-card .ls-about-head p { margin: 0; color: #50575e; }
+.ls-about-links { display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 782px) { .ls-author-badge { display: none; } }

@@ -1,5 +1,5 @@
 === Larijani Stone Core ===
-Contributors: larijanistone
+Contributors: aladdintheme
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4

@@ -28,7 +28,7 @@ msgstr ""
 msgid "مسیر صفحه"
 msgstr ""
 
-#: woocommerce/single-product.php:59 inc/render/shop.php:680
+#: woocommerce/single-product.php:59 inc/render/shop.php:688
 msgid "دستورالعمل و فرمولاسیون اختصاصی"
 msgstr ""
 
@@ -60,11 +60,11 @@ msgstr ""
 msgid "ممکن است آدرس تغییر کرده باشد. از جستجو استفاده کنید یا به صفحه اصلی برگردید."
 msgstr ""
 
-#: 404.php:23 inc/admin/settings.php:412 inc/template-functions.php:98 inc/template-functions.php:113
+#: 404.php:23 inc/admin/settings.php:412 inc/template-functions.php:128 inc/template-functions.php:143
 msgid "صفحه اصلی"
 msgstr ""
 
-#: 404.php:24 inc/template-functions.php:103 inc/demo/importer.php:1260
+#: 404.php:24 inc/template-functions.php:133 inc/demo/importer.php:1260
 msgid "تماس با ما"
 msgstr ""
 
@@ -96,7 +96,7 @@ msgstr ""
 msgid "محدوده جستجو"
 msgstr ""
 
-#: searchform.php:43 inc/template-functions.php:378 inc/elementor/widgets/catalog.php:40 inc/elementor/widgets/products.php:125
+#: searchform.php:43 inc/template-functions.php:408 inc/elementor/widgets/catalog.php:40 inc/elementor/widgets/products.php:125
 msgid "همه"
 msgstr ""
 
@@ -456,7 +456,7 @@ msgstr ""
 msgid "فوتر"
 msgstr ""
 
-#: inc/customizer.php:184 inc/admin/settings.php:26 inc/template-functions.php:146 inc/template-functions.php:149
+#: inc/customizer.php:184 inc/admin/settings.php:26 inc/template-functions.php:176 inc/template-functions.php:179
 msgid "وبلاگ"
 msgstr ""
 
@@ -484,7 +484,7 @@ msgstr ""
 msgid "تم‌بیلدر"
 msgstr ""
 
-#: inc/admin/settings.php:38 inc/admin/settings.php:449
+#: inc/admin/settings.php:38 inc/admin/settings.php:450
 msgid "تنظیمات قالب لاریجانی استون"
 msgstr ""
 
@@ -668,60 +668,92 @@ msgstr ""
 msgid "مشاهده"
 msgstr ""
 
-#: inc/admin/settings.php:450
+#: inc/admin/settings.php:451
 msgid "همه تنظیمات اینجا با «نمایش › سفارشی‌سازی» هماهنگ است و بلافاصله روی سایت و ویجت‌های المنتور اعمال می‌شود."
 msgstr ""
 
-#: inc/admin/settings.php:454
+#: inc/admin/settings.php:455
+msgid "طراحی و توسعه"
+msgstr ""
+
+#: inc/admin/settings.php:460
 msgid "تنظیمات به حالت پیش‌فرض برگشت. نسخه قبلی از «پیشخوان قالب › بازنشانی تنظیمات» قابل بازگردانی است."
 msgstr ""
 
-#: inc/admin/settings.php:454
+#: inc/admin/settings.php:460
 msgid "تنظیمات قبلی بازگردانی شد."
 msgstr ""
 
-#: inc/admin/settings.php:454
+#: inc/admin/settings.php:460
 msgid "تنظیمات ذخیره شد."
 msgstr ""
 
-#: inc/admin/settings.php:480
+#: inc/admin/settings.php:487
 msgid "المنتور پرو فعال است: شرط‌های نمایش قالب‌ها را از «قالب‌ها › تم‌بیلدر» مدیریت کنید. انتخاب‌های زیر فقط وقتی استفاده می‌شوند که برای آن بخش شرط پرو تعریف نشده باشد."
 msgstr ""
 
-#: inc/admin/settings.php:481
+#: inc/admin/settings.php:488
 msgid "بدون المنتور پرو هم می‌توانید برای هدر، فوتر، نوشته‌ها، آرشیو، محصولات و ۴۰۴ یک قالب ذخیره‌شده المنتور انتخاب کنید."
 msgstr ""
 
-#: inc/admin/settings.php:487
+#: inc/admin/settings.php:494
 msgid "لوگو و آیکون سایت (فاوآیکن) از تنظیمات استاندارد وردپرس خوانده می‌شوند:"
 msgstr ""
 
-#: inc/admin/settings.php:488
+#: inc/admin/settings.php:495
 msgid "تغییر لوگو"
 msgstr ""
 
-#: inc/admin/settings.php:489
+#: inc/admin/settings.php:496
 msgid "تغییر آیکون سایت"
 msgstr ""
 
-#: inc/admin/settings.php:493
+#: inc/admin/settings.php:500
 msgid "مقادیر «طرح اصلی» ظاهر فعلی قالب را دقیقاً حفظ می‌کنند. این تنظیمات روی بخش‌های قالب و ویجت‌های لاریجانی اعمال می‌شود؛ تنظیماتی که در تب Style المنتور برای یک ویجت مشخص کرده‌اید همیشه اولویت دارند. عرض بخش‌های کانتینری المنتور از تنظیمات هر بخش در المنتور تعیین می‌شود."
 msgstr ""
 
-#: inc/admin/settings.php:505
+#: inc/admin/settings.php:512
 msgid "ذخیره تنظیمات"
 msgstr ""
 
-#: inc/admin/settings.php:506
+#: inc/admin/settings.php:513
 msgid "تنظیمات این بخش به پیش‌فرض برگردد؟"
 msgstr ""
 
-#: inc/admin/settings.php:506
+#: inc/admin/settings.php:513
 msgid "بازگشت به پیش‌فرض"
 msgstr ""
 
-#: inc/admin/settings.php:526
+#: inc/admin/settings.php:533
 msgid "تنظیمات لاریجانی"
+msgstr ""
+
+#: inc/admin/settings.php:549
+msgid "علاءالدین تم"
+msgstr ""
+
+#: inc/admin/settings.php:553
+msgid "علاءالدین تم طراح و توسعه‌دهنده قالب‌های اختصاصی و راست‌چین وردپرس است؛ قالب‌هایی برای کسب‌وکارهای فارسی‌زبان که با المنتور و ووکامرس ساخته می‌شوند و در آن‌ها امنیت، سرعت و ویرایش آسان بدون نیاز به کدنویسی در اولویت است."
+msgstr ""
+
+#: inc/admin/settings.php:570
+msgid "سازنده قالب %1$s — نسخه %2$s"
+msgstr ""
+
+#: inc/admin/settings.php:574
+msgid "قالب لاریجانی استون برای شرکت‌های تولید و فروش تجهیزات، قالب و متریال سنگ مصنوعی طراحی شده است: صفحات آماده و قابل ویرایش با المنتور، فروشگاه ووکامرس، کاتالوگ با جستجو و فیلتر، نمونه‌کارها، فرم‌های امن استعلام با پیوست فایل، تنظیمات رنگ و تایپوگرافی و راه‌انداز یک‌کلیکی با امکان برگرداندن."
+msgstr ""
+
+#: inc/admin/settings.php:576 inc/migrations.php:93 inc/demo/importer.php:198 inc/demo/importer.php:198
+msgid "راه‌اندازی و درون‌ریزی"
+msgstr ""
+
+#: inc/admin/settings.php:577
+msgid "راهنمای نصب و استفاده"
+msgstr ""
+
+#: inc/admin/settings.php:595
+msgid "قالب لاریجانی استون %1$s — طراحی و توسعه: %2$s"
 msgstr ""
 
 #: inc/admin/setup-wizard.php:34
@@ -1032,119 +1064,115 @@ msgstr ""
 msgid "لاریجانی استون ۱.۳: بخش‌های ثابت صفحات اکنون با ویجت‌های بومی المنتور (عنوان، متن، دکمه، آیکون، تصویر…) ساخته می‌شوند. برگه‌های فعلی شما تغییر نکرده‌اند؛ برای به‌روزرسانی آن‌ها گزینه «بازسازی چیدمان» را در صفحه راه‌اندازی بزنید (نسخه قبلی پشتیبان‌گیری می‌شود)."
 msgstr ""
 
-#: inc/migrations.php:93 inc/demo/importer.php:198 inc/demo/importer.php:198
-msgid "راه‌اندازی و درون‌ریزی"
-msgstr ""
-
-#: inc/template-functions.php:99 inc/elementor/widgets/product-detail.php:203 inc/demo/importer.php:1256
+#: inc/template-functions.php:129 inc/elementor/widgets/product-detail.php:203 inc/demo/importer.php:1256
 msgid "فروشگاه و کاتالوگ"
 msgstr ""
 
-#: inc/template-functions.php:100 inc/render/footer.php:56 inc/demo/importer.php:1257 inc/demo/importer.php:1277
+#: inc/template-functions.php:130 inc/render/footer.php:56 inc/demo/importer.php:1257 inc/demo/importer.php:1277
 msgid "خدمات و خطوط تولید"
 msgstr ""
 
-#: inc/template-functions.php:101 inc/template-functions.php:156 inc/render/footer.php:57 inc/demo/importer.php:1258
+#: inc/template-functions.php:131 inc/template-functions.php:186 inc/render/footer.php:57 inc/demo/importer.php:1258
 msgid "نمونه کارها"
 msgstr ""
 
-#: inc/template-functions.php:102 inc/demo/importer.php:628 inc/demo/importer.php:1259
+#: inc/template-functions.php:132 inc/demo/importer.php:628 inc/demo/importer.php:1259
 msgid "وبلاگ تخصصی"
 msgstr ""
 
-#: inc/template-functions.php:171
+#: inc/template-functions.php:201
 msgid "جستجو: %s"
 msgstr ""
 
-#: inc/template-functions.php:177
+#: inc/template-functions.php:207
 msgid "صفحه پیدا نشد"
 msgstr ""
 
-#: inc/template-functions.php:242 inc/elementor/widgets/testimonials.php:88
+#: inc/template-functions.php:272 inc/elementor/widgets/testimonials.php:88
 msgid "قبلی"
 msgstr ""
 
-#: inc/template-functions.php:243 inc/elementor/widgets/testimonials.php:89
+#: inc/template-functions.php:273 inc/elementor/widgets/testimonials.php:89
 msgid "بعدی"
 msgstr ""
 
-#: inc/template-functions.php:251 inc/elementor/widgets/posts-grid.php:39
+#: inc/template-functions.php:281 inc/elementor/widgets/posts-grid.php:39
 msgid "صفحه‌بندی"
 msgstr ""
 
-#: inc/template-functions.php:294 inc/elementor/dynamic-tags.php:113
+#: inc/template-functions.php:324 inc/elementor/dynamic-tags.php:113
 msgid "واتساپ"
 msgstr ""
 
-#: inc/template-functions.php:295 inc/elementor/dynamic-tags.php:116
+#: inc/template-functions.php:325 inc/elementor/dynamic-tags.php:116
 msgid "تلگرام"
 msgstr ""
 
-#: inc/template-functions.php:296 inc/elementor/dynamic-tags.php:115
+#: inc/template-functions.php:326 inc/elementor/dynamic-tags.php:115
 msgid "اینستاگرام"
 msgstr ""
 
-#: inc/template-functions.php:297 inc/elementor/dynamic-tags.php:117
+#: inc/template-functions.php:327 inc/elementor/dynamic-tags.php:117
 msgid "ایتا"
 msgstr ""
 
-#: inc/template-functions.php:298 inc/elementor/dynamic-tags.php:118
+#: inc/template-functions.php:328 inc/elementor/dynamic-tags.php:118
 msgid "آپارات"
 msgstr ""
 
-#: inc/template-functions.php:299 inc/render/blog.php:707 inc/elementor/dynamic-tags.php:119
+#: inc/template-functions.php:329 inc/render/blog.php:707 inc/elementor/dynamic-tags.php:119
 msgid "لینکدین"
 msgstr ""
 
-#: inc/template-functions.php:422
+#: inc/template-functions.php:452
 msgid "سال"
 msgstr ""
 
-#: inc/template-functions.php:423
+#: inc/template-functions.php:453
 msgid "ماه"
 msgstr ""
 
-#: inc/template-functions.php:424
+#: inc/template-functions.php:454
 msgid "هفته"
 msgstr ""
 
-#: inc/template-functions.php:425
+#: inc/template-functions.php:455
 msgid "روز"
 msgstr ""
 
-#: inc/template-functions.php:426
+#: inc/template-functions.php:456
 msgid "ساعت"
 msgstr ""
 
-#: inc/template-functions.php:427
+#: inc/template-functions.php:457
 msgid "دقیقه"
 msgstr ""
 
-#: inc/template-functions.php:432
+#: inc/template-functions.php:462
 msgid "%1$d %2$s پیش"
 msgstr ""
 
-#: inc/template-functions.php:435
+#: inc/template-functions.php:465
 msgid "لحظاتی پیش"
 msgstr ""
 
-#: inc/template-functions.php:460 inc/elementor/widgets/faq.php:51
+#: inc/template-functions.php:490 inc/elementor/widgets/faq.php:51
 msgid "پاسخ"
 msgstr ""
 
-#: inc/template-functions.php:473
+#: inc/template-functions.php:503
 msgid "پاسخ %s"
 msgstr ""
 
-#: inc/template-functions.php:475
+#: inc/template-functions.php:505
 msgid "تایید شده توسط واحد فنی"
 msgstr ""
 
-#: inc/template-functions.php:498
+#: inc/template-functions.php:528
 msgid "دیدگاه شما پس از بررسی منتشر می‌شود."
 msgstr ""
 
-#: inc/template-functions.php:520
+#: inc/template-functions.php:550
 msgid "نام و ایمیل من برای دیدگاه‌های بعدی در این مرورگر ذخیره شود."
 msgstr ""
 
@@ -1230,6 +1258,26 @@ msgstr ""
 
 #: inc/woocommerce.php:171
 msgid "آیکون (کلاس Bootstrap Icons، مثل bi bi-grid-3x3-gap)"
+msgstr ""
+
+#: inc/search-filters.php:250
+msgid "فیلترهای جستجو:"
+msgstr ""
+
+#: inc/search-filters.php:252
+msgid "حذف فیلتر %s"
+msgstr ""
+
+#: inc/search-filters.php:254
+msgid "حذف همه فیلترها"
+msgstr ""
+
+#: inc/search-filters.php:257
+msgid "برای سفارش تیراژ بالا و پروژه‌ای، قیمت عمده و زمان تحویل اختصاصی اعلام می‌شود."
+msgstr ""
+
+#: inc/search-filters.php:257
+msgid "استعلام قیمت عمده"
 msgstr ""
 
 #: inc/render/footer.php:55 inc/demo/importer.php:1276
@@ -1416,119 +1464,123 @@ msgstr ""
 msgid "نمایش کلیه سفارشات"
 msgstr ""
 
-#: inc/render/shop.php:356
+#: inc/render/shop.php:357 inc/render/shop.php:364
 msgid "محصولی مطابق با جستجوی شما یافت نشد!"
 msgstr ""
 
-#: inc/render/shop.php:357
+#: inc/render/shop.php:358
+msgid "فیلترها را تغییر دهید یا برای استعلام با ما تماس بگیرید."
+msgstr ""
+
+#: inc/render/shop.php:365
 msgid "عبارت دیگری را امتحان کنید یا برای استعلام با ما تماس بگیرید."
 msgstr ""
 
-#: inc/render/shop.php:417
+#: inc/render/shop.php:425
 msgid "موجود در انبار"
 msgstr ""
 
-#: inc/render/shop.php:417
+#: inc/render/shop.php:425
 msgid "ناموجود – تماس بگیرید"
 msgstr ""
 
-#: inc/render/shop.php:425
+#: inc/render/shop.php:433
 msgid "پرفروش‌ترین طرح سال"
 msgstr ""
 
-#: inc/render/shop.php:433
+#: inc/render/shop.php:441
 msgid "قیمت هر عدد (تک‌فروشی):"
 msgstr ""
 
-#: inc/render/shop.php:438 inc/render/shop.php:475
+#: inc/render/shop.php:446 inc/render/shop.php:483
 msgid "مترمربع"
 msgstr ""
 
-#: inc/render/shop.php:460
+#: inc/render/shop.php:468
 msgid "کد فنی:"
 msgstr ""
 
-#: inc/render/shop.php:473
+#: inc/render/shop.php:481
 msgid "تخفیف تیراژ کارخانه‌ای"
 msgstr ""
 
-#: inc/render/shop.php:477
+#: inc/render/shop.php:485
 msgid "تعداد:"
 msgstr ""
 
-#: inc/render/shop.php:478
+#: inc/render/shop.php:486
 msgid "سطح تولید:"
 msgstr ""
 
-#: inc/render/shop.php:479
+#: inc/render/shop.php:487
 msgid "مجموع:"
 msgstr ""
 
-#: inc/render/shop.php:480
+#: inc/render/shop.php:488
 msgid "افزودن به سبد خرید"
 msgstr ""
 
-#: inc/render/shop.php:481
+#: inc/render/shop.php:489
 msgid "مشاوره تیراژ و خط تولید"
 msgstr ""
 
-#: inc/render/shop.php:510
+#: inc/render/shop.php:518
 msgid "بزرگ‌نمایی عکس"
 msgstr ""
 
-#: inc/render/shop.php:518
+#: inc/render/shop.php:526
 msgid "تصویر %d"
 msgstr ""
 
-#: inc/render/shop.php:555 inc/elementor/fallback.php:513
+#: inc/render/shop.php:563 inc/elementor/fallback.php:513
 msgid "امتیاز %s از ۵"
 msgstr ""
 
-#: inc/render/shop.php:561
+#: inc/render/shop.php:569
 msgid "(%s تجربه ثبت‌شده کارگاه‌های تولیدی)"
 msgstr ""
 
-#: inc/render/shop.php:586
+#: inc/render/shop.php:594
 msgid "استعلام قیمت تلفنی"
 msgstr ""
 
-#: inc/render/shop.php:593
+#: inc/render/shop.php:601
 msgid "بالای %s عدد:"
 msgstr ""
 
-#: inc/render/shop.php:610
+#: inc/render/shop.php:618
 msgid "افزایش"
 msgstr ""
 
-#: inc/render/shop.php:611 inc/elementor/widgets/sidebar-tags.php:35 inc/elementor/widgets/sidebar-popular.php:36 inc/elementor/widgets/related-posts.php:35
+#: inc/render/shop.php:619 inc/elementor/widgets/sidebar-tags.php:35 inc/elementor/widgets/sidebar-popular.php:36 inc/elementor/widgets/related-posts.php:35
 msgid "تعداد"
 msgstr ""
 
-#: inc/render/shop.php:612
+#: inc/render/shop.php:620
 msgid "کاهش"
 msgstr ""
 
-#: inc/render/shop.php:638 inc/render/components.php:204
+#: inc/render/shop.php:646 inc/render/components.php:204
 msgid "نشان کردن محصول"
 msgstr ""
 
-#: inc/render/shop.php:670
+#: inc/render/shop.php:678
 msgid "مشخصات فنی و متریال"
 msgstr ""
 
-#: inc/render/shop.php:678
+#: inc/render/shop.php:686
 msgid "دانلود برگه مشخصات فنی PDF"
 msgstr ""
 
-#: inc/render/shop.php:687
+#: inc/render/shop.php:695
 msgid "دیدگاه‌ها و تجربیات کارگاه‌ها"
 msgstr ""
 
-#: inc/render/shop.php:693
+#: inc/render/shop.php:701
 msgid "ثبت تجربه و عکس تولیدی شما"
 msgstr ""
 
-#: inc/render/shop.php:800
+#: inc/render/shop.php:808
 msgid "بر اساس %s نظر رسمی خریداران کارگاهی"
 msgstr ""
 
@@ -3697,7 +3749,7 @@ msgid "تب‌ها"
 msgstr ""
 
 #: inc/elementor/widgets/hero.php:45
-msgid "مقدار (مثلاً اسلاگ دسته محصول)"
+msgid "مقدار (نامک دسته محصول، مثل mold)"
 msgstr ""
 
 #: inc/elementor/widgets/hero.php:53
@@ -3712,43 +3764,59 @@ msgstr ""
 msgid "نام پارامتر"
 msgstr ""
 
-#: inc/elementor/widgets/hero.php:60 inc/elementor/widgets/hero-classic.php:69
-msgid "گزینه‌ها (هر خط: عنوان|مقدار)"
+#: inc/elementor/widgets/hero.php:63
+msgid "کاربرد"
 msgstr ""
 
-#: inc/elementor/widgets/hero.php:69
-msgid "متن دکمه جستجو"
+#: inc/elementor/widgets/hero.php:67
+msgid "فیلتر محصولات"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:68
+msgid "فقط اطلاعات (مثل حجم سفارش)"
 msgstr ""
 
 #: inc/elementor/widgets/hero.php:72
+msgid "گزینه‌ها"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:72
+msgid "هر خط: عنوان|کلمات جستجو یا نامک برچسب محصول|تب‌ها. کلمات با کاما جدا می‌شوند و در عنوان، توضیح یا شناسه محصول جستجو می‌شوند؛ اگر برچسب یا ویژگی محصولی با همین نامک وجود داشته باشد همان استفاده می‌شود. «تب‌ها» (اختیاری) مقدار تب‌هایی است که گزینه در آن‌ها نمایش داده شود. مقدار خالی = همه."
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:81
+msgid "متن دکمه جستجو"
+msgstr ""
+
+#: inc/elementor/widgets/hero.php:84
 msgid "تصویر و کارت‌های شناور"
 msgstr ""
 
-#: inc/elementor/widgets/hero.php:74
+#: inc/elementor/widgets/hero.php:86
 msgid "آیکون کارت بالا"
 msgstr ""
 
-#: inc/elementor/widgets/hero.php:75
+#: inc/elementor/widgets/hero.php:87
 msgid "عنوان کارت بالا"
 msgstr ""
 
-#: inc/elementor/widgets/hero.php:76
+#: inc/elementor/widgets/hero.php:88
 msgid "مقدار کارت بالا"
 msgstr ""
 
-#: inc/elementor/widgets/hero.php:77
+#: inc/elementor/widgets/hero.php:89
 msgid "متن کوچک کارت پایین"
 msgstr ""
 
-#: inc/elementor/widgets/hero.php:78
+#: inc/elementor/widgets/hero.php:90
 msgid "عنوان کارت پایین"
 msgstr ""
 
-#: inc/elementor/widgets/hero.php:79
+#: inc/elementor/widgets/hero.php:91
 msgid "لینک کارت پایین"
 msgstr ""
 
-#: inc/elementor/widgets/hero.php:116
+#: inc/elementor/widgets/hero.php:137
 msgid "نوع جستجو"
 msgstr ""
 
@@ -4194,6 +4262,10 @@ msgstr ""
 
 #: inc/elementor/widgets/hero-classic.php:60
 msgid "نوار فیلتر شناور"
+msgstr ""
+
+#: inc/elementor/widgets/hero-classic.php:69
+msgid "گزینه‌ها (هر خط: عنوان|مقدار)"
 msgstr ""
 
 #: inc/elementor/widgets/posts-grid.php:20

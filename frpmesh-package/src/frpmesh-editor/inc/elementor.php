@@ -144,3 +144,10 @@ function frpme_scan_saved_legacy($post_id){
  if($types!==$old)update_option('frpme_legacy_types',$types,false);
 }
 add_action('elementor/editor/after_save','frpme_scan_saved_legacy',10,1);
+
+/** Generated Elementor CSS from an older plugin version still contains the widget-level defaults; rebuild it once per version. */
+add_action('admin_init',function(){
+ if(get_option('frpme_css_version')===FRPME_VERSION||!current_user_can('edit_theme_options')||!class_exists('\\Elementor\\Plugin')||!isset(\Elementor\Plugin::$instance->files_manager))return;
+ \Elementor\Plugin::$instance->files_manager->clear_cache();
+ update_option('frpme_css_version',FRPME_VERSION,true);
+});

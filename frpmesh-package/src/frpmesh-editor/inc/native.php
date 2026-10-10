@@ -6,7 +6,10 @@ function frpme_native_meta($element){$k=$element->get_settings('frpme_native');i
 function frpme_native_controls($element,$section){
  if(!in_array($element->get_name(),array('container','heading','text-editor','button','icon','image','video','html','frpme-field','frpme-data','theme-post-title','theme-post-excerpt','theme-post-content'),true))return;
  if(!$element->get_controls('frpme_native')){$element->add_control('frpme_native',array('type'=>\Elementor\Controls_Manager::HIDDEN,'default'=>''));}
- foreach($element->get_controls() as $key=>$control){if(empty($control['selectors'])||!is_array($control['selectors']))continue;$selectors=$control['selectors'];$changed=false;
+ foreach($element->get_controls() as $key=>$control){if(empty($control['selectors'])||!is_array($control['selectors']))continue;
+ // Controls that default to Elementor Global Colors/Fonts (button background = accent, typography = accent...) must not get the boosted selector: it would repaint every FRP button and font over the original design.
+ if(!empty($control['global']['default'])||(isset($control['groupType'])&&'typography'===$control['groupType']))continue;
+ $selectors=$control['selectors'];$changed=false;
  foreach($control['selectors'] as $selector=>$rule){if(0!==strpos($selector,'{{WRAPPER}}')||false!==strpos($selector,'frpme-native-leaf'))continue;
  $alias=str_replace('{{WRAPPER}}','body.frpme-body {{WRAPPER}}.frpme-native-leaf',$selector);$alias=str_replace('.elementor-widget-container','.frpme-native-node',$alias);$alias=str_replace('.elementor-icon svg','svg.elementor-icon',$alias);$selectors[$alias]=$rule;$changed=true;
  if(preg_match('/^\{\{WRAPPER\}\}(:(?:hover|focus))?$/',$selector,$m)){$selectors['body.frpme-body {{WRAPPER}}.frpme-native-leaf > .frpme-native-node'.(isset($m[1])?$m[1]:'')]=$rule;}
@@ -43,3 +46,30 @@ add_filter('elementor/widget/print_template',function($template,$widget){if(in_a
 function frpme_native_raw_data($id){$raw=get_post_meta($id,'_elementor_data',true);return is_string($raw)&&false!==strpos($raw,'frpme_native')?$raw:'';}
 function frpme_native_document($id){$raw=frpme_native_raw_data($id);if(''===$raw)return false;$d=json_decode($raw,true);if(!is_array($d))return false;$scan=function($ns)use(&$scan){foreach($ns as $n){if(!empty($n['settings']['frpme_native']))return true;if(!empty($n['elements'])&&$scan($n['elements']))return true;}return false;};return $scan($d);}
 function frpme_native_document_source($id){$raw=frpme_native_raw_data($id);if(''===$raw)return '';$d=json_decode($raw,true);if(!is_array($d))return '';$map=frpme_native_map();$scan=function($ns)use(&$scan,$map){foreach($ns as $n){$k=isset($n['settings']['frpme_native'])?$n['settings']['frpme_native']:'';if(isset($map[$k]['attrs']['data-frpme-source']))return $map[$k]['attrs']['data-frpme-source'];if(!empty($n['elements'])){$s=$scan($n['elements']);if($s)return $s;}}return '';};return $scan($d);}
+/**
+ * Elementor adds "global default" rules such as `.elementor-widget-button .elementor-button{background-color:var(--e-global-color-accent)}`
+ * to every document's CSS. Their specificity beats the original FRP classes (.btn-primary, tabs, headings…), so buttons turned
+ * green and fonts changed. FRP documents bring their own complete styling, so these widget-level defaults are removed from the
+ * generated CSS of FRP documents only. Rules written for an individual element (user edits) are untouched, as is every other page.
+ */
+function frpme_strip_global_defaults($css_file){
+ if(!is_object($css_file)||!method_exists($css_file,'get_post_id')||!method_exists($css_file,'get_stylesheet'))return;
+ $post_id=(int)$css_file->get_post_id();
+ if(!$post_id||!frpme_native_document($post_id))return;
+ try{
+  $sheet=$css_file->get_stylesheet();
+  $prop=new ReflectionProperty($sheet,'rules');$prop->setAccessible(true);$rules=$prop->getValue($sheet);
+  if(!is_array($rules))return;
+  $pattern='/^\s*\.elementor-widget-(?:heading|text-editor|button|icon|image|video|html|frpme-field|frpme-data|theme-post-title|theme-post-excerpt|theme-post-content)(?![\w-])/';
+  foreach($rules as $query=>$by_selector){
+   if(!is_array($by_selector))continue;
+   foreach(array_keys($by_selector) as $selector){
+    // Every comma-separated part must be a widget-level default for the rule to be dropped.
+    $parts=array_filter(array_map('trim',explode(',',(string)$selector)));
+    if($parts&&count(preg_grep($pattern,$parts))===count($parts))unset($rules[$query][$selector]);
+   }
+  }
+  $prop->setValue($sheet,$rules);
+ }catch(\Throwable $e){return;}
+}
+add_action('elementor/css-file/post/parse','frpme_strip_global_defaults');

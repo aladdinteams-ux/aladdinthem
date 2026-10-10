@@ -1,7 +1,10 @@
 <?php
 /**
  * Plugin Name: FRP Mesh Design Editor
- * Description: Original FRP design, native Elementor templates and WordPress settings.
+ * Plugin URI: https://example.com/frpmesh
+ * Description: افزونهٔ همراه قالب FRP Mesh؛ طراحی اصلی، الگوهای بومی المنتور، ساخت خودکار صفحه‌ها و تنظیمات محتوا. ساخته‌شده توسط علاءالدین تم. (Original FRP design, native Elementor templates and WordPress settings by Aladdin Theme.)
+ * Author: علاءالدین تم
+ * Author URI: https://example.com
  * Version: 3.9.1
  * Requires at least: 6.3
  * Requires PHP: 7.4

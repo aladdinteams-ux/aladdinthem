@@ -25,3 +25,6 @@ body.admin-bar.frpme-body{--frpme-admin-height:32px}body.admin-bar.frpme-body .s
 @media(min-width:1025px){.frpme-design .frpme-native-leaf.elementor-hidden-desktop{display:none!important}}
 @media(min-width:768px) and (max-width:1024px){.frpme-design .frpme-native-leaf.elementor-hidden-tablet{display:none!important}}
 @media(max-width:767px){.frpme-design .frpme-native-leaf.elementor-hidden-mobile{display:none!important}}
+
+/* Comment form fields must never be wider than the viewport (default textarea cols=45 overflowed on phones). */
+.frpme-design .comment-respond :is(textarea,input:not([type=checkbox]):not([type=radio]):not([type=submit])){max-width:100%;box-sizing:border-box}

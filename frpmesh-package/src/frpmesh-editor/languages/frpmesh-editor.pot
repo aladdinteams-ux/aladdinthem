@@ -1,0 +1,761 @@
+# Copyright (C) 2026 
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: FRP Mesh Design Editor 3.9.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/frpmesh-editor\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-10T07:10:41+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: frpmesh-editor\n"
+
+#. Plugin Name of the plugin
+#: frpmesh-editor.php
+msgid "FRP Mesh Design Editor"
+msgstr ""
+
+#. Description of the plugin
+#: frpmesh-editor.php
+msgid "Original FRP design, native Elementor templates and WordPress settings."
+msgstr ""
+
+#: frpmesh-editor.php:26
+msgid "FRP Mesh Design Editor برای ویرایش بصری صفحه‌ها به Elementor (نسخه رایگان) نیاز دارد. بدون آن، طراحی اصلی نمایش داده می‌شود اما ویرایش با Elementor در دسترس نیست."
+msgstr ""
+
+#: inc/admin.php:19
+#: inc/admin.php:36
+msgid "FRP Design Editor"
+msgstr ""
+
+#: inc/admin.php:19
+msgid "طراحی FRP"
+msgstr ""
+
+#: inc/admin.php:20
+#: inc/admin.php:35
+#: inc/admin.php:51
+msgid "تنظیمات طراحی"
+msgstr ""
+
+#: inc/admin.php:21
+#: inc/admin.php:35
+msgid "ویرایش بخش‌ها"
+msgstr ""
+
+#: inc/admin.php:22
+#: inc/admin.php:35
+#: inc/admin.php:96
+msgid "راه‌اندازی پایه"
+msgstr ""
+
+#: inc/admin.php:29
+#: inc/admin.php:86
+msgid "انتخاب تصویر"
+msgstr ""
+
+#: inc/admin.php:29
+msgid "تغییرات ذخیره نشده‌اند."
+msgstr ""
+
+#: inc/admin.php:29
+msgid "محتوای این بخش به مقدار اصلی برگردد؟"
+msgstr ""
+
+#: inc/admin.php:29
+msgid "محتوای برگه انتخابی با طرح FRP جایگزین شود؟"
+msgstr ""
+
+#: inc/admin.php:29
+msgid "موردی پیدا نشد."
+msgstr ""
+
+#: inc/admin.php:29
+msgid "انصراف"
+msgstr ""
+
+#: inc/admin.php:29
+msgid "تأیید"
+msgstr ""
+
+#: inc/admin.php:29
+msgid "ارتقای برگه؟"
+msgstr ""
+
+#: inc/admin.php:29
+msgid "بازگشت به محتوای اصلی؟"
+msgstr ""
+
+#: inc/admin.php:29
+msgid "بازیابی برگه؟"
+msgstr ""
+
+#: inc/admin.php:29
+msgid "آخرین نسخهٔ قبلی برگه جایگزین شود؟"
+msgstr ""
+
+#: inc/admin.php:29
+msgid "مورد"
+msgstr ""
+
+#: inc/admin.php:35
+#: inc/installer.php:108
+#: inc/installer.php:126
+msgid "راه‌اندازی Elementor"
+msgstr ""
+
+#: inc/admin.php:36
+msgid "مرکز مدیریت طراحی و محتوا"
+msgstr ""
+
+#: inc/admin.php:36
+msgid "Elementor فعال"
+msgstr ""
+
+#: inc/admin.php:36
+msgid "Elementor غیرفعال"
+msgstr ""
+
+#: inc/admin.php:36
+msgid "مشاهده سایت"
+msgstr ""
+
+#: inc/admin.php:36
+msgid "بخش‌های افزونه"
+msgstr ""
+
+#: inc/admin.php:36
+msgid "مدیریت FRP"
+msgstr ""
+
+#: inc/admin.php:38
+msgid "پوسته"
+msgstr ""
+
+#: inc/admin.php:38
+msgid "تنظیمات قالب"
+msgstr ""
+
+#: inc/admin.php:39
+msgid "طراحی FRP Mesh"
+msgstr ""
+
+#: inc/admin.php:51
+msgid "شماره‌ها، رسانه‌ها و الگوهای طرح اصلی را مدیریت کنید."
+msgstr ""
+
+#: inc/admin.php:52
+msgid "تنظیمات ذخیره شد."
+msgstr ""
+
+#: inc/admin.php:53
+msgid "تنظیمات متن و تصاویر تک‌تک بخش‌ها در «ویرایش بخش‌ها» قرار دارد. مقدارهای خالی، طراحی اولیه را نگه می‌دارند."
+msgstr ""
+
+#: inc/admin.php:55
+msgid "اطلاعات تماس"
+msgstr ""
+
+#: inc/admin.php:55
+msgid "در هدر، فوتر و بخش‌های تماس استفاده می‌شود."
+msgstr ""
+
+#: inc/admin.php:56
+msgid "تلفن اصلی"
+msgstr ""
+
+#: inc/admin.php:56
+msgid "تلفن دفتر"
+msgstr ""
+
+#: inc/admin.php:56
+msgid "تلفن دوم"
+msgstr ""
+
+#: inc/admin.php:57
+msgid "ایمیل"
+msgstr ""
+
+#: inc/admin.php:57
+msgid "نشانی"
+msgstr ""
+
+#: inc/admin.php:58
+msgid "رسانه و هویت بصری"
+msgstr ""
+
+#: inc/admin.php:58
+msgid "تصویر و ویدئوی اصلی را بدون دست‌کاری فایل‌های قالب تغییر دهید."
+msgstr ""
+
+#: inc/admin.php:59
+msgid "لوگوی طرح اصلی"
+msgstr ""
+
+#: inc/admin.php:59
+msgid "انتخاب لوگو"
+msgstr ""
+
+#: inc/admin.php:59
+msgid "حذف"
+msgstr ""
+
+#: inc/admin.php:59
+msgid "اگر در تنظیمات پوسته لوگوی جداگانه تعیین شده باشد، همان اولویت دارد."
+msgstr ""
+
+#: inc/admin.php:60
+msgid "آدرس ویدئوی پروژه"
+msgstr ""
+
+#: inc/admin.php:60
+msgid "نشانی فونت محلی WOFF/WOFF2"
+msgstr ""
+
+#: inc/admin.php:60
+msgid "رنگ اصلی طرح"
+msgstr ""
+
+#: inc/admin.php:60
+msgid "اگر در تنظیمات پوسته رنگ اصلی وارد شود، مقدار پوسته اولویت دارد."
+msgstr ""
+
+#: inc/admin.php:61
+msgid "الگوهای سراسری Elementor"
+msgstr ""
+
+#: inc/admin.php:61
+msgid "هر الگو را جداگانه انتخاب کنید؛ گزینهٔ پیش‌فرض همان HTML اصلی را نشان می‌دهد."
+msgstr ""
+
+#: inc/admin.php:63
+msgid "هدر"
+msgstr ""
+
+#: inc/admin.php:63
+msgid "فوتر"
+msgstr ""
+
+#: inc/admin.php:63
+msgid "همه نوشته‌ها"
+msgstr ""
+
+#: inc/admin.php:63
+msgid "آرشیو وبلاگ"
+msgstr ""
+
+#: inc/admin.php:63
+msgid "طرح اصلی FRP"
+msgstr ""
+
+#: inc/admin.php:63
+msgid "با نصب Elementor الگوهای ذخیره‌شده در این فهرست دیده می‌شوند."
+msgstr ""
+
+#: inc/admin.php:64
+#: inc/admin.php:90
+msgid "● تغییرات ذخیره‌نشده"
+msgstr ""
+
+#: inc/admin.php:64
+msgid "ذخیره تنظیمات"
+msgstr ""
+
+#: inc/admin.php:73
+msgid "بخش ذخیره شد."
+msgstr ""
+
+#: inc/admin.php:74
+msgid "این بخش به محتوای اصلی بازگشت."
+msgstr ""
+
+#: inc/admin.php:78
+msgid "ویرایش بخش‌های طراحی"
+msgstr ""
+
+#: inc/admin.php:78
+msgid "متن، تصویر، پیوند و آیکون‌های بخش انتخابی را مدیریت کنید."
+msgstr ""
+
+#: inc/admin.php:80
+msgid "ویرایشِ انجام‌شده داخل ویجت Elementor همان صفحه بر مقدار پیش‌فرض اینجا اولویت دارد."
+msgstr ""
+
+#: inc/admin.php:81
+msgid "جستجوی بخش"
+msgstr ""
+
+#: inc/admin.php:81
+msgid "نام بخش یا صفحه…"
+msgstr ""
+
+#: inc/admin.php:81
+msgid "بخش قابل ویرایش"
+msgstr ""
+
+#: inc/admin.php:81
+msgid "باز کردن بخش"
+msgstr ""
+
+#: inc/admin.php:81
+#, php-format
+msgid "مجموع بخش‌ها: %d"
+msgstr ""
+
+#: inc/admin.php:82
+#, php-format
+msgid "تعداد فیلدهای قابل ویرایش: %d"
+msgstr ""
+
+#: inc/admin.php:83
+msgid "جستجوی فیلد"
+msgstr ""
+
+#: inc/admin.php:83
+msgid "جستجو در فیلدهای این بخش…"
+msgstr ""
+
+#: inc/admin.php:90
+msgid "ذخیره این بخش"
+msgstr ""
+
+#: inc/admin.php:90
+msgid "بازگشت به متن اصلی"
+msgstr ""
+
+#: inc/admin.php:95
+msgid "صفحه اصلی"
+msgstr ""
+
+#: inc/admin.php:95
+#: inc/installer.php:125
+msgid "درباره ما"
+msgstr ""
+
+#: inc/admin.php:95
+#: inc/installer.php:125
+msgid "خدمات"
+msgstr ""
+
+#: inc/admin.php:95
+msgid "تماس با ما"
+msgstr ""
+
+#: inc/admin.php:95
+#: inc/installer.php:125
+msgid "وبلاگ"
+msgstr ""
+
+#: inc/admin.php:95
+msgid "برگه موجود تغییر نکرد."
+msgstr ""
+
+#: inc/admin.php:95
+msgid "پیش‌نویس ساخته شد."
+msgstr ""
+
+#: inc/admin.php:96
+msgid "ساخت پیش‌نویس برگه‌های مفقود بدون تغییر محتوای برگه‌های موجود."
+msgstr ""
+
+#: inc/admin.php:98
+msgid "اگر Elementor فعال است، برای ساخت خودکار برگه‌ها و الگوهای قابل ویرایش از «راه‌اندازی Elementor» استفاده کنید."
+msgstr ""
+
+#: inc/admin.php:98
+msgid "پیش‌نویس برگه‌های پایه"
+msgstr ""
+
+#: inc/admin.php:98
+msgid "این عملیات فقط برگه‌های فاقد نامک را ایجاد می‌کند و چیزی را منتشر یا بازنویسی نمی‌کند."
+msgstr ""
+
+#: inc/admin.php:98
+msgid "ساخت پیش‌نویس‌های مفقود"
+msgstr ""
+
+#: inc/dynamic.php:18
+msgid "Pagination"
+msgstr ""
+
+#: inc/elementor.php:4
+msgid "FRP Mesh"
+msgstr ""
+
+#: inc/elementor.php:125
+msgid "در انتظار"
+msgstr ""
+
+#: inc/elementor.php:125
+msgid "در حال اجرا"
+msgstr ""
+
+#: inc/elementor.php:125
+msgid "کامل شد"
+msgstr ""
+
+#: inc/elementor.php:125
+msgid "ناموفق"
+msgstr ""
+
+#: inc/elementor.php:127
+msgid "بررسی ویجت‌های نسخه قبل"
+msgstr ""
+
+#: inc/elementor.php:127
+msgid "این بررسی مرحله‌ای در پس‌زمینه اجرا می‌شود و هیچ داده‌ای را تغییر نمی‌دهد."
+msgstr ""
+
+#: inc/elementor.php:128
+#, php-format
+msgid "پیشرفت: %1$d٪ — سندهای دارای ویجت قدیمی: %2$d"
+msgstr ""
+
+#: inc/elementor.php:130
+msgid "اجرای مرحله بعد"
+msgstr ""
+
+#: inc/elementor.php:130
+msgid "شروع دوباره بررسی"
+msgstr ""
+
+#: inc/elementor.php:136
+msgid "بررسی دیگری در حال اجراست؛ کمی بعد دوباره تلاش کنید."
+msgstr ""
+
+#: inc/elementor.php:136
+msgid "مرحله بعدی بررسی اجرا شد."
+msgstr ""
+
+#: inc/installer.php:108
+msgid "برای فعال شدن این بخش ابتدا Elementor را نصب کنید."
+msgstr ""
+
+#: inc/installer.php:108
+msgid "Elementor فعال نیست؛ بخش پایهٔ افزونه بدون آن کار می‌کند."
+msgstr ""
+
+#: inc/installer.php:109
+msgid "اتصال رنگ‌ها و فونت‌های سراسری ذخیره شد."
+msgstr ""
+
+#: inc/installer.php:110
+msgid "صفحات و الگوهای مفقود ساخته و لینک‌ها بررسی شدند."
+msgstr ""
+
+#: inc/installer.php:111
+msgid "الگوهای سراسری متصل شدند."
+msgstr ""
+
+#: inc/installer.php:115
+msgid "محتوای برگه با حفظ عنوان، نامک و انتشار جایگزین شد."
+msgstr ""
+
+#: inc/installer.php:116
+msgid "یک برگه معتبر و نوع طرح را برای ارتقا انتخاب کنید."
+msgstr ""
+
+#: inc/installer.php:122
+msgid "آخرین محتوای قبلی بازگردانده شد."
+msgstr ""
+
+#: inc/installer.php:123
+msgid "برای برگه انتخابی نسخه پشتیبان قابل بازیابی پیدا نشد."
+msgstr ""
+
+#: inc/installer.php:125
+msgid "خانه"
+msgstr ""
+
+#: inc/installer.php:125
+msgid "تماس"
+msgstr ""
+
+#: inc/installer.php:126
+msgid "صفحه‌ها، الگوهای سراسری و اتصال طرح را از همین‌جا بررسی کنید."
+msgstr ""
+
+#: inc/installer.php:130
+msgid "برگه‌های موجود"
+msgstr ""
+
+#: inc/installer.php:130
+msgid "الگوهای قابل ویرایش"
+msgstr ""
+
+#: inc/installer.php:130
+msgid "اتصال طراحی سراسری"
+msgstr ""
+
+#: inc/installer.php:130
+msgid "فعال"
+msgstr ""
+
+#: inc/installer.php:130
+msgid "اختیاری"
+msgstr ""
+
+#: inc/installer.php:131
+msgid "وضعیت صفحه‌های اصلی"
+msgstr ""
+
+#: inc/installer.php:131
+msgid "صفحه‌های موجود دست‌نخورده می‌مانند؛ فقط موارد مفقود ساخته می‌شوند."
+msgstr ""
+
+#: inc/installer.php:132
+msgid "قابل ویرایش در Elementor"
+msgstr ""
+
+#: inc/installer.php:132
+msgid "برگه موجود؛ طرح قبلی محفوظ است"
+msgstr ""
+
+#: inc/installer.php:132
+msgid "ساخته نشده"
+msgstr ""
+
+#: inc/installer.php:132
+msgid "آماده"
+msgstr ""
+
+#: inc/installer.php:132
+msgid "موجود"
+msgstr ""
+
+#: inc/installer.php:132
+msgid "مفقود"
+msgstr ""
+
+#: inc/installer.php:132
+msgid "ویرایش"
+msgstr ""
+
+#: inc/installer.php:133
+msgid "ساخت موارد مفقود و بررسی فهرست"
+msgstr ""
+
+#: inc/installer.php:133
+msgid "اگر صفحه اصلی ثابت از پیش انتخاب شده باشد، راه‌انداز آن را تغییر نمی‌دهد. برگهٔ وبلاگ را در «برگه نوشته‌ها» انتخاب نکنید تا داخل Elementor قابل ویرایش بماند."
+msgstr ""
+
+#: inc/installer.php:134
+msgid "رنگ و فونت سراسری Elementor"
+msgstr ""
+
+#: inc/installer.php:134
+msgid "ابتدا رنگ‌ها و فونت‌ها را در Elementor ← Site Settings مطابق طرح اصلی تنظیم کنید."
+msgstr ""
+
+#: inc/installer.php:134
+msgid "استفاده از Global Colors و Global Fonts در صفحات FRP"
+msgstr ""
+
+#: inc/installer.php:134
+msgid "ذخیره اتصال رنگ و فونت"
+msgstr ""
+
+#: inc/installer.php:134
+msgid "اتصال دوباره الگوهای سراسری"
+msgstr ""
+
+#: inc/installer.php:134
+msgid "تا زمانی که این گزینه روشن نشده، رنگ و فونت اصلی طرح حفظ می‌شود."
+msgstr ""
+
+#: inc/installer.php:135
+msgid "ارتقای برگه موجود"
+msgstr ""
+
+#: inc/installer.php:135
+msgid "این اقدام محتوای Elementor برگه انتخابی را جایگزین می‌کند."
+msgstr ""
+
+#: inc/installer.php:135
+msgid "پیش از ارتقا از سایت نسخه پشتیبان تهیه کنید. یک نسخه از دادهٔ برگه پیش از جایگزینی ذخیره می‌شود."
+msgstr ""
+
+#: inc/installer.php:135
+msgid "انتخاب برگه"
+msgstr ""
+
+#: inc/installer.php:135
+msgid "نوع طرح"
+msgstr ""
+
+#: inc/installer.php:135
+msgid "ارتقای برگهٔ انتخابی"
+msgstr ""
+
+#: inc/installer.php:135
+msgid "بازیابی آخرین نسخهٔ قبلی"
+msgstr ""
+
+#: inc/installer.php:136
+msgid "الگوهای ذخیره‌شده"
+msgstr ""
+
+#: inc/installer.php:136
+msgid "هر الگو به‌صورت جداگانه در Elementor باز می‌شود."
+msgstr ""
+
+#: inc/native-widgets.php:6
+msgid "محتوای فیلد"
+msgstr ""
+
+#: inc/native-widgets.php:7
+msgid "نوع فیلد"
+msgstr ""
+
+#: inc/native-widgets.php:7
+msgid "متن"
+msgstr ""
+
+#: inc/native-widgets.php:7
+msgid "عدد"
+msgstr ""
+
+#: inc/native-widgets.php:7
+msgid "چک‌باکس"
+msgstr ""
+
+#: inc/native-widgets.php:7
+msgid "اسلایدر"
+msgstr ""
+
+#: inc/native-widgets.php:7
+msgid "جستجو"
+msgstr ""
+
+#: inc/native-widgets.php:7
+msgid "متن چندخطی"
+msgstr ""
+
+#: inc/native-widgets.php:7
+msgid "فهرست"
+msgstr ""
+
+#: inc/native-widgets.php:7
+msgid "پیشرفت"
+msgstr ""
+
+#: inc/native-widgets.php:7
+msgid "خروجی"
+msgstr ""
+
+#: inc/native-widgets.php:8
+msgid "شناسه HTML"
+msgstr ""
+
+#: inc/native-widgets.php:8
+msgid "نام فیلد"
+msgstr ""
+
+#: inc/native-widgets.php:8
+msgid "متن راهنما"
+msgstr ""
+
+#: inc/native-widgets.php:8
+msgid "مقدار اولیه"
+msgstr ""
+
+#: inc/native-widgets.php:8
+msgid "حداقل"
+msgstr ""
+
+#: inc/native-widgets.php:8
+msgid "حداکثر"
+msgstr ""
+
+#: inc/native-widgets.php:8
+msgid "گام"
+msgstr ""
+
+#: inc/native-widgets.php:9
+msgid "شناسه‌های موردنیاز انیمیشن یا اسکریپت طرح را حفظ کنید."
+msgstr ""
+
+#: inc/native-widgets.php:10
+msgid "الزامی"
+msgstr ""
+
+#: inc/native-widgets.php:11
+msgid "گزینه‌ها"
+msgstr ""
+
+#: inc/native-widgets.php:11
+msgid "هر سطر: مقدار|عنوان"
+msgstr ""
+
+#: inc/native-widgets.php:13
+msgid "ظاهر فیلد"
+msgstr ""
+
+#: inc/native-widgets.php:14
+msgid "رنگ متن"
+msgstr ""
+
+#: inc/native-widgets.php:14
+msgid "پس‌زمینه"
+msgstr ""
+
+#: inc/native-widgets.php:24
+msgid "محتوای وردپرس"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "نوع داده"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "فهرست سایت"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "نوشته‌های صفحه خانه"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "فیلتر دسته‌ها"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "کارت‌های وبلاگ"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "عنوان نوشته"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "خلاصه نوشته"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "دسته نوشته"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "تاریخ و نویسنده"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "متن نوشته"
+msgstr ""
+
+#: inc/native-widgets.php:25
+msgid "نوشته‌های مرتبط"
+msgstr ""
+
+#: inc/native-widgets.php:26
+msgid "تعداد نوشته‌ها"
+msgstr ""
+
+#: inc/native-widgets.php:26
+msgid "در آرشیو، تعداد نمایش از تنظیمات خواندن وردپرس گرفته می‌شود."
+msgstr ""

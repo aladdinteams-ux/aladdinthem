@@ -10,6 +10,16 @@ function frpme_data( $name ) {
     }
     return $cache[$name];
 }
+/** Option-based mutex (same technique as WP core's upgrader lock): add_option() fails when the row already exists. */
+function frpme_lock($name,$ttl=120){
+    $key=sanitize_key($name).'_lock';
+    if(add_option($key,time(),'','no')){return true;}
+    $held=(int)get_option($key);
+    if($held&&(time()-$held)<$ttl){return false;}
+    delete_option($key);
+    return (bool)add_option($key,time(),'','no');
+}
+function frpme_unlock($name){delete_option(sanitize_key($name).'_lock');}
 function frpme_options() { $data = get_option('frpme_settings',array()); return is_array($data) ? $data : array(); }
 function frpme_setting( $key, $default = '' ) { $options=frpme_options();$legacy=array('phone_primary'=>'mobile','phone_office'=>'office','phone_secondary'=>'secondary','email'=>'email','address'=>'address','video_url'=>'video');if(function_exists('frpmt_option') && in_array($key,array('logo_id','primary_color'),true)){ $theme_value=frpmt_option($key);if($theme_value)return $theme_value; }if(isset($options[$key])){return $options[$key];}return isset($legacy[$key]) ? get_theme_mod('frpm_'.$legacy[$key],$default) : $default; }
 function frpme_source() {

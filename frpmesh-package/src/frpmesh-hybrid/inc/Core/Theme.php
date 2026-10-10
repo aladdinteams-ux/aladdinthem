@@ -14,7 +14,10 @@ function frpmt_elementor_location($location){
     return function_exists('elementor_theme_do_location') && !frpmt_is_editor_preview() && elementor_theme_do_location($location);
 }
 function frpmt_full_widget(){
-    $data=json_decode(get_post_meta(get_the_ID(),'_elementor_data',true),true);if(!is_array($data)){return false;}
+    $raw=get_post_meta(get_the_ID(),'_elementor_data',true);
+    // Legacy widget names always contain "frpm"; most pages do not, so skip the JSON decode for them.
+    if(!is_string($raw)||false===strpos($raw,'frpm')){return false;}
+    $data=json_decode($raw,true);if(!is_array($data)){return false;}
     $walk=function($items)use(&$walk){foreach($items as $item){if(isset($item['widgetType']) && in_array($item['widgetType'],array('frpm-home','frpm-about','frpm-services','frpm-contact','frpme-complete-page'),true)){return true;}if(!empty($item['elements']) && $walk($item['elements'])){return true;}}return false;};return $walk($data);
 }
 // Older companion plugins do not expose the native-document API.
@@ -41,4 +44,15 @@ function frpmt_reference($source){
 }
 add_action('admin_notices',function(){if(function_exists('frpme_render_page') && !function_exists('frpme_native_document') && current_user_can('activate_plugins')){echo '<div class="notice notice-error"><p>'.esc_html__('افزونه همراه FRP Mesh قدیمی یا ناقص است. برای ویرایش بومی المنتور، FRP Mesh Design Editor نسخه ۳ یا جدیدتر را از بسته همراه نصب و فعال کنید.','frpmesh-hybrid').'</p></div>';}});
 
+/** The theme works alone with a lightweight layout; tell administrators what the full design needs, only where it matters. */
+add_action('admin_notices',function(){
+    if(!current_user_can('activate_plugins'))return;
+    $screen=function_exists('get_current_screen')?get_current_screen():null;
+    if(!$screen||!in_array($screen->id,array('themes','plugins','toplevel_page_frpmt-settings'),true))return;
+    if(!defined('FRPME_VERSION')){
+        echo '<div class="notice notice-info"><p>'.esc_html__('افزونه همراه «FRP Mesh Design Editor» فعال نیست. قالب با چیدمان ساده کار می‌کند؛ برای طراحی کامل FRP Mesh افزونه همراه را از همین بسته نصب و فعال کنید.','frpmesh-hybrid').'</p></div>';
+    }elseif(!defined('ELEMENTOR_VERSION')){
+        echo '<div class="notice notice-warning"><p>'.esc_html__('Elementor (نسخه رایگان) فعال نیست. طراحی اصلی نمایش داده می‌شود، اما ویرایش بصری صفحه‌ها به Elementor نیاز دارد.','frpmesh-hybrid').'</p></div>';
+    }
+});
 add_action('elementor/theme/register_locations',function($manager){$manager->register_all_core_location();});

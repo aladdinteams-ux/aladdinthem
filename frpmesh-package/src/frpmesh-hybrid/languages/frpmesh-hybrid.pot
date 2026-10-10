@@ -1,0 +1,883 @@
+# Copyright (C) 2026 FRP Mesh
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: FRP Mesh Hybrid 3.9.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/frpmesh-hybrid\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-10T07:10:34+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: frpmesh-hybrid\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "FRP Mesh Hybrid"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://example.com/frpmesh"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Native Elementor shell for FRP Mesh Design Editor. Works independently; the companion editor plugin adds the original FRP Mesh design."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+#: inc/Admin/Settings/SettingsPage.php:21
+msgid "FRP Mesh"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://example.com"
+msgstr ""
+
+#: 404.php:1
+msgid "صفحه پیدا نشد"
+msgstr ""
+
+#: 404.php:1
+msgid "برگشت به صفحه اصلی"
+msgstr ""
+
+#: comments.php:2
+#: inc/Admin/Settings/Settings.php:23
+msgid "دیدگاه‌ها"
+msgstr ""
+
+#: header.php:3
+msgid "رفتن به محتوای اصلی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+msgid "پیشخوان"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+msgid "هویت سایت"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+#: inc/Admin/Settings/SettingsPage.php:35
+msgid "رنگ‌ها"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+msgid "تایپوگرافی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+msgid "چیدمان"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+msgid "برگه‌ها"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+#: inc/Admin/Settings/SettingsPage.php:35
+msgid "هدر"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+msgid "فوتر"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+#: inc/Admin/Settings/SettingsPage.php:5
+msgid "وبلاگ"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+msgid "فروشگاه"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+msgid "سئو"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+msgid "عملکرد"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:5
+msgid "پیشرفته"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:10
+msgid "لوگو"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:10
+msgid "لوگوی رتینا"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:10
+msgid "لوگوی موبایل"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:10
+msgid "فَووآیکون"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:11
+msgid "عرض سایت (پیکسل)"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:11
+msgid "عرض لوگوی هدر (پیکسل)"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:12
+msgid "توضیح سایت"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:13
+msgid "اصلی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:13
+msgid "ثانویه"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:13
+msgid "متن"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:13
+msgid "عنوان"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:13
+msgid "پس‌زمینه"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:13
+msgid "سطح"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:13
+msgid "حاشیه"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:13
+msgid "موفقیت"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:13
+msgid "هشدار"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:13
+msgid "خطا"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:14
+msgid "فونت اصلی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:14
+msgid "فونت عنوان"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:14
+msgid "فونت متن"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:15
+#: inc/Admin/Settings/SettingsPage.php:39
+msgid "رومیزی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:15
+#: inc/Admin/Settings/SettingsPage.php:39
+msgid "تبلت"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:15
+#: inc/Admin/Settings/SettingsPage.php:39
+msgid "موبایل"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:15
+#, php-format
+msgid "%1$s · %2$s (پیکسل)"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:16
+msgid "ارتفاع خط"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:16
+msgid "فاصله حروف (پیکسل)"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:17
+msgid "عرض کانتینر (پیکسل)"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:17
+msgid "عرض محتوا (پیکسل)"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:17
+msgid "عرض ستون کناری (پیکسل)"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:17
+msgid "گردی گوشه (پیکسل)"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:17
+msgid "فاصله بخش‌ها (پیکسل)"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:18
+msgid "جای ستون کناری"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:18
+msgid "چیدمان برگه"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:18
+msgid "چیدمان آرشیو"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:19
+msgid "چیدمان هدر"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:20
+msgid "هدر چسبان"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:20
+msgid "هدر شفاف"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:20
+msgid "هدر موبایل"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:20
+msgid "منوی موبایل"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:20
+msgid "جستجو"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:20
+msgid "شبکه‌های اجتماعی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:20
+msgid "دکمه اقدام"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:20
+msgid "تلفن"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:20
+msgid "ورود"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:20
+#: template-parts/header/fallback.php:5
+msgid "سبد خرید"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:21
+msgid "رنگ هدر چسبان"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:21
+msgid "سایه هدر چسبان"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:21
+msgid "ارتفاع هدر چسبان"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:21
+msgid "متن دکمه اقدام"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:21
+msgid "شماره تلفن"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:21
+msgid "پیوند دکمه اقدام"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:22
+msgid "چیدمان فوتر"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:22
+msgid "تعداد ستون‌ها"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:22
+msgid "لوگوی فوتر"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:22
+msgid "توضیح فوتر"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:22
+msgid "متن کپی‌رایت"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:22
+msgid "ابزارک‌های فوتر"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:22
+msgid "بازگشت به بالا"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:22
+msgid "پیوندهای اجتماعی؛ هر سطر یک نشانی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "چیدمان وبلاگ"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "ستون‌های کارت"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "ستون کناری"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "تصویر شاخص"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "نویسنده"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "تاریخ"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "دسته"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "زمان مطالعه"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "نوشته‌های مرتبط"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "نوشته قبل و بعد"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:23
+msgid "مسیر راهنما"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:24
+msgid "نمایش سبد در هدر"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:25
+msgid "مسیر راهنمای پویا"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:26
+msgid "کاهش حرکت درخواستی کاربر"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:27
+msgid "اعلان‌های CSS امن برای :root"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "بدون ستون"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "راست"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "چپ"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "طرح اصلی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "وسط‌چین"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "تقسیم‌شده"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "دو ردیف"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "شفاف"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "ستونی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "فشرده"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "شبکه‌ای"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "فهرستی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "تمام‌عرض"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "کادری"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "محتوا و ستون کناری"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:30
+msgid "ستون کناری و محتوا"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:53
+msgid "تنظیمات قالب"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:55
+msgid "تغییرات ذخیره نشده‌اند. آیا خارج می‌شوید؟"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:55
+msgid "تنظیمات انتخاب‌شده بازنشانی شوند؟"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:55
+msgid "انتخاب تصویر"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:55
+msgid "همهٔ تنظیمات این پنل پاک شود؟ این عمل روی محتوای برگه‌ها اثر ندارد."
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:55
+msgid "تنظیمی یافت نشد."
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:55
+msgid "برای ویرایش این مورد، ابتدا گزینهٔ مرتبط را فعال کنید."
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:55
+msgid "خروجی شامل آخرین تغییرات ذخیره‌شده است."
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:55
+msgid "ابتدا یک فایل JSON انتخاب کنید."
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:55
+#: inc/Admin/Settings/SettingsFields.php:15
+msgid "آدرس شبکه اجتماعی"
+msgstr ""
+
+#: inc/Admin/Settings/Settings.php:55
+#: inc/Admin/Settings/SettingsFields.php:15
+msgid "حذف پیوند"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsActions.php:4
+#: inc/Admin/Settings/SettingsPage.php:15
+msgid "دسترسی مجاز نیست."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsActions.php:5
+msgid "بخش نامعتبر است."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsActions.php:6
+msgid "فایل JSON معتبر با حداکثر حجم ۱ مگابایت بارگذاری کنید."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsActions.php:6
+msgid "نسخه یا ساختار فایل معتبر نیست."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsActions.php:7
+msgid "درخواست نامعتبر است."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsFields.php:12
+msgid "پیش‌فرض قالب"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsFields.php:13
+msgid "انتخاب از کتابخانه رسانه"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsFields.php:13
+msgid "حذف تصویر"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsFields.php:14
+#, php-format
+msgid "انتخاب رنگ %s"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsFields.php:15
+msgid "افزودن پیوند"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsFields.php:19
+msgid "اتصال به طرح در دست تکمیل؛ مقدار فعلاً ذخیره می‌شود."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsFields.php:20
+msgid "خالی بگذارید تا رنگ اصلی طرح حفظ شود."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsFields.php:21
+msgid "برای هدر و فوتر پایهٔ پوسته؛ طراحی افزونه همراه تنظیمات خودش را دارد."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:5
+msgid "خانه"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:5
+msgid "درباره ما"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:5
+msgid "خدمات"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:5
+msgid "تماس"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:8
+msgid "برگه موجود"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:8
+msgid "هنوز ساخته نشده"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:9
+msgid "ویرایش برگه"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:9
+msgid "ویرایش با المنتور"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:10
+msgid "ساخت برگه"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:12
+msgid "راه‌اندازی خودکار صفحه‌های طراحی FRP Mesh"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:21
+msgid "مرکز تنظیمات پوسته"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:22
+msgid "جستجوی تنظیمات"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:22
+msgid "جستجو؛ مثلاً لوگو، رنگ، موبایل…"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:22
+msgid "● تغییرات ذخیره‌نشده"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:22
+msgid "ذخیره تغییرات"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:24
+msgid "تنظیمات ذخیره شد."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:26
+msgid "تنظیمات وارد شد."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:26
+msgid "تنظیمات بازنشانی شد."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:27
+msgid "بخش‌های تنظیمات قالب"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:28
+msgid "نمای کلی"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:28
+msgid "ظاهر سایت"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:28
+msgid "محتوا و اتصال‌ها"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:30
+#: inc/Admin/Settings/SettingsPage.php:43
+msgid "پشتیبان‌گیری و بازنشانی"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:32
+msgid "داشبورد"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:32
+msgid "قالب خود را از اینجا مدیریت کنید"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:32
+msgid "برای ویرایش بصری بخش‌های اصلی، افزونه همراه و در صورت نیاز Elementor را فعال کنید. تنظیمات این صفحه مستقل از Elementor کار می‌کند."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:33
+msgid "نسخه پوسته"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:33
+msgid "وردپرس"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:33
+msgid "PHP"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:33
+msgid "Elementor"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:33
+msgid "نصب نیست"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:33
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:33
+msgid "افزونه طراحی FRP"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:33
+msgid "افزونه سئو"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:33
+msgid "تشخیص داده نشد"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:33
+msgid "کش"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:35
+msgid "دسترسی سریع"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:35
+msgid "لوگو و هویت"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:35
+msgid "فونت‌ها"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:35
+msgid "خروجی تنظیمات"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:35
+msgid "باز کردن Elementor"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:36
+msgid "گزینه‌هایی که نشان «اتصال در دست تکمیل» دارند، هنوز ظاهر بخش مربوط را تغییر نمی‌دهند و برای تنظیمات آینده نگهداری می‌شوند."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:38
+msgid "تنظیمات پوسته"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:38
+msgid "مقادیر خالی، طراحی اصلی را حفظ می‌کنند."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:38
+msgid "بازنشانی این بخش"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:39
+msgid "تنظیم نمایشگر"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:40
+msgid "تنظیمات پیشرفته"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:43
+msgid "مدیریت داده‌ها"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:43
+msgid "پیش از وارد کردن فایل جدید، خروجی تنظیمات فعلی را نگه دارید."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:45
+msgid "دریافت نسخهٔ پشتیبان"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:45
+msgid "یک فایل JSON از تنظیمات فعلی دریافت کنید."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:45
+msgid "دریافت فایل JSON"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:45
+msgid "درون‌ریزی تنظیمات"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:45
+msgid "فقط فایل JSON خروجی همین پوسته، تا ۱ مگابایت، پذیرفته می‌شود."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:45
+msgid "انتخاب فایل"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:45
+msgid "بارگذاری و اعمال"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:45
+msgid "بازگشت به تنظیمات پیش‌فرض"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:45
+msgid "فقط تنظیمات این پنل پاک می‌شود؛ محتوای برگه‌ها و تنظیمات افزونه همراه دست‌نخورده می‌ماند."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:45
+msgid "بازنشانی همه تنظیمات"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:46
+msgid "بازنشانی تنظیمات؟"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:46
+msgid "این کار مقدارهای ذخیره‌شده را پاک می‌کند."
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:46
+msgid "انصراف"
+msgstr ""
+
+#: inc/Admin/Settings/SettingsPage.php:46
+msgid "تأیید بازنشانی"
+msgstr ""
+
+#: inc/Core/Theme.php:5
+msgid "منوی اصلی"
+msgstr ""
+
+#: inc/Core/Theme.php:45
+msgid "افزونه همراه FRP Mesh قدیمی یا ناقص است. برای ویرایش بومی المنتور، FRP Mesh Design Editor نسخه ۳ یا جدیدتر را از بسته همراه نصب و فعال کنید."
+msgstr ""
+
+#: inc/Core/Theme.php:53
+msgid "افزونه همراه «FRP Mesh Design Editor» فعال نیست. قالب با چیدمان ساده کار می‌کند؛ برای طراحی کامل FRP Mesh افزونه همراه را از همین بسته نصب و فعال کنید."
+msgstr ""
+
+#: inc/Core/Theme.php:55
+msgid "Elementor (نسخه رایگان) فعال نیست. طراحی اصلی نمایش داده می‌شود، اما ویرایش بصری صفحه‌ها به Elementor نیاز دارد."
+msgstr ""
+
+#: inc/Customizer/Customizer.php:5
+msgid "هویت FRP Mesh"
+msgstr ""
+
+#: inc/Customizer/Customizer.php:5
+msgid "رنگ‌های FRP Mesh"
+msgstr ""
+
+#: inc/Customizer/Customizer.php:5
+msgid "فونت‌های FRP Mesh"
+msgstr ""
+
+#: inc/Customizer/Customizer.php:5
+msgid "هدر FRP Mesh"
+msgstr ""
+
+#: inc/Customizer/Customizer.php:5
+msgid "فوتر FRP Mesh"
+msgstr ""
+
+#. Template Name of the theme
+msgid "FRP Mesh Canvas"
+msgstr ""
+
+#. Template Name of the theme
+msgid "FRP Mesh Full Width"
+msgstr ""
+
+#: template-parts/header/fallback.php:5
+msgid "فهرست"
+msgstr ""
+
+#: template-parts/header/fallback.php:5
+msgid "فهرست اصلی"
+msgstr ""

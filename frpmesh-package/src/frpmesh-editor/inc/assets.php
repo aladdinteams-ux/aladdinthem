@@ -19,8 +19,8 @@ function frpme_enqueue(){
     if (!wp_style_is('frpme-bridge','registered')){frpme_register_assets();}
     wp_enqueue_style('frpme-bridge');wp_enqueue_script('frpme-program-header');wp_enqueue_script('frpme-native-layout',FRPME_URL.'assets/js/native-layout.js',array('frpme-runtime'),frpme_version('assets/js/native-layout.js'),array('strategy'=>'defer','in_footer'=>true));
     $source=frpme_source();if($source && !(is_singular('post') && post_password_required())){wp_enqueue_script('frpme-program-'.$source);}
-    $css='';$primary=frpme_setting('primary_color');if($primary){$css.='.frpme-design{--primary:'.sanitize_hex_color($primary).'}';}
-    $font=frpme_setting('font_url');if($font){$css.='@font-face{font-family:FrpMeshLocal;src:url('.wp_json_encode(esc_url_raw($font)).');font-display:swap}.frpme-body.frpme-design{font-family:FrpMeshLocal,Tahoma,Arial,sans-serif}';}
+    $css='';$primary=sanitize_hex_color((string)frpme_setting('primary_color'));if($primary){$css.='.frpme-design{--primary:'.$primary.'}';}
+    $font=frpme_setting('font_url');if($font){$css.='@font-face{font-family:FrpMeshLocal;src:url("'.esc_url_raw($font).'");font-display:swap}.frpme-body.frpme-design{font-family:FrpMeshLocal,Tahoma,Arial,sans-serif}';}
     if(get_option('frpme_use_elementor_globals')){
         $css.='.frpme-body.frpme-design{--primary:var(--e-global-color-primary,#2563eb);--accent:var(--e-global-color-accent,#0ea5e9);--text:var(--e-global-color-text,#0f172a);--muted:var(--e-global-color-secondary,#475569);font-family:var(--e-global-typography-text-font-family,Vazirmatn),Tahoma,Arial,sans-serif}' .
             '.frpme-body.frpme-design :is(h1,h2,h3,h4,h5,h6){font-family:var(--e-global-typography-primary-font-family,Vazirmatn),Tahoma,Arial,sans-serif}';

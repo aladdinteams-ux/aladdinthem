@@ -30,8 +30,8 @@ function frpmt_schema() {
 function frpmt_choices($key){$sets=array('sidebar_position'=>array('none'=>__('بدون ستون','frpmesh-hybrid'),'right'=>__('راست','frpmesh-hybrid'),'left'=>__('چپ','frpmesh-hybrid')),'header_layout'=>array('default'=>__('طرح اصلی','frpmesh-hybrid'),'centered'=>__('وسط‌چین','frpmesh-hybrid'),'split'=>__('تقسیم‌شده','frpmesh-hybrid'),'two_rows'=>__('دو ردیف','frpmesh-hybrid'),'transparent'=>__('شفاف','frpmesh-hybrid')),'footer_layout'=>array('default'=>__('طرح اصلی','frpmesh-hybrid'),'columns'=>__('ستونی','frpmesh-hybrid'),'compact'=>__('فشرده','frpmesh-hybrid')),'blog_layout'=>array('default'=>__('طرح اصلی','frpmesh-hybrid'),'grid'=>__('شبکه‌ای','frpmesh-hybrid'),'list'=>__('فهرستی','frpmesh-hybrid')));$layouts=array('default'=>__('طرح اصلی','frpmesh-hybrid'),'full'=>__('تمام‌عرض','frpmesh-hybrid'),'boxed'=>__('کادری','frpmesh-hybrid'),'content_sidebar'=>__('محتوا و ستون کناری','frpmesh-hybrid'),'sidebar_content'=>__('ستون کناری و محتوا','frpmesh-hybrid'));$sets['page_layout']=$layouts;$sets['archive_layout']=$layouts;return isset($sets[$key])?$sets[$key]:array();}
 function frpmt_options(){ $options=get_option('frpmt_settings',array());return is_array($options)?$options:array(); }
 function frpmt_option($key){$all=frpmt_options();$schema=frpmt_schema();return isset($schema[$key])?(isset($all[$key])?$all[$key]:$schema[$key]['default']):null;}
-/** Reject unknown keys and reject invalid color, URL, font, numeric and CSS input. */
-function frpmt_sanitize($input){$output=array();if(!is_array($input)){return $output;}foreach(frpmt_schema() as $key=>$field){if(!array_key_exists($key,$input)){continue;}$value=$input[$key];if(!is_scalar($value)){continue;}$value=wp_unslash($value);switch($field['type']){
+/** Reject unknown keys and reject invalid color, URL, font, numeric and CSS input. Input is already unslashed by options.php, the Customizer and the importer. */
+function frpmt_sanitize($input){$output=array();if(!is_array($input)){return $output;}foreach(frpmt_schema() as $key=>$field){if(!array_key_exists($key,$input)){continue;}$value=$input[$key];if(!is_scalar($value)){continue;}switch($field['type']){
  case 'color':$value=sanitize_hex_color($value);break;
  case 'number':$value=($value===''?'':max(0,min(2500,absint($value))));break;
  case 'decimal':$value=($value===''?'':max(-10,min(10,(float)$value)));break;
@@ -41,7 +41,11 @@ function frpmt_sanitize($input){$output=array();if(!is_array($input)){return $ou
  case 'select':$choices=frpmt_choices($key);$value=isset($choices[$value])?$value:$field['default'];break;
  case 'toggle':$value=(int)(bool)$value;break;
  case 'font':$value=trim((string)$value);$value=preg_match('/^[\pL\pN\s,\-]{0,90}$/u',$value)?$value:'';break;
- case 'css':$value=current_user_can('unfiltered_html')?substr(safecss_filter_attr((string)$value),0,8000):'';break;
+ case 'css':
+  // Without unfiltered_html (multisite admins, DISALLOW_UNFILTERED_HTML) keep the stored CSS instead of wiping it on every save.
+  if(current_user_can('unfiltered_html')){$value=substr(safecss_filter_attr((string)$value),0,8000);}
+  else{$stored=frpmt_options();$value=isset($stored[$key])&&is_string($stored[$key])?$stored[$key]:'';}
+  break;
  default:$value=sanitize_text_field($value);}
  $output[$key]=$value; }return $output;}
 function frpmt_register_settings(){register_setting('frpmt_group','frpmt_settings',array('sanitize_callback'=>'frpmt_sanitize','default'=>array()));foreach(frpmt_sections() as $section=>$label){if($section==='dashboard')continue;add_settings_section('frpmt_'.$section,$label,'__return_false','frpmt-'.$section);foreach(frpmt_schema() as $key=>$field){if($field['section']===$section){add_settings_field('frpmt_'.$key,$field['label'],'frpmt_field', 'frpmt-'.$section,'frpmt_'.$section,array('key'=>$key,'field'=>$field,'label_for'=>'frpmt_'.$key));}}}}

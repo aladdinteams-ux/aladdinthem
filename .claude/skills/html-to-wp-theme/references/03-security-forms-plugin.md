@@ -5,7 +5,7 @@
 Reference: `plugins/larijani-stone-core/` (forms.php, uploads.php, post-types.php, leads-admin.php, svg.php, privacy.php, migrate.php, uninstall.php). Copy and rename the prefix for a new brand.
 
 ## Theme ↔ plugin split
-- Plugin (`<brand>-core`, own text domain, Requires PHP 7.4 / WP 6.5) owns: CPTs/taxonomies (projects, leads) with `register_post_meta`, project meta box, leads admin, form handler, uploads, SVG sanitiser, privacy exporter/eraser, CSV export, migration of old data, uninstall (keeps data unless the admin opted in; projects never deleted).
+- Plugin (`<theme-slug>-core`, text domain `<theme-slug>-core`, Requires PHP 7.4 / WP 6.5) owns: CPTs/taxonomies (projects, leads) with `register_post_meta`, project meta box, leads admin, form handler, uploads, SVG sanitiser, privacy exporter/eraser, CSV export, migration of old data, uninstall (keeps data unless the admin opted in; projects never deleted).
 - Theme only renders. `larijani_form_hidden_fields( $name, $schema )` delegates to `larijani_core_form_fields()` when the plugin is active; otherwise outputs the same markup and a fallback AJAX handler returns a clear "form not active, please call" message (503).
 - Upgrades: if the plugin is missing on a site that already has projects/leads (one-time DB check stored in an option), the theme registers the same post types as a **compatibility fallback** so URLs/content survive; admin notice links to the wizard. Fresh installs never use it. (Theme Check flags this as wp.org-only "REQUIRED" — document it.)
 - Plugin ZIP is bundled in the theme (`bundled/<plugin>.zip`) and installed from the wizard on click.
@@ -26,7 +26,7 @@ Reference: `plugins/larijani-stone-core/` (forms.php, uploads.php, post-types.ph
 ## Uploads
 - Allow-list with per-type limits (jpg/png/webp 10 MB, pdf 20 MB, dwg/zip 30 MB, ≤ 5 files, ≤ 50 MB total), all filterable.
 - Content checks: magic bytes per type, `getimagesize` for images, finfo rejects script/executable types; ZIP inspected with ZipArchive (blocked extensions incl. double extensions, `.htaccess`, `../`/absolute paths, > 500 entries, > 200 MB unpacked, suspicious compression ratio); no ZipArchive → reject ZIP.
-- Store outside the media library in `uploads/<brand>-private-<random24>/leads/Y/m/<lead>/<random32>.<ext>` with `.htaccess` (deny + PHP off), `web.config`, `index.php`; optional constant for a path outside the web root; admin button that probes public reachability.
+- Store outside the media library in `uploads/aladdin-<project>-private-<random24>/leads/Y/m/<lead>/<random32>.<ext>` with `.htaccess` (deny + PHP off), `web.config`, `index.php`; optional constant for a path outside the web root; admin button that probes public reachability.
 - Download only via `admin-post.php` + nonce + `current_user_can('edit_post', $lead)`, headers `octet-stream`, `attachment`, `nosniff`, CSP sandbox, `no-store`; realpath must stay inside the private root.
 - E-mail never contains file links — only a dashboard link. Files deleted with the lead. Old public attachments: admin-triggered migration that copies, verifies SHA-256, then deletes the public copy.
 - SVG for administrators only, rebuilt from an allow-list (no script/foreignObject/on*/external or javascript: hrefs/entities/DOCTYPE).

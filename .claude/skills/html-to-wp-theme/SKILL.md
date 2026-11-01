@@ -14,7 +14,7 @@ Act as a senior WordPress engineer, Elementor specialist, UI engineer and releas
 |---|---|---|---|
 | **Build** | New HTML/design → new theme | P0–P9 | theme + plugin + child ZIPs, manifest, guide, report |
 | **Repair / extend** | Change or fix an existing theme repo built this way | P0 (scope + baseline of the affected parts) → only the phases the change touches → P8 regression → P9 | new version ZIPs + changelog + report |
-| **Live site** | Install on, fix or take over a real site (old header still showing, duplicate pages, migration) | references/12 first, then 09 §2; build phases only if files must change | change log of the site + evidence + restore steps (+ ZIPs only if files changed) |
+| **Live site** | Install on, fix or take over a real site (old header still showing, duplicate pages, migration) | references/12 first (preconditions: which theme/version/ZIP is installed, whether Elementor Pro is active), then 09 §2–3; build phases only if files must change | change log of the site + evidence + restore steps (+ ZIPs only if files changed) |
 | **Plan only / dry run** | The user asks for a plan, estimate or review | P0 reading only | written plan, questions, risks — no changes |
 Precedence when sources disagree: the user's latest instruction → SKILL.md contract → references 01–13 → references/14-handbook-fa.md (original intent; if it is stricter on safety, follow it). If still unclear, ask.
 
@@ -26,10 +26,11 @@ Precedence when sources disagree: the user's latest instruction → SKILL.md con
 | PHP namespace (classes) | `Aladdin\<Project>` | `Aladdin\Sanat\Forms` |
 | Functions, options, hooks, meta keys, AJAX/REST names | `aladdin_<project>_` / `aladdin/<project>/v1` | `aladdin_sanat_form_token`, `_aladdin_sanat_demo_key` |
 | CSS scope class and handles | `aladdin-<project>` / `aladdin-<project>-*` | `.aladdin-sanat`, `aladdin-sanat-theme` |
+`<project>` = the theme slug with hyphens turned into underscores for PHP names (`larijani-stone` → `aladdin_larijani_stone_`, namespace `Aladdin\LarijaniStone`) and kept with hyphens for CSS/handles (`aladdin-larijani-stone`).
 The Larijani reference code uses older names (`larijani_`, `ls_`, `LS-` tracking codes); when copying from references 03–05 or templates/, rename with this table. Limits and file types in those files are defaults to adapt per project.
 
 ## 0.2 Where to work
-Build a new project in its own folder and git repo (or the repo/branch the session designates) — never inside the Larijani reference theme. Its checkpoint lives at `<project>/docs/progress/CHECKPOINT.md`. If the session's task-list or file-sending tools are missing, keep the checklist in the checkpoint file and list output paths in the reply.
+Ask for a new repository for a new project. If none is available and the designated repo is the Larijani reference theme, build in `projects/<theme-slug>/` on the designated branch (the reference theme's package script excludes `projects/`) — never mix files into the reference theme itself. The checkpoint lives at `<project folder>/docs/progress/CHECKPOINT.md`. In live-site mode keep the checkpoint and a site change log (`docs/site-changes/<date>.md`: actions, IDs, before/after, evidence, restore steps — no credentials or personal data) in the project folder and commit them even when no theme files changed. If the session's task-list or file-sending tools are missing, keep the checklist in the checkpoint file and list output paths in the reply.
 
 ## 1. Working contract (always applies)
 
@@ -69,7 +70,7 @@ Copy this checklist into the task list and keep it updated:
 
 **Verification loop (each phase):** implement → run the phase's checks → fix → re-run → only then mark done. The visual baseline check (pixel diff against approved screenshots) runs after every change that touches CSS, markup or settings.
 
-Read references/09-pitfalls.md before starting; it lists every trap already paid for.
+Before starting read references/09-pitfalls.md: §1 for Build/Repair, §2 for Live site, §3 always.
 
 ## 3. Reference files (read the one you need, when you need it)
 
@@ -90,7 +91,7 @@ Read references/09-pitfalls.md before starting; it lists every trap already paid
 | references/13-official-sources.md | Checking current WordPress/Elementor/WooCommerce/W3C rules, marketplaces |
 | references/14-handbook-fa.md | The user's original Persian project handbook (source of the contract above); re-read when a rule's intent is unclear |
 
-Scripts (scripts/README.md) are run, not read: e.g. "Run `scripts/qa/pdiff.py REF NEW`". Run `bash scripts/preflight.sh` at the start of P0 and of every QA session (checks PHP, Node, Playwright, Chromium, Composer, sandboxes). Templates (templates/README.md) are working code to copy and re-prefix.
+Scripts (scripts/README.md) are run, not read: e.g. "Run `scripts/qa/pdiff.py REF NEW`". Run `bash ${CLAUDE_SKILL_DIR}/scripts/preflight.sh` (the script inside this skill's folder) at the start of P0 and of every QA session (checks PHP, Node, Playwright, Chromium, Composer, sandboxes). Templates (templates/README.md) are working code to copy and re-prefix.
 
 ## 4. Branding (always)
 - Author `علاءالدین تم (Aladdin Theme)` in theme, child theme and plugin headers; readme `Contributors: aladdintheme`; copyright `Copyright (C) <year> Aladdin Theme (علاءالدین تم)`.

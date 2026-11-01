@@ -18,7 +18,7 @@ Contents: 1 Intake · 2 Approved baseline · 3 Reference theme map · 4 Theme vs
 For each of its settings/features record one status: **موجود** (exists here), **نیازمند پیاده‌سازی** (to implement), **رزرو‌شده** (shown but intentionally not active — label it), **نامرتبط** (not relevant). Implement useful behaviour, not option names. The number of options in a reference is not a target ("92 options" ≠ "92 working features").
 
 ## 4. Theme vs companion plugin (default for new projects)
-| Theme (presentation) | Companion plugin `aladdin-<project>-core` |
+| Theme (presentation) | Companion plugin `<theme-slug>-core` |
 |---|---|
 | style.css, functions.php, template hierarchy, template parts | Custom Elementor widgets, controls, dynamic tags |
 | Design tokens (CSS variables, optional theme.json), assets, fonts, icons | CPTs, taxonomies, registered meta, persistent settings independent of theme |

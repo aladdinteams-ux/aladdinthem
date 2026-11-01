@@ -25,7 +25,7 @@ Before changing: front page and posts page options, kit settings, menu locations
 - Never delete legal pages, account, shop, cart, checkout, product or customer data without identification and permission.
 - Prefer Trash (restorable); permanent deletion needs separate permission.
 - Record IDs, replacements and URL effects; add redirects only where needed (old URL → its real replacement), never everything to the home page.
-- Existing duplicate such as `contact-us-2`: decide (with the user) which page is canonical; move the other to Trash (WordPress renames a trashed page's slug to `…__trashed`, which frees the slug); set the canonical page's slug to `contact-us`; rebuild menu items from page IDs; add one redirect from the `-2` URL; re-check internal links and the sitemap.
+- Existing duplicate such as `contact-us-2`: decide (with the user) which page is canonical; move the other to Trash (WordPress renames a trashed page's slug to `…__trashed`, which frees the slug); set the canonical page's slug to `contact-us`; rebuild menu items from page IDs; add one 301 redirect from the `-2` URL using the site's existing redirect tool (Redirection plugin or the SEO plugin's redirect manager) with permission — theme code only as a last resort — and verify with `curl -I`; re-check internal links and the sitemap.
 
 ## 6. Verification
 After the change, collect evidence: screenshots of the public pages and the dashboard, the page HTML showing the new template IDs (`elementor-<id>`), every language, header/footer/single/archive, menus, forms, after purging caches. A delivered ZIP is not proof of a live installation.

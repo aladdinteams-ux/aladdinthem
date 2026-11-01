@@ -16,3 +16,4 @@ require_once ALADDIN_PAYAB_SANAT_ASA_DIR . '/inc/setup.php';
 require_once ALADDIN_PAYAB_SANAT_ASA_DIR . '/inc/chrome.php';
 require_once ALADDIN_PAYAB_SANAT_ASA_DIR . '/inc/assets.php';
 require_once ALADDIN_PAYAB_SANAT_ASA_DIR . '/inc/content-filters.php';
+require_once ALADDIN_PAYAB_SANAT_ASA_DIR . '/inc/companion.php';

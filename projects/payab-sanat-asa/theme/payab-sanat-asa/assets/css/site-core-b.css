@@ -1,0 +1,380 @@
+/* == v26-uiverse-mobile-nav.css == */
+/* V26 — adapted from user-supplied expandable Uiverse menu */
+.payab-uiverse-nav{display:none}
+@media (max-width:960px){
+  .mobile-bottom-nav{display:none!important}
+  .floating-call{display:none!important}
+  body{padding-bottom:72px!important}
+  .payab-uiverse-nav{
+    display:block;
+    position:fixed;
+    z-index:200;
+    bottom:calc(9px + env(safe-area-inset-bottom,0px));
+    left:50%;
+    transform:translateX(-50%);
+    width:min(360px,calc(100vw - 22px));
+    padding:6px;
+    background:rgba(255,255,255,.93);
+    border-radius:19px;
+    border:1px solid rgba(101,145,188,.09);
+    box-shadow:0 6px 18px rgba(10,39,68,.11);
+    backdrop-filter:blur(18px) saturate(1.14);
+    -webkit-backdrop-filter:blur(18px) saturate(1.14);
+    direction:rtl;
+    isolation:isolate;
+  }
+  .payab-uiverse-items{display:flex;align-items:center;justify-content:space-between;gap:2px;min-width:0;}
+  .payab-uiverse-link{
+    appearance:none;
+    border:0;
+    padding:0 7px;
+    box-sizing:border-box;
+    color:#607e96;
+    background:transparent;
+    text-decoration:none;
+    border-radius:13px;
+    height:46px;
+    flex:1 1 0;
+    min-width:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0;
+    white-space:nowrap;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition:flex-grow .25s cubic-bezier(.2,.8,.2,1),background-color .2s,color .2s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .payab-uiverse-link::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(28,106,168,.08);
+    transform:translateX(102%);
+    opacity:0;
+    transition:transform .24s ease,opacity .24s ease;
+    border-radius:inherit;
+    z-index:-1;
+  }
+  .payab-uiverse-link:is(.is-active,:focus-visible):before{transform:translateX(0);opacity:1}
+  .payab-uiverse-link:is(.is-active,:focus-visible){flex-grow:1.85;color:#1266a6}
+  .payab-uiverse-link:hover{color:#1266a6}
+  .payab-uiverse-link:hover::before{opacity:1;transform:translateX(0)}
+  .payab-uiverse-link:focus-visible{outline:2px solid #2b7fc1;outline-offset:-2px}
+  .payab-uiverse-link .link-icon{
+    width:21px;height:21px;display:flex;align-items:center;justify-content:center;flex:none;
+    position:relative;
+    z-index:2;
+  }
+  .payab-uiverse-link .link-icon svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .payab-uiverse-link .link-icon svg[viewBox="0 0 256 256"]{stroke-width:16}
+  .payab-uiverse-link .link-title{
+    direction:inherit;
+    max-width:0;
+    width:auto;
+    opacity:0;
+    overflow:hidden;
+    font-size:10px;
+    font-weight:800;
+    line-height:1.2;
+    white-space:nowrap;
+    transform:translateX(-7px);
+    transition:max-width .25s cubic-bezier(.2,.8,.2,1),opacity .2s,transform .25s,margin .25s;
+    margin-inline-start:0;
+  }
+  .payab-uiverse-link:is(.is-active,:focus-visible) .link-title{
+    max-width:68px;
+    opacity:1;
+    margin-inline-start:5px;
+    transform:translateX(0);
+  }
+  .payab-mobile-search{
+    position:absolute;
+    bottom:calc(100% + 9px);
+    inset-inline:0;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    padding:8px;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 8px 26px rgba(15,53,84,.16);
+    border:1px solid rgba(122,164,200,.16);
+  }
+  .payab-mobile-search[hidden]{display:none!important}
+  .payab-mobile-search input{
+    flex:1;min-width:0;max-width:100%;height:38px;border:0;outline:0;
+    color:#143753;background:#f1f7fc;border-radius:11px;padding:0 12px;font-size:12px;
+  }
+  .payab-mobile-search button{flex:none;width:37px;height:37px;display:grid;place-items:center;border:0;border-radius:10px;background:#e8f3fc;color:#1b659f;cursor:pointer}
+  .payab-mobile-search .payab-mobile-search-submit{background:#146cad;color:#fff}
+  .payab-mobile-search svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  html[data-theme="dark"] .payab-uiverse-nav{background:rgba(17,33,49,.94);border-color:rgba(165,200,229,.09);box-shadow:0 8px 22px rgba(0,0,0,.23)}
+  html[data-theme="dark"] .payab-uiverse-link{color:#a5bed3}
+  html[data-theme="dark"] .payab-uiverse-link:is(.is-active,:focus-visible),html[data-theme="dark"] .payab-uiverse-link:hover{color:#b5ddff}
+  html[data-theme="dark"] .payab-uiverse-link::before{background:rgba(109,179,234,.11)}
+  html[data-theme="dark"] .payab-mobile-search{background:#142b40;border-color:rgba(165,200,229,.1);box-shadow:0 8px 26px rgba(0,0,0,.36)}
+  html[data-theme="dark"] .payab-mobile-search input{background:#203b54;color:#f1f8ff}
+  html[data-theme="dark"] .payab-mobile-search input::placeholder{color:#b1c8de}
+  html[data-theme="dark"] .payab-mobile-search-close{background:#244761;color:#deefff}
+}
+@media (max-width:365px){
+  .payab-uiverse-nav{width:calc(100vw - 14px);padding:5px}
+  .payab-uiverse-link{padding:0 4px;height:44px}
+  .payab-uiverse-link .link-icon svg[viewBox="0 0 256 256"]{stroke-width:16}
+  .payab-uiverse-link .link-title{font-size:9px}
+  .payab-uiverse-link:is(.is-active,:focus-visible){flex-grow:2.05}
+  .payab-uiverse-link .link-icon svg{width:19px;height:19px}
+}
+@media (min-width:961px){.payab-uiverse-nav{display:none!important}}
+@media (prefers-reduced-motion:reduce){.payab-uiverse-link,.payab-uiverse-link:before,.payab-uiverse-link .link-icon svg[viewBox="0 0 256 256"]{stroke-width:16}
+  .payab-uiverse-link .link-title{transition:none!important}}
+
+/* == v27-responsive-offcanvas.css == */
+/* V27: pixel-conscious responsive system + premium offcanvas */
+:root{--payab-responsive-font:'Vazirmatn',Tahoma,sans-serif}
+html[lang="ar"]{--payab-responsive-font:'Cairo','Vazirmatn',Tahoma,sans-serif}
+html[lang="en"]{--payab-responsive-font:'Manrope',Arial,sans-serif}
+.payab-uiverse-nav,.payab-uiverse-nav button,.payab-uiverse-nav input,.payab-uiverse-nav .link-title,
+.payab-uiverse-nav .payab-mobile-search{font-family:var(--payab-responsive-font)!important}
+/* Defensive type and content wraps without clipping */
+body{min-width:0}h1,h2,h3,h4,p,.eyebrow,.section-head,.asa-point,.asa-quick-answer,.footer-desc,.contact-text,.promo-text{overflow-wrap:break-word}
+img,svg,video{max-width:100%}section,.container,.asa-products-wrap,.asa-spotlight-inner{min-width:0}
+#products .asa-product-info,#products .asa-product-card,.category-card .copy,.footer-grid>div{min-width:0}
+#products .asa-product-info h3,#products .asa-product-desc,#products .asa-product-side-note{overflow-wrap:anywhere}
+#products .asa-product-photo img{object-fit:contain!important;max-width:100%;max-height:100%}
+/* Offcanvas base: overlay intercepts page without sacrificing position of the fixed nav */
+#drawer-overlay.drawer-overlay{position:fixed;inset:0;z-index:279;background:rgba(7,24,41,.40)!important;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);opacity:0;visibility:hidden;display:block;pointer-events:none;transition:opacity .24s,visibility .24s}
+#drawer-overlay.drawer-overlay.visible{opacity:1;visibility:visible;pointer-events:auto}
+#mobile-panel.mobile-panel{position:fixed;inset-block:0;inset-inline-start:0;inset-inline-end:auto;width:min(370px,92vw);max-width:100%;z-index:280;display:flex;flex-direction:column;direction:inherit;visibility:hidden;overflow:hidden;overflow-x:hidden;padding:0;transform:translateX(110%);background:#fbfdff;box-shadow:-20px 0 65px rgba(7,25,43,.20);transition:transform .28s cubic-bezier(.2,.8,.2,1),visibility .28s;}
+html[dir="ltr"] #mobile-panel.mobile-panel{transform:translateX(-110%);box-shadow:20px 0 65px rgba(7,25,43,.20)}
+#mobile-panel.mobile-panel.open{visibility:visible;transform:translateX(0)!important}
+.payab-drawer-head{flex:none;padding:24px 22px 18px;border-bottom:1px solid rgba(95,144,190,.1);display:flex;align-items:center;justify-content:space-between;gap:12px;background:linear-gradient(150deg,#f6fbff,#eef6fd)}
+.payab-drawer-brand{display:flex;align-items:center;gap:11px;min-width:0}.payab-drawer-brand img{width:43px;height:43px;object-fit:contain;flex:none;border-radius:12px;background:white;padding:6px;box-shadow:0 3px 14px rgba(17,70,112,.05)}
+.payab-drawer-brand div{min-width:0;display:grid;gap:3px}.payab-drawer-brand strong{font:800 14px/1.55 var(--payab-responsive-font);color:#10395b}.payab-drawer-brand small{font:600 10px/1.6 var(--payab-responsive-font);color:#748da3}
+.payab-drawer-close{width:42px;height:42px;flex:0 0 42px;border:0;border-radius:14px;color:#1b567e;background:#e4f0f9;display:grid;place-items:center;cursor:pointer}
+.payab-drawer-close svg,.payab-drawer-links svg,.payab-drawer-setting-title svg,.payab-drawer-consult svg{height:19px;width:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.payab-drawer-scroller{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;padding:20px 18px 14px;overscroll-behavior:contain;scrollbar-width:thin}
+.payab-drawer-eyebrow{font:800 10px/1.5 var(--payab-responsive-font);letter-spacing:.025em;color:#8da4b8;margin:0 9px 12px}
+#mobile-panel .payab-drawer-links{display:grid;gap:5px;min-width:0}
+#mobile-panel .payab-drawer-link{display:flex;align-items:center;gap:11px;min-height:50px;padding:8px 11px;min-width:0;border:0;border-radius:14px;font:700 12px/1.6 var(--payab-responsive-font);color:#274f70;background:transparent;text-decoration:none}
+#mobile-panel .payab-drawer-link:is(:hover,:focus-visible){background:#eaf4fc;color:#115d95}
+.payab-drawer-glyph{width:35px;height:35px;flex:0 0 35px;background:#ecf5fd;display:grid;place-items:center;border-radius:11px;color:#2774a7}
+.payab-drawer-chevron{margin-inline-start:auto;color:#a2b4c5;display:grid;place-items:center;transform:scale(.7)}
+html[dir="rtl"] .payab-drawer-chevron{transform:scale(.7) rotate(180deg)}
+#mobile-panel .payab-drawer-details{border:0;background:none;margin:0;padding:0;min-width:0}
+#mobile-panel .payab-drawer-details>summary{display:flex;gap:11px;align-items:center;min-height:50px;padding:8px 11px;border-radius:14px;color:#274f70;font:700 12px/1.6 var(--payab-responsive-font);list-style:none;cursor:pointer;justify-content:flex-start}
+#mobile-panel .payab-drawer-details>summary:hover{background:#eaf4fc}
+#mobile-panel .payab-drawer-details>summary>svg{width:35px;height:35px;flex:0 0 35px;stroke-width:1.7;padding:8px;color:#2774a7;background:#ecf5fd;border-radius:11px;fill:none;stroke:currentColor}
+#mobile-panel .payab-drawer-details>summary .faq-toggle-icon{margin-inline-start:auto;display:grid;place-items:center;width:26px;height:26px;color:#4c8dbf;background:transparent;border:0}
+#mobile-panel .payab-drawer-details .payab-drawer-submenu{padding:4px 45px 8px 8px;display:grid;gap:4px}
+html[dir="ltr"] #mobile-panel .payab-drawer-details .payab-drawer-submenu{padding:4px 8px 8px 45px}
+#mobile-panel .payab-drawer-submenu a{background:#eef6fc!important;display:flex;align-items:center;padding:10px 12px;margin:0;border:0;border-radius:10px;font:600 11px/1.6 var(--payab-responsive-font);color:#326485;min-height:42px}
+.payab-drawer-settings{margin-top:20px;padding:18px 0 0;border-top:1px solid rgba(95,144,190,.14)}
+.payab-drawer-setting-line{display:flex;align-items:center;justify-content:space-between;gap:9px;min-height:62px;padding:6px 9px}
+.payab-drawer-setting-title{display:flex;align-items:center;gap:8px;min-width:0;color:#376180;font:700 11px/1.5 var(--payab-responsive-font)}
+.payab-drawer-setting-title svg{width:17px;height:17px;color:#3184bf}
+.payab-drawer-languages{display:flex;flex:none;gap:3px;padding:4px;border-radius:13px;background:#eaf3fb}
+.payab-drawer-languages a{font:800 11px/1.5 'Manrope',Arial,sans-serif;min-width:31px;height:31px;display:grid;place-items:center;border-radius:9px;color:#6987a0;text-decoration:none}
+.payab-drawer-languages a[aria-current="page"]{background:#176fac;color:white;box-shadow:0 3px 9px rgba(17,89,145,.14)}
+.payab-drawer-theme{display:flex;flex:none;gap:2px;align-items:center;border:0;background:#eaf3fb;border-radius:13px;padding:4px;color:#517792;cursor:pointer}
+.payab-drawer-theme>span{display:flex;align-items:center;gap:4px;padding:6px 8px;min-height:31px;border-radius:9px;font:700 10px/1.3 var(--payab-responsive-font)}
+.payab-drawer-theme svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8}
+html:not([data-theme="dark"]) .payab-drawer-theme .payab-mode-sun,html[data-theme="dark"] .payab-drawer-theme .payab-mode-moon{color:#fff;background:#176fac}
+.payab-drawer-consult{margin:8px 18px max(15px,env(safe-area-inset-bottom));flex:none;border-radius:16px;display:flex;align-items:center;gap:10px;padding:12px 13px;color:#fff;background:linear-gradient(120deg,#176ca8,#10466f);text-decoration:none}
+.payab-drawer-consult-icon{width:39px;height:39px;border-radius:12px;background:rgba(255,255,255,.15);display:grid;place-items:center;flex:none}.payab-drawer-consult strong{display:block;font:800 12px/1.5 var(--payab-responsive-font)}.payab-drawer-consult small{display:block;font:500 10px/1.6 var(--payab-responsive-font);color:#c8dfef}
+.payab-drawer-consult-arrow{margin-inline-start:auto;display:grid;place-items:center}
+html[dir="rtl"] .payab-drawer-consult-arrow{transform:rotate(180deg)}
+html[data-theme="dark"] #mobile-panel.mobile-panel{background:#102236;box-shadow:-20px 0 65px rgba(0,0,0,.46)}
+html[data-theme="dark"] .payab-drawer-head{background:linear-gradient(140deg,#1b344e,#13283f);border-color:rgba(149,186,214,.1)}
+html[data-theme="dark"] .payab-drawer-brand strong{color:#e8f5ff}
+html[data-theme="dark"] .payab-drawer-brand small{color:#a7bdd3}
+html[data-theme="dark"] .payab-drawer-brand img{background:#d7eaf9}
+html[data-theme="dark"] .payab-drawer-close{background:#24445e;color:#d9eefe}
+html[data-theme="dark"] .payab-drawer-eyebrow{color:#9fb8cd}
+html[data-theme="dark"] #mobile-panel .payab-drawer-link,html[data-theme="dark"] #mobile-panel .payab-drawer-details>summary{color:#d7e8f8}
+html[data-theme="dark"] #mobile-panel .payab-drawer-link:is(:hover,:focus-visible),html[data-theme="dark"] #mobile-panel .payab-drawer-details>summary:hover{background:#1e3b56}
+html[data-theme="dark"] .payab-drawer-glyph,html[data-theme="dark"] #mobile-panel .payab-drawer-details>summary>svg{background:#203e59;color:#a7d3f6}
+html[data-theme="dark"] #mobile-panel .payab-drawer-submenu a{background:#1c3852!important;color:#d7e8f8}
+html[data-theme="dark"] .payab-drawer-setting-title{color:#c8ddef}
+html[data-theme="dark"] .payab-drawer-languages,html[data-theme="dark"] .payab-drawer-theme{background:#1c3953;color:#afc5d9}
+html[data-theme="dark"] .payab-drawer-settings{border-color:rgba(149,186,214,.13)}
+@media(min-width:961px){#mobile-panel.mobile-panel,#drawer-overlay.drawer-overlay{display:none!important}}
+@media(max-width:960px){
+ .payab-header .header-search-wrap{display:none!important}
+ .payab-header .header-actions .language-switch,.payab-header .header-actions #theme-toggle{display:none!important}
+ .payab-header .header-actions .header-consult{display:none!important}
+ .payab-header .header-main{max-width:100%;gap:12px;display:flex;align-items:center;justify-content:space-between}
+ .payab-header .header-main>.logo{min-width:0;max-width:calc(100% - 63px)}
+ .payab-header .mobile-toggle{display:grid!important;width:44px;height:44px;flex:0 0 44px;place-items:center;border:1px solid rgba(108,160,199,.12);border-radius:14px;background:#eef6fc;color:#175d95;box-shadow:none;order:1}
+ .payab-header .mobile-toggle svg{width:23px;height:23px}
+ .payab-header .header-actions{flex:none;margin:0;display:flex;align-items:center}
+ .payab-header .header-navigation,.payab-header .header-bottom{display:none!important}
+ .payab-header .header-main>.logo{flex:1 1 auto}
+ #mobile-panel.mobile-panel{display:flex!important}
+ .container{width:min(calc(100% - 34px),var(--max))}
+ .payab-uiverse-nav .link-title{font-family:var(--payab-responsive-font)!important;letter-spacing:0!important}
+ .payab-uiverse-nav .payab-uiverse-link{min-height:46px}
+ html[data-theme="dark"] .payab-header .mobile-toggle{color:#d2edff;background:#1f3e59;border-color:rgba(139,186,220,.14)}
+}
+@media(max-width:767px){
+ .section,.categories,.products,.guide,.faq-section,.learning,.story-section,.asa-spotlight,.promo-section{padding-block:clamp(36px,7vw,58px)!important}
+ .container{width:calc(100% - 30px)!important;max-width:none}
+ .hero,.hero-choice-02{min-width:0;overflow:hidden}
+ .hero .container{width:calc(100% - 30px)!important}
+ .hero-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important;min-height:0!important}
+ .hero-copy{max-width:100%!important;min-width:0!important;padding:30px 0 15px!important}
+ .hero h1{font-size:clamp(24px,6.5vw,36px)!important;line-height:1.55!important;max-width:100%!important;margin-bottom:15px!important}
+ .hero p{font-size:clamp(12px,3.4vw,14px)!important;line-height:1.95!important}
+ .hero-actions{display:flex!important;flex-wrap:wrap!important;gap:8px!important;min-width:0}
+ .hero-actions .btn{flex:1 1 140px;min-width:0;max-width:100%;white-space:normal;text-align:center}
+ .hero-visual{width:100%!important;max-width:100%!important;min-height:250px!important;height:clamp(260px,72vw,400px)!important}
+ .hero-stage{width:100%!important;max-width:100%!important;height:100%!important;transform:none!important}
+ .hero-stage img{width:100%!important;height:100%!important;object-fit:contain!important}
+ .float-note{max-width:67%;white-space:normal}
+ .quick-layout{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+ .quick-item{min-width:0;padding:9px!important;gap:8px!important}.quick-item strong,.quick-item small{overflow-wrap:anywhere}
+ .section-head,.asa-products-heading{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:12px!important;min-width:0}
+ .section-head h2,.asa-products-heading h2,.asa-spotlight-heading h2{font-size:clamp(23px,6vw,30px)!important;line-height:1.55!important}
+ #categories .category-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+ #categories .category-card{min-width:0;padding:15px!important;gap:10px!important;min-height:170px!important}
+ #categories .category-card .copy{min-width:0!important;flex:1 1 56%!important}
+ #categories .category-card h3{font-size:clamp(15px,4.8vw,19px)!important;margin-bottom:4px}
+ #categories .category-card p{font-size:11px!important;line-height:1.75!important}
+ #categories .category-card img{flex:0 0 41%!important;max-width:41%!important;width:41%!important;max-height:150px!important;height:150px!important}
+ .asa-spotlight-layout{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:16px!important;min-width:0}
+ .asa-point-col,.asa-cutout-figure,.asa-point,.asa-quick-answer{min-width:0;max-width:100%}
+ .asa-point-col{display:grid;grid-template-columns:minmax(0,1fr)!important;gap:10px}
+ .asa-cutout-figure{min-height:260px;order:-1;margin-inline:auto}.asa-cutout-figure>img{max-height:300px!important;width:100%!important;object-fit:contain!important}
+ .asa-product-grid,.product-grid,#products .asa-product-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:14px!important}
+ #products .asa-product-photo{max-width:100%;overflow:hidden}
+ #products .asa-product-photo img{max-width:100%!important;max-height:100%!important;object-fit:contain!important}
+ #products .asa-product-info{padding:14px!important}
+ #products .asa-product-foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+ #products .asa-product-side-note{font-size:11px!important;max-width:100%}
+ .asa-product-filters,.filters{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-start}
+ .asa-product-filters .asa-filter,.filter{min-width:0;flex:0 1 auto;max-width:100%;white-space:normal}
+ .promo-grid,.learning-grid,.story-grid,.faq-wrap,.guide-panel{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:14px!important;min-width:0}
+ .promo-banner{min-width:0;min-height:270px!important;padding:22px!important}
+ .promo-text h2{font-size:clamp(22px,6vw,30px)!important;line-height:1.55!important}
+ .promo-text p{font-size:12px!important}
+ .guide-content,.guide-steps{min-width:0;padding:22px!important}
+ .guide-content h2,.faq-heading h2{font-size:clamp(22px,5.6vw,29px)!important;line-height:1.55!important}
+ .guide-actions{display:flex;flex-wrap:wrap;gap:8px}
+ .guide-actions .btn{flex:1 1 145px;white-space:normal;text-align:center}
+ .learn-card,.learn-img,.learn-body{min-width:0}
+ .faq-list details{max-width:100%;min-width:0}
+ .faq-list summary{gap:12px!important;line-height:1.9!important;font-size:12px!important;overflow-wrap:anywhere}
+ .contact-box{padding:24px!important;gap:18px!important;flex-direction:column!important;align-items:stretch!important}
+ .contact-text h2{font-size:clamp(22px,5.8vw,30px)!important}
+ .contact-buttons{display:flex!important;flex-direction:column!important;gap:9px}
+ .contact-buttons .btn{width:100%!important;white-space:normal}
+ .footer-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px 15px!important}
+ .footer-grid>div:first-child,.footer-grid>div:last-child{grid-column:1/-1!important}
+ .footer-contact span{overflow-wrap:anywhere}
+ .copyright{display:flex!important;flex-direction:column;gap:7px;align-items:flex-start;overflow-wrap:anywhere}
+}
+@media(max-width:380px){
+ .container{width:calc(100% - 24px)!important}
+ .hero .container{width:calc(100% - 24px)!important}
+ .hero h1{font-size:24px!important}
+ #categories .category-card{padding:11px!important;min-height:155px!important}
+ #categories .category-card img{width:40%!important;max-width:40%!important;flex-basis:40%!important;height:125px!important;max-height:125px!important}
+ .payab-drawer-head{padding:20px 15px 15px}
+ .payab-drawer-scroller{padding-inline:12px}
+ .payab-drawer-settings{margin-top:14px}
+ .payab-drawer-setting-line{padding-inline:4px}
+ .payab-uiverse-nav{max-width:calc(100vw - 12px)}
+}
+@media(min-width:768px) and (max-width:960px){
+ .container{width:calc(100% - 44px)!important}
+ .hero-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important}
+ .hero-copy{min-width:0!important;padding:50px 0 40px!important}
+ .hero h1{font-size:clamp(26px,4vw,39px)!important}
+ .hero-visual{height:400px!important;min-width:0}
+ .hero-stage{width:100%!important;height:100%!important}
+ .category-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .category-card:last-child{grid-column:1/-1}
+ .asa-spotlight-layout{grid-template-columns:minmax(0,1fr)!important}
+ .asa-cutout-figure{max-width:360px;margin:auto}
+ #products .asa-product-grid,.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .promo-grid,.learning-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .footer-grid>div:first-child,.footer-grid>div:last-child{grid-column:auto!important}
+}
+@media(prefers-reduced-motion:reduce){#mobile-panel.mobile-panel,#drawer-overlay.drawer-overlay{transition:none!important}}
+
+
+/* Make language and theme controls truly horizontal in offcanvas */
+#mobile-panel .payab-drawer-languages{display:flex!important;flex-direction:row!important;align-items:center!important;gap:3px!important;padding:4px!important}
+#mobile-panel .payab-drawer-languages a{display:grid!important;place-items:center!important;min-width:31px!important;width:31px!important;height:31px!important;padding:0!important;margin:0!important;border:0!important;border-radius:9px!important;line-height:1!important}
+#mobile-panel .payab-drawer-theme{display:flex!important;flex-flow:row nowrap!important;align-items:center!important;white-space:nowrap!important}
+#mobile-panel .payab-drawer-theme>span{display:flex!important;flex-direction:row!important}
+#mobile-panel .payab-drawer-brand img{opacity:1!important;visibility:visible!important;display:block!important}
+#mobile-panel .payab-drawer-links{display:grid!important;grid-template-columns:minmax(0,1fr)!important}
+@media(max-height:750px) and (max-width:960px){
+ .payab-drawer-head{padding-block:14px}
+ .payab-drawer-scroller{padding-block:13px}
+ #mobile-panel .payab-drawer-link,#mobile-panel .payab-drawer-details>summary{min-height:44px}
+ .payab-drawer-setting-line{min-height:53px}
+ .payab-drawer-consult{margin-block:7px 10px;padding-block:9px}
+}
+
+/* == v28-sticky-glass.css == */
+/* V28 · Glass header only after scrolling — preserves V27 navigation and layout */
+.payab-header.header .header-main{
+  /* Initial view: clean, mostly solid surface */
+  background:rgba(250,253,255,.97)!important;
+  -webkit-backdrop-filter:blur(9px) saturate(1.05)!important;
+  backdrop-filter:blur(9px) saturate(1.05)!important;
+  border-color:rgba(160,195,221,.23)!important;
+  box-shadow:0 5px 18px rgba(22,65,101,.045)!important;
+  transition:background-color .32s ease,backdrop-filter .32s ease,-webkit-backdrop-filter .32s ease,box-shadow .32s ease,border-color .32s ease;
+}
+html[data-theme="dark"] .payab-header.header .header-main{
+  background:rgba(18,37,56,.97)!important;
+  -webkit-backdrop-filter:blur(9px) saturate(1.05)!important;
+  backdrop-filter:blur(9px) saturate(1.05)!important;
+  border-color:rgba(150,190,219,.13)!important;
+  box-shadow:0 5px 18px rgba(0,0,0,.10)!important;
+}
+/* Scroll state: true frosted glass, no change to the header height or position */
+.payab-header.header.is-glass-sticky .header-main{
+  background:rgba(244,250,255,.70)!important;
+  -webkit-backdrop-filter:blur(28px) saturate(1.45)!important;
+  backdrop-filter:blur(28px) saturate(1.45)!important;
+  border-color:rgba(167,203,230,.38)!important;
+  box-shadow:0 8px 26px rgba(17,64,102,.08)!important;
+}
+html[data-theme="dark"] .payab-header.header.is-glass-sticky .header-main{
+  background:rgba(14,33,52,.72)!important;
+  -webkit-backdrop-filter:blur(28px) saturate(1.30)!important;
+  backdrop-filter:blur(28px) saturate(1.30)!important;
+  border-color:rgba(132,175,208,.24)!important;
+  box-shadow:0 9px 28px rgba(0,0,0,.22)!important;
+}
+/* For older browsers without blur, retain a legible opaque header */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .payab-header.header.is-glass-sticky .header-main{background:#f5faff!important}
+  html[data-theme="dark"] .payab-header.header.is-glass-sticky .header-main{background:#12273c!important}
+}
+@media(max-width:960px){
+  .payab-header.header.is-glass-sticky .header-main{
+    background:rgba(246,251,255,.76)!important;
+    -webkit-backdrop-filter:blur(24px) saturate(1.32)!important;
+    backdrop-filter:blur(24px) saturate(1.32)!important;
+    box-shadow:0 5px 18px rgba(16,60,100,.065)!important;
+  }
+  html[data-theme="dark"] .payab-header.header.is-glass-sticky .header-main{
+    background:rgba(13,33,52,.78)!important;
+    -webkit-backdrop-filter:blur(24px) saturate(1.2)!important;
+    backdrop-filter:blur(24px) saturate(1.2)!important;
+    box-shadow:0 6px 20px rgba(0,0,0,.20)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .payab-header.header .header-main{transition:none!important}
+}
+

@@ -31,8 +31,15 @@ add_action(
 
 		wp_enqueue_style( 'aladdin-payab-sanat-asa-fonts', $u . 'css/fonts.css', array(), $ver );
 		wp_enqueue_style( 'aladdin-payab-sanat-asa-icons', $u . 'css/bootstrap-icons.css', array(), $ver );
-		wp_enqueue_style( 'aladdin-payab-sanat-asa-core', $u . 'css/site-core.css', array_merge( $dep, array( 'aladdin-payab-sanat-asa-fonts' ) ), $ver );
+		wp_enqueue_style( 'aladdin-payab-sanat-asa-core', $u . 'css/site-core-a.css', array_merge( $dep, array( 'aladdin-payab-sanat-asa-fonts' ) ), $ver );
 		$prev = 'aladdin-payab-sanat-asa-core';
+		// The approved Persian pages link two extra CSS files (mobile nav dark fix, category image restore); en/ar do not.
+		if ( 'fa' === aladdin_payab_sanat_asa_lang() ) {
+			wp_enqueue_style( 'aladdin-payab-sanat-asa-fa-compat', $u . 'css/site-fa-compat.css', array( $prev ), $ver );
+			$prev = 'aladdin-payab-sanat-asa-fa-compat';
+		}
+		wp_enqueue_style( 'aladdin-payab-sanat-asa-core-b', $u . 'css/site-core-b.css', array( $prev ), $ver );
+		$prev = 'aladdin-payab-sanat-asa-core-b';
 		if ( 'home' !== $set['family'] ) {
 			wp_enqueue_style( 'aladdin-payab-sanat-asa-family', $u . 'css/site-' . $set['family'] . '.css', array( $prev ), $ver );
 			$prev = 'aladdin-payab-sanat-asa-family';
@@ -47,7 +54,7 @@ add_action(
 			'aladdin-payab-sanat-asa-site',
 			'window.PayabAsa=' . wp_json_encode(
 				array(
-					'assets'    => untrailingslashit( $u ),
+					'assets'    => untrailingslashit( $u . 'images' ),
 					'mega'      => $sc['mega'] ?? new stdClass(),
 					'favAdd'    => $sc['favAdd'] ?? '',
 					'favRemove' => $sc['favRemove'] ?? '',

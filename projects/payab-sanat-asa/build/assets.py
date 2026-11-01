@@ -25,7 +25,13 @@ fam = {
 # common prefix (core) = CSS present in every family's first-seen order
 lists = {k: links(os.path.join(src, v[0])) for k, v in fam.items()}
 late = ['v36-accordion-icons.css', 'v37-frameless-arrow.css']
-core = [c for c in lists['home'] if all(c in l for l in lists.values()) and c not in late]
+en_home = links(os.path.join(src, 'en/index.html'))
+fa_only = [c for c in lists['home'] if c not in en_home]      # CSS the Persian pages link but the en/ar pages do not (v24/v25)
+core = [c for c in lists['home'] if all(c in l for l in lists.values()) and c not in late and c not in fa_only]
+print('fa-only css', fa_only)
+cut = lists['home'].index(fa_only[0]) if fa_only else len(core)
+before = [c for c in core if lists['home'].index(c) < cut]
+after = [c for c in core if lists['home'].index(c) >= cut]
 print('core', len(core))
 def read(c): return open(os.path.join(src, 'assets/css', c), encoding='utf8').read()
 def bundle(name, files):
@@ -33,10 +39,12 @@ def bundle(name, files):
         for c in files:
             o.write('/* == %s == */\n%s\n' % (c, read(c)))
     print(name, len(files))
-bundle('site-core.css', core)
+bundle('site-core-a.css', before)
+bundle('site-fa-compat.css', fa_only)
+bundle('site-core-b.css', after)
 bundle('site-final.css', late)
 for k in ('home', 'inner', 'product', 'contact'):
-    extra = [c for c in lists[k] if c not in core and c not in late]
+    extra = [c for c in lists[k] if c not in core and c not in late and c not in fa_only]
     bundle('site-%s.css' % k, extra)
 # union-order sanity: home-only extras (not in other families)
 for c in glob.glob(os.path.join(src, 'assets/js/*.js')):

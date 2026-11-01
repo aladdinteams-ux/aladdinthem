@@ -15,6 +15,12 @@ class Seo {
 	public static function init() {
 		add_filter( 'document_title_parts', array( __CLASS__, 'title_parts' ), 20 );
 		add_action( 'wp_head', array( __CLASS__, 'head' ), 3 );
+		// Core prints its own canonical; ours is language-aware, so only one may stay.
+		add_action( 'wp', static function () {
+			if ( self::active() ) {
+				remove_action( 'wp_head', 'rel_canonical' );
+			}
+		} );
 	}
 
 	private static function active() {

@@ -21,6 +21,9 @@ out = ['/* Aladdin Payab Sanat Asa - merged from the approved HTML inline script
 for chunk in (fa[1], fa[2], fav, mega, fa[5]):
     out.append(chunk.strip())
 js = '\n'.join(out) + '\n'
+# a11y fix: the drawer is visibility:hidden until its transition starts, so focusing immediately fails
+assert 'if(isOpen)close.focus();' in js
+js = js.replace('if(isOpen)close.focus();', 'if(isOpen)window.setTimeout(()=>close.focus(),80);')
 os.makedirs(os.path.join(theme, 'assets/js'), exist_ok=True)
 open(os.path.join(theme, 'assets/js/payab-site.js'), 'w', encoding='utf8').write(js)
 json.dump(strings, open(os.path.join(theme, 'inc/data/script-strings.json'), 'w', encoding='utf8'), ensure_ascii=False, indent=0)

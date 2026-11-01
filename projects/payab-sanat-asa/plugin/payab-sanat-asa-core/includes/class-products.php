@@ -30,6 +30,9 @@ class Products {
 	}
 
 	public static function rewrites() {
+		if ( ! post_type_exists( 'product' ) ) {
+			return;
+		}
 		add_rewrite_rule( '^(en|ar)/product/([^/]+)/?$', 'index.php?post_type=product&product=$matches[2]-$matches[1]', 'top' );
 	}
 

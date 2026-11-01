@@ -16,4 +16,5 @@ defined( 'ABSPATH' ) || exit;
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <?php aladdin_payab_sanat_asa_chrome( 'pre' ); ?>
-<main id="content">
+<?php $aladdin_main = aladdin_payab_sanat_asa_main_class(); ?>
+<main id="content"<?php echo $aladdin_main ? ' class="' . esc_attr( $aladdin_main ) . '"' : ''; ?>>

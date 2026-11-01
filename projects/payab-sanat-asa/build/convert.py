@@ -75,7 +75,7 @@ def has_block(el):
 
 def is_leaf(el):
     t = el.tag
-    if t in OPAQUE or t in TEXT_TAGS: return True
+    if t in OPAQUE or t in TEXT_TAGS or t == 'figure': return True       # figure is not an Elementor container tag
     if t in STRUCT_TAGS or t in ('main',):
         if len(el) == 0 and not (el.text or '').strip(): return False      # empty decorative block -> empty container
         if any(d.tag == 'img' for d in el.iterdescendants() if isinstance(d.tag, str)) and el.xpath('count(.//a//img)=0 or true()'):
@@ -106,7 +106,7 @@ def leaf(el, ctx):
         return widget('text-editor', {'editor': outer(el), 'aladdin_raw': 'yes'}, ctx)
     # generic element widget (plugin): exact tag/class/attrs, link, image, inner markup
     cls = el.get('class', '')
-    attrs = [(k, v) for k, v in el.attrib.items() if k not in ('class', 'id', 'href', 'src', 'alt')]
+    attrs = [(k, v) for k, v in el.attrib.items() if k not in ('class', 'id', 'href', 'alt') and not (k == 'src' and t == 'img')]
     s = {'tag': t, 'css_classes': cls, 'element_id': el.get('id', ''),
          'attrs': '\n'.join('%s|%s' % (k, v) for k, v in attrs)}
     if t == 'img':

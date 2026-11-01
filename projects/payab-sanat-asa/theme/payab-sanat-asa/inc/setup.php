@@ -59,3 +59,14 @@ add_filter(
 		return $classes;
 	}
 );
+
+/** Class of <main>: the approved design styles every inner page through `.ip-page` (home pages have none). */
+function aladdin_payab_sanat_asa_main_class() {
+	$class = 'ip-page';
+	if ( is_singular() && metadata_exists( 'post', get_queried_object_id(), '_aladdin_payab_group' ) ) {
+		$class = '' === (string) get_post_meta( get_queried_object_id(), '_aladdin_payab_group', true ) ? '' : 'ip-page';
+	} elseif ( is_front_page() ) {
+		$class = '';
+	}
+	return (string) apply_filters( 'aladdin_payab_sanat_asa_main_class', $class );
+}

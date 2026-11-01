@@ -48,8 +48,8 @@ def cp(a, b): shutil.copy(a, os.path.join(F, b))
 css = ['/* Local fonts: Vazirmatn (OFL), Estedad (OFL), Manrope (OFL), Cairo (OFL), Bootstrap Icons (MIT). */']
 cp(fc + '/vazirmatn/package/fonts/webfonts/Vazirmatn[wght].woff2', 'Vazirmatn-var.woff2')
 css.append("@font-face{font-family:'Vazirmatn';src:url('../fonts/Vazirmatn-var.woff2') format('woff2');font-weight:100 900;font-display:swap}")
-cp(fc + '/est/fonts/webfonts/Estedad[wght].woff2', 'Estedad-var.woff2')
-css.append("@font-face{font-family:'Estedad';src:url('../fonts/Estedad-var.woff2') format('woff2');font-weight:100 900;font-display:swap}")
+cp(fc + '/gf/ofl/estedad/Estedad[wght].ttf', 'Estedad-var.ttf')   # same version Google Fonts serves
+css.append("@font-face{font-family:'Estedad';src:url('../fonts/Estedad-var.ttf') format('truetype');font-weight:100 900;font-display:swap}")
 for w in (400, 500, 600, 700, 800):
     for sub in ('latin', 'latin-ext'):
         n = 'manrope-%s-%d-normal.woff2' % (sub, w)
@@ -66,7 +66,7 @@ bi = open(fc + '/bootstrap-icons/package/font/bootstrap-icons.min.css', encoding
 bi = re.sub(r'@font-face\{.*?\}', "@font-face{font-display:swap;font-family:bootstrap-icons;src:url('../fonts/bootstrap-icons.woff2') format('woff2')}", bi, count=1, flags=re.S)
 open(os.path.join(A, 'css/fonts.css'), 'w', encoding='utf8').write('\n'.join(css) + '\n')
 open(os.path.join(A, 'css/bootstrap-icons.css'), 'w', encoding='utf8').write(bi)
-shutil.copy(fc + '/est/OFL.txt', os.path.join(F, 'LICENSE-Estedad-OFL.txt'))
+shutil.copy(fc + '/gf/ofl/estedad/OFL.txt', os.path.join(F, 'LICENSE-Estedad-OFL.txt'))
 for d, n in (('vazirmatn', 'Vazirmatn'), ('manrope', 'Manrope'), ('cairo', 'Cairo'), ('bootstrap-icons', 'BootstrapIcons')):
     p = glob.glob(fc + '/%s/package/LICENSE*' % d)
     if p: shutil.copy(p[0], os.path.join(F, 'LICENSE-%s.txt' % n))

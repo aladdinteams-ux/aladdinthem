@@ -68,12 +68,13 @@ class Element_Widget extends Widget_Base {
 			'line' => array( 'x1' => true, 'x2' => true, 'y1' => true, 'y2' => true ),
 			'details' => array( 'open' => true ), 'summary' => array(), 'dialog' => array( 'open' => true ),
 			'form' => array( 'action' => true, 'method' => true, 'novalidate' => true, 'data-inquiry-form' => true, 'data-msg-title' => true, 'data-msg-usage' => true, 'data-msg-topic' => true, 'data-msg-note' => true, 'data-copy-success' => true, 'data-copy-fail' => true, 'role' => true ),
-			'input' => array( 'type' => true, 'name' => true, 'value' => true, 'placeholder' => true, 'required' => true, 'autocomplete' => true, 'checked' => true, 'min' => true, 'max' => true ),
+			'input' => array( 'maxlength' => true, 'minlength' => true, 'pattern' => true, 'inputmode' => true, 'step' => true, 'type' => true, 'name' => true, 'value' => true, 'placeholder' => true, 'required' => true, 'autocomplete' => true, 'checked' => true, 'min' => true, 'max' => true ),
 			'select' => array( 'name' => true, 'required' => true, 'multiple' => true ), 'option' => array( 'value' => true, 'selected' => true ), 'optgroup' => array( 'label' => true ),
-			'textarea' => array( 'name' => true, 'rows' => true, 'cols' => true, 'placeholder' => true, 'required' => true, 'readonly' => true ),
+			'textarea' => array( 'name' => true, 'maxlength' => true, 'minlength' => true, 'rows' => true, 'cols' => true, 'placeholder' => true, 'required' => true, 'readonly' => true ),
 			'button' => array( 'type' => true, 'name' => true, 'value' => true, 'disabled' => true ),
 			'label' => array( 'for' => true ),
 			'iframe' => array( 'src' => true, 'width' => true, 'height' => true, 'loading' => true, 'allowfullscreen' => true, 'referrerpolicy' => true, 'title' => true ),
+			'img' => array( 'decoding' => true, 'fetchpriority' => true, 'srcset' => true, 'sizes' => true, 'loading' => true, 'width' => true, 'height' => true, 'alt' => true, 'src' => true ),
 			'i' => array(), 'em' => array(), 'small' => array(), 'figure' => array(), 'figcaption' => array(), 'nav' => array(), 'time' => array( 'datetime' => true ),
 		);
 		foreach ( $extra as $tag => $attrs ) {

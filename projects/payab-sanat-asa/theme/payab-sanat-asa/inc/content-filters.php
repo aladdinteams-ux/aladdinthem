@@ -11,3 +11,19 @@ add_filter( 'the_content', 'aladdin_payab_sanat_asa_resolve_tokens', 99 );
 add_filter( 'elementor/frontend/the_content', 'aladdin_payab_sanat_asa_resolve_tokens', 99 );
 add_filter( 'elementor/widget/render_content', 'aladdin_payab_sanat_asa_resolve_tokens', 99 );
 add_filter( 'elementor/frontend/container/render_content', 'aladdin_payab_sanat_asa_resolve_tokens', 99 );
+
+/**
+ * Imported pages carry exact design markup (saved fallback HTML): keep WordPress from "fixing" it
+ * with automatic paragraphs and typographic replacements.
+ */
+add_action(
+	'wp',
+	static function () {
+		if ( is_singular() && metadata_exists( 'post', get_queried_object_id(), '_aladdin_payab_group' ) ) {
+			remove_filter( 'the_content', 'wpautop' );
+			remove_filter( 'the_content', 'wptexturize' );
+			remove_filter( 'the_content', 'convert_chars' );
+			remove_filter( 'the_content', 'shortcode_unautop' );
+		}
+	}
+);

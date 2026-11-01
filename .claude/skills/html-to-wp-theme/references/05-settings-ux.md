@@ -1,5 +1,22 @@
 # 05 — Commercial settings, search/filter UX, menus, branding
 
+Contents: Settings panel · Search panel that filters · Glass dropdowns · Menu active state · Branding
+
+## Settings panel scope (handbook) — cover what applies to the project
+| Section | Expected controls |
+|---|---|
+| Identity | main, mobile, retina and footer logos; favicon (site icon); brand description; logo size |
+| Colours | primary, secondary, text, heading, background, surface, border; light and dark values |
+| Typography | font family, weight, size, line height, letter spacing (headings/body), tablet and mobile scale |
+| Layout | site width, container, content width, section spacing, radius |
+| Header | structure variant, sticky, mobile, menu, phone, CTA — only options that are really implemented |
+| Footer | logo, description, copyright, links, columns, back-to-top |
+| Content | archive layout, card columns, images, metadata, breadcrumbs |
+| Advanced | SEO-related toggles, performance, motion, safe custom CSS (sanitised, no `</style>`) |
+- Don't duplicate settings WordPress or Elementor already provide (site icon, kit) — link to them.
+- Defaults reproduce the approved UI exactly. Test save → reload, empty values, defaults and custom values. Distinguish active options from «رزرو‌شده» ones in the UI.
+- Writing settings: capability + nonce, sanitise per type (URL, colour, number, text, CSS), escape in the output context. Settings export/import is versioned JSON without secrets.
+
 ## Theme settings page (+ same fields in the Customizer)
 Tabs: Overview (plugin status, leads count, created pages with "edit with Elementor", **reset all settings** with backup + one-click restore, **about card**), Brand & colors (+ links to Customizer `custom_logo` and `site_icon`), Contact & socials, Header, Footer, Blog, Forms, **Typography & layout**, Theme builder.
 - Every option's default reproduces the HTML design exactly ("طرح اصلی"). Only non-default values print CSS (`larijani_customizer_css()` inline on the main stylesheet).

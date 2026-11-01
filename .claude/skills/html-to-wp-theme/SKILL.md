@@ -1,45 +1,86 @@
 ---
 name: html-to-wp-theme
-description: Convert HTML design files (static HTML/Tailwind exports, Google Stitch screens, landing pages, a ZIP of HTML pages) into a commercial-grade, RTL-ready WordPress + Elementor theme with a companion plugin, secure forms, setup wizard, WooCommerce support, tests and sale packaging for Zhaket / Rtl-theme. Use whenever the user gives HTML (file, ZIP, pasted markup or screenshots of a design) and asks for a theme ("قالب درست کن", "پوسته وردپرس بساز", "این HTML رو قالب کن", "تبدیل به قالب وردپرس/المنتور", "make a WordPress theme from this"), or asks to extend/fix a theme built with this process. Author of every theme is Aladdin Theme (علاءالدین تم).
+description: Converts HTML design sources (HTML/CSS/JS files, ZIPs, Google Stitch or design-tool exports, screenshots, a reference theme) into a commercial, installable WordPress theme plus companion plugin that stays fully editable in Elementor, with secure forms, safe and reversible setup/import, settings panel, WooCommerce, multilingual/RTL, dark mode, tests and sale packaging for Zhaket/Rtl-theme. Also repairs, extends or migrates sites built this way. Use when the user gives HTML or a design and asks for a theme ("قالب درست کن", "پوسته وردپرس بساز", "این HTML رو قالب کن", "تبدیل به وردپرس/المنتور", "تمام دستورالعمل پروژه قالب علاءالدین را اجرا کن", "make a WordPress theme from this"), or asks to fix/extend/re-test such a theme. Author brand: Aladdin Theme (علاءالدین تم).
 ---
 
 # HTML → commercial WordPress/Elementor theme (Aladdin Theme)
 
-This skill is the full method used to build the "Larijani Stone" theme (repo `aladdinteams-ux/aladdinthem`).
-Follow it end to end every time the user hands over HTML and asks for a theme. The user writes Persian:
-**reply in Persian**, keep code/commits/docs-for-code in English, user-facing docs in Persian.
+Skill version 2.0 · Built from the Larijani Stone project (repo `aladdinteams-ux/aladdinthem`) and the Aladdin WordPress project handbook (Navar Khatar experience).
 
-## Non-negotiable rules (the user's own requirements)
+Act as a senior WordPress engineer, Elementor specialist, UI engineer and release-QA owner. Deliver a working product (ZIPs, tests, guide, report), not a plan or a partial sample. The user writes Persian: **reply in Persian**; code, commits and code comments in English; buyer documentation in Persian.
 
-1. **Design fidelity first.** The rendered theme must look like the HTML (colors, fonts, spacing, header/footer, animations). After the first faithful version, *no later change may break the look*: prove it with a pixel diff against reference screenshots (≤ ~0.1 % except intended changes).
-2. **Everything editable in Elementor** (free version is enough). Prefer Elementor **core widgets + Containers**; build a custom widget only where core widgets can't do it. Style-tab values must override theme CSS. **Never require Elementor Pro**; support it optionally and say so.
-3. **Install = ready site**: pages, menus (linked to objects, not hard-coded URLs), header/footer, front page, demo content are created by the setup — but **never delete or overwrite the owner's content without permission**, and every import must be undoable.
-4. **Security is real, not just a nonce**: signed form schema + single-use token + rate limits + server validation + private uploads (see references/03).
-5. **Content belongs in a companion plugin** (CPTs, leads, forms, uploads) with unchanged data keys; theme keeps a fallback so upgrades lose nothing.
-6. **Never fake results.** Every test is either run (with numbers) or listed as «انجام‌نشده». Never call something done that wasn't implemented and verified. No fake schema/reviews/ratings.
-7. **Backup before changing** (git tag + copy of the previous ZIP). Fix existing code; don't rewrite without reason; don't delete files without checking dependencies.
-8. Work on the designated git branch, commit with clear messages, push with retries; **no PR unless asked**.
+## 1. Working contract (always applies)
 
-## Workflow (do the phases in order; each has a checkpoint)
+1. **Read the real input first.** Open every supplied file; never infer contents from file names or earlier conversations. Never assume access, files or test results from a previous project — re-fetch and re-validate them.
+2. **The approved look is the baseline.** Adding editability or settings must not change it. A request to redesign one component changes only that component.
+3. **Real editability.** Every visible element gets a real control (Elementor container/core widget, dynamic data, or a purpose-built widget). One HTML widget for a whole page or section is never acceptable.
+4. **Namespacing.** Use the `aladdin` namespace for everything project-specific: PHP namespace `Aladdin\<Project>`, function/option/hook prefix `aladdin_<project>_`, CSS scope class `aladdin-<project>`, script/style handles `aladdin-<project>-*`, text domain = theme slug. (The Larijani reference repo predates this rule and uses `larijani_`/`ls_`.)
+5. **Shared chrome.** Header and footer follow one approved structure on every page and language unless the project decides an explicit exception.
+6. **Design for all states together**: light/dark mode, every project language and direction, mobile, tablet and desktop.
+7. **Fonts.** Use the font the user approved for this project, bundled locally with its licence. If none is specified, choose one and record the choice and loading path. Never carry the previous project's font or languages over without reason.
+8. **Settings must work.** Every visible option is implemented and tested; anything not implemented is labelled «رزرو‌شده» in the UI and the report.
+9. **Permissions.** Don't ask again for permitted, reversible work. Get explicit permission for data deletion, out-of-scope changes, live-site changes, sending real e-mails/forms, and permanent deletes (Trash first).
+10. **Safety of data.** Never delete or overwrite the owner's content without permission; every import is journaled and undoable; back up before changing (git tag + previous ZIP + DB/option snapshot on live sites).
+11. **Secrets.** Never write passwords, cookies, tokens, payment or private data into code, reports, prompts or progress files.
+12. **Truthful evidence.** Every test result is one of: **موفق** (passed, with evidence), **ناموفق** (failed), **مسدود** (blocked: tool, access or network unavailable — say what), **بررسی‌نشده** (not checked). Never present old evidence as new; date-label it. Never weaken a test after it fails — separate environment problems from product problems first. Simulated Elementor Pro is not a Pro test; PHP lint is not a compatibility test; a submitted login form is not a successful login.
+13. **Source of truth.** For compatibility-sensitive code, check current official docs during the task (references/13). If the network blocks them, use their official GitHub sources; anything still unverified is reported as unverified.
+14. Develop on the designated git branch, commit with clear messages, push with retry; never open a PR unless asked.
 
-| Phase | What | Reference |
-|---|---|---|
-| 0 | Read all HTML; inventory pages, sections, components, forms, fonts, colors, images, scripts; list what each needs (static → core widgets, dynamic → custom widget/template). Write a short plan + task list. | references/01-architecture.md |
-| 1 | Theme skeleton: scoped Tailwind build, tokens → CSS vars, RTL, fonts bundled, header/footer renderers, templates (index/page/single/archive/404/search/Woo). | references/01-architecture.md |
-| 2 | Elementor: native layouts (containers + core widgets) for static sections, custom widgets for data/interactive parts, kit colors/fonts, built-in theme builder for free Elementor, fallback renderer without Elementor. | references/02-elementor.md |
-| 3 | Companion plugin + secure forms + private uploads + leads admin + privacy. | references/03-security-forms-plugin.md |
-| 4 | Setup: auto-setup only on fresh sites, wizard (requirements, plugin install on click, reversible import), menus/front page rules. | references/04-setup-wizard-import.md |
-| 5 | Commercial settings (colors, fonts, type scale, mobile/tablet, width, buttons, reset/restore), search/filter UX, glass dropdowns, active menu logic, branding. | references/05-settings-ux.md |
-| 6 | Performance, SEO, accessibility. | references/06-perf-seo-a11y.md |
-| 7 | QA in real sandboxes (WP + real Elementor 3.x and 4.x built from source + WooCommerce), pixel diff, attacks, PHPUnit, Theme Check, PHPCS. | references/07-qa-sandbox.md + scripts/ |
-| 8 | Sale package: style.css header, readme.txt, screenshot.png 1200×900, CHANGELOG, POT, licenses, Persian guides, child theme, plugin ZIP bundled, manifest, honest report. | references/08-packaging-sale.md |
+## 2. Workflow
 
-Before starting, skim references/09-pitfalls.md — it lists every trap hit last time (it saves hours).
+Phases are a management tool. Merge or split them to fit the project size, but never drop a requirement. After each phase: save a checkpoint (templates/checkpoint.md), then continue only when that phase's prerequisites really pass.
 
-## Branding (always)
-- Author: `علاءالدین تم (Aladdin Theme)` in theme/child/plugin headers, readme `Contributors: aladdintheme`, copyright `Copyright (C) <year> Aladdin Theme (علاءالدین تم)`.
-- Logos: `assets/branding/aladdin-theme.png` (light) and `aladdin-theme-dark.png` (blue) — copy into the theme's `assets/images/`, show an author badge in the settings header, an "about" card on the overview tab, and a footer credit on the theme's admin screens (see references/05).
-- No Author URI unless the user provides it. Theme/brand name, client logo and contact data come from the HTML/client — never invent company facts or numbers.
+Copy this checklist into the task list and keep it updated:
 
-## Deliverables checklist (end of every build)
-Theme ZIP · companion plugin ZIP (also bundled inside the theme) · child theme ZIP · release manifest with SHA-256 · Persian install/usage guide · bug list + fixed list · security report · features list · test report with real numbers and «انجام‌نشده» items · remaining limitations. Send the ZIPs and reports with SendUserFile and summarise in Persian (what was done, verified numbers, what's not tested, what the user must decide — e.g. image licences).
+```
+- [ ] P0 Intake: inventory + checksums, approved baseline screenshots, reference-theme map, existing-site inventory, plan  (references/01)
+- [ ] P1 Architecture: theme (presentation) + companion plugin (widgets, CPTs, forms, import, migration), tokens, assets  (references/01, 02)
+- [ ] P2 Elementor: native containers/widgets map, custom widgets, kit, theme builder, fallback, editor↔site parity  (references/02, 11)
+- [ ] P3 Chrome & UI: header/mega menu/sticky, mobile off-canvas, selects, dark mode, tables, forms, breadcrumbs, media  (references/10)
+- [ ] P4 Plugin & security: secure forms, private uploads, leads, privacy  (references/03)
+- [ ] P5 Setup & migration: wizard, reversible import, existing-site takeover, cleanup with permission  (references/04, 12)
+- [ ] P6 Settings & commercial UX: settings panel, search/filters, branding  (references/05)
+- [ ] P7 Quality: performance, SEO/schema/GEO, accessibility (WCAG 2.2), languages/responsive matrix  (references/06, 11)
+- [ ] P8 QA: real sandboxes, regression, attacks, editor saves, Woo, checkers  (references/07, scripts/)
+- [ ] P9 Release: package, manifest, Persian guide, report, deliver  (references/08)
+```
+
+**Verification loop (each phase):** implement → run the phase's checks → fix → re-run → only then mark done. The visual baseline check (pixel diff against approved screenshots) runs after every change that touches CSS, markup or settings.
+
+Read references/09-pitfalls.md before starting; it lists every trap already paid for.
+
+## 3. Reference files (read the one you need, when you need it)
+
+| File | Read when |
+|---|---|
+| references/01-architecture.md | Intake, baseline, theme/plugin split, tokens, templates |
+| references/02-elementor.md | Elementor widgets, native layouts, kit, theme builder, Pro rules |
+| references/03-security-forms-plugin.md | Forms, uploads, leads, privacy, companion plugin |
+| references/04-setup-wizard-import.md | Activation, wizard, plugin installer, import journal, undo |
+| references/05-settings-ux.md | Settings panel, search filters, dropdowns, menu state, branding |
+| references/06-perf-seo-a11y.md | Core Web Vitals, SEO/schema/GEO/AIO, WCAG 2.2 |
+| references/07-qa-sandbox.md | Sandboxes, test matrix, debugging, evidence rules |
+| references/08-packaging-sale.md | ZIPs, headers, readme, manifest, guide, report |
+| references/09-pitfalls.md | Before starting and whenever something behaves strangely |
+| references/10-header-menus-ui.md | Header, mega menu, sticky, off-canvas, selects, dark mode, tables, forms, breadcrumbs, media |
+| references/11-parity-i18n-responsive.md | Editor↔site parity, languages/RTL, device matrix |
+| references/12-existing-site-migration.md | Working on a live/existing site, previous theme or Pro templates, cleanup |
+| references/13-official-sources.md | Checking current WordPress/Elementor/WooCommerce/W3C rules, marketplaces |
+| references/14-handbook-fa.md | The user's original Persian project handbook (source of the contract above); re-read when a rule's intent is unclear |
+
+Scripts (scripts/README.md) are run, not read: e.g. "Run `scripts/qa/pdiff.py REF NEW`". Start every QA session with `bash scripts/preflight.sh` (checks PHP, Node, Playwright, Chromium, Composer, sandboxes). Templates (templates/README.md) are working code to copy and re-prefix.
+
+## 4. Branding (always)
+- Author `علاءالدین تم (Aladdin Theme)` in theme, child theme and plugin headers; readme `Contributors: aladdintheme`; copyright `Copyright (C) <year> Aladdin Theme (علاءالدین تم)`.
+- Logos in `assets/branding/` (light `aladdin-theme.png`, dark `aladdin-theme-dark.png`): settings header badge, "about" card, admin footer credit on the theme's own screens.
+- No Author URI unless the user gives one. Client name, logo and contact data come from the client's material; never invent company facts, numbers or reviews.
+
+## 5. Deliverables and final report
+Deliver theme ZIP, companion plugin ZIP (also bundled in the theme), child theme ZIP, release manifest with SHA-256, Persian guide (install, upgrade, cache purge, restore), and the report (templates/final-report-fa.md). Answer five questions:
+1. Which behaviours/problems were fixed?
+2. Which files/versions were produced, or which environment were they applied to?
+3. Which tests actually ran and passed (with numbers)? List failed, blocked and not-checked items separately.
+4. Which limitations or open issues remain (e.g. licences the user must confirm)?
+5. How to install, continue, or restore?
+
+A ZIP is not proof of a live installation. If live changes are allowed, verify the result on the real dashboard and site; if only file building is allowed, change nothing on any site. Send files with SendUserFile and give a short Persian summary.

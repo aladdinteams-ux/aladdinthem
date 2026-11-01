@@ -1,6 +1,11 @@
-# Templates (working code from Larijani Stone 1.4.1)
+# Templates
 
-Copy, then rename prefixes (`larijani_` → `<brand>_`, `Larijani_`, `LARIJANI_`, text domains, `ls_` hooks/keys if the new theme has no legacy data) and adjust demo-specific values (categories, field labels, aliases).
+- `checkpoint.md` — progress/checkpoint file (save after every phase and before/after external changes).
+- `final-report-fa.md` — Persian final report answering the five questions.
+
+## Working code from Larijani Stone 1.4.1
+
+Copy, then rename prefixes to the aladdin namespace (`larijani_` → `aladdin_<project>_`, `Larijani_` → `Aladdin\<Project>\…`, `LARIJANI_` → `ALADDIN_<PROJECT>_`, text domains, `ls_` hooks/keys if the new theme has no legacy data) and adjust demo-specific values (categories, field labels, aliases).
 
 - `companion-plugin/` — full companion plugin (CPTs, secure forms, private uploads, leads admin, SVG, privacy, migration, uninstall).
 - `theme-inc/forms.php` — theme side of forms (delegation + fallback handler).

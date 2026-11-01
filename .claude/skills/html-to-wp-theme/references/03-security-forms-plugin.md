@@ -34,3 +34,11 @@ Lead meta box (fields, private file links, legacy warning), list columns (phone 
 
 ## Tests that must pass (scripts/qa/forms-attack.py etc.)
 no token / forged token / too fast / replay / duplicate / tampered schema / honeypot; required, phone, Persian digits, invalid option, too long, unknown fields, array-in-scalar; PDF ok, PHP-as-PDF, `.php`, fake JPEG, ZIP with PHP, ZIP traversal, clean ZIP, DWG, EXE-as-DWG, >limit size, >5 files, files on a form without file field; rate limits; download by role (admin/editor 200, author/subscriber 403, anonymous and foreign nonce refused); Apache `.htaccess` 403 on file/dir/index/PHP; migration hash match; SVG and privacy.
+
+## General rules (WordPress security model)
+- A nonce proves intent (CSRF), never authorisation: always pair it with `current_user_can()` on the specific object.
+- Validate/sanitise input on arrival, escape output late and in context (`esc_html`, `esc_attr`, `esc_url`, `wp_kses_*`), `$wpdb->prepare()` for every custom query (prefer core APIs), `wp_safe_redirect()` for redirects, `defined( 'ABSPATH' ) || exit;` in every PHP file.
+- REST routes: `permission_callback` always present (`__return_true` only for genuinely public read-only data), argument schemas with `sanitize_callback`/`validate_callback`.
+- Error messages, logs, settings exports and reports never contain secrets, personal data or file-system paths.
+- Never send a test submission to a real recipient without permission; use a sandbox mailbox or log the mail.
+- In WooCommerce code, use the CRUD APIs (`wc_get_order()`, `$order->update_meta_data()` + `save()`) instead of post/postmeta functions, and declare HPOS compatibility in the plugin (references/13).

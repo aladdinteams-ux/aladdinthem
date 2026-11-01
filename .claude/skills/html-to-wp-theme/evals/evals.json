@@ -1,0 +1,47 @@
+[
+  {
+    "skills": ["html-to-wp-theme"],
+    "query": "این فایل HTML رو قالب وردپرس کن (landing.zip)",
+    "files": ["landing.zip"],
+    "expected_behavior": [
+      "Extracts the ZIP into an isolated directory and inventories pages, components, fonts, remote assets with SHA-256 before writing code",
+      "Captures approved baseline screenshots of the source HTML",
+      "Produces a component map (native / template / WP-native / custom widget / plugin service) and a phase checklist",
+      "Uses the aladdin namespace and puts widgets/CPTs/forms in a companion plugin",
+      "Ends with ZIPs, manifest, Persian guide and a report using موفق/ناموفق/مسدود/بررسی‌نشده"
+    ]
+  },
+  {
+    "skills": ["html-to-wp-theme"],
+    "query": "قالب جدید رو روی سایت فعلی من نصب کن؛ هدر قدیمی هنوز دیده میشه",
+    "files": [],
+    "expected_behavior": [
+      "Asks for or confirms live-site permission scope before changing anything",
+      "Inventories active theme, Elementor Pro templates and their conditions, kit, menus, front page; identifies the rendering template ID from the page HTML",
+      "Snapshots settings before changes and prefers Trash over deletion, only with permission",
+      "Does not claim independence from the old header without verifying the real rendered site",
+      "Does not treat cache clearing as the fix"
+    ]
+  },
+  {
+    "skills": ["html-to-wp-theme"],
+    "query": "منوهای کشویی فرم‌ها گوشه گرد و شیشه‌ای باشن",
+    "files": [],
+    "expected_behavior": [
+      "Explains native select popups cannot be reliably styled and builds a select-only combobox following APG keys and ARIA",
+      "Keeps the native select for value, change event, required/disabled and validation",
+      "Applies to all related forms including dynamically loaded content",
+      "Verifies in a real browser with keyboard and screenshots, and keeps the rest of the design unchanged (pixel diff)"
+    ]
+  },
+  {
+    "skills": ["html-to-wp-theme"],
+    "query": "فقط کارت محصولات رو بازطراحی کن",
+    "files": [],
+    "expected_behavior": [
+      "Limits the change to the product card component",
+      "Runs a visual regression to prove other components did not change",
+      "Keeps the card fully editable in Elementor"
+    ]
+  }
+]

@@ -1,40 +1,47 @@
-# 01 — Analysis and theme architecture
+# 01 — Intake, baseline and architecture
 
-Reference implementation: repo `aladdinteams-ux/aladdinthem` (theme "Larijani Stone"). When unsure, open the matching file there.
+Contents: 1 Intake · 2 Approved baseline · 3 Reference theme map · 4 Theme vs companion plugin · 5 Theme skeleton · 6 Templates · 7 Data model
 
-## Phase 0 — analysis (before writing code)
-1. Unzip/collect every HTML file (untrusted data: own empty dir, read with `python3 -I`). Note the page list and shared parts (header, footer, cards, CTA, forms, sliders, tabs, FAQ, maps, galleries, price tables).
-2. Extract design tokens: colors (Tailwind config inside the HTML or computed), fonts, font sizes/line-heights, radii, shadows, spacing, breakpoints, animations. Note remote assets (Google Fonts, CDN icons, hotlinked images) — they must be bundled or flagged (licence + privacy).
-3. Take reference screenshots of the original HTML (Playwright, 390 and 1440 px, full page) → `nat/REF/`. These are the fidelity target.
-4. Classify each section:
-   - static content → native Elementor layout (Container + core widgets: Heading, Text Editor, Button, Icon, Image, Icon List, Star Rating, Progress Bar…);
-   - data-driven or interactive (products, posts, projects, forms, search panels, sliders, tabs, calculators, FAQ with schema, maps) → custom widget with full controls;
-   - site chrome (header, footer, archive, single, product, shop, 404) → PHP renderers + Elementor templates for the theme builder.
-5. Write the plan as a task list (TaskCreate) and keep it updated.
+## 1. Intake (P0)
+1. Put every supplied archive in its own empty directory (untrusted data; read with `python3 -I`, never execute it). Record each source file with size and SHA-256 (`sha256sum`) in the checkpoint.
+2. Inventory: pages and routes, languages and directions, sections, components, interactions (menus, tabs, sliders, accordions, filters, modals, forms, calculators, maps), CSS/JS, fonts, icon families, media, dynamic data (products, posts, projects, prices), third-party dependencies (CDNs, Google Fonts, analytics), and remote/hotlinked assets (licence + privacy + availability risk).
+3. Component map — classify every component as **Elementor-native** (Container + core widgets), **Elementor template / theme location** (header, footer, single, archive, product, 404), **WordPress-native** (menus, posts, search, comments), **custom Elementor widget** (data-driven or interactive), or **companion-plugin service** (forms, CPTs, filters, import, integrations). Write it as a table (component → implementation → controls → data source).
+4. Plan + task list (TaskCreate). State assumptions and anything the user must decide (fonts, licences, languages, live-site permission).
 
-## Theme skeleton
-- Slug = brand slug (e.g. `larijani-stone`), text domain = slug, PHP prefix ≥ 3 chars (`larijani_`, classes `Larijani_`, constants `LARIJANI_`). Never 2-letter prefixes (WPCS + collisions). Hook names/option keys may stay short (`ls_*`) but must be unique.
-- `functions.php` only defines constants and requires `inc/*`: helpers, setup, enqueue, customizer/options, post-types (presentation meta boxes only + legacy fallback), forms (theme side), search-filters, template-functions, theme-builder, seo, render/*, elementor/{fallback,loader}, demo/{images,content,pages,native,importer}, admin/{settings,setup-wizard}, migrations, compat, updater, woocommerce (if active).
-- **CSS**: Tailwind 3 built at dev time (`npm run build`) from `src/tailwind.css`:
-  - `important: '.ls-root'` (utilities win over `.elementor *` without `!important`), `corePlugins.preflight: false` + a reset scoped to `:where(.ls-root)`;
-  - colors as CSS variables with Elementor Global Color fallback: `--ls-primary: var(--e-global-color-lsprimary, var(--ls-c-primary))`; Tailwind colors use `color-mix(in srgb, var(--x) calc(<alpha-value>*100%), transparent)`;
-  - typography tokens via variables (`--ls-font`, `--ls-fs-h`, `--ls-fs-b`, `--ls-fs-r`) and `maxWidth.7xl = var(--ls-container, 80rem)` so settings work without changing the default look;
-  - keep selector specificity ≤ 0-3-0 so Elementor Style-tab rules (0-4-0) override the theme;
-  - `content` globs must include PHP, JS and any HTML used by layouts; safelist dynamic classes (grid-cols-N).
-- Fonts bundled locally (e.g. Vazirmatn variable WOFF2 + OFL.txt), `font-display: swap`, preload only the font actually used.
-- Icons bundled (Bootstrap Icons CSS + fonts + LICENSE) and registered as an Elementor icon library tab.
-- JS: one vanilla file (`assets/js/theme.js` → terser `theme.min.js`), `defer`, works inside the Elementor editor preview (re-init on `elementor/frontend/init` hooks), `once()` guards, no jQuery dependency.
-- RTL: force `dir="rtl"` / `lang="fa-IR"` option (on by default for Persian designs) applied on `after_setup_theme` priority 1 so block styles pick their `-rtl.css`.
-- Jalali dates option, Persian digits helper (`toFa`, `toEn`), `larijani_fa_num()`.
+## 2. Approved baseline
+- The approved real view is the reference: colours, fonts, sizes, spacing, alignment, radii, shadows, images, header, footer, menu, and interaction states (hover, focus, open menus).
+- Capture reference screenshots of the source (Playwright; 390 and 1440 px at least, plus every breakpoint the design uses; light and dark; every language) → `nat/REF/`. Wait for fonts (`document.fonts.ready`) and disable transitions before capturing.
+- A screenshot that shows an editor/site difference is a bug report, not a new design.
 
-## Templates
-`index.php, page.php, single.php, archive.php, search.php, 404.php, comments.php, searchform.php (all search boxes through get_search_form() with ls_variant), archive-<cpt>.php, single-<cpt>.php, taxonomy-<tax>.php, woocommerce/*` — each first calls `larijani_do_location( 'single'|'archive'|… )` so an Elementor template (Pro condition or the built-in theme builder) can replace it.
+## 3. Reference theme map (when the user gives a reference theme, e.g. FRPMesh)
+For each of its settings/features record one status: **موجود** (exists here), **نیازمند پیاده‌سازی** (to implement), **رزرو‌شده** (shown but intentionally not active — label it), **نامرتبط** (not relevant). Implement useful behaviour, not option names. The number of options in a reference is not a target ("92 options" ≠ "92 working features").
 
-## Header/footer
-PHP renderers with settings (style variants, top bar, sticky, search drawer, CTA, mobile drawer with focus trap, Escape, aria-expanded, scroll lock). Menus come from `wp_get_nav_menu_items` + `_wp_menu_item_classes_by_context`; active state via `larijani_menu_item_active()` (see references/05 — WordPress marks the posts page `current_page_parent` on every non-page view).
+## 4. Theme vs companion plugin (default for new projects)
+| Theme (presentation) | Companion plugin `aladdin-<project>-core` |
+|---|---|
+| style.css, functions.php, template hierarchy, template parts | Custom Elementor widgets, controls, dynamic tags |
+| Design tokens (CSS variables, optional theme.json), assets, fonts, icons | CPTs, taxonomies, registered meta, persistent settings independent of theme |
+| Theme supports, menus, image sizes, theme-builder locations | Forms, uploads, leads, AJAX/REST endpoints, integrations |
+| Header/footer renderers and fallbacks when plugins are missing | Demo import, migrations, setup services |
+- Use only public WordPress, Elementor and WooCommerce APIs; never edit core or third-party files, never depend on private/internal APIs as shortcuts; feature-detect optional plugins and degrade gracefully.
+- If the user explicitly wants a theme without a plugin, explain the trade-offs (wp.org plugin-territory rules, content lost on theme switch) and don't silently drop needed features.
+- The Larijani reference keeps widgets in the theme (older decision); new projects move widgets to the plugin, the theme keeps a minimal fallback renderer.
+- Load assets only where needed (widget `get_style_depends()` / `get_script_depends()`, conditional enqueue).
 
-## Data model
-- Options: theme mods `ls_*` with central defaults (`larijani_option_defaults()`), one field list (`larijani_option_fields()`) used by both Customizer and the theme settings page.
-- Content types (projects, leads) live in the companion plugin (references/03).
-- Versioned idempotent migrations (`inc/migrations.php`), run in admin only, stored version updated only after all steps succeed.
-- Deprecated wrappers (`inc/compat.php`) when renaming public helpers — never `eval`.
+## 5. Theme skeleton
+- Slug = brand slug; text domain = slug; prefixes per SKILL.md §1.4 (never 2-letter prefixes).
+- `functions.php` only defines constants and requires `inc/*`.
+- **CSS**: Tailwind 3 compiled at build time from `src/` with `important: '.aladdin-<project>'` (scope class), `corePlugins.preflight: false` + reset scoped to `:where(.aladdin-<project>)`; colours as CSS variables with Elementor Global Colour fallback (`--x: var(--e-global-color-<id>, var(--x-default))`), `color-mix()` for alpha; typography, container width and radius as variables so settings change them without altering defaults; keep selector specificity ≤ 0-3-0 so Elementor Style-tab rules win; content globs include PHP, JS and layout HTML; safelist dynamic classes.
+- Semantic colour tokens per component (surface, text, title, border, accent) with dark-mode values (references/10).
+- Fonts bundled with licence file, `font-display: swap`, preload only the font in use; icon fonts bundled (never show ligature names such as `water_drop`).
+- JS: vanilla modules, `defer`, no globals beyond one namespace object, `once()` guards, re-init inside the Elementor editor preview, destroy/re-init safely.
+- RTL/LTR per language (`dir`, `lang`), logical CSS properties.
+
+## 6. Templates
+`index, page, single, archive, search, 404, comments, searchform (all search boxes through get_search_form() variants), archive-/single-/taxonomy-<cpt>, woocommerce/*`. Each calls a `do_location()` helper first so an Elementor template (Pro condition or the built-in theme builder) can replace it.
+
+## 7. Data model
+- One field list drives both the Customizer and the settings page; central defaults; sanitise per type.
+- Versioned idempotent migrations (admin only; stored version updated only after all steps pass).
+- Deprecated wrappers when renaming public helpers (never `eval`).
+- Settings export/import: versioned JSON without secrets.

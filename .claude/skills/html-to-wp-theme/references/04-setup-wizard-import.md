@@ -29,3 +29,12 @@ Reference: `inc/demo/importer.php`, `inc/admin/setup-wizard.php`.
 
 ## Tests
 Fresh ZIP install → activation auto-setup; wizard: requirements render, install bundled plugin by click, CSRF without nonce 403, import projects (N created), re-run (0 created), undo (N removed, other counts unchanged); existing-content site: activation imports nothing, front page kept, notice shown, front checkbox unchecked with warning.
+
+## Handbook rules for import and migration (apply to every project)
+- Record ownership of every imported object (meta key such as `_aladdin_<project>_demo_key`); re-runs must never duplicate pages, menus, products or kit entries.
+- Preserve IDs, URLs, custom text and images, Elementor data, uploads and user CSS across import, upgrade and rebuild.
+- Test these orders and states: fresh install · upgrade from the previous version · theme then plugin · plugin then theme · a missing optional dependency installed later · interruption in the middle · retry · restore.
+- Show visible states in the UI: pending, active, error, restored. Never hide a partial failure behind a success message.
+- A restore must not be undone immediately by an automatic re-run (set a "restored" flag that auto-setup respects).
+- Never repeat heavy or fragile operations on every admin request; run once per version/state change.
+- Build links from object IDs and real permalinks, never from guessed slugs (an existing `contact-us` makes the new page `contact-us-2`).

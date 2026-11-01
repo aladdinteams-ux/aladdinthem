@@ -19,7 +19,7 @@ Elementor from source (both 3.x and 4.x): `git clone --depth 1 --branch v4.0.8 h
 
 Sites used last time: 8083 (WP 7.1.2 + Elementor 4.0.8 + Woo, theme symlinked), 8084 (Elementor 3.35.9 + Woo, upgraded data), 8085 (installed from the ZIP, no Woo, fresh).
 
-## Test matrix (record numbers; anything not run = «انجام‌نشده»)
+## Test matrix (record numbers; every item gets موفق / ناموفق / مسدود / بررسی‌نشده)
 | Area | Script / method |
 |---|---|
 | Reference screenshots + pixel diff (15 routes × 390/1440) | `scripts/qa/natshot.js`, `scripts/qa/pdiff.py` (threshold 24, report WORST %, same heights) |
@@ -46,3 +46,22 @@ Sites used last time: 8083 (WP 7.1.2 + Elementor 4.0.8 + Woo, theme symlinked), 
 - Per-IP limits trip when test groups run back-to-back from 127.0.0.1 — reset between groups.
 - PHP built-in server ignores `.htaccess` — test protection on real Apache.
 - Woo Action Scheduler "Unable to claim actions" on SQLite is an environment issue (check it exists before your change).
+
+## Official checkers
+- **Theme Check** (`WordPress/theme-check` on GitHub) — run on the theme installed from the release ZIP; its checks cover style.css header, screenshot, licences/copyright, escaping, plugin territory, bundled ZIPs, text domain, search form, title tag, deprecated functions, CDN usage.
+- **Plugin Check** (`WordPress/plugin-check` on GitHub, WP-CLI `wp plugin check <slug>`) — run on the companion plugin. Its checks: late escaping, nonce verification, direct DB queries, safe redirect, enqueued scripts in footer/scope/size, non-blocking scripts, performant WP_Query params, i18n usage, prefixing, setting sanitisation, uninstall, updater code, trademarks, direct file access, code obfuscation, minified files without source, file types, localhost URLs, offloading files to CDNs, no unfiltered uploads, readme and header fields. Needs Composer dependencies and WP-CLI; if downloads are not permitted, report «مسدود» with the reason.
+- **PHPCS** with WordPress-Extra security sniffs (EscapeOutput, NonceVerification, ValidatedSanitizedInput, PreparedSQL) = 0, PHPCompatibilityWP for the minimum PHP = 0.
+
+## Debugging rules (handbook)
+- "There has been a critical error on this website" names no cause. Get the fatal/exception, file, line, stack trace, PHP version, active plugins and versions, and the action that triggered it (debug.log, server log, recovery-mode e-mail).
+- Check: load order (plugin vs theme, `plugins_loaded`/`after_setup_theme`), duplicate function/class names, missing class/method (version mismatch), memory and time limits, stale generated files (Elementor CSS, minified bundles), caches (page, object, CDN, browser).
+- A temporary way back into the dashboard is not a root-cause fix. Fixing the header/footer does not prove every PHP error is gone.
+- A transient "Error establishing a database connection" is not a theme bug without log evidence; record it as environment.
+- In the test environment, block unrelated external requests (`WP_HTTP_BLOCK_EXTERNAL`) — never by weakening security or changing a live site's services.
+
+## Evidence rules
+- Each result is موفق / ناموفق / مسدود / بررسی‌نشده, with the command or screenshot that proves it, the environment and versions, and the date.
+- Never reuse evidence from a previous version as a new run; label old evidence with its date/version.
+- Never weaken a test after a failure; first separate an environment problem from a product problem.
+- Report sampling honestly ("15 routes × 2 widths", not "all pages").
+- Important tests every release: install and upgrade, missing optional dependency, Elementor save and render, re-run import, edits preserved, partial failure and rollback, real routes, JavaScript errors.

@@ -1,5 +1,8 @@
 # Scripts (copied from the Larijani Stone build; adapt ports/paths)
 
+Run `bash preflight.sh [ports]` first: it lists missing tools and stopped sandboxes and installs nothing.
+Scripts are executed, not read into context. They never install packages; if a dependency is missing, report the test as «مسدود».
+
 Placeholders: `$SCRATCH` = the session scratchpad directory; Chromium is `/opt/pw-browsers/chromium-1194/chrome-linux/chrome` and Playwright `/opt/node22/lib/node_modules/playwright` in this environment (adjust if different). Most scripts read `PORT` from the environment.
 
 ## sandbox/

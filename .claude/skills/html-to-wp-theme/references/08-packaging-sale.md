@@ -21,5 +21,12 @@ npx tailwindcss … --minify ; npx terser assets/js/theme.js … ; bash build/pa
 ```
 Theme Check: aim for 0 REQUIRED except documented wp.org-only items (CPT fallback, bundled plugin ZIP). Remaining WPCS formatting warnings may stay (report count) — don't mass-reformat.
 
+## Consistency checks before release (handbook)
+- Version in the style.css/plugin header, PHP constants, asset version keys and the manifest all match.
+- ZIP root folder = slug; archive opens cleanly (`unzip -t`); SHA-256 recorded.
+- No temporary development files, secrets, private logs or unrelated internal images in any package.
+- A licence or update adapter must never break public display when the licence server is unreachable.
+- Assets, public hooks, permissions and dependencies are documented (developer hooks doc).
+
 ## Report (Persian, docs/qa/COMMERCIAL-REPORT-<ver>-FA.md)
-1 bugs found (id, severity, status) · 2 security report · 3 architecture · 4 commercial features · 5 test table with real numbers + «انجام‌نشده» list (MySQL, PHP 7.4 runtime, Elementor Pro, Nginx/LiteSpeed, real cache, Yoast/Rank Math, real e-mail, real devices/screen reader/Lighthouse, multisite…) · 6 guide link · 7 remaining limitations · 8 deliverables. Then commit, push (retry 2/4/8/16 s), SendUserFile the ZIPs + report + guide, and give a short Persian summary.
+1 bugs found (id, severity, status) · 2 security report · 3 architecture · 4 commercial features · 5 test table with real numbers using the four statuses موفق / ناموفق / مسدود / بررسی‌نشده; typical blocked/not-checked items to list explicitly: MySQL, PHP 7.4 runtime, Elementor Pro, Nginx/LiteSpeed, real cache, Yoast/Rank Math, real e-mail, real devices/screen reader/Lighthouse, multisite…) · 6 guide link · 7 remaining limitations · 8 deliverables. Then commit, push (retry 2/4/8/16 s), SendUserFile the ZIPs + report + guide, and give a short Persian summary.

@@ -1,32 +1,39 @@
 # 02 — Elementor integration (free first, Pro optional)
 
-## Custom widgets
-- One base class (`Larijani_Widget_Base`) extending `\Elementor\Widget_Base`, or a tiny fallback class when Elementor is inactive so saved pages still render.
-- Helpers: `section()`, `ctl( id, type, label, default, args )`, `rep( id, label, fields, defaults, title_field )`, `end()`, `t()` (inline-edit text), `on()` (switch). Defaults = the HTML's real content, so a dropped widget looks like the design immediately.
-- Every visible text, link, image, icon, color and visibility switch is a control. Shared "style" section with CSS-variable controls (colors, radius, spacing, typography, container width selector `{{WRAPPER}} .max-w-7xl`).
-- Categories: `larijani-stone` (+ one for single/archive/theme-builder widgets). Register on `elementor/widgets/register`; load widget files only then.
-- Images: `larijani_img( $media, $class, $alt, $size, $lazy )` — `$lazy = 'high'` for hero/LCP images (eager + `fetchpriority="high"`), `true` elsewhere.
-- Forms inside widgets output `larijani_form_hidden_fields( $form_name, $schema )` with the full field schema (see references/03).
-- Dynamic tags for contact data (phone, email, address, WhatsApp) — work in free and Pro.
+Contents: 1 Choice order · 2 Custom widgets · 3 Native layouts · 4 Kit · 5 Theme builder & Pro · 6 Fallback · 7 Verification
 
-## Native layouts (preferred for static sections)
-- Builders in `inc/demo/native.php` produce Elementor JSON: Containers (flex/grid, boxed width, responsive gaps/padding/widths, `flex_wrap: nowrap` + responsive widths for mobile rows, custom grow/shrink) and core widgets with the theme classes as `_css_classes` (`ls-n …`) and margins as `_margin` (not utility classes) so the Style tab keeps working.
-- After saving `_elementor_data` always delete `_elementor_element_cache`, `_elementor_css`, `_elementor_page_assets` (otherwise old markup shows) and clear `files_manager` cache.
-- Make sure the Container experiment is active on old sites (`elementor_experiment-container`).
-- Provide an opt-in "rebuild layouts" for pages created by an older version (backup `_elementor_data` first, keep IDs/slugs/menus).
-- A filter to fall back to theme-widget layouts (`ls_native_layouts`).
+## 1. Choice order for every component
+1. Elementor Container + core widgets with responsive controls.
+2. Dynamic data / WordPress API (menus, posts, products, site settings, dynamic tags).
+3. Documented Elementor Pro features (Form, Popup, Dynamic Tags, Theme Builder) — only when Pro is present, with detection and a free fallback; never require Pro silently.
+4. A purpose-built custom widget.
+5. A companion-plugin service plus limited, isolated code.
+Normal page content is never hidden in one inseparable block. If Elementor's wrappers break an approved header/footer structure, provide a dedicated editable widget for that part and still keep a useful native pattern.
 
-## Kit (Site Settings)
-- Add theme colors as custom global colors (`ls…` ids) and Vazirmatn as a font (`elementor/fonts/additional_fonts`).
-- System colors/typography/container width/space-between-widgets are the user's: fill only when empty or on a brand-new site; later syncs only change entries that still hold a theme-set value (font, container width).
+## 2. Custom widgets (in the companion plugin)
+- Register on `elementor/widgets/register`; extend `\Elementor\Widget_Base`; implement `get_name`, `get_title`, `get_icon`, `get_categories`, `get_keywords`, `get_style_depends`, `get_script_depends`; register assets with WordPress first.
+- One base class with helpers (`section`, `ctl`, `rep`, `end`); defaults = the design's real content.
+- Controls for everything visible: text, rich text, image + alt, icon, button, link, card, column count, colours, fonts, spacing, sizes, alignment — responsive where the design changes per breakpoint. Data structures get their own controls: form fields (type, label, options, required, disabled), select options, tables (columns, rows, cells), repeaters for repeated items. A style control that is not wired to the real data is not acceptable.
+- Escape in `render()` (`esc_html`, `esc_attr`, `esc_url`, `wp_kses_post`); sanitise anything saved outside Elementor.
+- Frontend JS via handlers that survive editor re-renders; no dependence on undocumented Elementor DOM internals.
+- Images: hero/LCP eager + `fetchpriority="high"`, others lazy.
 
-## Theme builder
-- Register Elementor Pro locations (`elementor/theme/register_locations`) — Pro is optional.
-- Built-in theme builder for free Elementor: theme mods `ls_tb_header`, `ls_tb_footer`, `ls_tb_single_post`, `ls_tb_archive`, `ls_tb_single_product`, `ls_tb_shop`, `ls_tb_404` pick a saved template; `larijani_do_location()` renders it (enqueue its CSS).
-- When importing with Pro: only set `_elementor_conditions` if the owner has no own template with conditions for that location; regenerate the conditions cache.
+## 3. Native layouts (static sections)
+- Builders produce Elementor JSON: Containers (flex/grid, boxed width, responsive gap/padding/width, `flex_wrap: nowrap` + responsive widths for mobile rows, explicit grow/shrink) and core widgets with theme classes as `_css_classes` and margins as `_margin` so the Style tab keeps working.
+- After saving `_elementor_data` delete `_elementor_element_cache`, `_elementor_css`, `_elementor_page_assets` and clear the files cache.
+- Ensure the Container experiment is active on old sites. Offer opt-in "rebuild layouts" for pages created by an older version (back up `_elementor_data`, keep IDs/slugs/menus).
 
-## Fallback renderer
-Without Elementor, render saved `_elementor_data` (containers + core widgets + theme widgets) with Elementor-like markup and the scoped CSS, so the site looks the same; show a notice recommending Elementor.
+## 4. Kit (Site Settings)
+- Add theme colours as custom global colours and the bundled font. System colours, typography, container width and widget spacing belong to the user: fill them only when empty or on a brand-new site; later syncs change only values the theme set.
 
-## Verify in the real editor (references/07)
-Panel loads with all theme widgets, preview renders, zero JS errors, edit a heading → publish → front shows it, Style-tab color/size/button background/grid columns override theme CSS. Test on Elementor 3.x and 4.x.
+## 5. Theme builder and Pro
+- Register Pro theme locations; provide a built-in theme builder for free Elementor (theme mods per location → saved template; `do_location()` renders it and enqueues its CSS).
+- Import with Pro: never add conditions when the owner already has a template with conditions for that location; regenerate the conditions cache.
+- Installing a new theme does **not** remove published Pro conditions from a previous theme (references/12).
+- Pro behaviour is verified only with a real Pro install; otherwise report «مسدود».
+
+## 6. Fallback without Elementor
+Render saved `_elementor_data` (containers, core widgets, theme widgets) with Elementor-like markup and the scoped CSS so the site still looks right; show a notice recommending Elementor.
+
+## 7. Verification (real editor, Elementor 3.x and 4.x)
+Panel lists all widgets; preview renders; zero JS errors; edit a native widget and a custom widget → save → reopen → front shows both; Style-tab colour, typography, button background and grid columns override theme CSS; compare editor and site at the same width, language and mode (references/11). "Elementor opened" is not proof that saving or parity works.

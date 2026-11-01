@@ -9,3 +9,12 @@
 .aladdin-payab-sanat-asa .elementor-widget-container { display: contents; }
 .aladdin-payab-sanat-asa .elementor-widget-text-editor .elementor-widget-container { font: inherit; color: inherit; }
 .aladdin-payab-sanat-asa .elementor-widget-aladdin_payab_sanat_asa_element { width: auto; max-width: 100%; }
+
+/* WordPress core content classes (blog posts, captions, galleries). */
+.aligncenter { display: block; margin-inline: auto; }
+.alignleft { float: left; margin: 0 1em 1em 0; }
+.alignright { float: right; margin: 0 0 1em 1em; }
+.wp-caption { max-width: 100%; }
+.wp-caption-text, .gallery-caption { font-size: .875em; opacity: .8; }
+.sticky, .bypostauthor { position: relative; }
+.screen-reader-text { border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; word-wrap: normal; }

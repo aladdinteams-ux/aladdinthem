@@ -1,0 +1,56 @@
+{
+ "name": "Payab Sanat Asa",
+ "version": "1.0.0",
+ "date": "2026-11-01",
+ "author": "علاءالدین تم (Aladdin Theme)",
+ "source": {
+  "zip": "payab-sanat-asa-v42-contact-tip-icons-3lang",
+  "sha256": "303e33c343cd4696e76dc676a186979f2775ae5dff93e6fac622e6755cce4766"
+ },
+ "requirements": {
+  "wordpress": "6.4+",
+  "php": "7.4+",
+  "elementor": "free (optional, not tested in this build)",
+  "woocommerce": "optional (tested 10.3.5)"
+ },
+ "tested": {
+  "wordpress": "6.8.3",
+  "php": "8.3.6",
+  "woocommerce": "10.3.5",
+  "elementor": null
+ },
+ "artifacts": [
+  {
+   "file": "payab-sanat-asa.zip",
+   "sha256": "928e0220afb871cd78f059316d9e1110ac2e68fce96576a7ce1fd5d237e9b446",
+   "files": 94
+  },
+  {
+   "file": "payab-sanat-asa-core.zip",
+   "sha256": "b2d719a25a91c1f19bf71f48c85398ded7eddd1eab96f2c044a22684a6ec4fe1",
+   "files": 17
+  },
+  {
+   "file": "payab-sanat-asa-child.zip",
+   "sha256": "d3679e63bb0bc32833160c3ac130ff77b4d5caacaf0ad118da5b1cd9ac39cb16",
+   "files": 3
+  }
+ ],
+ "not_executed": [
+  "Elementor editor load/edit/save/Style-tab and editor-vs-site parity (blocked: Elementor could not be built in the sandbox)",
+  "PHPCS WordPress security sniffs and PHPCompatibility (blocked: composer/external code not permitted)",
+  "Plugin Check (blocked: needs WP-CLI + composer dependencies)",
+  "PHP 7.4 runtime, MySQL/MariaDB, Nginx/LiteSpeed, real page cache, Yoast/Rank Math coexistence",
+  "Lighthouse/PageSpeed, axe/screen reader, real devices, live site install"
+ ],
+ "licences": {
+  "fonts": "OFL 1.1 (Vazirmatn, Estedad, Manrope, Cairo); Bootstrap Icons MIT",
+  "code": "GPL-2.0-or-later",
+  "images": "supplied by client; licence/ownership of \"conceptual\" images not confirmed"
+ },
+ "release_ready": false,
+ "blockers": [
+  "Client must confirm licence/ownership of the product and hero images",
+  "Run the Elementor editor test on a real site before sale"
+ ]
+}

@@ -23,6 +23,7 @@ class Languages {
 		add_filter( 'aladdin_payab_sanat_asa_current_lang', array( __CLASS__, 'current_lang' ) );
 		add_filter( 'aladdin_payab_sanat_asa_route_url', array( __CLASS__, 'route_url' ), 10, 3 );
 		add_filter( 'aladdin_payab_sanat_asa_translation_url', array( __CLASS__, 'translation_url' ), 10, 2 );
+		add_filter( 'locale', array( __CLASS__, 'front_locale' ) );
 		add_action( 'save_post', array( __CLASS__, 'flush_index' ) );
 		add_action( 'trashed_post', array( __CLASS__, 'flush_index' ) );
 		add_action( 'template_redirect', array( __CLASS__, 'placeholder_redirect' ) );
@@ -31,6 +32,21 @@ class Languages {
 		add_action( 'admin_init', array( __CLASS__, 'maybe_flush' ) );
 		add_filter( 'manage_pages_columns', array( __CLASS__, 'columns' ) );
 		add_action( 'manage_pages_custom_column', array( __CLASS__, 'column' ), 10, 2 );
+	}
+
+	/** Front-end UI strings (search form, 404, …) follow the language of the URL, not the site locale. */
+	public static function front_locale( $locale ) {
+		if ( is_admin() || wp_doing_ajax() || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) || ( defined( 'WP_CLI' ) && WP_CLI ) || ( isset( $_SERVER['SCRIPT_NAME'] ) && false !== strpos( (string) $_SERVER['SCRIPT_NAME'], 'wp-login' ) ) ) {
+			return $locale;
+		}
+		$path = isset( $_SERVER['REQUEST_URI'] ) ? wp_parse_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), PHP_URL_PATH ) : '';
+		$home = wp_parse_url( home_url( '/' ), PHP_URL_PATH );
+		$seg  = explode( '/', trim( (string) substr( (string) $path, strlen( (string) $home ) ), '/' ) );
+		if ( isset( $_GET['lang'] ) && in_array( $_GET['lang'], self::codes(), true ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+			$seg[0] = sanitize_key( wp_unslash( $_GET['lang'] ) );
+		}
+		$map = array( 'en' => 'en_US', 'ar' => 'ar' );
+		return isset( $map[ $seg[0] ] ) ? $map[ $seg[0] ] : 'fa_IR';
 	}
 
 	public static function codes() {

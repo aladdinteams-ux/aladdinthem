@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+"""Build fa_IR .po/.mo for the theme and the plugin from the POTs. Usage: python3 -I build/translations.py"""
+import re, struct, os
+FA = {
+"Search results for: %s": "نتایج جست‌وجو برای: %s",
+"Nothing found. Try different words.": "چیزی پیدا نشد. با کلمات دیگری جست‌وجو کنید.",
+"Nothing found.": "چیزی پیدا نشد.",
+"Page not found": "صفحه پیدا نشد",
+"The page you are looking for does not exist or has moved.": "صفحه‌ای که دنبال آن هستید وجود ندارد یا جابه‌جا شده است.",
+"Back to home": "بازگشت به صفحه اصلی",
+"Search": "جست‌وجو", "Search…": "جست‌وجو…",
+"Primary (optional; header uses the Texts panel by default)": "منوی اصلی (اختیاری؛ هدر به‌صورت پیش‌فرض از پنل متن‌ها استفاده می‌کند)",
+"Footer (optional)": "فوتر (اختیاری)",
+"Payab Sanat Asa theme:": "قالب پایاب صنعت آسا:",
+"the companion plugin is required for languages, import, SEO and the Elementor widget.": "افزونه همراه برای زبان‌ها، ایمپورت، سئو و ویجت المنتور لازم است.",
+"Activate the companion plugin": "فعال‌سازی افزونه همراه",
+"Install and activate the companion plugin": "نصب و فعال‌سازی افزونه همراه",
+"Not allowed.": "دسترسی مجاز نیست.",
+"Installing the bundled plugin failed. Upload payab-sanat-asa-core.zip manually.": "نصب افزونه همراه ناموفق بود. فایل payab-sanat-asa-core.zip را دستی بارگذاری کنید.",
+"Language": "زبان", "Aladdin Payab": "علاءالدین پایاب",
+"Designed and developed by": "طراحی و توسعه",
+"Overview": "نمای کلی", "General": "عمومی", "Header & footer texts": "متن‌های هدر و فوتر", "Import / Undo": "ایمپورت / بازگردانی", "Reserved": "رزرو‌شده",
+"Aladdin Payab — Payab Sanat Asa theme": "علاءالدین پایاب — قالب پایاب صنعت آسا",
+"Settings saved.": "تنظیمات ذخیره شد.",
+"Texts of this language were reset to the approved design (a backup was kept).": "متن‌های این زبان به طرح تأییدشده بازگردانده شد (نسخه پشتیبان نگه داشته شد).",
+"Please tick the confirmation box first.": "ابتدا کادر تأیید را علامت بزنید.",
+"Import finished: %1$d created, %2$d already existed.": "ایمپورت پایان یافت: %1$d مورد ساخته شد، %2$d مورد از قبل وجود داشت.",
+"Import finished.": "ایمپورت پایان یافت.",
+"Undo finished: %d items moved to the Trash.": "بازگردانی پایان یافت: %d مورد به زباله‌دان منتقل شد.",
+"Status": "وضعیت", "Theme \"Payab Sanat Asa\" active": "قالب «پایاب صنعت آسا» فعال است",
+"Elementor (free) active": "المنتور (رایگان) فعال است",
+"pages still show using the saved HTML": "صفحات همچنان با HTML ذخیره‌شده نمایش داده می‌شوند",
+"WooCommerce active (products)": "ووکامرس فعال است (محصولات)",
+"product pages are created as pages": "صفحات محصول به‌صورت برگه ساخته می‌شوند",
+"Imported items": "موارد واردشده",
+"Theme and companion plugin for Payab Sanat Asa. Version": "قالب و افزونه همراه پایاب صنعت آسا. نسخه",
+"Catalog mode": "حالت کاتالوگ",
+"Hide prices and block purchasing/cart/checkout (WooCommerce).": "قیمت‌ها را پنهان و خرید، سبد و تسویه‌حساب را مسدود می‌کند (ووکامرس).",
+"SEO tags": "برچسب‌های سئو",
+"Print description, canonical, hreflang, Open Graph and Schema.org.": "توضیحات، canonical، hreflang، Open Graph و Schema.org را چاپ می‌کند.",
+"Automatically off when Yoast, Rank Math, SEOPress/TSF or AIOSEO is active.": "با فعال بودن Yoast، Rank Math، SEOPress/TSF یا AIOSEO به‌طور خودکار خاموش می‌شود.",
+"Header": "هدر", "Footer": "فوتر", "Approved design (default)": "طرح تأییدشده (پیش‌فرض)",
+"Optional: replace the shared chrome with an Elementor template (built with free Elementor, no Pro theme builder).": "اختیاری: هدر/فوتر مشترک را با یک قالب المنتور جایگزین کنید (با المنتور رایگان، بدون Theme Builder پرو).",
+"On uninstall": "هنگام حذف افزونه",
+"Delete this plugin's settings (pages and products are never deleted).": "تنظیمات این افزونه حذف شود (برگه‌ها و محصولات هرگز حذف نمی‌شوند).",
+"Every text, label and link of the top bar, header, mobile menu, footer and mobile bar. Leave a field empty to keep the approved design text. Links: use \"fa:shop-2\" style route keys or a full URL.": "همه متن‌ها، برچسب‌ها و لینک‌های نوار بالا، هدر، منوی موبایل، فوتر و نوار موبایل. برای نگه داشتن متن طرح تأییدشده، فیلد را خالی بگذارید. لینک‌ها: کلید مسیر مانند «fa:shop-2» یا نشانی کامل.",
+"Top bar, header and mobile drawer": "نوار بالا، هدر و منوی موبایل", "Footer and mobile bar": "فوتر و نوار موبایل",
+"Type": "نوع", "Approved text": "متن تأییدشده", "Your text": "متن شما",
+"Products mega menu (category panel)": "مگامنوی محصولات (پنل دسته‌بندی)",
+"Save texts": "ذخیره متن‌ها",
+"Reset all texts of this language to the approved design? A backup is kept.": "همه متن‌های این زبان به طرح تأییدشده بازگردانده شود؟ نسخه پشتیبان نگه داشته می‌شود.",
+"Reset this language to the approved design": "بازگردانی این زبان به طرح تأییدشده",
+"Creates the 66 pages (22 routes × 3 languages) as Elementor pages with a plain-HTML fallback, and the 3 products × 3 languages. Existing pages are never overwritten; every created item is journaled and can be moved to the Trash with Undo. The Persian home becomes the static front page.": "۶۶ برگه (۲۲ مسیر × ۳ زبان) را به‌صورت صفحه المنتور با HTML جایگزین ساده و ۳ محصول × ۳ زبان می‌سازد. برگه‌های موجود هرگز بازنویسی نمی‌شوند؛ هر مورد ساخته‌شده ثبت می‌شود و با «بازگردانی» به زباله‌دان می‌رود. صفحه اصلی فارسی، صفحه نخست ایستا می‌شود.",
+"I understand this creates pages and may set the front page.": "می‌دانم که این کار برگه می‌سازد و ممکن است صفحه نخست را تنظیم کند.",
+"Import pages and products": "ایمپورت برگه‌ها و محصولات",
+"Last import: %1$d items on %2$s.": "آخرین ایمپورت: %1$d مورد در %2$s.",
+"Move all imported items to the Trash and restore changed options?": "همه موارد واردشده به زباله‌دان منتقل و تنظیمات تغییرکرده بازگردانده شود؟",
+"Undo the import (move to Trash)": "بازگردانی ایمپورت (انتقال به زباله‌دان)",
+"Shown for transparency: these options are planned but not active in this version.": "برای شفافیت نمایش داده می‌شود: این گزینه‌ها برنامه‌ریزی شده‌اند اما در این نسخه فعال نیستند.",
+"Colour and typography panel (the approved design uses fixed CSS variables)": "پنل رنگ و تایپوگرافی (طرح تأییدشده از متغیرهای ثابت CSS استفاده می‌کند)",
+"Server-side consultation request storage and e-mail (the approved contact form only prepares text and copies it to the clipboard)": "ذخیره درخواست مشاوره در سرور و ارسال ایمیل (فرم تأییدشده فقط متن را آماده و در کلیپ‌بورد کپی می‌کند)",
+"Third-party multilingual plugins (Polylang/WPML) compatibility": "سازگاری با افزونه‌های چندزبانه (Polylang/WPML)",
+"Payab Sanat Asa": "پایاب صنعت آسا",
+"Payab Sanat Asa: install and activate the free Elementor plugin to edit pages visually. Without it the site still shows the saved page HTML.": "پایاب صنعت آسا: برای ویرایش بصری صفحات، افزونه رایگان المنتور را نصب و فعال کنید. بدون آن، سایت همچنان HTML ذخیره‌شده صفحه را نشان می‌دهد.",
+"Payab attributes": "ویژگی‌های پایاب", "HTML attributes": "ویژگی‌های HTML",
+"One per line: key|value (aria-*, data-*, role, title…). Needed for the approved design scripts.": "هر خط یک مورد: کلید|مقدار (aria-*، data-*، role، title…). برای اسکریپت‌های طرح تأییدشده لازم است.",
+"Payab Element": "المان پایاب", "Content": "محتوا", "HTML tag": "تگ HTML", "Text": "متن", "Link": "لینک",
+"URL, #anchor, tel:… or a route token such as {{route:fa:shop-2}}.": "نشانی، #لنگر، tel:… یا توکن مسیر مانند {{route:fa:shop-2}}.",
+"Image": "تصویر", "Image URL (when no media chosen)": "نشانی تصویر (اگر رسانه‌ای انتخاب نشده)", "Alt text": "متن جایگزین (alt)",
+"Inner markup (icons, nested elements)": "کد داخلی (آیکون‌ها، عناصر تو در تو)",
+"Used instead of Text when filled. Scripts and unsafe attributes are removed.": "در صورت پر بودن به‌جای «متن» استفاده می‌شود. اسکریپت و ویژگی‌های ناامن حذف می‌شوند.",
+"Class & attributes": "کلاس و ویژگی‌ها", "CSS classes of the element": "کلاس‌های CSS عنصر", "Element ID": "شناسه عنصر",
+"Attributes (key|value per line)": "ویژگی‌ها (کلید|مقدار در هر خط)",
+}
+def parse(pot):
+    s = open(pot, encoding='utf8').read()
+    return re.findall(r'msgid "((?:[^"\\]|\\.)*)"\n', s)
+def unesc(x): return x.replace('\\"', '"').replace('\\n', '\n').replace('\\\\', '\\')
+def esc(x): return x.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n')
+def mo(entries, path):
+    keys = sorted(entries); ids = b''; strs = b''; offs = []
+    for k in keys:
+        kb = k.encode('utf8'); vb = entries[k].encode('utf8')
+        offs.append((len(ids), len(kb), len(strs), len(vb))); ids += kb + b'\0'; strs += vb + b'\0'
+    n = len(keys); ko = 7 * 4 + 16 * n; vo = ko + len(ids)
+    out = struct.pack('Iiiiiii', 0x950412de, 0, n, 28, 28 + 8 * n, 0, 0)
+    out += b''.join(struct.pack('ii', l, ko + o) for o, l, _, _ in offs)
+    out += b''.join(struct.pack('ii', l, vo + o) for _, _, o, l in offs)
+    open(path, 'wb').write(out + ids + strs)
+base = os.path.join(os.path.dirname(__file__), '..')
+missing = []
+for pot, dom, d in (('theme/payab-sanat-asa/languages/payab-sanat-asa.pot', 'payab-sanat-asa', 'theme/payab-sanat-asa/languages'),
+                    ('plugin/payab-sanat-asa-core/languages/payab-sanat-asa-core.pot', 'payab-sanat-asa-core', 'plugin/payab-sanat-asa-core/languages')):
+    ids = [unesc(i) for i in parse(os.path.join(base, pot)) if i]
+    ent = {}; po = ['# Persian (fa_IR) — Aladdin Theme', 'msgid ""', 'msgstr ""', '"Project-Id-Version: %s 1.0.0\\n"' % dom, '"Language: fa_IR\\n"', '"MIME-Version: 1.0\\n"', '"Content-Type: text/plain; charset=UTF-8\\n"', '"Plural-Forms: nplurals=2; plural=(n > 1);\\n"', '']
+    for i in ids:
+        if i in FA: ent[i] = FA[i]; po += ['msgid "%s"' % esc(i), 'msgstr "%s"' % esc(FA[i]), '']
+        else: missing.append(i)
+    fn = 'fa_IR' if dom == 'payab-sanat-asa' else dom + '-fa_IR'   # themes load {locale}.mo, plugins {domain}-{locale}.mo
+    open(os.path.join(base, d, fn + '.po'), 'w', encoding='utf8').write('\n'.join(po))
+    mo({'': 'Project-Id-Version: %s\nLanguage: fa_IR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n > 1);\n' % dom, **ent}, os.path.join(base, d, fn + '.mo'))
+    print(dom, len(ent), 'translated of', len(ids))
+print('missing:', missing)

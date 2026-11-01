@@ -63,6 +63,9 @@ add_action(
 			) . ';',
 			'before'
 		);
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 		foreach ( $set['js'] as $js ) {
 			wp_enqueue_script( 'aladdin-payab-sanat-asa-' . sanitize_key( basename( $js, '.js' ) ), $u . 'js/' . $js, array(), $ver, array( 'in_footer' => true, 'strategy' => 'defer' ) );
 		}

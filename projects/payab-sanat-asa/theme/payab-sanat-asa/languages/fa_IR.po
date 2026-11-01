@@ -1,0 +1,56 @@
+# Persian (fa_IR) — Aladdin Theme
+msgid ""
+msgstr ""
+"Project-Id-Version: payab-sanat-asa 1.0.0\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Search results for: %s"
+msgstr "نتایج جست‌وجو برای: %s"
+
+msgid "Nothing found. Try different words."
+msgstr "چیزی پیدا نشد. با کلمات دیگری جست‌وجو کنید."
+
+msgid "Nothing found."
+msgstr "چیزی پیدا نشد."
+
+msgid "Page not found"
+msgstr "صفحه پیدا نشد"
+
+msgid "The page you are looking for does not exist or has moved."
+msgstr "صفحه‌ای که دنبال آن هستید وجود ندارد یا جابه‌جا شده است."
+
+msgid "Back to home"
+msgstr "بازگشت به صفحه اصلی"
+
+msgid "Search"
+msgstr "جست‌وجو"
+
+msgid "Search…"
+msgstr "جست‌وجو…"
+
+msgid "Primary (optional; header uses the Texts panel by default)"
+msgstr "منوی اصلی (اختیاری؛ هدر به‌صورت پیش‌فرض از پنل متن‌ها استفاده می‌کند)"
+
+msgid "Footer (optional)"
+msgstr "فوتر (اختیاری)"
+
+msgid "Payab Sanat Asa theme:"
+msgstr "قالب پایاب صنعت آسا:"
+
+msgid "the companion plugin is required for languages, import, SEO and the Elementor widget."
+msgstr "افزونه همراه برای زبان‌ها، ایمپورت، سئو و ویجت المنتور لازم است."
+
+msgid "Activate the companion plugin"
+msgstr "فعال‌سازی افزونه همراه"
+
+msgid "Install and activate the companion plugin"
+msgstr "نصب و فعال‌سازی افزونه همراه"
+
+msgid "Not allowed."
+msgstr "دسترسی مجاز نیست."
+
+msgid "Installing the bundled plugin failed. Upload payab-sanat-asa-core.zip manually."
+msgstr "نصب افزونه همراه ناموفق بود. فایل payab-sanat-asa-core.zip را دستی بارگذاری کنید."

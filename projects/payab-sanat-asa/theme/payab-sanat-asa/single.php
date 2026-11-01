@@ -15,6 +15,7 @@ while ( have_posts() ) {
 		<div class="container">
 			<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
+			<?php wp_link_pages(); ?>
 			<?php comments_template(); ?>
 		</div>
 	</article>

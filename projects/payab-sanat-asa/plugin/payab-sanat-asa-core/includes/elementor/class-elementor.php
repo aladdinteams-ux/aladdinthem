@@ -18,6 +18,9 @@ class Elementor_Integration {
 		add_action( 'elementor/element/container/section_layout/after_section_end', array( __CLASS__, 'container_controls' ), 10, 2 );
 		add_action( 'elementor/frontend/container/before_render', array( __CLASS__, 'container_render' ) );
 		add_action( 'admin_notices', array( __CLASS__, 'notice_missing' ) );
+		// Keep imported design text exactly as approved: no typographic replacement inside our text widgets.
+		add_action( 'elementor/frontend/widget/before_render', array( __CLASS__, 'before_widget' ) );
+		add_action( 'elementor/frontend/widget/after_render', array( __CLASS__, 'after_widget' ) );
 	}
 
 	public static function category( $mgr ) {
@@ -61,7 +64,7 @@ class Elementor_Integration {
 	}
 
 	public static function container_controls( $element, $args ) {
-		$element->start_controls_section( 'aladdin_payab_attrs', array( 'label' => esc_html__( 'Payab attributes', 'payab-sanat-asa-core' ), 'tab' => \Elementor\Controls_Manager::TAB_LAYOUT ) );
+		$element->start_controls_section( 'aladdin_payab_attrs', array( 'label' => esc_html__( 'Payab attributes', 'payab-sanat-asa-core' ), 'tab' => \Elementor\Controls_Manager::TAB_ADVANCED ) );
 		$element->add_control(
 			'aladdin_attrs',
 			array(
@@ -72,6 +75,18 @@ class Elementor_Integration {
 			)
 		);
 		$element->end_controls_section();
+	}
+
+	public static function before_widget( $widget ) {
+		if ( 'text-editor' === $widget->get_name() && 'yes' === $widget->get_settings( 'aladdin_raw' ) ) {
+			add_filter( 'run_wptexturize', '__return_false', 99 );
+		}
+	}
+
+	public static function after_widget( $widget ) {
+		if ( 'text-editor' === $widget->get_name() && 'yes' === $widget->get_settings( 'aladdin_raw' ) ) {
+			remove_filter( 'run_wptexturize', '__return_false', 99 );
+		}
 	}
 
 	public static function container_render( $element ) {

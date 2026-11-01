@@ -1,0 +1,92 @@
+{
+"fa": {
+"mega": {
+"electric": [
+"بالابر بیمار برقی",
+"مدل‌های برقی برای کمک به جابه‌جایی بیمار؛ انتخاب نهایی به فضای استفاده و وضعیت بیمار بستگی دارد.",
+"مشاهده بالابرهای برقی",
+"بالابر برقی بیمار",
+"بالابر برقی / ۰۱",
+"lift-electric.webp"
+],
+"manual": [
+"بالابر بیمار دستی",
+"بالابرهای دستی هیدرولیک برای انتقال بیمار، با عملکرد مکانیکی و نیاز به اپراتور آموزش‌دیده.",
+"مشاهده بالابرهای دستی",
+"بالابر دستی هیدرولیک بیمار",
+"بالابر دستی / ۰۲",
+"lift-manual.webp"
+],
+"sling": [
+"جلیقه انتقال بیمار",
+"جلیقه‌های انتقال با طراحی‌های گوناگون؛ سازگاری با بالابر و شرایط بیمار را پیش از خرید بررسی کنید.",
+"مشاهده جلیقه‌ها",
+"جلیقه انتقال بیمار",
+"جلیقه انتقال / ۰۳",
+"standing-sling.webp"
+]
+},
+"favAdd": "افزودن به علاقه‌مندی‌ها",
+"favRemove": "حذف از علاقه‌مندی‌ها"
+},
+"en": {
+"mega": {
+"electric": [
+"Electric patient lifts",
+"Powered lifting equipment for assisted transfers. Select based on the patient’s needs and available space.",
+"View electric lifts",
+"Electric patient lifting equipment",
+"ELECTRIC / 01",
+"lift-electric.webp"
+],
+"manual": [
+"Manual patient lifts",
+"Hydraulic manual lifts provide assisted transfers with trained caregiver operation.",
+"View manual lifts",
+"Manual hydraulic patient lift",
+"MANUAL / 02",
+"lift-manual.webp"
+],
+"sling": [
+"Patient lift slings",
+"Slings for different transfer needs. Check compatibility with the lift and the patient before ordering.",
+"View patient slings",
+"Patient transfer sling",
+"SLINGS / 03",
+"standing-sling.webp"
+]
+},
+"favAdd": "Add to saved items",
+"favRemove": "Remove from saved items"
+},
+"ar": {
+"mega": {
+"electric": [
+"رافعات المرضى الكهربائية",
+"معدات رفع كهربائية للمساعدة في نقل المريض. يعتمد الاختيار على احتياجات المريض ومساحة الاستخدام.",
+"عرض الرافعات الكهربائية",
+"رافعة كهربائية لنقل المرضى",
+"كهربائية / ٠١",
+"lift-electric.webp"
+],
+"manual": [
+"رافعات المرضى اليدوية",
+"رافعات هيدروليكية يدوية للمساعدة في نقل المريض مع تشغيلها من قبل مقدم رعاية مدرّب.",
+"عرض الرافعات اليدوية",
+"رافعة هيدروليكية يدوية",
+"يدوية / ٠٢",
+"lift-manual.webp"
+],
+"sling": [
+"أحزمة نقل المرضى",
+"أحزمة نقل لمختلف احتياجات الرعاية. تحقق من توافق الحزام مع الرافعة وحالة المريض.",
+"عرض أحزمة النقل",
+"حزام لنقل المرضى",
+"الأحزمة / ٠٣",
+"standing-sling.webp"
+]
+},
+"favAdd": "إضافة إلى المحفوظات",
+"favRemove": "إزالة من المحفوظات"
+}
+}

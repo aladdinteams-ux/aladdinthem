@@ -1,0 +1,243 @@
+{
+ "about-us-2": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "articles/cane-types": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "articles/mattress-guide": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "articles/patient-lift-guide": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "articles/pillow-types": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "articles/rollator-guide": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "articles/wheelchair-guide": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "blog-2": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "categories/electric": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "categories": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "categories/manual": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "categories/sling": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "contact-us": {
+  "family": "contact",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js",
+   "v32-contact-map.js",
+   "v33-styled-dropdown-focus.js"
+  ]
+ },
+ "gallery": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "": {
+  "family": "home",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js"
+  ]
+ },
+ "industrial-certifications-and-certificates": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "product/electric-lift": {
+  "family": "product",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "product/manual-lift": {
+  "family": "product",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "product/transfer-sling": {
+  "family": "product",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "selection-guide": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "shop-2": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ },
+ "videos": {
+  "family": "inner",
+  "js": [
+   "v26-uiverse-mobile-nav.js",
+   "v27-responsive-offcanvas.js",
+   "v28-sticky-glass.js",
+   "payab-v29-inner-pages.js",
+   "v30-blog-filter.js",
+   "v31-commercial.js"
+  ]
+ }
+}

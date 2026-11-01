@@ -1,0 +1,191 @@
+/* == v36-accordion-icons.css == */
+/* V36 · Unified accordion icon — designed for V28/V35 Payab UI
+   All semantic <details>/<summary> interaction remains native & keyboard-accessible. */
+
+/* Hide all previous decorative arrows (preserving labels and drawer category icon). */
+.faq-list details > summary > .faq-toggle-icon,
+.mobile-products-mega > summary > .faq-toggle-icon,
+.ip-faq details > summary > span[aria-hidden="true"],
+.v30-faq details > summary > span[aria-hidden="true"] {
+  display: none !important;
+}
+
+/* A discreet medical-blue plus/minus — one icon across every accordion. */
+.faq-list details > summary::after,
+.ip-faq details > summary::after,
+.v30-faq details > summary::after,
+.mobile-products-mega > summary::after {
+  content: "" !important;
+  display: inline-block !important;
+  flex: 0 0 32px;
+  inline-size: 32px;
+  block-size: 32px;
+  box-sizing: border-box;
+  margin-inline-start: auto;
+  border: 1px solid rgba(39,109,167,.10);
+  border-radius: 11px;
+  background-color: rgba(29,105,169,.045);
+  background-image: linear-gradient(#2375b2,#2375b2), linear-gradient(#2375b2,#2375b2);
+  background-size: 13px 1.8px, 1.8px 13px;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  color: #2375b2;
+  transform: none !important;
+  transition: background-color .22s ease, background-size .24s cubic-bezier(.2,.75,.2,1), border-color .22s ease !important;
+}
+
+/* Open state: the vertical stroke shrinks away, leaving a minus. */
+.faq-list details[open] > summary::after,
+.ip-faq details[open] > summary::after,
+.v30-faq details[open] > summary::after,
+.mobile-products-mega[open] > summary::after {
+  background-color: rgba(30,106,173,.095);
+  border-color: rgba(39,109,167,.14);
+  background-size: 13px 1.8px, 1.8px 0px;
+}
+
+.faq-list summary:hover::after,
+.ip-faq summary:hover::after,
+.v30-faq summary:hover::after,
+.mobile-products-mega > summary:hover::after {
+  background-color: rgba(32,112,183,.10);
+}
+
+/* Never show default browser disclosure glyphs or extra pseudo-arrows. */
+.faq-list summary,
+.ip-faq summary,
+.v30-faq summary,
+.mobile-products-mega > summary {
+  list-style: none;
+}
+.faq-list summary::-webkit-details-marker,
+.ip-faq summary::-webkit-details-marker,
+.v30-faq summary::-webkit-details-marker,
+.mobile-products-mega > summary::-webkit-details-marker { display: none; }
+
+/* Respect the accessibility outline on keyboard use, but keep it understated. */
+.faq-list summary:focus-visible,
+.ip-faq summary:focus-visible,
+.v30-faq summary:focus-visible,
+.mobile-products-mega > summary:focus-visible {
+  outline: 2px solid rgba(48,137,205,.46);
+  outline-offset: 3px;
+  border-radius: 9px;
+}
+
+/* Ensure no old decoration remains, including the drawer's inherited styles. */
+#mobile-panel .payab-drawer-details > summary::after {
+  content: "" !important;
+  display: inline-block !important;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  border-radius: 10px;
+}
+
+html[data-theme="dark"] .faq-list details > summary::after,
+html[data-theme="dark"] .ip-faq details > summary::after,
+html[data-theme="dark"] .v30-faq details > summary::after,
+html[data-theme="dark"] .mobile-products-mega > summary::after {
+  background-color: rgba(149,202,246,.075);
+  border-color: rgba(167,211,248,.10);
+  background-image: linear-gradient(#9bc9ee,#9bc9ee),linear-gradient(#9bc9ee,#9bc9ee);
+  box-shadow: none;
+}
+html[data-theme="dark"] .faq-list details[open] > summary::after,
+html[data-theme="dark"] .ip-faq details[open] > summary::after,
+html[data-theme="dark"] .v30-faq details[open] > summary::after,
+html[data-theme="dark"] .mobile-products-mega[open] > summary::after {
+  background-color: rgba(147,201,245,.14);
+}
+
+@media (max-width: 540px) {
+  .faq-list details > summary::after,
+  .ip-faq details > summary::after,
+  .v30-faq details > summary::after {
+    flex-basis: 30px;
+    inline-size: 30px;
+    block-size: 30px;
+    border-radius: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-list summary::after,
+  .ip-faq summary::after,
+  .v30-faq summary::after,
+  .mobile-products-mega > summary::after { transition: none !important; }
+}
+
+/* == v37-frameless-arrow.css == */
+/* V37 | frameless stroke arrow for ALL disclosure components; overrides V36. */
+:root{--payab-accordion-arrow:#216ba8;}
+html[data-theme="dark"]{--payab-accordion-arrow:#a8d8ff;}
+
+.faq-list details > summary::after,
+.ip-faq details > summary::after,
+.v30-faq details > summary::after,
+.mobile-products-mega > summary::after,
+#mobile-panel .payab-drawer-details > summary::after {
+  content:"" !important;
+  display:inline-block !important;
+  flex:0 0 32px !important;
+  inline-size:32px !important;
+  block-size:32px !important;
+  margin-inline-start:auto !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:var(--payab-accordion-arrow) !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M12%204v15m-6-6%206%206%206-6%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%271.8%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%2F%3E%3C%2Fsvg%3E");
+  mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20d%3D%27M12%204v15m-6-6%206%206%206-6%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%271.8%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%2F%3E%3C%2Fsvg%3E");
+  -webkit-mask-position:center;
+  mask-position:center;
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  -webkit-mask-size:21px 21px;
+  mask-size:21px 21px;
+  transform:rotate(0deg) !important;
+  opacity:.85;
+  transition:transform .34s cubic-bezier(.22,.8,.27,1),opacity .22s ease !important;
+}
+.faq-list details[open] > summary::after,
+.ip-faq details[open] > summary::after,
+.v30-faq details[open] > summary::after,
+.mobile-products-mega[open] > summary::after,
+#mobile-panel .payab-drawer-details[open] > summary::after {
+  transform:rotate(180deg) !important;
+  opacity:1;
+  border:0 !important;
+  background:var(--payab-accordion-arrow) !important;
+  background-image:none !important;
+}
+.faq-list details > summary:hover::after,
+.ip-faq details > summary:hover::after,
+.v30-faq details > summary:hover::after,
+.mobile-products-mega > summary:hover::after {
+  background:var(--payab-accordion-arrow) !important;
+  opacity:1;
+}
+@media(max-width:540px) {
+  .faq-list details > summary::after,
+  .ip-faq details > summary::after,
+  .v30-faq details > summary::after,
+  .mobile-products-mega > summary::after,
+  #mobile-panel .payab-drawer-details > summary::after {
+    flex-basis:30px !important;
+    inline-size:30px !important;
+    block-size:30px !important;
+    -webkit-mask-size:20px 20px;
+    mask-size:20px 20px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+ .faq-list details > summary::after,
+ .ip-faq details > summary::after,
+ .v30-faq details > summary::after,
+ .mobile-products-mega > summary::after,
+ #mobile-panel .payab-drawer-details > summary::after {transition:none !important;}
+}
+

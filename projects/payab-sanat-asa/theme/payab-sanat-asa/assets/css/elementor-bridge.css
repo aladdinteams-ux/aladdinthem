@@ -1,0 +1,11 @@
+/*
+ * Elementor bridge: converted layouts keep the approved class names on free-Elementor containers.
+ * The approved CSS is loaded after elementor-frontend, so equal-specificity rules of the design win;
+ * these rules only neutralise Elementor defaults the design never set.
+ */
+.aladdin-payab-sanat-asa .elementor .e-con.e-con-full { --padding-block-start: 0; --padding-block-end: 0; --padding-inline-start: 0; --padding-inline-end: 0; }
+.aladdin-payab-sanat-asa .elementor .elementor-widget { margin: 0; }
+.aladdin-payab-sanat-asa .elementor .elementor-widget-text-editor { width: auto; }
+.aladdin-payab-sanat-asa .elementor-widget-container { display: contents; }
+.aladdin-payab-sanat-asa .elementor-widget-text-editor .elementor-widget-container { font: inherit; color: inherit; }
+.aladdin-payab-sanat-asa .elementor-widget-aladdin_payab_sanat_asa_element { width: auto; max-width: 100%; }

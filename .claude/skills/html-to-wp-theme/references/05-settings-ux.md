@@ -1,5 +1,7 @@
 # 05 — Commercial settings, search/filter UX, menus, branding
 
+> Names in this file (`larijani_*`, `ls_*`, `LS-` codes) and numeric limits come from the Larijani reference implementation. Rename with the naming table in SKILL.md §0.1 and adapt limits/file types to the project.
+
 Contents: Settings panel · Search panel that filters · Glass dropdowns · Menu active state · Branding
 
 ## Settings panel scope (handbook) — cover what applies to the project

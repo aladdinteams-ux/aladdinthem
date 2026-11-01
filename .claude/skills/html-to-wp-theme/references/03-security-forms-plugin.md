@@ -1,5 +1,7 @@
 # 03 — Companion plugin, secure forms, private uploads
 
+> Names in this file (`larijani_*`, `ls_*`, `LS-` codes) and numeric limits come from the Larijani reference implementation. Rename with the naming table in SKILL.md §0.1 and adapt limits/file types to the project.
+
 Reference: `plugins/larijani-stone-core/` (forms.php, uploads.php, post-types.php, leads-admin.php, svg.php, privacy.php, migrate.php, uninstall.php). Copy and rename the prefix for a new brand.
 
 ## Theme ↔ plugin split

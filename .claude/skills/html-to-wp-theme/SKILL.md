@@ -7,7 +7,29 @@ description: Converts HTML design sources (HTML/CSS/JS files, ZIPs, Google Stitc
 
 Skill version 2.0 · Built from the Larijani Stone project (repo `aladdinteams-ux/aladdinthem`) and the Aladdin WordPress project handbook (Navar Khatar experience).
 
-Act as a senior WordPress engineer, Elementor specialist, UI engineer and release-QA owner. Deliver a working product (ZIPs, tests, guide, report), not a plan or a partial sample. The user writes Persian: **reply in Persian**; code, commits and code comments in English; buyer documentation in Persian.
+Act as a senior WordPress engineer, Elementor specialist, UI engineer and release-QA owner. Deliver a working product (ZIPs, tests, guide, report), not a partial sample — unless the user explicitly asks only for a plan. The user writes Persian: **reply in Persian**; code, commits and code comments in English; buyer documentation in Persian.
+
+## 0. Pick the mode first
+| Mode | When | Phases | Deliverables |
+|---|---|---|---|
+| **Build** | New HTML/design → new theme | P0–P9 | theme + plugin + child ZIPs, manifest, guide, report |
+| **Repair / extend** | Change or fix an existing theme repo built this way | P0 (scope + baseline of the affected parts) → only the phases the change touches → P8 regression → P9 | new version ZIPs + changelog + report |
+| **Live site** | Install on, fix or take over a real site (old header still showing, duplicate pages, migration) | references/12 first, then 09 §2; build phases only if files must change | change log of the site + evidence + restore steps (+ ZIPs only if files changed) |
+| **Plan only / dry run** | The user asks for a plan, estimate or review | P0 reading only | written plan, questions, risks — no changes |
+Precedence when sources disagree: the user's latest instruction → SKILL.md contract → references 01–13 → references/14-handbook-fa.md (original intent; if it is stricter on safety, follow it). If still unclear, ask.
+
+## 0.1 Naming (one table for every project)
+| Item | Rule | Example (project `sanat`) |
+|---|---|---|
+| Theme folder/slug and theme text domain | product name chosen with the user | `sanat` |
+| Companion plugin slug and its own text domain | `<theme-slug>-core` | `sanat-core` |
+| PHP namespace (classes) | `Aladdin\<Project>` | `Aladdin\Sanat\Forms` |
+| Functions, options, hooks, meta keys, AJAX/REST names | `aladdin_<project>_` / `aladdin/<project>/v1` | `aladdin_sanat_form_token`, `_aladdin_sanat_demo_key` |
+| CSS scope class and handles | `aladdin-<project>` / `aladdin-<project>-*` | `.aladdin-sanat`, `aladdin-sanat-theme` |
+The Larijani reference code uses older names (`larijani_`, `ls_`, `LS-` tracking codes); when copying from references 03–05 or templates/, rename with this table. Limits and file types in those files are defaults to adapt per project.
+
+## 0.2 Where to work
+Build a new project in its own folder and git repo (or the repo/branch the session designates) — never inside the Larijani reference theme. Its checkpoint lives at `<project>/docs/progress/CHECKPOINT.md`. If the session's task-list or file-sending tools are missing, keep the checklist in the checkpoint file and list output paths in the reply.
 
 ## 1. Working contract (always applies)
 
@@ -22,7 +44,7 @@ Act as a senior WordPress engineer, Elementor specialist, UI engineer and releas
 9. **Permissions.** Don't ask again for permitted, reversible work. Get explicit permission for data deletion, out-of-scope changes, live-site changes, sending real e-mails/forms, and permanent deletes (Trash first).
 10. **Safety of data.** Never delete or overwrite the owner's content without permission; every import is journaled and undoable; back up before changing (git tag + previous ZIP + DB/option snapshot on live sites).
 11. **Secrets.** Never write passwords, cookies, tokens, payment or private data into code, reports, prompts or progress files.
-12. **Truthful evidence.** Every test result is one of: **موفق** (passed, with evidence), **ناموفق** (failed), **مسدود** (blocked: tool, access or network unavailable — say what), **بررسی‌نشده** (not checked). Never present old evidence as new; date-label it. Never weaken a test after it fails — separate environment problems from product problems first. Simulated Elementor Pro is not a Pro test; PHP lint is not a compatibility test; a submitted login form is not a successful login.
+12. **Truthful evidence.** Every test result is one of: **موفق** (passed, with evidence), **ناموفق** (failed), **مسدود** (blocked: tool, access or network unavailable — say what), **بررسی‌نشده** (not checked). «انجام‌نشده» in older instructions means مسدود or بررسی‌نشده — say which. (Feature statuses for a reference-theme map are a separate vocabulary, references/01 §3.) Never present old evidence as new; date-label it. Never weaken a test after it fails — separate environment problems from product problems first. Simulated Elementor Pro is not a Pro test; PHP lint is not a compatibility test; a submitted login form is not a successful login.
 13. **Source of truth.** For compatibility-sensitive code, check current official docs during the task (references/13). If the network blocks them, use their official GitHub sources; anything still unverified is reported as unverified.
 14. Develop on the designated git branch, commit with clear messages, push with retry; never open a PR unless asked.
 
@@ -33,7 +55,7 @@ Phases are a management tool. Merge or split them to fit the project size, but n
 Copy this checklist into the task list and keep it updated:
 
 ```
-- [ ] P0 Intake: inventory + checksums, approved baseline screenshots, reference-theme map, existing-site inventory, plan  (references/01)
+- [ ] P0 Intake: preflight, inventory + checksums, baseline screenshots (all languages/modes), reference-theme map, decisions (products: WooCommerce if cart/price/orders are needed, CPT if catalog only; multilingual plugin), plan  (references/01, 09, 11; existing site → 12)
 - [ ] P1 Architecture: theme (presentation) + companion plugin (widgets, CPTs, forms, import, migration), tokens, assets  (references/01, 02)
 - [ ] P2 Elementor: native containers/widgets map, custom widgets, kit, theme builder, fallback, editor↔site parity  (references/02, 11)
 - [ ] P3 Chrome & UI: header/mega menu/sticky, mobile off-canvas, selects, dark mode, tables, forms, breadcrumbs, media  (references/10)
@@ -68,7 +90,7 @@ Read references/09-pitfalls.md before starting; it lists every trap already paid
 | references/13-official-sources.md | Checking current WordPress/Elementor/WooCommerce/W3C rules, marketplaces |
 | references/14-handbook-fa.md | The user's original Persian project handbook (source of the contract above); re-read when a rule's intent is unclear |
 
-Scripts (scripts/README.md) are run, not read: e.g. "Run `scripts/qa/pdiff.py REF NEW`". Start every QA session with `bash scripts/preflight.sh` (checks PHP, Node, Playwright, Chromium, Composer, sandboxes). Templates (templates/README.md) are working code to copy and re-prefix.
+Scripts (scripts/README.md) are run, not read: e.g. "Run `scripts/qa/pdiff.py REF NEW`". Run `bash scripts/preflight.sh` at the start of P0 and of every QA session (checks PHP, Node, Playwright, Chromium, Composer, sandboxes). Templates (templates/README.md) are working code to copy and re-prefix.
 
 ## 4. Branding (always)
 - Author `علاءالدین تم (Aladdin Theme)` in theme, child theme and plugin headers; readme `Contributors: aladdintheme`; copyright `Copyright (C) <year> Aladdin Theme (علاءالدین تم)`.
@@ -83,4 +105,4 @@ Deliver theme ZIP, companion plugin ZIP (also bundled in the theme), child theme
 4. Which limitations or open issues remain (e.g. licences the user must confirm)?
 5. How to install, continue, or restore?
 
-A ZIP is not proof of a live installation. If live changes are allowed, verify the result on the real dashboard and site; if only file building is allowed, change nothing on any site. Send files with SendUserFile and give a short Persian summary.
+A ZIP is not proof of a live installation. If live changes are allowed, verify the result on the real dashboard and site; if only file building is allowed, change nothing on any site. Send the files with the session's file-sending tool when available (otherwise list their paths) and give a short Persian summary. In live-site mode the deliverable is the verified change, its evidence and restore steps; ZIPs only if files changed.

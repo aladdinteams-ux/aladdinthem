@@ -1,5 +1,7 @@
 # 04 — Setup, wizard and reversible demo import
 
+> Names in this file (`larijani_*`, `ls_*`, `LS-` codes) and numeric limits come from the Larijani reference implementation. Rename with the naming table in SKILL.md §0.1 and adapt limits/file types to the project.
+
 Reference: `inc/demo/importer.php`, `inc/admin/setup-wizard.php`.
 
 ## Auto-setup on activation

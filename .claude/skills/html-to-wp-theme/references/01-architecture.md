@@ -6,7 +6,8 @@ Contents: 1 Intake · 2 Approved baseline · 3 Reference theme map · 4 Theme vs
 1. Put every supplied archive in its own empty directory (untrusted data; read with `python3 -I`, never execute it). Record each source file with size and SHA-256 (`sha256sum`) in the checkpoint.
 2. Inventory: pages and routes, languages and directions, sections, components, interactions (menus, tabs, sliders, accordions, filters, modals, forms, calculators, maps), CSS/JS, fonts, icon families, media, dynamic data (products, posts, projects, prices), third-party dependencies (CDNs, Google Fonts, analytics), and remote/hotlinked assets (licence + privacy + availability risk).
 3. Component map — classify every component as **Elementor-native** (Container + core widgets), **Elementor template / theme location** (header, footer, single, archive, product, 404), **WordPress-native** (menus, posts, search, comments), **custom Elementor widget** (data-driven or interactive), or **companion-plugin service** (forms, CPTs, filters, import, integrations). Write it as a table (component → implementation → controls → data source).
-4. Plan + task list (TaskCreate). State assumptions and anything the user must decide (fonts, licences, languages, live-site permission).
+4. Decide with the user: font, languages and multilingual method (Polylang, WPML, or none — references/11), products (WooCommerce when cart/prices/orders are needed, a CPT for a catalog only), form recipients and test-mail permission, dark-mode default, live-site scope, target marketplace.
+5. Plan + task list (the session's task tool, or the checkpoint file). Run `scripts/preflight.sh` before taking screenshots.
 
 ## 2. Approved baseline
 - The approved real view is the reference: colours, fonts, sizes, spacing, alignment, radii, shadows, images, header, footer, menu, and interaction states (hover, focus, open menus).
@@ -22,6 +23,7 @@ For each of its settings/features record one status: **موجود** (exists here
 | style.css, functions.php, template hierarchy, template parts | Custom Elementor widgets, controls, dynamic tags |
 | Design tokens (CSS variables, optional theme.json), assets, fonts, icons | CPTs, taxonomies, registered meta, persistent settings independent of theme |
 | Theme supports, menus, image sizes, theme-builder locations | Forms, uploads, leads, AJAX/REST endpoints, integrations |
+| PHP fallback renderers for header/footer (used when the plugin or Elementor is missing) | Editable header/footer widgets used inside Elementor templates |
 | Header/footer renderers and fallbacks when plugins are missing | Demo import, migrations, setup services |
 - Use only public WordPress, Elementor and WooCommerce APIs; never edit core or third-party files, never depend on private/internal APIs as shortcuts; feature-detect optional plugins and degrade gracefully.
 - If the user explicitly wants a theme without a plugin, explain the trade-offs (wp.org plugin-territory rules, content lost on theme switch) and don't silently drop needed features.
@@ -29,7 +31,7 @@ For each of its settings/features record one status: **موجود** (exists here
 - Load assets only where needed (widget `get_style_depends()` / `get_script_depends()`, conditional enqueue).
 
 ## 5. Theme skeleton
-- Slug = brand slug; text domain = slug; prefixes per SKILL.md §1.4 (never 2-letter prefixes).
+- Slugs, text domains and prefixes: SKILL.md §0.1 naming table (never 2-letter prefixes).
 - `functions.php` only defines constants and requires `inc/*`.
 - **CSS**: Tailwind 3 compiled at build time from `src/` with `important: '.aladdin-<project>'` (scope class), `corePlugins.preflight: false` + reset scoped to `:where(.aladdin-<project>)`; colours as CSS variables with Elementor Global Colour fallback (`--x: var(--e-global-color-<id>, var(--x-default))`), `color-mix()` for alpha; typography, container width and radius as variables so settings change them without altering defaults; keep selector specificity ≤ 0-3-0 so Elementor Style-tab rules win; content globs include PHP, JS and layout HTML; safelist dynamic classes.
 - Semantic colour tokens per component (surface, text, title, border, accent) with dark-mode values (references/10).

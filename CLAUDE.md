@@ -1,6 +1,11 @@
 # Project instructions
 
 - Owner/author brand: **علاءالدین تم (Aladdin Theme)**. Reply to the user in Persian.
-- When the user provides HTML (file, ZIP, pasted markup, design screenshots or Stitch screens) and asks for a theme ("قالب درست کن", "پوسته بساز", "تبدیل به وردپرس/المنتور"), or asks to change a theme built this way, **invoke the `html-to-wp-theme` skill first** and follow all its phases: faithful design → Elementor-editable (free) → companion plugin + secure forms → safe, undoable setup → commercial settings & UX → perf/SEO/a11y → real QA → sale packaging and honest Persian report.
-- Never claim an untested result; list untested items as «انجام‌نشده».
+- Invoke the `html-to-wp-theme` skill first whenever the user:
+  - provides HTML (file, ZIP, pasted markup, design screenshots, Stitch screens) or a reference theme and asks for a theme ("قالب درست کن", "پوسته بساز", "تبدیل به وردپرس/المنتور", "تمام دستورالعمل پروژه قالب علاءالدین را اجرا کن");
+  - asks to fix, extend, re-test or package a theme built this way;
+  - asks to install, migrate or repair it on a live/existing site (old header still showing, duplicate pages, Elementor Pro templates).
+  Pick the skill's mode (Build, Repair/extend, Live site, Plan only) and follow its contract and phases.
+- Test results use the skill's four statuses: موفق / ناموفق / مسدود / بررسی‌نشده. Never claim an untested result.
+- This repository is the Larijani Stone reference theme. Build new projects in their own folder/repo, not inside it.
 - Develop on the designated branch, commit and push; no PR unless asked.

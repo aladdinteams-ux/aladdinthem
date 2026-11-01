@@ -15,7 +15,7 @@ Contents: 1 Parity method · 2 Languages and direction · 3 Device matrix · 4 C
 - For each language check direction (`dir`), font, spacing, alignment, icons that must mirror, and both long and short strings (menu labels, buttons, cards).
 - Keep one shared editable structure across languages; never freeze headings into fixed, non-editable text to make translations fit.
 - With a multilingual plugin: translated URLs, hreflang, language switcher in header and mobile menu, translated menus and theme-builder templates.
-- Without Elementor Pro, the theme's built-in theme builder must choose header/footer/single/archive templates **per language** (e.g. a template selection per language code, or translating the `elementor_library` posts with the multilingual plugin and resolving the current language's translation). Polylang's free version translates posts, pages, menus and taxonomies; confirm which post types it translates in the installed version before relying on it, and record it as an assumption.
+- The theme's built-in theme builder (Pro is not used) must choose header/footer/single/archive templates **per language** (e.g. a template selection per language code, or translating the `elementor_library` posts with the multilingual plugin and resolving the current language's translation). Polylang's free version translates posts, pages, menus and taxonomies; confirm which post types it translates in the installed version before relying on it, and record it as an assumption.
 
 ## 3. Device matrix
 Widths: about 320, 360/390, 768, 1024, 1280/1440, plus just below/above every real breakpoint of the design. Also large screens, browser zoom (200 %), and landscape phones when relevant. Light and dark mode for each.

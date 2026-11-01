@@ -1,4 +1,4 @@
-<!-- Combined, read-only copy of the html-to-wp-theme skill v2.0 (SKILL.md + references 01–13). The installable skill is the folder / ZIP. -->
+<!-- Combined, read-only copy of the html-to-wp-theme skill (SKILL.md + references 01–13). The installable skill is the folder / ZIP. -->
 ---
 name: html-to-wp-theme
 description: Converts HTML design sources (HTML/CSS/JS files, ZIPs, Google Stitch or design-tool exports, screenshots, a reference theme) into a commercial, installable WordPress theme plus companion plugin that stays fully editable in Elementor, with secure forms, safe and reversible setup/import, settings panel, WooCommerce, multilingual/RTL, dark mode, tests and sale packaging for Zhaket/Rtl-theme. Also repairs, extends or migrates sites built this way. Use when the user gives HTML or a design and asks for a theme ("قالب درست کن", "پوسته وردپرس بساز", "این HTML رو قالب کن", "تبدیل به وردپرس/المنتور", "تمام دستورالعمل پروژه قالب علاءالدین را اجرا کن", "make a WordPress theme from this"), or asks to fix/extend/re-test such a theme. Author brand: Aladdin Theme (علاءالدین تم).
@@ -17,7 +17,7 @@ Act as a senior WordPress engineer, Elementor specialist, UI engineer and releas
 | **Repair / extend** | Change or fix an existing theme repo built this way | P0 (scope + baseline of the affected parts) → only the phases the change touches → P8 regression → P9 | new version ZIPs + changelog + report |
 | **Live site** | Install on, fix or take over a real site (old header still showing, duplicate pages, migration) | references/12 first (preconditions: which theme/version/ZIP is installed, whether Elementor Pro is active), then 09 §2–3; build phases only if files must change | change log of the site + evidence + restore steps (+ ZIPs only if files changed) |
 | **Plan only / dry run** | The user asks for a plan, estimate or review | P0 reading only | written plan, questions, risks — no changes |
-Precedence when sources disagree: the user's latest instruction → SKILL.md contract → references 01–13 → references/14-handbook-fa.md (original intent; if it is stricter on safety, follow it). If still unclear, ask.
+Precedence when sources disagree: the user's latest instruction → SKILL.md contract → references 01–13 → references/14-handbook-fa.md (original intent; if it is stricter on safety, follow it). If still unclear, ask. The user's later decision **not to use Elementor Pro** overrides the handbook's Pro items (§6 Pro features): only the existing-site cleanup of old Pro templates remains.
 
 ## 0.1 Naming (one table for every project)
 | Item | Rule | Example (project `sanat`) |
@@ -37,7 +37,7 @@ Ask for a new repository for a new project. If none is available and the designa
 
 1. **Read the real input first.** Open every supplied file; never infer contents from file names or earlier conversations. Never assume access, files or test results from a previous project — re-fetch and re-validate them.
 2. **The approved look is the baseline.** Adding editability or settings must not change it. A request to redesign one component changes only that component.
-3. **Real editability.** Every visible element gets a real control (Elementor container/core widget, dynamic data, or a purpose-built widget). One HTML widget for a whole page or section is never acceptable.
+3. **Real editability with free Elementor only.** Every visible element gets a real control: free Elementor container/core widget first, otherwise a new custom widget from the companion plugin. **Elementor Pro is never used or required** (no Pro widgets, forms, popups, dynamic tags or theme-builder conditions). One HTML widget for a whole page or section is never acceptable.
 4. **Namespacing.** Use the `aladdin` namespace for everything project-specific: PHP namespace `Aladdin\<Project>`, function/option/hook prefix `aladdin_<project>_`, CSS scope class `aladdin-<project>`, script/style handles `aladdin-<project>-*`, text domain = theme slug. (The Larijani reference repo predates this rule and uses `larijani_`/`ls_`.)
 5. **Shared chrome.** Header and footer follow one approved structure on every page and language unless the project decides an explicit exception.
 6. **Design for all states together**: light/dark mode, every project language and direction, mobile, tablet and desktop.
@@ -46,7 +46,7 @@ Ask for a new repository for a new project. If none is available and the designa
 9. **Permissions.** Don't ask again for permitted, reversible work. Get explicit permission for data deletion, out-of-scope changes, live-site changes, sending real e-mails/forms, and permanent deletes (Trash first).
 10. **Safety of data.** Never delete or overwrite the owner's content without permission; every import is journaled and undoable; back up before changing (git tag + previous ZIP + DB/option snapshot on live sites).
 11. **Secrets.** Never write passwords, cookies, tokens, payment or private data into code, reports, prompts or progress files.
-12. **Truthful evidence.** Every test result is one of: **موفق** (passed, with evidence), **ناموفق** (failed), **مسدود** (blocked: tool, access or network unavailable — say what), **بررسی‌نشده** (not checked). «انجام‌نشده» in older instructions means مسدود or بررسی‌نشده — say which. (Feature statuses for a reference-theme map are a separate vocabulary, references/01 §3.) Never present old evidence as new; date-label it. Never weaken a test after it fails — separate environment problems from product problems first. Simulated Elementor Pro is not a Pro test; PHP lint is not a compatibility test; a submitted login form is not a successful login.
+12. **Truthful evidence.** Every test result is one of: **موفق** (passed, with evidence), **ناموفق** (failed), **مسدود** (blocked: tool, access or network unavailable — say what), **بررسی‌نشده** (not checked). «انجام‌نشده» in older instructions means مسدود or بررسی‌نشده — say which. (Feature statuses for a reference-theme map are a separate vocabulary, references/01 §3.) Never present old evidence as new; date-label it. Never weaken a test after it fails — separate environment problems from product problems first. PHP lint is not a compatibility test; a submitted login form is not a successful login.
 13. **Source of truth.** For compatibility-sensitive code, check current official docs during the task (references/13). If the network blocks them, use their official GitHub sources; anything still unverified is reported as unverified.
 14. Develop on the designated git branch, commit with clear messages, push with retry; never open a PR unless asked.
 
@@ -78,7 +78,7 @@ Before starting read references/09-pitfalls.md: §1 for Build/Repair, §2 for Li
 | File | Read when |
 |---|---|
 | references/01-architecture.md | Intake, baseline, theme/plugin split, tokens, templates |
-| references/02-elementor.md | Elementor widgets, native layouts, kit, theme builder, Pro rules |
+| references/02-elementor.md | Elementor widgets (free Elementor only, no Pro), native layouts, kit, built-in theme builder |
 | references/03-security-forms-plugin.md | Forms, uploads, leads, privacy, companion plugin |
 | references/04-setup-wizard-import.md | Activation, wizard, plugin installer, import journal, undo |
 | references/05-settings-ux.md | Settings panel, search filters, dropdowns, menu state, branding |
@@ -88,7 +88,7 @@ Before starting read references/09-pitfalls.md: §1 for Build/Repair, §2 for Li
 | references/09-pitfalls.md | Before starting and whenever something behaves strangely |
 | references/10-header-menus-ui.md | Header, mega menu, sticky, off-canvas, selects, dark mode, tables, forms, breadcrumbs, media |
 | references/11-parity-i18n-responsive.md | Editor↔site parity, languages/RTL, device matrix |
-| references/12-existing-site-migration.md | Working on a live/existing site, previous theme or Pro templates, cleanup |
+| references/12-existing-site-migration.md | Working on a live/existing site, previous theme or leftover Elementor Pro templates to remove, cleanup |
 | references/13-official-sources.md | Checking current WordPress/Elementor/WooCommerce/W3C rules, marketplaces |
 | references/14-handbook-fa.md | The user's original Persian project handbook (source of the contract above); re-read when a rule's intent is unclear |
 
@@ -156,7 +156,7 @@ For each of its settings/features record one status: **موجود** (exists here
 - RTL/LTR per language (`dir`, `lang`), logical CSS properties.
 
 ## 6. Templates
-`index, page, single, archive, search, 404, comments, searchform (all search boxes through get_search_form() variants), archive-/single-/taxonomy-<cpt>, woocommerce/*`. Each calls a `do_location()` helper first so an Elementor template (Pro condition or the built-in theme builder) can replace it.
+`index, page, single, archive, search, 404, comments, searchform (all search boxes through get_search_form() variants), archive-/single-/taxonomy-<cpt>, woocommerce/*`. Each calls a `do_location()` helper first so an Elementor template chosen in the theme's built-in theme builder can replace it (no Elementor Pro).
 
 ## 7. Data model
 - One field list drives both the Customizer and the settings page; central defaults; sanitise per type.
@@ -169,16 +169,17 @@ For each of its settings/features record one status: **موجود** (exists here
 
 <!-- references/02-elementor.md -->
 
-# 02 — Elementor integration (free first, Pro optional)
+# 02 — Elementor integration (free Elementor only — no Elementor Pro)
 
-Contents: 1 Choice order · 2 Custom widgets · 3 Native layouts · 4 Kit · 5 Theme builder & Pro · 6 Fallback · 7 Verification
+Contents: 1 Choice order · 2 Custom widgets · 3 Native layouts · 4 Kit · 5 Built-in theme builder · 6 Fallback · 7 Verification
 
 ## 1. Choice order for every component
-1. Elementor Container + core widgets with responsive controls.
-2. Dynamic data / WordPress API (menus, posts, products, site settings, dynamic tags).
-3. Documented Elementor Pro features (Form, Popup, Dynamic Tags, Theme Builder) — only when Pro is present, with detection and a free fallback; never require Pro silently.
-4. A purpose-built custom widget.
-5. A companion-plugin service plus limited, isolated code.
+1. Free Elementor Container + core widgets with responsive controls.
+2. Dynamic data / WordPress API (menus, posts, products, site settings), exposed through the companion plugin's own controls or dynamic tags.
+3. A purpose-built custom widget in the companion plugin (whatever the free core widgets cannot do: forms, popups/modals, sliders, filters, tables, mega menu, header/footer parts).
+4. A companion-plugin service plus limited, isolated code.
+
+**Elementor Pro is not used.** Never use Pro widgets (Form, Popup, Posts, Nav Menu, Loop, Mega Menu…), Pro dynamic tags, Pro Theme Builder conditions or any Pro-specific code; never ask the buyer to buy Pro. Everything Pro would give is built with free Elementor plus the theme's own widgets and built-in theme builder. If a buyer happens to have Pro installed, the theme must simply keep working (no fatal errors, no reliance on it).
 Normal page content is never hidden in one inseparable block. If Elementor's wrappers break an approved header/footer structure, provide a dedicated editable widget for that part and still keep a useful native pattern.
 
 ## 2. Custom widgets (in the companion plugin)
@@ -197,11 +198,9 @@ Normal page content is never hidden in one inseparable block. If Elementor's wra
 ## 4. Kit (Site Settings)
 - Add theme colours as custom global colours and the bundled font. System colours, typography, container width and widget spacing belong to the user: fill them only when empty or on a brand-new site; later syncs change only values the theme set.
 
-## 5. Theme builder and Pro
-- Register Pro theme locations; provide a built-in theme builder for free Elementor (theme mods per location → saved template; `do_location()` renders it and enqueues its CSS).
-- Import with Pro: never add conditions when the owner already has a template with conditions for that location; regenerate the conditions cache.
-- Installing a new theme does **not** remove published Pro conditions from a previous theme (references/12).
-- Pro behaviour is verified only with a real Pro install; otherwise report «مسدود».
+## 5. Built-in theme builder (instead of Pro Theme Builder)
+- Theme mods per location (header, footer, single post, archive, single product, shop, 404, and per language when multilingual) → a saved Elementor template; `do_location()` renders it and enqueues its CSS. Editing happens in free Elementor.
+- Never write Pro theme-location or condition code. Old Pro templates on an existing site are only something to find and remove with permission (references/12).
 
 ## 6. Fallback without Elementor
 Render saved `_elementor_data` (containers, core widgets, theme widgets) with Elementor-like markup and the scoped CSS so the site still looks right; show a notice recommending Elementor.
@@ -276,18 +275,18 @@ Reference: `inc/demo/importer.php`, `inc/admin/setup-wizard.php`.
 - Runs only on a **fresh site** (`fresh_site` option) or a site without own content (`larijani_site_has_content()`: pages without the demo meta other than privacy/sample page, or > 1 published post). Otherwise: no import, show the "run setup" notice.
 - Fresh site: remove only WP's untouched defaults (Hello world, Sample Page), rename "Uncategorized", move default widgets to inactive, enable `/%postname%/`, then import pages, theme-builder templates, menus, projects (if plugin active), sample posts/products, kit; queue demo image copy in WP-Cron.
 - Non-interactive activation (WP-CLI) → finish on next admin visit. Filter to disable (`ls_auto_setup_on_activation`).
-- When Elementor / Pro / WooCommerce are activated later, complete the missing parts (templates, conditions, products, shop page) once.
+- When Elementor or WooCommerce are activated later, complete the missing parts (templates, products, shop page) once.
 
 ## Wizard page (Larijani › راه‌اندازی و درون‌ریزی)
 1. **Requirements** table with ✅/⚠️/❌: PHP ≥ 7.4 (8.1+ recommended), WP ≥ 6.5, memory 128M/256M, max_execution_time 60/120, upload size, extensions mbstring/fileinfo (fail), dom/zip/curl (warn), GD or Imagick, pretty permalinks, plugin dir writable.
-2. **Plugins**: bundled core plugin (required), Elementor (required for editing), WooCommerce (optional), Elementor Pro (optional, never installed). Install/activate only on click: `Plugin_Upgrader` + `WP_Ajax_Upgrader_Skin`, `plugins_api` for wordpress.org, nonce per plugin + `install_plugins` & `activate_plugins`; clear message on failure (FTP credentials, no network).
+2. **Plugins**: bundled core plugin (required), Elementor (required for editing), WooCommerce (optional). Install/activate only on click: `Plugin_Upgrader` + `WP_Ajax_Upgrader_Skin`, `plugins_api` for wordpress.org, nonce per plugin + `install_plugins` & `activate_plugins`; clear message on failure (FTP credentials, no network).
 3. **Demo import** with checkboxes. Defaults on a site with content: "set front page" unchecked with the current front page named in red; sample posts/products unchecked. Projects skipped with a clear message if the core plugin is inactive.
 4. **Last import** card: status (done/failed/interrupted), undo button.
 
 ## Import rules (never destroy owner content)
 - Create only; find existing objects by stable keys (`_ls_demo_key`, slug) → re-runs create no duplicates.
 - Menus: only fill empty locations; items linked to page/term objects (custom links only as fallback, e.g. `?ls_cat=` for the no-Woo catalog).
-- Theme-builder slots: only fill empty/broken ones; with Pro never add conditions if the owner already has a template with conditions for that location.
+- Theme-builder slots: only fill empty/broken ones; never write Elementor Pro conditions.
 - Front page replaced only when the checkbox is checked.
 - Elementor system kit values only on fresh sites.
 
@@ -496,8 +495,8 @@ Sites used last time: 8083 (WP 7.1.2 + Elementor 4.0.8 + Woo, theme symlinked), 
 # 08 — Packaging for sale (Zhaket / Rtl-theme) and reporting
 
 ## Files
-- `style.css` header: Theme Name, Theme URI (client site if given), `Author: علاءالدین تم (Aladdin Theme)`, Description (Persian; say Elementor free is enough and Pro optional; mention the companion plugin), Version, Requires at least, Tested up to, Requires PHP, License GPLv2+, Text Domain = slug, Domain Path, accurate Tags only (no `block-styles` unless implemented), copyright lines.
-- `readme.txt` (WordPress format): description, installation, FAQ (Pro? existing content?), changelog, Copyright, Resources (every font/icon/image with licence + source; demo images: licence status stated honestly).
+- `style.css` header: Theme Name, Theme URI (client site if given), `Author: علاءالدین تم (Aladdin Theme)`, Description (Persian; say free Elementor is all that is needed — no Elementor Pro; mention the companion plugin), Version, Requires at least, Tested up to, Requires PHP, License GPLv2+, Text Domain = slug, Domain Path, accurate Tags only (no `block-styles` unless implemented), copyright lines.
+- `readme.txt` (WordPress format): description, installation, FAQ (Elementor Pro is not needed and not used; existing content?), changelog, Copyright, Resources (every font/icon/image with licence + source; demo images: licence status stated honestly).
 - `screenshot.png` 1200×900 rendered from the theme with external images replaced by neutral placeholders.
 - `CHANGELOG.md` (Security / Architecture / Added / Improved / Fixed), version bumped in style.css, `LARIJANI_VERSION`, package.json, readme Stable tag.
 - POT files for theme and plugin (`scripts/qa/makepot.php <root> <out> [domain] [project]`).
@@ -524,7 +523,7 @@ Theme Check: aim for 0 REQUIRED except documented wp.org-only items (CPT fallbac
 - Assets, public hooks, permissions and dependencies are documented (developer hooks doc).
 
 ## Report (Persian, docs/qa/COMMERCIAL-REPORT-<ver>-FA.md)
-1 bugs found (id, severity, status) · 2 security report · 3 architecture · 4 commercial features · 5 test table with real numbers using the four statuses موفق / ناموفق / مسدود / بررسی‌نشده; typical blocked/not-checked items to list explicitly: MySQL, PHP 7.4 runtime, Elementor Pro, Nginx/LiteSpeed, real cache, Yoast/Rank Math, real e-mail, real devices/screen reader/Lighthouse, multisite…) · 6 guide link · 7 remaining limitations · 8 deliverables. Then commit, push (retry 2/4/8/16 s), send the ZIPs + report + guide with the session's file-sending tool (or list their paths), and give a short Persian summary.
+1 bugs found (id, severity, status) · 2 security report · 3 architecture · 4 commercial features · 5 test table with real numbers using the four statuses موفق / ناموفق / مسدود / بررسی‌نشده; typical blocked/not-checked items to list explicitly: MySQL, PHP 7.4 runtime, Nginx/LiteSpeed, real cache, Yoast/Rank Math, real e-mail, real devices/screen reader/Lighthouse, multisite…) · 6 guide link · 7 remaining limitations · 8 deliverables. Then commit, push (retry 2/4/8/16 s), send the ZIPs + report + guide with the session's file-sending tool (or list their paths), and give a short Persian summary.
 
 
 ---
@@ -580,11 +579,11 @@ These are experiences, not guarantees. IDs, counts and versions below belong to 
 | URL `contact-us-2` | an old slug existed; build links from IDs and real permalinks |
 | WordPress "critical error" | the generic message gave no cause; fixing header/footer did not prove all PHP errors were fixed |
 | Transient DB connection error | happened once and recovered; without logs it is environment, not theme |
-| Per-version tests | some versions had language/menu/migration tests but no real Pro or full PageSpeed; report each version's evidence separately |
+| Per-version tests | some versions had language/menu/migration tests but no full PageSpeed run; report each version's evidence separately |
 | Admin login | "form submitted" ≠ logged in; confirm by seeing the dashboard; never store credentials |
 
 ## 3. Never repeat
-- Declaring independence from the previous header before a real Pro test.
+- Declaring independence from the previous header before verifying on the real site that old Pro templates no longer render.
 - Classifying content as old by date alone — check ownership, content, history, links and the replacement list within the permitted scope.
 - Publishing previous-version evidence as a new test.
 - Putting a whole page in one HTML widget for speed.
@@ -671,7 +670,7 @@ Contents: 1 Parity method · 2 Languages and direction · 3 Device matrix · 4 C
 - For each language check direction (`dir`), font, spacing, alignment, icons that must mirror, and both long and short strings (menu labels, buttons, cards).
 - Keep one shared editable structure across languages; never freeze headings into fixed, non-editable text to make translations fit.
 - With a multilingual plugin: translated URLs, hreflang, language switcher in header and mobile menu, translated menus and theme-builder templates.
-- Without Elementor Pro, the theme's built-in theme builder must choose header/footer/single/archive templates **per language** (e.g. a template selection per language code, or translating the `elementor_library` posts with the multilingual plugin and resolving the current language's translation). Polylang's free version translates posts, pages, menus and taxonomies; confirm which post types it translates in the installed version before relying on it, and record it as an assumption.
+- The theme's built-in theme builder (Pro is not used) must choose header/footer/single/archive templates **per language** (e.g. a template selection per language code, or translating the `elementor_library` posts with the multilingual plugin and resolving the current language's translation). Polylang's free version translates posts, pages, menus and taxonomies; confirm which post types it translates in the installed version before relying on it, and record it as an assumption.
 
 ## 3. Device matrix
 Widths: about 320, 360/390, 768, 1024, 1280/1440, plus just below/above every real breakpoint of the design. Also large screens, browser zoom (200 %), and landscape phones when relevant. Light and dark mode for each.
@@ -685,6 +684,8 @@ Every entry page and related routes, open menus (desktop and mobile), sticky hea
 <!-- references/12-existing-site-migration.md -->
 
 # 12 — Working on an existing / live site (independence from the previous theme)
+
+> The new theme never uses Elementor Pro. Pro appears here only because an existing site may still have old Pro templates/conditions from a previous theme that must be found and removed (with permission) so the new design shows.
 
 Contents: 1 Permission and access · 2 Inventory · 3 Snapshot · 4 Takeover · 5 Cleanup and duplicate pages · 6 Verification
 
@@ -700,9 +701,9 @@ Identify the template that actually renders each area from the page itself (temp
 Before changing: front page and posts page options, kit settings, menu locations, template selections and conditions, affected wrappers/CSS, plus a database backup when allowed. Take a checkpoint before and after every migration or external change.
 
 ## 4. Takeover
-- Priority for header, footer, single and archive: the project's approved design is the default; using another Pro condition must be a deliberate, documented choice.
-- Installing the new theme does not remove old global Pro conditions — old header/footer templates keep rendering until their conditions are removed or the templates are trashed (with permission). After changing conditions, regenerate Pro's conditions cache (Theme Builder → re-save the template's conditions, or in code `\ElementorPro\Modules\ThemeBuilder\Module::instance()->get_conditions_manager()->get_cache()->regenerate()` as in the Larijani importer — that call was never run against a real Pro install, so verify it) and clear Elementor's CSS cache, then page/CDN caches.
-- Conflict with the import rule in references/04 ("never add conditions over the owner's template"): that rule protects owners during an automatic import. When the user asked to take over the site with the new design, show which old templates win and ask before removing their conditions.
+- Priority for header, footer, single and archive: the project's approved design (built with free Elementor) is the default; old Pro conditions must not override it — keeping any old Pro template is only the owner's documented choice.
+- Installing the new theme does not remove old global Pro conditions — old header/footer templates keep rendering until their conditions are removed or the templates are trashed (with permission). After changing conditions, regenerate Pro's conditions cache (in the site's own Elementor Pro: Theme Builder → re-save the remaining templates' conditions; this is a one-off cleanup action on that site, never code shipped in the new theme or plugin) and clear Elementor's CSS cache, then page/CDN caches.
+- Before removing old Pro conditions or trashing old Pro templates, show the owner which old templates currently win and ask for permission.
 - Connect the correct home page, menus, the theme's own kit and its templates; keep previous data so everything can be restored.
 - Check Popups, Custom Code, old plugin CSS, cache and CDN separately. Don't deactivate unrelated plugins automatically. Clearing caches never replaces fixing an active old template.
 

@@ -1,8 +1,12 @@
 [
   {
-    "skills": ["html-to-wp-theme"],
+    "skills": [
+      "html-to-wp-theme"
+    ],
     "query": "این فایل HTML رو قالب وردپرس کن (landing.zip)",
-    "files": ["landing.zip"],
+    "files": [
+      "landing.zip"
+    ],
     "expected_behavior": [
       "Extracts the ZIP into an isolated directory and inventories pages, components, fonts, remote assets with SHA-256 before writing code",
       "Captures approved baseline screenshots of the source HTML",
@@ -12,7 +16,9 @@
     ]
   },
   {
-    "skills": ["html-to-wp-theme"],
+    "skills": [
+      "html-to-wp-theme"
+    ],
     "query": "قالب جدید رو روی سایت فعلی من نصب کن؛ هدر قدیمی هنوز دیده میشه",
     "files": [],
     "expected_behavior": [
@@ -24,7 +30,9 @@
     ]
   },
   {
-    "skills": ["html-to-wp-theme"],
+    "skills": [
+      "html-to-wp-theme"
+    ],
     "query": "منوهای کشویی فرم‌ها گوشه گرد و شیشه‌ای باشن",
     "files": [],
     "expected_behavior": [
@@ -35,13 +43,27 @@
     ]
   },
   {
-    "skills": ["html-to-wp-theme"],
+    "skills": [
+      "html-to-wp-theme"
+    ],
     "query": "فقط کارت محصولات رو بازطراحی کن",
     "files": [],
     "expected_behavior": [
       "Limits the change to the product card component",
       "Runs a visual regression to prove other components did not change",
       "Keeps the card fully editable in Elementor"
+    ]
+  },
+  {
+    "skills": [
+      "html-to-wp-theme"
+    ],
+    "query": "برای این طرح فرم تماس و پاپ‌آپ و هدر با المنتور بساز",
+    "files": [],
+    "expected_behavior": [
+      "Builds header, form and popup with free Elementor containers/core widgets plus custom widgets from the companion plugin",
+      "Uses no Elementor Pro widget, form, popup, dynamic tag or theme-builder condition and does not tell the user to buy Pro",
+      "Uses the theme's built-in theme builder for the header template"
     ]
   }
 ]

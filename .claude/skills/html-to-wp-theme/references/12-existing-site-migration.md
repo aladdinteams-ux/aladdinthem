@@ -1,5 +1,7 @@
 # 12 — Working on an existing / live site (independence from the previous theme)
 
+> The new theme never uses Elementor Pro. Pro appears here only because an existing site may still have old Pro templates/conditions from a previous theme that must be found and removed (with permission) so the new design shows.
+
 Contents: 1 Permission and access · 2 Inventory · 3 Snapshot · 4 Takeover · 5 Cleanup and duplicate pages · 6 Verification
 
 ## 1. Permission and access
@@ -14,9 +16,9 @@ Identify the template that actually renders each area from the page itself (temp
 Before changing: front page and posts page options, kit settings, menu locations, template selections and conditions, affected wrappers/CSS, plus a database backup when allowed. Take a checkpoint before and after every migration or external change.
 
 ## 4. Takeover
-- Priority for header, footer, single and archive: the project's approved design is the default; using another Pro condition must be a deliberate, documented choice.
-- Installing the new theme does not remove old global Pro conditions — old header/footer templates keep rendering until their conditions are removed or the templates are trashed (with permission). After changing conditions, regenerate Pro's conditions cache (Theme Builder → re-save the template's conditions, or in code `\ElementorPro\Modules\ThemeBuilder\Module::instance()->get_conditions_manager()->get_cache()->regenerate()` as in the Larijani importer — that call was never run against a real Pro install, so verify it) and clear Elementor's CSS cache, then page/CDN caches.
-- Conflict with the import rule in references/04 ("never add conditions over the owner's template"): that rule protects owners during an automatic import. When the user asked to take over the site with the new design, show which old templates win and ask before removing their conditions.
+- Priority for header, footer, single and archive: the project's approved design (built with free Elementor) is the default; old Pro conditions must not override it — keeping any old Pro template is only the owner's documented choice.
+- Installing the new theme does not remove old global Pro conditions — old header/footer templates keep rendering until their conditions are removed or the templates are trashed (with permission). After changing conditions, regenerate Pro's conditions cache (in the site's own Elementor Pro: Theme Builder → re-save the remaining templates' conditions; this is a one-off cleanup action on that site, never code shipped in the new theme or plugin) and clear Elementor's CSS cache, then page/CDN caches.
+- Before removing old Pro conditions or trashing old Pro templates, show the owner which old templates currently win and ask for permission.
 - Connect the correct home page, menus, the theme's own kit and its templates; keep previous data so everything can be restored.
 - Check Popups, Custom Code, old plugin CSS, cache and CDN separately. Don't deactivate unrelated plugins automatically. Clearing caches never replaces fixing an active old template.
 

@@ -47,11 +47,11 @@ These are experiences, not guarantees. IDs, counts and versions below belong to 
 | URL `contact-us-2` | an old slug existed; build links from IDs and real permalinks |
 | WordPress "critical error" | the generic message gave no cause; fixing header/footer did not prove all PHP errors were fixed |
 | Transient DB connection error | happened once and recovered; without logs it is environment, not theme |
-| Per-version tests | some versions had language/menu/migration tests but no real Pro or full PageSpeed; report each version's evidence separately |
+| Per-version tests | some versions had language/menu/migration tests but no full PageSpeed run; report each version's evidence separately |
 | Admin login | "form submitted" ≠ logged in; confirm by seeing the dashboard; never store credentials |
 
 ## 3. Never repeat
-- Declaring independence from the previous header before a real Pro test.
+- Declaring independence from the previous header before verifying on the real site that old Pro templates no longer render.
 - Classifying content as old by date alone — check ownership, content, history, links and the replacement list within the permitted scope.
 - Publishing previous-version evidence as a new test.
 - Putting a whole page in one HTML widget for speed.

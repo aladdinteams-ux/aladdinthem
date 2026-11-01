@@ -16,7 +16,7 @@ Act as a senior WordPress engineer, Elementor specialist, UI engineer and releas
 | **Repair / extend** | Change or fix an existing theme repo built this way | P0 (scope + baseline of the affected parts) → only the phases the change touches → P8 regression → P9 | new version ZIPs + changelog + report |
 | **Live site** | Install on, fix or take over a real site (old header still showing, duplicate pages, migration) | references/12 first (preconditions: which theme/version/ZIP is installed, whether Elementor Pro is active), then 09 §2–3; build phases only if files must change | change log of the site + evidence + restore steps (+ ZIPs only if files changed) |
 | **Plan only / dry run** | The user asks for a plan, estimate or review | P0 reading only | written plan, questions, risks — no changes |
-Precedence when sources disagree: the user's latest instruction → SKILL.md contract → references 01–13 → references/14-handbook-fa.md (original intent; if it is stricter on safety, follow it). If still unclear, ask.
+Precedence when sources disagree: the user's latest instruction → SKILL.md contract → references 01–13 → references/14-handbook-fa.md (original intent; if it is stricter on safety, follow it). If still unclear, ask. The user's later decision **not to use Elementor Pro** overrides the handbook's Pro items (§6 Pro features): only the existing-site cleanup of old Pro templates remains.
 
 ## 0.1 Naming (one table for every project)
 | Item | Rule | Example (project `sanat`) |
@@ -36,7 +36,7 @@ Ask for a new repository for a new project. If none is available and the designa
 
 1. **Read the real input first.** Open every supplied file; never infer contents from file names or earlier conversations. Never assume access, files or test results from a previous project — re-fetch and re-validate them.
 2. **The approved look is the baseline.** Adding editability or settings must not change it. A request to redesign one component changes only that component.
-3. **Real editability.** Every visible element gets a real control (Elementor container/core widget, dynamic data, or a purpose-built widget). One HTML widget for a whole page or section is never acceptable.
+3. **Real editability with free Elementor only.** Every visible element gets a real control: free Elementor container/core widget first, otherwise a new custom widget from the companion plugin. **Elementor Pro is never used or required** (no Pro widgets, forms, popups, dynamic tags or theme-builder conditions). One HTML widget for a whole page or section is never acceptable.
 4. **Namespacing.** Use the `aladdin` namespace for everything project-specific: PHP namespace `Aladdin\<Project>`, function/option/hook prefix `aladdin_<project>_`, CSS scope class `aladdin-<project>`, script/style handles `aladdin-<project>-*`, text domain = theme slug. (The Larijani reference repo predates this rule and uses `larijani_`/`ls_`.)
 5. **Shared chrome.** Header and footer follow one approved structure on every page and language unless the project decides an explicit exception.
 6. **Design for all states together**: light/dark mode, every project language and direction, mobile, tablet and desktop.
@@ -45,7 +45,7 @@ Ask for a new repository for a new project. If none is available and the designa
 9. **Permissions.** Don't ask again for permitted, reversible work. Get explicit permission for data deletion, out-of-scope changes, live-site changes, sending real e-mails/forms, and permanent deletes (Trash first).
 10. **Safety of data.** Never delete or overwrite the owner's content without permission; every import is journaled and undoable; back up before changing (git tag + previous ZIP + DB/option snapshot on live sites).
 11. **Secrets.** Never write passwords, cookies, tokens, payment or private data into code, reports, prompts or progress files.
-12. **Truthful evidence.** Every test result is one of: **موفق** (passed, with evidence), **ناموفق** (failed), **مسدود** (blocked: tool, access or network unavailable — say what), **بررسی‌نشده** (not checked). «انجام‌نشده» in older instructions means مسدود or بررسی‌نشده — say which. (Feature statuses for a reference-theme map are a separate vocabulary, references/01 §3.) Never present old evidence as new; date-label it. Never weaken a test after it fails — separate environment problems from product problems first. Simulated Elementor Pro is not a Pro test; PHP lint is not a compatibility test; a submitted login form is not a successful login.
+12. **Truthful evidence.** Every test result is one of: **موفق** (passed, with evidence), **ناموفق** (failed), **مسدود** (blocked: tool, access or network unavailable — say what), **بررسی‌نشده** (not checked). «انجام‌نشده» in older instructions means مسدود or بررسی‌نشده — say which. (Feature statuses for a reference-theme map are a separate vocabulary, references/01 §3.) Never present old evidence as new; date-label it. Never weaken a test after it fails — separate environment problems from product problems first. PHP lint is not a compatibility test; a submitted login form is not a successful login.
 13. **Source of truth.** For compatibility-sensitive code, check current official docs during the task (references/13). If the network blocks them, use their official GitHub sources; anything still unverified is reported as unverified.
 14. Develop on the designated git branch, commit with clear messages, push with retry; never open a PR unless asked.
 
@@ -77,7 +77,7 @@ Before starting read references/09-pitfalls.md: §1 for Build/Repair, §2 for Li
 | File | Read when |
 |---|---|
 | references/01-architecture.md | Intake, baseline, theme/plugin split, tokens, templates |
-| references/02-elementor.md | Elementor widgets, native layouts, kit, theme builder, Pro rules |
+| references/02-elementor.md | Elementor widgets (free Elementor only, no Pro), native layouts, kit, built-in theme builder |
 | references/03-security-forms-plugin.md | Forms, uploads, leads, privacy, companion plugin |
 | references/04-setup-wizard-import.md | Activation, wizard, plugin installer, import journal, undo |
 | references/05-settings-ux.md | Settings panel, search filters, dropdowns, menu state, branding |
@@ -87,7 +87,7 @@ Before starting read references/09-pitfalls.md: §1 for Build/Repair, §2 for Li
 | references/09-pitfalls.md | Before starting and whenever something behaves strangely |
 | references/10-header-menus-ui.md | Header, mega menu, sticky, off-canvas, selects, dark mode, tables, forms, breadcrumbs, media |
 | references/11-parity-i18n-responsive.md | Editor↔site parity, languages/RTL, device matrix |
-| references/12-existing-site-migration.md | Working on a live/existing site, previous theme or Pro templates, cleanup |
+| references/12-existing-site-migration.md | Working on a live/existing site, previous theme or leftover Elementor Pro templates to remove, cleanup |
 | references/13-official-sources.md | Checking current WordPress/Elementor/WooCommerce/W3C rules, marketplaces |
 | references/14-handbook-fa.md | The user's original Persian project handbook (source of the contract above); re-read when a rule's intent is unclear |
 

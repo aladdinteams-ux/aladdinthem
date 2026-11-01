@@ -1,13 +1,14 @@
-# 02 — Elementor integration (free first, Pro optional)
+# 02 — Elementor integration (free Elementor only — no Elementor Pro)
 
-Contents: 1 Choice order · 2 Custom widgets · 3 Native layouts · 4 Kit · 5 Theme builder & Pro · 6 Fallback · 7 Verification
+Contents: 1 Choice order · 2 Custom widgets · 3 Native layouts · 4 Kit · 5 Built-in theme builder · 6 Fallback · 7 Verification
 
 ## 1. Choice order for every component
-1. Elementor Container + core widgets with responsive controls.
-2. Dynamic data / WordPress API (menus, posts, products, site settings, dynamic tags).
-3. Documented Elementor Pro features (Form, Popup, Dynamic Tags, Theme Builder) — only when Pro is present, with detection and a free fallback; never require Pro silently.
-4. A purpose-built custom widget.
-5. A companion-plugin service plus limited, isolated code.
+1. Free Elementor Container + core widgets with responsive controls.
+2. Dynamic data / WordPress API (menus, posts, products, site settings), exposed through the companion plugin's own controls or dynamic tags.
+3. A purpose-built custom widget in the companion plugin (whatever the free core widgets cannot do: forms, popups/modals, sliders, filters, tables, mega menu, header/footer parts).
+4. A companion-plugin service plus limited, isolated code.
+
+**Elementor Pro is not used.** Never use Pro widgets (Form, Popup, Posts, Nav Menu, Loop, Mega Menu…), Pro dynamic tags, Pro Theme Builder conditions or any Pro-specific code; never ask the buyer to buy Pro. Everything Pro would give is built with free Elementor plus the theme's own widgets and built-in theme builder. If a buyer happens to have Pro installed, the theme must simply keep working (no fatal errors, no reliance on it).
 Normal page content is never hidden in one inseparable block. If Elementor's wrappers break an approved header/footer structure, provide a dedicated editable widget for that part and still keep a useful native pattern.
 
 ## 2. Custom widgets (in the companion plugin)
@@ -26,11 +27,9 @@ Normal page content is never hidden in one inseparable block. If Elementor's wra
 ## 4. Kit (Site Settings)
 - Add theme colours as custom global colours and the bundled font. System colours, typography, container width and widget spacing belong to the user: fill them only when empty or on a brand-new site; later syncs change only values the theme set.
 
-## 5. Theme builder and Pro
-- Register Pro theme locations; provide a built-in theme builder for free Elementor (theme mods per location → saved template; `do_location()` renders it and enqueues its CSS).
-- Import with Pro: never add conditions when the owner already has a template with conditions for that location; regenerate the conditions cache.
-- Installing a new theme does **not** remove published Pro conditions from a previous theme (references/12).
-- Pro behaviour is verified only with a real Pro install; otherwise report «مسدود».
+## 5. Built-in theme builder (instead of Pro Theme Builder)
+- Theme mods per location (header, footer, single post, archive, single product, shop, 404, and per language when multilingual) → a saved Elementor template; `do_location()` renders it and enqueues its CSS. Editing happens in free Elementor.
+- Never write Pro theme-location or condition code. Old Pro templates on an existing site are only something to find and remove with permission (references/12).
 
 ## 6. Fallback without Elementor
 Render saved `_elementor_data` (containers, core widgets, theme widgets) with Elementor-like markup and the scoped CSS so the site still looks right; show a notice recommending Elementor.

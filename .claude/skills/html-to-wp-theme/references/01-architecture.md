@@ -40,7 +40,7 @@ For each of its settings/features record one status: **موجود** (exists here
 - RTL/LTR per language (`dir`, `lang`), logical CSS properties.
 
 ## 6. Templates
-`index, page, single, archive, search, 404, comments, searchform (all search boxes through get_search_form() variants), archive-/single-/taxonomy-<cpt>, woocommerce/*`. Each calls a `do_location()` helper first so an Elementor template (Pro condition or the built-in theme builder) can replace it.
+`index, page, single, archive, search, 404, comments, searchform (all search boxes through get_search_form() variants), archive-/single-/taxonomy-<cpt>, woocommerce/*`. Each calls a `do_location()` helper first so an Elementor template chosen in the theme's built-in theme builder can replace it (no Elementor Pro).
 
 ## 7. Data model
 - One field list drives both the Customizer and the settings page; central defaults; sanitise per type.

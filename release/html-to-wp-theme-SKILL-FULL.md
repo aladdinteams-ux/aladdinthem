@@ -1,8 +1,9 @@
-<!-- Combined, read-only copy of the html-to-wp-theme skill (SKILL.md + references 01–13). The installable skill is the folder / ZIP. -->
 ---
 name: html-to-wp-theme
 description: Converts HTML design sources (HTML/CSS/JS files, ZIPs, Google Stitch or design-tool exports, screenshots, a reference theme) into a commercial, installable WordPress theme plus companion plugin that stays fully editable in Elementor, with secure forms, safe and reversible setup/import, settings panel, WooCommerce, multilingual/RTL, dark mode, tests and sale packaging for Zhaket/Rtl-theme. Also repairs, extends or migrates sites built this way. Use when the user gives HTML or a design and asks for a theme ("قالب درست کن", "پوسته وردپرس بساز", "این HTML رو قالب کن", "تبدیل به وردپرس/المنتور", "تمام دستورالعمل پروژه قالب علاءالدین را اجرا کن", "make a WordPress theme from this"), or asks to fix/extend/re-test such a theme. Author brand: Aladdin Theme (علاءالدین تم).
 ---
+
+> **Single-file edition.** Every `references/NN-…md` mentioned below is included further down in this same file (search for its name). `templates/checkpoint.md` and `templates/final-report-fa.md` are included at the end. Scripts, code templates, evals, branding logos and the original Persian handbook exist only in the folder/ZIP edition (`html-to-wp-theme-skill.zip`); without them, report the related QA steps as «مسدود».
 
 # HTML → commercial WordPress/Elementor theme (Aladdin Theme)
 

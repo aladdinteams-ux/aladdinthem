@@ -45,6 +45,9 @@ add_action(
 			$prev = 'aladdin-payab-sanat-asa-family';
 		}
 		wp_enqueue_style( 'aladdin-payab-sanat-asa-final', $u . 'css/site-final.css', array( $prev ), $ver );
+		if ( is_404() ) {
+			wp_enqueue_style( 'aladdin-payab-sanat-asa-404', $u . 'css/error-404.css', array( 'aladdin-payab-sanat-asa-final' ), $ver );
+		}
 		wp_enqueue_style( 'aladdin-payab-sanat-asa-elementor-bridge', $u . 'css/elementor-bridge.css', array( 'aladdin-payab-sanat-asa-final' ), $ver );
 
 		$lang = aladdin_payab_sanat_asa_lang();

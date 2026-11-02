@@ -1,0 +1,8 @@
+const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+(async()=>{const b=await chromium.launch({executablePath:'/opt/pw-browsers/chromium',args:['--no-sandbox']}); let ok=0,n=0;
+for (const l of ['','en/','ar/']) for (const w of [390,1440]) { n++; const p=await (await b.newContext({viewport:{width:w,height:900}})).newPage(); await p.route(/^https?:\/\/(?!localhost)/, r=>r.fulfill({status:200,body:''})); const errs=[]; p.on('pageerror',e=>errs.push(e.message));
+ const r=await p.goto('http://localhost:8091/'+l+'missing-xyz/'); const m=await p.evaluate(()=>({h1:document.querySelectorAll('h1').length,ovf:document.documentElement.scrollWidth>document.documentElement.clientWidth+1,lang:document.documentElement.lang,card:!!document.querySelector('.aladdin-404-card'),css:getComputedStyle(document.querySelector('.aladdin-404-card')).borderRadius}));
+ const good=r.status()===404&&m.h1===1&&!m.ovf&&m.card&&m.css!=='0px'&&!errs.length; ok+=good; console.log(good?'PASS':'FAIL',l||'fa',w,r.status(),JSON.stringify(m)); }
+// search from 404 keeps language
+const p=await (await b.newContext()).newPage(); await p.route(/^https?:\/\/(?!localhost)/, r=>r.fulfill({status:200,body:''})); await p.goto('http://localhost:8091/en/missing-xyz/'); await p.fill('.aladdin-404-search input[type=search]','lift'); await p.press('.aladdin-404-search input[type=search]','Enter'); await p.waitForLoadState('load'); const g=/s=lift/.test(p.url())&&/lang=en/.test(p.url()); n++; ok+=g; console.log(g?'PASS':'FAIL','404 search keeps language',p.url());
+console.log('404 tests',ok+'/'+n); await b.close();})();

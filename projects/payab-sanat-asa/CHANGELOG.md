@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.1 — 2026-11-03
+- Designed 404 page in the site's look (`404.php`, `assets/css/error-404.css`), three languages, dark mode, filter `aladdin_payab_sanat_asa_404_texts` for the texts.
+
 ## 1.2.0 — 2026-11-03
 - Header nav + footer link lists come from real WP menus (9, created with the pages, assigned to theme locations `payab-primary|footer1|footer2-{fa,en,ar}`, journaled/undone, migrated for 1.1.x sites).
 - New settings UI (hero, tabs, language stats, menus tab, switches, texts filter).

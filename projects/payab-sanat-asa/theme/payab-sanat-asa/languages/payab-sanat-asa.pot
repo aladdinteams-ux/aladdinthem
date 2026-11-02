@@ -20,32 +20,12 @@ msgstr ""
 msgid "Nothing found."
 msgstr ""
 
-#: 404.php:14
-msgid "Page not found"
-msgstr ""
-
-#: 404.php:15
-msgid "The page you are looking for does not exist or has moved."
-msgstr ""
-
-#: 404.php:17
-msgid "Back to home"
-msgstr ""
-
 #: searchform.php:13 searchform.php:18
 msgid "Search"
 msgstr ""
 
 #: searchform.php:14
 msgid "Search…"
-msgstr ""
-
-#: inc/setup.php:24
-msgid "Primary (optional; header uses the Texts panel by default)"
-msgstr ""
-
-#: inc/setup.php:25
-msgid "Footer (optional)"
 msgstr ""
 
 #: inc/companion.php:31

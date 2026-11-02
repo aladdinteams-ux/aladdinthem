@@ -1,0 +1,35 @@
+/* 404 page - uses the site's tokens (--primary, --deep, --asa-* in dark mode). */
+.aladdin-404 { padding-block: clamp(40px, 8vw, 96px); background: radial-gradient(60% 50% at 50% 0, var(--soft, #e6f3fc), transparent 70%); }
+.aladdin-404-wrap { display: flex; justify-content: center; }
+.aladdin-404-card { width: min(100%, 760px); text-align: center; padding: clamp(28px, 5vw, 56px); border-radius: 28px; background: var(--asa-card, #fff); border: 1px solid var(--asa-border, var(--border, #dbe7f0)); box-shadow: var(--soft-shadow, 0 25px 66px rgba(17, 39, 57, .12)); }
+.aladdin-404-mark { display: flex; align-items: center; justify-content: center; gap: 14px; direction: ltr; margin-bottom: 8px; }
+.aladdin-404-num { font-family: var(--title, 'Estedad', sans-serif); font-weight: 800; font-size: clamp(84px, 16vw, 150px); line-height: 1; letter-spacing: -.02em; background: linear-gradient(135deg, var(--deep, #0e2e4c), var(--primary, #1268ae) 55%, var(--accent, #76b7e3)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.aladdin-404-mark img { width: clamp(38px, 6vw, 58px); height: auto; opacity: .9; }
+[data-theme="dark"] .aladdin-404-num { background: linear-gradient(135deg, #cfe3ff, var(--asa-blue, #86b6ff)); -webkit-background-clip: text; background-clip: text; }
+[data-theme="dark"] .aladdin-404-mark img { filter: brightness(0) invert(1); opacity: .85; }
+.aladdin-404-kicker { display: inline-block; padding: 5px 14px; border-radius: 999px; background: var(--soft, #e6f3fc); color: var(--primary, #1268ae); font-weight: 700; font-size: 13px; }
+[data-theme="dark"] .aladdin-404-kicker { background: var(--asa-muted, #12263e); color: var(--asa-blue, #86b6ff); }
+.aladdin-404 h1 { margin: 16px 0 10px; font-family: var(--title, 'Estedad', sans-serif); font-size: clamp(24px, 4vw, 36px); line-height: 1.4; color: var(--heading, #193a57); }
+[data-theme="dark"] .aladdin-404 h1 { color: var(--asa-ink, #eff6ff); }
+.aladdin-404-text { margin: 0 auto 26px; max-width: 52ch; color: var(--muted, #62798b); line-height: 2; }
+[data-theme="dark"] .aladdin-404-text { color: var(--asa-text, #adbed4); }
+.aladdin-404-search { display: flex; align-items: center; gap: 8px; max-width: 520px; margin: 0 auto 22px; padding: 6px; border-radius: 999px; background: var(--page, #f6f9fd); border: 1px solid var(--border, #dbe7f0); transition: border-color .15s, box-shadow .15s; }
+.aladdin-404-search:focus-within { border-color: var(--primary, #1268ae); box-shadow: 0 0 0 4px rgba(18, 104, 174, .14); }
+[data-theme="dark"] .aladdin-404-search { background: var(--asa-canvas, #0b1829); border-color: var(--asa-border, #2a435f); }
+.aladdin-404-search svg { flex: none; width: 20px; height: 20px; margin-inline-start: 12px; color: var(--muted, #62798b); }
+.aladdin-404-search input[type="search"] { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font: inherit; color: inherit; padding: 10px 4px; }
+.aladdin-404-search button { flex: none; border: 0; border-radius: 999px; padding: 11px 22px; font: inherit; font-weight: 700; color: #fff; background: var(--primary, #1268ae); cursor: pointer; transition: background .15s; }
+.aladdin-404-search button:hover { background: var(--primaryhover, #104f88); }
+.aladdin-404-search button:focus-visible, .aladdin-404-quick a:focus-visible { outline: 3px solid var(--accent, #76b7e3); outline-offset: 2px; }
+.aladdin-404-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 30px; }
+.aladdin-404-quick { padding-top: 22px; border-top: 1px dashed var(--border, #dbe7f0); }
+[data-theme="dark"] .aladdin-404-quick { border-color: var(--asa-border, #2a435f); }
+.aladdin-404-quick > span { display: block; margin-bottom: 12px; color: var(--muted, #62798b); font-size: 13px; font-weight: 700; }
+.aladdin-404-quick nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.aladdin-404-quick a { padding: 8px 16px; border-radius: 999px; background: var(--soft, #e6f3fc); color: var(--primary, #1268ae); font-weight: 600; font-size: 14px; text-decoration: none; transition: background .15s, transform .15s; }
+.aladdin-404-quick a:hover { background: var(--primary, #1268ae); color: #fff; transform: translateY(-1px); }
+[data-theme="dark"] .aladdin-404-quick a { background: var(--asa-muted, #12263e); color: var(--asa-blue, #86b6ff); }
+[data-theme="dark"] .aladdin-404-quick a:hover { background: var(--asa-blue-deep, #6799f2); color: #0b1829; }
+@media (max-width: 782px) { .aladdin-404 { padding-bottom: 120px; } }
+@media (max-width: 560px) { .aladdin-404-card { border-radius: 22px; } .aladdin-404-search { border-radius: 22px; flex-wrap: wrap; } .aladdin-404-search button { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .aladdin-404 * { transition: none !important; } }

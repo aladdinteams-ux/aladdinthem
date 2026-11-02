@@ -3,7 +3,7 @@ Contributors: aladdintheme
 Requires at least: 6.4
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: rtl-language-support, translation-ready, custom-colors, custom-logo, featured-images, accessibility-ready, e-commerce, one-column
@@ -39,6 +39,9 @@ No. Nothing is created or changed until you run the import yourself, and the imp
 * Branding logos (companion plugin): Aladdin Theme (علاءالدین تم), author's trademark.
 
 == Changelog ==
+= 1.2.1 =
+* Designed 404 page (fa/en/ar, light/dark, search, buttons, suggested links).
+
 = 1.2.0 =
 * Header navigation and both footer link lists are real WordPress menus (3 per language), created with the pages and editable in Appearance > Menus.
 * Redesigned settings screen (overview, menus, texts, general, import).

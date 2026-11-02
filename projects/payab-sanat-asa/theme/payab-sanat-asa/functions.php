@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'ALADDIN_PAYAB_SANAT_ASA_VERSION', '1.2.0' );
+define( 'ALADDIN_PAYAB_SANAT_ASA_VERSION', '1.2.1' );
 define( 'ALADDIN_PAYAB_SANAT_ASA_DIR', get_template_directory() );
 define( 'ALADDIN_PAYAB_SANAT_ASA_URI', get_template_directory_uri() );
 

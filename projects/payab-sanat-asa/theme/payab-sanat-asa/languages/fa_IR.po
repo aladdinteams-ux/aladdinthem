@@ -16,26 +16,11 @@ msgstr "چیزی پیدا نشد. با کلمات دیگری جست‌وجو ک�
 msgid "Nothing found."
 msgstr "چیزی پیدا نشد."
 
-msgid "Page not found"
-msgstr "صفحه پیدا نشد"
-
-msgid "The page you are looking for does not exist or has moved."
-msgstr "صفحه‌ای که دنبال آن هستید وجود ندارد یا جابه‌جا شده است."
-
-msgid "Back to home"
-msgstr "بازگشت به صفحه اصلی"
-
 msgid "Search"
 msgstr "جست‌وجو"
 
 msgid "Search…"
 msgstr "جست‌وجو…"
-
-msgid "Primary (optional; header uses the Texts panel by default)"
-msgstr "منوی اصلی (اختیاری؛ هدر به‌صورت پیش‌فرض از پنل متن‌ها استفاده می‌کند)"
-
-msgid "Footer (optional)"
-msgstr "فوتر (اختیاری)"
 
 msgid "Payab Sanat Asa theme:"
 msgstr "قالب پایاب صنعت آسا:"

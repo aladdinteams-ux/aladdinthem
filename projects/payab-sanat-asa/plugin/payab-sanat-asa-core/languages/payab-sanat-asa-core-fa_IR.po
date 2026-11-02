@@ -100,6 +100,15 @@ msgstr "حالت کاتالوگ"
 msgid "Hide prices and block purchasing/cart/checkout (WooCommerce)."
 msgstr "قیمت‌ها را پنهان و خرید، سبد و تسویه‌حساب را مسدود می‌کند (ووکامرس)."
 
+msgid "Page output"
+msgstr "خروجی صفحه"
+
+msgid "Exact design (recommended): the site shows the approved design markup. Elementor edits do not appear on the site."
+msgstr "طرح دقیق (پیشنهادی): سایت همان کد طرح تأییدشده را نشان می‌دهد. ویرایش‌های المنتور روی سایت دیده نمی‌شود."
+
+msgid "Elementor output: edits made in Elementor appear on the site (requires Elementor; check the look after switching)."
+msgstr "خروجی المنتور: ویرایش‌های المنتور روی سایت دیده می‌شود (نیاز به المنتور؛ بعد از تغییر ظاهر را بررسی کنید)."
+
 msgid "SEO tags"
 msgstr "برچسب‌های سئو"
 
@@ -202,17 +211,20 @@ msgstr "ویژگی‌های HTML"
 msgid "One per line: key|value (aria-*, data-*, role, title…). Needed for the approved design scripts."
 msgstr "هر خط یک مورد: کلید|مقدار (aria-*، data-*، role، title…). برای اسکریپت‌های طرح تأییدشده لازم است."
 
-msgid "Payab Element"
-msgstr "المان پایاب"
+msgid "Payab Text"
+msgstr "متن پایاب"
 
 msgid "Content"
 msgstr "محتوا"
 
-msgid "HTML tag"
-msgstr "تگ HTML"
-
 msgid "Text"
 msgstr "متن"
+
+msgid "Payab Element"
+msgstr "المان پایاب"
+
+msgid "HTML tag"
+msgstr "تگ HTML"
 
 msgid "Link"
 msgstr "لینک"

@@ -69,6 +69,7 @@ class Settings {
 		$new = array(
 			'catalog_mode'  => $yn( 'catalog_mode' ),
 			'seo'           => $yn( 'seo' ),
+			'render_mode'   => isset( $_POST['render_mode'] ) && 'elementor' === $_POST['render_mode'] ? 'elementor' : 'html', // phpcs:ignore WordPress.Security.NonceVerification
 			'header_tpl'    => array(),
 			'footer_tpl'    => array(),
 		);
@@ -258,6 +259,15 @@ class Settings {
 		wp_nonce_field( 'aladdin_payab_general' );
 		echo '<table class="form-table" role="presentation"><tbody>';
 		printf( '<tr><th>%s</th><td><label><input type="checkbox" name="catalog_mode" value="yes" %s/> %s</label></td></tr>', esc_html__( 'Catalog mode', 'payab-sanat-asa-core' ), checked( ! isset( $o['catalog_mode'] ) || 'no' !== $o['catalog_mode'], true, false ), esc_html__( 'Hide prices and block purchasing/cart/checkout (WooCommerce).', 'payab-sanat-asa-core' ) );
+		$rm = isset( $o['render_mode'] ) && 'elementor' === $o['render_mode'] ? 'elementor' : 'html';
+		printf(
+			'<tr><th>%s</th><td><label><input type="radio" name="render_mode" value="html" %s/> %s</label><br/><label><input type="radio" name="render_mode" value="elementor" %s/> %s</label></td></tr>',
+			esc_html__( 'Page output', 'payab-sanat-asa-core' ),
+			checked( 'html', $rm, false ),
+			esc_html__( 'Exact design (recommended): the site shows the approved design markup. Elementor edits do not appear on the site.', 'payab-sanat-asa-core' ),
+			checked( 'elementor', $rm, false ),
+			esc_html__( 'Elementor output: edits made in Elementor appear on the site (requires Elementor; check the look after switching).', 'payab-sanat-asa-core' )
+		);
 		printf( '<tr><th>%s</th><td><label><input type="checkbox" name="seo" value="yes" %s/> %s</label><p class="description">%s</p></td></tr>', esc_html__( 'SEO tags', 'payab-sanat-asa-core' ), checked( ! isset( $o['seo'] ) || 'no' !== $o['seo'], true, false ), esc_html__( 'Print description, canonical, hreflang, Open Graph and Schema.org.', 'payab-sanat-asa-core' ), esc_html__( 'Automatically off when Yoast, Rank Math, SEOPress/TSF or AIOSEO is active.', 'payab-sanat-asa-core' ) );
 		foreach ( array( 'header_tpl' => __( 'Header', 'payab-sanat-asa-core' ), 'footer_tpl' => __( 'Footer', 'payab-sanat-asa-core' ) ) as $key => $label ) {
 			echo '<tr><th>' . esc_html( $label ) . ' (Elementor)</th><td>';

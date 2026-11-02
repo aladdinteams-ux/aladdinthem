@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.1 — 2026-11-02
+- Setting "Page output" (Settings > General): `html` (default) prints the approved design markup exactly, `elementor` prints Elementor output. Fixes remaining layout differences reported on a live site while Elementor output could not be tested with real Elementor.
+
 ## 1.1.0 — 2026-11-02
 ### Changed
 - Pages now live in one post type per language (`aladdin_page_fa`, `aladdin_page_en`, `aladdin_page_ar`); URLs unchanged. Pages imported by 1.0.x are migrated automatically (structural parent pages are trashed, the Persian home takes "/" again).

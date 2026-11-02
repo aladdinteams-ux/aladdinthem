@@ -22,13 +22,13 @@
  "artifacts": [
   {
    "file": "payab-sanat-asa.zip",
-   "sha256": "0b039081d5498dc6573b08c1b00e9c49973a95507ecb599acc95c146fdadd2cf",
+   "sha256": "1bdd9ed5b711368df7438cd6af3764f832dc174eacf319570c8750c2ef16a76c",
    "files": 94
   },
   {
    "file": "payab-sanat-asa-core.zip",
-   "sha256": "05941cfd423f2da5d89965d90f0d422b50d73f54ba25b4a91ba8f9340e4a1a70",
-   "files": 21
+   "sha256": "da9aa103782edea0d45801aa0be04e2ff4f4eb04cfd65ac4d0ce2551dd5341ca",
+   "files": 22
   },
   {
    "file": "payab-sanat-asa-child.zip",

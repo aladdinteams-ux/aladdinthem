@@ -3,7 +3,7 @@ Contributors: aladdintheme
 Requires at least: 6.4
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: rtl-language-support, translation-ready, custom-colors, custom-logo, featured-images, accessibility-ready, e-commerce, one-column
@@ -39,6 +39,9 @@ No. Nothing is created or changed until you run the import yourself, and the imp
 * Branding logos (companion plugin): Aladdin Theme (علاءالدین تم), author's trademark.
 
 == Changelog ==
+= 1.2.2 =
+* Fix: header/footer menus could contain every link twice (setup run twice); duplicates are removed automatically, never created again, and never printed.
+
 = 1.2.1 =
 * Designed 404 page (fa/en/ar, light/dark, search, buttons, suggested links).
 

@@ -73,11 +73,14 @@ function aladdin_payab_sanat_asa_menu_items( $location ) {
 	if ( ! $items ) {
 		return null;
 	}
-	$out = array();
+	$out  = array();
+	$seen = array();
 	foreach ( $items as $it ) {
-		if ( (int) $it->menu_item_parent ) {
-			continue;
+		$key = $it->title . '|' . untrailingslashit( $it->url );
+		if ( (int) $it->menu_item_parent || isset( $seen[ $key ] ) ) {
+			continue;           // sub-items and accidental duplicates are not printed.
 		}
+		$seen[ $key ] = 1;
 		$out[] = array( 'url' => $it->url, 'title' => $it->title, 'classes' => array_filter( (array) $it->classes ) );
 	}
 	return $out ? $out : null;

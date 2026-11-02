@@ -155,6 +155,7 @@ class Settings {
 
 	public static function repair_menus() {
 		self::guard( 'aladdin_payab_menus' );
+		Menus::dedupe();
 		$n = Menus::ensure();
 		set_transient( 'aladdin_payab_menus_result', count( $n ), 120 );
 		self::back( 'menus', 'menus' );

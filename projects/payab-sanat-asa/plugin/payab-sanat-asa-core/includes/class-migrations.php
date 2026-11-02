@@ -19,10 +19,11 @@ class Migrations {
 	}
 
 	public static function maybe_run() {
-		if ( ! current_user_can( 'manage_options' ) || version_compare( (string) get_option( self::OPT, '0' ), '1.2.0', '>=' ) ) {
+		if ( ! current_user_can( 'manage_options' ) || version_compare( (string) get_option( self::OPT, '0' ), '1.2.2', '>=' ) ) {
 			return;
 		}
 		if ( self::pages_to_cpt() ) {
+			Menus::dedupe();
 			Menus::ensure();          // 1.2.0: real header/footer menus for sites that already have the pages.
 			update_option( self::OPT, ALADDIN_PAYAB_SANAT_ASA_CORE_VERSION, false );
 		}

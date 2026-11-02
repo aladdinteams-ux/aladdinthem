@@ -106,7 +106,7 @@ class Menus {
 				$loc = self::location( $k, $l );
 				$cur = isset( $before[ $loc ] ) ? (int) $before[ $loc ] : 0;
 				$obj = $cur ? wp_get_nav_menu_object( $cur ) : null;
-				if ( $obj && (int) $obj->count > 0 ) {
+				if ( $obj && wp_get_nav_menu_items( $cur ) ) {
 					continue;                     // the owner (or an earlier run) already has links here.
 				}
 				$menu_id = wp_create_nav_menu( 'Payab — ' . $sp['name'][ $l ] . ' (' . strtoupper( $l ) . ')' );
@@ -116,6 +116,10 @@ class Menus {
 						continue;
 					}
 					$menu_id = (int) $existing->term_id;
+					if ( wp_get_nav_menu_items( $menu_id ) ) {        // never add links twice to a menu that already has them.
+						$assign[ $loc ] = $menu_id;
+						continue;
+					}
 				} else {
 					$created[] = (int) $menu_id;
 				}
@@ -146,6 +150,28 @@ class Menus {
 			}
 		}
 		return $created;
+	}
+
+	/** Remove duplicate links (same title + URL) from the Payab menus, e.g. after an interrupted or repeated setup. Returns removed count. */
+	public static function dedupe() {
+		$removed = 0;
+		$loc     = self::get_locations();
+		foreach ( self::locations() as $l ) {
+			if ( empty( $loc[ $l ] ) ) {
+				continue;
+			}
+			$seen = array();
+			foreach ( (array) wp_get_nav_menu_items( (int) $loc[ $l ] ) as $it ) {
+				$key = $it->title . '|' . untrailingslashit( $it->url );
+				if ( isset( $seen[ $key ] ) ) {
+					wp_delete_post( $it->ID, true );
+					$removed++;
+				} else {
+					$seen[ $key ] = 1;
+				}
+			}
+		}
+		return $removed;
 	}
 
 	/** Undo: delete the menus the import created and release the locations. */

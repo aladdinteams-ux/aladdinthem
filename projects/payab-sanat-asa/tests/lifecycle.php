@@ -79,6 +79,18 @@ wp_update_nav_menu_item( $mid, $first->ID, array( 'menu-item-title' => 'Start', 
 ok( 'editing a menu item changes the header', false !== strpos( aladdin_payab_sanat_asa_chrome_html( 'pre', 'en' ), '>Start</a>' ) );
 $cnt = \Aladdin\PayabSanatAsa\Menus::ensure();
 ok( 're-running menus creates nothing and keeps owner edits', 0 === count( $cnt ) && false !== strpos( aladdin_payab_sanat_asa_chrome_html( 'pre', 'en' ), '>Start</a>' ) );
+// duplicates: a repeated/interrupted setup must never show doubled links
+$locs = get_nav_menu_locations(); $mid = $locs['payab-primary-fa'];
+foreach ( wp_get_nav_menu_items( $mid ) as $it ) { wp_update_nav_menu_item( $mid, 0, array( 'menu-item-title' => $it->title, 'menu-item-url' => $it->url, 'menu-item-type' => 'custom', 'menu-item-status' => 'publish' ) ); }
+ok( 'menu now holds 12 items (6 doubled)', 12 === count( wp_get_nav_menu_items( $mid ) ) );
+$nav = function ( $lang ) { preg_match( '#<nav[^>]*class="nav-links">(.*?)</nav>#s', aladdin_payab_sanat_asa_chrome_html( 'pre', $lang ), $m ); return preg_match_all( '#<a [^>]*href=#', $m[1] ); };
+ok( 'header prints each link once even with doubled menu items (6 links)', 6 === $nav( 'fa' ), (string) $nav( 'fa' ) );
+ok( 'dedupe removes the 6 doubles', 6 === \Aladdin\PayabSanatAsa\Menus::dedupe() && 6 === count( wp_get_nav_menu_items( $mid ) ) );
+// location lost but menu (with items) still exists by name: ensure must not add items again
+$mods = get_option( 'theme_mods_payab-sanat-asa' ); unset( $mods['nav_menu_locations']['payab-primary-fa'] ); update_option( 'theme_mods_payab-sanat-asa', $mods ); update_option( 'theme_mods_payab-sanat-asa-child', $mods );
+\Aladdin\PayabSanatAsa\Menus::ensure();
+$locs = get_nav_menu_locations();
+ok( 'ensure re-attaches an existing menu without duplicating links', ! empty( $locs['payab-primary-fa'] ) && 6 === count( wp_get_nav_menu_items( $locs['payab-primary-fa'] ) ), isset( $locs['payab-primary-fa'] ) ? (string) count( wp_get_nav_menu_items( $locs['payab-primary-fa'] ) ) : 'none' );
 // texts override: change the brand name of the Persian header; check rendered chrome; reset
 $defs = aladdin_payab_sanat_asa_chrome_defaults( 'fa' );
 $idx = null; foreach ( $defs['pre'] as $i => $row ) { if ( 't' === $row[0] && 'پایاب صنعت آسا' === $row[1] ) { $idx = $i; break; } }

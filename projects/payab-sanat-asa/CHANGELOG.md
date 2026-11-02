@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.2 — 2026-11-04
+- Fix doubled header/footer links: `Menus::ensure()` re-added items to an existing menu; now it never does, `Menus::dedupe()` cleans existing duplicates (automatic migration + "Check menus" button), and the theme prints each title+URL once.
+
 ## 1.2.1 — 2026-11-03
 - Designed 404 page in the site's look (`404.php`, `assets/css/error-404.css`), three languages, dark mode, filter `aladdin_payab_sanat_asa_404_texts` for the texts.
 

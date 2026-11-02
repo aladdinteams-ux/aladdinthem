@@ -63,6 +63,71 @@ function aladdin_payab_sanat_asa_chrome_strings( $lang, $part ) {
 	return $out;
 }
 
+/** Top-level items of the menu assigned to a location (null when none/empty): array of array( url, title, classes ). */
+function aladdin_payab_sanat_asa_menu_items( $location ) {
+	$locs = get_nav_menu_locations();
+	if ( empty( $locs[ $location ] ) ) {
+		return null;
+	}
+	$items = wp_get_nav_menu_items( (int) $locs[ $location ] );
+	if ( ! $items ) {
+		return null;
+	}
+	$out = array();
+	foreach ( $items as $it ) {
+		if ( (int) $it->menu_item_parent ) {
+			continue;
+		}
+		$out[] = array( 'url' => $it->url, 'title' => $it->title, 'classes' => array_filter( (array) $it->classes ) );
+	}
+	return $out ? $out : null;
+}
+
+/** Replace the approved link lists (header nav, footer lists) with the real WordPress menus when they exist. */
+function aladdin_payab_sanat_asa_apply_menus( $html, $part, $lang ) {
+	if ( 'pre' === $part ) {
+		$items = aladdin_payab_sanat_asa_menu_items( 'payab-primary-' . $lang );
+		if ( $items ) {
+			$html = preg_replace_callback(
+				'#(<nav [^>]*class="nav-links">)(.*?)(</nav>)#s',
+				static function ( $m ) use ( $items ) {
+					$trigger = '';
+					if ( preg_match( '#<button [^>]*class="mega-menu-trigger".*?</button>#s', $m[2], $t ) ) {
+						$trigger = $t[0];
+					}
+					$out = '';
+					foreach ( $items as $it ) {
+						$a = '<a href="' . esc_url( $it['url'] ) . '">' . esc_html( $it['title'] ) . '</a>';
+						$out .= ( $trigger && in_array( 'payab-mega', $it['classes'], true ) ) ? '<div class="mega-nav-item" data-mega-parent="products">' . $a . $trigger . '</div>' : $a;
+					}
+					return $m[1] . $out . $m[3];
+				},
+				$html,
+				1
+			);
+		}
+		return $html;
+	}
+	$n = 0;
+	return preg_replace_callback(
+		'#<div class="footer-links">(.*?)</div>#s',
+		static function ( $m ) use ( &$n, $lang ) {
+			$n++;
+			$items = aladdin_payab_sanat_asa_menu_items( 'payab-footer' . $n . '-' . $lang );
+			if ( ! $items ) {
+				return $m[0];
+			}
+			$out = '';
+			foreach ( $items as $it ) {
+				$out .= '<a href="' . esc_url( $it['url'] ) . '">' . esc_html( $it['title'] ) . '</a>';
+			}
+			return '<div class="footer-links">' . $out . '</div>';
+		},
+		$html,
+		2
+	);
+}
+
 /** Render a chrome part to a string. */
 function aladdin_payab_sanat_asa_chrome_html( $part, $lang = '' ) {
 	$lang = $lang ? $lang : aladdin_payab_sanat_asa_lang();
@@ -74,6 +139,7 @@ function aladdin_payab_sanat_asa_chrome_html( $part, $lang = '' ) {
 	include ALADDIN_PAYAB_SANAT_ASA_DIR . '/template-parts/chrome-' . $part . '.php';
 	$html = (string) ob_get_clean();
 
+	$html = aladdin_payab_sanat_asa_apply_menus( $html, $part, $lang );
 	$is_home = is_front_page() || ( is_singular() && metadata_exists( 'post', get_queried_object_id(), '_aladdin_payab_group' ) && '' === (string) get_post_meta( get_queried_object_id(), '_aladdin_payab_group', true ) );
 	$home    = aladdin_payab_sanat_asa_route_url( $lang, '' );
 	// In-page anchors that only exist on the home page point to the language home elsewhere.
@@ -94,7 +160,8 @@ function aladdin_payab_sanat_asa_chrome_html( $part, $lang = '' ) {
 		},
 		$html
 	);
-	// Current page state in the menus.
+	// Current page state in the header menus (the approved footer and mobile bar do not mark it).
+	if ( 'pre' === $part ) {
 	$current = trailingslashit( aladdin_payab_sanat_asa_translation_url( $lang ) );
 	$html    = preg_replace_callback(
 		'/<a\b([^>]*)\bhref="([^"#]*)"([^>]*)>/',
@@ -113,6 +180,7 @@ function aladdin_payab_sanat_asa_chrome_html( $part, $lang = '' ) {
 		},
 		$html
 	);
+	}
 	// Search forms keep the language.
 	if ( 'fa' !== $lang ) {
 		$html = preg_replace( '/(<form\b[^>]*role="search"[^>]*>)/', '$1<input type="hidden" name="lang" value="' . esc_attr( $lang ) . '"/>', $html );

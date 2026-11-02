@@ -22,11 +22,14 @@ msgstr "طراحی و توسعه"
 msgid "Overview"
 msgstr "نمای کلی"
 
-msgid "General"
-msgstr "عمومی"
+msgid "Menus"
+msgstr "منوها"
 
 msgid "Header & footer texts"
 msgstr "متن‌های هدر و فوتر"
+
+msgid "General"
+msgstr "عمومی"
 
 msgid "Import / Undo"
 msgstr "ایمپورت / بازگردانی"
@@ -36,6 +39,18 @@ msgstr "رزرو‌شده"
 
 msgid "Aladdin Payab — Payab Sanat Asa theme"
 msgstr "علاءالدین پایاب — قالب پایاب صنعت آسا"
+
+msgid "Payab Sanat Asa"
+msgstr "پایاب صنعت آسا"
+
+msgid "Theme settings · three languages · menus · import"
+msgstr "تنظیمات قالب · سه زبان · منوها · ایمپورت"
+
+msgid "View site"
+msgstr "مشاهده سایت"
+
+msgid "Settings sections"
+msgstr "بخش‌های تنظیمات"
 
 msgid "Settings saved."
 msgstr "تنظیمات ذخیره شد."
@@ -55,6 +70,12 @@ msgstr "ایمپورت پایان یافت."
 msgid "Undo finished: %d items moved to the Trash."
 msgstr "بازگردانی پایان یافت: %d مورد به زباله‌دان منتقل شد."
 
+msgid "Menus checked: %d created."
+msgstr "منوها بررسی شد: %d منو ساخته شد."
+
+msgid "Manage pages"
+msgstr "مدیریت صفحه‌ها"
+
 msgid "Status"
 msgstr "وضعیت"
 
@@ -64,23 +85,35 @@ msgstr "قالب «پایاب صنعت آسا» فعال است"
 msgid "Elementor (free) active"
 msgstr "المنتور (رایگان) فعال است"
 
-msgid "pages still show using the saved HTML"
-msgstr "صفحات همچنان با HTML ذخیره‌شده نمایش داده می‌شوند"
-
 msgid "WooCommerce active (products)"
 msgstr "ووکامرس فعال است (محصولات)"
 
-msgid "product pages are created as pages"
-msgstr "صفحات محصول به‌صورت برگه ساخته می‌شوند"
+msgid "Menus ready: %d of 9"
+msgstr "منوهای آماده: %d از ۹"
 
-msgid "Imported items"
-msgstr "موارد واردشده"
+msgid "Imported items: %d"
+msgstr "موارد واردشده: %d"
 
-msgid "Theme and companion plugin for Payab Sanat Asa. Version"
-msgstr "قالب و افزونه همراه پایاب صنعت آسا. نسخه"
+msgid "Without Elementor the site still shows the exact design; install the free Elementor plugin to edit pages visually."
+msgstr "بدون المنتور سایت همچنان طرح دقیق را نشان می‌دهد؛ برای ویرایش بصری، افزونه رایگان المنتور را نصب کنید."
+
+msgid "Quick actions"
+msgstr "دسترسی سریع"
+
+msgid "Edit header & footer texts"
+msgstr "ویرایش متن‌های هدر و فوتر"
+
+msgid "Edit menus (Appearance)"
+msgstr "ویرایش منوها (نمایش‌ها)"
+
+msgid "General settings"
+msgstr "تنظیمات عمومی"
 
 msgid "Languages and pages"
 msgstr "زبان‌ها و صفحه‌ها"
+
+msgid "Every route in every language, with a link to edit it."
+msgstr "هر مسیر در هر سه زبان، با لینک ویرایش."
 
 msgid "Route"
 msgstr "مسیر"
@@ -88,26 +121,74 @@ msgstr "مسیر"
 msgid "missing"
 msgstr "ساخته نشده"
 
-msgid "Total"
-msgstr "جمع"
-
 msgid "Create the %d missing pages"
 msgstr "ساخت %d صفحهٔ ساخته‌نشده"
+
+msgid "Header and footer links"
+msgstr "لینک‌های هدر و فوتر"
+
+msgid "Created automatically with the pages. They are real WordPress menus: edit, reorder or add links in Appearance > Menus; the site prints them in the header and footer."
+msgstr "همراه صفحه‌ها خودکار ساخته می‌شوند. منوهای واقعی وردپرس‌اند: در نمایش‌ها ← فهرست‌ها لینک‌ها را ویرایش، جابه‌جا یا اضافه کنید؛ سایت آن‌ها را در هدر و فوتر چاپ می‌کند."
+
+msgid "Menu"
+msgstr "منو"
+
+msgid "Used in"
+msgstr "محل استفاده"
+
+msgid "Links"
+msgstr "لینک‌ها"
+
+msgid "Header navigation"
+msgstr "ناوبری هدر"
+
+msgid "Footer: quick links"
+msgstr "فوتر: دسترسی سریع"
+
+msgid "Footer: useful information"
+msgstr "فوتر: اطلاعات مفید"
+
+msgid "Edit"
+msgstr "ویرایش"
+
+msgid "Open Appearance > Menus"
+msgstr "باز کردن نمایش‌ها ← فهرست‌ها"
+
+msgid "Create the missing menus"
+msgstr "ساخت منوهای ساخته‌نشده"
+
+msgid "Check menus"
+msgstr "بررسی منوها"
+
+msgid "A location that already has links is never changed. The \"Products\" link of the header menu carries the class payab-mega (it opens the products mega menu)."
+msgstr "جایگاهی که از قبل لینک دارد هرگز تغییر نمی‌کند. لینک «محصولات» منوی هدر کلاس payab-mega دارد (مگامنوی محصولات را باز می‌کند)."
+
+msgid "Page output"
+msgstr "خروجی صفحه"
+
+msgid "How the public site prints the design pages."
+msgstr "سایت صفحه‌های طرح را چگونه چاپ می‌کند."
+
+msgid "Exact design"
+msgstr "طرح دقیق"
+
+msgid "Recommended. The site shows the approved design markup. Elementor edits do not appear on the site."
+msgstr "پیشنهادی. سایت همان کد طرح تأییدشده را نشان می‌دهد. ویرایش‌های المنتور روی سایت دیده نمی‌شود."
+
+msgid "Elementor output"
+msgstr "خروجی المنتور"
+
+msgid "Edits made in Elementor appear on the site (requires Elementor; check the look after switching)."
+msgstr "ویرایش‌های المنتور روی سایت دیده می‌شود (نیاز به المنتور؛ پس از تغییر ظاهر را بررسی کنید)."
+
+msgid "Shop and SEO"
+msgstr "فروشگاه و سئو"
 
 msgid "Catalog mode"
 msgstr "حالت کاتالوگ"
 
 msgid "Hide prices and block purchasing/cart/checkout (WooCommerce)."
 msgstr "قیمت‌ها را پنهان و خرید، سبد و تسویه‌حساب را مسدود می‌کند (ووکامرس)."
-
-msgid "Page output"
-msgstr "خروجی صفحه"
-
-msgid "Exact design (recommended): the site shows the approved design markup. Elementor edits do not appear on the site."
-msgstr "طرح دقیق (پیشنهادی): سایت همان کد طرح تأییدشده را نشان می‌دهد. ویرایش‌های المنتور روی سایت دیده نمی‌شود."
-
-msgid "Elementor output: edits made in Elementor appear on the site (requires Elementor; check the look after switching)."
-msgstr "خروجی المنتور: ویرایش‌های المنتور روی سایت دیده می‌شود (نیاز به المنتور؛ بعد از تغییر ظاهر را بررسی کنید)."
 
 msgid "SEO tags"
 msgstr "برچسب‌های سئو"
@@ -118,6 +199,12 @@ msgstr "توضیحات، canonical، hreflang، Open Graph و Schema.org را چ
 msgid "Automatically off when Yoast, Rank Math, SEOPress/TSF or AIOSEO is active."
 msgstr "با فعال بودن Yoast، Rank Math، SEOPress/TSF یا AIOSEO به‌طور خودکار خاموش می‌شود."
 
+msgid "Elementor templates for header and footer"
+msgstr "قالب‌های المنتور برای هدر و فوتر"
+
+msgid "Optional: replace the shared chrome with an Elementor template (built with free Elementor, no Pro theme builder)."
+msgstr "اختیاری: هدر/فوتر مشترک را با یک قالب المنتور جایگزین کنید (با المنتور رایگان، بدون Theme Builder پرو)."
+
 msgid "Header"
 msgstr "هدر"
 
@@ -127,17 +214,23 @@ msgstr "فوتر"
 msgid "Approved design (default)"
 msgstr "طرح تأییدشده (پیش‌فرض)"
 
-msgid "Optional: replace the shared chrome with an Elementor template (built with free Elementor, no Pro theme builder)."
-msgstr "اختیاری: هدر/فوتر مشترک را با یک قالب المنتور جایگزین کنید (با المنتور رایگان، بدون Theme Builder پرو)."
-
 msgid "On uninstall"
 msgstr "هنگام حذف افزونه"
+
+msgid "Delete settings"
+msgstr "حذف تنظیمات"
 
 msgid "Delete this plugin's settings (pages and products are never deleted)."
 msgstr "تنظیمات این افزونه حذف شود (برگه‌ها و محصولات هرگز حذف نمی‌شوند)."
 
-msgid "Every text, label and link of the top bar, header, mobile menu, footer and mobile bar. Leave a field empty to keep the approved design text. Links: use \"fa:shop-2\" style route keys or a full URL."
-msgstr "همه متن‌ها، برچسب‌ها و لینک‌های نوار بالا، هدر، منوی موبایل، فوتر و نوار موبایل. برای نگه داشتن متن طرح تأییدشده، فیلد را خالی بگذارید. لینک‌ها: کلید مسیر مانند «fa:shop-2» یا نشانی کامل."
+msgid "Save changes"
+msgstr "ذخیره تغییرات"
+
+msgid "Every text, label and link of the top bar, header, mobile menu, footer and mobile bar. Leave a field empty to keep the approved design text. Links: use \"fa:shop-2\" style route keys or a full URL. The header and footer link lists come from the Menus tab."
+msgstr "همه متن‌ها، برچسب‌ها و لینک‌های نوار بالا، هدر، منوی موبایل، فوتر و نوار موبایل. برای نگه داشتن متن طرح تأییدشده فیلد را خالی بگذارید. لینک‌ها: کلید مسیر مانند «fa:shop-2» یا نشانی کامل. فهرست لینک‌های هدر و فوتر از تب «منوها» می‌آید."
+
+msgid "Filter texts…"
+msgstr "فیلتر متن‌ها…"
 
 msgid "Top bar, header and mobile drawer"
 msgstr "نوار بالا، هدر و منوی موبایل"
@@ -166,14 +259,20 @@ msgstr "همه متن‌های این زبان به طرح تأییدشده با
 msgid "Reset this language to the approved design"
 msgstr "بازگردانی این زبان به طرح تأییدشده"
 
+msgid "Import pages and products"
+msgstr "ایمپورت برگه‌ها و محصولات"
+
 msgid "Creates the 66 language pages (22 routes × 3 languages, a separate post type for each language) as Elementor pages with a plain-HTML fallback; products go to WooCommerce when it is active. Only missing pages are created. Existing pages are never overwritten; every created item is journaled and can be moved to the Trash with Undo. The Persian home takes the front page on a fresh site."
 msgstr "۶۶ صفحه (۲۲ مسیر × ۳ زبان؛ برای هر زبان یک پست‌تایپ جدا) را به‌صورت صفحه المنتور با HTML جایگزین ساده می‌سازد؛ محصولات با ووکامرس فعال به ووکامرس می‌روند. فقط موارد ساخته‌نشده ساخته می‌شوند. صفحه‌های موجود هرگز بازنویسی نمی‌شوند؛ هر مورد ثبت می‌شود و با «بازگردانی» به زباله‌دان می‌رود. روی سایت تازه، صفحه اصلی فارسی صفحه نخست می‌شود."
+
+msgid "Confirm"
+msgstr "تأیید"
 
 msgid "I understand this creates pages and may set the front page."
 msgstr "می‌دانم که این کار برگه می‌سازد و ممکن است صفحه نخست را تنظیم کند."
 
-msgid "Import pages and products"
-msgstr "ایمپورت برگه‌ها و محصولات"
+msgid "Undo"
+msgstr "بازگردانی"
 
 msgid "Last import: %1$d items on %2$s."
 msgstr "آخرین ایمپورت: %1$d مورد در %2$s."
@@ -184,9 +283,6 @@ msgstr "همه موارد واردشده به زباله‌دان منتقل و 
 msgid "Undo the import (move to Trash)"
 msgstr "بازگردانی ایمپورت (انتقال به زباله‌دان)"
 
-msgid "Shown for transparency: these options are planned but not active in this version."
-msgstr "برای شفافیت نمایش داده می‌شود: این گزینه‌ها برنامه‌ریزی شده‌اند اما در این نسخه فعال نیستند."
-
 msgid "Colour and typography panel (the approved design uses fixed CSS variables)"
 msgstr "پنل رنگ و تایپوگرافی (طرح تأییدشده از متغیرهای ثابت CSS استفاده می‌کند)"
 
@@ -196,8 +292,8 @@ msgstr "ذخیره درخواست مشاوره در سرور و ارسال ای�
 msgid "Third-party multilingual plugins (Polylang/WPML) compatibility"
 msgstr "سازگاری با افزونه‌های چندزبانه (Polylang/WPML)"
 
-msgid "Payab Sanat Asa"
-msgstr "پایاب صنعت آسا"
+msgid "Shown for transparency: these options are planned but not active in this version."
+msgstr "برای شفافیت نمایش داده می‌شود: این گزینه‌ها برنامه‌ریزی شده‌اند اما در این نسخه فعال نیستند."
 
 msgid "Payab Sanat Asa: install and activate the free Elementor plugin to edit pages visually. Without it the site still shows the saved page HTML."
 msgstr "پایاب صنعت آسا: برای ویرایش بصری صفحات، افزونه رایگان المنتور را نصب و فعال کنید. بدون آن، سایت همچنان HTML ذخیره‌شده صفحه را نشان می‌دهد."

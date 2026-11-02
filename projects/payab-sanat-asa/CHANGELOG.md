@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0 — 2026-11-03
+- Header nav + footer link lists come from real WP menus (9, created with the pages, assigned to theme locations `payab-primary|footer1|footer2-{fa,en,ar}`, journaled/undone, migrated for 1.1.x sites).
+- New settings UI (hero, tabs, language stats, menus tab, switches, texts filter).
+- Fix: theme forced `lang=fa dir=rtl` in wp-admin.
+
 ## 1.1.1 — 2026-11-02
 - Setting "Page output" (Settings > General): `html` (default) prints the approved design markup exactly, `elementor` prints Elementor output. Fixes remaining layout differences reported on a live site while Elementor output could not be tested with real Elementor.
 

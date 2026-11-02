@@ -19,12 +19,7 @@ add_action(
 		add_theme_support( 'custom-logo', array( 'height' => 96, 'width' => 108, 'flex-height' => true, 'flex-width' => true ) );
 		add_theme_support( 'woocommerce' );
 		add_theme_support( 'editor-styles' );
-		register_nav_menus(
-			array(
-				'primary' => __( 'Primary (optional; header uses the Texts panel by default)', 'payab-sanat-asa' ),
-				'footer'  => __( 'Footer (optional)', 'payab-sanat-asa' ),
-			)
-		);
+		register_nav_menus( aladdin_payab_sanat_asa_menu_locations() );
 		$GLOBALS['content_width'] = 1240;
 	}
 );
@@ -32,12 +27,16 @@ add_action(
 /** <html lang dir> follow the page language, not the site locale. */
 add_filter(
 	'language_attributes',
-	static function () {
+	static function ( $output ) {
+		if ( is_admin() ) {
+			return $output;       // the dashboard keeps the user's own language and direction.
+		}
 		$lang  = aladdin_payab_sanat_asa_lang();
 		$langs = aladdin_payab_sanat_asa_languages();
 		return 'lang="' . esc_attr( $lang ) . '" dir="' . esc_attr( $langs[ $lang ]['dir'] ) . '"';
 	},
-	20
+	20,
+	1
 );
 
 /** Search results: keep to the current language when the plugin supports it. */
@@ -69,4 +68,16 @@ function aladdin_payab_sanat_asa_main_class() {
 		$class = '';
 	}
 	return (string) apply_filters( 'aladdin_payab_sanat_asa_main_class', $class );
+}
+
+/** Menu locations: header navigation and the two footer link lists, for each language. */
+function aladdin_payab_sanat_asa_menu_locations() {
+	$names = array( 'fa' => 'فارسی', 'en' => 'English', 'ar' => 'العربية' );
+	$out   = array();
+	foreach ( $names as $l => $n ) {
+		$out[ 'payab-primary-' . $l ] = sprintf( 'Header menu — %s', $n );
+		$out[ 'payab-footer1-' . $l ] = sprintf( 'Footer: quick links — %s', $n );
+		$out[ 'payab-footer2-' . $l ] = sprintf( 'Footer: useful information — %s', $n );
+	}
+	return $out;
 }

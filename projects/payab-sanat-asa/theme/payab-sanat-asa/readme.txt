@@ -3,7 +3,7 @@ Contributors: aladdintheme
 Requires at least: 6.4
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: rtl-language-support, translation-ready, custom-colors, custom-logo, featured-images, accessibility-ready, e-commerce, one-column
@@ -39,6 +39,11 @@ No. Nothing is created or changed until you run the import yourself, and the imp
 * Branding logos (companion plugin): Aladdin Theme (علاءالدین تم), author's trademark.
 
 == Changelog ==
+= 1.2.0 =
+* Header navigation and both footer link lists are real WordPress menus (3 per language), created with the pages and editable in Appearance > Menus.
+* Redesigned settings screen (overview, menus, texts, general, import).
+* Dashboard keeps its own language/direction (theme no longer forces lang/dir in wp-admin).
+
 = 1.1.0 =
 * Each language has its own page post type (fa / en / ar); legacy 1.0.x pages are migrated automatically.
 * Elementor base CSS is layered below the design CSS so Elementor resets cannot disturb the layout.

@@ -3,7 +3,7 @@ Contributors: aladdintheme
 Requires at least: 6.4
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: multilingual, elementor, woocommerce, rtl
@@ -21,6 +21,11 @@ Companion plugin of the Payab Sanat Asa theme: built-in three-language layer, re
 Install with the Payab Sanat Asa theme. Elementor (free) and WooCommerce are optional.
 
 == Changelog ==
+= 1.2.0 =
+* Header navigation and both footer link lists are real WordPress menus (3 per language), created with the pages and editable in Appearance > Menus.
+* Redesigned settings screen (overview, menus, texts, general, import).
+* Dashboard keeps its own language/direction (theme no longer forces lang/dir in wp-admin).
+
 = 1.1.1 =
 * New setting "Page output": exact design (default, identical to the approved HTML) or Elementor output.
 

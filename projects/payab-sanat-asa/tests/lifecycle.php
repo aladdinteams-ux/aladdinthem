@@ -65,6 +65,20 @@ ok( 'URLs: fa/en/ar + nested + product',
 	&& get_permalink( \Aladdin\PayabSanatAsa\Languages::post_id( 'fa', 'articles/cane-types' ) ) === home_url( '/articles/cane-types/' )
 	&& home_url( '/' ) === get_permalink( \Aladdin\PayabSanatAsa\Languages::post_id( 'fa', '' ) ) );
 
+// menus: created with the import, assigned, printed by the theme, editable, removed by undo
+$ms = \Aladdin\PayabSanatAsa\Menus::status();
+$n_ok = 0; foreach ( $ms as $ks ) { foreach ( $ks as $v ) { $n_ok += $v['items'] ? 1 : 0; } }
+ok( 'import creates and assigns 9 menus (3 per language)', 9 === $n_ok, (string) $n_ok );
+$hdr = aladdin_payab_sanat_asa_chrome_html( 'pre', 'en' );
+ok( 'header nav is printed from the English menu (6 links, mega item kept)', false !== strpos( $hdr, 'data-mega-parent="products"' ) && false !== strpos( $hdr, '>Contact</a>' ) );
+$ftr = aladdin_payab_sanat_asa_chrome_html( 'post', 'ar' );
+ok( 'footer lists are printed from the Arabic menus', false !== strpos( $ftr, 'معرض الصور</a>' ) && false !== strpos( $ftr, home_url( '/ar/shop-2/' ) ) );
+$locs = get_nav_menu_locations(); $mid = $locs['payab-primary-en'];
+$its = wp_get_nav_menu_items( $mid ); $first = $its[0];
+wp_update_nav_menu_item( $mid, $first->ID, array( 'menu-item-title' => 'Start', 'menu-item-object-id' => $first->object_id, 'menu-item-object' => $first->object, 'menu-item-type' => 'post_type', 'menu-item-status' => 'publish' ) );
+ok( 'editing a menu item changes the header', false !== strpos( aladdin_payab_sanat_asa_chrome_html( 'pre', 'en' ), '>Start</a>' ) );
+$cnt = \Aladdin\PayabSanatAsa\Menus::ensure();
+ok( 're-running menus creates nothing and keeps owner edits', 0 === count( $cnt ) && false !== strpos( aladdin_payab_sanat_asa_chrome_html( 'pre', 'en' ), '>Start</a>' ) );
 // texts override: change the brand name of the Persian header; check rendered chrome; reset
 $defs = aladdin_payab_sanat_asa_chrome_defaults( 'fa' );
 $idx = null; foreach ( $defs['pre'] as $i => $row ) { if ( 't' === $row[0] && 'پایاب صنعت آسا' === $row[1] ) { $idx = $i; break; } }
@@ -81,9 +95,13 @@ delete_option( 'aladdin_payab_sanat_asa_chrome' );
 ok( 'reset restores approved text', false !== strpos( aladdin_payab_sanat_asa_chrome_html( 'pre', 'fa' ), 'پایاب صنعت آسا' ) );
 
 // undo
+$menus_before = $j1['menus'] ?? array();
 $ids_before = $j1['created'];
 $n = Importer::undo();
 ok( 'undo trashes all 66 items', 66 === $n, (string) $n );
+wp_cache_flush();
+$left = 0; foreach ( \Aladdin\PayabSanatAsa\Menus::status() as $ks ) { foreach ( $ks as $v ) { $left += $v['id'] ? 1 : 0; } }
+ok( 'undo removes the 9 menus and releases the locations', 0 === $left, (string) $left );
 ok( 'undo restores options (claim flag removed)', false === get_option( 'aladdin_payab_sanat_asa_claim_home', false ) && (string) get_option( 'page_on_front' ) === (string) $front0 && get_option( 'show_on_front' ) === $show0, "$front0/$show0" );
 ok( 'journal removed after undo', false === get_option( Importer::JOURNAL ) );
 ok( 'all journaled items are in Trash (recoverable), not deleted', 66 === count( array_filter( $ids_before, function ( $id ) { return 'trash' === get_post_status( $id ); } ) ) );

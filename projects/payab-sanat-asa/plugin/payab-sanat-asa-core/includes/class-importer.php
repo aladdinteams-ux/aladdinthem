@@ -159,18 +159,22 @@ class Importer {
 			$old = isset( $prev['created'] ) ? $prev['created'] : array();
 			update_option(
 				self::JOURNAL,
+				array_merge(
+					array_intersect_key( $prev, array_flip( array( 'menus', 'menu_locs_old' ) ) ),
 				array(
 					'time'    => time(),
 					'version' => ALADDIN_PAYAB_SANAT_ASA_CORE_VERSION,
 					'created' => array_values( array_unique( array_merge( $old, $created ) ) ),
 					'options' => isset( $prev['options'] ) && $prev['options'] ? array_merge( $opts, $prev['options'] ) : $opts,
 					'woo'     => $woo,
+				)
 				),
 				false
 			);
 			set_transient( 'aladdin_payab_sanat_asa_flush', 1, 60 );
 			flush_rewrite_rules( false );
 		}
+		Menus::ensure();
 		return array( 'created' => count( $created ), 'skipped' => $skipped, 'errors' => $errors );
 	}
 
@@ -226,6 +230,7 @@ class Importer {
 				wp_delete_attachment( $att, true );
 			}
 		}
+		Menus::undo( $j );
 		foreach ( (array) ( $j['options'] ?? array() ) as $k => $v ) {
 			if ( null === $v ) {
 				delete_option( $k );

@@ -60,15 +60,31 @@ msgstr ""
 msgid "Activate the companion plugin"
 msgstr ""
 
-#: inc/companion.php:34
+#: inc/companion.php:34 inc/companion.php:102
 msgid "Install and activate the companion plugin"
 msgstr ""
 
-#: inc/companion.php:43
-msgid "Not allowed."
+#: inc/companion.php:75
+msgid "The bundled plugin file was not found. Upload payab-sanat-asa-core.zip from Plugins > Add New."
 msgstr ""
 
-#: inc/companion.php:54
+#: inc/companion.php:82
 msgid "Installing the bundled plugin failed. Upload payab-sanat-asa-core.zip manually."
+msgstr ""
+
+#: inc/companion.php:95 inc/companion.php:95
+msgid "Payab setup"
+msgstr ""
+
+#: inc/companion.php:97
+msgid "Payab Sanat Asa setup"
+msgstr ""
+
+#: inc/companion.php:101
+msgid "The companion plugin adds the settings page, languages and the page import. Click the button to install and activate it; on a fresh site the pages are created automatically."
+msgstr ""
+
+#: inc/companion.php:111
+msgid "Not allowed."
 msgstr ""
 

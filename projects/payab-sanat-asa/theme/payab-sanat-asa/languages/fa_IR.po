@@ -49,8 +49,20 @@ msgstr "فعال‌سازی افزونه همراه"
 msgid "Install and activate the companion plugin"
 msgstr "نصب و فعال‌سازی افزونه همراه"
 
-msgid "Not allowed."
-msgstr "دسترسی مجاز نیست."
+msgid "The bundled plugin file was not found. Upload payab-sanat-asa-core.zip from Plugins > Add New."
+msgstr "فایل افزونه همراه پیدا نشد. فایل payab-sanat-asa-core.zip را از افزونه‌ها ← افزودن بارگذاری کنید."
 
 msgid "Installing the bundled plugin failed. Upload payab-sanat-asa-core.zip manually."
 msgstr "نصب افزونه همراه ناموفق بود. فایل payab-sanat-asa-core.zip را دستی بارگذاری کنید."
+
+msgid "Payab setup"
+msgstr "راه‌اندازی پایاب"
+
+msgid "Payab Sanat Asa setup"
+msgstr "راه‌اندازی پایاب صنعت آسا"
+
+msgid "The companion plugin adds the settings page, languages and the page import. Click the button to install and activate it; on a fresh site the pages are created automatically."
+msgstr "افزونه همراه صفحه تنظیمات، زبان‌ها و ایمپورت برگه‌ها را اضافه می‌کند. دکمه را بزنید تا نصب و فعال شود؛ روی سایت تازه برگه‌ها خودکار ساخته می‌شوند."
+
+msgid "Not allowed."
+msgstr "دسترسی مجاز نیست."

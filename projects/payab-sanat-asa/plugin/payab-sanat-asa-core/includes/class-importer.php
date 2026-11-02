@@ -19,6 +19,37 @@ class Importer {
 	public static function init() {
 		add_action( 'admin_post_aladdin_payab_import', array( __CLASS__, 'handle_import' ) );
 		add_action( 'admin_post_aladdin_payab_undo', array( __CLASS__, 'handle_undo' ) );
+		add_action( 'admin_init', array( __CLASS__, 'maybe_auto_import' ) );
+	}
+
+	/** Fresh = nothing of the owner's yet: no front page set, at most the default sample page and one post. */
+	public static function is_fresh_site() {
+		if ( 'page' === get_option( 'show_on_front' ) && (int) get_option( 'page_on_front' ) ) {
+			return false;
+		}
+		$pages = get_posts( array( 'post_type' => 'page', 'post_status' => array( 'publish', 'draft', 'private', 'pending' ), 'posts_per_page' => 5, 'fields' => 'ids', 'no_found_rows' => true ) );
+		foreach ( $pages as $id ) {
+			if ( 'sample-page' !== get_post_field( 'post_name', $id ) && 'privacy-policy' !== get_post_field( 'post_name', $id ) ) {
+				return false;
+			}
+		}
+		$posts = get_posts( array( 'post_type' => 'post', 'post_status' => array( 'publish', 'draft', 'private' ), 'posts_per_page' => 3, 'fields' => 'ids', 'no_found_rows' => true ) );
+		return count( $posts ) <= 1 && empty( self::journal() );
+	}
+
+	/** One-time automatic import right after the companion plugin is activated, only on a fresh site. */
+	public static function maybe_auto_import() {
+		if ( ! get_option( 'aladdin_payab_sanat_asa_autoimport' ) || ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+		delete_option( 'aladdin_payab_sanat_asa_autoimport' );
+		if ( self::is_fresh_site() ) {
+			set_transient( 'aladdin_payab_import_result', self::run(), 120 );
+			wp_safe_redirect( admin_url( 'admin.php?page=aladdin-payab&tab=import&aladdin_msg=imported' ) );
+			exit;
+		}
+		wp_safe_redirect( admin_url( 'admin.php?page=aladdin-payab&tab=import' ) );
+		exit;
 	}
 
 	public static function journal() {
@@ -269,12 +300,12 @@ class Importer {
 		}
 		check_admin_referer( 'aladdin_payab_import' );
 		if ( empty( $_POST['confirm'] ) ) {
-			wp_safe_redirect( add_query_arg( 'aladdin_msg', 'confirm', admin_url( 'options-general.php?page=aladdin-payab&tab=import' ) ) );
+			wp_safe_redirect( add_query_arg( 'aladdin_msg', 'confirm', admin_url( 'admin.php?page=aladdin-payab&tab=import' ) ) );
 			exit;
 		}
 		$r = self::run();
 		set_transient( 'aladdin_payab_import_result', $r, 120 );
-		wp_safe_redirect( add_query_arg( 'aladdin_msg', 'imported', admin_url( 'options-general.php?page=aladdin-payab&tab=import' ) ) );
+		wp_safe_redirect( add_query_arg( 'aladdin_msg', 'imported', admin_url( 'admin.php?page=aladdin-payab&tab=import' ) ) );
 		exit;
 	}
 
@@ -284,7 +315,7 @@ class Importer {
 		}
 		check_admin_referer( 'aladdin_payab_undo' );
 		set_transient( 'aladdin_payab_undo_result', self::undo(), 120 );
-		wp_safe_redirect( add_query_arg( 'aladdin_msg', 'undone', admin_url( 'options-general.php?page=aladdin-payab&tab=import' ) ) );
+		wp_safe_redirect( add_query_arg( 'aladdin_msg', 'undone', admin_url( 'admin.php?page=aladdin-payab&tab=import' ) ) );
 		exit;
 	}
 }

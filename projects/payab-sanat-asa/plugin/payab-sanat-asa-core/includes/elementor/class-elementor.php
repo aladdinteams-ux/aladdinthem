@@ -37,7 +37,7 @@ class Elementor_Integration {
 			return;
 		}
 		$s = get_current_screen();
-		if ( ! $s || ! in_array( $s->id, array( 'dashboard', 'settings_page_aladdin-payab', 'plugins' ), true ) ) {
+		if ( ! $s || ! in_array( $s->id, array( 'dashboard', 'toplevel_page_aladdin-payab', 'plugins' ), true ) ) {
 			return;
 		}
 		echo '<div class="notice notice-info"><p>' . esc_html__( 'Payab Sanat Asa: install and activate the free Elementor plugin to edit pages visually. Without it the site still shows the saved page HTML.', 'payab-sanat-asa-core' ) . '</p></div>';

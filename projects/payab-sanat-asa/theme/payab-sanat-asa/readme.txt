@@ -11,14 +11,14 @@ Tags: rtl-language-support, translation-ready, custom-colors, custom-logo, featu
 Three-language (Persian, English, Arabic), RTL-ready theme for Payab Sanat Asa, a patient-transfer equipment maker. Works with the free Elementor plugin; Elementor Pro is not needed and not used.
 
 == Description ==
-* Shared chrome (top bar, floating glass header, products mega menu, mobile drawer, footer, mobile quick bar) with every text editable in Settings > Aladdin Payab (companion plugin).
+* Shared chrome (top bar, floating glass header, products mega menu, mobile drawer, footer, mobile quick bar) with every text editable in the "Aladdin Payab" admin menu (companion plugin).
 * Day / night mode, three languages (fa, en, ar) with correct direction and fonts.
 * Page content is built from free Elementor containers and widgets; without Elementor the saved HTML still renders.
 * Requires the companion plugin "Payab Sanat Asa Core" (languages, import, SEO, Elementor widget). Product catalog mode with WooCommerce (optional).
 
 == Installation ==
 1. Upload and activate the theme, then the companion plugin (Appearance > Install plugins, or upload payab-sanat-asa-core.zip).
-2. Settings > Aladdin Payab > Import / Undo > import pages and products (reversible).
+2. the "Aladdin Payab" admin menu > Import / Undo > import pages and products (reversible).
 3. Install the free Elementor plugin to edit pages visually (optional).
 See docs/INSTALL-FA.md for the Persian guide.
 

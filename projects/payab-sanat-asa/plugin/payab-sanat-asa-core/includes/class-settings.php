@@ -22,12 +22,14 @@ class Settings {
 	}
 
 	public static function menu() {
-		add_options_page(
+		add_menu_page(
 			__( 'Aladdin Payab', 'payab-sanat-asa-core' ),
 			__( 'Aladdin Payab', 'payab-sanat-asa-core' ),
 			'manage_options',
 			'aladdin-payab',
-			array( __CLASS__, 'render' )
+			array( __CLASS__, 'render' ),
+			'dashicons-admin-generic',
+			58
 		);
 	}
 
@@ -55,7 +57,7 @@ class Settings {
 	}
 
 	private static function back( $tab, $msg, $extra = array() ) {
-		wp_safe_redirect( add_query_arg( array_merge( array( 'page' => 'aladdin-payab', 'tab' => $tab, 'aladdin_msg' => $msg ), $extra ), admin_url( 'options-general.php' ) ) );
+		wp_safe_redirect( add_query_arg( array_merge( array( 'page' => 'aladdin-payab', 'tab' => $tab, 'aladdin_msg' => $msg ), $extra ), admin_url( 'admin.php' ) ) );
 		exit;
 	}
 
@@ -160,7 +162,7 @@ class Settings {
 		self::notices();
 		echo '<nav class="nav-tab-wrapper">';
 		foreach ( self::tabs() as $k => $label ) {
-			printf( '<a class="nav-tab %s" href="%s">%s</a>', $k === $tab ? 'nav-tab-active' : '', esc_url( add_query_arg( array( 'page' => 'aladdin-payab', 'tab' => $k ), admin_url( 'options-general.php' ) ) ), esc_html( $label ) );
+			printf( '<a class="nav-tab %s" href="%s">%s</a>', $k === $tab ? 'nav-tab-active' : '', esc_url( add_query_arg( array( 'page' => 'aladdin-payab', 'tab' => $k ), admin_url( 'admin.php' ) ) ), esc_html( $label ) );
 		}
 		echo '</nav><div style="margin-top:18px;max-width:1100px">';
 		call_user_func( array( __CLASS__, 'tab_' . $tab ) );
@@ -244,7 +246,7 @@ class Settings {
 		$cur  = isset( $opt[ $lang ] ) ? $opt[ $lang ] : array();
 		echo '<p>';
 		foreach ( Languages::codes() as $l ) {
-			printf( '<a class="button %s" href="%s">%s</a> ', $l === $lang ? 'button-primary' : '', esc_url( add_query_arg( array( 'page' => 'aladdin-payab', 'tab' => 'texts', 'lang' => $l ), admin_url( 'options-general.php' ) ) ), esc_html( strtoupper( $l ) ) );
+			printf( '<a class="button %s" href="%s">%s</a> ', $l === $lang ? 'button-primary' : '', esc_url( add_query_arg( array( 'page' => 'aladdin-payab', 'tab' => 'texts', 'lang' => $l ), admin_url( 'admin.php' ) ) ), esc_html( strtoupper( $l ) ) );
 		}
 		echo '</p><p class="description">' . esc_html__( 'Every text, label and link of the top bar, header, mobile menu, footer and mobile bar. Leave a field empty to keep the approved design text. Links: use "fa:shop-2" style route keys or a full URL.', 'payab-sanat-asa-core' ) . '</p>';
 		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"><input type="hidden" name="action" value="aladdin_payab_save_texts"/><input type="hidden" name="lang" value="' . esc_attr( $lang ) . '"/>';

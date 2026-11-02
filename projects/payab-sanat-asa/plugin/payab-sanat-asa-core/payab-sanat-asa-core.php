@@ -51,5 +51,7 @@ register_activation_hook(
 		// Never change an existing site on activation: only remember the version and flush rewrites.
 		update_option( 'aladdin_payab_sanat_asa_core_version', ALADDIN_PAYAB_SANAT_ASA_CORE_VERSION, false );
 		set_transient( 'aladdin_payab_sanat_asa_flush', 1, 60 );
+		// Fresh sites get the pages automatically on the next admin request; existing sites are sent to the Import tab.
+		update_option( 'aladdin_payab_sanat_asa_autoimport', 1, false );
 	}
 );

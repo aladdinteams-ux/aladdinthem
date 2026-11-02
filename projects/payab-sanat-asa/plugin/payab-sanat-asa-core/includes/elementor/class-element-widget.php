@@ -9,11 +9,10 @@
 namespace Aladdin\PayabSanatAsa;
 
 use Elementor\Controls_Manager;
-use Elementor\Widget_Base;
 
 defined( 'ABSPATH' ) || exit;
 
-class Element_Widget extends Widget_Base {
+class Element_Widget extends Raw_Widget {
 
 	const TAGS = array( 'div', 'span', 'a', 'button', 'img', 'small', 'strong', 'em', 'i', 'b', 'label', 'nav', 'ul', 'ol', 'li', 'details', 'summary', 'table', 'form', 'iframe', 'svg', 'dialog', 'figcaption', 'figure', 'select', 'textarea', 'p', 'section', 'aside', 'header', 'footer' );
 
@@ -27,10 +26,6 @@ class Element_Widget extends Widget_Base {
 
 	public function get_icon() {
 		return 'eicon-code-highlight';
-	}
-
-	public function get_categories() {
-		return array( 'aladdin-payab' );
 	}
 
 	public function get_keywords() {

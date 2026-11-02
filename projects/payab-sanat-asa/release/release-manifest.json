@@ -1,6 +1,6 @@
 {
  "name": "Payab Sanat Asa",
- "version": "1.0.0",
+ "version": "1.1.0",
  "date": "2026-11-02",
  "author": "علاءالدین تم (Aladdin Theme)",
  "source": {
@@ -22,13 +22,13 @@
  "artifacts": [
   {
    "file": "payab-sanat-asa.zip",
-   "sha256": "becdbc7b286553315a964de231082c7671eed2c0172b1f179a1c356dfff75ccb",
+   "sha256": "0b039081d5498dc6573b08c1b00e9c49973a95507ecb599acc95c146fdadd2cf",
    "files": 94
   },
   {
    "file": "payab-sanat-asa-core.zip",
-   "sha256": "d4b889bf8400bc6eaa5dc9f4da1b139d71e0aa996ee4bf8cfcd8bbd696ecd0ce",
-   "files": 17
+   "sha256": "05941cfd423f2da5d89965d90f0d422b50d73f54ba25b4a91ba8f9340e4a1a70",
+   "files": 21
   },
   {
    "file": "payab-sanat-asa-child.zip",

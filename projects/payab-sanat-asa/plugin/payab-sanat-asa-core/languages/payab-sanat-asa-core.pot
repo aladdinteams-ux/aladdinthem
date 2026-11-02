@@ -8,11 +8,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: payab-sanat-asa-core\n"
 
-#: includes/class-languages.php:167
+#: includes/class-languages.php:182
 msgid "Language"
 msgstr ""
 
-#: includes/class-importer.php:268 includes/class-importer.php:283 includes/class-settings.php:52
+#: includes/class-importer.php:244 includes/class-importer.php:259 includes/class-settings.php:54
 msgid "Not allowed."
 msgstr ""
 
@@ -20,231 +20,251 @@ msgstr ""
 msgid "Aladdin Payab"
 msgstr ""
 
-#: includes/class-settings.php:40
+#: includes/class-settings.php:42
 msgid "Designed and developed by"
 msgstr ""
 
-#: includes/class-settings.php:145
+#: includes/class-settings.php:147
 msgid "Overview"
 msgstr ""
 
-#: includes/class-settings.php:146
+#: includes/class-settings.php:148
 msgid "General"
 msgstr ""
 
-#: includes/class-settings.php:147
+#: includes/class-settings.php:149
 msgid "Header & footer texts"
 msgstr ""
 
-#: includes/class-settings.php:148
+#: includes/class-settings.php:150
 msgid "Import / Undo"
 msgstr ""
 
-#: includes/class-settings.php:149 includes/class-settings.php:307
+#: includes/class-settings.php:151 includes/class-settings.php:346
 msgid "Reserved"
 msgstr ""
 
-#: includes/class-settings.php:158
+#: includes/class-settings.php:160
 msgid "Aladdin Payab — Payab Sanat Asa theme"
 msgstr ""
 
-#: includes/class-settings.php:173
+#: includes/class-settings.php:175
 msgid "Settings saved."
 msgstr ""
 
-#: includes/class-settings.php:174
+#: includes/class-settings.php:176
 msgid "Texts of this language were reset to the approved design (a backup was kept)."
 msgstr ""
 
-#: includes/class-settings.php:175
+#: includes/class-settings.php:177
 msgid "Please tick the confirmation box first."
 msgstr ""
 
-#: includes/class-settings.php:185
+#: includes/class-settings.php:187
 msgid "Import finished: %1$d created, %2$d already existed."
 msgstr ""
 
-#: includes/class-settings.php:185
+#: includes/class-settings.php:187
 msgid "Import finished."
 msgstr ""
 
-#: includes/class-settings.php:192
+#: includes/class-settings.php:194
 msgid "Undo finished: %d items moved to the Trash."
 msgstr ""
 
-#: includes/class-settings.php:201
+#: includes/class-settings.php:203
 msgid "Status"
 msgstr ""
 
-#: includes/class-settings.php:203
+#: includes/class-settings.php:205
 msgid "Theme \"Payab Sanat Asa\" active"
 msgstr ""
 
-#: includes/class-settings.php:204
+#: includes/class-settings.php:206
 msgid "Elementor (free) active"
 msgstr ""
 
-#: includes/class-settings.php:204
+#: includes/class-settings.php:206
 msgid "pages still show using the saved HTML"
 msgstr ""
 
-#: includes/class-settings.php:205
+#: includes/class-settings.php:207
 msgid "WooCommerce active (products)"
 msgstr ""
 
-#: includes/class-settings.php:205
+#: includes/class-settings.php:207
 msgid "product pages are created as pages"
 msgstr ""
 
-#: includes/class-settings.php:206
+#: includes/class-settings.php:208
 msgid "Imported items"
 msgstr ""
 
-#: includes/class-settings.php:212
+#: includes/class-settings.php:215
 msgid "Theme and companion plugin for Payab Sanat Asa. Version"
 msgstr ""
 
-#: includes/class-settings.php:221
+#: includes/class-settings.php:223
+msgid "Languages and pages"
+msgstr ""
+
+#: includes/class-settings.php:224
+msgid "Route"
+msgstr ""
+
+#: includes/class-settings.php:238
+msgid "missing"
+msgstr ""
+
+#: includes/class-settings.php:243
+msgid "Total"
+msgstr ""
+
+#: includes/class-settings.php:248
+msgid "Create the %d missing pages"
+msgstr ""
+
+#: includes/class-settings.php:260
 msgid "Catalog mode"
 msgstr ""
 
-#: includes/class-settings.php:221
+#: includes/class-settings.php:260
 msgid "Hide prices and block purchasing/cart/checkout (WooCommerce)."
 msgstr ""
 
-#: includes/class-settings.php:222
+#: includes/class-settings.php:261
 msgid "SEO tags"
 msgstr ""
 
-#: includes/class-settings.php:222
+#: includes/class-settings.php:261
 msgid "Print description, canonical, hreflang, Open Graph and Schema.org."
 msgstr ""
 
-#: includes/class-settings.php:222
+#: includes/class-settings.php:261
 msgid "Automatically off when Yoast, Rank Math, SEOPress/TSF or AIOSEO is active."
 msgstr ""
 
-#: includes/class-settings.php:223
+#: includes/class-settings.php:262
 msgid "Header"
 msgstr ""
 
-#: includes/class-settings.php:223
+#: includes/class-settings.php:262
 msgid "Footer"
 msgstr ""
 
-#: includes/class-settings.php:226
+#: includes/class-settings.php:265
 msgid "Approved design (default)"
 msgstr ""
 
-#: includes/class-settings.php:232
+#: includes/class-settings.php:271
 msgid "Optional: replace the shared chrome with an Elementor template (built with free Elementor, no Pro theme builder)."
 msgstr ""
 
-#: includes/class-settings.php:234
+#: includes/class-settings.php:273
 msgid "On uninstall"
 msgstr ""
 
-#: includes/class-settings.php:234
+#: includes/class-settings.php:273
 msgid "Delete this plugin's settings (pages and products are never deleted)."
 msgstr ""
 
-#: includes/class-settings.php:249
+#: includes/class-settings.php:288
 msgid "Every text, label and link of the top bar, header, mobile menu, footer and mobile bar. Leave a field empty to keep the approved design text. Links: use \"fa:shop-2\" style route keys or a full URL."
 msgstr ""
 
-#: includes/class-settings.php:252
+#: includes/class-settings.php:291
 msgid "Top bar, header and mobile drawer"
 msgstr ""
 
-#: includes/class-settings.php:252
+#: includes/class-settings.php:291
 msgid "Footer and mobile bar"
 msgstr ""
 
-#: includes/class-settings.php:254
+#: includes/class-settings.php:293
 msgid "Type"
 msgstr ""
 
-#: includes/class-settings.php:254
+#: includes/class-settings.php:293
 msgid "Approved text"
 msgstr ""
 
-#: includes/class-settings.php:254
+#: includes/class-settings.php:293
 msgid "Your text"
 msgstr ""
 
-#: includes/class-settings.php:264
+#: includes/class-settings.php:303
 msgid "Products mega menu (category panel)"
 msgstr ""
 
-#: includes/class-settings.php:274
+#: includes/class-settings.php:313
 msgid "Save texts"
 msgstr ""
 
-#: includes/class-settings.php:276
+#: includes/class-settings.php:315
 msgid "Reset all texts of this language to the approved design? A backup is kept."
 msgstr ""
 
-#: includes/class-settings.php:278
+#: includes/class-settings.php:317
 msgid "Reset this language to the approved design"
 msgstr ""
 
-#: includes/class-settings.php:284
-msgid "Creates the 66 pages (22 routes × 3 languages) as Elementor pages with a plain-HTML fallback, and the 3 products × 3 languages. Existing pages are never overwritten; every created item is journaled and can be moved to the Trash with Undo. The Persian home becomes the static front page."
+#: includes/class-settings.php:323
+msgid "Creates the 66 language pages (22 routes × 3 languages, a separate post type for each language) as Elementor pages with a plain-HTML fallback; products go to WooCommerce when it is active. Only missing pages are created. Existing pages are never overwritten; every created item is journaled and can be moved to the Trash with Undo. The Persian home takes the front page on a fresh site."
 msgstr ""
 
-#: includes/class-settings.php:287
+#: includes/class-settings.php:326
 msgid "I understand this creates pages and may set the front page."
 msgstr ""
 
-#: includes/class-settings.php:288
+#: includes/class-settings.php:327
 msgid "Import pages and products"
 msgstr ""
 
-#: includes/class-settings.php:292
+#: includes/class-settings.php:331
 msgid "Last import: %1$d items on %2$s."
 msgstr ""
 
-#: includes/class-settings.php:293
+#: includes/class-settings.php:332
 msgid "Move all imported items to the Trash and restore changed options?"
 msgstr ""
 
-#: includes/class-settings.php:295
+#: includes/class-settings.php:334
 msgid "Undo the import (move to Trash)"
 msgstr ""
 
-#: includes/class-settings.php:301
+#: includes/class-settings.php:340
 msgid "Shown for transparency: these options are planned but not active in this version."
 msgstr ""
 
-#: includes/class-settings.php:303
+#: includes/class-settings.php:342
 msgid "Colour and typography panel (the approved design uses fixed CSS variables)"
 msgstr ""
 
-#: includes/class-settings.php:304
+#: includes/class-settings.php:343
 msgid "Server-side consultation request storage and e-mail (the approved contact form only prepares text and copies it to the clipboard)"
 msgstr ""
 
-#: includes/class-settings.php:305
+#: includes/class-settings.php:344
 msgid "Third-party multilingual plugins (Polylang/WPML) compatibility"
 msgstr ""
 
-#: includes/elementor/class-elementor.php:24
+#: includes/elementor/class-elementor.php:27
 msgid "Payab Sanat Asa"
 msgstr ""
 
-#: includes/elementor/class-elementor.php:40
+#: includes/elementor/class-elementor.php:43
 msgid "Payab Sanat Asa: install and activate the free Elementor plugin to edit pages visually. Without it the site still shows the saved page HTML."
 msgstr ""
 
-#: includes/elementor/class-elementor.php:64
+#: includes/elementor/class-elementor.php:67
 msgid "Payab attributes"
 msgstr ""
 
-#: includes/elementor/class-elementor.php:68
+#: includes/elementor/class-elementor.php:71
 msgid "HTML attributes"
 msgstr ""
 
-#: includes/elementor/class-elementor.php:71
+#: includes/elementor/class-elementor.php:74
 msgid "One per line: key|value (aria-*, data-*, role, title…). Needed for the approved design scripts."
 msgstr ""
 

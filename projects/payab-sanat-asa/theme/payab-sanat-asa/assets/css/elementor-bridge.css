@@ -1,14 +1,12 @@
 /*
- * Elementor bridge: converted layouts keep the approved class names on free-Elementor containers.
- * The approved CSS is loaded after elementor-frontend, so equal-specificity rules of the design win;
- * these rules only neutralise Elementor defaults the design never set.
+ * Elementor bridge. Converted layouts keep the approved class names on free-Elementor containers and Payab widgets.
+ * 1) Elementor's base CSS is layered below the design CSS (inc/assets.php), so resets cannot break images, links, radii.
+ * 2) Payab widgets print no wrapper divs on the public site (plugin Raw_Widget), so the DOM equals the approved HTML.
+ * 3) Containers marked `aladdin-pz` behave like the plain <div> of the approved HTML (rule below).
  */
-.aladdin-payab-sanat-asa .elementor .e-con.e-con-full { --padding-block-start: 0; --padding-block-end: 0; --padding-inline-start: 0; --padding-inline-end: 0; }
-.aladdin-payab-sanat-asa .elementor .elementor-widget { margin: 0; }
-.aladdin-payab-sanat-asa .elementor .elementor-widget-text-editor { width: auto; }
-.aladdin-payab-sanat-asa .elementor-widget-container { display: contents; }
-.aladdin-payab-sanat-asa .elementor-widget-text-editor .elementor-widget-container { font: inherit; color: inherit; }
-.aladdin-payab-sanat-asa .elementor-widget-aladdin_payab_sanat_asa_element { width: auto; max-width: 100%; }
+/* Containers carrying `aladdin-pz` (every converted block) behave like the plain <div> of the approved HTML. Zero specificity: the
+   design's own rules (display:grid, flex, gap, padding...) win; Elementor's flex/column/gap/padding defaults do not apply. */
+:where(.elementor .e-con.aladdin-pz) { display: block; flex: initial; width: auto; max-width: none; min-width: initial; min-height: initial; height: auto; margin: 0; padding: 0; gap: normal; border-radius: 0; position: static; overflow: visible; transition: none; text-align: inherit; flex-direction: row; z-index: auto; }
 
 /* WordPress core content classes (blog posts, captions, galleries). */
 .aligncenter { display: block; margin-inline: auto; }

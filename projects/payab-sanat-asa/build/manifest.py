@@ -7,7 +7,7 @@ for line in open(os.path.join(base, 'SHA256SUMS.txt')):
     m = re.match(r'(\w{64})\s+(\S+)\s+(\d+) files', line.strip())
     if m: arts.append({'file': m.group(2), 'sha256': m.group(1), 'files': int(m.group(3))})
 man = {
- 'name': 'Payab Sanat Asa', 'version': '1.0.0', 'date': datetime.date.today().isoformat(),
+ 'name': 'Payab Sanat Asa', 'version': '1.1.0', 'date': datetime.date.today().isoformat(),
  'author': 'علاءالدین تم (Aladdin Theme)',
  'source': {'zip': 'payab-sanat-asa-v42-contact-tip-icons-3lang', 'sha256': '303e33c343cd4696e76dc676a186979f2775ae5dff93e6fac622e6755cce4766'},
  'requirements': {'wordpress': '6.4+', 'php': '7.4+', 'elementor': 'free (optional, not tested in this build)', 'woocommerce': 'optional (tested 10.3.5)'},

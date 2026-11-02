@@ -1,6 +1,6 @@
 <?php
 /**
- * Reversible demo import: creates the 66 pages (22 routes x 3 languages) with Elementor data and a plain-HTML
+ * Reversible demo import: creates the 66 language pages (22 routes x 3 languages, one post type per language) with Elementor data and a plain-HTML
  * fallback, plus 3 products x 3 languages (WooCommerce products when WooCommerce is active, pages otherwise).
  * Every created post is journaled; "Undo" moves exactly those posts to the Trash and restores changed options.
  * Existing content is never overwritten: a route that already exists is skipped.
@@ -62,11 +62,11 @@ class Importer {
 		return is_array( $data ) ? $data : array();
 	}
 
-	/** Existing post for a lang+group (any status except trash). */
+	/** Existing language page / product for a lang+group (any status except trash). */
 	private static function find( $lang, $group ) {
 		$q = get_posts(
 			array(
-				'post_type'      => array( 'page', 'product' ),
+				'post_type'      => array( Post_Types::slug_for( $lang ), 'product' ),
 				'post_status'    => array( 'publish', 'draft', 'private', 'pending' ),
 				'posts_per_page' => 1,
 				'fields'         => 'ids',
@@ -81,36 +81,20 @@ class Importer {
 		return $q ? (int) $q[0] : 0;
 	}
 
-	private static function placeholder( $lang, $slug, $parent, $redirect, &$created ) {
-		$existing = get_posts(
-			array(
-				'post_type' => 'page', 'post_status' => array( 'publish', 'draft', 'private' ), 'posts_per_page' => 1, 'fields' => 'ids',
-				'meta_query' => array(
-					array( 'key' => '_aladdin_payab_placeholder', 'value' => $lang . ':' . $slug ),
-				),
-			)
-		);
-		if ( $existing ) {
-			return (int) $existing[0];
+	/** Status matrix for the admin: group => lang => post id (0 = missing). */
+	public static function matrix() {
+		$groups = array();
+		foreach ( self::pages() as $p ) {
+			$groups[ $p['group'] ][ $p['lang'] ] = array( 'id' => self::find( $p['lang'], $p['group'] ), 'title' => $p['h1'] );
 		}
-		$id = wp_insert_post(
-			array(
-				'post_type' => 'page', 'post_status' => 'publish', 'post_title' => $slug, 'post_name' => $slug, 'post_parent' => $parent,
-			),
-			true
-		);
-		if ( is_wp_error( $id ) ) {
-			return 0;
-		}
-		update_post_meta( $id, '_aladdin_payab_placeholder', $lang . ':' . $slug );
-		update_post_meta( $id, '_aladdin_payab_redirect', $redirect );
-		update_post_meta( $id, Languages::META_LANG, $lang );
-		$created[] = (int) $id;
-		return (int) $id;
+		return $groups;
 	}
 
-	/** Run the import. Returns array( created => n, skipped => n, errors => [] ). */
+	/** Run the import (creates only what is missing). Returns array( created => n, skipped => n, errors => [] ). */
 	public static function run() {
+		Migrations::pages_to_cpt();
+		Post_Types::register();
+		Post_Types::elementor_support();
 		$pages   = self::pages();
 		$woo     = class_exists( 'WooCommerce' ) && post_type_exists( 'product' );
 		$created = array();
@@ -118,65 +102,31 @@ class Importer {
 		$errors  = array();
 		$opts    = array();
 		$prev    = self::journal();
+		$fresh   = self::is_fresh_site();
 
 		if ( '' === (string) get_option( 'permalink_structure' ) ) {
 			$opts['permalink_structure'] = '';
 			update_option( 'permalink_structure', '/%postname%/' );
 		}
-		$homes = array();
-		// Order: home pages first, then by depth so parents exist.
-		usort(
-			$pages,
-			static function ( $a, $b ) {
-				return substr_count( $a['group'], '/' ) <=> substr_count( $b['group'], '/' ) ?: strcmp( $a['group'], $b['group'] );
-			}
-		);
-		$ids = array();
-		foreach ( array( 'fa', 'en', 'ar' ) as $lang ) {
-			$ids[ $lang ] = array();
-		}
 		foreach ( $pages as $p ) {
-			$lang = $p['lang']; $group = $p['group'];
-			$exist = self::find( $lang, $group );
-			if ( $exist ) {
+			$lang = $p['lang'];
+			$group = $p['group'];
+			if ( self::find( $lang, $group ) ) {
 				$skipped++;
-				$ids[ $lang ][ $group ] = $exist;
 				continue;
 			}
-			$is_product = 0 === strpos( $group, 'product/' );
-			$slug       = '' === $group ? ( 'fa' === $lang ? 'payab-home' : $lang ) : basename( $group );
-			$parent     = 0;
-			if ( 'fa' !== $lang && '' !== $group ) {
-				$parent = $ids[ $lang ][''] ?? 0;
-			}
-			if ( '' !== $group && ! ( $is_product && $woo ) ) {
-				$dir = dirname( $group );
-				if ( '.' !== $dir ) {
-					$top = explode( '/', $dir );
-					$walk = '';
-					foreach ( $top as $seg ) {
-						$walk = '' === $walk ? $seg : $walk . '/' . $seg;
-						if ( isset( $ids[ $lang ][ $walk ] ) ) {
-							$parent = $ids[ $lang ][ $walk ];
-						} else {
-							$redir = 'articles' === $seg ? 'blog-2' : ( 'product' === $seg ? 'shop-2' : $seg );
-							$parent = self::placeholder( $lang, $seg, $parent, $redir, $created );
-							$ids[ $lang ][ $walk ] = $parent;
-						}
-					}
-				}
-			}
-			$title = $p['h1'] ? wp_strip_all_tags( $p['h1'] ) : $p['title'];
-			$args  = array(
-				'post_type'    => ( $is_product && $woo ) ? 'product' : 'page',
-				'post_status'  => 'publish',
-				'post_title'   => $title,
-				'post_name'    => ( $is_product && $woo && 'fa' !== $lang ) ? $slug . '-' . $lang : $slug,
-				'post_parent'  => ( $is_product && $woo ) ? 0 : $parent,
-				'post_content' => wp_slash( $p['fallback'] ),
-				'menu_order'   => 0,
+			$is_product = 0 === strpos( $group, 'product/' ) && $woo;
+			$slug       = '' === $group ? ( 'fa' === $lang ? 'home' : 'home-' . $lang ) : str_replace( '/', '-', $group );
+			$id         = wp_insert_post(
+				array(
+					'post_type'    => $is_product ? 'product' : Post_Types::slug_for( $lang ),
+					'post_status'  => 'publish',
+					'post_title'   => $p['h1'] ? wp_strip_all_tags( $p['h1'] ) : $p['title'],
+					'post_name'    => ( $is_product && 'fa' !== $lang ) ? basename( $group ) . '-' . $lang : $slug,
+					'post_content' => wp_slash( $p['fallback'] ),
+				),
+				true
 			);
-			$id = wp_insert_post( $args, true );
 			if ( is_wp_error( $id ) ) {
 				$errors[] = $lang . ':' . $group . ' ' . $id->get_error_message();
 				continue;
@@ -186,35 +136,26 @@ class Importer {
 			update_post_meta( $id, '_aladdin_payab_seo_title', $p['title'] );
 			update_post_meta( $id, '_aladdin_payab_seo_description', $p['description'] );
 			update_post_meta( $id, '_aladdin_payab_jsonld', wp_slash( wp_json_encode( array_map( static function ( $s ) { return json_decode( $s, true ); }, $p['jsonld'] ), JSON_UNESCAPED_UNICODE ) ) );
-			update_post_meta( $id, '_wp_page_template', 'default' );
 			update_post_meta( $id, '_elementor_edit_mode', 'builder' );
-			update_post_meta( $id, '_elementor_template_type', 'wp-page' );
+			update_post_meta( $id, '_elementor_template_type', 'wp-post' );
 			update_post_meta( $id, '_elementor_version', defined( 'ELEMENTOR_VERSION' ) ? ELEMENTOR_VERSION : '3.0.0' );
 			update_post_meta( $id, '_elementor_data', wp_slash( wp_json_encode( $p['elementor'], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) ) );
 			delete_post_meta( $id, '_elementor_element_cache' );
 			delete_post_meta( $id, '_elementor_css' );
 			delete_post_meta( $id, '_elementor_page_assets' );
-			if ( $is_product && $woo ) {
+			if ( $is_product ) {
 				self::product_meta( $id, $group );
 			}
 			$created[] = (int) $id;
-			$ids[ $lang ][ $group ] = (int) $id;
+		}
+		// The Persian home takes "/" on a fresh site (or when no static front page is set); otherwise it lives at /payab-home/.
+		if ( $created && false === get_option( 'aladdin_payab_sanat_asa_claim_home', false ) ) {
+			$claim = ( $fresh || 'page' !== get_option( 'show_on_front' ) || ! (int) get_option( 'page_on_front' ) ) ? 'yes' : 'no';
+			add_option( 'aladdin_payab_sanat_asa_claim_home', $claim, '', false );
+			$opts['aladdin_payab_sanat_asa_claim_home'] = null;      // null = delete on undo.
 		}
 		Languages::flush_index();
-
-		$fa_home = $ids['fa'][''] ?? 0;
-		if ( $fa_home && ! empty( $created ) && in_array( $fa_home, $created, true ) ) {
-			$opts['show_on_front'] = get_option( 'show_on_front' );
-			$opts['page_on_front'] = get_option( 'page_on_front' );
-			update_option( 'show_on_front', 'page' );
-			update_option( 'page_on_front', $fa_home );
-		}
-		if ( function_exists( 'wc_get_page_id' ) ) {
-			// Catalog mode: no cart/checkout needed; nothing to change in WooCommerce page settings.
-			unset( $opts['woo'] );
-		}
 		if ( $created ) {
-			// Keep the first (real) import journal when a later run created nothing; merge when it did.
 			$old = isset( $prev['created'] ) ? $prev['created'] : array();
 			update_option(
 				self::JOURNAL,
@@ -286,7 +227,11 @@ class Importer {
 			}
 		}
 		foreach ( (array) ( $j['options'] ?? array() ) as $k => $v ) {
-			update_option( $k, $v );
+			if ( null === $v ) {
+				delete_option( $k );
+			} else {
+				update_option( $k, $v );
+			}
 		}
 		delete_option( self::JOURNAL );
 		Languages::flush_index();

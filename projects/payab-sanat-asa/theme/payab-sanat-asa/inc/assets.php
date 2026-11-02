@@ -92,3 +92,20 @@ add_action(
 	},
 	2
 );
+
+/**
+ * Elementor's base stylesheet (resets such as ".elementor img { height:auto }") must not override the approved design CSS.
+ * It is loaded inside a cascade layer, which always loses against the theme's (unlayered) rules, while Elementor's per-element
+ * Style-tab CSS (post CSS) stays unlayered and still wins by specificity. Filter to switch off: aladdin_payab_sanat_asa_layer_elementor.
+ */
+add_filter(
+	'style_loader_tag',
+	static function ( $tag, $handle, $href ) {
+		if ( ! apply_filters( 'aladdin_payab_sanat_asa_layer_elementor', true ) || ! preg_match( '/^(elementor-frontend|elementor-icons|elementor-common|e-swiper|swiper|e-animation|widget-)/', $handle ) ) {
+			return $tag;
+		}
+		return '<style id="' . esc_attr( $handle ) . '-layered-css">@import url("' . esc_url( $href ) . '") layer(elementor-base);</style>' . "\n";
+	},
+	10,
+	3
+);

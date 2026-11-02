@@ -15,16 +15,33 @@ function count_posts_mine() { global $wpdb; return (int) $wpdb->get_var( "SELECT
 // start clean: undo any previous journal
 Importer::undo();
 ok( 'clean state: no imported pages', 0 === count_posts_mine() );
+delete_option( 'aladdin_payab_sanat_asa_claim_home' );
 $front0 = get_option( 'page_on_front' ); $show0 = get_option( 'show_on_front' );
 
-$before_all = wp_count_posts( 'page' )->publish;
 $r = Importer::run();
-ok( 'import creates 66 pages + 6 placeholders', 72 === $r['created'] && 0 === count( $r['errors'] ), json_encode( $r ) );
+ok( 'import creates 66 language pages', 66 === $r['created'] && 0 === count( $r['errors'] ), json_encode( $r ) );
 ok( '66 translated pages published', 66 === count_posts_mine() );
 $j1 = get_option( Importer::JOURNAL );
-ok( 'journal lists all created ids', 72 === count( $j1['created'] ) );
-ok( 'front page = Persian home', (int) get_option( 'page_on_front' ) === \Aladdin\PayabSanatAsa\Languages::post_id( 'fa', '' ) && 'page' === get_option( 'show_on_front' ) );
-ok( 'every page has Elementor data JSON + fallback content', (bool) array_reduce( get_posts( array( 'post_type' => 'page', 'posts_per_page' => -1, 'meta_key' => '_aladdin_payab_group', 'fields' => 'ids' ) ), function ( $c, $id ) { return $c && json_decode( get_post_meta( $id, '_elementor_data', true ), true ) && strlen( get_post_field( 'post_content', $id ) ) > 500; }, true ) );
+ok( 'journal lists all created ids', 66 === count( $j1['created'] ) );
+ok( 'Persian home claims / (claim option) and resolves', 'yes' === get_option( 'aladdin_payab_sanat_asa_claim_home' ) && home_url( '/' ) === get_permalink( \Aladdin\PayabSanatAsa\Languages::post_id( 'fa', '' ) ) );
+wp_cache_flush();
+ok( 'one post type per language, 22 pages each', 22 === (int) wp_count_posts( 'aladdin_page_fa' )->publish && 22 === (int) wp_count_posts( 'aladdin_page_en' )->publish && 22 === (int) wp_count_posts( 'aladdin_page_ar' )->publish, wp_count_posts( 'aladdin_page_fa' )->publish . '/' . wp_count_posts( 'aladdin_page_en' )->publish . '/' . wp_count_posts( 'aladdin_page_ar' )->publish );
+ok( 'language pages are enabled for free Elementor', 3 === count( array_intersect( (array) get_option( 'elementor_cpt_support' ), \Aladdin\PayabSanatAsa\Post_Types::slugs() ) ) );
+// every language is complete and really translated
+$fa_only = '/[\x{067e}\x{0686}\x{0698}\x{06af}\x{06a9}\x{06cc}\x{06f0}-\x{06f9}]/u';
+$miss = array(); $wrong = array();
+foreach ( json_decode( file_get_contents( ALADDIN_PAYAB_SANAT_ASA_CORE_DIR . 'data/pages.json' ), true ) as $pg ) {
+	$id = \Aladdin\PayabSanatAsa\Languages::post_id( $pg['lang'], $pg['group'], true );
+	if ( ! $id ) { $miss[] = $pg['lang'] . ':' . $pg['group']; continue; }
+	if ( get_post_type( $id ) !== 'aladdin_page_' . $pg['lang'] || get_post_meta( $id, '_aladdin_payab_lang', true ) !== $pg['lang'] ) { $wrong[] = 'type ' . $pg['lang'] . ':' . $pg['group']; }
+	$text = wp_strip_all_tags( get_post_field( 'post_content', $id ) );
+	if ( 'fa' !== $pg['lang'] && preg_match( $fa_only, $text . ' ' . get_post_meta( $id, '_aladdin_payab_seo_title', true ) . ' ' . get_post_meta( $id, '_aladdin_payab_seo_description', true ) ) ) { $wrong[] = 'persian text in ' . $pg['lang'] . ':' . $pg['group']; }
+	if ( 'fa' === $pg['lang'] && ! preg_match( $fa_only, $text ) ) { $wrong[] = 'no persian in fa:' . $pg['group']; }
+	if ( 'en' === $pg['lang'] && ! preg_match( '/[A-Za-z]{4}/', $text ) ) { $wrong[] = 'no latin in en:' . $pg['group']; }
+	if ( 'ar' === $pg['lang'] && ! preg_match( '/[\x{0621}-\x{064a}]{4}/u', $text ) ) { $wrong[] = 'no arabic in ar:' . $pg['group']; }
+}
+ok( 'all 66 routes exist in the right post type', ! $miss && ! $wrong, implode( ',', array_merge( $miss, $wrong ) ) );
+ok( 'every page has Elementor data JSON + fallback content', (bool) array_reduce( get_posts( array( 'post_type' => \Aladdin\PayabSanatAsa\Post_Types::slugs(), 'posts_per_page' => -1, 'meta_key' => '_aladdin_payab_group', 'fields' => 'ids' ) ), function ( $c, $id ) { return $c && json_decode( get_post_meta( $id, '_elementor_data', true ), true ) && strlen( get_post_field( 'post_content', $id ) ) > 500; }, true ) );
 
 // re-run is a no-op and keeps the journal
 $r2 = Importer::run();
@@ -66,13 +83,13 @@ ok( 'reset restores approved text', false !== strpos( aladdin_payab_sanat_asa_ch
 // undo
 $ids_before = $j1['created'];
 $n = Importer::undo();
-ok( 'undo trashes all 72 items', 72 === $n, (string) $n );
-ok( 'undo restores front page options', (string) get_option( 'page_on_front' ) === (string) $front0 && get_option( 'show_on_front' ) === $show0, "$front0/$show0" );
+ok( 'undo trashes all 66 items', 66 === $n, (string) $n );
+ok( 'undo restores options (claim flag removed)', false === get_option( 'aladdin_payab_sanat_asa_claim_home', false ) && (string) get_option( 'page_on_front' ) === (string) $front0 && get_option( 'show_on_front' ) === $show0, "$front0/$show0" );
 ok( 'journal removed after undo', false === get_option( Importer::JOURNAL ) );
-ok( 'all journaled items are in Trash (recoverable), not deleted', 72 === count( array_filter( $ids_before, function ( $id ) { return 'trash' === get_post_status( $id ); } ) ) );
+ok( 'all journaled items are in Trash (recoverable), not deleted', 66 === count( array_filter( $ids_before, function ( $id ) { return 'trash' === get_post_status( $id ); } ) ) );
 // re-import after undo (slugs of trashed pages must not block)
 $r3 = Importer::run();
-ok( 're-import after undo works', 66 <= $r3['created'] && 0 === count( $r3['errors'] ), json_encode( $r3 ) );
+ok( 're-import after undo works', 66 === $r3['created'] && 0 === count( $r3['errors'] ), json_encode( $r3 ) );
 // post-import state is left in place for the HTTP tests
 echo "lifecycle: pass=$pass fail=$fail\n";
 exit( $fail ? 1 : 0 );

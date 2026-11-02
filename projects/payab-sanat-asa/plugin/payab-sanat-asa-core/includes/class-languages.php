@@ -26,7 +26,6 @@ class Languages {
 		add_filter( 'locale', array( __CLASS__, 'front_locale' ) );
 		add_action( 'save_post', array( __CLASS__, 'flush_index' ) );
 		add_action( 'trashed_post', array( __CLASS__, 'flush_index' ) );
-		add_action( 'template_redirect', array( __CLASS__, 'placeholder_redirect' ) );
 		add_action( 'pre_get_posts', array( __CLASS__, 'search_language' ) );
 		add_filter( 'display_post_states', array( __CLASS__, 'post_states' ), 10, 2 );
 		add_action( 'admin_init', array( __CLASS__, 'maybe_flush' ) );
@@ -64,33 +63,46 @@ class Languages {
 		self::$index = null;
 	}
 
-	/** Index of all translated posts, one query per request. */
+	/** @var array|null lang => group => post type (parallel to $index) */
+	private static $types = null;
+
+	/** Index of all translated posts (language page types, products), one query per request. */
 	public static function index() {
 		if ( null !== self::$index ) {
 			return self::$index;
 		}
 		global $wpdb;
 		self::$index = array( 'fa' => array(), 'en' => array(), 'ar' => array() );
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		self::$types = array( 'fa' => array(), 'en' => array(), 'ar' => array() );
+		$in = "'" . implode( "','", array_map( 'esc_sql', array_merge( Post_Types::slugs(), array( 'product', 'page' ) ) ) ) . "'";
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery,WordPress.DB.PreparedSQL
 		$rows = $wpdb->get_results(
-			"SELECT p.ID, l.meta_value AS lang, g.meta_value AS grp
+			"SELECT p.ID, p.post_type, l.meta_value AS lang, g.meta_value AS grp
 			 FROM {$wpdb->posts} p
 			 JOIN {$wpdb->postmeta} l ON l.post_id = p.ID AND l.meta_key = '" . self::META_LANG . "'
 			 JOIN {$wpdb->postmeta} g ON g.post_id = p.ID AND g.meta_key = '" . self::META_GROUP . "'
-			 WHERE p.post_status IN ('publish','private','draft') AND p.post_type IN ('page','product')
+			 WHERE p.post_status IN ('publish','private','draft') AND p.post_type IN ($in)
 			 ORDER BY p.ID ASC"
 		);
 		foreach ( (array) $rows as $r ) {
 			if ( isset( self::$index[ $r->lang ] ) && ! isset( self::$index[ $r->lang ][ $r->grp ] ) ) {
 				self::$index[ $r->lang ][ $r->grp ] = (int) $r->ID;
+				self::$types[ $r->lang ][ $r->grp ] = $r->post_type;
 			}
 		}
 		return self::$index;
 	}
 
-	public static function post_id( $lang, $group ) {
+	/** Post id of a route; $cpt_only limits the answer to the language page types (not products). */
+	public static function post_id( $lang, $group, $cpt_only = false ) {
 		$idx = self::index();
-		return isset( $idx[ $lang ][ $group ] ) ? $idx[ $lang ][ $group ] : 0;
+		if ( ! isset( $idx[ $lang ][ $group ] ) ) {
+			return 0;
+		}
+		if ( $cpt_only && Post_Types::slug_for( $lang ) !== self::$types[ $lang ][ $group ] ) {
+			return 0;
+		}
+		return $idx[ $lang ][ $group ];
 	}
 
 	public static function current_lang( $lang ) {
@@ -140,26 +152,13 @@ class Languages {
 		return $url;
 	}
 
-	/** Placeholder parents (articles, product) are not real pages: send visitors to the matching list. */
-	public static function placeholder_redirect() {
-		if ( ! is_singular( 'page' ) || ! get_post_meta( get_queried_object_id(), '_aladdin_payab_placeholder', true ) ) {
-			return;
-		}
-		$lang   = get_post_meta( get_queried_object_id(), self::META_LANG, true );
-		$target = get_post_meta( get_queried_object_id(), '_aladdin_payab_redirect', true );
-		if ( $lang && $target ) {
-			wp_safe_redirect( aladdin_payab_sanat_asa_route_url( $lang, $target ), 302 );
-			exit;
-		}
-	}
-
 	/** Search shows results of the current language only. */
 	public static function search_language( $q ) {
 		if ( is_admin() || ! $q->is_main_query() || ! $q->is_search() ) {
 			return;
 		}
 		$lang = apply_filters( 'aladdin_payab_sanat_asa_current_lang', 'fa' );
-		$q->set( 'post_type', array( 'page', 'post', 'product' ) );
+		$q->set( 'post_type', array( Post_Types::slug_for( $lang ), 'product' ) );
 		$q->set(
 			'meta_query',
 			array(

@@ -74,7 +74,7 @@ function aladdin_payab_sanat_asa_chrome_html( $part, $lang = '' ) {
 	include ALADDIN_PAYAB_SANAT_ASA_DIR . '/template-parts/chrome-' . $part . '.php';
 	$html = (string) ob_get_clean();
 
-	$is_home = is_front_page() || ( is_page() && '' === (string) get_post_meta( get_queried_object_id(), '_aladdin_payab_group', true ) );
+	$is_home = is_front_page() || ( is_singular() && metadata_exists( 'post', get_queried_object_id(), '_aladdin_payab_group' ) && '' === (string) get_post_meta( get_queried_object_id(), '_aladdin_payab_group', true ) );
 	$home    = aladdin_payab_sanat_asa_route_url( $lang, '' );
 	// In-page anchors that only exist on the home page point to the language home elsewhere.
 	if ( ! $is_home ) {

@@ -13,6 +13,46 @@ TEXT_TAGS = {'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'ul', 'ol', 'blockquote', 
 OPAQUE = {'table', 'form', 'details', 'dialog', 'iframe', 'select', 'textarea', 'svg'}   # always one leaf (raw inner markup control)
 INLINE_OK = {'a', 'span', 'em', 'strong', 'b', 'i', 'small', 'br', 'svg', 'img', 'button', 'sup', 'sub', 'mark', 'time', 'abbr', 'label', 'input', 'g', 'path'}
 
+FA_ONLY = re.compile(r'[\u067e\u0686\u0698\u06af\u06a9\u06cc\u06f0-\u06f9]')
+TOPICS = {   # Persian topic shown after "Quick answer:" in the en/ar pages -> translation
+    'en': {'پایاب صنعت آسا': 'Payab Sanat Asa', 'آموزش تجهیزات توانبخشی': 'rehabilitation equipment guides', 'بالابر بیمار برقی': 'electric patient lifts',
+           'انواع بالابر بیمار': 'types of patient lifts', 'بالابر بیمار دستی هیدرولیک': 'manual hydraulic patient lifts', 'جلیقه انتقال بیمار': 'patient transfer slings',
+           'تماس با پایاب صنعت آسا': 'contacting Payab Sanat Asa', 'عکس بالابر بیمار': 'patient lift photos', 'مدارک و گواهی پایاب صنعت': 'Payab Sanat documents and certificates',
+           'خرید بالابر بیمار برقی': 'buying an electric patient lift', 'خرید بالابر بیمار دستی': 'buying a manual patient lift', 'راهنمای خرید بالابر بیمار': 'patient lift buying guide',
+           'تجهیزات انتقال بیمار': 'patient transfer equipment', 'آموزش کار با بالابر بیمار': 'patient lift training'},
+    'ar': {'پایاب صنعت آسا': 'باياب صنعت آسا', 'آموزش تجهیزات توانبخشی': 'أدلة معدات التأهيل', 'بالابر بیمار برقی': 'رافعة المريض الكهربائية',
+           'انواع بالابر بیمار': 'أنواع رافعات المرضى', 'بالابر بیمار دستی هیدرولیک': 'رافعة المريض الهيدروليكية اليدوية', 'جلیقه انتقال بیمار': 'حمالة نقل المريض',
+           'تماس با پایاب صنعت آسا': 'التواصل مع باياب صنعت آسا', 'عکس بالابر بیمار': 'صور رافعة المريض', 'مدارک و گواهی پایاب صنعت': 'وثائق وشهادات باياب صنعت',
+           'خرید بالابر بیمار برقی': 'شراء رافعة مريض كهربائية', 'خرید بالابر بیمار دستی': 'شراء رافعة مريض يدوية', 'راهنمای خرید بالابر بیمار': 'دليل شراء رافعة المريض',
+           'تجهیزات انتقال بیمار': 'معدات نقل المرضى', 'آموزش کار با بالابر بیمار': 'تدريب على استخدام رافعة المريض'},
+}
+SUFFIX = {'en': {' — نمای مفهومی محصول': ' — conceptual product view'}, 'ar': {' — نمای مفهومی محصول': ' — عرض مفاهيمي للمنتج'}}
+LEFT = []      # strings still containing Persian-only letters after localisation (reported by the build)
+
+def localize(lang, text):
+    """Fix source leftovers: Persian words inside en/ar pages (see report P-06)."""
+    if lang == 'fa' or not text or not FA_ONLY.search(text):
+        return text
+    for k, v in SUFFIX[lang].items():
+        text = text.replace(k, v)
+    m = re.match(r'^(.*?:\s*)(.+)$', text)
+    if m and m.group(2).strip() in TOPICS[lang]:
+        text = m.group(1) + TOPICS[lang][m.group(2).strip()]
+    if lang == 'ar':   # Persian letters/digits typed inside Arabic text -> Arabic letters, Western digits
+        text = text.translate({0x06cc: 0x064a, 0x06a9: 0x0643, **{0x06f0 + i: 0x30 + i for i in range(10)}})
+    if FA_ONLY.search(text):
+        LEFT.append((lang, text[:80]))
+    return text
+
+def localize_tree(el, lang):
+    for e in el.iter():
+        if not isinstance(e.tag, str):
+            continue
+        if e.text: e.text = localize(lang, e.text)
+        if e.tail: e.tail = localize(lang, e.tail)
+        for a in ('alt', 'aria-label', 'title', 'placeholder'):
+            if a in e.attrib: e.set(a, localize(lang, e.get(a)))
+
 class Ctx:
     def __init__(self, page, urlmap):
         self.page = page; self.urlmap = urlmap; self.n = 0; self.ids = set()
@@ -87,7 +127,8 @@ def container_settings(el, ctx):
     s = {'content_width': 'full', 'flex_direction': 'column', 'flex_gap': {'column': '0', 'row': '0', 'isLinked': True, 'unit': 'px', 'size': 0},
          'padding': {'unit': 'px', 'top': '0', 'right': '0', 'bottom': '0', 'left': '0', 'isLinked': True},
          'margin': {'unit': 'px', 'top': '0', 'right': '0', 'bottom': '0', 'left': '0', 'isLinked': True}}
-    if el.get('class'): s['_css_classes'] = el.get('class')
+    # `aladdin-pz` = "plain block": the approved CSS controls this container (see elementor-bridge.css); remove it to use Elementor layout controls.
+    s['_css_classes'] = ((el.get('class') or '') + ' aladdin-pz').strip()
     if el.get('id'): s['_element_id'] = el.get('id')
     if el.tag in ('header', 'footer', 'article', 'aside', 'section', 'nav', 'main', 'div'): s['html_tag'] = el.tag
     attrs = []
@@ -103,7 +144,7 @@ def widget(wt, settings, ctx):
 def leaf(el, ctx):
     t = el.tag
     if t in TEXT_TAGS:
-        return widget('text-editor', {'editor': outer(el), 'aladdin_raw': 'yes'}, ctx)
+        return widget('aladdin_payab_sanat_asa_text', {'editor': outer(el)}, ctx)
     # generic element widget (plugin): exact tag/class/attrs, link, image, inner markup
     cls = el.get('class', '')
     attrs = [(k, v) for k, v in el.attrib.items() if k not in ('class', 'id', 'href', 'alt') and not (k == 'src' and t == 'img')]
@@ -126,11 +167,11 @@ def convert(el, ctx):
     kids = []
     # mixed content: bare text between block children becomes a text-editor
     if (el.text or '').strip():
-        kids.append(widget('text-editor', {'editor': '<span>%s</span>' % html.escape(el.text.strip()), 'aladdin_raw': 'yes'}, ctx))
+        kids.append(widget('aladdin_payab_sanat_asa_text', {'editor': '<span>%s</span>' % html.escape(el.text.strip())}, ctx))
     for c in el:
         kids.extend(convert(c, ctx))
         if (c.tail or '').strip():
-            kids.append(widget('text-editor', {'editor': '<span>%s</span>' % html.escape(c.tail.strip()), 'aladdin_raw': 'yes'}, ctx))
+            kids.append(widget('aladdin_payab_sanat_asa_text', {'editor': '<span>%s</span>' % html.escape(c.tail.strip())}, ctx))
     return [{'id': ctx.eid(), 'elType': 'container', 'isInner': False, 'settings': container_settings(el, ctx), 'elements': kids}]
 
 def build_urlmap(src, pages):
@@ -155,17 +196,19 @@ if __name__ == '__main__':
         main = doc.xpath('//main')[0]
         ctx = Ctx(p, urlmap)
         fix_tree(main, ctx)
+        localize_tree(main, p['lang'])
         elements = []
         for c in main:
             elements.extend(convert(c, ctx))
         head = doc.xpath('//head')[0]
-        title = (head.findtext('title') or '').strip()
-        desc = ''.join(head.xpath('./meta[@name="description"]/@content'))
+        title = localize(p['lang'], (head.findtext('title') or '').strip())
+        desc = localize(p['lang'], ''.join(head.xpath('./meta[@name="description"]/@content')))
         ld = [etree.tostring(s, encoding='unicode', method='text') for s in head.xpath('.//script[@type="application/ld+json"]')]
         out.append({'lang': p['lang'], 'group': p['group'], 'path': p['path'], 'title': title, 'description': desc,
                     'h1': ''.join(main.xpath('.//h1[1]//text()')).strip(), 'jsonld': ld,
                     'elementor': elements, 'fallback': inner(main), 'main_attrs': dict(main.attrib),
                     'widgets': ctx.n})
+    print('Persian-only letters left in en/ar content:', len(LEFT), LEFT[:5])
     d = os.path.join(plugin, 'data'); os.makedirs(d, exist_ok=True)
     json.dump(out, open(os.path.join(d, 'pages.json'), 'w', encoding='utf8'), ensure_ascii=False)
     print(len(out), 'pages', sum(o['widgets'] for o in out), 'elements', os.path.getsize(os.path.join(d, 'pages.json')) // 1024, 'KB')

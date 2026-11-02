@@ -211,7 +211,44 @@ class Settings {
 			printf( '<tr><td>%s</td><td>%s</td></tr>', esc_html( $k ), esc_html( (string) $v ) );
 		}
 		echo '</tbody></table></div>';
+		self::matrix_table();
 		echo '<div class="card" style="max-width:none;display:flex;gap:18px;align-items:center"><img src="' . esc_url( $logo ) . '" alt="Aladdin Theme" style="height:48px"/><div><h2 style="margin:0">علاءالدین تم (Aladdin Theme)</h2><p>' . esc_html__( 'Theme and companion plugin for Payab Sanat Asa. Version', 'payab-sanat-asa-core' ) . ' ' . esc_html( ALADDIN_PAYAB_SANAT_ASA_CORE_VERSION ) . '</p></div></div>';
+	}
+
+	/** Languages x routes: which language pages exist, with edit links, and a button that creates the missing ones. */
+	private static function matrix_table() {
+		$m       = Importer::matrix();
+		$missing = 0;
+		$totals  = array( 'fa' => 0, 'en' => 0, 'ar' => 0 );
+		echo '<div class="card" style="max-width:none"><h2>' . esc_html__( 'Languages and pages', 'payab-sanat-asa-core' ) . '</h2>';
+		echo '<table class="widefat striped"><thead><tr><th>' . esc_html__( 'Route', 'payab-sanat-asa-core' ) . '</th>';
+		foreach ( Post_Types::types() as $l => $t ) {
+			printf( '<th>%s (%s)</th>', esc_html( $t['label'] ), esc_html( strtoupper( $l ) ) );
+		}
+		echo '</tr></thead><tbody>';
+		foreach ( $m as $group => $langs ) {
+			echo '<tr><td><code>' . esc_html( '' === $group ? '/' : $group ) . '</code></td>';
+			foreach ( array( 'fa', 'en', 'ar' ) as $l ) {
+				$id = isset( $langs[ $l ]['id'] ) ? (int) $langs[ $l ]['id'] : 0;
+				if ( $id ) {
+					$totals[ $l ]++;
+					printf( '<td>✔ <a href="%s">%s</a></td>', esc_url( get_edit_post_link( $id ) ), esc_html( wp_trim_words( get_the_title( $id ), 6, '…' ) ) );
+				} else {
+					$missing++;
+					echo '<td style="color:#b32d2e">✖ ' . esc_html__( 'missing', 'payab-sanat-asa-core' ) . '</td>';
+				}
+			}
+			echo '</tr>';
+		}
+		printf( '</tbody><tfoot><tr><th>%s</th><th>%d</th><th>%d</th><th>%d</th></tr></tfoot></table>', esc_html__( 'Total', 'payab-sanat-asa-core' ), (int) $totals['fa'], (int) $totals['en'], (int) $totals['ar'] );
+		if ( $missing ) {
+			echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" style="margin-top:12px"><input type="hidden" name="action" value="aladdin_payab_import"/><input type="hidden" name="confirm" value="1"/>';
+			wp_nonce_field( 'aladdin_payab_import' );
+			/* translators: %d: number of missing pages */
+			submit_button( sprintf( __( 'Create the %d missing pages', 'payab-sanat-asa-core' ), $missing ), 'primary', 'submit', false );
+			echo '</form>';
+		}
+		echo '</div>';
 	}
 
 	private static function tab_general() {
@@ -283,7 +320,7 @@ class Settings {
 
 	private static function tab_import() {
 		$j = Importer::journal();
-		echo '<p>' . esc_html__( 'Creates the 66 pages (22 routes × 3 languages) as Elementor pages with a plain-HTML fallback, and the 3 products × 3 languages. Existing pages are never overwritten; every created item is journaled and can be moved to the Trash with Undo. The Persian home becomes the static front page.', 'payab-sanat-asa-core' ) . '</p>';
+		echo '<p>' . esc_html__( 'Creates the 66 language pages (22 routes × 3 languages, a separate post type for each language) as Elementor pages with a plain-HTML fallback; products go to WooCommerce when it is active. Only missing pages are created. Existing pages are never overwritten; every created item is journaled and can be moved to the Trash with Undo. The Persian home takes the front page on a fresh site.', 'payab-sanat-asa-core' ) . '</p>';
 		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"><input type="hidden" name="action" value="aladdin_payab_import"/>';
 		wp_nonce_field( 'aladdin_payab_import' );
 		echo '<p><label><input type="checkbox" name="confirm" value="1"/> ' . esc_html__( 'I understand this creates pages and may set the front page.', 'payab-sanat-asa-core' ) . '</label></p>';

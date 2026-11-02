@@ -54,6 +54,12 @@ tp = os.path.join(theme, 'template-parts'); os.makedirs(tp, exist_ok=True)
 for name in ('pre', 'post'):
     open(os.path.join(tp, 'chrome-%s.php' % name), 'w', encoding='utf8').write(hdr + php(name))
 
+# source leftovers: the en/ar mobile drawer label is Persian in the delivered HTML
+FIX = {'en': {'ناوبری موبایل': 'Mobile navigation'}, 'ar': {'ناوبری موبایل': 'قائمة الجوال'}}
+for lang, m in FIX.items():
+    for name in ('pre', 'post'):
+        parts[lang][name] = (parts[lang][name][0], [(k, m.get(v, v)) if k in ('t', 'a') else (k, v) for k, v in parts[lang][name][1]])
+
 # string tables: per language, one list per part; urls stored as route keys 'lang:group' or raw
 table = {}
 for lang in LANGS:

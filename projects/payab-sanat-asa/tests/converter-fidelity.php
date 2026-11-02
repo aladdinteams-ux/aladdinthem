@@ -8,11 +8,13 @@
  * Run: ALADDIN_WP_LOAD=/path/wp-load.php php tests/converter-fidelity.php SRC_DIR
  */
 namespace Elementor {
-	class Controls_Manager { const TEXT = 'text'; const SELECT = 'select'; const MEDIA = 'media'; const TEXTAREA = 'textarea'; const TAB_LAYOUT = 'layout'; }
+	class Controls_Manager { const TEXT = 'text'; const SELECT = 'select'; const MEDIA = 'media'; const TEXTAREA = 'textarea'; const TAB_LAYOUT = 'layout'; const TAB_ADVANCED = 'adv'; const WYSIWYG = 'w'; }
 	abstract class Widget_Base {
 		public $s = array();
 		public function __construct() {}
 		public function get_settings_for_display() { return $this->s; }
+		public function before_render() {}
+		public function after_render() {}
 		public function start_controls_section() {}
 		public function end_controls_section() {}
 		public function add_control() {}
@@ -23,17 +25,17 @@ namespace {
 	$_SERVER['HTTP_HOST'] = getenv( 'ALADDIN_HOST' ) ?: 'localhost:8091';
 	require getenv( 'ALADDIN_WP_LOAD' );
 	require_once ALADDIN_PAYAB_SANAT_ASA_CORE_DIR . 'includes/elementor/class-elementor.php';
+	require_once ALADDIN_PAYAB_SANAT_ASA_CORE_DIR . 'includes/elementor/class-raw-widget.php';
 	require_once ALADDIN_PAYAB_SANAT_ASA_CORE_DIR . 'includes/elementor/class-element-widget.php';
+	require_once ALADDIN_PAYAB_SANAT_ASA_CORE_DIR . 'includes/elementor/class-text-widget.php';
 
 	$src   = $argv[1];
 	$pages = json_decode( file_get_contents( ALADDIN_PAYAB_SANAT_ASA_CORE_DIR . 'data/pages.json' ), true );
 
 	function render_el( $e ) {
 		if ( 'widget' === $e['elType'] ) {
-			if ( 'text-editor' === $e['widgetType'] ) {
-				return $e['settings']['editor'];
-			}
-			$w    = new \Aladdin\PayabSanatAsa\Element_Widget();
+			$cls  = 'aladdin_payab_sanat_asa_text' === $e['widgetType'] ? '\Aladdin\PayabSanatAsa\Text_Widget' : '\Aladdin\PayabSanatAsa\Element_Widget';
+			$w    = new $cls();
 			$w->s = $e['settings'];
 			ob_start();
 			$m = new ReflectionMethod( $w, 'render' );
@@ -72,7 +74,8 @@ namespace {
 			$at = array();
 			foreach ( $n->attributes as $a ) {
 				$v = $a->value;
-				if ( 'class' === $a->name ) { $v = implode( ' ', preg_split( '/\s+/', trim( $v ) ) ); }
+				if ( 'class' === $a->name ) { $v = implode( ' ', array_values( array_diff( preg_split( '/\s+/', trim( $v ) ), array( 'aladdin-pz' ) ) ) ); }
+				if ( 'class' === $a->name && '' === $v ) { continue; }
 				$at[ strtolower( $a->name ) ] = $v;
 			}
 			ksort( $at );

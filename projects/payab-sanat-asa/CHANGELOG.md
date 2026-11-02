@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.0 — 2026-11-04
+- Existing-site takeover: conflicts list, `claim_home` option/setting, optional trashing of conflicting old pages, Undo restores them (status kept).
+
 ## 1.2.2 — 2026-11-04
 - Fix doubled header/footer links: `Menus::ensure()` re-added items to an existing menu; now it never does, `Menus::dedupe()` cleans existing duplicates (automatic migration + "Check menus" button), and the theme prints each title+URL once.
 

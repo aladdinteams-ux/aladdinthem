@@ -95,3 +95,8 @@ body.rtl .ap-wrap { margin-inline: 20px auto; }
 .ap-field-row select { border-radius: 10px; max-width: 220px; }
 @media (max-width: 782px) { .ap-hero { flex-wrap: wrap; } .ap-hero-meta { margin-inline-start: 0; } .ap-table th { position: static; } .ap-wrap { margin-inline: 10px; } }
 @media (prefers-reduced-motion: reduce) { .ap-wrap * { transition: none !important; } }
+
+.ap-callout { padding: 14px 16px; margin-bottom: 12px; border-radius: 12px; background: #fff8e8; border: 1px solid #f2d9a1; color: #6b4a00; }
+.ap-callout p { margin: 6px 0; }
+.ap-conflicts { margin: 6px 0 0; padding-inline-start: 18px; list-style: disc; }
+.ap-conflicts li { margin: 3px 0; }

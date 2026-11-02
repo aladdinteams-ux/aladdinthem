@@ -79,6 +79,7 @@ class Settings {
 			$new['header_tpl'][ $l ] = isset( $_POST['header_tpl'][ $l ] ) ? absint( $_POST['header_tpl'][ $l ] ) : 0; // phpcs:ignore WordPress.Security.NonceVerification
 			$new['footer_tpl'][ $l ] = isset( $_POST['footer_tpl'][ $l ] ) ? absint( $_POST['footer_tpl'][ $l ] ) : 0; // phpcs:ignore WordPress.Security.NonceVerification
 		}
+		update_option( 'aladdin_payab_sanat_asa_claim_home', isset( $_POST['claim_home'] ) ? 'yes' : 'no' ); // phpcs:ignore WordPress.Security.NonceVerification
 		update_option( self::OPT, $new, false );
 		update_option( 'aladdin_payab_sanat_asa_remove_data_on_uninstall', isset( $_POST['remove_data'] ) ? 1 : 0, false ); // phpcs:ignore WordPress.Security.NonceVerification
 		self::back( 'general', 'saved' );
@@ -382,6 +383,9 @@ class Settings {
 		printf( '<label class="ap-choice-item%s"><input type="radio" name="render_mode" value="elementor" %s/><strong>%s</strong><span>%s</span></label>', 'elementor' === $rm ? ' is-on' : '', checked( 'elementor', $rm, false ), esc_html__( 'Elementor output', 'payab-sanat-asa-core' ), esc_html__( 'Edits made in Elementor appear on the site (requires Elementor; check the look after switching).', 'payab-sanat-asa-core' ) );
 		echo '</div>';
 		self::card_close();
+		self::card_open( __( 'Front page', 'payab-sanat-asa-core' ) );
+		printf( '<label class="ap-switch"><input type="checkbox" name="claim_home" value="yes" %s/><i></i><span><strong>%s</strong>%s</span></label>', checked( 'yes' === get_option( 'aladdin_payab_sanat_asa_claim_home', 'yes' ), true, false ), esc_html__( 'Persian home on the site root (/)', 'payab-sanat-asa-core' ), esc_html__( 'The Persian home page of the design answers on /, even if another static front page was set before. Off: it lives at /payab-home/ and your own front page stays.', 'payab-sanat-asa-core' ) );
+		self::card_close();
 		self::card_open( __( 'Shop and SEO', 'payab-sanat-asa-core' ) );
 		printf( '<label class="ap-switch"><input type="checkbox" name="catalog_mode" value="yes" %s/><i></i><span><strong>%s</strong>%s</span></label>', checked( ! isset( $o['catalog_mode'] ) || 'no' !== $o['catalog_mode'], true, false ), esc_html__( 'Catalog mode', 'payab-sanat-asa-core' ), esc_html__( 'Hide prices and block purchasing/cart/checkout (WooCommerce).', 'payab-sanat-asa-core' ) );
 		printf( '<label class="ap-switch"><input type="checkbox" name="seo" value="yes" %s/><i></i><span><strong>%s</strong>%s %s</span></label>', checked( ! isset( $o['seo'] ) || 'no' !== $o['seo'], true, false ), esc_html__( 'SEO tags', 'payab-sanat-asa-core' ), esc_html__( 'Print description, canonical, hreflang, Open Graph and Schema.org.', 'payab-sanat-asa-core' ), esc_html__( 'Automatically off when Yoast, Rank Math, SEOPress/TSF or AIOSEO is active.', 'payab-sanat-asa-core' ) );
@@ -460,6 +464,26 @@ class Settings {
 		self::card_open( __( 'Import pages and products', 'payab-sanat-asa-core' ), __( 'Creates the 66 language pages (22 routes × 3 languages, a separate post type for each language) as Elementor pages with a plain-HTML fallback; products go to WooCommerce when it is active. Only missing pages are created. Existing pages are never overwritten; every created item is journaled and can be moved to the Trash with Undo. The Persian home takes the front page on a fresh site.', 'payab-sanat-asa-core' ) );
 		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"><input type="hidden" name="action" value="aladdin_payab_import"/>';
 		wp_nonce_field( 'aladdin_payab_import' );
+		$old_front = Importer::old_front_page();
+		$conf      = Importer::conflicts();
+		if ( $old_front || $conf ) {
+			echo '<div class="ap-callout"><strong>' . esc_html__( 'This site already has content from another theme', 'payab-sanat-asa-core' ) . '</strong>';
+			if ( $old_front ) {
+				echo '<p>' . esc_html( sprintf( /* translators: %s: page title */ __( 'Current static front page: "%s". It stays untouched unless you tick the box below.', 'payab-sanat-asa-core' ), get_the_title( $old_front ) ) ) . '</p>';
+			}
+			if ( $conf ) {
+				echo '<p>' . esc_html__( 'These old pages use the same address as a design page. The design page is shown on that address; the old page is not deleted.', 'payab-sanat-asa-core' ) . '</p><ul class="ap-conflicts">';
+				foreach ( $conf as $c ) {
+					printf( '<li><code>%s</code> <a href="%s">%s</a> <small>(%s)</small></li>', esc_html( $c['path'] ), esc_url( get_edit_post_link( $c['id'] ) ), esc_html( $c['title'] ), esc_html( $c['type'] . ' · ' . $c['status'] ) );
+				}
+				echo '</ul>';
+			}
+			echo '</div>';
+			echo '<label class="ap-switch"><input type="checkbox" name="claim_home" value="1" checked="checked"/><i></i><span><strong>' . esc_html__( 'Use the Persian design home as the front page (/)', 'payab-sanat-asa-core' ) . '</strong>' . esc_html__( 'Your previous front page setting is saved and restored by Undo.', 'payab-sanat-asa-core' ) . '</span></label>';
+			if ( $conf ) {
+				echo '<label class="ap-switch"><input type="checkbox" name="trash_conflicts" value="1"/><i></i><span><strong>' . esc_html__( 'Move the old pages listed above to the Trash', 'payab-sanat-asa-core' ) . '</strong>' . esc_html__( 'Optional and recoverable: Undo takes them out of the Trash again.', 'payab-sanat-asa-core' ) . '</span></label>';
+			}
+		}
 		echo '<label class="ap-switch"><input type="checkbox" name="confirm" value="1"/><i></i><span><strong>' . esc_html__( 'Confirm', 'payab-sanat-asa-core' ) . '</strong>' . esc_html__( 'I understand this creates pages and may set the front page.', 'payab-sanat-asa-core' ) . '</span></label>';
 		submit_button( __( 'Import pages and products', 'payab-sanat-asa-core' ), 'primary', 'submit', false );
 		echo '</form>';

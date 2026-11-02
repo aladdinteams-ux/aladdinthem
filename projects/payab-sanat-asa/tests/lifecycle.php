@@ -12,8 +12,11 @@ $pass = 0; $fail = 0;
 function ok( $name, $cond, $detail = '' ) { global $pass, $fail; $cond ? $pass++ : $fail++; echo ( $cond ? 'PASS ' : 'FAIL ' ), $name, $detail ? " — $detail" : '', "\n"; }
 function count_posts_mine() { global $wpdb; return (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->postmeta} m JOIN {$wpdb->posts} p ON p.ID=m.post_id WHERE m.meta_key='_aladdin_payab_group' AND p.post_status IN ('publish','draft')" ); }
 
-// start clean: undo any previous journal
+// start clean: undo any previous journal and remove leftovers of earlier runs of this test
 Importer::undo();
+foreach ( get_posts( array( 'post_type' => 'page', 'post_status' => 'any', 'posts_per_page' => -1, 'title' => 'OLD HOME', 'fields' => 'ids' ) ) as $x ) { wp_delete_post( $x, true ); }
+foreach ( get_posts( array( 'post_type' => 'page', 'post_status' => 'any', 'posts_per_page' => -1, 'title' => 'OLD CONTACT', 'fields' => 'ids' ) ) as $x ) { wp_delete_post( $x, true ); }
+update_option( 'show_on_front', 'posts' ); update_option( 'page_on_front', 0 );
 ok( 'clean state: no imported pages', 0 === count_posts_mine() );
 delete_option( 'aladdin_payab_sanat_asa_claim_home' );
 $front0 = get_option( 'page_on_front' ); $show0 = get_option( 'show_on_front' );
@@ -121,5 +124,23 @@ ok( 'all journaled items are in Trash (recoverable), not deleted', 66 === count(
 $r3 = Importer::run();
 ok( 're-import after undo works', 66 === $r3['created'] && 0 === count( $r3['errors'] ), json_encode( $r3 ) );
 // post-import state is left in place for the HTTP tests
+// ---- existing site that had another theme: old front page + old pages on the same URLs
+\Aladdin\PayabSanatAsa\Importer::undo();
+$old_home = wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'OLD HOME', 'post_name' => 'old-home', 'post_content' => 'OLD-THEME-HOME' ) );
+$old_contact = wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => 'OLD CONTACT', 'post_name' => 'contact-us', 'post_content' => 'OLD-THEME-CONTACT' ) );
+update_option( 'show_on_front', 'page' ); update_option( 'page_on_front', $old_home );
+delete_option( 'aladdin_payab_sanat_asa_claim_home' );
+ok( 'old site is detected as not fresh', ! \Aladdin\PayabSanatAsa\Importer::is_fresh_site() );
+$cf = wp_list_pluck( \Aladdin\PayabSanatAsa\Importer::conflicts(), 'id' );
+ok( 'conflict list contains the old contact page', in_array( $old_contact, $cf, true ) && \Aladdin\PayabSanatAsa\Importer::old_front_page() === $old_home );
+$r4 = \Aladdin\PayabSanatAsa\Importer::run();
+ok( 'plain import keeps the old front page (claim = no)', 'no' === get_option( 'aladdin_payab_sanat_asa_claim_home' ) && (int) get_option( 'page_on_front' ) === $old_home && 66 === $r4['created'] );
+\Aladdin\PayabSanatAsa\Importer::undo();
+$r5 = \Aladdin\PayabSanatAsa\Importer::run( array( 'claim' => true, 'trash' => true ) );
+ok( 'takeover: claim home = yes, old conflicting page trashed, old front page option untouched', 'yes' === get_option( 'aladdin_payab_sanat_asa_claim_home' ) && 'trash' === get_post_status( $old_contact ) && 'publish' === get_post_status( $old_home ) );
+\Aladdin\PayabSanatAsa\Importer::undo();
+ok( 'undo restores old page from Trash and the claim option', 'publish' === get_post_status( $old_contact ) && false === get_option( 'aladdin_payab_sanat_asa_claim_home', false ) && (int) get_option( 'page_on_front' ) === $old_home );
+\Aladdin\PayabSanatAsa\Importer::run( array( 'claim' => true ) ); // leave the takeover state for the HTTP checks
+update_option( 'show_on_front', 'page' ); update_option( 'page_on_front', $old_home );
 echo "lifecycle: pass=$pass fail=$fail\n";
 exit( $fail ? 1 : 0 );

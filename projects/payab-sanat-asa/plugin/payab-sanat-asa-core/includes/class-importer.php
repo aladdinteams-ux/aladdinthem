@@ -81,6 +81,30 @@ class Importer {
 		return $q ? (int) $q[0] : 0;
 	}
 
+	/** Old (non-Payab) pages/posts that sit on the same URL as one of our routes, and the old static front page. */
+	public static function conflicts() {
+		$out  = array();
+		$seen = array();
+		foreach ( self::pages() as $p ) {
+			if ( '' === $p['group'] && 'fa' === $p['lang'] ) {
+				continue;
+			}
+			$path = ( 'fa' === $p['lang'] ? '' : $p['lang'] . '/' ) . $p['group'];
+			$old  = get_page_by_path( $path, OBJECT, array( 'page', 'post' ) );
+			if ( $old && ! isset( $seen[ $old->ID ] ) && ! get_post_meta( $old->ID, Languages::META_GROUP, true ) && 'trash' !== $old->post_status ) {
+				$seen[ $old->ID ] = 1;
+				$out[] = array( 'id' => (int) $old->ID, 'title' => get_the_title( $old ), 'path' => '/' . $path . '/', 'type' => $old->post_type, 'status' => $old->post_status );
+			}
+		}
+		return $out;
+	}
+
+	/** Static front page that is not ours (0 = none). */
+	public static function old_front_page() {
+		$id = ( 'page' === get_option( 'show_on_front' ) ) ? (int) get_option( 'page_on_front' ) : 0;
+		return ( $id && ! get_post_meta( $id, Languages::META_GROUP, true ) ) ? $id : 0;
+	}
+
 	/** Status matrix for the admin: group => lang => post id (0 = missing). */
 	public static function matrix() {
 		$groups = array();
@@ -91,7 +115,7 @@ class Importer {
 	}
 
 	/** Run the import (creates only what is missing). Returns array( created => n, skipped => n, errors => [] ). */
-	public static function run() {
+	public static function run( $args = array() ) {
 		Migrations::pages_to_cpt();
 		Post_Types::register();
 		Post_Types::elementor_support();
@@ -149,13 +173,24 @@ class Importer {
 			$created[] = (int) $id;
 		}
 		// The Persian home takes "/" on a fresh site (or when no static front page is set); otherwise it lives at /payab-home/.
-		if ( $created && false === get_option( 'aladdin_payab_sanat_asa_claim_home', false ) ) {
+		if ( ! empty( $args['claim'] ) ) {
+			$opts['aladdin_payab_sanat_asa_claim_home'] = get_option( 'aladdin_payab_sanat_asa_claim_home', null );
+			update_option( 'aladdin_payab_sanat_asa_claim_home', 'yes' );
+		} elseif ( $created && false === get_option( 'aladdin_payab_sanat_asa_claim_home', false ) ) {
 			$claim = ( $fresh || 'page' !== get_option( 'show_on_front' ) || ! (int) get_option( 'page_on_front' ) ) ? 'yes' : 'no';
 			add_option( 'aladdin_payab_sanat_asa_claim_home', $claim, '', false );
 			$opts['aladdin_payab_sanat_asa_claim_home'] = null;      // null = delete on undo.
 		}
+		$trashed = array();
+		if ( ! empty( $args['trash'] ) ) {
+			foreach ( self::conflicts() as $c ) {
+				if ( wp_trash_post( $c['id'] ) ) {
+					$trashed[] = $c['id'];
+				}
+			}
+		}
 		Languages::flush_index();
-		if ( $created ) {
+		if ( $created || $trashed || ! empty( $args['claim'] ) ) {
 			$old = isset( $prev['created'] ) ? $prev['created'] : array();
 			update_option(
 				self::JOURNAL,
@@ -167,6 +202,7 @@ class Importer {
 					'created' => array_values( array_unique( array_merge( $old, $created ) ) ),
 					'options' => isset( $prev['options'] ) && $prev['options'] ? array_merge( $opts, $prev['options'] ) : $opts,
 					'woo'     => $woo,
+					'trashed' => array_values( array_unique( array_merge( isset( $prev['trashed'] ) ? $prev['trashed'] : array(), $trashed ) ) ),
 				)
 				),
 				false
@@ -231,6 +267,13 @@ class Importer {
 			}
 		}
 		Menus::undo( $j );
+		foreach ( (array) ( $j['trashed'] ?? array() ) as $tid ) {
+			if ( 'trash' === get_post_status( $tid ) ) {
+				$was = get_post_meta( $tid, '_wp_trash_meta_status', true );
+				wp_untrash_post( $tid );                  // WordPress restores as draft; put the old status back.
+				wp_update_post( array( 'ID' => $tid, 'post_status' => $was ? $was : 'publish' ) );
+			}
+		}
 		foreach ( (array) ( $j['options'] ?? array() ) as $k => $v ) {
 			if ( null === $v ) {
 				delete_option( $k );
@@ -253,7 +296,7 @@ class Importer {
 			wp_safe_redirect( add_query_arg( 'aladdin_msg', 'confirm', admin_url( 'admin.php?page=aladdin-payab&tab=import' ) ) );
 			exit;
 		}
-		$r = self::run();
+		$r = self::run( array( 'claim' => ! empty( $_POST['claim_home'] ), 'trash' => ! empty( $_POST['trash_conflicts'] ) ) ); // phpcs:ignore WordPress.Security.NonceVerification -- checked above.
 		set_transient( 'aladdin_payab_import_result', $r, 120 );
 		wp_safe_redirect( add_query_arg( 'aladdin_msg', 'imported', admin_url( 'admin.php?page=aladdin-payab&tab=import' ) ) );
 		exit;

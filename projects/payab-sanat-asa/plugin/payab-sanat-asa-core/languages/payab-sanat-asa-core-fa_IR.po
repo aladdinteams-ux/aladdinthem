@@ -181,6 +181,15 @@ msgstr "خروجی المنتور"
 msgid "Edits made in Elementor appear on the site (requires Elementor; check the look after switching)."
 msgstr "ویرایش‌های المنتور روی سایت دیده می‌شود (نیاز به المنتور؛ پس از تغییر ظاهر را بررسی کنید)."
 
+msgid "Front page"
+msgstr "صفحهٔ نخست"
+
+msgid "Persian home on the site root (/)"
+msgstr "خانهٔ فارسی روی ریشهٔ سایت (/)"
+
+msgid "The Persian home page of the design answers on /, even if another static front page was set before. Off: it lives at /payab-home/ and your own front page stays."
+msgstr "خانهٔ فارسی طرح روی / پاسخ می‌دهد، حتی اگر صفحهٔ نخست ایستای دیگری تنظیم شده بود. خاموش: روی /payab-home/ می‌ماند و صفحهٔ نخست خودتان دست‌نخورده است."
+
 msgid "Shop and SEO"
 msgstr "فروشگاه و سئو"
 
@@ -264,6 +273,27 @@ msgstr "ایمپورت برگه‌ها و محصولات"
 
 msgid "Creates the 66 language pages (22 routes × 3 languages, a separate post type for each language) as Elementor pages with a plain-HTML fallback; products go to WooCommerce when it is active. Only missing pages are created. Existing pages are never overwritten; every created item is journaled and can be moved to the Trash with Undo. The Persian home takes the front page on a fresh site."
 msgstr "۶۶ صفحه (۲۲ مسیر × ۳ زبان؛ برای هر زبان یک پست‌تایپ جدا) را به‌صورت صفحه المنتور با HTML جایگزین ساده می‌سازد؛ محصولات با ووکامرس فعال به ووکامرس می‌روند. فقط موارد ساخته‌نشده ساخته می‌شوند. صفحه‌های موجود هرگز بازنویسی نمی‌شوند؛ هر مورد ثبت می‌شود و با «بازگردانی» به زباله‌دان می‌رود. روی سایت تازه، صفحه اصلی فارسی صفحه نخست می‌شود."
+
+msgid "This site already has content from another theme"
+msgstr "این سایت از قبل محتوای قالب دیگری دارد"
+
+msgid "Current static front page: \"%s\". It stays untouched unless you tick the box below."
+msgstr "صفحهٔ نخست ایستای فعلی: «%s». اگر کادر زیر را علامت نزنید دست‌نخورده می‌ماند."
+
+msgid "These old pages use the same address as a design page. The design page is shown on that address; the old page is not deleted."
+msgstr "این صفحه‌های قدیمی همان آدرس یک صفحهٔ طرح را دارند. روی آن آدرس صفحهٔ طرح نمایش داده می‌شود؛ صفحهٔ قدیمی حذف نمی‌شود."
+
+msgid "Use the Persian design home as the front page (/)"
+msgstr "خانهٔ فارسی طرح، صفحهٔ نخست (/) باشد"
+
+msgid "Your previous front page setting is saved and restored by Undo."
+msgstr "تنظیم قبلی صفحهٔ نخست ذخیره می‌شود و با «بازگردانی» برمی‌گردد."
+
+msgid "Move the old pages listed above to the Trash"
+msgstr "صفحه‌های قدیمیِ بالا به زباله‌دان بروند"
+
+msgid "Optional and recoverable: Undo takes them out of the Trash again."
+msgstr "اختیاری و قابل بازیابی: «بازگردانی» آن‌ها را از زباله‌دان بیرون می‌آورد."
 
 msgid "Confirm"
 msgstr "تأیید"

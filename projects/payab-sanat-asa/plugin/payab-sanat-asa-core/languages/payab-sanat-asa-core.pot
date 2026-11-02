@@ -8,11 +8,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: payab-sanat-asa-core\n"
 
-#: includes/class-languages.php:182 includes/class-settings.php:345
+#: includes/class-languages.php:182 includes/class-settings.php:347
 msgid "Language"
 msgstr ""
 
-#: includes/class-importer.php:249 includes/class-importer.php:264 includes/class-settings.php:56
+#: includes/class-importer.php:292 includes/class-importer.php:307 includes/class-settings.php:56
 msgid "Not allowed."
 msgstr ""
 
@@ -24,371 +24,411 @@ msgstr ""
 msgid "Designed and developed by"
 msgstr ""
 
-#: includes/class-settings.php:165
+#: includes/class-settings.php:167
 msgid "Overview"
 msgstr ""
 
-#: includes/class-settings.php:166
+#: includes/class-settings.php:168
 msgid "Menus"
 msgstr ""
 
-#: includes/class-settings.php:167
+#: includes/class-settings.php:169
 msgid "Header & footer texts"
 msgstr ""
 
-#: includes/class-settings.php:168
+#: includes/class-settings.php:170
 msgid "General"
 msgstr ""
 
-#: includes/class-settings.php:169 includes/class-settings.php:296
+#: includes/class-settings.php:171 includes/class-settings.php:298
 msgid "Import / Undo"
 msgstr ""
 
-#: includes/class-settings.php:170 includes/class-settings.php:485
+#: includes/class-settings.php:172 includes/class-settings.php:510
 msgid "Reserved"
 msgstr ""
 
-#: includes/class-settings.php:185
+#: includes/class-settings.php:187
 msgid "Aladdin Payab — Payab Sanat Asa theme"
 msgstr ""
 
-#: includes/class-settings.php:186 includes/elementor/class-elementor.php:24
+#: includes/class-settings.php:188 includes/elementor/class-elementor.php:24
 msgid "Payab Sanat Asa"
 msgstr ""
 
-#: includes/class-settings.php:186
+#: includes/class-settings.php:188
 msgid "Theme settings · three languages · menus · import"
 msgstr ""
 
-#: includes/class-settings.php:186
+#: includes/class-settings.php:188
 msgid "View site"
 msgstr ""
 
-#: includes/class-settings.php:188
+#: includes/class-settings.php:190
 msgid "Settings sections"
 msgstr ""
 
-#: includes/class-settings.php:200
+#: includes/class-settings.php:202
 msgid "Settings saved."
 msgstr ""
 
-#: includes/class-settings.php:201
+#: includes/class-settings.php:203
 msgid "Texts of this language were reset to the approved design (a backup was kept)."
 msgstr ""
 
-#: includes/class-settings.php:202
+#: includes/class-settings.php:204
 msgid "Please tick the confirmation box first."
 msgstr ""
 
-#: includes/class-settings.php:213
+#: includes/class-settings.php:215
 msgid "Import finished: %1$d created, %2$d already existed."
 msgstr ""
 
-#: includes/class-settings.php:213
+#: includes/class-settings.php:215
 msgid "Import finished."
 msgstr ""
 
-#: includes/class-settings.php:220
+#: includes/class-settings.php:222
 msgid "Undo finished: %d items moved to the Trash."
 msgstr ""
 
-#: includes/class-settings.php:224
+#: includes/class-settings.php:226
 msgid "Menus checked: %d created."
 msgstr ""
 
-#: includes/class-settings.php:270
+#: includes/class-settings.php:272
 msgid "Manage pages"
 msgstr ""
 
-#: includes/class-settings.php:274
+#: includes/class-settings.php:276
 msgid "Status"
 msgstr ""
 
-#: includes/class-settings.php:277
+#: includes/class-settings.php:279
 msgid "Theme \"Payab Sanat Asa\" active"
 msgstr ""
 
-#: includes/class-settings.php:278
+#: includes/class-settings.php:280
 msgid "Elementor (free) active"
 msgstr ""
 
-#: includes/class-settings.php:279
+#: includes/class-settings.php:281
 msgid "WooCommerce active (products)"
 msgstr ""
 
-#: includes/class-settings.php:280
+#: includes/class-settings.php:282
 msgid "Menus ready: %d of 9"
 msgstr ""
 
-#: includes/class-settings.php:281
+#: includes/class-settings.php:283
 msgid "Imported items: %d"
 msgstr ""
 
-#: includes/class-settings.php:288
+#: includes/class-settings.php:290
 msgid "Without Elementor the site still shows the exact design; install the free Elementor plugin to edit pages visually."
 msgstr ""
 
-#: includes/class-settings.php:291
+#: includes/class-settings.php:293
 msgid "Quick actions"
 msgstr ""
 
-#: includes/class-settings.php:294
+#: includes/class-settings.php:296
 msgid "Edit header & footer texts"
 msgstr ""
 
-#: includes/class-settings.php:295
+#: includes/class-settings.php:297
 msgid "Edit menus (Appearance)"
 msgstr ""
 
-#: includes/class-settings.php:297
+#: includes/class-settings.php:299
 msgid "General settings"
 msgstr ""
 
-#: includes/class-settings.php:312
+#: includes/class-settings.php:314
 msgid "Languages and pages"
 msgstr ""
 
-#: includes/class-settings.php:312
+#: includes/class-settings.php:314
 msgid "Every route in every language, with a link to edit it."
 msgstr ""
 
-#: includes/class-settings.php:313
+#: includes/class-settings.php:315
 msgid "Route"
 msgstr ""
 
-#: includes/class-settings.php:326 includes/class-settings.php:357
+#: includes/class-settings.php:328 includes/class-settings.php:359
 msgid "missing"
 msgstr ""
 
-#: includes/class-settings.php:336
+#: includes/class-settings.php:338
 msgid "Create the %d missing pages"
 msgstr ""
 
-#: includes/class-settings.php:344
+#: includes/class-settings.php:346
 msgid "Header and footer links"
 msgstr ""
 
-#: includes/class-settings.php:344
+#: includes/class-settings.php:346
 msgid "Created automatically with the pages. They are real WordPress menus: edit, reorder or add links in Appearance > Menus; the site prints them in the header and footer."
 msgstr ""
 
-#: includes/class-settings.php:345
+#: includes/class-settings.php:347
 msgid "Menu"
 msgstr ""
 
-#: includes/class-settings.php:345
+#: includes/class-settings.php:347
 msgid "Used in"
 msgstr ""
 
-#: includes/class-settings.php:345
+#: includes/class-settings.php:347
 msgid "Links"
 msgstr ""
 
-#: includes/class-settings.php:346
+#: includes/class-settings.php:348
 msgid "Header navigation"
 msgstr ""
 
-#: includes/class-settings.php:346
+#: includes/class-settings.php:348
 msgid "Footer: quick links"
 msgstr ""
 
-#: includes/class-settings.php:346
+#: includes/class-settings.php:348
 msgid "Footer: useful information"
 msgstr ""
 
-#: includes/class-settings.php:358
+#: includes/class-settings.php:360
 msgid "Edit"
 msgstr ""
 
-#: includes/class-settings.php:363
+#: includes/class-settings.php:365
 msgid "Open Appearance > Menus"
 msgstr ""
 
-#: includes/class-settings.php:366
+#: includes/class-settings.php:368
 msgid "Create the missing menus"
 msgstr ""
 
-#: includes/class-settings.php:366
+#: includes/class-settings.php:368
 msgid "Check menus"
 msgstr ""
 
-#: includes/class-settings.php:368
+#: includes/class-settings.php:370
 msgid "A location that already has links is never changed. The \"Products\" link of the header menu carries the class payab-mega (it opens the products mega menu)."
 msgstr ""
 
-#: includes/class-settings.php:378
+#: includes/class-settings.php:380
 msgid "Page output"
 msgstr ""
 
-#: includes/class-settings.php:378
+#: includes/class-settings.php:380
 msgid "How the public site prints the design pages."
 msgstr ""
 
-#: includes/class-settings.php:380
+#: includes/class-settings.php:382
 msgid "Exact design"
 msgstr ""
 
-#: includes/class-settings.php:380
+#: includes/class-settings.php:382
 msgid "Recommended. The site shows the approved design markup. Elementor edits do not appear on the site."
 msgstr ""
 
-#: includes/class-settings.php:381
+#: includes/class-settings.php:383
 msgid "Elementor output"
 msgstr ""
 
-#: includes/class-settings.php:381
+#: includes/class-settings.php:383
 msgid "Edits made in Elementor appear on the site (requires Elementor; check the look after switching)."
 msgstr ""
 
-#: includes/class-settings.php:384
+#: includes/class-settings.php:386
+msgid "Front page"
+msgstr ""
+
+#: includes/class-settings.php:387
+msgid "Persian home on the site root (/)"
+msgstr ""
+
+#: includes/class-settings.php:387
+msgid "The Persian home page of the design answers on /, even if another static front page was set before. Off: it lives at /payab-home/ and your own front page stays."
+msgstr ""
+
+#: includes/class-settings.php:389
 msgid "Shop and SEO"
 msgstr ""
 
-#: includes/class-settings.php:385
+#: includes/class-settings.php:390
 msgid "Catalog mode"
 msgstr ""
 
-#: includes/class-settings.php:385
+#: includes/class-settings.php:390
 msgid "Hide prices and block purchasing/cart/checkout (WooCommerce)."
 msgstr ""
 
-#: includes/class-settings.php:386
+#: includes/class-settings.php:391
 msgid "SEO tags"
 msgstr ""
 
-#: includes/class-settings.php:386
+#: includes/class-settings.php:391
 msgid "Print description, canonical, hreflang, Open Graph and Schema.org."
 msgstr ""
 
-#: includes/class-settings.php:386
+#: includes/class-settings.php:391
 msgid "Automatically off when Yoast, Rank Math, SEOPress/TSF or AIOSEO is active."
 msgstr ""
 
-#: includes/class-settings.php:388
+#: includes/class-settings.php:393
 msgid "Elementor templates for header and footer"
 msgstr ""
 
-#: includes/class-settings.php:388
+#: includes/class-settings.php:393
 msgid "Optional: replace the shared chrome with an Elementor template (built with free Elementor, no Pro theme builder)."
 msgstr ""
 
-#: includes/class-settings.php:389
+#: includes/class-settings.php:394
 msgid "Header"
 msgstr ""
 
-#: includes/class-settings.php:389
+#: includes/class-settings.php:394
 msgid "Footer"
 msgstr ""
 
-#: includes/class-settings.php:392
+#: includes/class-settings.php:397
 msgid "Approved design (default)"
 msgstr ""
 
-#: includes/class-settings.php:401
+#: includes/class-settings.php:406
 msgid "On uninstall"
 msgstr ""
 
-#: includes/class-settings.php:402
+#: includes/class-settings.php:407
 msgid "Delete settings"
 msgstr ""
 
-#: includes/class-settings.php:402
+#: includes/class-settings.php:407
 msgid "Delete this plugin's settings (pages and products are never deleted)."
 msgstr ""
 
-#: includes/class-settings.php:405
+#: includes/class-settings.php:410
 msgid "Save changes"
 msgstr ""
 
-#: includes/class-settings.php:418
+#: includes/class-settings.php:423
 msgid "Every text, label and link of the top bar, header, mobile menu, footer and mobile bar. Leave a field empty to keep the approved design text. Links: use \"fa:shop-2\" style route keys or a full URL. The header and footer link lists come from the Menus tab."
 msgstr ""
 
-#: includes/class-settings.php:419
+#: includes/class-settings.php:424
 msgid "Filter texts…"
 msgstr ""
 
-#: includes/class-settings.php:422
+#: includes/class-settings.php:427
 msgid "Top bar, header and mobile drawer"
 msgstr ""
 
-#: includes/class-settings.php:422
+#: includes/class-settings.php:427
 msgid "Footer and mobile bar"
 msgstr ""
 
-#: includes/class-settings.php:425
+#: includes/class-settings.php:430
 msgid "Type"
 msgstr ""
 
-#: includes/class-settings.php:425
+#: includes/class-settings.php:430
 msgid "Approved text"
 msgstr ""
 
-#: includes/class-settings.php:425
+#: includes/class-settings.php:430
 msgid "Your text"
 msgstr ""
 
-#: includes/class-settings.php:436
+#: includes/class-settings.php:441
 msgid "Products mega menu (category panel)"
 msgstr ""
 
-#: includes/class-settings.php:449
+#: includes/class-settings.php:454
 msgid "Save texts"
 msgstr ""
 
-#: includes/class-settings.php:451
+#: includes/class-settings.php:456
 msgid "Reset all texts of this language to the approved design? A backup is kept."
 msgstr ""
 
-#: includes/class-settings.php:453
+#: includes/class-settings.php:458
 msgid "Reset this language to the approved design"
 msgstr ""
 
-#: includes/class-settings.php:459 includes/class-settings.php:463
+#: includes/class-settings.php:464 includes/class-settings.php:488
 msgid "Import pages and products"
 msgstr ""
 
-#: includes/class-settings.php:459
+#: includes/class-settings.php:464
 msgid "Creates the 66 language pages (22 routes × 3 languages, a separate post type for each language) as Elementor pages with a plain-HTML fallback; products go to WooCommerce when it is active. Only missing pages are created. Existing pages are never overwritten; every created item is journaled and can be moved to the Trash with Undo. The Persian home takes the front page on a fresh site."
 msgstr ""
 
-#: includes/class-settings.php:462
-msgid "Confirm"
-msgstr ""
-
-#: includes/class-settings.php:462
-msgid "I understand this creates pages and may set the front page."
-msgstr ""
-
-#: includes/class-settings.php:467
-msgid "Undo"
-msgstr ""
-
-#: includes/class-settings.php:469
-msgid "Last import: %1$d items on %2$s."
-msgstr ""
-
 #: includes/class-settings.php:470
-msgid "Move all imported items to the Trash and restore changed options?"
+msgid "This site already has content from another theme"
 msgstr ""
 
 #: includes/class-settings.php:472
-msgid "Undo the import (move to Trash)"
+msgid "Current static front page: \"%s\". It stays untouched unless you tick the box below."
 msgstr ""
 
-#: includes/class-settings.php:481
-msgid "Colour and typography panel (the approved design uses fixed CSS variables)"
+#: includes/class-settings.php:475
+msgid "These old pages use the same address as a design page. The design page is shown on that address; the old page is not deleted."
 msgstr ""
 
 #: includes/class-settings.php:482
-msgid "Server-side consultation request storage and e-mail (the approved contact form only prepares text and copies it to the clipboard)"
+msgid "Use the Persian design home as the front page (/)"
 msgstr ""
 
-#: includes/class-settings.php:483
-msgid "Third-party multilingual plugins (Polylang/WPML) compatibility"
+#: includes/class-settings.php:482
+msgid "Your previous front page setting is saved and restored by Undo."
+msgstr ""
+
+#: includes/class-settings.php:484
+msgid "Move the old pages listed above to the Trash"
+msgstr ""
+
+#: includes/class-settings.php:484
+msgid "Optional and recoverable: Undo takes them out of the Trash again."
 msgstr ""
 
 #: includes/class-settings.php:487
+msgid "Confirm"
+msgstr ""
+
+#: includes/class-settings.php:487
+msgid "I understand this creates pages and may set the front page."
+msgstr ""
+
+#: includes/class-settings.php:492
+msgid "Undo"
+msgstr ""
+
+#: includes/class-settings.php:494
+msgid "Last import: %1$d items on %2$s."
+msgstr ""
+
+#: includes/class-settings.php:495
+msgid "Move all imported items to the Trash and restore changed options?"
+msgstr ""
+
+#: includes/class-settings.php:497
+msgid "Undo the import (move to Trash)"
+msgstr ""
+
+#: includes/class-settings.php:506
+msgid "Colour and typography panel (the approved design uses fixed CSS variables)"
+msgstr ""
+
+#: includes/class-settings.php:507
+msgid "Server-side consultation request storage and e-mail (the approved contact form only prepares text and copies it to the clipboard)"
+msgstr ""
+
+#: includes/class-settings.php:508
+msgid "Third-party multilingual plugins (Polylang/WPML) compatibility"
+msgstr ""
+
+#: includes/class-settings.php:512
 msgid "Shown for transparency: these options are planned but not active in this version."
 msgstr ""
 

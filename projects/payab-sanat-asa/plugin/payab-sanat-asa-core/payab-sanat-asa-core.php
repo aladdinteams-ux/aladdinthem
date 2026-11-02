@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Payab Sanat Asa Core
  * Description:       افزونه همراه قالب «پایاب صنعت آسا»: چندزبانگی سه‌زبانه (فا/EN/عربی)، ویجت‌های المنتور رایگان، ایمپورت برگشت‌پذیر ۶۶ صفحه (هر زبان یک پست‌تایپ جدا) و محصولات، حالت کاتالوگ ووکامرس، سئو (hreflang/Schema) و پنل ویرایش متن‌های هدر و فوتر.
- * Version:           1.2.2
+ * Version:           1.3.0
  * Requires at least: 6.4
  * Requires PHP:      7.4
  * Author:            علاءالدین تم (Aladdin Theme)
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'ALADDIN_PAYAB_SANAT_ASA_CORE_VERSION', '1.2.2' );
+define( 'ALADDIN_PAYAB_SANAT_ASA_CORE_VERSION', '1.3.0' );
 define( 'ALADDIN_PAYAB_SANAT_ASA_CORE_FILE', __FILE__ );
 define( 'ALADDIN_PAYAB_SANAT_ASA_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'ALADDIN_PAYAB_SANAT_ASA_CORE_URL', plugin_dir_url( __FILE__ ) );

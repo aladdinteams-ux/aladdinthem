@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.1 — 2026-11-04
+- Fix: `Call to undefined function aladdin_payab_sanat_asa_route_url()` (plugin active, theme not). Plugin no longer calls theme functions (`Languages::url()`, `Languages::resolve_tokens()`); admin notice when the theme is inactive.
+
 ## 1.3.0 — 2026-11-04
 - Existing-site takeover: conflicts list, `claim_home` option/setting, optional trashing of conflicting old pages, Undo restores them (status kept).
 

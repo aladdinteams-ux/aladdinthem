@@ -235,7 +235,7 @@ class Importer {
 		}
 		update_post_meta( $id, '_visibility', 'visible' );
 		update_post_meta( $id, '_stock_status', 'instock' );
-		$src = get_template_directory() . '/assets/images/' . $map[ $group ][1];
+		$src = get_theme_root() . '/payab-sanat-asa/assets/images/' . $map[ $group ][1];
 		if ( is_readable( $src ) && ! has_post_thumbnail( $id ) ) {
 			require_once ABSPATH . 'wp-admin/includes/file.php';
 			require_once ABSPATH . 'wp-admin/includes/media.php';

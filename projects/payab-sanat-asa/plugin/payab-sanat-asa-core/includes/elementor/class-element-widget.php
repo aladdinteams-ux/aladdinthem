@@ -100,7 +100,7 @@ class Element_Widget extends Raw_Widget {
 		}
 		$html = '<' . $tag;
 		foreach ( $at as $k => $v ) {
-			$v = in_array( $k, array( 'href', 'src', 'action' ), true ) ? esc_url( aladdin_payab_sanat_asa_resolve_tokens( $v ), null, 'raw' ) : $v;
+			$v = in_array( $k, array( 'href', 'src', 'action' ), true ) ? esc_url( Languages::resolve_tokens( $v ), null, 'raw' ) : $v;
 			if ( in_array( $k, array( 'href', 'src', 'action' ), true ) ) {
 				$v = esc_url( $v );
 			}
@@ -112,7 +112,7 @@ class Element_Widget extends Raw_Widget {
 		}
 		$inner = '';
 		if ( ! empty( $s['inner_html'] ) ) {
-			$inner = wp_kses( aladdin_payab_sanat_asa_resolve_tokens( $s['inner_html'] ), self::allowed_html() );
+			$inner = wp_kses( Languages::resolve_tokens( $s['inner_html'] ), self::allowed_html() );
 		} elseif ( isset( $s['text'] ) && '' !== $s['text'] ) {
 			$inner = esc_html( $s['text'] );
 		}

@@ -1,7 +1,7 @@
 {
  "name": "Payab Sanat Asa",
  "version": "1.2.0",
- "date": "2026-11-02",
+ "date": "2026-11-04",
  "author": "علاءالدین تم (Aladdin Theme)",
  "source": {
   "zip": "payab-sanat-asa-v42-contact-tip-icons-3lang",
@@ -22,12 +22,12 @@
  "artifacts": [
   {
    "file": "payab-sanat-asa.zip",
-   "sha256": "157aeb739f0f7d898c8a7bbf3c3c7568825bb9e4c9912dc346bee859083e3e80",
+   "sha256": "251e026064baf8a8c373977cb0521a8f5ca053e3bb0cd96d606b2125024ce2f3",
    "files": 95
   },
   {
    "file": "payab-sanat-asa-core.zip",
-   "sha256": "d15597fc3994b0e75a689e6215fa9725d2809ff2f5a41ca0dfa6f8e0d39474aa",
+   "sha256": "52a07abfe37ff1ee3cc1f5f6d78ea5d05c1a4400de62d4dc712719251375dff7",
    "files": 25
   },
   {

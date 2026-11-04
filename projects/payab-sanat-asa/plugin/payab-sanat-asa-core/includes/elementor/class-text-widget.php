@@ -39,6 +39,6 @@ class Text_Widget extends Raw_Widget {
 	protected function render() {
 		$s = $this->get_settings_for_display();
 		$c = isset( $s['editor'] ) ? (string) $s['editor'] : '';
-		echo wp_kses( aladdin_payab_sanat_asa_resolve_tokens( $c ), Element_Widget::allowed_html() ); // phpcs:ignore WordPress.Security.EscapeOutput -- kses'd.
+		echo wp_kses( Languages::resolve_tokens( $c ), Element_Widget::allowed_html() ); // phpcs:ignore WordPress.Security.EscapeOutput -- kses'd.
 	}
 }

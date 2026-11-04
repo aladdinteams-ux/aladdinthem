@@ -132,7 +132,7 @@ class Post_Types {
 		// Structural URLs that never were pages: send visitors to the matching list.
 		$redir = array( 'articles' => 'blog-2', 'product' => 'shop-2' );
 		if ( isset( $redir[ $group ] ) && Languages::post_id( $lang, $redir[ $group ], true ) ) {
-			wp_safe_redirect( aladdin_payab_sanat_asa_route_url( $lang, $redir[ $group ] ), 302 );
+			wp_safe_redirect( Languages::url( $lang, $redir[ $group ] ), 302 );
 			exit;
 		}
 	}

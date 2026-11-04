@@ -46,7 +46,7 @@ class Seo {
 		if ( ! self::active() ) {
 			return;
 		}
-		$lang = aladdin_payab_sanat_asa_lang();
+		$lang = Languages::current_lang( '' );
 		$locs = array( 'fa' => 'fa_IR', 'en' => 'en_US', 'ar' => 'ar' );
 		if ( is_singular() ) {
 			$id   = get_queried_object_id();

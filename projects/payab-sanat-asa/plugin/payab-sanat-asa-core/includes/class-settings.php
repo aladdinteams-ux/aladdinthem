@@ -21,6 +21,7 @@ class Settings {
 		add_action( 'admin_post_aladdin_payab_repair_menus', array( __CLASS__, 'repair_menus' ) );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'assets' ) );
 		add_filter( 'admin_footer_text', array( __CLASS__, 'footer' ) );
+		add_action( 'admin_notices', array( __CLASS__, 'theme_notice' ) );
 	}
 
 	public static function menu() {
@@ -144,6 +145,21 @@ class Settings {
 			update_option( 'aladdin_payab_sanat_asa_chrome', $opt, false );
 		}
 		self::back( 'texts', 'reset', array( 'lang' => $lang ) );
+	}
+
+	/** The plugin works without the theme, but the design (header, footer, styles) needs it. */
+	public static function theme_notice() {
+		if ( function_exists( 'aladdin_payab_sanat_asa_lang' ) || ! current_user_can( 'switch_themes' ) || ! self::is_screen() ) {
+			return;
+		}
+		$installed = wp_get_theme( 'payab-sanat-asa' )->exists();
+		printf(
+			'<div class="notice notice-warning"><p><strong>%s</strong> %s <a class="button" href="%s">%s</a></p></div>',
+			esc_html__( 'The Payab Sanat Asa theme is not active.', 'payab-sanat-asa-core' ),
+			esc_html( $installed ? __( 'Pages are created, but the design needs the theme: activate it.', 'payab-sanat-asa-core' ) : __( 'Upload payab-sanat-asa.zip in Appearance > Themes > Add New, then activate it.', 'payab-sanat-asa-core' ) ),
+			esc_url( admin_url( 'themes.php' ) ),
+			esc_html__( 'Open Themes', 'payab-sanat-asa-core' )
+		);
 	}
 
 	public static function assets( $hook ) {

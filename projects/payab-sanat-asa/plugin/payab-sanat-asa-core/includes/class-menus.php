@@ -127,7 +127,7 @@ class Menus {
 					$title = $sp['labels'][ $l ][ $i ];
 					$args  = array( 'menu-item-title' => $title, 'menu-item-status' => 'publish', 'menu-item-position' => $i + 1, 'menu-item-classes' => $it[1] );
 					if ( 0 === strpos( $it[0], 'anchor:' ) ) {
-						$args += array( 'menu-item-type' => 'custom', 'menu-item-url' => aladdin_payab_sanat_asa_route_url( $l, '' ) . '#' . substr( $it[0], 7 ) );
+						$args += array( 'menu-item-type' => 'custom', 'menu-item-url' => Languages::url( $l, '' ) . '#' . substr( $it[0], 7 ) );
 					} else {
 						$pid = Languages::post_id( $l, $it[0] );
 						if ( ! $pid ) {

@@ -128,6 +128,35 @@ class Languages {
 		return $lang ? $lang : 'fa';
 	}
 
+	/** URL of a route; works without the theme (the plugin never calls theme functions). */
+	public static function url( $lang, $group = '' ) {
+		$group = trim( (string) $group, '/' );
+		$id    = self::post_id( $lang, $group );
+		if ( $id ) {
+			$link = get_permalink( $id );
+			if ( $link ) {
+				return $link;
+			}
+		}
+		return Post_Types::url_for( $lang, $group );
+	}
+
+	/** Replace {{theme}} / {{route:lang:group}} / {{search}} tokens (same rules as the theme helper). */
+	public static function resolve_tokens( $html ) {
+		if ( false === strpos( $html, '{{' ) ) {
+			return $html;
+		}
+		$html = str_replace( '{{theme}}', untrailingslashit( get_theme_root_uri( 'payab-sanat-asa' ) . '/payab-sanat-asa' ), $html );
+		$html = str_replace( '{{search}}', esc_url( home_url( '/' ) ), $html );
+		return preg_replace_callback(
+			'/\{\{route:(fa|en|ar):([^}]*)\}\}/',
+			static function ( $m ) {
+				return esc_url( Languages::url( $m[1], $m[2] ) );
+			},
+			$html
+		);
+	}
+
 	public static function route_url( $url, $lang, $group ) {
 		$id = self::post_id( $lang, $group );
 		if ( $id ) {

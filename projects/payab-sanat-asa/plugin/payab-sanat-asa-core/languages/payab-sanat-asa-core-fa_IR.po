@@ -19,6 +19,18 @@ msgstr "علاءالدین پایاب"
 msgid "Designed and developed by"
 msgstr "طراحی و توسعه"
 
+msgid "The Payab Sanat Asa theme is not active."
+msgstr "قالب پایاب صنعت آسا فعال نیست."
+
+msgid "Pages are created, but the design needs the theme: activate it."
+msgstr "صفحه‌ها ساخته می‌شوند، اما ظاهر طرح به قالب نیاز دارد: آن را فعال کنید."
+
+msgid "Upload payab-sanat-asa.zip in Appearance > Themes > Add New, then activate it."
+msgstr "فایل payab-sanat-asa.zip را در نمایش‌ها ← پوسته‌ها ← افزودن بارگذاری و سپس فعال کنید."
+
+msgid "Open Themes"
+msgstr "باز کردن پوسته‌ها"
+
 msgid "Overview"
 msgstr "نمای کلی"
 

@@ -3,7 +3,7 @@ Contributors: aladdintheme
 Requires at least: 6.4
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: multilingual, elementor, woocommerce, rtl
@@ -21,6 +21,9 @@ Companion plugin of the Payab Sanat Asa theme: built-in three-language layer, re
 Install with the Payab Sanat Asa theme. Elementor (free) and WooCommerce are optional.
 
 == Changelog ==
+= 1.3.1 =
+* Fix fatal error when the companion plugin ran while the theme was not active (plugin called theme functions). The plugin is now self-contained and shows a notice asking to activate the theme.
+
 = 1.3.0 =
 * Sites that had another theme: import tab lists the old front page and old pages on the same URLs; optional "Persian home on /" takeover and optional recoverable trashing of conflicting old pages (Undo restores both).
 
